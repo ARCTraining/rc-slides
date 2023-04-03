@@ -3,5 +3,5 @@ project:
 
 website:
   title: "arctraining slides"
-  site-url: https://github.com/ARCTraining/rc-slides
+  site-url: https://ARCTraining.github.io/rc-slides
   description: "Public facing homepage for arctraining slides"
