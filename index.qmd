@@ -1,8 +1,26 @@
 ---
-title: "Template Revealjs Quarto site"
-format: revealjs
+title: "arctraining slides"
+format: html
 ---
 
-This is a Quarto website.
+Public facing homepage for arctraining Quarto slides collection.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+## Slides: 
+
+Note: this page is under construction. As soon as the slides are available,
+the link will be provided.
+
+- [ ] HPC0: Introduction to Linux for HPC
+- [ ] HPC1: Introduction to High Performance Computing
+- [ ] HPC2: Applications and containers on HPC
+- [ ] HPC3: Computer architectures and shared memory parallel programming
+- [ ] HPC5: Introduction to GPU programming with CUDA
+- [ ] HPC6: HPC for Life Sciences and Bioinformatics
+- [ ] SWD1a: Introduction to Python programming
+- [ ] SWD1b: Introduction to R programming
+- [ ] SWD2: Version Control with Git and GitHub
+- [ ] SWD3: Software development practices for Research
+- [ ] SWD4: Cloud computing for Research
+- [ ] SWD5: Scientific Python
+- [ ] SWD6: High performance Python
+- [ ] SWD7: Introduction to reproducible workflows in Python
