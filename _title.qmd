@@ -1,0 +1,11 @@
+## {{< meta code >}}
+### {{< meta name >}}
+
+::: {.r-stack}
+![](assets/img/banner-wide.svg)
+:::
+
+::: footer
+<!-- Remove footer from title page -->
+
+:::
