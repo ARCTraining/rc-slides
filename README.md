@@ -1,55 +1,115 @@
-# Template Quarto Revealjs site
+# Research Computing Slides
 
-This template can be used to publish a [RevealJS](https://revealjs.com/) website that has been written in
+This is a repository for ARCTraining Quarto slides collection.
+
+## Repository Setup
+
+This repository was created from [Sparrow0hawk/quarto-revealjs-template](https://github.com/Sparrow0hawk/quarto-revealjs-template).
+
+This repository is used to publish a [RevealJS](https://revealjs.com/) website that has been written in
 [Quarto](https://www.quarto.org). It includes a [GitHub Action](https://docs.github.com/en/actions) which will convert
 the Quarto source to HTML and publish them via [GitHub Pages](https://pages.github.com/).
 
 Its a useful way of making slides portable as they are then available via the URL and naturally the slides are version
 controlled.
 
+## Standard Presentation
 
-# Usage
+A standard Research Computing presentation includes
 
-## Use the Template
+- Title slide
+- Team slide
+- End slide
+- Footer
 
-Start by clicking on the "_Use this Template_" button and selecting "_Create a new repository_". You will have to choose
-a name for the repository. When ready click on "_Create repository from template_" and this will copy all the resources
-into a new repository under your GitHub account ready for you to start using. You will probably want to clone the
-repository locally to do so.
+The `meta` definition for a standard presentation is:
 
-## Edit `_quarto.yaml`
-
-You will have to edit `_quarto.yaml` and change the `site-url` to reflect your GitHub user account and the name of the
-repository you have chosen for this project. Its probably wise to modify the `title` and `description` too. The sample
-code below shows in capitals the fields you should modify.
-
-``` yaml
-project:
-  type: website
-
-website:
-  title: "<INSERT_TITLE>"
-  site-url: https://<YOUR_GITHUB_USERNAME>.github.io/<NAME_OF_REPOSITORY>
-  description: "<INSERT_DESCRIPTION>"
+```yml
+---
+format: 
+  revealjs:
+    navigation-mode: linear
+    controls-layout: bottom-right
+    controls: true
+    footer: "[Research IT Website]({{< var rc.website >}}) | [Research IT Query]({{< var rc.servicedesk >}}) | [Courses Material]({{< var rc.material >}})"
+code: Course Code
+name: Course Name
+---
 ```
 
-## Publish Locally
+*Note that `code` and `name` are `meta` variables used to generate the title slide (see bellow).*
 
-You will need to run `quarto publish gh-pages` once locally before deploying this template.
+### The Title Slide
 
-## Repository settings
+The title slide is defined in the `_title.qmd` file, and is included in the presentation file via the `{{< include _title.qmd >}}` command. This slide has three elements:
 
-You will also need to make sure your repository action settings are configured to allow read and write permissions.
+- Title: value retrieved via `meta.code`
+- Subtitle: value retrieved via `meta.name`
+- Image
 
-![image](https://user-images.githubusercontent.com/20887250/216280796-86028c95-76b7-418a-a3eb-e614a8ab874a.png)
+The title slide should looks like:
 
-You can find this settings at `https://github.com/[USER]/[repo]/settings/actions`
+![title slide](assets/img/readme/title.png)
+
+*Tip: if you want to create a title slide without title or subtitle, you can leave the `meta` values for `code` or `name` empty.*
+
+### The Team Slide
+
+The team slide is defined in the `_team.qmd` file, and is included in the presentation file via the `{{< include _team.qmd >}}` command. This slide has two variables elements:
+
+- Staff: value retrieved from `_variables.yml` file via `{{< var rc.team >}}`
+- IT Servicedesk link: value retrieved from `_variables.yml` file via `{{< var rc.servicedesk >}}`
+
+*Tip: If any of these values needed to be updated, please do this via `_variables.yml` file, and then, all standard presentations are going to be automatically updated.*
+
+The team slide should looks like:
+
+![team slide](assets/img/readme/team.png)
+
+### The End Slide
+
+The end slide is defined in the `_end.qmd` file, and is included in the presentation file via the `{{< include _end.qmd >}}` command. This slide has three variables elements:
+
+- IT Servicedesk link: value retrieved from `_variables.yml` file via `{{< var rc.servicedesk >}}`
+- ARC Website: value retrieved from `_variables.yml` file via `{{< var rc.website >}}`
+- HPC documentation: value retrieved from `_variables.yml` file via `{{< var rc.documentation >}}`
+
+*Tip: If any of these values needed to be updated, please do this via `_variables.yml` file, and then, all standard presentations are going to be automatically updated.*
+
+The end slide should looks like:
+
+![end slide](assets/img/readme/end.png)
+
+## New Standard Presentation
+
+To start a new standard presentation, start by creating a copy of the file `template.qmd`.
+Then, rename the new file using the training code, for example `hpc0.qmd`.
+Now, you will have to edit this new file and change the `meta` information (`code` and `name`) to reflect the training course content. For example, the `meta` for the `HPC0` is:
+
+```yml
+---
+format: 
+  revealjs:
+    navigation-mode: linear
+    controls-layout: bottom-right
+    controls: true
+    footer: "[Research IT Website]({{< var rc.website >}}) | [Research IT Query]({{< var rc.servicedesk >}}) | [Courses Material]({{< var rc.material >}})"
+code: HPC0
+name: Introduction to Linux for HPC
+---
+```
+
+Done! The standard presentation is created. You can write the main content for the presentation by replacing the `## Slide A`, `## Slide B` and `## Slide C` temporary content.
 
 ## Write your slides
 
 You are now ready to create your slides by editing the `index.qmd` in the root of the repository. For more information
 on writing RevealJS slides in Quarto see the [RevealJS](https://quarto.org/docs/presentations/revealjs/) guide and the
 [Revealjs Reference](https://quarto.org/docs/reference/formats/presentations/revealjs.html).
+
+## Publish Locally
+
+You will need to run `quarto publish gh-pages` once locally before deploying this template.
 
 ## pre-commit
 
