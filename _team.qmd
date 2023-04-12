@@ -10,5 +10,5 @@ Here for:
 - Access to specialist support and consultancy
 - Research Software Engineering support
 
-Contact via IT Servicedesk: {{< var rc.servicedesk >}}
+Contact via IT Service Desk: {{< var rc.servicedesk >}}
 
