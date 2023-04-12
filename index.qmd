@@ -10,7 +10,7 @@ Public facing homepage for arctraining Quarto slides collection.
 Note: this page is under construction. As soon as the slides are available,
 the link will be provided.
 
-- [ ] HPC0: Introduction to Linux for HPC
+- [x] [HPC0: Introduction to Linux for HPC](./hpc0.qmd)
 - [ ] HPC1: Introduction to High Performance Computing
 - [ ] HPC2: Applications and containers on HPC
 - [ ] HPC3: Computer architectures and shared memory parallel programming

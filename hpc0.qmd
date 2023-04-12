@@ -1,0 +1,297 @@
+---
+format: 
+  revealjs:
+    navigation-mode: linear
+    controls-layout: bottom-right
+    controls: true
+    footer: "[Research IT Website]({{< var rc.website >}}) | [Research IT Query]({{< var rc.servicedesk >}}) | [Courses Material]({{< var rc.material >}})"
+code: HPC 0
+name: Introduction to the Unix/Linux command line
+---
+
+{{< include _title.qmd >}}
+{{< include _team.qmd >}}
+
+## Contact Details
+
+\
+ARC Website: {{< var rc.website >}}
+
+\
+General queries: {{< var rc.servicedesk >}}
+
+
+## Training
+
+![](assets/img/hpc0/training.svg)
+
+## ARC/HPC Training Portfolio
+
+<http://arc.leeds.ac.uk/training>
+
+![](assets/img/hpc0/portfolio.svg)
+
+## Purpose of today
+
+- Introduce the command line for new users
+- Hands on experience and confidence building
+- Basic interactions with files and directories: command line execution, directory and file basics, files properties.
+- File manipulation: inspecting and editing files, searching and filtering,
+- Scripting and workflows: scripting techniques for building workflows.
+
+# Introductions and Motivations
+
+Who are you and why are you here?
+
+## Me {visibility="hidden"}
+
+- Research Computing service
+- Research Computing Consultant
+- Everything from HPC to Data Science
+- RSE Cloud Computing Fellow
+- Research in Deep Learning: Neural networks for text summarisation
+
+# Linux Basics {visibility="hidden"}
+
+## Logging in... {background-color="#bbe1f6"}
+
+Using MobaXTerm
+
+## What is BASH? {background-color="black"}
+
+![](assets/img/hpc0/bash.png)
+
+## What is a shell?
+
+![](assets/img/hpc0/shell.svg)
+
+## MobaXTerm {background-color="#bbe1f6"}
+
+Launch...
+
+## Filesystem basics
+
+![](assets/img/hpc0/filesystem.svg)
+
+## Forward slash / and backslash \
+
+![](assets/img/hpc0/slash.png)
+
+## Filesystem basics: absolute path
+
+![](assets/img/hpc0/filesystem-absolute.svg)
+
+## Filesystem basics: relative path
+
+![](assets/img/hpc0/filesystem-relative.svg)
+
+# Exercises {visibility="hidden"}
+
+## Exercise 0 {.smaller}
+
+### Logging in
+
+We are using ARC4, one of the University HPC clusters today.
+
+\
+You’ll use MobaXterm to connect:
+
+```{.bash code-line-numbers=false}
+ssh <username>@arc4.leeds.ac.uk
+```
+
+*`<username>` is your university username.*
+
+
+
+## Exercise 1
+
+### Setup
+
+First, get hold of the sample data we will be using today.
+
+\
+Type this in your command shell:
+
+```{.bash code-line-numbers=false}
+git clone https://github.com/callaghanmt/shell-training/
+```
+
+## Exercise 2 {.smaller}
+
+::: {.panel-tabset}
+
+### Problem
+
+Two new commands:
+
+- The `sort` command will sort lines alphabetically
+- You can use the `cut` command to split lines of text based on a given character e.g. `cut -d ',' -f 2` will split lines around the comma and give you the second part
+
+\
+
+1. Combine `cat`, `cut`, and `sort` to print out the Latin names from birds.txt in alphabetical order.
+2. Save the output to a new file.
+
+### Solution
+
+1:
+
+```{.bash code-line-numbers=false}
+[user@host IOM-animals]$ cat birds.txt | sort | cut -d ',' -f 2
+```
+
+2:
+```{.bash code-line-numbers=false}
+[user@host IOM-animals]$ cat birds.txt | sort | cut -d ',' -f 2 > sorted-birds.txt
+```
+
+:::
+
+## Exercise 3 {.smaller}
+
+::: {.panel-tabset}
+
+### Problem
+
+List all the animals on the `Isle of Mann` alphabetically and find the `50th` item in that list.
+
+### Solution
+
+To get the `50th` line, use `head` to get the first 50 lines and `pipe it` to `tail` to get the last one:
+
+```{.bash code-line-numbers=false}
+[user@host IOM-animals]$ sort *.txt | head -50 | tail -1
+coot, fulica atra
+```
+:::
+
+## Exercise 4 {.smaller}
+
+::: {.panel-tabset}
+
+### Problem
+
+`shell-training/data/` contains 300 data files, each of which should contain 100 values. One of these files is missing some data though. . .
+
+\
+Use a series of commands connected by pipes to identify the file with missing data. Hints:
+
+- `wc -w` will tell you the number of values in a file
+- `sort -n` will sort numerically
+
+### Solution
+
+```{.bash code-line-numbers=false}
+[user@host data]$ wc -w values* | sort -n | head -1
+99 values 44
+```
+
+- `wc -w` tells you how many values are in each file
+- `sort` this output to put the files in order of the number of values
+- use `head` to select the first line, which contains the name of the file with the smallest number of values
+
+:::
+
+
+## Exercise 5 {.smaller}
+
+::: {.panel-tabset}
+
+### Problem
+
+1. Use a `for` loop to create five directories called `calculation_?`, where `?` is a number. 
+2. Use a loop to create five directories, each one the parent of the next.
+
+### Solution
+
+1:
+```{.bash code-line-numbers=false}
+[user@host ~]$ for (( i=1 ; i<=5 ; i++ ))
+> do
+> mkdir calculation_$i
+> done
+[user@host ~]$
+```
+
+2:
+```{.bash code-line-numbers=false}
+[user@host ~]$ for (( i=1 ; i<=5 ; i++ ))
+> do
+> mkdir calculation_$i
+> cd calculation_$i
+> done
+[user@host calculation_5]$
+```
+
+In the second case, two commands are executed each time you go through the loop. A new directory is created and
+then the working directory is changed to the new directory.
+
+On the next iteration, the new directory is then created inside the previous one.
+
+:::
+
+## Exercise 6 {.smaller}
+
+::: {.panel-tabset}
+
+### Problem
+
+1. In the wildcards directory, create a variable called files listing all of the text files. 
+2. Loop through this list and print out the first line from each file.
+
+### Solution
+
+1:
+```{.bash code-line-numbers=false}
+[user@host wildcards]$ files=$( ls *.txt )
+```
+
+2:
+
+```{.bash code-line-numbers=false}
+[user@host wildcards]$ for f in $files
+> do
+> head -1 $f
+> done
+```
+
+:::
+
+## Exercise 7 {.smaller}
+
+::: {.panel-tabset}
+
+### Problem
+
+1. What will this command print to the screen?
+
+```{.bash code-line-numbers=false}
+[user@host wildcards]$ for filename in *.txt
+> do
+> echo $filename
+> cat $filename > new-file.txt
+> done
+```
+
+\
+2. What will the contents of `new-file.txt` be and why?
+
+
+### Solution
+
+1: 
+
+- The name of each `.txt` file in the current directory
+- On each iteration the echo command prints a different file name
+
+2:
+
+- The content of `new-file.txt` will be the same as `xyz.txt`
+- On each iteration the contents of a different file are written to `new-file.txt`, overwriting whatever was written on the previous iteration
+- This is because we used `>` to write the output of cat to `new-file.txt`
+- Using `>>` instead would result in each file's content being appended to the end of `new-file.txt`
+
+:::
+
+{{< include _end.qmd >}}
