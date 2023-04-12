@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "arctraining slides",
+    "section": "",
+    "text": "Public facing homepage for arctraining Quarto slides collection."
+  },
+  {
+    "objectID": "index.html#slides",
+    "href": "index.html#slides",
+    "title": "arctraining slides",
+    "section": "Slides:",
+    "text": "Slides:\nNote: this page is under construction. As soon as the slides are available, the link will be provided.\n\nHPC0: Introduction to Linux for HPC\nHPC1: Introduction to High Performance Computing\nHPC2: Applications and containers on HPC\nHPC3: Computer architectures and shared memory parallel programming\nHPC5: Introduction to GPU programming with CUDA\nHPC6: HPC for Life Sciences and Bioinformatics\nSWD1a: Introduction to Python programming\nSWD1b: Introduction to R programming\nSWD2: Version Control with Git and GitHub\nSWD3: Software development practices for Research\nSWD4: Cloud computing for Research\nSWD5: Scientific Python\nSWD6: High performance Python\nSWD7: Introduction to reproducible workflows in Python"
+  },
+  {
+    "objectID": "template.html#meta-code",
+    "href": "template.html#meta-code",
+    "title": "arctraining slides",
+    "section": "Course Code",
+    "text": "Course Code\nCourse Name"
+  },
+  {
+    "objectID": "template.html#research-computing-team",
+    "href": "template.html#research-computing-team",
+    "title": "arctraining slides",
+    "section": "Research Computing Team",
+    "text": "Research Computing Team\nStaff:\n\nAlex Coleman, John Hodrien, Ollie Clark, Nick Rhodes, Patricia Ternes\n\nHere for:\n\nGeneral guidance and advice\nAccess to specialist support and consultancy\nResearch Software Engineering support\n\nContact via IT Service Desk: http://bit.ly/arc-help"
+  },
+  {
+    "objectID": "template.html#slide-a",
+    "href": "template.html#slide-a",
+    "title": "arctraining slides",
+    "section": "Slide A",
+    "text": "Slide A\nTemporary content"
+  },
+  {
+    "objectID": "template.html#slide-b",
+    "href": "template.html#slide-b",
+    "title": "arctraining slides",
+    "section": "Slide B",
+    "text": "Slide B\nTemporary content"
+  },
+  {
+    "objectID": "template.html#slide-c",
+    "href": "template.html#slide-c",
+    "title": "arctraining slides",
+    "section": "Slide C",
+    "text": "Slide C\nTemporary content"
+  },
+  {
+    "objectID": "template.html#thank-you",
+    "href": "template.html#thank-you",
+    "title": "arctraining slides",
+    "section": "Thank you",
+    "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: http://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
+  }
+]
