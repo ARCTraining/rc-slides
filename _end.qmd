@@ -7,6 +7,6 @@ please do not hesitate to get in touch with us.
 
 ### We are always here to assist you!
 
-- Contact via IT Servicedesk: {{< var rc.servicedesk >}}
+- Contact via IT Service Desk: {{< var rc.servicedesk >}}
 - See our Website: {{< var rc.website >}}
 - HPC documentation: {{< var rc.documentation >}}
