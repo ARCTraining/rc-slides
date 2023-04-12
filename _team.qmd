@@ -1,0 +1,14 @@
+## Research Computing Team {.smaller}
+
+Staff: 
+
+- {{< var rc.team >}}
+
+Here for:
+
+- General guidance and advice
+- Access to specialist support and consultancy
+- Research Software Engineering support
+
+Contact via IT Service Desk: {{< var rc.servicedesk >}}
+

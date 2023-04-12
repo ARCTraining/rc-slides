@@ -1,0 +1,12 @@
+## Thank you {.smaller}
+
+If you have any questions or would like to learn more about Research Computing,
+please do not hesitate to get in touch with us.
+
+\
+
+### We are always here to assist you!
+
+- Contact via IT Service Desk: {{< var rc.servicedesk >}}
+- See our Website: {{< var rc.website >}}
+- HPC documentation: {{< var rc.documentation >}}

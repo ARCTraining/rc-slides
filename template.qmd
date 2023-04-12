@@ -1,0 +1,27 @@
+---
+format: 
+  revealjs:
+    navigation-mode: linear
+    controls-layout: bottom-right
+    controls: true
+    footer: "[Research IT Website]({{< var rc.website >}}) | [Research IT Query]({{< var rc.servicedesk >}}) | [Courses Material]({{< var rc.material >}})"
+code: Course Code
+name: Course Name
+---
+
+{{< include _title.qmd >}}
+{{< include _team.qmd >}}
+
+## Slide A
+
+Temporary content
+
+## Slide B
+
+Temporary content
+
+## Slide C
+
+Temporary content
+
+{{< include _end.qmd >}}
