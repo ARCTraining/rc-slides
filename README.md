@@ -37,7 +37,7 @@ name: Course Name
 ---
 ```
 
-*Note that `code` and `name` are `meta` variables used to generate the title slide (see bellow).*
+*Note that `code` and `name` are `meta` variables used to generate the title slide (see below).*
 
 ### The Title Slide
 
