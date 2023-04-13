@@ -79,11 +79,38 @@ Launch...
 
 ## Filesystem basics: absolute path
 
-![](assets/img/hpc0/filesystem-absolute.svg)
+```{mermaid}
+%%{ init: { 'flowchart': { 'curve': 'linear' } } }%%
+graph TB
+    A((/))---B((bin))
+    A---C((dev))
+    A---D((etc))
+    A-->E((home))
+    A---F((tmp))
+    A---G((usr))
+    E---H((bob))
+    E-->I((alice))
+    I---J((secrets))
+    I-->K((code))
+```
+
 
 ## Filesystem basics: relative path
 
-![](assets/img/hpc0/filesystem-relative.svg)
+```{mermaid}
+%%{ init: { 'flowchart': { 'curve': 'linear' } } }%%
+graph TB
+    A((/))---B((bin))
+    A---C((dev))
+    A---D((etc))
+    A-->E((home))
+    A-->F((tmp))
+    A---G((usr))
+    E---H((bob))
+    E-->I((alice))
+    I---J((secrets))
+    I-->K((code))
+```
 
 # Exercises {visibility="hidden"}
 
