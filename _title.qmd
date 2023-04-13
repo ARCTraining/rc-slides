@@ -2,7 +2,7 @@
 ### {{< meta name >}}
 
 ::: {.r-stack}
-![](assets/img/banner-wide.svg)
+![](assets/img/banner-wide.png)
 :::
 
 ::: footer

@@ -23,13 +23,13 @@ General queries: {{< var rc.servicedesk >}}
 
 ## Training
 
-![](assets/img/hpc0/training.svg)
+![](assets/img/hpc0/training.png)
 
 ## ARC/HPC Training Portfolio
 
 <http://arc.leeds.ac.uk/training>
 
-![](assets/img/hpc0/portfolio.svg)
+![](assets/img/hpc0/portfolio.png)
 
 ## Purpose of today
 
@@ -53,25 +53,25 @@ Who are you and why are you here?
 
 # Linux Basics {visibility="hidden"}
 
-## Logging in... {background-color="#bbe1f6"}
+## Logging in... {background-color="#202020"}
 
 Using MobaXTerm
 
-## What is BASH? {background-color="black"}
+## What is BASH?
 
 ![](assets/img/hpc0/bash.png)
 
 ## What is a shell?
 
-![](assets/img/hpc0/shell.svg)
+![](assets/img/hpc0/shell.png)
 
-## MobaXTerm {background-color="#bbe1f6"}
+## MobaXTerm {background-color="#202020"}
 
 Launch...
 
 ## Filesystem basics
 
-![](assets/img/hpc0/filesystem.svg)
+![](assets/img/hpc0/filesystem.png)
 
 ## Forward slash / and backslash \
 
@@ -79,11 +79,11 @@ Launch...
 
 ## Filesystem basics: absolute path
 
-![](assets/img/hpc0/filesystem-absolute.svg)
+![](assets/img/hpc0/filesystem-absolute.png)
 
 ## Filesystem basics: relative path
 
-![](assets/img/hpc0/filesystem-relative.svg)
+![](assets/img/hpc0/filesystem-relative.png)
 
 # Exercises {visibility="hidden"}
 
