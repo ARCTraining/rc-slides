@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ARCTraining.github.io/rc-slides/hpc0.html</loc>
+    <lastmod>2023-04-14T12:57:49.571Z</lastmod>
+  </url>
+  <url>
     <loc>https://ARCTraining.github.io/rc-slides/index.html</loc>
-    <lastmod>2023-04-12T10:22:44.803Z</lastmod>
+    <lastmod>2023-04-14T12:57:51.355Z</lastmod>
   </url>
   <url>
     <loc>https://ARCTraining.github.io/rc-slides/template.html</loc>
-    <lastmod>2023-04-12T10:22:46.343Z</lastmod>
+    <lastmod>2023-04-14T12:57:52.723Z</lastmod>
   </url>
 </urlset>

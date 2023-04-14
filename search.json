@@ -1,5 +1,166 @@
 [
   {
+    "objectID": "hpc0.html#meta-code",
+    "href": "hpc0.html#meta-code",
+    "title": "arctraining slides",
+    "section": "HPC 0",
+    "text": "HPC 0\nIntroduction to the Unix/Linux command line"
+  },
+  {
+    "objectID": "hpc0.html#research-computing-team",
+    "href": "hpc0.html#research-computing-team",
+    "title": "arctraining slides",
+    "section": "Research Computing Team",
+    "text": "Research Computing Team\nStaff:\n\nAlex Coleman, John Hodrien, Ollie Clark, Nick Rhodes, Patricia Ternes\n\nHere for:\n\nGeneral guidance and advice\nAccess to specialist support and consultancy\nResearch Software Engineering support\n\nContact via IT Service Desk: http://bit.ly/arc-help"
+  },
+  {
+    "objectID": "hpc0.html#contact-details",
+    "href": "hpc0.html#contact-details",
+    "title": "arctraining slides",
+    "section": "Contact Details",
+    "text": "Contact Details\n\nARC Website: https://arc.leeds.ac.uk/\n\nGeneral queries: http://bit.ly/arc-help"
+  },
+  {
+    "objectID": "hpc0.html#training",
+    "href": "hpc0.html#training",
+    "title": "arctraining slides",
+    "section": "Training",
+    "text": "Training"
+  },
+  {
+    "objectID": "hpc0.html#archpc-training-portfolio",
+    "href": "hpc0.html#archpc-training-portfolio",
+    "title": "arctraining slides",
+    "section": "ARC/HPC Training Portfolio",
+    "text": "ARC/HPC Training Portfolio\nhttp://arc.leeds.ac.uk/training"
+  },
+  {
+    "objectID": "hpc0.html#purpose-of-today",
+    "href": "hpc0.html#purpose-of-today",
+    "title": "arctraining slides",
+    "section": "Purpose of today",
+    "text": "Purpose of today\n\nIntroduce the command line for new users\nHands on experience and confidence building\nBasic interactions with files and directories: command line execution, directory and file basics, files properties.\nFile manipulation: inspecting and editing files, searching and filtering,\nScripting and workflows: scripting techniques for building workflows."
+  },
+  {
+    "objectID": "hpc0.html#logging-in",
+    "href": "hpc0.html#logging-in",
+    "title": "arctraining slides",
+    "section": "Logging in…",
+    "text": "Logging in…\nUsing MobaXTerm"
+  },
+  {
+    "objectID": "hpc0.html#what-is-bash",
+    "href": "hpc0.html#what-is-bash",
+    "title": "arctraining slides",
+    "section": "What is BASH?",
+    "text": "What is BASH?"
+  },
+  {
+    "objectID": "hpc0.html#what-is-a-shell",
+    "href": "hpc0.html#what-is-a-shell",
+    "title": "arctraining slides",
+    "section": "What is a shell?",
+    "text": "What is a shell?"
+  },
+  {
+    "objectID": "hpc0.html#mobaxterm",
+    "href": "hpc0.html#mobaxterm",
+    "title": "arctraining slides",
+    "section": "MobaXTerm",
+    "text": "MobaXTerm\nLaunch…"
+  },
+  {
+    "objectID": "hpc0.html#filesystem-basics",
+    "href": "hpc0.html#filesystem-basics",
+    "title": "arctraining slides",
+    "section": "Filesystem basics",
+    "text": "Filesystem basics"
+  },
+  {
+    "objectID": "hpc0.html#forward-slash-and-backslash",
+    "href": "hpc0.html#forward-slash-and-backslash",
+    "title": "arctraining slides",
+    "section": "Forward slash / and backslash\n",
+    "text": "Forward slash / and backslash"
+  },
+  {
+    "objectID": "hpc0.html#filesystem-basics-absolute-path",
+    "href": "hpc0.html#filesystem-basics-absolute-path",
+    "title": "arctraining slides",
+    "section": "Filesystem basics: absolute path",
+    "text": "Filesystem basics: absolute path"
+  },
+  {
+    "objectID": "hpc0.html#filesystem-basics-relative-path",
+    "href": "hpc0.html#filesystem-basics-relative-path",
+    "title": "arctraining slides",
+    "section": "Filesystem basics: relative path",
+    "text": "Filesystem basics: relative path"
+  },
+  {
+    "objectID": "hpc0.html#exercise-0",
+    "href": "hpc0.html#exercise-0",
+    "title": "arctraining slides",
+    "section": "Exercise 0",
+    "text": "Exercise 0\nLogging in\nWe are using ARC4, one of the University HPC clusters today.\n\nYou’ll use MobaXterm to connect:\nssh <username>@arc4.leeds.ac.uk\n<username> is your university username."
+  },
+  {
+    "objectID": "hpc0.html#exercise-1",
+    "href": "hpc0.html#exercise-1",
+    "title": "arctraining slides",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nSetup\nFirst, get hold of the sample data we will be using today.\n\nType this in your command shell:\ngit clone https://github.com/callaghanmt/shell-training/"
+  },
+  {
+    "objectID": "hpc0.html#exercise-2",
+    "href": "hpc0.html#exercise-2",
+    "title": "arctraining slides",
+    "section": "Exercise 2",
+    "text": "Exercise 2\n\nProblemSolution\n\n\nTwo new commands:\n\nThe sort command will sort lines alphabetically\nYou can use the cut command to split lines of text based on a given character e.g. cut -d ',' -f 2 will split lines around the comma and give you the second part\n\n\n\n\nCombine cat, cut, and sort to print out the Latin names from birds.txt in alphabetical order.\nSave the output to a new file.\n\n\n\n1:\n[user@host IOM-animals]$ cat birds.txt | sort | cut -d ',' -f 2\n2:\n[user@host IOM-animals]$ cat birds.txt | sort | cut -d ',' -f 2 > sorted-birds.txt"
+  },
+  {
+    "objectID": "hpc0.html#exercise-3",
+    "href": "hpc0.html#exercise-3",
+    "title": "arctraining slides",
+    "section": "Exercise 3",
+    "text": "Exercise 3\n\nProblemSolution\n\n\nList all the animals on the Isle of Mann alphabetically and find the 50th item in that list.\n\n\nTo get the 50th line, use head to get the first 50 lines and pipe it to tail to get the last one:\n[user@host IOM-animals]$ sort *.txt | head -50 | tail -1\ncoot, fulica atra"
+  },
+  {
+    "objectID": "hpc0.html#exercise-4",
+    "href": "hpc0.html#exercise-4",
+    "title": "arctraining slides",
+    "section": "Exercise 4",
+    "text": "Exercise 4\n\nProblemSolution\n\n\nshell-training/data/ contains 300 data files, each of which should contain 100 values. One of these files is missing some data though. . .\n\nUse a series of commands connected by pipes to identify the file with missing data. Hints:\n\nwc -w will tell you the number of values in a file\nsort -n will sort numerically\n\n\n\n[user@host data]$ wc -w values* | sort -n | head -1\n99 values 44\n\nwc -w tells you how many values are in each file\nsort this output to put the files in order of the number of values\nuse head to select the first line, which contains the name of the file with the smallest number of values"
+  },
+  {
+    "objectID": "hpc0.html#exercise-5",
+    "href": "hpc0.html#exercise-5",
+    "title": "arctraining slides",
+    "section": "Exercise 5",
+    "text": "Exercise 5\n\nProblemSolution\n\n\n\nUse a for loop to create five directories called calculation_?, where ? is a number.\nUse a loop to create five directories, each one the parent of the next.\n\n\n\n1:\n[user@host ~]$ for (( i=1 ; i<=5 ; i++ ))\n> do\n> mkdir calculation_$i\n> done\n[user@host ~]$\n2:\n[user@host ~]$ for (( i=1 ; i<=5 ; i++ ))\n> do\n> mkdir calculation_$i\n> cd calculation_$i\n> done\n[user@host calculation_5]$\nIn the second case, two commands are executed each time you go through the loop. A new directory is created and then the working directory is changed to the new directory.\nOn the next iteration, the new directory is then created inside the previous one."
+  },
+  {
+    "objectID": "hpc0.html#exercise-6",
+    "href": "hpc0.html#exercise-6",
+    "title": "arctraining slides",
+    "section": "Exercise 6",
+    "text": "Exercise 6\n\nProblemSolution\n\n\n\nIn the wildcards directory, create a variable called files listing all of the text files. \nLoop through this list and print out the first line from each file.\n\n\n\n1:\n[user@host wildcards]$ files=$( ls *.txt )\n2:\n[user@host wildcards]$ for f in $files\n> do\n> head -1 $f\n> done"
+  },
+  {
+    "objectID": "hpc0.html#exercise-7",
+    "href": "hpc0.html#exercise-7",
+    "title": "arctraining slides",
+    "section": "Exercise 7",
+    "text": "Exercise 7\n\nProblemSolution\n\n\n\nWhat will this command print to the screen?\n\n[user@host wildcards]$ for filename in *.txt\n> do\n> echo $filename\n> cat $filename > new-file.txt\n> done\n\n2. What will the contents of new-file.txt be and why?\n\n\n1:\n\nThe name of each .txt file in the current directory\nOn each iteration the echo command prints a different file name\n\n2:\n\nThe content of new-file.txt will be the same as xyz.txt\nOn each iteration the contents of a different file are written to new-file.txt, overwriting whatever was written on the previous iteration\nThis is because we used > to write the output of cat to new-file.txt\nUsing >> instead would result in each file’s content being appended to the end of new-file.txt"
+  },
+  {
+    "objectID": "hpc0.html#thank-you",
+    "href": "hpc0.html#thank-you",
+    "title": "arctraining slides",
+    "section": "Thank you",
+    "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: http://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "arctraining slides",
