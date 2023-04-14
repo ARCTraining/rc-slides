@@ -27,7 +27,7 @@ General queries: {{< var rc.servicedesk >}}
 
 ## ARC/HPC Training Portfolio
 
-<http://arc.leeds.ac.uk/training>
+{{< var rc.training >}}
 
 ![](assets/img/hpc0/portfolio.png)
 
