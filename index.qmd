@@ -11,7 +11,7 @@ Note: this page is under construction. As soon as the slides are available,
 the link will be provided.
 
 - [x] [HPC0: Introduction to Linux for HPC](./hpc0.qmd)
-- [ ] HPC1: Introduction to High Performance Computing
+- [x] [HPC1: Introduction to High Performance Computing](hpc1.qmd)
 - [ ] HPC2: Applications and containers on HPC
 - [ ] HPC3: Computer architectures and shared memory parallel programming
 - [ ] HPC5: Introduction to GPU programming with CUDA

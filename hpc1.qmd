@@ -1,0 +1,213 @@
+---
+format:
+  revealjs:
+    navigation-mode: linear
+    controls-layout: bottom-right
+    controls: true
+    footer: "[Research IT Website]({{< var rc.website >}}) | [Research IT Query]({{< var rc.servicedesk >}}) | [Courses Material]({{< var rc.material >}})"
+code: HPC 1
+name: Introduction to High Performance Computing
+---
+
+{{< include _title.qmd >}}
+{{< include _team.qmd >}}
+
+## Purpose of today
+
+- Introducing Research Computing the HPC service at Leeds
+- Hands on with Linux and ARC4
+- Data management
+- Running code
+- Batch and Interactive jobs
+- Task Arrays
+- Making my code run faster: parallelism
+
+## Contact Details
+
+\
+ARC Website: {{< var rc.website >}}
+
+\
+General queries: {{< var rc.servicedesk >}}
+
+## Training
+
+![](assets/img/hpc0/training.png)
+
+## ARC/HPC Training Portfolio
+
+{{< var rc.training >}}
+
+![](assets/img/hpc0/portfolio.png)
+
+## Introductions and Motivations
+
+Who are you and why are you here?
+
+Hackpad!
+
+## Question
+
+What problems are you encountering with your computational work now? 
+
+Why / how do you think HPC will help?
+
+## Key Concepts
+
+- High Performance Computing (HPC)
+- High Throughput Computing (HTC)
+- "Supercomputing"
+
+## Applications
+
+![](assets/img/hpc1/spectrum.png)
+
+## Leeds facilities
+
+- ARC3 brought into service in 2017
+- ARC4 brought into service in 2019
+
+## A Supercomputer isn’t...
+
+![](assets/img/hpc1/knob.png)
+
+## Single computer vs grid of computers
+
+![](assets/img/hpc1/hpc-diagram.png)
+
+## Serial and parallel programs
+
+- Serial programs run on a single CPU core, solving one problem at a time.
+- Paralel programs run across multiple CPU cores, splitting the workload between them and solving the problem faster.
+
+## Serial Program
+
+![](assets/img/hpc1/serial.png)
+
+## Parallel Program
+
+![](assets/img/hpc1/parallel.png)
+
+## Amdahl's Law
+
+![](assets/img/hpc1/AmdahlsLaw.svg)
+
+::: aside
+Daniels220 at English Wikipedia, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons
+:::
+
+## Basic parallel machine
+
+![](assets/img/hpc1/basic-parallel.png)
+
+## Terminology
+
+- **Node**: the physical machine/server. In current systems, a node would typically include one or more processors, as well as memory and other hardware.
+
+- **Processor**: the central processing unit (CPU) inside the node, which contains one or more  cores.
+
+- **Core**: Refers to the basic computation unit of the CPU. This is unit that carries out the actual computations.
+
+## Differences from Desktop computing?
+
+- We don’t log on to compute nodes directly
+  - submit jobs via a batch scheduling system
+- Not a GUI-based environment
+- System is shared with many other users
+- Resources more tightly monitored and controlled
+  - Memory
+  - CPU usage (‘cores’)
+  - Time
+
+## Benefits of using HPC
+
+- Speed
+- Volume
+- Cost
+- Efficiency
+- Convenience
+
+## Parallel Paradigms
+
+From a systems perspective:
+
+- Shared memory parallelism
+- Distributed memory parallelism
+
+Unless you are writing your own codes, the software developer takes care of this.
+
+## Basic HPC system layout
+
+![](assets/img/hpc1/hpc-layout.png)
+
+## HPC at Leeds
+
+ARC4 is latest incarnation of central HPC at Leeds.
+
+HPC currently comprised of two facilities called ARC3 and ARC4
+
+All Faculties are shareholders and so it is important that all who can benefit
+from the use of this facility do so.
+
+## ARC3 {.smaller}
+
+2 x login nodes: 24 cores and 128GB RAM
+
+252 x standard compute nodes: 24 cores and 128GB RAM (=6048 cores); 100GB SSD
+
+4 x High Memory (24 core and 768GB nodes)
+
+6 x P100 GPU nodes (24 core, 128GB and 4 x NVidia P100)
+
+2 x K80 GPU nodes (24 core, 128GB and 2 x NVidia K80)
+
+2 x Intel Xeon Phi (Knights Landing) vector processor nodes
+
+836TB of high speed storage: /nobackup
+
+## ARC4 {.smaller}
+
+2 x login nodes: 40 cores and 192GB RAM
+
+149 x standard compute nodes: 40 cores and 192GB RAM (=6048 cores); 100GB SSD
+
+4 x High Memory (40 core and 768GB nodes)
+
+3 x V100 GPU nodes (40 core, 192GB and 4 x NVidia V100)
+
+1.2PB of high speed storage: /nobackup
+
+## Drives and Directories
+
+HPC users have access to two storage areas:
+
+- A HOME directory
+- Space on /nobackup
+
+## Home Directory
+
+This is:
+
+- Private to you
+- Backed up
+- Limited to 10GB storage (ARC)
+- Shared between machines
+
+## /nobackup
+
+- Each HPC cluster has it’s own high speed storage service called /nobackup
+- You need to make your own directory (using mkdir)
+- Nothing is backed up
+- Files will expire after 90 days not being used
+- Need to set permissions to make files private (ARC3) but not on ARC4.
+
+## Transferring files and data
+
+- scp or rsync command line utility
+- wget (to download from a remote server)
+- git (version control)
+- smbclient to copy from local M:/ and N:/ drives on campus
+- Google Drive and OneDrive (via rclone)
+- graphical programs like Cyberduck or Filezilla
+
+{{< include _end.qmd >}}
