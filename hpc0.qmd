@@ -18,6 +18,9 @@ name: Introduction to the Unix/Linux command line
 ARC Website: {{< var rc.website >}}
 
 \
+ARC Documentation: {{< var rc.documentation >}}
+
+\
 General queries: {{< var rc.servicedesk >}}
 
 
@@ -33,11 +36,13 @@ General queries: {{< var rc.servicedesk >}}
 
 ## Purpose of today
 
-- Introduce the command line for new users
+- Introduce the command line
 - Hands on experience and confidence building
-- Basic interactions with files and directories: command line execution, directory and file basics, files properties.
-- File manipulation: inspecting and editing files, searching and filtering,
-- Scripting and workflows: scripting techniques for building workflows.
+- File system navigation
+- Creating, reading, updating and deleting files
+- File properties: types, sizes, permissions 
+- File manipulation: inspecting and editing files, searching and filtering
+- Shell scripting
 
 # Introductions and Motivations
 
@@ -89,12 +94,16 @@ Launch...
 
 ## Exercise 0 {.smaller}
 
-### Logging in
-
-We are using ARC4, one of the University HPC clusters today.
+### Login
 
 \
-You’ll use MobaXterm to connect:
+ARC Documentation: {{< var rc.documentation >}}
+
+\
+If you have an ARC4 account, login.
+
+\
+From Windows use MobaXterm to connect:
 
 ```{.bash code-line-numbers=false}
 ssh <username>@arc4.leeds.ac.uk
@@ -144,6 +153,11 @@ Two new commands:
 2:
 ```{.bash code-line-numbers=false}
 [user@host IOM-animals]$ cat birds.txt | sort | cut -d ',' -f 2 > sorted-birds.txt
+```
+
+3:
+```{.bash code-line-numbers=false}
+[user@host IOM-animals]$ cat birds.txt | sort | awk {FS=}cut -d ',' -f 2 > sorted-birds.txt
 ```
 
 :::
