@@ -90,7 +90,10 @@ Launch...
 
 ![](assets/img/hpc0/filesystem-relative.png)
 
+
+
 # Exercises {visibility="hidden"}
+
 
 ## Exercise 0 {.smaller}
 
@@ -112,12 +115,190 @@ ssh <username>@arc4.leeds.ac.uk
 *`<username>` is your university username.*
 
 
+## Command Documentation 1/2
 
-## Exercise 1
+To find out how to use a command we can use the `--help` option:
+Type the following into your command shell:
+
+```{.bash code-line-numbers=false}
+mkdir --help
+```
+
+This prints help about the `mkdir` command - a command used to create a directory.
+
+
+## Command Documentation 2/2
+
+For more details about a command, consult the manual page
+- (often referred to as 'man pages')
+- accessed using `man` - another command:
+
+```{.bash code-line-numbers=false}
+man mkdir
+```
+
+For help using `man`: press the h-key <h>.
+To quit the help or the man page: press <q>.
+To page through a man page: press <space_bar>.
+
+Man pages often have a 'SEE ALSO' section which refers to even more detailed documentation using the `info` command.
+
+
+## Visibility and Permissions 1/7
+
+File permissions can be identified using the `ls` command with the `-l` option.
+
+Directory and filenames starting with a '.' are hidden.
+To see these with the `ls` command use the `-a` option.
+
+A directory named 'test0' containing a directory called 'test' containing a file called 'test-file' can be created as follows:
+
+```{.bash code-line-numbers=false}
+[user@host]$ mkdir test0
+[user@host]$ mkdir test0/test
+[user@host]$ touch test0/test/test-file
+```
+
+
+## Visibility and Permissions 2/7
+
+By default, the owner has read, write and execute permissions on a directory they create, and read and write (but not execute) permission on a file they create:
+By default, group and all have no permissions.
+
+```{.bash code-line-numbers=false}
+[user@host]$ ls -la test0/test
+drwx------ 2 <owner> <group> <size> <date> <time> .
+drwx------ 3 <owner> <group> <size> <date> <time> ..
+-rw------- 1 <owner> <group> <size> <date> <time> test-file
+```
+
+
+## Visibility and Permissions 3/7
+
+-rw------- 1 <owner> <group> <size> <date> <time> test-file
+     |     |    |       |       |      |      |
+     |     |    |       |       |      |      +----> time last modified
+     |     |    |       |       |      +-----------> date last modified
+     |     |    |       |       +------------------> size in bytes
+     |     |    |       +--------------------------> group assignment
+     |     |    +----------------------------------> owner username
+     |     +---------------------------------------> number of hard links
+	 +---------------------------------------------> permissions
+
+
+## Visibility and Permissions 4/7
+
+The first character of permissions is the type: 'd' indicates a directory, '-' indicates a file. (This can have other values.)
+The next 3 characters of permissions are 'owner permissions'.
+After these, the next 3 characters are 'group user permissions'.
+The final 3 characters are 'all user permissions'.
+
+Examples:
+Type and permissions of 'drwx------' are:
+- type: directory
+- owner permissions: read, write and execute
+- group user permissions: read and execute
+- all user permissions: read only
+
+Type and permissions of '-rw-------' are:
+- type: file
+- owner permissions: read and execute
+- group user permissions: none
+- all user permissions: none
+
+
+## Visibility and Permissions 5/7
+
+Each system user is assigned to one or more groups.
+A user can change the group assignment to other groups they belong to.
+
+'all' refers to all users of the system.
+
+Group assignment and permissions may be changed respectively with the commands `chgrp` and `chmod`.
+
+The command `groups` can be used to print out what groups there are, and what group a user is part of.
+
+There are a couple of main ways to change permissions. A way using numbers and a way using letters.
+
+
+## Visibility and Permissions 6/7
+
+```{.bash code-line-numbers=false}
+[user@host]$ chmod u+rwx,g+rx,a+r test0/test/test-file
+[user@host]$ ls -al test0/test/test-file
+-rwxr-xr-- 1 <owner> <group> <size> <date> <time> test-file
+```
+
+'u+rwx' sets owner permissions to read, write and execute 
+'g+rx' sets group user permissions to read and execute 
+'a+r' sets all user permissions to read only 
+
+
+## Visibility and Permissions 7/7
+
+This can also be achieved with octal values.
+The octal value (0-7) is calculated by adding up the values for each digit
+User (rwx) = 4+2+1 = 7
+Group(rx) = 4+1 = 5
+World (r) = 4
+
+```{.bash code-line-numbers=false}
+[user@host]$ chmod u+rwx,g+r test0/test/test-file
+-rwxr----- 1 <owner> <group> <size> <date> <time> test-file
+[user@host]$ chmod 754 test0/test/test-file
+[user@host]$ ls -al test0/test/test-file
+-rwxr-xr-- 1 <owner> <group> <size> <date> <time> test-file
+``````
+
+
+## Exercise 1 {.smaller}
+
+::: {.panel-tabset}
+
+### Problem
+
+Create a new directory called 'test' containing a new file called 'test-file'. Set the permissions on 'test-file' to be:
+- owner permissions: read, write and execute
+- group permissions: read only
+- all permissions: none
+
+Hints:
+- `mkdir` make a directory
+- `cd` change into a directory
+- `touch` create a new empty file
+- `chmod` modify permissions
+- `ls -l` test permissions
+
+### Solution
+
+1:
+```{.bash code-line-numbers=false}
+[user@host ~]$ mkdir test
+[user@host ~]$ touch test/test-file
+[user@host ~]$ ls -l test/test-file
+-rw------- 1 <owner> <group> <size> <date> <time> test/test-file
+[user@host ~]$ chmod u+rwx,g+r test-file
+[user@host ~]$ ls -l test/test-file
+-rwxr----- 1 <owner> <group> <size> <date> <time> test/test-file
+```
+
+2:
+```{.bash code-line-numbers=false}
+[user@host ~]$ mkdir test
+[user@host ~]$ touch test/test-file
+[user@host ~]$ ls -l test/test-file
+-rw------- 1 <owner> <group> <size> <date> <time> test/test-file
+[user@host ~]$ chmod 740 test-file
+[user@host ~]$ ls -l test/test-file
+-rwxr----- 1 <owner> <group> <size> <date> <time> test/test-file
+```
+
+
+## Exercise 2
 
 ### Setup
 
-First, get hold of the sample data we will be using today.
+Get a copy of some data using git:
 
 \
 Type this in your command shell:
@@ -126,7 +307,8 @@ Type this in your command shell:
 git clone https://github.com/callaghanmt/shell-training/
 ```
 
-## Exercise 2 {.smaller}
+
+## Exercise 3 {.smaller}
 
 ::: {.panel-tabset}
 
@@ -157,12 +339,14 @@ Two new commands:
 
 3:
 ```{.bash code-line-numbers=false}
-[user@host IOM-animals]$ cat birds.txt | sort | awk {FS=}cut -d ',' -f 2 > sorted-birds.txt
+[user@host IOM-animals]$ cat birds.txt | sort | awk '{FS=" ,"}{print $2}' > sorted-birds.txt
 ```
+awk allows for setting field seperators of multiple characters, cut is restricted to a single character field seperator.
 
 :::
 
-## Exercise 3 {.smaller}
+
+## Exercise 4 {.smaller}
 
 ::: {.panel-tabset}
 
@@ -172,15 +356,22 @@ List all the animals on the `Isle of Mann` alphabetically and find the `50th` it
 
 ### Solution
 
-To get the `50th` line, use `head` to get the first 50 lines and `pipe it` to `tail` to get the last one:
+1: Use `head` to get the first 50 lines and `pipe it` to `tail` to get the last one:
 
 ```{.bash code-line-numbers=false}
-[user@host IOM-animals]$ sort *.txt | head -50 | tail -1
+[user@host IOM-animals]$ sort *.txt | head -n 50 | tail -n 1
 coot, fulica atra
 ```
+
+2: Use `sed` which is a stream editing tool.
+```{.bash code-line-numbers=false}
+[user@host IOM-animals]$ sort *.txt | sed -n 50p
+coot, fulica atra
+```
+
 :::
 
-## Exercise 4 {.smaller}
+## Exercise 5 {.smaller}
 
 ::: {.panel-tabset}
 
@@ -196,6 +387,7 @@ Use a series of commands connected by pipes to identify the file with missing da
 
 ### Solution
 
+1:
 ```{.bash code-line-numbers=false}
 [user@host data]$ wc -w values* | sort -n | head -1
 99 values 44
@@ -208,7 +400,7 @@ Use a series of commands connected by pipes to identify the file with missing da
 :::
 
 
-## Exercise 5 {.smaller}
+## Exercise 6 {.smaller}
 
 ::: {.panel-tabset}
 
@@ -221,22 +413,25 @@ Use a series of commands connected by pipes to identify the file with missing da
 
 1:
 ```{.bash code-line-numbers=false}
-[user@host ~]$ for (( i=1 ; i<=5 ; i++ ))
+[user@host ~]$ for (( i=1 ; i<6 ; i++ ))
 > do
 > mkdir calculation_$i
 > done
 [user@host ~]$
 ```
 
+Uses a standard C like 'for loop' where; a variable 'i' is initialised with a value of 1, 'i++' is shorthand for 'i=i+1' which increments 'i' by 1 each time round the loop, and the loop continues until the 'i<6' condition returns false.
+
 2:
 ```{.bash code-line-numbers=false}
-[user@host ~]$ for (( i=1 ; i<=5 ; i++ ))
-> do
+[user@host ~]$ for i in {1..5}; do
 > mkdir calculation_$i
 > cd calculation_$i
 > done
 [user@host calculation_5]$
 ```
+
+Uses a sequence type for loop where i starts at 1 and ends at 5 and by default increments by 1. For an increment of 2, the sequence would add a step condition with another part in the curly braces: `for i in {1..5..2}`
 
 In the second case, two commands are executed each time you go through the loop. A new directory is created and
 then the working directory is changed to the new directory.
@@ -245,7 +440,7 @@ On the next iteration, the new directory is then created inside the previous one
 
 :::
 
-## Exercise 6 {.smaller}
+## Exercise 7 {.smaller}
 
 ::: {.panel-tabset}
 
@@ -272,7 +467,7 @@ On the next iteration, the new directory is then created inside the previous one
 
 :::
 
-## Exercise 7 {.smaller}
+## Exercise 8 {.smaller}
 
 ::: {.panel-tabset}
 
@@ -294,12 +489,8 @@ On the next iteration, the new directory is then created inside the previous one
 
 ### Solution
 
-1: 
-
 - The name of each `.txt` file in the current directory
 - On each iteration the echo command prints a different file name
-
-2:
 
 - The content of `new-file.txt` will be the same as `xyz.txt`
 - On each iteration the contents of a different file are written to `new-file.txt`, overwriting whatever was written on the previous iteration
@@ -307,5 +498,19 @@ On the next iteration, the new directory is then created inside the previous one
 - Using `>>` instead would result in each file's content being appended to the end of `new-file.txt`
 
 :::
+
+
+## Shell Scripts
+
+These are simple text files that by convention the filename ends with '.sh'.
+The file should start with a 'shebang' line which tells the Linux system what command to run:
+
+#!/bin/bash
+
+\
+After the shebang line, simply enter all the commands for the script.
+
+To run the script it must have executable permissions.
+
 
 {{< include _end.qmd >}}
