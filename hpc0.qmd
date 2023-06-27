@@ -115,7 +115,26 @@ ssh <username>@arc4.leeds.ac.uk
 *`<username>` is your university username.*
 
 
-## Exercise 1 {.smaller}
+## Some helpful shell commands
+
+https://arcdocs.leeds.ac.uk/getting_started/linuxbasics.html#some-helpful-shell-commands
+
+Command | Description
+------------------------------------------
+ls      | List the contents of a directory
+cd      | Change directory
+pwd     | Print the working (current) directory
+mkdir   | Make a new directory (folder)
+mv      | Move a file or directory (can be used to rename files)
+cp      | Copy a file or directory (using the option cp -r)
+head    | Show the first lines of a file (default 10)
+tail    | Show the last lines of a file (default 10)
+less    | Open into a paginated reader view 
+cat     | Concatenate and print to terminal (via standard output)
+rm      | Permanently remove file or directory (using the option rm -r)
+
+
+## Exercise 1
 
 To find out how to use a command we can use the `--help` option. Type the following into your command shell:
 
@@ -124,7 +143,7 @@ mkdir --help
 ```
 
 \
-This prints help about the `mkdir` command - a command used to create a directory.
+This prints help about the `mkdir` command.
 \
 For more details about a command, consult the manual page using the `man` command. Type the following into your command shell:
 
@@ -291,15 +310,14 @@ Hints:
 \
 - `cd` change into a directory
 \
-- `touch` create a new empty file
+- `touch` can be used to create a new empty file
 \
 - `chmod` modify permissions
 \
-- `ls -l` test permissions
+- `ls -l` to list and see permission details
 
 ### Solution
 
-1:
 ```{.bash code-line-numbers=false}
 [user@host ~]$ mkdir test
 [user@host ~]$ touch test/test-file
@@ -310,24 +328,20 @@ Hints:
 -rwxr----- 1 <owner> <group> <size> <date> <time> test/test-file
 ```
 
-2:
+\
+Alternatively octal numbers could be used:
+
 ```{.bash code-line-numbers=false}
 [user@host ~]$ mkdir test
 [user@host ~]$ touch test/test-file
-[user@host ~]$ ls -l test/test-file
--rw------- 1 <owner> <group> <size> <date> <time> test/test-file
 [user@host ~]$ chmod 740 test-file
-[user@host ~]$ ls -l test/test-file
--rwxr----- 1 <owner> <group> <size> <date> <time> test/test-file
 ```
 
 :::
 
 ## Exercise 3
 
-### Setup
-
-Get a copy of some data using git. Execute the following command:
+Get a copy of some data using the following `git` command:
 
 ```{.bash code-line-numbers=false}
 git clone https://github.com/ARCTraining/shell-training/
@@ -337,41 +351,41 @@ git clone https://github.com/ARCTraining/shell-training/
 Change directory into the directory called 'shell-training'. List the directory contents.
 
 
+## sort and cut
+
+- The `sort` command will sort lines (by default alphabetically).
+
+\
+
+- The `cut` command will cut lines of text based on a given character
+e.g. `cut -d ',' -f 2` will split lines around the comma and yield the second part.
+
+
 ## Exercise 4 {.smaller}
 
 ::: {.panel-tabset}
 
 ### Problem
 
-Two new commands:
-
-- The `sort` command will sort lines (by default alphabetically).
-- The `cut` command will cut lines of text based on a given character e.g. `cut -d ',' -f 2` will split lines around the comma and yield the second part.
-
-\
-
-1. Combine `cat`, `cut`, and `sort` to print out the Latin names from the file `IOM-animals/birds.txt` in alphabetical order.
-2. Save the output to a new file.
+Combine `cat`, `cut`, and `sort` to print out the Latin names from the file `IOM-animals/birds.txt` in alphabetical order. Save the output to a new file.
 
 ### Solution
 
-1:
-
-```{.bash code-line-numbers=false}
-[user@host IOM-animals]$ cat birds.txt | sort | cut -d ',' -f 2
-```
-
-2:
 ```{.bash code-line-numbers=false}
 [user@host IOM-animals]$ cat birds.txt | sort | cut -d ',' -f 2 > sorted-birds.txt
 ```
 
-3:
+\
+Another option to achieve the same is to use the `awk` command instead of `cut`:
+
 ```{.bash code-line-numbers=false}
-[user@host IOM-animals]$ cat birds.txt | sort | awk '{FS=" ,"}{print $2}' > sorted-birds.txt
+[user@host IOM-animals]$ cat birds.txt | sort | awk '{FS=","}{print $2}' > sorted-birds.txt
 ```
 \
-`awk` is a powerful but complicated command. It allows for setting field seperators of multiple characters, `cut` is restricted to a single character field seperator. So for this solution, the lines do not start with a space.
+`awk` is a program command tool. It allows for setting field seperators of multiple characters, whereas `cut` is restricted to a single character field seperator. 
+\
+
+The `{FS=","}` part of the `awk` command sets the field seperator to a comma, to set as a space followed by a comma use `{FS=" ,"}`
 
 :::
 
@@ -382,26 +396,62 @@ Two new commands:
 
 ### Problem
 
-List all the lines in the files in `IOM-animals` alphabetically and find the `50th` item.
+List all the lines in the files in `IOM-animals` directory alphabetically and find the `50th` item.
 
 ### Solution
 
-1: Use `head` to get the first 50 lines and `pipe it` to `tail` to get the last one:
+Use `head` to get the first 50 lines and `pipe it` to `tail` to get the last one:
 
 ```{.bash code-line-numbers=false}
 [user@host IOM-animals]$ sort *.txt | head -n 50 | tail -n 1
 coot, fulica atra
 ```
 
-2: Use `sed` which is a stream editing tool.
+\
+Another option is to use the `sed` command instead of `head` and `tail`:
 ```{.bash code-line-numbers=false}
 [user@host IOM-animals]$ sort *.txt | sed -n 50p
 coot, fulica atra
 ```
 \
-`sed` supports search and replace too. 
+`sed` is a program command tool for stream editing. Figuring out the `sed` options that work is not so easy! 
 
 :::
+
+
+## sed 1/2
+
+`sed` reads an input stream and produces an output stream. Internally it has a pattern space and a hold buffer. Data is read from the input stream until the next newline character and placed into the pattern space. Most sed commands operate on the data in the pattern space. Data can be exchanged between the pattern space and the hold buffer. Once sed has executed all commands, it outputs the pattern space and adds a newline characer at the end.
+
+
+## sed 2/2
+
+A very simple `sed` program:
+```
+sed 's/foo/bar/'
+```
+\
+This program replaces all instance of 'foo' with 'bar' on every line.
+
+\
+Beware of `sed` commands as they can modify a file. 
+
+
+## grep
+
+`grep` will print all lines containing or not containing a string of characters. The following will stream out all input lines containing 'foo':
+\
+```
+grep foo
+```
+\
+
+The following will stream out all input lines not containing 'foo':
+\
+```
+grep -v foo
+```
+
 
 ## Exercise 6 {.smaller}
 
@@ -419,23 +469,20 @@ Use a series of commands connected by pipes to identify which files have missing
 
 ### Solution
 
-1:
+A solution using `grep`:
 ```{.bash code-line-numbers=false}
-[user@host data]$ wc -w values* | sort -n | head -n 2
-     99 values 44
-    100 values 1
+[user@host data]$ wc -w values* | sort -n | grep -v '100 values'
+    99 values 44
+ 29899 total
 ```
-\
-The difficulty here is knowing that 2 lines is enough. As well as specifying a different number of lines for head, pipe into `more` or `less` to see more lines.
 
-2:
+\
+Alternatively `awk` could be used:
 ```{.bash code-line-numbers=false}
 [user@host data]$ wc -w values* | sort -n | awk '$1 != 100 {print $0}'
     99 values 44
  29899 total
 ```
-\
-Again this showcases the utility of `awk`. A reminder though that `awk` syntax is complicated.
 
 :::
 
@@ -452,7 +499,7 @@ Example for loop to print the numbers 1, 3 and 5:
 ```
 \
 `echo` is a command that prints to the standard output.
-The variable `i` is initialised with a value of 1; the loop continues until the condition `i` is less than `6`; each iteration of the loop `i` is incremented by `2`.
+The variable `i` is initialised with a value of `1`; the loop continues until the condition `i` is less than `6`; each iteration of the loop `i` is incremented by `2`.
 
 
 ## Sequences
@@ -466,7 +513,7 @@ Example sequence to print the numbers 1, 3 and 5:
 5
 ```
 \
-The sequence variable `i` starts at 1 and ends at 5 and steps by 2.
+The sequence variable `i` starts at `1` and ends at `5` and steps by `2`.
 A sequence could be the items in a directory or other things.
 
 
@@ -491,7 +538,7 @@ A sequence could be the items in a directory or other things.
 ```
 \
 2. Two commands are executed in each loop. A new directory is created and then the working directory is changed to the new directory. On the next iteration, the new directory is then created inside the previous one.
- ```{.bash code-line-numbers=false}
+```{.bash code-line-numbers=false}
 [user@host ~]$ for i in {1..5}; do
 > mkdir calculation_$i
 > cd calculation_$i
@@ -558,7 +605,7 @@ What will the contents of `new-file.txt` be and why?
 These are simple text files. By convention the filename ends `.sh`.
 The file should start with a `shebang` line which tells the Linux system what command to run:
 
-#!/bin/bash
+`#!/bin/bash`
 
 \
 After the `shebang`, simply enter all the commands for the script.
@@ -571,7 +618,7 @@ To run the script it must have executable permissions.
 Create and run a shell script to print out the first line of each file in a directory. Test using the wildcards directory.
 
 \
-Hint: Use the `history` command to see the commands executed. Remember to modify the file permissions so you can execute the file. To execute a script called `script.sh` issue the following command:
+Hint: Use the `history` command to see the commands you executed. You could pipe this into tail and direct it into a file and than use the `nano` - a text editor to modify this into a script. Remember to modify the file permissions so you can execute the file. To execute a script called `script.sh` issue the following command:
 
 ```{.bash code-line-numbers=false}
 [user@host wildcards]$ sh script.sh
