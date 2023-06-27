@@ -330,7 +330,7 @@ Hints:
 Get a copy of some data using git. Execute the following command:
 
 ```{.bash code-line-numbers=false}
-git clone https://github.com/callaghanmt/shell-training/
+git clone https://github.com/ARCTraining/shell-training/
 ```
 
 \
