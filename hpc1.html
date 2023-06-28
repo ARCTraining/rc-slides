@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.2.335">
 
-  <title>arctraining slides – template</title>
+  <title>arctraining slides – hpc1</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -27,6 +27,70 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -324,8 +388,8 @@
 
 
 <section id="meta-code" class="slide level2">
-<h2>Course Code</h2>
-<h3 id="meta-name">Course Name</h3>
+<h2>HPC 1</h2>
+<h3 id="meta-name">Introduction to High Performance Computing</h3>
 <div class="r-stack">
 <p><img data-src="assets/img/banner-wide.png"></p>
 </div>
@@ -347,18 +411,302 @@
 </ul>
 <p>Contact via IT Service Desk: <a href="https://bit.ly/arc-help" class="uri">https://bit.ly/arc-help</a></p>
 </section>
-<section id="slide-a" class="slide level2">
-<h2>Slide A</h2>
-<p>Temporary content</p>
+<section id="purpose-of-hpc1" class="slide level2">
+<h2>Purpose of HPC1</h2>
+<ul>
+<li>Introducing Research Computing and the HPCs at Leeds</li>
+<li>Hands on with Linux and ARC4</li>
+<li>Running code</li>
+<li>Batch and Interactive jobs</li>
+<li>Data management</li>
+<li>Joys of parallel jobs</li>
+<li>Advanced job submissions</li>
+</ul>
 </section>
-<section id="slide-b" class="slide level2">
-<h2>Slide B</h2>
-<p>Temporary content</p>
+<section id="useful-links" class="slide level2">
+<h2>Useful Links</h2>
+<p><br>
+ARC Website: <a href="https://arc.leeds.ac.uk/" class="uri">https://arc.leeds.ac.uk/</a></p>
+<p><br>
+ARC Documentation <a href="https://arcdocs.leeds.ac.uk" class="uri">https://arcdocs.leeds.ac.uk</a></p>
+<p><br>
+General queries: <a href="https://bit.ly/arc-help" class="uri">https://bit.ly/arc-help</a></p>
 </section>
-<section id="slide-c" class="slide level2">
-<h2>Slide C</h2>
-<p>Temporary content</p>
+<section id="training" class="slide level2">
+<h2>Training</h2>
+
+<img data-src="assets/img/hpc0/training.png" class="r-stretch"></section>
+<section id="archpc-training-portfolio" class="slide level2">
+<h2>ARC/HPC Training Portfolio</h2>
+<p><a href="https://arc.leeds.ac.uk/training" class="uri">https://arc.leeds.ac.uk/training</a></p>
+
+<img data-src="assets/img/hpc0/portfolio.png" class="r-stretch"></section>
+<section id="introductions-and-motivations" class="slide level2">
+<h2>Introductions and Motivations</h2>
+<p>Who are you and why are you here?</p>
+<p>What problems are you encountering with your computational work now?&nbsp;</p>
+<p>Why / how do you think HPC will help?</p>
 </section>
+<section id="key-concepts" class="slide level2">
+<h2>Key Concepts</h2>
+<ul>
+<li>High Performance Computing (HPC)</li>
+<li>High Throughput Computing (HTC)</li>
+<li>“Supercomputing”</li>
+</ul>
+</section>
+<section id="applications" class="slide level2">
+<h2>Applications</h2>
+
+<img data-src="assets/img/hpc1/spectrum.png" class="r-stretch"></section>
+<section id="terminology" class="slide level2">
+<h2>Terminology</h2>
+<ul>
+<li><p><strong>Node</strong>: the physical machine/server. In current systems, a node would typically include one or more processors, as well as memory and other hardware.</p></li>
+<li><p><strong>Processor</strong>: the central processing unit (CPU) inside the node, which contains one or more cores.</p></li>
+<li><p><strong>Core</strong>: Refers to the basic computation unit of the CPU. This is unit that carries out the actual computations.</p></li>
+</ul>
+</section>
+<section id="leeds-facilities" class="slide level2">
+<h2>Leeds facilities</h2>
+<ul>
+<li>ARC3 brought into service in 2017</li>
+<li>ARC4 brought into service in 2019</li>
+</ul>
+</section>
+<section id="a-supercomputer-isnt" class="slide level2">
+<h2>A Supercomputer isn’t…</h2>
+
+<img data-src="assets/img/hpc1/knob.png" class="r-stretch"></section>
+<section id="single-computer-vs-grid-of-computers" class="slide level2">
+<h2>Single computer vs grid of computers</h2>
+
+<img data-src="assets/img/hpc1/hpc-diagram.png" class="r-stretch"></section>
+<section id="serial-and-parallel-programs" class="slide level2">
+<h2>Serial and parallel programs</h2>
+<ul>
+<li>Serial programs run on a single CPU core, solving one problem at a time.</li>
+<li>Paralel programs run across multiple CPU cores, splitting the workload between them and solving the problem faster.</li>
+</ul>
+</section>
+<section id="serial-program" class="slide level2">
+<h2>Serial Program</h2>
+
+<img data-src="assets/img/hpc1/serial.png" class="r-stretch"></section>
+<section id="parallel-program" class="slide level2">
+<h2>Parallel Program</h2>
+
+<img data-src="assets/img/hpc1/parallel.png" class="r-stretch"></section>
+<section id="amdahls-law" class="slide level2">
+<h2>Amdahl’s Law</h2>
+<p><img data-src="assets/img/hpc1/AmdahlsLaw.svg"></p>
+
+<aside><div>
+<p>Daniels220 at English Wikipedia, CC BY-SA 3.0 <a href="https://creativecommons.org/licenses/by-sa/3.0" class="uri">https://creativecommons.org/licenses/by-sa/3.0</a>, via Wikimedia Commons</p>
+</div></aside></section>
+<section id="basic-parallel-machine" class="slide level2">
+<h2>Basic parallel machine</h2>
+
+<img data-src="assets/img/hpc1/basic-parallel.png" class="r-stretch"></section>
+<section id="differences-from-desktop-computing" class="slide level2">
+<h2>Differences from Desktop computing?</h2>
+<ul>
+<li>We don’t log on to compute nodes directly
+<ul>
+<li>submit jobs via a batch scheduling system</li>
+</ul></li>
+<li>Not a GUI-based environment</li>
+<li>System is shared with many other users</li>
+<li>Resources more tightly monitored and controlled
+<ul>
+<li>Memory</li>
+<li>CPU usage (‘cores’)</li>
+<li>Time</li>
+</ul></li>
+</ul>
+</section>
+<section id="benefits-of-using-hpc" class="slide level2">
+<h2>Benefits of using HPC</h2>
+<ul>
+<li>Speed</li>
+<li>Volume</li>
+<li>Cost</li>
+<li>Efficiency</li>
+<li>Convenience</li>
+</ul>
+</section>
+<section id="parallel-paradigms" class="slide level2">
+<h2>Parallel Paradigms</h2>
+<p>From a systems perspective:</p>
+<ul>
+<li>Shared memory parallelism</li>
+<li>Distributed memory parallelism</li>
+</ul>
+<p>Unless you are writing your own codes, the software developer takes care of this.</p>
+</section>
+<section id="basic-hpc-system-layout" class="slide level2">
+<h2>Basic HPC system layout</h2>
+
+<img data-src="assets/img/hpc1/hpc-layout.png" class="r-stretch"></section>
+<section id="exercise-1.1" class="slide level2">
+<h2>Exercise 1.1</h2>
+<p>What do the following Linux commands do? How might they be used on the HPC service?</p>
+<ul>
+<li><code>ls</code></li>
+<li><code>pwd</code></li>
+<li><code>mkdir</code></li>
+<li><code>cp</code></li>
+<li><code>wget</code></li>
+<li><code>rm</code></li>
+</ul>
+</section>
+<section id="exercise-1.2" class="slide level2">
+<h2>Exercise 1.2</h2>
+<p>On the HPC service, you have a ‘HOME’ directory of 10GB and can create a directory on the /nobackup drive.</p>
+<p>Using the man pages (or Google…) investigate how you could use the following commands to manage your storage:</p>
+<ul>
+<li><code>quota</code></li>
+<li><code>df</code></li>
+<li><code>du</code></li>
+</ul>
+</section>
+<section id="exercise-1.3" class="slide level2">
+<h2>Exercise 1.3</h2>
+<p>Linux systems include a number of file compression routines.</p>
+<p>Find out which ones are available on the cluster and use them to create a compressed archive of a directory and its contents.</p>
+</section>
+<section id="exercise-1.4" class="slide level2">
+<h2>Exercise 1.4</h2>
+<p>How could you read a PDF file or a HTML document on the cluster?</p>
+</section>
+<section id="hpc-at-leeds" class="slide level2">
+<h2>HPC at Leeds</h2>
+<p>ARC4 is latest incarnation of central HPC at Leeds.</p>
+<p>HPC currently comprised of two facilities called ARC3 and ARC4</p>
+<p>All Faculties are shareholders and so it is important that all who can benefit from the use of this facility do so.</p>
+</section>
+<section id="arc3" class="slide level2 smaller">
+<h2>ARC3</h2>
+<p>2 x login nodes: 24 cores and 128GB RAM</p>
+<p>252 x standard compute nodes: 24 cores and 128GB RAM (=6048 cores); 100GB SSD</p>
+<p>4 x High Memory (24 core and 768GB nodes)</p>
+<p>6 x P100 GPU nodes (24 core, 128GB and 4 x NVidia P100)</p>
+<p>2 x K80 GPU nodes (24 core, 128GB and 2 x NVidia K80)</p>
+<p>2 x Intel Xeon Phi (Knights Landing) vector processor nodes</p>
+<p>836TB of high speed storage: /nobackup</p>
+</section>
+<section id="arc4" class="slide level2 smaller">
+<h2>ARC4</h2>
+<p>2 x login nodes: 40 cores and 192GB RAM</p>
+<p>149 x standard compute nodes: 40 cores and 192GB RAM (=6048 cores); 100GB SSD</p>
+<p>4 x High Memory (40 core and 768GB nodes)</p>
+<p>3 x V100 GPU nodes (40 core, 192GB and 4 x NVidia V100)</p>
+<p>1.2PB of high speed storage: /nobackup</p>
+</section>
+<section id="exercise-2" class="slide level2">
+<h2>Exercise 2</h2>
+<p>We’re going to download some files to have a play with:</p>
+<div class="sourceCode" id="cb1" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/ARCTraining/hpc1-files.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="sge" class="slide level2">
+<h2>SGE</h2>
+<p>SGE is a sophisticated scheduler:</p>
+<ul>
+<li>Can define usage policies.</li>
+<li>Control maximum limits.</li>
+<li>Fair distribution of resources.</li>
+<li>Produces detailed usage accounting information.</li>
+</ul>
+</section>
+<section id="queue-tools" class="slide level2">
+<h2>Queue tools</h2>
+<ul>
+<li><code>qsub</code>: submit a batch job</li>
+<li><code>qrsh</code>: run an interactive job</li>
+<li><code>qdel</code>: delete a job</li>
+<li><code>qstat</code>: Details on queued or running jobs</li>
+<li><code>qacct</code>: Details on previous completed jobs</li>
+<li><code>qsched</code>: A hint as to when your job might run</li>
+</ul>
+</section>
+<section id="submit-some-serial-r-jobs" class="slide level2">
+<h2>Submit some serial R jobs</h2>
+<p>We’re going to submit a job from the <code>1_R</code> directory</p>
+</section>
+<section id="scheduling-notes" class="slide level2 smaller">
+<h2>Scheduling notes</h2>
+<p>Our clusters adopt a “fair share” policy</p>
+<ul>
+<li>Jobs preferentially run based on current and previous usage from Faculty. Same applies when comparing users in same Faculty.</li>
+<li>The lower the usage, the higher the priority (and vice versa).</li>
+<li>“Backfilling” is used to fit smaller jobs in between the top priority jobs. All jobs have specified run time, and so the scheduler will run lower priority jobs if they will start and finish before the highest priority jobs are scheduled to start. Thus indicating a realistic runtime for a job, will make short jobs eligible to be backfilled, potentially shortening their wait-time.</li>
+</ul>
+</section>
+<section id="submit-a-serial-python-job" class="slide level2">
+<h2>Submit a serial Python job</h2>
+<p>Can you now do the same for a Python job in the 2_Python directory?</p>
+<p>To run this Python code you do not need any modules loaded and can run it with:</p>
+<p><code>python example1.py</code></p>
+</section>
+<section id="normal-end-of-part-1" class="slide level2">
+<h2>Normal end of Part 1</h2>
+<p>Questions, recap</p>
+</section>
+<section id="drives-and-directories" class="slide level2">
+<h2>Drives and Directories</h2>
+<p>HPC users have access to two storage areas:</p>
+<ul>
+<li>A HOME directory</li>
+<li>Space on /nobackup</li>
+</ul>
+</section>
+<section id="home-directory" class="slide level2">
+<h2>Home Directory</h2>
+<p>This is:</p>
+<ul>
+<li>Private to you</li>
+<li>Backed up</li>
+<li>Limited to 10GB storage (ARC)</li>
+<li>Shared between machines</li>
+</ul>
+</section>
+<section id="nobackup" class="slide level2">
+<h2>/nobackup</h2>
+<ul>
+<li>Each HPC cluster has it’s own high speed storage service called /nobackup</li>
+<li>You need to make your own directory (using mkdir)</li>
+<li>Nothing is backed up</li>
+<li>Files will expire after 90 days not being used</li>
+<li>Need to set permissions to make files private (ARC3) but not on ARC4.</li>
+</ul>
+</section>
+<section id="transferring-files-and-data" class="slide level2">
+<h2>Transferring files and data</h2>
+<ul>
+<li><code>scp</code> or <code>rsync</code> command line utility</li>
+<li><code>wget</code> (to download from a remote server)</li>
+<li><code>git</code> (version control)</li>
+<li><code>smbclient</code> to copy from local M:/ and N:/ drives on campus</li>
+<li>Google Drive and OneDrive (via <code>rclone</code>)</li>
+<li>graphical programs like Cyberduck or Filezilla (or indeed MobaXterm)</li>
+</ul>
+</section>
+<section id="module-system" class="slide level2">
+<h2>Module system</h2>
+<p><code>module</code></p>
+<ul>
+<li><code>avail</code>: what software could I add</li>
+<li><code>list</code>: show what is active</li>
+<li><code>add|load</code>: enable software</li>
+<li><code>rm|unload</code>: disable software</li>
+<li><code>help</code>: show details of software</li>
+<li><code>swap|switch</code>: swap modules</li>
+</ul>
+</section>
+<section id="shared-vs-distributed-memory-jobs" class="slide level2">
+<h2>Shared vs Distributed memory jobs</h2>
+
+<img data-src="assets/img/hpc1/shared-vs-distributed.png" class="r-stretch"></section>
 <section id="thank-you" class="slide level2 smaller">
 <h2>Thank you</h2>
 <p>If you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.</p>

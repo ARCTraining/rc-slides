@@ -1,5 +1,320 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "arctraining slides",
+    "section": "",
+    "text": "Public facing homepage for arctraining Quarto slides collection."
+  },
+  {
+    "objectID": "index.html#slides",
+    "href": "index.html#slides",
+    "title": "arctraining slides",
+    "section": "Slides:",
+    "text": "Slides:\nNote: this page is under construction. As soon as the slides are available, the link will be provided.\n\nHPC0: Introduction to Linux for HPC\nHPC1: Introduction to High Performance Computing\nHPC2: Applications and containers on HPC\nHPC3: Computer architectures and shared memory parallel programming\nHPC5: Introduction to GPU programming with CUDA\nHPC6: HPC for Life Sciences and Bioinformatics\nSWD1a: Introduction to Python programming\nSWD1b: Introduction to R programming\nSWD2: Version Control with Git and GitHub\nSWD3: Software development practices for Research\nSWD4: Cloud computing for Research\nSWD5: Scientific Python\nSWD6: High performance Python\nSWD7: Introduction to reproducible workflows in Python"
+  },
+  {
+    "objectID": "hpc1.html#meta-code",
+    "href": "hpc1.html#meta-code",
+    "title": "arctraining slides",
+    "section": "HPC 1",
+    "text": "HPC 1\nIntroduction to High Performance Computing"
+  },
+  {
+    "objectID": "hpc1.html#research-computing-team",
+    "href": "hpc1.html#research-computing-team",
+    "title": "arctraining slides",
+    "section": "Research Computing Team",
+    "text": "Research Computing Team\nStaff:\n\nOllie Clark, Tom Hardcastle, John Hodrien, Nick Rhodes, Patricia Ternes, Andy Turner\n\nHere for:\n\nGeneral guidance and advice\nAccess to specialist support and consultancy\nResearch Software Engineering support\n\nContact via IT Service Desk: https://bit.ly/arc-help"
+  },
+  {
+    "objectID": "hpc1.html#purpose-of-hpc1",
+    "href": "hpc1.html#purpose-of-hpc1",
+    "title": "arctraining slides",
+    "section": "Purpose of HPC1",
+    "text": "Purpose of HPC1\n\nIntroducing Research Computing and the HPCs at Leeds\nHands on with Linux and ARC4\nRunning code\nBatch and Interactive jobs\nData management\nJoys of parallel jobs\nAdvanced job submissions"
+  },
+  {
+    "objectID": "hpc1.html#useful-links",
+    "href": "hpc1.html#useful-links",
+    "title": "arctraining slides",
+    "section": "Useful Links",
+    "text": "Useful Links\n\nARC Website: https://arc.leeds.ac.uk/\n\nARC Documentation https://arcdocs.leeds.ac.uk\n\nGeneral queries: https://bit.ly/arc-help"
+  },
+  {
+    "objectID": "hpc1.html#training",
+    "href": "hpc1.html#training",
+    "title": "arctraining slides",
+    "section": "Training",
+    "text": "Training"
+  },
+  {
+    "objectID": "hpc1.html#archpc-training-portfolio",
+    "href": "hpc1.html#archpc-training-portfolio",
+    "title": "arctraining slides",
+    "section": "ARC/HPC Training Portfolio",
+    "text": "ARC/HPC Training Portfolio\nhttps://arc.leeds.ac.uk/training"
+  },
+  {
+    "objectID": "hpc1.html#introductions-and-motivations",
+    "href": "hpc1.html#introductions-and-motivations",
+    "title": "arctraining slides",
+    "section": "Introductions and Motivations",
+    "text": "Introductions and Motivations\nWho are you and why are you here?\nWhat problems are you encountering with your computational work now? \nWhy / how do you think HPC will help?"
+  },
+  {
+    "objectID": "hpc1.html#key-concepts",
+    "href": "hpc1.html#key-concepts",
+    "title": "arctraining slides",
+    "section": "Key Concepts",
+    "text": "Key Concepts\n\nHigh Performance Computing (HPC)\nHigh Throughput Computing (HTC)\n“Supercomputing”"
+  },
+  {
+    "objectID": "hpc1.html#applications",
+    "href": "hpc1.html#applications",
+    "title": "arctraining slides",
+    "section": "Applications",
+    "text": "Applications"
+  },
+  {
+    "objectID": "hpc1.html#terminology",
+    "href": "hpc1.html#terminology",
+    "title": "arctraining slides",
+    "section": "Terminology",
+    "text": "Terminology\n\nNode: the physical machine/server. In current systems, a node would typically include one or more processors, as well as memory and other hardware.\nProcessor: the central processing unit (CPU) inside the node, which contains one or more cores.\nCore: Refers to the basic computation unit of the CPU. This is unit that carries out the actual computations."
+  },
+  {
+    "objectID": "hpc1.html#leeds-facilities",
+    "href": "hpc1.html#leeds-facilities",
+    "title": "arctraining slides",
+    "section": "Leeds facilities",
+    "text": "Leeds facilities\n\nARC3 brought into service in 2017\nARC4 brought into service in 2019"
+  },
+  {
+    "objectID": "hpc1.html#a-supercomputer-isnt",
+    "href": "hpc1.html#a-supercomputer-isnt",
+    "title": "arctraining slides",
+    "section": "A Supercomputer isn’t…",
+    "text": "A Supercomputer isn’t…"
+  },
+  {
+    "objectID": "hpc1.html#single-computer-vs-grid-of-computers",
+    "href": "hpc1.html#single-computer-vs-grid-of-computers",
+    "title": "arctraining slides",
+    "section": "Single computer vs grid of computers",
+    "text": "Single computer vs grid of computers"
+  },
+  {
+    "objectID": "hpc1.html#serial-and-parallel-programs",
+    "href": "hpc1.html#serial-and-parallel-programs",
+    "title": "arctraining slides",
+    "section": "Serial and parallel programs",
+    "text": "Serial and parallel programs\n\nSerial programs run on a single CPU core, solving one problem at a time.\nParalel programs run across multiple CPU cores, splitting the workload between them and solving the problem faster."
+  },
+  {
+    "objectID": "hpc1.html#serial-program",
+    "href": "hpc1.html#serial-program",
+    "title": "arctraining slides",
+    "section": "Serial Program",
+    "text": "Serial Program"
+  },
+  {
+    "objectID": "hpc1.html#parallel-program",
+    "href": "hpc1.html#parallel-program",
+    "title": "arctraining slides",
+    "section": "Parallel Program",
+    "text": "Parallel Program"
+  },
+  {
+    "objectID": "hpc1.html#amdahls-law",
+    "href": "hpc1.html#amdahls-law",
+    "title": "arctraining slides",
+    "section": "Amdahl’s Law",
+    "text": "Amdahl’s Law\n\n\n\nDaniels220 at English Wikipedia, CC BY-SA 3.0 https://creativecommons.org/licenses/by-sa/3.0, via Wikimedia Commons"
+  },
+  {
+    "objectID": "hpc1.html#basic-parallel-machine",
+    "href": "hpc1.html#basic-parallel-machine",
+    "title": "arctraining slides",
+    "section": "Basic parallel machine",
+    "text": "Basic parallel machine"
+  },
+  {
+    "objectID": "hpc1.html#differences-from-desktop-computing",
+    "href": "hpc1.html#differences-from-desktop-computing",
+    "title": "arctraining slides",
+    "section": "Differences from Desktop computing?",
+    "text": "Differences from Desktop computing?\n\nWe don’t log on to compute nodes directly\n\nsubmit jobs via a batch scheduling system\n\nNot a GUI-based environment\nSystem is shared with many other users\nResources more tightly monitored and controlled\n\nMemory\nCPU usage (‘cores’)\nTime"
+  },
+  {
+    "objectID": "hpc1.html#benefits-of-using-hpc",
+    "href": "hpc1.html#benefits-of-using-hpc",
+    "title": "arctraining slides",
+    "section": "Benefits of using HPC",
+    "text": "Benefits of using HPC\n\nSpeed\nVolume\nCost\nEfficiency\nConvenience"
+  },
+  {
+    "objectID": "hpc1.html#parallel-paradigms",
+    "href": "hpc1.html#parallel-paradigms",
+    "title": "arctraining slides",
+    "section": "Parallel Paradigms",
+    "text": "Parallel Paradigms\nFrom a systems perspective:\n\nShared memory parallelism\nDistributed memory parallelism\n\nUnless you are writing your own codes, the software developer takes care of this."
+  },
+  {
+    "objectID": "hpc1.html#basic-hpc-system-layout",
+    "href": "hpc1.html#basic-hpc-system-layout",
+    "title": "arctraining slides",
+    "section": "Basic HPC system layout",
+    "text": "Basic HPC system layout"
+  },
+  {
+    "objectID": "hpc1.html#exercise-1.1",
+    "href": "hpc1.html#exercise-1.1",
+    "title": "arctraining slides",
+    "section": "Exercise 1.1",
+    "text": "Exercise 1.1\nWhat do the following Linux commands do? How might they be used on the HPC service?\n\nls\npwd\nmkdir\ncp\nwget\nrm"
+  },
+  {
+    "objectID": "hpc1.html#exercise-1.2",
+    "href": "hpc1.html#exercise-1.2",
+    "title": "arctraining slides",
+    "section": "Exercise 1.2",
+    "text": "Exercise 1.2\nOn the HPC service, you have a ‘HOME’ directory of 10GB and can create a directory on the /nobackup drive.\nUsing the man pages (or Google…) investigate how you could use the following commands to manage your storage:\n\nquota\ndf\ndu"
+  },
+  {
+    "objectID": "hpc1.html#exercise-1.3",
+    "href": "hpc1.html#exercise-1.3",
+    "title": "arctraining slides",
+    "section": "Exercise 1.3",
+    "text": "Exercise 1.3\nLinux systems include a number of file compression routines.\nFind out which ones are available on the cluster and use them to create a compressed archive of a directory and its contents."
+  },
+  {
+    "objectID": "hpc1.html#exercise-1.4",
+    "href": "hpc1.html#exercise-1.4",
+    "title": "arctraining slides",
+    "section": "Exercise 1.4",
+    "text": "Exercise 1.4\nHow could you read a PDF file or a HTML document on the cluster?"
+  },
+  {
+    "objectID": "hpc1.html#hpc-at-leeds",
+    "href": "hpc1.html#hpc-at-leeds",
+    "title": "arctraining slides",
+    "section": "HPC at Leeds",
+    "text": "HPC at Leeds\nARC4 is latest incarnation of central HPC at Leeds.\nHPC currently comprised of two facilities called ARC3 and ARC4\nAll Faculties are shareholders and so it is important that all who can benefit from the use of this facility do so."
+  },
+  {
+    "objectID": "hpc1.html#arc3",
+    "href": "hpc1.html#arc3",
+    "title": "arctraining slides",
+    "section": "ARC3",
+    "text": "ARC3\n2 x login nodes: 24 cores and 128GB RAM\n252 x standard compute nodes: 24 cores and 128GB RAM (=6048 cores); 100GB SSD\n4 x High Memory (24 core and 768GB nodes)\n6 x P100 GPU nodes (24 core, 128GB and 4 x NVidia P100)\n2 x K80 GPU nodes (24 core, 128GB and 2 x NVidia K80)\n2 x Intel Xeon Phi (Knights Landing) vector processor nodes\n836TB of high speed storage: /nobackup"
+  },
+  {
+    "objectID": "hpc1.html#arc4",
+    "href": "hpc1.html#arc4",
+    "title": "arctraining slides",
+    "section": "ARC4",
+    "text": "ARC4\n2 x login nodes: 40 cores and 192GB RAM\n149 x standard compute nodes: 40 cores and 192GB RAM (=6048 cores); 100GB SSD\n4 x High Memory (40 core and 768GB nodes)\n3 x V100 GPU nodes (40 core, 192GB and 4 x NVidia V100)\n1.2PB of high speed storage: /nobackup"
+  },
+  {
+    "objectID": "hpc1.html#exercise-2",
+    "href": "hpc1.html#exercise-2",
+    "title": "arctraining slides",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nWe’re going to download some files to have a play with:\ngit clone https://github.com/ARCTraining/hpc1-files.git"
+  },
+  {
+    "objectID": "hpc1.html#sge",
+    "href": "hpc1.html#sge",
+    "title": "arctraining slides",
+    "section": "SGE",
+    "text": "SGE\nSGE is a sophisticated scheduler:\n\nCan define usage policies.\nControl maximum limits.\nFair distribution of resources.\nProduces detailed usage accounting information."
+  },
+  {
+    "objectID": "hpc1.html#queue-tools",
+    "href": "hpc1.html#queue-tools",
+    "title": "arctraining slides",
+    "section": "Queue tools",
+    "text": "Queue tools\n\nqsub: submit a batch job\nqrsh: run an interactive job\nqdel: delete a job\nqstat: Details on queued or running jobs\nqacct: Details on previous completed jobs\nqsched: A hint as to when your job might run"
+  },
+  {
+    "objectID": "hpc1.html#submit-some-serial-r-jobs",
+    "href": "hpc1.html#submit-some-serial-r-jobs",
+    "title": "arctraining slides",
+    "section": "Submit some serial R jobs",
+    "text": "Submit some serial R jobs\nWe’re going to submit a job from the 1_R directory"
+  },
+  {
+    "objectID": "hpc1.html#scheduling-notes",
+    "href": "hpc1.html#scheduling-notes",
+    "title": "arctraining slides",
+    "section": "Scheduling notes",
+    "text": "Scheduling notes\nOur clusters adopt a “fair share” policy\n\nJobs preferentially run based on current and previous usage from Faculty. Same applies when comparing users in same Faculty.\nThe lower the usage, the higher the priority (and vice versa).\n“Backfilling” is used to fit smaller jobs in between the top priority jobs. All jobs have specified run time, and so the scheduler will run lower priority jobs if they will start and finish before the highest priority jobs are scheduled to start. Thus indicating a realistic runtime for a job, will make short jobs eligible to be backfilled, potentially shortening their wait-time."
+  },
+  {
+    "objectID": "hpc1.html#submit-a-serial-python-job",
+    "href": "hpc1.html#submit-a-serial-python-job",
+    "title": "arctraining slides",
+    "section": "Submit a serial Python job",
+    "text": "Submit a serial Python job\nCan you now do the same for a Python job in the 2_Python directory?\nTo run this Python code you do not need any modules loaded and can run it with:\npython example1.py"
+  },
+  {
+    "objectID": "hpc1.html#normal-end-of-part-1",
+    "href": "hpc1.html#normal-end-of-part-1",
+    "title": "arctraining slides",
+    "section": "Normal end of Part 1",
+    "text": "Normal end of Part 1\nQuestions, recap"
+  },
+  {
+    "objectID": "hpc1.html#drives-and-directories",
+    "href": "hpc1.html#drives-and-directories",
+    "title": "arctraining slides",
+    "section": "Drives and Directories",
+    "text": "Drives and Directories\nHPC users have access to two storage areas:\n\nA HOME directory\nSpace on /nobackup"
+  },
+  {
+    "objectID": "hpc1.html#home-directory",
+    "href": "hpc1.html#home-directory",
+    "title": "arctraining slides",
+    "section": "Home Directory",
+    "text": "Home Directory\nThis is:\n\nPrivate to you\nBacked up\nLimited to 10GB storage (ARC)\nShared between machines"
+  },
+  {
+    "objectID": "hpc1.html#nobackup",
+    "href": "hpc1.html#nobackup",
+    "title": "arctraining slides",
+    "section": "/nobackup",
+    "text": "/nobackup\n\nEach HPC cluster has it’s own high speed storage service called /nobackup\nYou need to make your own directory (using mkdir)\nNothing is backed up\nFiles will expire after 90 days not being used\nNeed to set permissions to make files private (ARC3) but not on ARC4."
+  },
+  {
+    "objectID": "hpc1.html#transferring-files-and-data",
+    "href": "hpc1.html#transferring-files-and-data",
+    "title": "arctraining slides",
+    "section": "Transferring files and data",
+    "text": "Transferring files and data\n\nscp or rsync command line utility\nwget (to download from a remote server)\ngit (version control)\nsmbclient to copy from local M:/ and N:/ drives on campus\nGoogle Drive and OneDrive (via rclone)\ngraphical programs like Cyberduck or Filezilla (or indeed MobaXterm)"
+  },
+  {
+    "objectID": "hpc1.html#module-system",
+    "href": "hpc1.html#module-system",
+    "title": "arctraining slides",
+    "section": "Module system",
+    "text": "Module system\nmodule\n\navail: what software could I add\nlist: show what is active\nadd|load: enable software\nrm|unload: disable software\nhelp: show details of software\nswap|switch: swap modules"
+  },
+  {
+    "objectID": "hpc1.html#shared-vs-distributed-memory-jobs",
+    "href": "hpc1.html#shared-vs-distributed-memory-jobs",
+    "title": "arctraining slides",
+    "section": "Shared vs Distributed memory jobs",
+    "text": "Shared vs Distributed memory jobs"
+  },
+  {
+    "objectID": "hpc1.html#thank-you",
+    "href": "hpc1.html#thank-you",
+    "title": "arctraining slides",
+    "section": "Thank you",
+    "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: https://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
+  },
+  {
     "objectID": "hpc0.html#meta-code",
     "href": "hpc0.html#meta-code",
     "title": "arctraining slides",
@@ -11,7 +326,7 @@
     "href": "hpc0.html#research-computing-team",
     "title": "arctraining slides",
     "section": "Research Computing Team",
-    "text": "Research Computing Team\nStaff:\n\nOllie Clark, John Hodrien, Nick Rhodes, Patricia Ternes\n\nHere for:\n\nGeneral guidance and advice\nAccess to specialist support and consultancy\nResearch Software Engineering support\n\nContact via IT Service Desk: https://bit.ly/arc-help"
+    "text": "Research Computing Team\nStaff:\n\nOllie Clark, Tom Hardcastle, John Hodrien, Nick Rhodes, Patricia Ternes, Andy Turner\n\nHere for:\n\nGeneral guidance and advice\nAccess to specialist support and consultancy\nResearch Software Engineering support\n\nContact via IT Service Desk: https://bit.ly/arc-help"
   },
   {
     "objectID": "hpc0.html#contact-details",
@@ -161,20 +476,6 @@
     "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: https://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "arctraining slides",
-    "section": "",
-    "text": "Public facing homepage for arctraining Quarto slides collection."
-  },
-  {
-    "objectID": "index.html#slides",
-    "href": "index.html#slides",
-    "title": "arctraining slides",
-    "section": "Slides:",
-    "text": "Slides:\nNote: this page is under construction. As soon as the slides are available, the link will be provided.\n\nHPC0: Introduction to Linux for HPC\nHPC1: Introduction to High Performance Computing\nHPC2: Applications and containers on HPC\nHPC3: Computer architectures and shared memory parallel programming\nHPC5: Introduction to GPU programming with CUDA\nHPC6: HPC for Life Sciences and Bioinformatics\nSWD1a: Introduction to Python programming\nSWD1b: Introduction to R programming\nSWD2: Version Control with Git and GitHub\nSWD3: Software development practices for Research\nSWD4: Cloud computing for Research\nSWD5: Scientific Python\nSWD6: High performance Python\nSWD7: Introduction to reproducible workflows in Python"
-  },
-  {
     "objectID": "template.html#meta-code",
     "href": "template.html#meta-code",
     "title": "arctraining slides",
@@ -186,7 +487,7 @@
     "href": "template.html#research-computing-team",
     "title": "arctraining slides",
     "section": "Research Computing Team",
-    "text": "Research Computing Team\nStaff:\n\nOllie Clark, John Hodrien, Nick Rhodes, Patricia Ternes\n\nHere for:\n\nGeneral guidance and advice\nAccess to specialist support and consultancy\nResearch Software Engineering support\n\nContact via IT Service Desk: https://bit.ly/arc-help"
+    "text": "Research Computing Team\nStaff:\n\nOllie Clark, Tom Hardcastle, John Hodrien, Nick Rhodes, Patricia Ternes, Andy Turner\n\nHere for:\n\nGeneral guidance and advice\nAccess to specialist support and consultancy\nResearch Software Engineering support\n\nContact via IT Service Desk: https://bit.ly/arc-help"
   },
   {
     "objectID": "template.html#slide-a",
