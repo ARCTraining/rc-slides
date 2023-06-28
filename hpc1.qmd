@@ -12,20 +12,23 @@ name: Introduction to High Performance Computing
 {{< include _title.qmd >}}
 {{< include _team.qmd >}}
 
-## Purpose of today
+## Purpose of HPC1
 
-- Introducing Research Computing the HPC service at Leeds
+- Introducing Research Computing and the HPCs at Leeds
 - Hands on with Linux and ARC4
-- Data management
 - Running code
 - Batch and Interactive jobs
-- Task Arrays
-- Making my code run faster: parallelism
+- Data management
+- Joys of parallel jobs
+- Advanced job submissions
 
-## Contact Details
+## Useful Links
 
 \
 ARC Website: {{< var rc.website >}}
+
+\
+ARC Documentation {{< var rc.documentation >}}
 
 \
 General queries: {{< var rc.servicedesk >}}
@@ -44,10 +47,6 @@ General queries: {{< var rc.servicedesk >}}
 
 Who are you and why are you here?
 
-Hackpad!
-
-## Question
-
 What problems are you encountering with your computational work now? 
 
 Why / how do you think HPC will help?
@@ -61,6 +60,14 @@ Why / how do you think HPC will help?
 ## Applications
 
 ![](assets/img/hpc1/spectrum.png)
+
+## Terminology
+
+- **Node**: the physical machine/server. In current systems, a node would typically include one or more processors, as well as memory and other hardware.
+
+- **Processor**: the central processing unit (CPU) inside the node, which contains one or more  cores.
+
+- **Core**: Refers to the basic computation unit of the CPU. This is unit that carries out the actual computations.
 
 ## Leeds facilities
 
@@ -100,14 +107,6 @@ Daniels220 at English Wikipedia, CC BY-SA 3.0 <https://creativecommons.org/licen
 
 ![](assets/img/hpc1/basic-parallel.png)
 
-## Terminology
-
-- **Node**: the physical machine/server. In current systems, a node would typically include one or more processors, as well as memory and other hardware.
-
-- **Processor**: the central processing unit (CPU) inside the node, which contains one or more  cores.
-
-- **Core**: Refers to the basic computation unit of the CPU. This is unit that carries out the actual computations.
-
 ## Differences from Desktop computing?
 
 - We don’t log on to compute nodes directly
@@ -139,6 +138,37 @@ Unless you are writing your own codes, the software developer takes care of this
 ## Basic HPC system layout
 
 ![](assets/img/hpc1/hpc-layout.png)
+
+## Exercise 1.1
+
+What do the following Linux commands do? How might they be used on the HPC service?
+
+- `ls`
+- `pwd`
+- `mkdir`
+- `cp`
+- `wget`
+- `rm`
+
+## Exercise 1.2
+On the HPC service, you have a ‘HOME’ directory of 10GB and can create a
+directory on the /nobackup drive.
+
+Using the man pages (or Google…) investigate how you could use the following
+commands to manage your storage:
+
+- `quota`
+- `df`
+- `du`
+
+## Exercise 1.3
+Linux systems include a number of file compression routines.
+
+Find out which ones are available on the cluster and use them to create a
+compressed archive of a directory and its contents.
+
+## Exercise 1.4
+How could you read a PDF file or a HTML document on the cluster?
 
 ## HPC at Leeds
 
@@ -177,6 +207,56 @@ from the use of this facility do so.
 
 1.2PB of high speed storage: /nobackup
 
+## Exercise 2
+
+We're going to download some files to have a play with:
+
+```{.bash code-line-numbers=false}
+git clone https://github.com/ARCTraining/hpc1-files.git
+```
+
+## SGE
+
+SGE is a sophisticated scheduler:
+
+- Can define usage policies.
+- Control maximum limits.
+- Fair distribution of resources.
+- Produces detailed usage accounting information.
+
+## Queue tools
+
+- `qsub`: submit a batch job
+- `qrsh`: run an interactive job
+- `qdel`: delete a job
+- `qstat`: Details on queued or running jobs
+- `qacct`: Details on previous completed jobs
+- `qsched`: A hint as to when your job might run
+
+## Submit some serial R jobs
+
+We're going to submit a job from the `1_R` directory
+
+## Scheduling notes{.smaller}
+
+Our clusters adopt a “fair share” policy
+
+- Jobs preferentially run based on current and previous usage from Faculty. Same applies when comparing users in same Faculty.
+- The lower the usage, the higher the priority (and vice versa).
+- “Backfilling” is used to fit smaller jobs in between the top priority jobs. All jobs have specified run time, and so the scheduler will run lower priority jobs if they will start and finish before the highest priority jobs are scheduled to start. Thus indicating a realistic runtime for a job, will make short jobs eligible to be backfilled, potentially shortening their wait-time. 
+
+## Submit a serial Python job
+
+Can you now do the same for a Python job in the 2_Python directory?
+
+To run this Python code you do not need any modules loaded and can run it with:
+
+`python example1.py`
+
+## Normal end of Part 1
+
+Questions, recap
+
 ## Drives and Directories
 
 HPC users have access to two storage areas:
@@ -203,11 +283,26 @@ This is:
 
 ## Transferring files and data
 
-- scp or rsync command line utility
-- wget (to download from a remote server)
-- git (version control)
-- smbclient to copy from local M:/ and N:/ drives on campus
-- Google Drive and OneDrive (via rclone)
-- graphical programs like Cyberduck or Filezilla
+- `scp` or `rsync` command line utility
+- `wget` (to download from a remote server)
+- `git` (version control)
+- `smbclient` to copy from local M:/ and N:/ drives on campus
+- Google Drive and OneDrive (via `rclone`)
+- graphical programs like Cyberduck or Filezilla (or indeed MobaXterm)
+
+## Module system
+
+`module`
+
+- `avail`: what software could I add
+- `list`: show what is active
+- `add|load`: enable software
+- `rm|unload`: disable software
+- `help`: show details of software
+- `swap|switch`: swap modules
+
+## Shared vs Distributed memory jobs
+
+![](assets/img/hpc1/shared-vs-distributed.png)
 
 {{< include _end.qmd >}}
