@@ -10,152 +10,405 @@ name: Introduction to the Unix/Linux command line
 ---
 
 {{< include _title.qmd >}}
+
 {{< include _team.qmd >}}
 
 ## Contact Details
-
-\
-ARC Website: {{< var rc.website >}}
-
-\
-ARC Documentation: {{< var rc.documentation >}}
-
-\
-General queries: {{< var rc.servicedesk >}}
+- ARC Website: {{< var rc.website >}}
+- ARC Documentation: {{< var rc.documentation >}}
+- General queries: {{< var rc.servicedesk >}}
 
 
 ## Training
-
 ![](assets/img/hpc0/training.png)
 
+
 ## ARC/HPC Training Portfolio
-
 {{< var rc.training >}}
-
 ![](assets/img/hpc0/portfolio.png)
 
-## Purpose of today
 
+## Purpose of today
 - Introduce the command line
 - Hands on experience and confidence building
 - File system navigation
 - Creating, reading, updating and deleting files
-- File properties: types, sizes, permissions 
+- File properties: types, sizes, permissions
 - File manipulation: inspecting and editing files, searching and filtering
 - Introduction to shell scripting
 
-# Introductions and Motivations
 
-Who are you and why are you here?
+## Introductions and Motivations
+- Who are you and why are you here?
+
 
 ## Me {visibility="hidden"}
-
 - Research Computing service
 - Research Computing Consultant
 - Everything from HPC to Data Science
 - RSE Cloud Computing Fellow
 - Research in Deep Learning: Neural networks for text summarisation
 
-# Linux Basics {visibility="hidden"}
-
-## Logging in... {background-color="#202020"}
-
-Using MobaXTerm
 
 ## What is BASH?
-
 ![](assets/img/hpc0/bash.png)
 
-## What is a shell?
 
+## What is a shell?
 ![](assets/img/hpc0/shell.png)
 
-## MobaXTerm {background-color="#202020"}
-
-Launch...
 
 ## Filesystem basics
-
 ![](assets/img/hpc0/filesystem.png)
 
-## Forward slash / and backslash \
 
+## Forward slash / and backslash \
 ![](assets/img/hpc0/slash.png)
 
-## Filesystem basics: absolute path
 
+## Filesystem basics: absolute path
 ![](assets/img/hpc0/filesystem-absolute.png)
 
-## Filesystem basics: relative path
 
+## Filesystem basics: relative path
 ![](assets/img/hpc0/filesystem-relative.png)
 
 
+## Login from Linux/OSx demo
 
-# Exercises {visibility="hidden"}
+
+## Login from Windows demo
+- Launch MobaXTerm...
 
 
-## Exercise 0 {.smaller}
-
-### Login
-
+## Login {.smaller}
+- [ARC Documentation Login]({{< var rc.login >}})
+- Please login to ARC3 or ARC4.
 \
-ARC Documentation: {{< var rc.documentation >}}
-
-\
-If you have an ARC4 account, login.
-
-\
-From Windows use MobaXterm to connect:
-
 ```{.bash code-line-numbers=false}
 ssh <username>@arc4.leeds.ac.uk
 ```
-
+\
 *`<username>` is your university username.*
 
 
-## Some helpful shell commands
-
-https://arcdocs.leeds.ac.uk/getting_started/linuxbasics.html#some-helpful-shell-commands
-
-Command | Description
-------------------------------------------
-ls      | List the contents of a directory
-cd      | Change directory
-pwd     | Print the working (current) directory
-mkdir   | Make a new directory (folder)
-mv      | Move a file or directory (can be used to rename files)
-cp      | Copy a file or directory (using the option cp -r)
-head    | Show the first lines of a file (default 10)
-tail    | Show the last lines of a file (default 10)
-less    | Open into a paginated reader view 
-cat     | Concatenate and print to terminal (via standard output)
-rm      | Permanently remove file or directory (using the option rm -r)
-
-
-## Exercise 1
-
-To find out how to use a command we can use the `--help` option. Type the following into your command shell:
-
+## The prompt {.smaller}
+- You should see something like the following:
+\
 ```{.bash code-line-numbers=false}
-mkdir --help
+[user@host ~]$
+```
+- '`user`' is your username
+- '`host`' either starts '`login1.`' or '`login2.`' (there are two login nodes for ARC3 and ARC4) and is followed by the name of the resource '`arc3`' or '`arc4`' depending on which you are logged in to.
+- You login to your user home directory represented by '`~`' (tilda) in the prompt.
+- After the prompt - after the `$` symbol is where commands are entered...
+
+
+## First (safe) commands {.smaller}
+- [ARC Documentation Helpful Shell Commands]({{< var rc.commands >}})
+\
+\
+<table>
+  <tr>
+    <th>Command</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>`pwd`</td>
+    <td>Print the working (current) directory</td>
+  </tr>
+  <tr>
+    <td>`man`</td>
+    <td>Look up the manual page</td>
+  </tr>
+  <tr>
+    <td>`ls`</td>
+    <td>List the contents of a directory</td>
+  </tr>
+  <tr>
+    <td>`mkdir`</td>
+    <td>Make a new directory (folder)</td>
+  </tr>
+  <tr>
+    <td>`cd`</td>
+    <td>Change directory</td>
+  </tr>
+</table>
+\
+- Let us use these in turn to understand them better...
+
+
+## `pwd` {.smaller}
+- A command to print the working directory.
+```{.bash code-line-numbers=false}
+[user@host ~]$ pwd
+/home/homeXX/user
+```
+- When you run this the ouput will be slightly different:
+  - '`XX`' should be a number which is directory where your home drive is
+  - '`user`' should be your username
+ 
+
+## `pwd` demo {.smaller}
+- Keep it simple!
+
+
+## `pwd` exercise {.smaller}
+- Enter '`pwd`' at the prompt by typing the letters and then pressing the \<return> or \<enter> key.
+
+
+## `--help` {.smaller}
+- A command option that can be used to get help on using a command.
+- Entering '`pwd --help`' prints help about the `pwd` command.
+```{.bash code-line-numbers=false}
+[user@host ~]$ pwd --help
+pwd: pwd [-LP]
+    Print the name of the current working directory.
+    
+    Options:
+      -L	print the value of $PWD if it names the current working
+    		directory
+      -P	print the physical directory, without any symbolic links
+    
+    By default, `pwd' behaves as if `-L' were specified.
+    
+    Exit Status:
+    Returns 0 unless an invalid option is given or the current directory
+    cannot be read.
 ```
 
-\
-This prints help about the `mkdir` command.
-\
-For more details about a command, consult the manual page using the `man` command. Type the following into your command shell:
 
+## `man`
+- A command to bring up the manual page.
+- For help using `man`: press the h-key `<h>`.
+- To quit the help about `man` or the man page: press `<q>`.
+- To page through a man page: press `<space_bar>`.
+- '`man man`' is the man page of the `man` command.
+
+
+## `--help` and `man` demo
+
+
+## `--help` and `man` exercise {.smaller}
+- Enter '`pwd --help`'
+- Enter '`man pwd`'
+- For help using `man`: press the h-key `<h>`.
+- To quit the help about `man` or any man page: press `<q>`.
+- To page through a man page: press `<space_bar>`.
+
+
+## `ls` 1/2 {.smaller}
+- A command can be used to list the contents of a directory.
+- With seemingly nothing in a directory this will print nothing out.
 ```{.bash code-line-numbers=false}
-man mkdir
+[user@host ~]$ ls
+[user@host ~]$ 
 ```
+- Files and directories starting with '`.`' are hidden.
+- We can use options to list more details
+  - The `-a` option will list all the contents of a directory.
+  - The `-l` option will list each item line by line with added details.
+- (Options can be listed in any order or combined.)
+
+
+## `ls` 2/2 {.smaller}
+- Entering '`ls -al`' or '`ls -la`' or '`ls -a -l`' or '`ls -l -a`' is equivallent and should result in something like shown below:
+```{.bash code-line-numbers=false}
+[user@host ~]$ ls -al
+total 8
+drwx------     2 user group   4096 MMM DD hh:mm .
+drwxr-xr-x     3 root root    4096 MMM DD hh:mm ..
+...
+```
+- The last part of each line output is the name and '`.`' is this directory and '`..`' is the parent directory.
+- Please don't worry about the other details for now...
+- An '`ls -al`' in your home directory should result in many more lines of output and the details will look a bit different.
+  - This will reveal hidden but important files and directories
+    - Please also don't worry about what these are for now...
+
+
+## `mkdir` {.smaller}
+- A command used to create a directory.
+```{.bash code-line-numbers=false}
+[user@host ~]$ mkdir test
+```
+- Attempting to create a directory that already exists prints a warning.
+```{.bash code-line-numbers=false}
+[user@host ~]$ mkdir test
+mkdir: cannot create directory ‘test’: File exists
+```
+- The '`-p`' option allows for creating parent directories.
+- The following creates the directory '`test2`' and in this the directory '`test4`'.
+```{.bash code-line-numbers=false}
+[user@host ~]$ mkdir test2/test3
+```
+- To create a directory, you must have permission to write to the directory in which it is being created.
+- Without write permissions a warning is printed:
+```{.bash code-line-numbers=false}
+[user@host ~]$ mkdir /test
+mkdir: cannot create directory ‘/test’: Permission denied
+```
+
+
+## `cd` {.smaller}
+- The `cd` command can be used to change directory.
+```{.bash code-line-numbers=false}
+[user@host ~]$ cd test
+[user@host ~/test]$
+```
+- Notice that the prompt changes.
+- Without read permission you cannot change into a directory and a warning is printed:
+```{.bash code-line-numbers=false}
+[user@host ~]$ cd /root
+-bash: cd: /root: Permission denied
+```
+
+
+## `ls`, `mkdir` and `cd` demo {.smaller}
+
+
+## `ls`, `mkdir` and `cd` exercise {.smaller}
+- Explore using `ls`, `mkdir` and `cd`
+- You will only be allowed to cd into directories you can read.
+- You can do no damage snooping around
+  - But you may see things you are not supposed to (if other users have the wrong permissions on their directories).
+
+
+## Second commands {.smaller}
+- [ARC Documentation Helpful Shell Commands]({{< var rc.commands >}})
 \
-For help using `man`: press the h-key \<h>.
 \
-To quit the help about `man` or the man page: press \<q>.
+<table>
+  <tr>
+    <th>Command</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>`mv`</td>
+    <td>Move a file or directory (can be used to rename)</td>
+  </tr>
+  <tr>
+    <td>`cp`</td>
+    <td>Copy a file or directory - using the `-r` option</td>
+  </tr>
+  <tr>
+    <td>`touch`</td>
+    <td>Access or create a file or directory.</td>
+  </tr>
+  <tr>
+    <td>`rmdir`</td>
+    <td>Remove (delete) a directory</td>
+  </tr>
+  <tr>
+    <td>`rm`</td>
+    <td>Remove (delete) a file or a directory - using the `-r` option</td>
+  </tr>
+</table>
 \
-To page through a man page: press \<space_bar>.
+- Let us use these in turn to understand them better...
+
+
+## `mv`
+- A command to move a file or directory (can be used to rename)
+- The following would rename the file/directory '`test`' to '`test_renamed`'
+```{.bash code-line-numbers=false}
+[user@host ~]$ mv test test_renamed
+```
+- Moving an important hidden file or directory could make be bad!
+- A move can usually be reversed, but it is possible to lose things once they are moved around!
+
+
+## `cp`
+- A command to copy a file or directory
+- If `test` is a file the following would make a copy named `test_copy`.
+```{.bash code-line-numbers=false}
+[user@host ~]$ cp test test_copy
+```
+- If `test` is a directory a warning would be printed:
+```{.bash code-line-numbers=false}
+[user@host ~]$ cp test test_copy
+cp: omitting directory 'test'
+```
+- The '`-r`' option is used to copy a directory
+```{.bash code-line-numbers=false}
+[user@host ~]$ cp -r test test_copy
+```
+
+
+## `touch`, `>`, `>>` {.smaller}
+- `touch` is a command that touches a file or directory and can be used to create a file.
+  - This changes the recorded time an existing file or directory was last accessed.
+```{.bash code-line-numbers=false}
+[user@host ~]$ touch test
+```
+- the symbol '`>`' can be used to direct the standard output to a file.
+  - This will overwrite any existing file.
+```{.bash code-line-numbers=false}
+[user@host ~]$ ls -al > listing_file
+```
+- '`>>`' can be used in place of '`>`' to direct the standard output to a file appending to any exising file.
+
+
+## `rmdir` {.smaller}
+- A command to remove (delete) a directory.
+```{.bash code-line-numbers=false}
+[user@host ~]$ rmdir test
+```
+- It will only remove the directory if it is empty.
+- If the directory is not empty, there will be a warning and the directory is not deleted.
+```{.bash code-line-numbers=false}
+[user@host ~]$ rmdir test
+rmdir: failed to remove 'test': Directory not empty
+```
+- If the user does not have permission to delete the directory, a warning is printed.
+
+
+## `rm` {.smaller}
+- A command to remove (delete) a file or directory.
+- The following will remove a file called '`test`':
+```{.bash code-line-numbers=false}
+[user@host ~]$ rm test
+```
+- To delete a directory and all contents the '`-r`' option can be used.
+- The '`-i`' option allows for interactivity on what to delete.
+- The '`-f`' option forces.
+  - Use with care, especially if combined with '`-r`'.
+
+
+## `mv`, `cp`, `rmdir`, `rm`, `touch`, `>`, `>>` demo {.smaller}
+
+
+## `mv`, `cp`, `rmdir`, `rm` exercise {.smaller}
+- Practice creating, copying, moving and deleting files and directories.
+- Be careful not to mess or lose your hidden files and folders.
+
+
+## More commands {.smaller}
+
+[ARC Documentation Helpful Shell Commands]({{< var rc.commands >}})
+
+ <table>
+  <tr>
+    <th>Command</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>head</td>
+    <td>Show the first lines of a file (default 10)</td>
+  </tr>
+  <tr>
+    <td>tail</td>
+    <td>Show the last lines of a file (default 10)</td>
+  </tr>
+  <tr>
+    <td>less</td>
+    <td>Open into a paginated reader view</td>
+  </tr>
+  <tr>
+    <td>cat</td>
+    <td>Concatenate and print to terminal (via standard output)</td>
+  </tr>
+</table> 
 
 
 ## Visibility and Permissions 1/7
@@ -290,6 +543,50 @@ World (r) = 4
 ```
 
 
+
+In yourCreate a new directory called 'test' containing a new file called 'test-file'. Set the permissions on 'test-file' to be:
+\
+- owner permissions: read, write and execute
+\
+- group permissions: read only
+\
+- all permissions: none
+
+Hints:
+\
+- `mkdir` make a directory
+\
+- `cd` change into a directory
+\
+- `touch` can be used to create a new empty file
+\
+- `chmod` modify permissions
+\
+- `ls -l` to list and see permission details
+
+### Solution
+
+```{.bash code-line-numbers=false}
+[user@host ~]$ mkdir test
+[user@host ~]$ touch test/test-file
+[user@host ~]$ ls -l test/test-file
+-rw------- 1 <owner> <group> <size> <date> <time> test/test-file
+[user@host ~]$ chmod u+rwx,g+r test-file
+[user@host ~]$ ls -l test/test-file
+-rwxr----- 1 <owner> <group> <size> <date> <time> test/test-file
+```
+
+\
+Alternatively octal numbers could be used:
+
+```{.bash code-line-numbers=false}
+[user@host ~]$ mkdir test
+[user@host ~]$ touch test/test-file
+[user@host ~]$ chmod 740 test-file
+```
+
+:::
+
 ## Exercise 2 {.smaller}
 
 ::: {.panel-tabset}
@@ -338,6 +635,7 @@ Alternatively octal numbers could be used:
 ```
 
 :::
+
 
 ## Exercise 3
 
