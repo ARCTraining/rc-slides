@@ -274,7 +274,7 @@ mkdir: cannot create directory ‘/test’: Permission denied
   - But you may see things you are not supposed to (if other users have the wrong permissions on their directories).
 
 
-## Second commands {.smaller}
+## More commands {.smaller}
 - [ARC Documentation Helpful Shell Commands]({{< var rc.commands >}})
 \
 \
@@ -314,8 +314,8 @@ mkdir: cannot create directory ‘/test’: Permission denied
 ```{.bash code-line-numbers=false}
 [user@host ~]$ mv test test_renamed
 ```
-- Moving an important hidden file or directory could make be bad!
-- A move can usually be reversed, but it is possible to lose things once they are moved around!
+- Moving an important hidden file or directory could be bad!
+- A move can usually be reversed, but once things are moved around they are more easily lost!
 
 
 ## `cp`
@@ -378,12 +378,12 @@ rmdir: failed to remove 'test': Directory not empty
 ## `mv`, `cp`, `rmdir`, `rm`, `touch`, `>`, `>>` demo {.smaller}
 
 
-## `mv`, `cp`, `rmdir`, `rm` exercise {.smaller}
+## `mv`, `cp`, `rmdir`, `rm`, `touch`, `>`, `>>` exercise {.smaller}
 - Practice creating, copying, moving and deleting files and directories.
 - Be careful not to mess or lose your hidden files and folders.
 
 
-## More commands {.smaller}
+## Even more commands {.smaller}
 
 [ARC Documentation Helpful Shell Commands]({{< var rc.commands >}})
 
@@ -391,6 +391,18 @@ rmdir: failed to remove 'test': Directory not empty
   <tr>
     <th>Command</th>
     <th>Description</th>
+  </tr>
+  <tr>
+    <td>cat</td>
+    <td>Concatenate and print to terminal (via standard output)</td>
+  </tr>
+  <tr>
+    <td>sort</td>
+    <td>Sort lines</td>
+  </tr>
+  <tr>
+    <td>cut</td>
+    <td>Cut lines based on a given character</td>
   </tr>
   <tr>
     <td>head</td>
@@ -401,48 +413,178 @@ rmdir: failed to remove 'test': Directory not empty
     <td>Show the last lines of a file (default 10)</td>
   </tr>
   <tr>
+    <td>wc</td>
+    <td>Print newline, word, and byte counts for each FILE, and a total line if
+more than one FILE is specified. A word is a non-zero-length sequence of characters delimited by white space.</td>
+  </tr>
+  <tr>
+    <td>grep</td>
+    <td>Filter lines</td>
+  </tr>
+  <tr>
+    <td>sed</td>
+    <td>For stream editing</td>
+  </tr>
+  <tr>
     <td>less</td>
     <td>Open into a paginated reader view</td>
   </tr>
-  <tr>
-    <td>cat</td>
-    <td>Concatenate and print to terminal (via standard output)</td>
-  </tr>
-</table> 
+</table>
 
 
-## Visibility and Permissions 1/7
-
-File permissions can be identified using the `ls` command with the `-l` option.
-\
-Directory and filenames starting with a `.` are hidden.
-\
-To see these with the `ls` command use the `-a` option.
-\
-A directory named `test0` containing a directory called `test` containing a file called `test-file` can be created as follows:
-
+## git clone exercise
+- Get a copy of some data using the following `git` command:
 ```{.bash code-line-numbers=false}
-[user@host]$ mkdir test0
-[user@host]$ mkdir test0/test
-[user@host]$ touch test0/test/test-file
+git clone https://github.com/ARCTraining/shell-training/
+```
+- Change directory into the directory called 'shell-training'.
+- List the directory contents.
+
+
+## `cat`, `sort` and `cut` {.smaller}
+- The `cat` command will concatenate and print to standard output.
+  - This can be used to stream one file after another.
+- The `sort` command will sort lines (by default alphabetically).
+- The `cut` command will cut lines based on a given character.
+- Commands that create an output stream can have the output piped into another command that can process the stream using the symbol '`|`'. 
+  - For example two files '`test`' and '`test2`' can be catenated, sorted alphabetically and piped into head as follows: 
+```{.bash code-line-numbers=false}
+[user@host ~]$ cat test test2 | sort | head
 ```
 
 
-## Visibility and Permissions 2/7
+## `cat`, `sort` and `cut` demo
 
-By default, the owner has read, write and execute permissions on a directory they create, and read and write (but not execute) permission on a file they create.
-\
-By default, group and all have no permissions.
 
+## `cat`, `sort` and `cut` exercise {.smaller}
+
+::: {.panel-tabset}
+
+### Problem
+- Combine `cat`, `cut`, and `sort` to print out the Latin names from the file `IOM-animals/birds.txt` in alphabetical order.
+- Save the output to a new file.
+Hint: `cut -d ',' -f 2` will split lines around the comma and yield the second field.
+
+### Solution
 ```{.bash code-line-numbers=false}
-[user@host]$ ls -la test0/test
+[user@host IOM-animals]$ cat birds.txt | sort | cut -d ',' -f 2 > sorted-birds.txt
+```
+- Another option to achieve the same is to use the `awk` command instead of `cut`:
+```{.bash code-line-numbers=false}
+[user@host IOM-animals]$ cat birds.txt | sort | awk '{FS=","}{print $2}' > sorted-birds.txt
+```
+- `awk` is a scripting language used for manipulating data and generating reports.
+  - It supports variables, numeric functions, string functions, and logical operators.
+  - It allows for setting field seperators of multiple characters, whereas `cut` is restricted to a single character field seperator. 
+- The '`{FS=","}`' part of the `awk` command sets the field seperator to a comma, to set as a space followed by a comma use '`{FS=" ,"}`'
+
+:::
+
+
+## `head` and `tail` {.smaller}
+- The `head` command prints the first lines of a file.
+- The `tail` command prints the last lines of a file.
+- The default number of lines is 10.
+ - This can be changed with the '`-n`' option
+
+
+## `head` and `tail` exercise {.smaller}
+
+::: {.panel-tabset}
+
+### Problem
+- List all the lines in the files in `IOM-animals` directory alphabetically and find the `50th` item.
+
+### Solution
+- Use `head` to get the first 50 lines and `pipe it` to `tail` to get the last one:
+```{.bash code-line-numbers=false}
+[user@host IOM-animals]$ sort *.txt | head -n 50 | tail -n 1
+coot, fulica atra
+```
+- Another option is to use the `sed` command instead of `head` and `tail`:
+```{.bash code-line-numbers=false}
+[user@host IOM-animals]$ sort *.txt | sed -n 50p
+coot, fulica atra
+```
+:::
+
+
+## `sed` 1/2 {.smaller}
+- `sed` is a program command tool for stream editing. 
+- `sed` reads an input stream and produces an output stream. 
+  - Internally it has a pattern space and a hold buffer.
+  - Data is read from the input stream until the next newline character and placed into the pattern space.
+  - Operations can be performed on the data in the pattern space.
+  - Data can be exchanged between the pattern space and the hold buffer.
+  - Once all specified operations have been performed, the pattern space is ouput and a newline characer is added at the end.
+
+
+## `sed` 2/2 {.smaller}
+- `sed` is complicated and powerful, but less so that `awk`.
+- A simple `sed` program:
+```
+sed 's/foo/bar/'
+```
+- This program replaces all instance of 'foo' with 'bar' on every line.
+- Beware of `sed` commands as they can modify a file. 
+
+
+## `grep`
+- A command to print all lines containing or not containing a string of characters.
+- The following will stream out all input lines containing 'foo':
+```
+grep foo
+```
+- The following will stream out all input lines not containing 'foo':
+```
+grep -v foo
+```
+
+## `sed` and `grep` demo
+
+
+## data challenge exercise {.smaller}
+
+::: {.panel-tabset}
+
+### Problem
+- `shell-training/data/` contains 300 data files, each of which should contain 100 values. One or more of these files are missing some data though...
+- Use a series of commands connected by pipes to identify which files have missing data.
+- Hints:
+  - `wc -w` will tell you the number of values in a file
+  - `sort -n` will sort numerically
+
+### Solution
+- A solution using `grep`:
+```{.bash code-line-numbers=false}
+[user@host data]$ wc -w values* | sort -n | grep -v '100 values'
+    99 values 44
+ 29899 total
+```
+- Alternatively `awk` could be used:
+```{.bash code-line-numbers=false}
+[user@host data]$ wc -w values* | sort -n | awk '$1 != 100 {print $0}'
+    99 values 44
+ 29899 total
+```
+:::
+
+
+## Permissions 1/6 {.smaller}
+- File permissions can be identified using the `ls` command with the `-l` option.
+- By default, the owner has read, write and execute permissions on a directory they create, and read and write (but not execute) permission on a file they create.
+- By default, group and all have no permissions.
+```{.bash code-line-numbers=false}
+[user@host ~]$ mkdirs -p test0/test
+[user@host ~]$ touch test0/test/test-file
+[user@host ~]$ ls -la test0/test
 drwx------ 2 <owner> <group> <size> <date> <time> .
 drwx------ 3 <owner> <group> <size> <date> <time> ..
 -rw------- 1 <owner> <group> <size> <date> <time> test-file
 ```
 
 
-## Visibility and Permissions 3/7
+## Permissions 2/6 {.smaller}
 ```
 -rw------- 1 <owner> <group> <size> <date> <time> test-file
      |     |    |       |       |      |      |
@@ -464,76 +606,47 @@ drwx------ 3 <owner> <group> <size> <date> <time> ..
 +------------> type (1 character)
 ```
 
-## Visibility and Permissions 4/7
 
+## Permissions 3/6 {.smaller}
 ### Type and permissions examples
-
-```drwx------```:
-\
-- type: directory
-\
-- owner permissions: read, write and execute
-\
-- group user permissions: read and execute
-\
-- all user permissions: read only
-\
-
-```-rw-------```:
-\
-- type: file
-\
-- owner permissions: read and write
-\
-- group user permissions: none
-\
-- all user permissions: none
+- ```drwxr-x---```
+  - type: directory
+  - owner permissions: read, write and execute
+  - group user permissions: read and execute
+  - all user permissions: none
+- ```-rw-------```
+  - type: file
+  - owner permissions: read and write
+  - group user permissions: none
+  - all user permissions: none
 
 
-## Visibility and Permissions 5/7
-
-Each system user is assigned to one or more groups.
-\
-A user can change the group assignment to other groups they belong to.
-
-\
-Group assignment and permissions may be changed respectively with the commands `chgrp` and `chmod`.
-
-\
-The command `groups` can be used to print out what groups there are, and what group a user is part of.
-
-\
-There are a couple of main ways to change permissions...
+## Permissions 4/6 {.smaller}
+- Each system user is assigned to one or more groups.
+- A user can change the group assignment to other groups they belong to.
+- Group assignment and permissions may be changed respectively with the commands `chgrp` and `chmod`.
+- The command `groups` can be used to print out what groups there are, and what group a user is part of.
+- There are a couple of main ways to change permissions...
 
 
-## Visibility and Permissions 6/7
+## Visibility and Permissions 5/6
 
 ```{.bash code-line-numbers=false}
 [user@host]$ chmod u+rwx,g+rx,a+r test0/test/test-file
 [user@host]$ ls -al test0/test/test-file
 -rwxr-xr-- 1 <owner> <group> <size> <date> <time> test-file
 ```
-
-\
-`u+rwx` sets owner permissions to read, write and execute 
-\
-`g+rx` sets group user permissions to read and execute 
-\
-`a+r` sets all user permissions to read only 
+- `u+rwx` sets owner permissions to read, write and execute
+- `g+rx` sets group user permissions to read and execute
+- `a+r` sets all user permissions to read only
 
 
-## Visibility and Permissions 7/7
-
-This can also be achieved with octal values.
-\
-The octal value (0-7) is calculated by adding up the values for each digit
-\
-User (rwx) = 4+2+1 = 7
-\
-Group(rx) = 4+1 = 5
-\
-World (r) = 4
-
+## Visibility and Permissions 6/6
+- This can also be achieved with octal values.
+- The octal value (0-7) is calculated by adding up the values for each digit
+  - User (rwx) = 4+2+1 = 7
+  - Group (r-x) = 4+1 = 5
+  - World (r--) = 4
 ```{.bash code-line-numbers=false}
 [user@host]$ chmod u+rwx,g+r test0/test/test-file
 -rwxr----- 1 <owner> <group> <size> <date> <time> test-file
@@ -543,290 +656,26 @@ World (r) = 4
 ```
 
 
-
-In yourCreate a new directory called 'test' containing a new file called 'test-file'. Set the permissions on 'test-file' to be:
-\
-- owner permissions: read, write and execute
-\
-- group permissions: read only
-\
-- all permissions: none
-
-Hints:
-\
-- `mkdir` make a directory
-\
-- `cd` change into a directory
-\
-- `touch` can be used to create a new empty file
-\
-- `chmod` modify permissions
-\
-- `ls -l` to list and see permission details
-
-### Solution
-
-```{.bash code-line-numbers=false}
-[user@host ~]$ mkdir test
-[user@host ~]$ touch test/test-file
-[user@host ~]$ ls -l test/test-file
--rw------- 1 <owner> <group> <size> <date> <time> test/test-file
-[user@host ~]$ chmod u+rwx,g+r test-file
-[user@host ~]$ ls -l test/test-file
--rwxr----- 1 <owner> <group> <size> <date> <time> test/test-file
-```
-
-\
-Alternatively octal numbers could be used:
-
-```{.bash code-line-numbers=false}
-[user@host ~]$ mkdir test
-[user@host ~]$ touch test/test-file
-[user@host ~]$ chmod 740 test-file
-```
-
-:::
-
-## Exercise 2 {.smaller}
-
-::: {.panel-tabset}
-
-### Problem
-
-Create a new directory called 'test' containing a new file called 'test-file'. Set the permissions on 'test-file' to be:
-\
-- owner permissions: read, write and execute
-\
-- group permissions: read only
-\
-- all permissions: none
-
-Hints:
-\
-- `mkdir` make a directory
-\
-- `cd` change into a directory
-\
-- `touch` can be used to create a new empty file
-\
-- `chmod` modify permissions
-\
-- `ls -l` to list and see permission details
-
-### Solution
-
-```{.bash code-line-numbers=false}
-[user@host ~]$ mkdir test
-[user@host ~]$ touch test/test-file
-[user@host ~]$ ls -l test/test-file
--rw------- 1 <owner> <group> <size> <date> <time> test/test-file
-[user@host ~]$ chmod u+rwx,g+r test-file
-[user@host ~]$ ls -l test/test-file
--rwxr----- 1 <owner> <group> <size> <date> <time> test/test-file
-```
-
-\
-Alternatively octal numbers could be used:
-
-```{.bash code-line-numbers=false}
-[user@host ~]$ mkdir test
-[user@host ~]$ touch test/test-file
-[user@host ~]$ chmod 740 test-file
-```
-
-:::
-
-
-## Exercise 3
-
-Get a copy of some data using the following `git` command:
-
-```{.bash code-line-numbers=false}
-git clone https://github.com/ARCTraining/shell-training/
-```
-
-\
-Change directory into the directory called 'shell-training'. List the directory contents.
-
-
-## sort and cut
-
-- The `sort` command will sort lines (by default alphabetically).
-
-\
-
-- The `cut` command will cut lines of text based on a given character
-e.g. `cut -d ',' -f 2` will split lines around the comma and yield the second part.
-
-
-## Exercise 4 {.smaller}
-
-::: {.panel-tabset}
-
-### Problem
-
-Combine `cat`, `cut`, and `sort` to print out the Latin names from the file `IOM-animals/birds.txt` in alphabetical order. Save the output to a new file.
-
-### Solution
-
-```{.bash code-line-numbers=false}
-[user@host IOM-animals]$ cat birds.txt | sort | cut -d ',' -f 2 > sorted-birds.txt
-```
-
-\
-Another option to achieve the same is to use the `awk` command instead of `cut`:
-
-```{.bash code-line-numbers=false}
-[user@host IOM-animals]$ cat birds.txt | sort | awk '{FS=","}{print $2}' > sorted-birds.txt
-```
-\
-`awk` is a program command tool. It allows for setting field seperators of multiple characters, whereas `cut` is restricted to a single character field seperator. 
-\
-
-The `{FS=","}` part of the `awk` command sets the field seperator to a comma, to set as a space followed by a comma use `{FS=" ,"}`
-
-:::
-
-
-## Exercise 5 {.smaller}
-
-::: {.panel-tabset}
-
-### Problem
-
-List all the lines in the files in `IOM-animals` directory alphabetically and find the `50th` item.
-
-### Solution
-
-Use `head` to get the first 50 lines and `pipe it` to `tail` to get the last one:
-
-```{.bash code-line-numbers=false}
-[user@host IOM-animals]$ sort *.txt | head -n 50 | tail -n 1
-coot, fulica atra
-```
-
-\
-Another option is to use the `sed` command instead of `head` and `tail`:
-```{.bash code-line-numbers=false}
-[user@host IOM-animals]$ sort *.txt | sed -n 50p
-coot, fulica atra
-```
-\
-`sed` is a program command tool for stream editing. Figuring out the `sed` options that work is not so easy! 
-
-:::
-
-
-## sed 1/2
-
-`sed` reads an input stream and produces an output stream. Internally it has a pattern space and a hold buffer. Data is read from the input stream until the next newline character and placed into the pattern space. Most sed commands operate on the data in the pattern space. Data can be exchanged between the pattern space and the hold buffer. Once sed has executed all commands, it outputs the pattern space and adds a newline characer at the end.
-
-
-## sed 2/2
-
-A very simple `sed` program:
-```
-sed 's/foo/bar/'
-```
-\
-This program replaces all instance of 'foo' with 'bar' on every line.
-
-\
-Beware of `sed` commands as they can modify a file. 
-
-
-## grep
-
-`grep` will print all lines containing or not containing a string of characters. The following will stream out all input lines containing 'foo':
-\
-```
-grep foo
-```
-\
-
-The following will stream out all input lines not containing 'foo':
-\
-```
-grep -v foo
-```
-
-
-## Exercise 6 {.smaller}
-
-::: {.panel-tabset}
-
-### Problem
-
-`shell-training/data/` contains 300 data files, each of which should contain 100 values. One or more of these files are missing some data though...
-
-\
-Use a series of commands connected by pipes to identify which files have missing data. Hints:
-
-- `wc -w` will tell you the number of values in a file
-- `sort -n` will sort numerically
-
-### Solution
-
-A solution using `grep`:
-```{.bash code-line-numbers=false}
-[user@host data]$ wc -w values* | sort -n | grep -v '100 values'
-    99 values 44
- 29899 total
-```
-
-\
-Alternatively `awk` could be used:
-```{.bash code-line-numbers=false}
-[user@host data]$ wc -w values* | sort -n | awk '$1 != 100 {print $0}'
-    99 values 44
- 29899 total
-```
-
-:::
-
-
 ## For loops
-
-Example for loop to print the numbers 1, 3 and 5:
-
+- Example for loop to print the numbers 1, 3 and 5:
 ```{.bash code-line-numbers=false}
 [user@host ~]$ for ((i=1;i<6;i=i+2)) do echo $i; done
 1
 3
 5
 ```
-\
-`echo` is a command that prints to the standard output.
-The variable `i` is initialised with a value of `1`; the loop continues until the condition `i` is less than `6`; each iteration of the loop `i` is incremented by `2`.
+- `echo` is a command that prints to the standard output.
+- `i` is initialised with a value of `1`; the loop continues until the condition '`i<6`'; each iteration of the loop `i` is incremented by `2`.
 
 
-## Sequences
-
-Example sequence to print the numbers 1, 3 and 5:
-
-```{.bash code-line-numbers=false}
-[user@host ~]$ for i in {1..5..2}; do echo $i; done
-1
-3
-5
-```
-\
-The sequence variable `i` starts at `1` and ends at `5` and steps by `2`.
-A sequence could be the items in a directory or other things.
-
-
-## Exercise 7 {.smaller}
+## for loop exercise {.smaller}
 
 ::: {.panel-tabset}
 
 ### Problem
+- Use a for loop to create five directories called `calculation_?`, where `?` is a number. 
 
-1. Use a for loop to create five directories called `calculation_?`, where `?` is a number. 
-2. Use a sequence to create five directories, each one the parent of the next.
-
-### Solutions
-
-1. `i++` is shorthand for 'i=i+1'
+### Solution
 ```{.bash code-line-numbers=false}
 [user@host ~]$ for ((i=1;i<6;i++))
 > do
@@ -834,8 +683,31 @@ A sequence could be the items in a directory or other things.
 > done
 [user@host ~]$
 ```
-\
-2. Two commands are executed in each loop. A new directory is created and then the working directory is changed to the new directory. On the next iteration, the new directory is then created inside the previous one.
+- `i++` is shorthand for 'i=i+1'
+
+:::
+
+
+## Sequences
+- Example sequence to print the numbers 1, 3 and 5:
+```{.bash code-line-numbers=false}
+[user@host ~]$ for i in {1..5..2}; do echo $i; done
+1
+3
+5
+```
+- The sequence variable `i` starts at `1` and ends at `5` and steps by `2`.
+- A sequence could be the items in a directory or other things.
+
+
+## sequence exercise {.smaller}
+
+::: {.panel-tabset}
+
+### Problem
+- Use a sequence to create five directories, each one the parent of the next.
+
+### Solution
 ```{.bash code-line-numbers=false}
 [user@host ~]$ for i in {1..5}; do
 > mkdir calculation_$i
@@ -843,16 +715,20 @@ A sequence could be the items in a directory or other things.
 > done
 [user@host calculation_5]$
 ```
+- Two commands are executed for each item in the sequence.
+  - A new directory is created
+  - Then the working directory is changed to the new directory.
+- On the next iteration, the new directory is then created inside the previous one.
 
 :::
 
-## Exercise 8 {.smaller}
+
+## wildcards exercise {.smaller}
 
 ::: {.panel-tabset}
 
 ### Problem
-
-Print out the first line of each file in the `wildcards` directory.
+- Print out the first line of each file in the `wildcards` directory.
 
 ### Solution
 
@@ -866,14 +742,12 @@ Print out the first line of each file in the `wildcards` directory.
 :::
 
 
-## Exercise 9 {.smaller}
+## quiz {.smaller}
 
 ::: {.panel-tabset}
 
-### Problem
-
-What will this command print to the screen?
-
+### Questions
+1. What will this command print to the screen?
 ```{.bash code-line-numbers=false}
 [user@host wildcards]$ for f in *.txt
 > do
@@ -881,15 +755,13 @@ What will this command print to the screen?
 > cat $f > new-file.txt
 > done
 ```
+2. What will the contents of `new-file.txt` be and why?
 
-\
-What will the contents of `new-file.txt` be and why?
-
-### Solution
-
+### Answers
+1.
 - The command will print the name of each `.txt` file in the current directory
 - On each iteration the `echo` command prints a different file name
-
+2.
 - The content of `new-file.txt` will be the same as `xyz.txt`
 - On each iteration the contents of a different file are written to `new-file.txt`, overwriting whatever was written on the previous iteration
 - This is because `>` overwrites the output of cat to `new-file.txt` for each element in the sequence.
