@@ -748,8 +748,8 @@ chmod 700 test0/test/test-file
 - Return for the final part in 10 minutes...
 
 
-## For loops {.smaller}
-- Example for loop to print the numbers 1, 3 and 5:
+## For loop with iterator {.smaller}
+- Example for loop with iterator to print the numbers 1, 3 and 5:
 ```{.bash code-line-numbers=false}
 for ((i=1;i<=5;i=i+2)) do echo $i; done
 ```
@@ -763,27 +763,10 @@ for ((i=1;i<=5;i=i+2)) do echo $i; done
 - The semi-colon symbol `;` is in place of a line break
 
 
-## For loops exercise {.smaller}
-
-::: {.panel-tabset}
-
-### Problem
-- Use a for loop to create five directories called `calculation_?`, where `?` is a number. 
-
-### Solution
-```{.bash code-line-numbers=false}
-for ((i=1;i<6;i++))
-do
-mkdir calculation_$i
-done
-```
-- '`i++`' is shorthand for '`i=i+1`'
-
-:::
-
-
-## Sequences {.smaller}
-- Example sequence to print the numbers 1, 3 and 5:
+## For loop with sequence {.smaller}
+- `{1..5}` is the sequence 1, 2, 3, 4, 5
+- `{1..5..2} is the sequence 1, 3, 5
+- Example for loop with iterator to print the numbers 1, 3 and 5:
 ```{.bash code-line-numbers=false}
 for i in {1..5..2}; do echo $i; done
 ```
@@ -791,24 +774,59 @@ for i in {1..5..2}; do echo $i; done
 - A sequence could be the items in a directory or other things.
 
 
-## Sequences exercise {.smaller}
+## For loops exercise 1 {.smaller}
+
 ::: {.panel-tabset}
 
 ### Problem
-- Use a sequence to create five directories, each one the parent of the next.
+- Use a for loop to create five directories called `calculation_?`, where `?` is a number. 
 
 ### Solution
+- For loop with an iterator
 ```{.bash code-line-numbers=false}
-for i in {1..5}; do
-> mkdir calculation_$i
-> cd calculation_$i
-> done
-[user@host calculation_5]$
+for ((i=1;i<6;i++))
+do
+mkdir calculation_$i
+done
 ```
-- Two commands are executed for each item in the sequence.
+- '`i++`' is shorthand for '`i=i+1`'
+- For loop with a sequence
+```{.bash code-line-numbers=false}
+for i in {1..5}
+do
+mkdir calculation_$i
+done
+```
+
+:::
+
+
+## For loops exercise 2 {.smaller}
+
+::: {.panel-tabset}
+
+### Problem
+- Use a for loop to create five directories, each one the parent of the next.
+
+### Solution
+- Two commands are executed each time around the loop
   - A new directory is created
   - Then the working directory is changed to the new directory.
-- On the next iteration, the new directory is then created inside the previous one.
+- For loop with an iterator
+```{.bash code-line-numbers=false}
+for ((i=1;i<6;i++))
+do
+mkdir calculation_$i
+cd calculation_$i
+done
+```
+- For loop with a sequence
+```{.bash code-line-numbers=false}
+for i in {1..5}; do
+mkdir calculation_$i
+cd calculation_$i
+done
+```
 
 :::
 
@@ -820,15 +838,15 @@ for i in {1..5}; do
   - `[]` can represent any single characters detailed in the square brackets.
 - The following will list all files starting with a:
 ```{.bash code-line-numbers=false}
-`ls a*` 
+`ls a*`
 ```
 - The following will list all files starting with `a` and ending `.txt` that have one character between these:
 are two characters long:```{.bash code-line-numbers=false}
-`ls a?.txt` 
+`ls a?.txt`
 ```
 - The following will list all files starting with `a` and ending `.txt` that have any other string with a `0` or a `1` character between these:
 ```{.bash code-line-numbers=false}
-`ls a[12].txt` 
+`ls a[12].txt`
 ```
 
 
@@ -880,7 +898,8 @@ for f in *.txt
 
 
 ## Shell Scripts {.smaller}
-- These are simple text files. By convention the filename ends `.sh`.
+- These are simple text files.
+  - By convention the filename ends `.sh`.
 - The file should start with a 'shebang' line which tells the Linux system what command to run:
 ```{.bash code-line-numbers=false}
 #!/bin/bash`
