@@ -723,13 +723,13 @@ drwx------ 3 <owner> <group> <size> <date> <time> ..
 - There are a couple of main ways to change permissions...
 - The following will change the '`test0/test/test-file`' permissions so the user can execute it.
 ```{.bash code-line-numbers=false}
-chmod u+rwx test0/test/test-file
+chmod u+x test0/test/test-file
 ```
 - The same can be achieved using octal values:
 ```{.bash code-line-numbers=false}
 chmod 700 test0/test/test-file
 ```
-- Later on we will set permissions on a file so we can execute it.
+- Later on we will set permissions on a file to execute it.
 - Don't worry about remembering any details of how to change permissions
 - Try to remember that there are 3 levels of permission:
   - user, group and all
@@ -748,30 +748,49 @@ chmod 700 test0/test/test-file
 - Return for the final part in 10 minutes...
 
 
-## For loop with iterator {.smaller}
-- Example for loop with iterator to print the numbers 1, 3 and 5:
+## Variables {.smaller}
+- Variables are defined and accessed as follows:
 ```{.bash code-line-numbers=false}
-for ((i=1;i<=5;i=i+2)) do echo $i; done
+var=1
+echo $var
 ```
-- The for loop initialises a variable `i`.
-  - The first time around the loop `i=1`.
-  - The loop continues unitl `i<=5` evaluates as false.
-  - Each time around the loop `2` is added to `i`.
-  - Within the loop `i` is refered to as `$i`.
-- `echo` is a command that prints to the standard output.
-- The for loop ends with `done`.
-- The semi-colon symbol `;` is in place of a line break
+- `echo` is in the above to print the value of `var`
+- `PATH` is a variable
+  - The directories where executables are looked for.
+- The command `printenv` will print all the variables
 
 
-## For loop with sequence {.smaller}
-- `{1..5}` is the sequence 1, 2, 3, 4, 5
-- `{1..5..2} is the sequence 1, 3, 5
-- Example for loop with iterator to print the numbers 1, 3 and 5:
+## For loop 1/2 {.smaller}
+``` 
+- Example for loop with iterator syntax to print the numbers 1 to 5:
 ```{.bash code-line-numbers=false}
-for i in {1..5..2}; do echo $i; done
+for ((i=1;i<=5;i=i+1)) do echo $i; done
 ```
-- The sequence variable `i` starts at `1` and ends at `5` and steps by `2`.
-- A sequence could be the items in a directory or other things.
+- Example for loop with sequence syntax to print the numbers 1 to 5:
+```{.bash code-line-numbers=false}
+for i in {1..5}; do echo $i; done
+```
+- Example for loop with sequence syntax to print even numbers from 2 to 10:
+```{.bash code-line-numbers=false}
+for i in {2..10..2}; do echo $i; done
+```
+- Example for loop with iterator syntax to print a geometric series from 2 to 256:
+```{.bash code-line-numbers=false}
+for ((i=2;i<=265;i=i*2)) do echo $i; done
+```
+
+
+## For loop 2/2 {.smaller}
+- Example for loop to loop through directory contents:
+```{.bash code-line-numbers=false}
+for f in *; do echo $f; done
+```
+- Where there is a '`;`' there can be a new line:
+```{.bash code-line-numbers=false}
+for f in *
+ do echo $f
+ done
+```
 
 
 ## For loops exercise 1 {.smaller}
@@ -782,7 +801,7 @@ for i in {1..5..2}; do echo $i; done
 - Use a for loop to create five directories called `calculation_?`, where `?` is a number. 
 
 ### Solution
-- For loop with an iterator
+- For loop with an iterator syntax
 ```{.bash code-line-numbers=false}
 for ((i=1;i<6;i++))
 do
@@ -790,7 +809,7 @@ mkdir calculation_$i
 done
 ```
 - '`i++`' is shorthand for '`i=i+1`'
-- For loop with a sequence
+- For loop with a sequence syntax
 ```{.bash code-line-numbers=false}
 for i in {1..5}
 do
@@ -809,18 +828,6 @@ done
 - Use a for loop to create five directories, each one the parent of the next.
 
 ### Solution
-- Two commands are executed each time around the loop
-  - A new directory is created
-  - Then the working directory is changed to the new directory.
-- For loop with an iterator
-```{.bash code-line-numbers=false}
-for ((i=1;i<6;i++))
-do
-mkdir calculation_$i
-cd calculation_$i
-done
-```
-- For loop with a sequence
 ```{.bash code-line-numbers=false}
 for i in {1..5}; do
 mkdir calculation_$i
