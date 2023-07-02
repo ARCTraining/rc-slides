@@ -6,7 +6,7 @@ format:
     controls: true
     footer: "[Research IT Website]({{< var rc.website >}}) | [Research IT Query]({{< var rc.servicedesk >}}) | [Courses Material]({{< var rc.material >}})"
 code: HPC 0
-name: Introduction to the Unix/Linux command line
+name: Introduction to Linux for HPC at Leeds
 ---
 
 {{< include _title.qmd >}}
@@ -16,7 +16,9 @@ name: Introduction to the Unix/Linux command line
 ## Contact Details and Key Links
 - ARC Website: {{< var rc.website >}}
 - ARC Documentation: {{< var rc.documentation >}}
+<!--
   - [ARC Documentation Helpful Shell Commands]({{< var rc.commands >}})
+-->
 - General queries: {{< var rc.servicedesk >}}
 
 
@@ -30,16 +32,26 @@ name: Introduction to the Unix/Linux command line
 
 
 ## Purpose of today {.smaller}
-- Introduce the command line
-- Hands on experience and confidence building
-- Learn about:
-  - File system navigation
-  - Creating, reading, updating and deleting files
-  - Using command history
-  - Permissions
-  - Stream manipulation
-    - Inspecting, editing and filtering
-- Introduce shell scripting
+- Gain experience
+- Build confidence
+- Linux command line on ARC3/ARC4
+
+
+## Syllabus {.smaller}
+<!--
+This should match what is in:
+https://github.com/ARCLeeds/arcleeds.github.io/tree/master/_data/training_courses.yml
+https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.md
+-->
+- Logging in
+- Entering commands
+- Finding out about commands
+- File system navigation
+- Commands to create, copy, move and delete files and directories
+- Home directory contents
+- File permissions
+- Using commands to explore and filter data
+- Shell scripting basics
 
 
 ## Introductions and Motivations
