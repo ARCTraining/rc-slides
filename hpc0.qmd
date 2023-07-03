@@ -9,32 +9,51 @@ code: HPC 0
 name: Introduction to Linux for HPC at Leeds
 ---
 
+
+## Presentation set up
+- If using Teams share browser window then activate presenter mode from the menu.
+  - This should open a new browser window in presenter mode...
+
+
 {{< include _title.qmd >}}
 
-{{< include _team.qmd >}}
 
-## Contact Details and Key Links
+<!--
+{{< include _team.qmd >}}
+-->
+
+
+## Contact Details and Key Links {visibility="hidden"}
 - ARC Website: {{< var rc.website >}}
 - ARC Documentation: {{< var rc.documentation >}}
-<!--
-  - [ARC Documentation Helpful Shell Commands]({{< var rc.commands >}})
--->
 - General queries: {{< var rc.servicedesk >}}
 
 
-## Training
+## Training {visibility="hidden"}
 ![](assets/img/hpc0/training.png)
 
 
-## ARC/HPC Training Portfolio
+## ARC/HPC Training Portfolio {visibility="hidden"}
 {{< var rc.training >}}
 ![](assets/img/hpc0/portfolio.png)
 
 
-## Purpose of today {.smaller}
-- Gain experience
-- Build confidence
-- Linux command line on ARC3/ARC4
+## Introduction {.smaller}
+- Purpose of today
+  - Gain experience
+  - Build confidence
+  - Prepare for HPC1
+  - Get feedback from you about the training
+
+::: {.notes}
+- Course leader and staff introductions.
+- If a hackpad is set up, ask participants to introduce themselves on it.
+- Let everyone know they are welcome to:
+  - Interrupt to ask for things to be clarified/repeated.
+  - Ask questions.
+  - Ask for help.
+- If using Teams, then we can use the chat.
+:::
 
 
 ## Syllabus {.smaller}
@@ -50,81 +69,144 @@ https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.m
 - Commands to create, copy, move and delete files and directories
 - Home directory contents
 - File permissions
-- Using commands to explore and filter data
+- Using commands to find, explore and filter data
+- Wildcards
 - Shell scripting basics
 
-
-## Introductions and Motivations
-- Who are you and why are you here?
-
-
-## Me {visibility="hidden"}
-- Research Computing service
-- Research Computing Consultant
-- Everything from HPC to Data Science
-- RSE Cloud Computing Fellow
-- Research in Deep Learning: Neural networks for text summarisation
+::: {.notes}
+Outline of what we will attempt to cover in <3 hours with breaks.
+Aim for 25 minutes sessions with 5 minute breaks.
+:::
 
 
-## What is BASH?
+## Logging in {.smaller}
+- [ARC Documentation >> Login]({{< var rc.login >}})
+- How you login depends on your:
+  - Host Operating System
+    - From OSx or Linux: Use a terminal program
+    - From Windows: Use MobaXTerm
+  - Connection
+    - On campus
+      - Wireless is like 'off campus'
+    - Off campus
+      - But connected to the [University VPN](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0014410) is like 'on campus'
+
+::: {.notes}
+- MobaXTerm is software that you should be able to download, install and run without a problem
+- The University Virtual Private Network (VPN) is a type of secure network connection, enabling your computer to access the University network when working remotely. 
+:::
+
+
+## Logging in demo {.smaller}
+::: {.notes}
+- Demo login from OSx/Linux
+- Demo login from Windows
+:::
+
+
+## Logging in exercise {.smaller}
+- Please login.
+
+::: {.notes}
+- Check who is logged in
+  - In a classroom post it notes could be used to signal
+  - Online using Teams, an emoji poll can be used
+- Help anyone struggling
+- Those that cannot login can still follow along for a bit...
+:::
+
+
+## The shell and interface {.smaller}
+- You login to a ('bash') shell and your Home directory
+- The shell is a terminal emulator program that can execute other programs in response to text commands.
+  - There is a prompt where textual commands can be entered.
+  - Textual messages sent to the standard output are displayed by the prompt.
+- As you login, your bash set up is finalised by reading some files in your Home directory.
+
+::: {.notes}
+- We will enter some commands shortly.
+- After learning a bit about the file system.
+:::
+
+
+## What is BASH? {.smaller} {visibility="hidden"}
 ![](assets/img/hpc0/bash.png)
 
 
-## What is a shell?
+## What is a shell? {.smaller}
 ![](assets/img/hpc0/shell.png)
 
+::: {.notes}
+- Human users interface with the system via the shell.
+- The shell communicates with the kernel that communicates with computer hardware and provides access the file system.
+:::
 
-## Filesystem basics
+
+## Filesystem basics {.smaller}
 ![](assets/img/hpc0/filesystem.png)
 
+::: {.notes}
+- The image shows a simplified filesystem.
+  - We will look at what the actual file system looks like shortly...
+- A Windows 'Folder' is like a Linux 'Directory':
+  - A thing that can hold files and sub-folders/sub-directories.
+- Directories are arranged in a heirarchy.
+  - The top directory is the root directory.
+- Each user has a Home Directory:
+  - Where they login to.
+  - Where their profile is stored.
+:::
 
-## Forward slash / and backslash \
+
+## Forward-slash / and back-slash \ {.smaller}
 ![](assets/img/hpc0/slash.png)
 
+::: {.notes}
+- The file path separator in Linux is /
+- The file path separator in Windows is \
+:::
 
-## Filesystem basics: absolute path
+
+## Absolute path {.smaller}
 ![](assets/img/hpc0/filesystem-absolute.png)
 
+::: {.notes}
+- The root directory is `/`.
+- Linux does not have drive letters like Windows.
+:::
 
-## Filesystem basics: relative path
+
+## Relative path {.smaller}
 ![](assets/img/hpc0/filesystem-relative.png)
 
-
-## Login from Linux/OSx demo
-
-
-## Login from Windows demo
-- Launch MobaXTerm...
+::: {.notes}
+- `..` takes you up a level in the directory heirarchy
+:::
 
 
-## Login exercise {.smaller}
-- [ARC Documentation Login]({{< var rc.login >}})
-- Please login to ARC3 or ARC4.
-```{.bash code-line-numbers=false}
-ssh <username>@arc3.leeds.ac.uk
-ssh <username>@arc4.leeds.ac.uk
-```
-- `<username>` is your university username.*
-- We want everyone logged in now
-  - You can still follow along if there are issues...
-
-
-## The prompt {.smaller}
+## The default prompt {.smaller}
 - Upon login, you should see a prompt that looks like the following:
 ```{.bash code-line-numbers=false}
 [user@host ~]$
 ```
 - Only:
-  -'`user`' is your username
+  - '`user`' is your username
   - '`host`'
-    - either starts '`login1.`' or '`login2.`'
-      - (there are two login nodes for ARC3 and ARC4)
-    - and is followed by the name of the resource '`arc3`' for ARC3 or '`arc4`' for ARC4
-- Upon login you are in your user home directory represented by '`~`' (tilda) in the prompt.
-- After the `$` symbol is where text based commands are entered...
+    - starts '`login1.`' or '`login2.`'
+    - and ends '`arc3`' or '`arc4`'
+- The '`~`' (tilda) in the prompt indicates that you are in your home directory.
+- The '`$`' symbol is the end of the prompt and is where commands can be typed and entered
+
+::: {.notes}
+- You are always in a directory:
+  - the working directory
+  - By default this is where things are created or read from...
+- Users can modify the prompt look and feel
+  - Showing how to do that would be a distraction!
+:::
 
 
-## First (safe) commands {.smaller}
+## First commands {.smaller}
 \
 \
 <table>
@@ -154,6 +236,11 @@ ssh <username>@arc4.leeds.ac.uk
   </tr>
 </table>
 
+::: {.notes}
+- These are safe commands - they don't change anything.
+- We will look at these in turn...
+:::
+
 
 ## `pwd` {.smaller}
 - A command to print the working directory.
@@ -164,6 +251,18 @@ ssh <username>@arc4.leeds.ac.uk
 - When you run this the output will be slightly different:
   - '`XX`' should be a number like '`01`' or '`02`'
   - '`user`' should be your username
+
+::: {.notes}
+- Run from the user Home directory this reports the absolute path to it.
+:::
+
+
+## `pwd` demo {.smaller}
+::: {.notes}
+- Do a quick demo.
+- If using Teams, then remember to share the right browser window when switching to share the slides.
+  - The presenter mode slides will have opened in a different window.
+:::
 
 
 ## `pwd` exercise {.smaller}
@@ -196,17 +295,26 @@ pwd: pwd [-LP]
 
 
 ## `--help` and `man` {.smaller}
-- `--help` is a command option that can be used to get help on using a command.
+- `--help` is a command option that prints help about using that command.
 - `man` is a command to bring up the manual.
 - For help using `man`: press the h-key `<h>`.
 - To quit the help about `man` or the man page: press `<q>`.
 - To page through a man page: press `<space_bar>`.
 
 
-## `man` demo
+## `--help` and `man` demo {.smaller}
+::: {.notes}
+- Demo
+```{.bash code-line-numbers=false}
+pwd --help
+```
+```{.bash code-line-numbers=false}
+man pwd
+```
+:::
 
 
-## `man` exercise {.smaller}
+## `--help` and `man` exercise {.smaller}
 - Enter:
 ```{.bash code-line-numbers=false}
 man man
@@ -222,6 +330,11 @@ man pwd
 ```{.bash code-line-numbers=false}
 man ls
 ```
+
+::: {.notes}
+- Encourage participants to try this for themsleves
+- Pause for an emoji pll or similar.
+:::
 
 
 ## `ls` 1/3 {.smaller}
@@ -252,19 +365,57 @@ drwxr-xr-x     3 root root    4096 MMM DD hh:mm ..
   - '`.`' is the directory listed and '`..`' is the parent of that directory.
 - Please don't worry about the other details for now...
 
+::: {.notes}
+- Permissions and other details listed are explained later...
+:::
+
 
 ## `ls` 3/3 {.smaller}
 - An '`ls -al`' in your home directory:
-  - Should result in many more lines of output.
-  - The details will look a bit different.
-    - For instance, '`MMM`' should be three letters representing the month a file was created e.g. '`Jun`'.
-  - Will reveal hidden but important files and directories:
-    - Let us not concern ourselves with these for now...
+  - Should result in more output.
+    - Details will look a bit different.
+      - For instance, '`MMM`' should be three letters representing the month a file was created e.g. '`Jun`'.
+  - Will reveal hidden but important files and directories...
 
 
-## `mkdir` {.smaller}
+## `ls` exercise {.smaller}
+- Enter:
+```{.bash code-line-numbers=false}
+ls /
+```
+- The output lists what is in the Root directory.
+- Enter:
+```{.bash code-line-numbers=false}
+ls ~
+```
+- The output lists everything that is in your home directory that is not hidden.
+  - For new users, this should be nothing!
+- Enter:
+```{.bash code-line-numbers=false}
+ls -al ~
+```
+- The output lists everything in your Home directory.
+
+
+## Home directory hidden files and folders {.smaller}
+- `.bash_history`
+  - A log of commands that you have entered.
+- `.bash_profile`
+  - Defines your user settings for a login shell.
+- `.bashrc`
+  - Defines your user settings for a subshell.
+- You may have other files and folders and more may get added as you use commands and applications.
+- It is important to know these exist so as not to accidentally delete them.
+- Only modify them carefully if at all!
+
+::: {.notes}
+- By carefully, this means by creating a backup copy before trying things.
+:::
+
+
+## `mkdir` 1/2 {.smaller}
 - A command to create a directory.
-- The following is to create a directory named '`test`':
+- The following is for creating a directory named '`test`':
 ```{.bash code-line-numbers=false}
 mkdir test
 ```
@@ -273,6 +424,9 @@ mkdir test
 [user@host ~]$ mkdir test
 mkdir: cannot create directory ‘test’: File exists
 ```
+
+
+## `mkdir` 2/2 {.smaller}
 - The '`-p`' option allows for creating parent directories.
 - The following creates the directory '`test2`' and in this the directory '`test3`'.
 ```{.bash code-line-numbers=false}
@@ -301,41 +455,60 @@ mkdir: cannot create directory ‘/test’: Permission denied
 [user@host ~]$ cd /root
 -bash: cd: /root: Permission denied
 ```
-- And you remain where you are.
-- To return to you home directory use `cd` with no arguments or `cd ~` or specify an appropriate relative path or the absolute path (as discerned earlier).
+- To return to your home directory use:
+  - `cd` with no arguments or `cd ~`
+
+::: {.notes}
+- An appropriate relative path or the definitive absolute path can also be used to return to the user home directory.
+:::
 
 
 ## `ls`, `mkdir` and `cd` demo {.smaller}
 
 
 ## `ls`, `mkdir` and `cd` exercise {.smaller}
-- Explore using `ls`, `mkdir` and `cd` in your home directory.
+- Use `ls`, `mkdir` and `cd` in your home directory.
 - Check if there is a directory with your user name in `/nobackup/` and if not create it.
 
 
-## Check point
-- You will only be allowed to change into directories you have permission to read.
+## Check point 1 {.smaller}
+- You can only list or change into directories you have permission to read.
 - Any questions?
-- 10 minutes then back to consider some time savers and some more commands.
+
+::: {.notes}
+- Is it time for a break?
+:::
 
 
 ## Time savers 1/2 {.smaller}
-- `<up>` and `<down>` arrow keys can load previously entered commands into the prompt.
+- `<up>` and `<down>` arrow keys will load previously entered commands into the prompt.
 - The control key `<Ctrl>` can be used in combination with other keys to do things:
   - `<Ctrl>` and `<c>` will cancel
     - This can terminate a running command or cancel/clear what is at the prompt.
   - At the prompt:
     - `<Ctrl>` and `<a>` will move the cursor to the start of what is at the prompt
     - `<Ctrl>` and `<e>` will move the cursor to the end of what is at the prompt
-    - `<Ctrl>` and `<r>` will do a reverse search through the history of commands entered at the prompt and insert or execute a command.
+    - `<Ctrl>` and `<r>` will do a reverse search through the history of commands entered at the prompt which can then be edited or entered.
+
+::: {.notes}
+- An overview of the hidden files and directories is given later...
+:::
 
 
 ## Time savers 2/2 {.smaller}
-- The cursor does not have to be at the end of what is written at the prompt to submit what is there to the interpreter (run it).
+- The prompt cursor does not have to be at the end of what is written at the prompt to submit what is there to the interpreter (run it).
 - The tab key `<Tab>` can be used to help autocomplete file paths.
   - Press `<Tab>` repeatedly two or three times to reveal optional paths.
     - This can make your computer output an audible 'beep'!
-- Copy and paste also should work...
+- Copy and paste using the mouse:
+  - Highlight by left-click-hold and drag mouse.
+  - Copy with right click then select copy option.
+  - Paste with right click and select paste option
+  - Or paste highlighted text using third mouse button.
+
+::: {.notes}
+- `<ctrl> + <c>` copies in Windows, but cancels in Linux!
+:::
 
 
 ## Time savers demo {.smaller}
@@ -347,15 +520,6 @@ mkdir: cannot create directory ‘/test’: Permission denied
 - Use `<Ctrl>` and `<c>` to cancel.
 - Use `<Ctrl>` and `<r>` to reverse search through the history of commands, and select one to edit or run.
 - Use copy and paste to paste a command at the prompt.
-
-
-## Reflection {.smaller}
-- There are other ways to save time at the command line and other `<Ctrl>` key combinations that you may want to learn in due course...
-- Know how of commands and shortcuts and skill in using them comes with practise...
-- The main keys to using commands:
-  - Searching for potential solutions and finding out what commands are called.
-  - Using `--help` and `man` to understand what commands do and how to use them.
-  - Testing - especially if you are not sure what a command will do.
 
 
 ## More commands {.smaller}
@@ -388,7 +552,10 @@ mkdir: cannot create directory ‘/test’: Permission denied
   </tr>
 </table>
 \
-- Take more care with these!
+
+::: {.notes}
+- Perhaps warn users to take more care with these!
+:::
 
 
 ## `mv` {.smaller}
@@ -397,8 +564,6 @@ mkdir: cannot create directory ‘/test’: Permission denied
 ```{.bash code-line-numbers=false}
 mv test test_renamed
 ```
-- A move can usually be reversed, but as things are moved around they are easier to lose!
-
 
 ## `cp` {.smaller}
 - A command to copy a file or directory
@@ -418,16 +583,21 @@ cp -r test test_copy
 
 
 ## `touch`, `>`, `>>` {.smaller}
-- `touch` is a command that touches a file or directory and can be used to create an empty file.
-  - `touch` changes the recorded time an existing file or directory was last accessed.
+- `touch` is a command that touches will either:
+  - Create an empty file, or
+  - Update file access and modification times to the current time.
 - the symbol '`>`' can be used to direct the standard output to a file.
   - This will overwrite any existing file.
 - The following would direct the output of `ls` to a file named '`ls.out`' 
 ```{.bash code-line-numbers=false}
 ls > ls.out
 ```
-- '`>>`' can be used in place of '`>`' to direct the standard output to a file appending to any content in that file.
-- If there is more than one process writing to a file simultaneously, it might end up in a mess!
+- '`>>`' can be used in place of '`>`' to append to rather than overwrite the file.
+
+::: {.notes}
+- Maybe point out:
+  - Multiple processes writing to the same file simultaneously can make a mess!
+:::
 
 
 ## `rmdir` {.smaller}
@@ -449,7 +619,7 @@ rmdir: failed to remove '/root': Permission denied
 
 
 ## `rm` {.smaller}
-- A command to remove (delete) a file or directory.
+- A command to remove (delete) files and directories.
 - The following will remove a file called '`test`':
 ```{.bash code-line-numbers=false}
 rm test
@@ -459,13 +629,18 @@ rm test
 - The '`-f`' option forces.
 - Take care with `rm`, especially combined with '`-r`' and '`-f`' options.
 
+::: {.notes}
+- Take care especially using wildcards, as it is all too easy to delete everything!
+:::
+
 
 ## `mv`, `cp`, `rmdir`, `rm`, `touch`, `>`, `>>` demo {.smaller} {visibility="hidden"}
+::: {.notes}
 - Offer a demo?
-
+:::
 
 ## `mv`, `cp`, `rmdir`, `rm`, `touch`, `>`, `>>` exercise {.smaller}
-- Create come directories and files as follows:
+- Create some directories and files as follows:
 ```{.bash code-line-numbers=false}
 mkdir -P test0/test01
 mkdir test0/test02
@@ -476,14 +651,16 @@ touch test0/test01/test_file
 - Delete '`test0/test03`'
 - Direct the output of '`ls`' into '`ls.out`'
 - Append the output of '`ls -al`' into '`ls.out`'
-- Next we will learn to use `cat` and `less` to look at the contents of `test_ls`...
+- Next we will be using `cat` and `less` to look at the contents of '`ls.out`'...
   - So if you are waiting then look into using these commands...
 
 
-## Feedback {.smaller}
+## Check point 2 {.smaller}
 - Any questions?
-- Coming up...
-  - Commands to process streams.
+
+::: {.notes}
+- Is it time for a break?
+:::
 
 
 ## Yet more commands {.smaller}
@@ -533,7 +710,7 @@ more than one FILE is specified. A word is a non-zero-length sequence of charact
 </table>
 
 
-## git clone exercise
+## git clone exercise {.smaller}
 - Get a copy of some data using the following `git` command:
 ```{.bash code-line-numbers=false}
 git clone https://github.com/ARCTraining/shell-training/
@@ -556,8 +733,9 @@ cat test test2 | sort | head
 
 
 ## `cat`, `sort` and `cut` demo {visibility="hidden"}
+::: {.notes}
 - Offer a demo?
-
+:::
 
 ## `cat`, `sort` and `cut` exercise {.smaller}
 
@@ -644,9 +822,10 @@ grep foo
 grep -v foo
 ```
 
-## `sed` and `grep` demo {visibility="hidden"}
+## `sed` and `grep` demo 
+::: {.notes}
 - Offer a demo?
-
+:::
 
 ## data challenge exercise {.smaller}
 
@@ -731,33 +910,42 @@ drwx------ 3 <owner> <group> <size> <date> <time> ..
 
 
 ## Permissions 4/4 {.smaller}
-- Permissions may be changed using `chmod`.
-- There are a couple of main ways to change permissions...
-- The following will change the '`test0/test/test-file`' permissions so the user can execute it.
-```{.bash code-line-numbers=false}
-chmod u+x test0/test/test-file
-```
-- The same can be achieved using octal values:
+- Permissions may be changed using the `chmod` command.
+- Specific permissions can be granted or removed or all permissions can be specified.
+- The following would set permissions ```-rwx------``` to '`test0/test/test-file`':
 ```{.bash code-line-numbers=false}
 chmod 700 test0/test/test-file
 ```
-- Later on we will set permissions on a file to execute it.
-- Don't worry about remembering any details of how to change permissions
+- Don't worry about remembering details of how to change permissions.
 - Try to remember that there are 3 levels of permission:
-  - user, group and all
+  - user (owner), group and all
 - Try to remember that there are 3 types of permission:
   - read, write and execute
 
+::: {.notes}
+- The following would add user (owner) execute permissions.
+  - So if the file already had all other permissions as wanted this would work. 
+```{.bash code-line-numbers=false}
+chmod u+x test0/test/test-file
+```
+- octal value = read (4) + write (2) + execute (1)
+- Later on we will set permissions on a file to execute it.
+:::
 
-## Groups {.smaller}
+
+## Groups {.smaller} {visibility="hidden"}
 - System users belong to groups (at least one).
 - A user can change the group assignment for a file or directory to other groups they belong to using the command `chgrp`.
 - The command `groups` can be used to print out what groups there are, and what group a user is part of.
 - This can be useful if you want to share files between those in a group on the system.
 
 
-## Short break {.smaller}
-- Return for the final part in 10 minutes...
+## Check point {.smaller}
+- Any questons?
+
+::: {.notes}
+- Time for a break?
+:::
 
 
 ## Variables {.smaller}
@@ -766,14 +954,14 @@ chmod 700 test0/test/test-file
 var=1
 echo $var
 ```
-- `echo` is in the above to print the value of `var`
-- `PATH` is a variable
-  - The directories where executables are looked for.
-- The command `printenv` will print all the variables
+- The variable `var` is set equal to the number `1`.
+- `echo` is a command that will send what comes after it to standard out
+- The value of the variable is accessed using the `$` symbol followed by the name of the variable.
+- The command `printenv` will print all the variables.
 
 
 ## For loop 1/2 {.smaller}
-``` 
+```
 - Example for loop with iterator syntax to print the numbers 1 to 5:
 ```{.bash code-line-numbers=false}
 for ((i=1;i<=5;i=i+1)) do echo $i; done
@@ -851,7 +1039,7 @@ done
 
 
 ## Wildcards {.smaller}
-- There are 3 types of wilcard in Linux:
+- There are 3 types of wildcard in Linux:
   - `*` can represent anything.
   - `?` can represent any single character.
   - `[]` can represent any single characters detailed in the square brackets.
@@ -860,7 +1048,7 @@ done
 `ls a*`
 ```
 - The following will list all files starting with `a` and ending `.txt` that have one character between these:
-are two characters long:```{.bash code-line-numbers=false}
+```{.bash code-line-numbers=false}
 `ls a?.txt`
 ```
 - The following will list all files starting with `a` and ending `.txt` that have any other string with a `0` or a `1` character between these:
@@ -916,6 +1104,20 @@ for f in *.txt
 :::
 
 
+## Editing files {.smaller}
+- There are three programs available on the system that can be used for text editing:
+  - `nano`
+  - `vi`
+  - `emacs`
+- If you are unfamiliar with any of these, we recommend you try `nano`.
+- Care is needed if transferring scripts and data between Windows and Linux due to differences in line endings.
+  - `dos2unix` and `unix2dos` may be helpful to get this right.
+
+::: {.notes}
+- Data/File transfer is covered in HPC1.
+:::
+
+
 ## Shell Scripts {.smaller}
 - These are simple text files.
   - By convention the filename ends `.sh`.
@@ -924,10 +1126,19 @@ for f in *.txt
 #!/bin/bash`
 ```
 - After the 'shebang', simply enter all the commands for the script.
+- Lines starting with '`#`' will be regarded as comments
+  - Use these to make you script easier to understand.
 - To run the script it must have executable permissions.
+- A scripts saved as '`script.sh`' can be run using:
+```{.bash code-line-numbers=false}
+./script.sh
+```
 
 
-## Shell Script Exercise {.smaller}
+## Shell Scripts demo {.smaller}
+
+
+## Shell Script exercise {.smaller}
 - Create and run a shell script to print out the first line of each file in a directory. Test using the wildcards directory.
 - Hints:
   - Use the `history` command to see the commands you executed.
@@ -935,8 +1146,12 @@ for f in *.txt
   - Modify the file permissions so you can execute the file. 
   - To execute a script called '`script.sh`' issue the following command:
 ```{.bash code-line-numbers=false}
-sh script.sh
+./script.sh
 ```
+
+::: {.notes}
+- Scripts you write that you commonly want to run can be added to your PATH.
+:::
 
 
 {{< include _end.qmd >}}
