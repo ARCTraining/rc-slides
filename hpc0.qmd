@@ -1150,7 +1150,8 @@ for f in *.txt
 ```
 
 ::: {.notes}
-- Scripts you write that you commonly want to run can be added to your PATH.
+- Scripts you write that you commonly want to run can be put somehwere sensible and this can be added to your PATH.
+- If there is more time, perhaps look at the `find` command.
 :::
 
 
