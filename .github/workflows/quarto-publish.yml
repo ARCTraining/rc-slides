@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
-        
+
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
@@ -18,7 +18,10 @@ jobs:
           tinytex: true 
           # uncomment below and fill to pin a version
           version: 1.2.335
-      
+
+      - name: Install Quarto Extensions
+        run: |
+          quarto install --no-prompt extension grantmcdermott/quarto-revealjs-clean
       # add software dependencies here
 
       - name: Publish to GitHub Pages (and render)

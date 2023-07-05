@@ -107,6 +107,21 @@ You are now ready to create your slides by editing the `index.qmd` in the root o
 on writing RevealJS slides in Quarto see the [RevealJS](https://quarto.org/docs/presentations/revealjs/) guide and the
 [Revealjs Reference](https://quarto.org/docs/reference/formats/presentations/revealjs.html).
 
+## Preview locally
+
+You'll need a working quarto.  This can be installed from conda and you'll also want to install the theme extension:
+
+```
+conda create -n quarto -c conda-forge quarto
+conda activate quarto
+quarto install --no-prompt extension grantmcdermott/quarto-revealjs-clean
+```
+
+You can then preview this via:
+```
+quarto preview
+```
+
 ## Publish Locally
 
 You will need to run `quarto publish gh-pages` once locally before deploying this template.
