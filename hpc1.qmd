@@ -282,12 +282,12 @@ Each compute node has a small SSD.
 - Typically much faster than other storage available
 - Can be increased if required:
 
-```{.bash code-line-numbers=false}
-#$ -l disk=10G
-```
+   ```{.bash code-line-numbers=false}
+   #$ -l disk=10G
+   ```
 - Limits vary depending on node type, but at least 100G
 
-[Further info](https://arcdocs.leeds.ac.uk/usage/scratch.html)
+[More on local storage](https://arcdocs.leeds.ac.uk/usage/scratch.html)
 
 ## Transferring files and data
 
@@ -353,7 +353,7 @@ or
 
 Should not ask for memory or cpu cores
 
-[Further info](https://arcdocs.leeds.ac.uk/usage/gpgpu.html)
+[More on GPGPU](https://arcdocs.leeds.ac.uk/usage/gpgpu.html)
 
 ## Large memory nodes
 
@@ -376,7 +376,7 @@ General advice, don't use them unless you have to.
 qrsh -l h_rt=0:15:0 -pty y bash -i
 ```
 
-[Further info](https://arcdocs.leeds.ac.uk/usage/interactive.html)
+[More in interactive jobs](https://arcdocs.leeds.ac.uk/usage/interactive.html)
 
 ## Task arrays
 
@@ -400,7 +400,7 @@ fi
 ```
 
 
-[Further info](https://arcdocs.leeds.ac.uk/usage/taskarrays.html)
+[More on task arrays](https://arcdocs.leeds.ac.uk/usage/taskarrays.html)
 
 ## Restartable jobs
 
@@ -412,7 +412,7 @@ At its simplest, just finish with a return code of 99 from the last line of your
 exit 99
 ```
 
-[Further info](https://arcdocs.leeds.ac.uk/usage/advanced.html#restartable-jobs)
+[More on restartable jobs](https://arcdocs.leeds.ac.uk/usage/advanced.html#restartable-jobs)
 
 ## Questions and time for recap
 
