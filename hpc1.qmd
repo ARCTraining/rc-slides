@@ -24,14 +24,9 @@ name: Introduction to High Performance Computing
 
 ## Useful Links
 
-\
-ARC Website: {{< var rc.website >}}
-
-\
-ARC Documentation {{< var rc.documentation >}}
-
-\
-General queries: {{< var rc.servicedesk >}}
+- ARC Website: {{< var rc.website >}}
+- ARC Documentation {{< var rc.documentation >}}
+- General queries: {{< var rc.servicedesk >}}
 
 ## Training
 
@@ -45,11 +40,9 @@ General queries: {{< var rc.servicedesk >}}
 
 ## Introductions and Motivations
 
-Who are you and why are you here?
-
-What problems are you encountering with your computational work now? 
-
-Why / how do you think HPC will help?
+- Who are you and why are you here?
+- What problems are you encountering with your computational work now? 
+- Why / how do you think HPC will help?
 
 ## Key Concepts
 
