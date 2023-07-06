@@ -144,21 +144,21 @@
     "href": "hpc0.html#exercise-0",
     "title": "arctraining slides",
     "section": "Exercise 0",
-    "text": "Exercise 0\nLogging in\nWe are using ARC4, one of the University HPC clusters today.\n\nYou’ll use MobaXterm to connect:\nssh &lt;username&gt;@arc4.leeds.ac.uk\n&lt;username&gt; is your university username."
+    "text": "Exercise 0\nLogging in\nWe are using ARC4, one of the University HPC clusters today.\nYou’ll use MobaXterm to connect:\nssh &lt;username&gt;@arc4.leeds.ac.uk\n&lt;username&gt; is your university username."
   },
   {
     "objectID": "hpc0.html#exercise-1",
     "href": "hpc0.html#exercise-1",
     "title": "arctraining slides",
     "section": "Exercise 1",
-    "text": "Exercise 1\nSetup\nFirst, get hold of the sample data we will be using today.\n\nType this in your command shell:\ngit clone https://github.com/callaghanmt/shell-training/"
+    "text": "Exercise 1\nSetup\nFirst, get hold of the sample data we will be using today.\nType this in your command shell:\ngit clone https://github.com/callaghanmt/shell-training/"
   },
   {
     "objectID": "hpc0.html#exercise-2",
     "href": "hpc0.html#exercise-2",
     "title": "arctraining slides",
     "section": "Exercise 2",
-    "text": "Exercise 2\n\nProblemSolution\n\n\nTwo new commands:\n\nThe sort command will sort lines alphabetically\nYou can use the cut command to split lines of text based on a given character e.g. cut -d ',' -f 2 will split lines around the comma and give you the second part\n\n\n\n\nCombine cat, cut, and sort to print out the Latin names from birds.txt in alphabetical order.\nSave the output to a new file.\n\n\n\n1:\n[user@host IOM-animals]$ cat birds.txt | sort | cut -d ',' -f 2\n2:\n[user@host IOM-animals]$ cat birds.txt | sort | cut -d ',' -f 2 &gt; sorted-birds.txt"
+    "text": "Exercise 2\n\nProblemSolution\n\n\nTwo new commands:\n\nThe sort command will sort lines alphabetically\nYou can use the cut command to split lines of text based on a given character e.g.\ncut -d ',' -f 2 will split lines around the comma and give you the second part\n\n\n\n\nCombine cat, cut, and sort to print out the Latin names from birds.txt in alphabetical order.\nSave the output to a new file.\n\n\n\n\n[user@host IOM-animals]$ cat birds.txt | sort | cut -d ',' -f 2\n[user@host IOM-animals]$ cat birds.txt | sort | cut -d ',' -f 2 &gt; sorted-birds.txt"
   },
   {
     "objectID": "hpc0.html#exercise-3",
@@ -179,21 +179,21 @@
     "href": "hpc0.html#exercise-5",
     "title": "arctraining slides",
     "section": "Exercise 5",
-    "text": "Exercise 5\n\nProblemSolution\n\n\n\nUse a for loop to create five directories called calculation_?, where ? is a number.\nUse a loop to create five directories, each one the parent of the next.\n\n\n\n1:\n[user@host ~]$ for (( i=1 ; i&lt;=5 ; i++ ))\n&gt; do\n&gt; mkdir calculation_$i\n&gt; done\n[user@host ~]$\n2:\n[user@host ~]$ for (( i=1 ; i&lt;=5 ; i++ ))\n&gt; do\n&gt; mkdir calculation_$i\n&gt; cd calculation_$i\n&gt; done\n[user@host calculation_5]$\nIn the second case, two commands are executed each time you go through the loop. A new directory is created and then the working directory is changed to the new directory.\nOn the next iteration, the new directory is then created inside the previous one."
+    "text": "Exercise 5\n\nProblemSolution\n\n\n\nUse a for loop to create five directories called calculation_?, where ? is a number.\nUse a loop to create five directories, each one the parent of the next.\n\n\n\n\n[user@host ~]$ for (( i=1 ; i&lt;=5 ; i++ ))\n&gt; do\n&gt; mkdir calculation_$i\n&gt; done\n[user@host ~]$\n[user@host ~]$ for (( i=1 ; i&lt;=5 ; i++ ))\n&gt; do\n&gt; mkdir calculation_$i\n&gt; cd calculation_$i\n&gt; done\n[user@host calculation_5]$\n\nIn the second case, two commands are executed each time you go through the loop. A new directory is created and then the working directory is changed to the new directory.\nOn the next iteration, the new directory is then created inside the previous one."
   },
   {
     "objectID": "hpc0.html#exercise-6",
     "href": "hpc0.html#exercise-6",
     "title": "arctraining slides",
     "section": "Exercise 6",
-    "text": "Exercise 6\n\nProblemSolution\n\n\n\nIn the wildcards directory, create a variable called files listing all of the text files. \nLoop through this list and print out the first line from each file.\n\n\n\n1:\n[user@host wildcards]$ files=$( ls *.txt )\n2:\n[user@host wildcards]$ for f in $files\n&gt; do\n&gt; head -1 $f\n&gt; done"
+    "text": "Exercise 6\n\nProblemSolution\n\n\n\nIn the wildcards directory, create a variable called files listing all of the text files. \nLoop through this list and print out the first line from each file.\n\n\n\n\n[user@host wildcards]$ files=$( ls *.txt )\n[user@host wildcards]$ for f in $files\n&gt; do\n&gt; head -1 $f\n&gt; done"
   },
   {
     "objectID": "hpc0.html#exercise-7",
     "href": "hpc0.html#exercise-7",
     "title": "arctraining slides",
     "section": "Exercise 7",
-    "text": "Exercise 7\n\nProblemSolution\n\n\n\nWhat will this command print to the screen?\n\n[user@host wildcards]$ for filename in *.txt\n&gt; do\n&gt; echo $filename\n&gt; cat $filename &gt; new-file.txt\n&gt; done\n\n2. What will the contents of new-file.txt be and why?\n\n\n1:\n\nThe name of each .txt file in the current directory\nOn each iteration the echo command prints a different file name\n\n2:\n\nThe content of new-file.txt will be the same as xyz.txt\nOn each iteration the contents of a different file are written to new-file.txt, overwriting whatever was written on the previous iteration\nThis is because we used &gt; to write the output of cat to new-file.txt\nUsing &gt;&gt; instead would result in each file’s content being appended to the end of new-file.txt"
+    "text": "Exercise 7\n\nProblemSolution\n\n\n\nWhat will this command print to the screen?\n\n[user@host wildcards]$ for filename in *.txt\n&gt; do\n&gt; echo $filename\n&gt; cat $filename &gt; new-file.txt\n&gt; done\n\n\n\nWhat will the contents of new-file.txt be and why?\n\n\n\n\n\nThe name of each .txt file in the current directory\nOn each iteration the echo command prints a different file name\n\n\n\n\n\n\nThe content of new-file.txt will be the same as xyz.txt\nOn each iteration the contents of a different file are written to new-file.txt, overwriting whatever was written on the previous iteration\nThis is because we used &gt; to write the output of cat to new-file.txt\nUsing &gt;&gt; instead would result in each file’s content being appended to the end of new-file.txt"
   },
   {
     "objectID": "hpc0.html#thank-you",

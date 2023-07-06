@@ -1303,17 +1303,15 @@ General queries: <a href="https://bit.ly/arc-help" class="uri">https://bit.ly/ar
 <h2>Exercise 0</h2>
 <h3 id="logging-in-1">Logging in</h3>
 <p>We are using ARC4, one of the University HPC clusters today.</p>
-<p><br>
-You’ll use MobaXterm to connect:</p>
+<p>You’ll use MobaXterm to connect:</p>
 <div class="sourceCode" id="cb1" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="op">&lt;</span>username<span class="op">&gt;</span>@arc4.leeds.ac.uk</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><em><code>&lt;username&gt;</code> is your university username.</em></p>
 </section>
-<section id="exercise-1" class="slide level2">
+<section id="exercise-1" class="slide level2 smaller">
 <h2>Exercise 1</h2>
 <h3 id="setup">Setup</h3>
 <p>First, get hold of the sample data we will be using today.</p>
-<p><br>
-Type this in your command shell:</p>
+<p>Type this in your command shell:</p>
 <div class="sourceCode" id="cb2" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/callaghanmt/shell-training/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="exercise-2" class="slide level2 smaller">
@@ -1325,7 +1323,8 @@ Type this in your command shell:</p>
 <p>Two new commands:</p>
 <ul>
 <li>The <code>sort</code> command will sort lines alphabetically</li>
-<li>You can use the <code>cut</code> command to split lines of text based on a given character e.g. <code>cut -d &#39;,&#39; -f 2</code> will split lines around the comma and give you the second part</li>
+<li>You can use the <code>cut</code> command to split lines of text based on a given character e.g.<br>
+<code>cut -d &#39;,&#39; -f 2</code> will split lines around the comma and give you the second part</li>
 </ul>
 <p><br>
 </p>
@@ -1335,10 +1334,10 @@ Type this in your command shell:</p>
 </ol>
 </div>
 <div id="tabset-1-2">
-<p>1:</p>
-<div class="sourceCode" id="cb3" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@host</span> IOM-animals]$ cat birds.txt <span class="kw">|</span> <span class="fu">sort</span> <span class="kw">|</span> <span class="fu">cut</span> <span class="at">-d</span> <span class="st">&#39;,&#39;</span> <span class="at">-f</span> 2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>2:</p>
-<div class="sourceCode" id="cb4" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@host</span> IOM-animals]$ cat birds.txt <span class="kw">|</span> <span class="fu">sort</span> <span class="kw">|</span> <span class="fu">cut</span> <span class="at">-d</span> <span class="st">&#39;,&#39;</span> <span class="at">-f</span> 2 <span class="op">&gt;</span> sorted-birds.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol type="1">
+<li><div class="sourceCode" id="cb3" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@host</span> IOM-animals]$ cat birds.txt <span class="kw">|</span> <span class="fu">sort</span> <span class="kw">|</span> <span class="fu">cut</span> <span class="at">-d</span> <span class="st">&#39;,&#39;</span> <span class="at">-f</span> 2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><div class="sourceCode" id="cb4" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@host</span> IOM-animals]$ cat birds.txt <span class="kw">|</span> <span class="fu">sort</span> <span class="kw">|</span> <span class="fu">cut</span> <span class="at">-d</span> <span class="st">&#39;,&#39;</span> <span class="at">-f</span> 2 <span class="op">&gt;</span> sorted-birds.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
 </div>
 </div>
 </div>
@@ -1397,19 +1396,19 @@ Use a series of commands connected by pipes to identify the file with missing da
 </ol>
 </div>
 <div id="tabset-4-2">
-<p>1:</p>
-<div class="sourceCode" id="cb7" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@host</span> ~]$ for <span class="er">(</span><span class="kw">(</span> <span class="va">i</span><span class="op">=</span>1 <span class="kw">;</span> <span class="ex">i</span><span class="op">&lt;</span>=5 <span class="kw">;</span> <span class="ex">i++</span> <span class="kw">))</span></span>
+<ol type="1">
+<li><div class="sourceCode" id="cb7" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@host</span> ~]$ for <span class="er">(</span><span class="kw">(</span> <span class="va">i</span><span class="op">=</span>1 <span class="kw">;</span> <span class="ex">i</span><span class="op">&lt;</span>=5 <span class="kw">;</span> <span class="ex">i++</span> <span class="kw">))</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> do</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> mkdir <span class="ex">calculation_</span><span class="va">$i</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> done</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@host</span> ~]$</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>2:</p>
-<div class="sourceCode" id="cb8" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@host</span> ~]$ for <span class="er">(</span><span class="kw">(</span> <span class="va">i</span><span class="op">=</span>1 <span class="kw">;</span> <span class="ex">i</span><span class="op">&lt;</span>=5 <span class="kw">;</span> <span class="ex">i++</span> <span class="kw">))</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@host</span> ~]$</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><div class="sourceCode" id="cb8" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@host</span> ~]$ for <span class="er">(</span><span class="kw">(</span> <span class="va">i</span><span class="op">=</span>1 <span class="kw">;</span> <span class="ex">i</span><span class="op">&lt;</span>=5 <span class="kw">;</span> <span class="ex">i++</span> <span class="kw">))</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> do</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> mkdir <span class="ex">calculation_</span><span class="va">$i</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> cd <span class="ex">calculation_</span><span class="va">$i</span></span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> done</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@host</span> calculation_5]$</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@host</span> calculation_5]$</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
 <p>In the second case, two commands are executed each time you go through the loop. A new directory is created and then the working directory is changed to the new directory.</p>
 <p>On the next iteration, the new directory is then created inside the previous one.</p>
 </div>
@@ -1428,13 +1427,13 @@ Use a series of commands connected by pipes to identify the file with missing da
 </ol>
 </div>
 <div id="tabset-5-2">
-<p>1:</p>
-<div class="sourceCode" id="cb9" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@host</span> wildcards]$ files=<span class="va">$(</span> <span class="fu">ls</span> <span class="pp">*</span>.txt <span class="va">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>2:</p>
-<div class="sourceCode" id="cb10" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@host</span> wildcards]$ for f in <span class="va">$files</span></span>
+<ol type="1">
+<li><div class="sourceCode" id="cb9" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@host</span> wildcards]$ files=<span class="va">$(</span> <span class="fu">ls</span> <span class="pp">*</span>.txt <span class="va">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><div class="sourceCode" id="cb10" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@host</span> wildcards]$ for f in <span class="va">$files</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> do</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> head <span class="ex">-1</span> <span class="va">$f</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> done</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> done</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
 </div>
 </div>
 </div>
@@ -1454,21 +1453,28 @@ Use a series of commands connected by pipes to identify the file with missing da
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> cat <span class="va">$filename</span> <span class="op">&gt;</span> new-file.txt</span>
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> done</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br>
-2. What will the contents of <code>new-file.txt</code> be and why?</p>
+</p>
+<ol start="2" type="1">
+<li>What will the contents of <code>new-file.txt</code> be and why?</li>
+</ol>
 </div>
 <div id="tabset-6-2">
-<p>1:</p>
-<ul>
+<ol type="1">
+<li><ul>
 <li>The name of each <code>.txt</code> file in the current directory</li>
 <li>On each iteration the echo command prints a different file name</li>
-</ul>
-<p>2:</p>
-<ul>
+</ul></li>
+</ol>
+<p><br>
+</p>
+<ol start="2" type="1">
+<li><ul>
 <li>The content of <code>new-file.txt</code> will be the same as <code>xyz.txt</code></li>
 <li>On each iteration the contents of a different file are written to <code>new-file.txt</code>, overwriting whatever was written on the previous iteration</li>
 <li>This is because we used <code>&gt;</code> to write the output of cat to <code>new-file.txt</code></li>
 <li>Using <code>&gt;&gt;</code> instead would result in each file’s content being appended to the end of <code>new-file.txt</code></li>
-</ul>
+</ul></li>
+</ol>
 </div>
 </div>
 </div>
@@ -2342,7 +2348,7 @@ window.QuartoSupport = function () {
 'smaller': false,
  
         // Display controls in the bottom right corner
-        controls: true,
+        controls: false,
 
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide
