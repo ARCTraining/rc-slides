@@ -1,6 +1,7 @@
 ---
 format: 
-  revealjs:
+  clean-revealjs:
+    self-contained: true
     navigation-mode: linear
     controls-layout: bottom-right
     controls: true
