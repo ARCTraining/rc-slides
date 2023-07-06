@@ -4,7 +4,7 @@ format:
     self-contained: true
     navigation-mode: linear
     controls-layout: bottom-right
-    controls: true
+    controls: false
     footer: "[Research IT Website]({{< var rc.website >}}) | [Research IT Query]({{< var rc.servicedesk >}}) | [Courses Material]({{< var rc.material >}})"
 code: HPC 0
 name: Introduction to the Unix/Linux command line
@@ -94,7 +94,6 @@ Launch...
 
 We are using ARC4, one of the University HPC clusters today.
 
-\
 You’ll use MobaXterm to connect:
 
 ```{.bash code-line-numbers=false}
@@ -103,15 +102,12 @@ ssh <username>@arc4.leeds.ac.uk
 
 *`<username>` is your university username.*
 
-
-
-## Exercise 1
+## Exercise 1 {.smaller}
 
 ### Setup
 
 First, get hold of the sample data we will be using today.
 
-\
 Type this in your command shell:
 
 ```{.bash code-line-numbers=false}
@@ -127,7 +123,9 @@ git clone https://github.com/callaghanmt/shell-training/
 Two new commands:
 
 - The `sort` command will sort lines alphabetically
-- You can use the `cut` command to split lines of text based on a given character e.g. `cut -d ',' -f 2` will split lines around the comma and give you the second part
+- You can use the `cut` command to split lines of text based on a given character e.g.
+\
+  `cut -d ',' -f 2` will split lines around the comma and give you the second part
 
 \
 
@@ -136,14 +134,11 @@ Two new commands:
 
 ### Solution
 
-1:
-
-```{.bash code-line-numbers=false}
+1. ```{.bash code-line-numbers=false}
 [user@host IOM-animals]$ cat birds.txt | sort | cut -d ',' -f 2
 ```
 
-2:
-```{.bash code-line-numbers=false}
+2. ```{.bash code-line-numbers=false}
 [user@host IOM-animals]$ cat birds.txt | sort | cut -d ',' -f 2 > sorted-birds.txt
 ```
 
@@ -204,10 +199,9 @@ Use a series of commands connected by pipes to identify the file with missing da
 1. Use a `for` loop to create five directories called `calculation_?`, where `?` is a number. 
 2. Use a loop to create five directories, each one the parent of the next.
 
-### Solution
+### Solution {.smaller}
 
-1:
-```{.bash code-line-numbers=false}
+1. ```{.bash code-line-numbers=false}
 [user@host ~]$ for (( i=1 ; i<=5 ; i++ ))
 > do
 > mkdir calculation_$i
@@ -215,8 +209,7 @@ Use a series of commands connected by pipes to identify the file with missing da
 [user@host ~]$
 ```
 
-2:
-```{.bash code-line-numbers=false}
+2. ```{.bash code-line-numbers=false}
 [user@host ~]$ for (( i=1 ; i<=5 ; i++ ))
 > do
 > mkdir calculation_$i
@@ -243,14 +236,11 @@ On the next iteration, the new directory is then created inside the previous one
 
 ### Solution
 
-1:
-```{.bash code-line-numbers=false}
+1. ```{.bash code-line-numbers=false}
 [user@host wildcards]$ files=$( ls *.txt )
 ```
 
-2:
-
-```{.bash code-line-numbers=false}
+2. ```{.bash code-line-numbers=false}
 [user@host wildcards]$ for f in $files
 > do
 > head -1 $f
@@ -274,25 +264,22 @@ On the next iteration, the new directory is then created inside the previous one
 > cat $filename > new-file.txt
 > done
 ```
-
 \
+
 2. What will the contents of `new-file.txt` be and why?
 
 
 ### Solution
 
-1: 
+1.  - The name of each `.txt` file in the current directory
+    - On each iteration the echo command prints a different file name
 
-- The name of each `.txt` file in the current directory
-- On each iteration the echo command prints a different file name
+\
 
-2:
-
-- The content of `new-file.txt` will be the same as `xyz.txt`
-- On each iteration the contents of a different file are written to `new-file.txt`, overwriting whatever was written on the previous iteration
-- This is because we used `>` to write the output of cat to `new-file.txt`
-- Using `>>` instead would result in each file's content being appended to the end of `new-file.txt`
-
+2.  - The content of `new-file.txt` will be the same as `xyz.txt`
+    - On each iteration the contents of a different file are written to `new-file.txt`, overwriting whatever was written on the previous iteration
+    - This is because we used `>` to write the output of cat to `new-file.txt`
+    - Using `>>` instead would result in each file's content being appended to the end of `new-file.txt`
 :::
 
 {{< include _end.qmd >}}

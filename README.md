@@ -89,13 +89,15 @@ Now, you will have to edit this new file and change the `meta` information (`cod
 ```yml
 ---
 format: 
-  revealjs:
+  clean-revealjs:
+    self-contained: true
     navigation-mode: linear
     controls-layout: bottom-right
-    controls: true
+    controls: false
     footer: "[Research IT Website]({{< var rc.website >}}) | [Research IT Query]({{< var rc.servicedesk >}}) | [Courses Material]({{< var rc.material >}})"
 code: HPC0
 name: Introduction to Linux for HPC
+
 ---
 ```
 

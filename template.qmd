@@ -4,7 +4,7 @@ format:
     self-contained: true
     navigation-mode: linear
     controls-layout: bottom-right
-    controls: true
+    controls: false
     footer: "[Research IT Website]({{< var rc.website >}}) | [Research IT Query]({{< var rc.servicedesk >}}) | [Courses Material]({{< var rc.material >}})"
 code: Course Code
 name: Course Name
