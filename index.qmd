@@ -1,6 +1,8 @@
 ---
 title: "arctraining slides"
-format: html
+format:
+  html:
+    embed-resources: true
 ---
 
 Public facing homepage for arctraining Quarto slides collection.
