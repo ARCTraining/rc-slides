@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ARCTraining.github.io/rc-slides/index.html</loc>
-    <lastmod>2023-06-28T20:09:44.695Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ARCTraining.github.io/rc-slides/hpc1.html</loc>
-    <lastmod>2023-06-28T20:09:46.351Z</lastmod>
+    <loc>https://ARCTraining.github.io/rc-slides/template.html</loc>
+    <lastmod>2023-07-06T07:55:43.432Z</lastmod>
   </url>
   <url>
     <loc>https://ARCTraining.github.io/rc-slides/hpc0.html</loc>
-    <lastmod>2023-06-28T20:09:46.875Z</lastmod>
+    <lastmod>2023-07-06T07:55:42.160Z</lastmod>
   </url>
   <url>
-    <loc>https://ARCTraining.github.io/rc-slides/template.html</loc>
-    <lastmod>2023-06-28T20:09:47.195Z</lastmod>
+    <loc>https://ARCTraining.github.io/rc-slides/index.html</loc>
+    <lastmod>2023-07-06T07:55:40.316Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ARCTraining.github.io/rc-slides/hpc1.html</loc>
+    <lastmod>2023-07-06T07:55:43.048Z</lastmod>
   </url>
 </urlset>

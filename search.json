@@ -1,5 +1,208 @@
 [
   {
+    "objectID": "template.html#meta-code",
+    "href": "template.html#meta-code",
+    "title": "arctraining slides",
+    "section": "Course Code",
+    "text": "Course Code\nCourse Name"
+  },
+  {
+    "objectID": "template.html#research-computing-team",
+    "href": "template.html#research-computing-team",
+    "title": "arctraining slides",
+    "section": "Research Computing Team",
+    "text": "Research Computing Team\nStaff:\n\nOllie Clark, Tom Hardcastle, John Hodrien, Nick Rhodes, Patricia Ternes, Andy Turner\n\nHere for:\n\nGeneral guidance and advice\nAccess to specialist support and consultancy\nResearch Software Engineering support\n\nContact via IT Service Desk: https://bit.ly/arc-help"
+  },
+  {
+    "objectID": "template.html#slide-a",
+    "href": "template.html#slide-a",
+    "title": "arctraining slides",
+    "section": "Slide A",
+    "text": "Slide A\nTemporary content"
+  },
+  {
+    "objectID": "template.html#slide-b",
+    "href": "template.html#slide-b",
+    "title": "arctraining slides",
+    "section": "Slide B",
+    "text": "Slide B\nTemporary content"
+  },
+  {
+    "objectID": "template.html#slide-c",
+    "href": "template.html#slide-c",
+    "title": "arctraining slides",
+    "section": "Slide C",
+    "text": "Slide C\nTemporary content"
+  },
+  {
+    "objectID": "template.html#thank-you",
+    "href": "template.html#thank-you",
+    "title": "arctraining slides",
+    "section": "Thank you",
+    "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: https://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
+  },
+  {
+    "objectID": "hpc0.html#meta-code",
+    "href": "hpc0.html#meta-code",
+    "title": "arctraining slides",
+    "section": "HPC 0",
+    "text": "HPC 0\nIntroduction to the Unix/Linux command line"
+  },
+  {
+    "objectID": "hpc0.html#research-computing-team",
+    "href": "hpc0.html#research-computing-team",
+    "title": "arctraining slides",
+    "section": "Research Computing Team",
+    "text": "Research Computing Team\nStaff:\n\nOllie Clark, Tom Hardcastle, John Hodrien, Nick Rhodes, Patricia Ternes, Andy Turner\n\nHere for:\n\nGeneral guidance and advice\nAccess to specialist support and consultancy\nResearch Software Engineering support\n\nContact via IT Service Desk: https://bit.ly/arc-help"
+  },
+  {
+    "objectID": "hpc0.html#contact-details",
+    "href": "hpc0.html#contact-details",
+    "title": "arctraining slides",
+    "section": "Contact Details",
+    "text": "Contact Details\n\nARC Website: https://arc.leeds.ac.uk/\n\nGeneral queries: https://bit.ly/arc-help"
+  },
+  {
+    "objectID": "hpc0.html#training",
+    "href": "hpc0.html#training",
+    "title": "arctraining slides",
+    "section": "Training",
+    "text": "Training"
+  },
+  {
+    "objectID": "hpc0.html#archpc-training-portfolio",
+    "href": "hpc0.html#archpc-training-portfolio",
+    "title": "arctraining slides",
+    "section": "ARC/HPC Training Portfolio",
+    "text": "ARC/HPC Training Portfolio\nhttps://arc.leeds.ac.uk/training"
+  },
+  {
+    "objectID": "hpc0.html#purpose-of-today",
+    "href": "hpc0.html#purpose-of-today",
+    "title": "arctraining slides",
+    "section": "Purpose of today",
+    "text": "Purpose of today\n\nIntroduce the command line for new users\nHands on experience and confidence building\nBasic interactions with files and directories: command line execution, directory and file basics, files properties.\nFile manipulation: inspecting and editing files, searching and filtering,\nScripting and workflows: scripting techniques for building workflows."
+  },
+  {
+    "objectID": "hpc0.html#logging-in",
+    "href": "hpc0.html#logging-in",
+    "title": "arctraining slides",
+    "section": "Logging in…",
+    "text": "Logging in…\nUsing MobaXTerm"
+  },
+  {
+    "objectID": "hpc0.html#what-is-bash",
+    "href": "hpc0.html#what-is-bash",
+    "title": "arctraining slides",
+    "section": "What is BASH?",
+    "text": "What is BASH?"
+  },
+  {
+    "objectID": "hpc0.html#what-is-a-shell",
+    "href": "hpc0.html#what-is-a-shell",
+    "title": "arctraining slides",
+    "section": "What is a shell?",
+    "text": "What is a shell?"
+  },
+  {
+    "objectID": "hpc0.html#mobaxterm",
+    "href": "hpc0.html#mobaxterm",
+    "title": "arctraining slides",
+    "section": "MobaXTerm",
+    "text": "MobaXTerm\nLaunch…"
+  },
+  {
+    "objectID": "hpc0.html#filesystem-basics",
+    "href": "hpc0.html#filesystem-basics",
+    "title": "arctraining slides",
+    "section": "Filesystem basics",
+    "text": "Filesystem basics"
+  },
+  {
+    "objectID": "hpc0.html#forward-slash-and-backslash",
+    "href": "hpc0.html#forward-slash-and-backslash",
+    "title": "arctraining slides",
+    "section": "Forward slash / and backslash\n",
+    "text": "Forward slash / and backslash"
+  },
+  {
+    "objectID": "hpc0.html#filesystem-basics-absolute-path",
+    "href": "hpc0.html#filesystem-basics-absolute-path",
+    "title": "arctraining slides",
+    "section": "Filesystem basics: absolute path",
+    "text": "Filesystem basics: absolute path"
+  },
+  {
+    "objectID": "hpc0.html#filesystem-basics-relative-path",
+    "href": "hpc0.html#filesystem-basics-relative-path",
+    "title": "arctraining slides",
+    "section": "Filesystem basics: relative path",
+    "text": "Filesystem basics: relative path"
+  },
+  {
+    "objectID": "hpc0.html#exercise-0",
+    "href": "hpc0.html#exercise-0",
+    "title": "arctraining slides",
+    "section": "Exercise 0",
+    "text": "Exercise 0\nLogging in\nWe are using ARC4, one of the University HPC clusters today.\n\nYou’ll use MobaXterm to connect:\nssh &lt;username&gt;@arc4.leeds.ac.uk\n&lt;username&gt; is your university username."
+  },
+  {
+    "objectID": "hpc0.html#exercise-1",
+    "href": "hpc0.html#exercise-1",
+    "title": "arctraining slides",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nSetup\nFirst, get hold of the sample data we will be using today.\n\nType this in your command shell:\ngit clone https://github.com/callaghanmt/shell-training/"
+  },
+  {
+    "objectID": "hpc0.html#exercise-2",
+    "href": "hpc0.html#exercise-2",
+    "title": "arctraining slides",
+    "section": "Exercise 2",
+    "text": "Exercise 2\n\nProblemSolution\n\n\nTwo new commands:\n\nThe sort command will sort lines alphabetically\nYou can use the cut command to split lines of text based on a given character e.g. cut -d ',' -f 2 will split lines around the comma and give you the second part\n\n\n\n\nCombine cat, cut, and sort to print out the Latin names from birds.txt in alphabetical order.\nSave the output to a new file.\n\n\n\n1:\n[user@host IOM-animals]$ cat birds.txt | sort | cut -d ',' -f 2\n2:\n[user@host IOM-animals]$ cat birds.txt | sort | cut -d ',' -f 2 &gt; sorted-birds.txt"
+  },
+  {
+    "objectID": "hpc0.html#exercise-3",
+    "href": "hpc0.html#exercise-3",
+    "title": "arctraining slides",
+    "section": "Exercise 3",
+    "text": "Exercise 3\n\nProblemSolution\n\n\nList all the animals on the Isle of Mann alphabetically and find the 50th item in that list.\n\n\nTo get the 50th line, use head to get the first 50 lines and pipe it to tail to get the last one:\n[user@host IOM-animals]$ sort *.txt | head -50 | tail -1\ncoot, fulica atra"
+  },
+  {
+    "objectID": "hpc0.html#exercise-4",
+    "href": "hpc0.html#exercise-4",
+    "title": "arctraining slides",
+    "section": "Exercise 4",
+    "text": "Exercise 4\n\nProblemSolution\n\n\nshell-training/data/ contains 300 data files, each of which should contain 100 values. One of these files is missing some data though. . .\n\nUse a series of commands connected by pipes to identify the file with missing data. Hints:\n\nwc -w will tell you the number of values in a file\nsort -n will sort numerically\n\n\n\n[user@host data]$ wc -w values* | sort -n | head -1\n99 values 44\n\nwc -w tells you how many values are in each file\nsort this output to put the files in order of the number of values\nuse head to select the first line, which contains the name of the file with the smallest number of values"
+  },
+  {
+    "objectID": "hpc0.html#exercise-5",
+    "href": "hpc0.html#exercise-5",
+    "title": "arctraining slides",
+    "section": "Exercise 5",
+    "text": "Exercise 5\n\nProblemSolution\n\n\n\nUse a for loop to create five directories called calculation_?, where ? is a number.\nUse a loop to create five directories, each one the parent of the next.\n\n\n\n1:\n[user@host ~]$ for (( i=1 ; i&lt;=5 ; i++ ))\n&gt; do\n&gt; mkdir calculation_$i\n&gt; done\n[user@host ~]$\n2:\n[user@host ~]$ for (( i=1 ; i&lt;=5 ; i++ ))\n&gt; do\n&gt; mkdir calculation_$i\n&gt; cd calculation_$i\n&gt; done\n[user@host calculation_5]$\nIn the second case, two commands are executed each time you go through the loop. A new directory is created and then the working directory is changed to the new directory.\nOn the next iteration, the new directory is then created inside the previous one."
+  },
+  {
+    "objectID": "hpc0.html#exercise-6",
+    "href": "hpc0.html#exercise-6",
+    "title": "arctraining slides",
+    "section": "Exercise 6",
+    "text": "Exercise 6\n\nProblemSolution\n\n\n\nIn the wildcards directory, create a variable called files listing all of the text files. \nLoop through this list and print out the first line from each file.\n\n\n\n1:\n[user@host wildcards]$ files=$( ls *.txt )\n2:\n[user@host wildcards]$ for f in $files\n&gt; do\n&gt; head -1 $f\n&gt; done"
+  },
+  {
+    "objectID": "hpc0.html#exercise-7",
+    "href": "hpc0.html#exercise-7",
+    "title": "arctraining slides",
+    "section": "Exercise 7",
+    "text": "Exercise 7\n\nProblemSolution\n\n\n\nWhat will this command print to the screen?\n\n[user@host wildcards]$ for filename in *.txt\n&gt; do\n&gt; echo $filename\n&gt; cat $filename &gt; new-file.txt\n&gt; done\n\n2. What will the contents of new-file.txt be and why?\n\n\n1:\n\nThe name of each .txt file in the current directory\nOn each iteration the echo command prints a different file name\n\n2:\n\nThe content of new-file.txt will be the same as xyz.txt\nOn each iteration the contents of a different file are written to new-file.txt, overwriting whatever was written on the previous iteration\nThis is because we used &gt; to write the output of cat to new-file.txt\nUsing &gt;&gt; instead would result in each file’s content being appended to the end of new-file.txt"
+  },
+  {
+    "objectID": "hpc0.html#thank-you",
+    "href": "hpc0.html#thank-you",
+    "title": "arctraining slides",
+    "section": "Thank you",
+    "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: https://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "arctraining slides",
@@ -39,7 +242,7 @@
     "href": "hpc1.html#useful-links",
     "title": "arctraining slides",
     "section": "Useful Links",
-    "text": "Useful Links\n\nARC Website: https://arc.leeds.ac.uk/\n\nARC Documentation https://arcdocs.leeds.ac.uk\n\nGeneral queries: https://bit.ly/arc-help"
+    "text": "Useful Links\n\nARC Website: https://arc.leeds.ac.uk/\nARC Documentation https://arcdocs.leeds.ac.uk\nGeneral queries: https://bit.ly/arc-help"
   },
   {
     "objectID": "hpc1.html#training",
@@ -60,7 +263,7 @@
     "href": "hpc1.html#introductions-and-motivations",
     "title": "arctraining slides",
     "section": "Introductions and Motivations",
-    "text": "Introductions and Motivations\nWho are you and why are you here?\nWhat problems are you encountering with your computational work now? \nWhy / how do you think HPC will help?"
+    "text": "Introductions and Motivations\n\nWho are you and why are you here?\nWhat problems are you encountering with your computational work now? \nWhy / how do you think HPC will help?"
   },
   {
     "objectID": "hpc1.html#key-concepts",
@@ -284,7 +487,14 @@
     "href": "hpc1.html#nobackup",
     "title": "arctraining slides",
     "section": "/nobackup",
-    "text": "/nobackup\n\nEach HPC cluster has it’s own high speed storage service called /nobackup\nYou need to make your own directory (using mkdir)\nNothing is backed up\nFiles will expire after 90 days not being used\nNeed to set permissions to make files private (ARC3) but not on ARC4."
+    "text": "/nobackup\n\nEach HPC cluster has it’s own high speed storage service called /nobackup\nYou need to make your own directory (using mkdir)\nNothing is backed up\nFiles will expire after 90 days not being used\nNeed to set permissions to make files private ARC3 but not on ARC4."
+  },
+  {
+    "objectID": "hpc1.html#local-storage",
+    "href": "hpc1.html#local-storage",
+    "title": "arctraining slides",
+    "section": "Local storage",
+    "text": "Local storage\nEach compute node has a small SSD.\n\n1Gbyte allocated per job by default via $TMPDIR\nTypically much faster than other storage available\nCan be increased if required:\n#$ -l disk=10G\nLimits vary depending on node type, but at least 100G\n\nMore on local storage"
   },
   {
     "objectID": "hpc1.html#transferring-files-and-data",
@@ -298,7 +508,7 @@
     "href": "hpc1.html#module-system",
     "title": "arctraining slides",
     "section": "Module system",
-    "text": "Module system\nmodule\n\navail: what software could I add\nlist: show what is active\nadd|load: enable software\nrm|unload: disable software\nhelp: show details of software\nswap|switch: swap modules"
+    "text": "Module system\nmodule\n\navail - what software could I add\nlist - show what is active\nadd|load - enable software\nrm|unload - disable software\nhelp - show details of software\nswap|switch - swap modules"
   },
   {
     "objectID": "hpc1.html#shared-vs-distributed-memory-jobs",
@@ -308,211 +518,64 @@
     "text": "Shared vs Distributed memory jobs"
   },
   {
+    "objectID": "hpc1.html#submit-some-parallel-jobs",
+    "href": "hpc1.html#submit-some-parallel-jobs",
+    "title": "arctraining slides",
+    "section": "Submit some parallel jobs",
+    "text": "Submit some parallel jobs\nLet’s look at and compare a few submissions:\n\nserial\nthreaded\ndistributed"
+  },
+  {
+    "objectID": "hpc1.html#gpus",
+    "href": "hpc1.html#gpus",
+    "title": "arctraining slides",
+    "section": "GPUs",
+    "text": "GPUs\nThree different types of GPU available\nARC3:\n\n2xK80 (1 node)\n4xP100 (6 nodes)\n\nARC4:\n\n4xV100 (3 nodes)\n\nSome extras in private queues"
+  },
+  {
+    "objectID": "hpc1.html#submitting-a-gpu-job",
+    "href": "hpc1.html#submitting-a-gpu-job",
+    "title": "arctraining slides",
+    "section": "Submitting a GPU job",
+    "text": "Submitting a GPU job\nARC4:\n#$ -l coproc_v100=1\nARC3:\n#$ -l coproc_p100=1\nor\n#$ -l coproc_k80=1\nShould not ask for memory or cpu cores\nMore on GPGPU"
+  },
+  {
+    "objectID": "hpc1.html#large-memory-nodes",
+    "href": "hpc1.html#large-memory-nodes",
+    "title": "arctraining slides",
+    "section": "Large memory nodes",
+    "text": "Large memory nodes\nARC4:\n#$ -l node_type=40core-768G\nARC3:\n#$ -l node_type=24core-768G\nAlso allows jobs to run for up to 96hrs"
+  },
+  {
+    "objectID": "hpc1.html#interactive-jobs",
+    "href": "hpc1.html#interactive-jobs",
+    "title": "arctraining slides",
+    "section": "Interactive jobs",
+    "text": "Interactive jobs\nGeneral advice, don’t use them unless you have to.\nqrsh -l h_rt=0:15:0 -pty y bash -i\nMore in interactive jobs"
+  },
+  {
+    "objectID": "hpc1.html#task-arrays",
+    "href": "hpc1.html#task-arrays",
+    "title": "arctraining slides",
+    "section": "Task arrays",
+    "text": "Task arrays\nWhen you want to run lots of similar jobs\n# Run 100 jobs from 1-100\n#$ -t 1-100\n# Don't run more than two at a time\n#$ -tc 2\n\nif[ $SGE_TASK_ID == $SGE_TASK_FIRST ]; then\n  echo I am the first job\nfi\n\necho I am job $SGE_TASK_ID\n\nif [ $SGE_TASK_ID == $SGE_TASK_LAST ]; then\n  echo I am the last job\nfi\nMore on task arrays"
+  },
+  {
+    "objectID": "hpc1.html#restartable-jobs",
+    "href": "hpc1.html#restartable-jobs",
+    "title": "arctraining slides",
+    "section": "Restartable jobs",
+    "text": "Restartable jobs\nFor when 48hrs isn’t enough\nAt its simplest, just finish with a return code of 99 from the last line of your code, and the job will be rescheduled:\nexit 99\nMore on restartable jobs"
+  },
+  {
+    "objectID": "hpc1.html#questions-and-time-for-recap",
+    "href": "hpc1.html#questions-and-time-for-recap",
+    "title": "arctraining slides",
+    "section": "Questions and time for recap",
+    "text": "Questions and time for recap\n\nSomething we’ve not covered that you’d like a look at\nAnything we have covered but you’d like to go over more\nA further look at arcdocs"
+  },
+  {
     "objectID": "hpc1.html#thank-you",
     "href": "hpc1.html#thank-you",
-    "title": "arctraining slides",
-    "section": "Thank you",
-    "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: https://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
-  },
-  {
-    "objectID": "hpc0.html#meta-code",
-    "href": "hpc0.html#meta-code",
-    "title": "arctraining slides",
-    "section": "HPC 0",
-    "text": "HPC 0\nIntroduction to the Unix/Linux command line"
-  },
-  {
-    "objectID": "hpc0.html#research-computing-team",
-    "href": "hpc0.html#research-computing-team",
-    "title": "arctraining slides",
-    "section": "Research Computing Team",
-    "text": "Research Computing Team\nStaff:\n\nOllie Clark, Tom Hardcastle, John Hodrien, Nick Rhodes, Patricia Ternes, Andy Turner\n\nHere for:\n\nGeneral guidance and advice\nAccess to specialist support and consultancy\nResearch Software Engineering support\n\nContact via IT Service Desk: https://bit.ly/arc-help"
-  },
-  {
-    "objectID": "hpc0.html#contact-details",
-    "href": "hpc0.html#contact-details",
-    "title": "arctraining slides",
-    "section": "Contact Details",
-    "text": "Contact Details\n\nARC Website: https://arc.leeds.ac.uk/\n\nGeneral queries: https://bit.ly/arc-help"
-  },
-  {
-    "objectID": "hpc0.html#training",
-    "href": "hpc0.html#training",
-    "title": "arctraining slides",
-    "section": "Training",
-    "text": "Training"
-  },
-  {
-    "objectID": "hpc0.html#archpc-training-portfolio",
-    "href": "hpc0.html#archpc-training-portfolio",
-    "title": "arctraining slides",
-    "section": "ARC/HPC Training Portfolio",
-    "text": "ARC/HPC Training Portfolio\nhttps://arc.leeds.ac.uk/training"
-  },
-  {
-    "objectID": "hpc0.html#purpose-of-today",
-    "href": "hpc0.html#purpose-of-today",
-    "title": "arctraining slides",
-    "section": "Purpose of today",
-    "text": "Purpose of today\n\nIntroduce the command line for new users\nHands on experience and confidence building\nBasic interactions with files and directories: command line execution, directory and file basics, files properties.\nFile manipulation: inspecting and editing files, searching and filtering,\nScripting and workflows: scripting techniques for building workflows."
-  },
-  {
-    "objectID": "hpc0.html#logging-in",
-    "href": "hpc0.html#logging-in",
-    "title": "arctraining slides",
-    "section": "Logging in…",
-    "text": "Logging in…\nUsing MobaXTerm"
-  },
-  {
-    "objectID": "hpc0.html#what-is-bash",
-    "href": "hpc0.html#what-is-bash",
-    "title": "arctraining slides",
-    "section": "What is BASH?",
-    "text": "What is BASH?"
-  },
-  {
-    "objectID": "hpc0.html#what-is-a-shell",
-    "href": "hpc0.html#what-is-a-shell",
-    "title": "arctraining slides",
-    "section": "What is a shell?",
-    "text": "What is a shell?"
-  },
-  {
-    "objectID": "hpc0.html#mobaxterm",
-    "href": "hpc0.html#mobaxterm",
-    "title": "arctraining slides",
-    "section": "MobaXTerm",
-    "text": "MobaXTerm\nLaunch…"
-  },
-  {
-    "objectID": "hpc0.html#filesystem-basics",
-    "href": "hpc0.html#filesystem-basics",
-    "title": "arctraining slides",
-    "section": "Filesystem basics",
-    "text": "Filesystem basics"
-  },
-  {
-    "objectID": "hpc0.html#forward-slash-and-backslash",
-    "href": "hpc0.html#forward-slash-and-backslash",
-    "title": "arctraining slides",
-    "section": "Forward slash / and backslash\n",
-    "text": "Forward slash / and backslash"
-  },
-  {
-    "objectID": "hpc0.html#filesystem-basics-absolute-path",
-    "href": "hpc0.html#filesystem-basics-absolute-path",
-    "title": "arctraining slides",
-    "section": "Filesystem basics: absolute path",
-    "text": "Filesystem basics: absolute path"
-  },
-  {
-    "objectID": "hpc0.html#filesystem-basics-relative-path",
-    "href": "hpc0.html#filesystem-basics-relative-path",
-    "title": "arctraining slides",
-    "section": "Filesystem basics: relative path",
-    "text": "Filesystem basics: relative path"
-  },
-  {
-    "objectID": "hpc0.html#exercise-0",
-    "href": "hpc0.html#exercise-0",
-    "title": "arctraining slides",
-    "section": "Exercise 0",
-    "text": "Exercise 0\nLogging in\nWe are using ARC4, one of the University HPC clusters today.\n\nYou’ll use MobaXterm to connect:\nssh <username>@arc4.leeds.ac.uk\n<username> is your university username."
-  },
-  {
-    "objectID": "hpc0.html#exercise-1",
-    "href": "hpc0.html#exercise-1",
-    "title": "arctraining slides",
-    "section": "Exercise 1",
-    "text": "Exercise 1\nSetup\nFirst, get hold of the sample data we will be using today.\n\nType this in your command shell:\ngit clone https://github.com/callaghanmt/shell-training/"
-  },
-  {
-    "objectID": "hpc0.html#exercise-2",
-    "href": "hpc0.html#exercise-2",
-    "title": "arctraining slides",
-    "section": "Exercise 2",
-    "text": "Exercise 2\n\nProblemSolution\n\n\nTwo new commands:\n\nThe sort command will sort lines alphabetically\nYou can use the cut command to split lines of text based on a given character e.g. cut -d ',' -f 2 will split lines around the comma and give you the second part\n\n\n\n\nCombine cat, cut, and sort to print out the Latin names from birds.txt in alphabetical order.\nSave the output to a new file.\n\n\n\n1:\n[user@host IOM-animals]$ cat birds.txt | sort | cut -d ',' -f 2\n2:\n[user@host IOM-animals]$ cat birds.txt | sort | cut -d ',' -f 2 > sorted-birds.txt"
-  },
-  {
-    "objectID": "hpc0.html#exercise-3",
-    "href": "hpc0.html#exercise-3",
-    "title": "arctraining slides",
-    "section": "Exercise 3",
-    "text": "Exercise 3\n\nProblemSolution\n\n\nList all the animals on the Isle of Mann alphabetically and find the 50th item in that list.\n\n\nTo get the 50th line, use head to get the first 50 lines and pipe it to tail to get the last one:\n[user@host IOM-animals]$ sort *.txt | head -50 | tail -1\ncoot, fulica atra"
-  },
-  {
-    "objectID": "hpc0.html#exercise-4",
-    "href": "hpc0.html#exercise-4",
-    "title": "arctraining slides",
-    "section": "Exercise 4",
-    "text": "Exercise 4\n\nProblemSolution\n\n\nshell-training/data/ contains 300 data files, each of which should contain 100 values. One of these files is missing some data though. . .\n\nUse a series of commands connected by pipes to identify the file with missing data. Hints:\n\nwc -w will tell you the number of values in a file\nsort -n will sort numerically\n\n\n\n[user@host data]$ wc -w values* | sort -n | head -1\n99 values 44\n\nwc -w tells you how many values are in each file\nsort this output to put the files in order of the number of values\nuse head to select the first line, which contains the name of the file with the smallest number of values"
-  },
-  {
-    "objectID": "hpc0.html#exercise-5",
-    "href": "hpc0.html#exercise-5",
-    "title": "arctraining slides",
-    "section": "Exercise 5",
-    "text": "Exercise 5\n\nProblemSolution\n\n\n\nUse a for loop to create five directories called calculation_?, where ? is a number.\nUse a loop to create five directories, each one the parent of the next.\n\n\n\n1:\n[user@host ~]$ for (( i=1 ; i<=5 ; i++ ))\n> do\n> mkdir calculation_$i\n> done\n[user@host ~]$\n2:\n[user@host ~]$ for (( i=1 ; i<=5 ; i++ ))\n> do\n> mkdir calculation_$i\n> cd calculation_$i\n> done\n[user@host calculation_5]$\nIn the second case, two commands are executed each time you go through the loop. A new directory is created and then the working directory is changed to the new directory.\nOn the next iteration, the new directory is then created inside the previous one."
-  },
-  {
-    "objectID": "hpc0.html#exercise-6",
-    "href": "hpc0.html#exercise-6",
-    "title": "arctraining slides",
-    "section": "Exercise 6",
-    "text": "Exercise 6\n\nProblemSolution\n\n\n\nIn the wildcards directory, create a variable called files listing all of the text files. \nLoop through this list and print out the first line from each file.\n\n\n\n1:\n[user@host wildcards]$ files=$( ls *.txt )\n2:\n[user@host wildcards]$ for f in $files\n> do\n> head -1 $f\n> done"
-  },
-  {
-    "objectID": "hpc0.html#exercise-7",
-    "href": "hpc0.html#exercise-7",
-    "title": "arctraining slides",
-    "section": "Exercise 7",
-    "text": "Exercise 7\n\nProblemSolution\n\n\n\nWhat will this command print to the screen?\n\n[user@host wildcards]$ for filename in *.txt\n> do\n> echo $filename\n> cat $filename > new-file.txt\n> done\n\n2. What will the contents of new-file.txt be and why?\n\n\n1:\n\nThe name of each .txt file in the current directory\nOn each iteration the echo command prints a different file name\n\n2:\n\nThe content of new-file.txt will be the same as xyz.txt\nOn each iteration the contents of a different file are written to new-file.txt, overwriting whatever was written on the previous iteration\nThis is because we used > to write the output of cat to new-file.txt\nUsing >> instead would result in each file’s content being appended to the end of new-file.txt"
-  },
-  {
-    "objectID": "hpc0.html#thank-you",
-    "href": "hpc0.html#thank-you",
-    "title": "arctraining slides",
-    "section": "Thank you",
-    "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: https://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
-  },
-  {
-    "objectID": "template.html#meta-code",
-    "href": "template.html#meta-code",
-    "title": "arctraining slides",
-    "section": "Course Code",
-    "text": "Course Code\nCourse Name"
-  },
-  {
-    "objectID": "template.html#research-computing-team",
-    "href": "template.html#research-computing-team",
-    "title": "arctraining slides",
-    "section": "Research Computing Team",
-    "text": "Research Computing Team\nStaff:\n\nOllie Clark, Tom Hardcastle, John Hodrien, Nick Rhodes, Patricia Ternes, Andy Turner\n\nHere for:\n\nGeneral guidance and advice\nAccess to specialist support and consultancy\nResearch Software Engineering support\n\nContact via IT Service Desk: https://bit.ly/arc-help"
-  },
-  {
-    "objectID": "template.html#slide-a",
-    "href": "template.html#slide-a",
-    "title": "arctraining slides",
-    "section": "Slide A",
-    "text": "Slide A\nTemporary content"
-  },
-  {
-    "objectID": "template.html#slide-b",
-    "href": "template.html#slide-b",
-    "title": "arctraining slides",
-    "section": "Slide B",
-    "text": "Slide B\nTemporary content"
-  },
-  {
-    "objectID": "template.html#slide-c",
-    "href": "template.html#slide-c",
-    "title": "arctraining slides",
-    "section": "Slide C",
-    "text": "Slide C\nTemporary content"
-  },
-  {
-    "objectID": "template.html#thank-you",
-    "href": "template.html#thank-you",
     "title": "arctraining slides",
     "section": "Thank you",
     "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: https://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
