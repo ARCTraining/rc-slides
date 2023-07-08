@@ -1,58 +1,60 @@
 ---
-format: 
+format:
   revealjs:
     navigation-mode: linear
     controls-layout: bottom-right
     controls: true
     footer: "[Research IT Website]({{< var rc.website >}}) | [Research IT Query]({{< var rc.servicedesk >}}) | [Courses Material]({{< var rc.material >}})"
 code: HPC 0
-name: Introduction to Linux for HPC at Leeds
+name: Introduction to Linux for HPC
 ---
 
 
-## Presentation set up
-- If using Teams share browser window then activate presenter mode from the menu.
-  - This should open a new browser window in presenter mode...
+{{< include _donut.qmd >}}
 
 
 {{< include _title.qmd >}}
 
 
-<!--
 {{< include _team.qmd >}}
--->
 
 
-## Contact Details and Key Links {visibility="hidden"}
-- ARC Website: {{< var rc.website >}}
-- ARC Documentation: {{< var rc.documentation >}}
-- General queries: {{< var rc.servicedesk >}}
-
-
-## Training {visibility="hidden"}
+## Training Themes
 ![](assets/img/hpc0/training.png)
 
+::: {.notes}
+- Please read the slide:
+  - "We are developing and providing training in..."
+:::
 
-## ARC/HPC Training Portfolio {visibility="hidden"}
-{{< var rc.training >}}
+
+## Training Portfolio {visibility="hidden"}
+- [Research Computing Website Training]({{< var rc.training >}})
 ![](assets/img/hpc0/portfolio.png)
 
+::: {.notes}
+- Skipping/hiding slide until we refactor what training we are doing and produce a new outline...
+:::
 
-## Introduction {.smaller}
-- Purpose of today
-  - Gain experience
-  - Build confidence
-  - Prepare for HPC1
-  - Get feedback from you about the training
+
+## Aims {.smaller}
+- Get aquainted.
+- Gain experience and build confidence in using a Linux command line.
+- Prepare for [HPC1: Introduction to High Performance Computing](https://arc.leeds.ac.uk/training/courses/hpc1/) (HPC1).
+- Get feedback from you about the training.
 
 ::: {.notes}
-- Course leader and staff introductions.
-- If a hackpad is set up, ask participants to introduce themselves on it.
-- Let everyone know they are welcome to:
-  - Interrupt to ask for things to be clarified/repeated.
-  - Ask questions.
-  - Ask for help.
-- If using Teams, then we can use the chat.
+- Read slide:
+  - "Our training aims today are to..."
+- "Please introduce yourself on the hackpad...":
+  - If using Teams:
+    - Share hackpad link in the chat.
+    - Explain about using the chat.
+    - Maybe conduct a poll:
+      - Is everyone happy so far?
+  - If not using Teams and in a classroom, then hopefully everyone can use the hackpad link from the course reminder email that should have been sent recieved recently...
+- "Please interrupt if you are having difficulty hearing or following the presentation..."
+  - "Please ask questions, or ask for things to be clarified or repeated..."
 :::
 
 
@@ -66,79 +68,138 @@ https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.m
 - Entering commands
 - Finding out about commands
 - File system navigation
-- Commands to create, copy, move and delete files and directories
-- Home directory contents
+- Commands to list, create, copy, move and delete files
+- Hidden files
+- Command history
+- Control key combinations
+- Editing files
 - File permissions
-- Using commands to find, explore and filter data
+- Commands to explore and filter data
 - Wildcards
 - Shell scripting basics
 
 ::: {.notes}
-Outline of what we will attempt to cover in <3 hours with breaks.
-Aim for 25 minutes sessions with 5 minute breaks.
+- "This slide shows the syllabus of what we plan to go through."
+- "This is a lot to cover in 3 hours."
+- "We'll aim to have 5 or 10 minute breaks roughly every 30 minutes."
+- "Let's make headway and get through the first part before taking a short break..."
 :::
 
 
-## Logging in {.smaller}
+## Logging in 1/3
 - [ARC Documentation >> Login]({{< var rc.login >}})
 - How you login depends on your:
   - Host Operating System
-    - From OSx or Linux: Use a terminal program
-    - From Windows: Use MobaXTerm
   - Connection
-    - On campus
-      - Wireless is like 'off campus'
-    - Off campus
-      - But connected to the [University VPN](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0014410) is like 'on campus'
 
 ::: {.notes}
-- MobaXTerm is software that you should be able to download, install and run without a problem
-- The University Virtual Private Network (VPN) is a type of secure network connection, enabling your computer to access the University network when working remotely. 
+- Read the slide.
 :::
 
 
-## Logging in demo {.smaller}
+## Logging in 2/3
+- Host Operating System:
+  - OSx or Linux:
+    - Use `terminal`
+  - Windows:
+    - Use `MobaXTerm`
+
 ::: {.notes}
-- Demo login from OSx/Linux
-- Demo login from Windows
+- "For OSx, `terminal` is already a Linux command line interface program:"
+  - "Which may work slightly differently from the HPC Linux command line, but it will be broadly similar."
+- "`MobaXTerm` is software that you should be able to download, install and run without needing help from systems administators."
+  - "It provides a sort of bridge between your host Windows machine and other machines you connect with."
+- Maybe conduct a poll:
+  - "What host OS are you using?"
 :::
 
 
-## Logging in exercise {.smaller}
+## Logging in 3/3
+- Connection
+  - On campus
+    - Wireless is like 'off campus'
+  - Off campus
+    - But connected to the [University VPN](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0014410) is like 'on campus'
+
+::: {.notes}
+- Read slide:
+  - "In terms of connection: On campus, but using wifi is like being 'off campus'..." 
+- The University Virtual Private Network (VPN) is a type of secure network connection, enabling your computer to access the University network when working remotely."
+- Maybe conduct a poll:
+  - "What type of connection do you have?"
+:::
+
+
+## Logging in demos
+
+::: {.notes}
+- Demo login from OSx/Linux.
+- Demo login from Windows.
+:::
+
+
+## Logging in exercise
 - Please login.
 
 ::: {.notes}
-- Check who is logged in
-  - In a classroom post it notes could be used to signal
-  - Online using Teams, an emoji poll can be used
-- Help anyone struggling
+- Maybe conduct a poll:
+  - "Have you logged in?"
+- Conduct/organise help if necessary...
+  - Maybe susggest one-to-ones if there are helpers...
 - Those that cannot login can still follow along for a bit...
+- Is it time for a break 1?
 :::
 
 
-## The shell and interface {.smaller}
-- You login to a ('bash') shell and your Home directory
-- The shell is a terminal emulator program that can execute other programs in response to text commands.
-  - There is a prompt where textual commands can be entered.
-  - Textual messages sent to the standard output are displayed by the prompt.
-- As you login, your bash set up is finalised by reading some files in your Home directory.
+## The shell interface {.smaller}
+- You login to a ('BASH') 'shell' and your 'Home Directory'
+- A 'shell' is a terminal emulator program.
+  - It is a window with a `prompt` at which textual commands are entered.
+  - Standard Output (std.out) and Standard Error (std.err) streams get displayed in the window.
+- During login, your set up is finalised by reading some files that reside in your Home Directory.
 
 ::: {.notes}
-- We will enter some commands shortly.
-- After learning a bit about the file system.
+- Read slide:
+  - "When you login, you login to..."
+- "We will enter some commands and practice by doing shortly..."
+  - "There are just a few more slides to go through first."
 :::
 
 
-## What is BASH? {.smaller} {visibility="hidden"}
+## What is BASH? {.smaller}
+- An example of what it looks like:
 ![](assets/img/hpc0/bash.png)
 
+::: {.notes}
+- `bash` is a particular type of shell.
+:::
 
-## What is a shell? {.smaller}
+
+## What is a shell? 1/2 {.smaller}
 ![](assets/img/hpc0/shell.png)
 
 ::: {.notes}
-- Human users interface with the system via the shell.
-- The shell communicates with the kernel that communicates with computer hardware and provides access the file system.
+- "Human users interface with the system via a shell."
+- "A shell communicates with the kernel."
+- "The kernel communicates with computer hardware and provides access the filesystem."
+- "There are a variety of Linux kernels and shells."
+:::
+
+
+## What is a shell? 2/2 {.smaller}
+- Shells have '`built-in`' commands:
+  - When called from a shell, `built-in` commands execute directly in the shell, without invoking (calling) other programs.
+- Shells call other programs by name, and these are found via the users '`PATH`' - a variable and ordered list of filesystem directories.
+- "On HPC resources at Leeds:
+   Additional Linux command utilities have been added and will be on your `PATH` for convenience.
+  - Additional software has been installed.
+    - Some of this is only available via a module system
+
+::: {.notes}
+- Read slide
+  - "Shells have built-in commands..."
+- "Details of the module system and how to use it are:"
+  - "Not covered in this course, but in HPC1."
 :::
 
 
@@ -146,15 +207,15 @@ Aim for 25 minutes sessions with 5 minute breaks.
 ![](assets/img/hpc0/filesystem.png)
 
 ::: {.notes}
-- The image shows a simplified filesystem.
-  - We will look at what the actual file system looks like shortly...
-- A Windows 'Folder' is like a Linux 'Directory':
-  - A thing that can hold files and sub-folders/sub-directories.
-- Directories are arranged in a heirarchy.
-  - The top directory is the root directory.
-- Each user has a Home Directory:
-  - Where they login to.
-  - Where their profile is stored.
+- "The image shows a simplified filesystem."
+  - "We will look at what the actual file system looks like shortly..."
+- "A Linux 'Directory' is like a Windows 'Folder':"
+  - "A thing that can hold files and sub-folders/sub-directories."
+- "Directories are arranged in a heirarchy."
+  - "The top directory is the 'Root Directory'."
+- "Each user has a 'Home Directory':"
+  - "Where they login to."
+  - "Where their profile is stored."
 :::
 
 
@@ -162,8 +223,8 @@ Aim for 25 minutes sessions with 5 minute breaks.
 ![](assets/img/hpc0/slash.png)
 
 ::: {.notes}
-- The file path separator in Linux is /
-- The file path separator in Windows is \
+- "The file path separator in Linux is the forward slash."
+- "The file path separator in Windows is the back slash."
 :::
 
 
@@ -171,8 +232,11 @@ Aim for 25 minutes sessions with 5 minute breaks.
 ![](assets/img/hpc0/filesystem-absolute.png)
 
 ::: {.notes}
-- The root directory is `/`.
-- Linux does not have drive letters like Windows.
+- "The slide shows an absolute file path."
+- "The 'Root Directory' is referred to by a back slash."
+  - "All absolute file paths start from the 'Root Directory'..." 
+- Perhaps explain the file path further.
+- "Linux does not have drive letters like Windows."
 :::
 
 
@@ -180,7 +244,9 @@ Aim for 25 minutes sessions with 5 minute breaks.
 ![](assets/img/hpc0/filesystem-relative.png)
 
 ::: {.notes}
-- `..` takes you up a level in the directory heirarchy
+- "The slide shows a relative file path."
+- "'`..`' refers to one level up in the directory heirarchy."
+- Perhaps explain the file path further.
 :::
 
 
@@ -194,15 +260,17 @@ Aim for 25 minutes sessions with 5 minute breaks.
   - '`host`'
     - starts '`login1.`' or '`login2.`'
     - and ends '`arc3`' or '`arc4`'
-- The '`~`' (tilda) in the prompt indicates that you are in your home directory.
-- The '`$`' symbol is the end of the prompt and is where commands can be typed and entered
+- The '`~`' (tilda) in the prompt indicates that you are in your Home Directory.
+- The '`$`' symbol is the end of the prompt and is where commands can be typed and entered.
 
 ::: {.notes}
-- You are always in a directory:
-  - the working directory
-  - By default this is where things are created or read from...
-- Users can modify the prompt look and feel
-  - Showing how to do that would be a distraction!
+- Read slide:
+  - "Upon login..."
+- "You are always in a directory:"
+  - "The 'Working Directory'"
+  - "By default this is where things are created or read from..."
+- Is it time for a break 1?
+- Users can modify the prompt and set different colours and languages...
 :::
 
 
@@ -237,8 +305,8 @@ Aim for 25 minutes sessions with 5 minute breaks.
 </table>
 
 ::: {.notes}
-- These are safe commands - they don't change anything.
-- We will look at these in turn...
+- "The table contains 'safe commands' - they don't change anything. So using them should not cause any damage..."
+- "We will look at these in turn now..."
 :::
 
 
@@ -253,15 +321,17 @@ Aim for 25 minutes sessions with 5 minute breaks.
   - '`user`' should be your username
 
 ::: {.notes}
-- Run from the user Home directory this reports the absolute path to it.
+- Read slide:
+  - "PWD is a command to print..."
+- "Run from the user `Home directory` PWD reports the absolute path of the user `Home Directory`."
 :::
 
 
 ## `pwd` demo {.smaller}
+
 ::: {.notes}
 - Do a quick demo.
-- If using Teams, then remember to share the right browser window when switching to share the slides.
-  - The presenter mode slides will have opened in a different window.
+- If using Teams, then remember to share the right windows...
 :::
 
 
@@ -293,6 +363,10 @@ pwd: pwd [-LP]
     cannot be read.
 ```
 
+::: {.notes}
+- "Over to you to try this first exercise..."
+:::
+
 
 ## `--help` and `man` {.smaller}
 - `--help` is a command option that prints help about using that command.
@@ -301,8 +375,14 @@ pwd: pwd [-LP]
 - To quit the help about `man` or the man page: press `<q>`.
 - To page through a man page: press `<space_bar>`.
 
+::: {.notes}
+- Read slide:
+  - "Minus minus help..."
+:::
+
 
 ## `--help` and `man` demo {.smaller}
+
 ::: {.notes}
 - Demo
 ```{.bash code-line-numbers=false}
@@ -310,6 +390,12 @@ pwd --help
 ```
 ```{.bash code-line-numbers=false}
 man pwd
+```
+```{.bash code-line-numbers=false}
+man bash
+```
+```{.bash code-line-numbers=false}
+man bash-builtins
 ```
 :::
 
@@ -332,25 +418,44 @@ man ls
 ```
 
 ::: {.notes}
-- Encourage participants to try this for themsleves
-- Pause for an emoji pll or similar.
+- "Over to you to try this exercise..."
+- Maybe conduct a poll:
+  - "Are you ready to move on?"
+- Check the time.
+  - Is it time for a break 1?
 :::
 
 
-## `ls` 1/3 {.smaller}
+## `ls` 1/4 {.smaller}
 - A command to list the contents of a directory.
-- With seemingly nothing in a directory `ls` will print nothing.
-- Files and directories starting with '`.`' are hidden by default.
 - There are many options for `ls`
   - The `-a` option will list all the contents of a directory.
+    - Files and directories starting with '`.`' are hidden by default.
   - The `-l` option will list each item line by line with added details.
   - The `-H` option will report sizes in a more human readable format.
-- Options can be listed in any order or combined...
-- Entering '`ls -al`' or '`ls -la`' or '`ls -a -l`' or '`ls -l -a`' are equivallent.
+
+::: {.notes}
+- (Read slide)
+  - "ls is a command..."
+:::
 
 
-## `ls` 2/3 {.smaller}
-- Entering '`ls -al`' should usually result in something like shown below:
+## `ls` 2/4 {.smaller}
+- Options can be listed in any order or combined - the following are equivallent:
+```{.bash code-line-numbers=false}
+ls -al
+ls -la
+ls -a -l
+ls -l -a
+```
+
+::: {.notes}
+- (Read slide)
+  - "Options can be..."
+:::
+
+
+## `ls` 3/4 {.smaller}
 ```{.bash code-line-numbers=false}
 [user@host ~]$ ls -al
 total 8
@@ -358,24 +463,34 @@ drwx------     2 user group   4096 MMM DD hh:mm .
 drwxr-xr-x     3 root root    4096 MMM DD hh:mm ..
 ...
 ```
-- The `...` may be many more lines of output.
-- The first line is different to the others.
-  - The number after total is a complicated metric that we can ignore for now...
-- The last part of other output lines is the name as would be obtained using `ls -a`
-  - '`.`' is the directory listed and '`..`' is the parent of that directory.
-- Please don't worry about the other details for now...
 
 ::: {.notes}
-- Permissions and other details listed are explained later...
+- "Entering '`ls -al`' should usually result in something like what is shown."
+- "The `...` may be many more lines of output depending on what was listed."
+- "The first line is different to the others."
+  - "The number after total is a complicated metric to do with how linked the thing being listed is."
+- "The first part of other output lines detail permissions:"
+  - "Permissions and other details listed are explained later..."
+- "The last part of other output lines sre the names of the things listed."
+  - "'`.`' would be the directory listed."
+  - "'`..`' would be the parent of that directory."
+- "Details will look a bit different for listing you do."
+  - "For instance:"
+    - "'`user`' should be your username."
+    - "'`MMM`' would be three letters representing the month a file was created e.g. '`Jun`'."
 :::
 
 
 ## `ls` 3/3 {.smaller}
-- An '`ls -al`' in your home directory:
-  - Should result in more output.
-    - Details will look a bit different.
-      - For instance, '`MMM`' should be three letters representing the month a file was created e.g. '`Jun`'.
-  - Will reveal hidden but important files and directories...
+- The following should result in many more lines of output.
+```{.bash code-line-numbers=false}
+[user@host ~]$ ls -al ~
+```
+
+::: {.notes}
+- "Issuing an '`ls -al ~`' should list the details of everything in your Home Directory."
+  - "This shold reveal any 'hidden' files and directories..."
+:::
 
 
 ## `ls` exercise {.smaller}
@@ -389,27 +504,33 @@ ls /
 ls ~
 ```
 - The output lists everything that is in your home directory that is not hidden.
-  - For new users, this should be nothing!
+  - For new users, this is nothing - not even a '`README.txt`'!
 - Enter:
 ```{.bash code-line-numbers=false}
 ls -al ~
 ```
-- The output lists everything in your Home directory.
+- The output lists everything in your Home Directory.
+
+::: {.notes}
+- "Over to you to try this exercise..."
+:::
 
 
 ## Home directory hidden files and folders {.smaller}
 - `.bash_history`
   - A log of commands that you have entered.
 - `.bash_profile`
-  - Defines your user settings for a login shell.
+  - Finalises your user login shell.
 - `.bashrc`
-  - Defines your user settings for a subshell.
-- You may have other files and folders and more may get added as you use commands and applications.
-- It is important to know these exist so as not to accidentally delete them.
-- Only modify them carefully if at all!
+  - Finalises your user subshell.
 
 ::: {.notes}
-- By carefully, this means by creating a backup copy before trying things.
+- (Read slide)
+  - "The .bash_history file is a..."
+- "You may have other hidden files and folders and more may get added as you use commands and applications."
+- "It is important to know these exist so as not to accidentally delete them."
+- "Only modify them carefully if at all!"
+  - "This means by creating a backup copy before trying things."
 :::
 
 
@@ -425,6 +546,11 @@ mkdir test
 mkdir: cannot create directory ‘test’: File exists
 ```
 
+::: {.notes}
+- (Read slide)
+  - "mkdir is a command to..."
+:::
+
 
 ## `mkdir` 2/2 {.smaller}
 - The '`-p`' option allows for creating parent directories.
@@ -438,6 +564,11 @@ mkdir -p test2/test3
 [user@host ~]$ mkdir /test
 mkdir: cannot create directory ‘/test’: Permission denied
 ```
+
+::: {.notes}
+- (Read slide)
+  - "The mkdir -p option allows for creating parent directories...."
+:::
 
 
 ## `cd` {.smaller}
@@ -459,16 +590,25 @@ mkdir: cannot create directory ‘/test’: Permission denied
   - `cd` with no arguments or `cd ~`
 
 ::: {.notes}
-- An appropriate relative path or the definitive absolute path can also be used to return to the user home directory.
+- (Read slide)
+  - "cd is a command..."
 :::
 
 
 ## `ls`, `mkdir` and `cd` demo {.smaller}
 
+::: {.notes}
+- Demo making, listing and moving into directories.
+:::
+
 
 ## `ls`, `mkdir` and `cd` exercise {.smaller}
 - Use `ls`, `mkdir` and `cd` in your home directory.
 - Check if there is a directory with your user name in `/nobackup/` and if not create it.
+
+::: {.notes}
+- "Over to you for another quick exercise"
+:::
 
 
 ## Check point 1 {.smaller}
@@ -476,6 +616,8 @@ mkdir: cannot create directory ‘/test’: Permission denied
 - Any questions?
 
 ::: {.notes}
+- Read slide:
+  - "You can..."
 - Is it time for a break?
 :::
 

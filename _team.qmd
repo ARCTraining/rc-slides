@@ -1,14 +1,33 @@
-## Research Computing Team {.smaller}
+## Research Computing at Leeds {.smaller}
+<!--
+  - {{< var rc.team >}}
+-->
+- A centralised [Team](https://arc.leeds.ac.uk/about/team/) and service supporting researchers with research computing platforms, consultancy and training.
+- We have capacity to help with developing funding proposals, recruiting specialists and can provide costed support to deliver research projects.
+- For details please see our [Website]({{< var rc.website >}})
+- For support and queries, please [send us a ticket via the IT Service Desk]({{< var rc.servicedesk >}})
 
-Staff: 
-
-- {{< var rc.team >}}
-
-Here for:
-
-- General guidance and advice
-- Access to specialist support and consultancy
-- Research Software Engineering support
-
-Contact via IT Service Desk: {{< var rc.servicedesk >}}
-
+::: {.notes}
+- Read the first point
+  - "Research Computing at Leeds is a..."
+- Click the `Team` link.
+  - In the `Slide View` Web browser window
+    - A tab should have opened showing the the `Research Computing Team Web Page`
+    - Scroll down the Web page briefly to show the team...
+- Introduce yourself:
+  - "I am..."
+    - When joined the team/university.
+    - Background.
+    - Specialisms.
+- Ask helpers to introduce themselves.
+- Close the Website tab and return to the `Speaker View` window.
+- Read the second and third points
+  - "We have..."
+- Click on the `Website` link.
+  - In the `Slide View` window a new Tab should have opened
+  - Scroll down the Website Home Page and point out some sections:
+    - Documentation
+    - Search
+    - Contact Us
+  - Close the Website tab and return to the `Speaker View` window.
+:::
