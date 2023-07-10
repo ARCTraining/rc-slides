@@ -10,9 +10,6 @@ name: Introduction to Linux for HPC
 ---
 
 
-{{< include _donut.qmd >}}
-
-
 {{< include _title.qmd >}}
 
 
