@@ -1,0 +1,81 @@
+---
+format:
+  revealjs:
+    navigation-mode: linear
+    controls-layout: bottom-right
+    controls: true
+    footer: "[Research IT Website]({{< var rc.website >}}) | [Research IT Query]({{< var rc.servicedesk >}}) | [Courses Material]({{< var rc.material >}})"
+code: Donut
+name: A Guide to delivering Presentations Using Quarto
+---
+
+## Presentation set up guide
+- Share the Web browser window containing the slides ('`Slide View`').
+- Activate '`Speaker View`':
+  - From the `slide-menu-button` (bars in the lower left), select:
+    - `Tools` (at the top) >> `Speaker View` (from the list).
+- A new Web browser window should open showing the '`Speaker View`'.
+  - Locate this and read the `Notes Pane` (lower right).
+
+::: {.notes}
+- The default `Speaker View` layout has three panes:
+  - `Slide Pane` (left) shows the current slide.
+  - `Notes Pane` (lower right) are these notes.
+  - `Upcoming Pane` (upper right).
+    - This should show the next slide.
+    - `Layout: Default` can be actioned to change the Layout.
+- The current slide in `Slide View` and in the `Speaker View` `Slide Pane` should synchronise:
+  - So changing slide in one should do the same in the other.
+- Move on to the next slide - the `Title Slide`:
+  - Use the down or right keyboard cursor keys or activate the `controls-arrow` that looks like `>` in the lower right >- If you have activated the `Upcoming Pane` the keyboard cursor keys will change what is in there.
+  - To move on in the presentation, activate (click back into) the main `Slide Pane`.
+:::
+
+
+{{< include _title.qmd >}}
+
+
+{{< include _team.qmd >}}
+
+
+## Polls and Forms
+- Polls are best prepared in advance.
+  - There are two main types of Poll:
+    - "Emoji Polls"
+    - "Forms Polls"
+
+## Emoji Polls
+- Conducted from within Teams chat
+- Copy the following and then press the space bar after each end parenthesis `)` to turn the text into an emoji:
+\
+Do you like emoji polls?
+\
+(thumbsup) yes
+\
+(heart) no
+- The `thumbsup` and `heart` emojis  are the first two emojis that are in the reaction list of users by default.
+
+
+## Forms Polls
+- A `Forms` poll can be added ad hoc in a Teams chat:
+  - Select the three dots `...` below the message box and then search for or add `Forms`.
+  - Or add using the `+` option at the top of the chat.
+- However, this use of `Forms` is being phased out in preference for a `Polls App`.
+- The `Polls App` however, is not available in the University of Leeds Office 365 offerring currently to test and the version that can be used in the chat does not seem to have an easy way to collect the results!
+- It might be best to prepare some `Forms` forms in advance using the `Forms` in Office 365 (https://www.microsoft365.com/launch/forms).
+  - Sharing these simply involves copying the URL and pasting it into the chat.
+- For example: https://forms.office.com/pages/designpagev2.aspx?lang=en-GB&origin=OfficeDotCom&route=Start&subpage=design&id=qO3qvR3IzkWGPlIypTW3yy7GBfs2qsFOjWB83KLaHnVUNzFZS1VCTENOVEJUMDdKVEEyNURDRlY2USQlQCN0PWcu
+
+
+## Hackpads or Forms
+- These can be used for participants to introduce themselves to us.
+- Participants should have all the links already in an email.
+
+
+## Feedback and questions
+- Please encourage interruptions especially for participants having difficulty hearing or following the presentation...
+- Periodically pause and ask if participants have any questions or want anything repeated...
+
+
+## Getting Feedback
+- Please encourage participants to provide honest feedback about presentations and the training so we can improve.

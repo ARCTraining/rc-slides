@@ -7,5 +7,4 @@
 
 ::: footer
 <!-- Remove footer from title page -->
-
 :::
