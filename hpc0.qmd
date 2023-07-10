@@ -1249,7 +1249,7 @@ for f in *.txt
 ## Editing files {.smaller}
 - These are three programs available on the system that can be used for text editing:
   - `nano`
-  - `vi`
+  - `vim`
   - `emacs`
 - If you are unfamiliar with any of these, we recommend you try `nano`.
 - Care is needed if transferring scripts and data between Windows and Linux due to differences in line endings.
