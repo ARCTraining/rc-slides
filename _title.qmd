@@ -11,17 +11,17 @@
 :::
 
 ::: {.notes}
-- If using Teams maybe prepare a poll.
-  - This can be done using `Forms`
-    - Forms can be prepared in advance...
-    - In the Teams chat, select:
+- Prepare a poll.
+  - This can be done using `Forms` within `Teams`
+    - Forms can be prepared in advance, but it is probably easy enough to create them when wanted...
+    - In the `Teams Chat`, select:
       - ... (the three dots)
       - ...More Apps
-    - Search for and select "Forms".
+    - Search for "Forms" and select.
     - Complete details.
   - Another way is to conduct an "emoji poll":
-    - This involves making a post that asks responders to respond with an emoji.
+    - This involves making a post that asks participants to respond with an emoji reaction.
       - E.g. Thumb up for one answer, heart for another.
     - It is probably easiest to copy and paste a previous emoji poll than create one from scratch.
-    - In June 2023, The Teams chat could not parse text pasted in to replace codes with emojis...
+    - In June 2023, The Teams chat could not parse text pasted in to replace codes with emojis, but this feature may get added and that should make this easier...
 :::

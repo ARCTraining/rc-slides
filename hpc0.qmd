@@ -23,8 +23,8 @@ name: Introduction to Linux for HPC
 ![](assets/img/hpc0/training.png)
 
 ::: {.notes}
-- Please read the slide:
-  - "We are developing and providing training in..."
+- Read slide:
+  - "We are developing and providing training in the following themes..."
 :::
 
 
@@ -80,9 +80,8 @@ https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.m
 
 ::: {.notes}
 - "This slide shows the syllabus of what we plan to go through."
-- "This is a lot to cover in 3 hours."
+- "There is quite a lot to cover in 3 hours!"
 - "We'll aim to have 5 or 10 minute breaks roughly every 30 minutes."
-- "Let's make headway and get through the first part before taking a short break..."
 :::
 
 
@@ -93,7 +92,8 @@ https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.m
   - Connection
 
 ::: {.notes}
-- Read the slide.
+- "The Website provides details about logging in"
+- "How you login depends on your host Operating System and connection..."
 :::
 
 
@@ -105,7 +105,7 @@ https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.m
     - Use `MobaXTerm`
 
 ::: {.notes}
-- "For OSx, `terminal` is already a Linux command line interface program:"
+- "The OSx `terminal` is already a Linux command line interface program:"
   - "Which may work slightly differently from the HPC Linux command line, but it will be broadly similar."
 - "`MobaXTerm` is software that you should be able to download, install and run without needing help from systems administators."
   - "It provides a sort of bridge between your host Windows machine and other machines you connect with."
@@ -124,7 +124,7 @@ https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.m
 ::: {.notes}
 - Read slide:
   - "In terms of connection: On campus, but using wifi is like being 'off campus'..." 
-- The University Virtual Private Network (VPN) is a type of secure network connection, enabling your computer to access the University network when working remotely."
+- The University Virtual Private Network (VPN) is a type of secure network connection, enabling your computer to access the University network when working remotely.
 - Maybe conduct a poll:
   - "What type of connection do you have?"
 :::
