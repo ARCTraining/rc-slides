@@ -1201,7 +1201,7 @@ for f in *.txt
 :::
 
 
-## quiz {.smaller}
+## Quiz {.smaller}
 
 ::: {.panel-tabset}
 
