@@ -1247,7 +1247,7 @@ for f in *.txt
 
 
 ## Editing files {.smaller}
-- There are three programs available on the system that can be used for text editing:
+- These are three programs available on the system that can be used for text editing:
   - `nano`
   - `vi`
   - `emacs`
