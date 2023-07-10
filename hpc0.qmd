@@ -30,7 +30,7 @@ name: Introduction to Linux for HPC
 ![](assets/img/hpc0/portfolio.png)
 
 ::: {.notes}
-- Skipping/hiding slide until we refactor what training we are doing and produce a new outline...
+- Skipping/hiding slide until there is an updated graphic of what training we are delivering as training courses...
 :::
 
 
@@ -43,13 +43,7 @@ name: Introduction to Linux for HPC
 ::: {.notes}
 - Read slide:
   - "Our training aims today are to..."
-- "Please introduce yourself on the hackpad...":
-  - If using Teams:
-    - Share hackpad link in the chat.
-    - Explain about using the chat.
-    - Maybe conduct a poll:
-      - Is everyone happy so far?
-  - If not using Teams and in a classroom, then hopefully everyone can use the hackpad link from the course reminder email that should have been sent recieved recently...
+- Attempt to use Forms form or Hackpad to get partipants to introduce themselves and why they want to use the HPC.
 - "Please interrupt if you are having difficulty hearing or following the presentation..."
   - "Please ask questions, or ask for things to be clarified or repeated..."
 :::
@@ -76,9 +70,8 @@ https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.m
 - Shell scripting basics
 
 ::: {.notes}
-- "This slide shows the syllabus of what we plan to go through."
-- "There is quite a lot to cover in 3 hours!"
-- "We'll aim to have 5 or 10 minute breaks roughly every 30 minutes."
+- "This slide shows the syllabus and what we plan to go through in the next 3 hours."
+- "We'll aim to have 5 to 10 minute breaks roughly every 30 minutes."
 :::
 
 
@@ -106,8 +99,7 @@ https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.m
   - "Which may work slightly differently from the HPC Linux command line, but it will be broadly similar."
 - "`MobaXTerm` is software that you should be able to download, install and run without needing help from systems administators."
   - "It provides a sort of bridge between your host Windows machine and other machines you connect with."
-- Maybe conduct a poll:
-  - "What host OS are you using?"
+- Conduct a poll about what host Operating Systems participants expect to use to connect to the HPC.
 :::
 
 
@@ -122,15 +114,14 @@ https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.m
 - Read slide:
   - "In terms of connection: On campus, but using wifi is like being 'off campus'..." 
 - The University Virtual Private Network (VPN) is a type of secure network connection, enabling your computer to access the University network when working remotely.
-- Maybe conduct a poll:
-  - "What type of connection do you have?"
+- Maybe conduct a poll on what types of connection participants expect to use to connect to the HPC.
 :::
 
 
 ## Logging in demos
 
 ::: {.notes}
-- Demo login from OSx/Linux.
+- Demo login from OSX/Linux.
 - Demo login from Windows.
 :::
 
@@ -139,10 +130,9 @@ https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.m
 - Please login.
 
 ::: {.notes}
-- Maybe conduct a poll:
-  - "Have you logged in?"
-- Conduct/organise help if necessary...
-  - Maybe susggest one-to-ones if there are helpers...
+- Conduct a poll to find out who is logged on.
+- Organise help if necessary...
+  - Maybe suggest one-to-ones with helpers...
 - Those that cannot login can still follow along for a bit...
 - Is it time for a break 1?
 :::
@@ -158,8 +148,7 @@ https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.m
 ::: {.notes}
 - Read slide:
   - "When you login, you login to..."
-- "We will enter some commands and practice by doing shortly..."
-  - "There are just a few more slides to go through first."
+- "We will enter some commands after these next few slides..."
 :::
 
 
@@ -369,8 +358,8 @@ pwd: pwd [-LP]
 - `--help` is a command option that prints help about using that command.
 - `man` is a command to bring up the manual.
 - For help using `man`: press the h-key `<h>`.
-- To quit the help about `man` or the man page: press `<q>`.
-- To page through a man page: press `<space_bar>`.
+- To quit the help about `man`, or `man` itself: press `<q>`.
+- Use `<space_bar>` to page through.
 
 ::: {.notes}
 - Read slide:
@@ -416,10 +405,8 @@ man ls
 
 ::: {.notes}
 - "Over to you to try this exercise..."
-- Maybe conduct a poll:
-  - "Are you ready to move on?"
-- Check the time.
-  - Is it time for a break 1?
+- Maybe conduct a poll to find out who is ready to move on.
+- Is it time for a break 1?
 :::
 
 
@@ -463,7 +450,7 @@ drwxr-xr-x     3 root root    4096 MMM DD hh:mm ..
 
 ::: {.notes}
 - "Entering '`ls -al`' should usually result in something like what is shown."
-- "The `...` may be many more lines of output depending on what was listed."
+- "The `...` shown in the output may be many more lines of output depending on what was listed."
 - "The first line is different to the others."
   - "The number after total is a complicated metric to do with how linked the thing being listed is."
 - "The first part of other output lines detail permissions:"
@@ -575,7 +562,7 @@ mkdir: cannot create directory ‘/test’: Permission denied
 [user@host test]$ cd ~
 [user@host ~]$ cd test
 [user@host test]$ cd
-[user@host ~]$ 
+[user@host ~]$
 ```
 - Notice that the prompt changes.
 - Without read permission you cannot change into a directory and a warning is printed:
@@ -998,7 +985,8 @@ wc -w values* | sort -n | awk '$1 != 100 {print $0}'
 ## Permissions 1/4 {.smaller}
 - File permissions can be identified using the `ls` command with the `-l` option.
 - By default, the owner has read, write and execute permissions on a directory they create, and read and write (but not execute) permission on a file they create.
-- By default, group and all have no permissions.
+- On ARC4, group and all have no permissions by default.
+- On ARC3, group and all have read permissions on files and also execute permissions on directories by default.
 ```{.bash code-line-numbers=false}
 [user@host ~]$ mkdirs -p test0/test
 [user@host ~]$ touch test0/test/test-file
@@ -1062,12 +1050,11 @@ chmod 700 test0/test/test-file
 
 ::: {.notes}
 - The following would add user (owner) execute permissions.
-  - So if the file already had all other permissions as wanted this would work. 
 ```{.bash code-line-numbers=false}
 chmod u+x test0/test/test-file
 ```
 - octal value = read (4) + write (2) + execute (1)
-- Later on we will set permissions on a file to execute it.
+- "Later on we will set permissions on a file to execute it."
 :::
 
 
@@ -1078,7 +1065,7 @@ chmod u+x test0/test/test-file
 - This can be useful if you want to share files between those in a group on the system.
 
 
-## Check point {.smaller}
+## Check point 3 {.smaller}
 - Any questons?
 
 ::: {.notes}
@@ -1093,9 +1080,9 @@ var=1
 echo $var
 ```
 - The variable `var` is set equal to the number `1`.
-- `echo` is a command that will send what comes after it to standard out
+- `echo` is a command that will send what comes after it to the Standard Output (`std.out`).
 - The value of the variable is accessed using the `$` symbol followed by the name of the variable.
-- The command `printenv` will print all the variables.
+- The command `printenv` will print all the variables in use.
 
 
 ## For loop 1/2 {.smaller}
@@ -1265,7 +1252,7 @@ for f in *.txt
 ```
 - After the 'shebang', simply enter all the commands for the script.
 - Lines starting with '`#`' will be regarded as comments
-  - Use these to make you script easier to understand.
+  - Use these to make your script easier to understand.
 - To run the script it must have executable permissions.
 - A scripts saved as '`script.sh`' can be run using:
 ```{.bash code-line-numbers=false}
@@ -1277,19 +1264,21 @@ for f in *.txt
 
 
 ## Shell Script exercise {.smaller}
-- Create and run a shell script to print out the first line of each file in a directory. Test using the wildcards directory.
+- Create and run a shell script to print out the first line of each file in a directory. Test using the `wildcards` directory.
 - Hints:
-  - Use the `history` command to see the commands you executed.
-  - You could pipe this into tail and direct it into a file and then use `nano` to modify this into a script.
-  - Modify the file permissions so you can execute the file. 
-  - To execute a script called '`script.sh`' issue the following command:
+  - Use the `history` command to see the commands you've entered.
+  - Pipe the `history` output into `tail`.
+  - Direct the ouput into a file and then use `nano` to modify this into a script.
+  - Modify the file permissions so you can execute the file.
+  - If you named the script '`script.sh`' issue the following command to run it:
 ```{.bash code-line-numbers=false}
 ./script.sh
 ```
 
 ::: {.notes}
-- Scripts you write that you commonly want to run can be put somehwere sensible and this can be added to your PATH.
+- Scripts you write that you commonly want to run can be put somehwere sensible and this can be added to your `PATH` variable.
 - If there is more time, perhaps look at some other `built-in` commands.
+  - `man bash-builtins`
 :::
 
 
