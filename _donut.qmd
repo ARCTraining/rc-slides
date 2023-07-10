@@ -5,12 +5,13 @@
     - `Tools` (at the top) >> `Speaker View` (from the list).
   - This should open the '`Speaker View`'.
     - Locate and read the `Notes` (lower right).
+- If in a classroom, there should be a way to project a different view to what you can see on the lecturn display facing you.
 
 ::: {.notes}
-- The current slide in `Slide View` and `Speaker View` should synchronise.
-  - There should be a view of what slide is next in the right upper pane in the `Speaker View`.
-- This has been tested for presentations delivered using Teams.
-- Whether there can be both a `Slide View` and `Speaker View` for presentations delivered in a classroom where often the entire screen is shared to the display is uncertain...
+- The current slide in `Slide View` and `Speaker View` should synchronise:
+  - So moving on to the next slide should do the same in both windows/tabs.
+- `Speaker View` shows a preview of the next slide in the right upper pane above these notes.
+- Presentations delivered using Teams.
 - Move on to the title slide:
-   - Use the down or right keyboard cursor keys or activate the `controls-arrow` that looks like `>` in the lower right of the slide. 
+   - Use the down or right keyboard cursor keys or activate the `controls-arrow` that looks like `>` in the lower right of the slide.
 :::
