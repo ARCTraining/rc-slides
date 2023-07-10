@@ -47,9 +47,12 @@ name: A Guide to delivering Presentations Using Quarto
 ## Emoji Polls
 - Conducted from within Teams chat
 - Copy the following and then press the space bar after each end parenthesis `)` to turn the text into an emoji:
+\
 Do you like emoji polls?
-  - (thumbsup) yes
-  - (heart) no
+\
+(thumbsup) yes
+\
+(heart) no
 - The `thumbsup` and `heart` emojis  are the first two emojis that are in the reaction list of users by default.
 
 
@@ -58,15 +61,14 @@ Do you like emoji polls?
   - Select the three dots `...` below the message box and then search for or add `Forms`.
   - Or add using the `+` option at the top of the chat.
 - However, this use of `Forms` is being phased out in preference for a `Polls App`.
-- The `Polls App` however, is not available in te University of Leeds Office 365 offerring currently.
+- The `Polls App` however, is not available in the University of Leeds Office 365 offerring currently to test and the version that can be used in the chat does not seem to have an easy way to collect the results!
 - It might be best to prepare some `Forms` forms in advance using the `Forms` in Office 365 (https://www.microsoft365.com/launch/forms).
-  - Sharing then simply involves copying the URL and paste into the chat.
+  - Sharing these simply involves copying the URL and pasting it into the chat.
 - For example: https://forms.office.com/pages/designpagev2.aspx?lang=en-GB&origin=OfficeDotCom&route=Start&subpage=design&id=qO3qvR3IzkWGPlIypTW3yy7GBfs2qsFOjWB83KLaHnVUNzFZS1VCTENOVEJUMDdKVEEyNURDRlY2USQlQCN0PWcu
 
 
-## Hackpads
-- These are used as a place to add links to the slides and documentation and where participants can introduce themselves.
-- Some of this could maybe be captured and used as easily using a `Forms` form.
+## Hackpads or Forms
+- These can be used for participants to introduce themselves to us.
 - Participants should have all the links already in an email.
 
 
@@ -74,5 +76,6 @@ Do you like emoji polls?
 - Please encourage interruptions especially for participants having difficulty hearing or following the presentation...
 - Periodically pause and ask if participants have any questions or want anything repeated...
 
+
 ## Getting Feedback
-- At the end of the training it is good to encourage participants to provide honest feedback about presentations and the training so we can improve.
+- Please encourage participants to provide honest feedback about presentations and the training so we can improve.
