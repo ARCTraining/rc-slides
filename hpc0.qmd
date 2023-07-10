@@ -1265,7 +1265,7 @@ for f in *.txt
   - By convention the filename ends `.sh`.
 - The file should start with a 'shebang' line which tells the Linux system what command to run:
 ```{.bash code-line-numbers=false}
-#!/bin/bash`
+#!/bin/bash
 ```
 - After the 'shebang', simply enter all the commands for the script.
 - Lines starting with '`#`' will be regarded as comments
