@@ -1,9 +1,10 @@
 ---
-format:
-  revealjs:
+format: 
+  clean-revealjs:
+    self-contained: true
     navigation-mode: linear
     controls-layout: bottom-right
-    controls: true
+    controls: false
     footer: "[Research IT Website]({{< var rc.website >}}) | [Research IT Query]({{< var rc.servicedesk >}}) | [Courses Material]({{< var rc.material >}})"
 code: HPC 0
 name: Introduction to Linux for HPC
@@ -417,6 +418,7 @@ man ls
     - Files and directories starting with '`.`' are hidden by default.
   - The `-l` option will list each item line by line with added details.
   - The `-H` option will report sizes in a more human readable format.
+
 
 ::: {.notes}
 - (Read slide)
@@ -963,6 +965,7 @@ grep -v foo
   - `wc -w` will tell you the number of values in a file
   - `sort -n` will sort numerically
 
+
 ### Solution
 - Using `grep`:
 ```{.bash code-line-numbers=false}
@@ -1041,6 +1044,7 @@ drwx------ 3 <owner> <group> <size> <date> <time> ..
 - The following would set permissions ```-rwx------``` to '`test0/test/test-file`':
 ```{.bash code-line-numbers=false}
 chmod 700 test0/test/test-file
+
 ```
 - Don't worry about remembering details of how to change permissions.
 - Try to remember that there are 3 levels of permission:
@@ -1226,6 +1230,11 @@ for f in *.txt
 - This is because `>` overwrites the output of cat to `new-file.txt` for each element in the sequence.
 - Using `>>` instead would result in each file's content being appended to the end of `new-file.txt`
 
+
+2.  - The content of `new-file.txt` will be the same as `xyz.txt`
+    - On each iteration the contents of a different file are written to `new-file.txt`, overwriting whatever was written on the previous iteration
+    - This is because we used `>` to write the output of cat to `new-file.txt`
+    - Using `>>` instead would result in each file's content being appended to the end of `new-file.txt`
 :::
 
 

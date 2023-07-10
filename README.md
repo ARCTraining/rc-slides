@@ -89,13 +89,15 @@ Now, you will have to edit this new file and change the `meta` information (`cod
 ```yml
 ---
 format: 
-  revealjs:
+  clean-revealjs:
+    self-contained: true
     navigation-mode: linear
     controls-layout: bottom-right
-    controls: true
+    controls: false
     footer: "[Research IT Website]({{< var rc.website >}}) | [Research IT Query]({{< var rc.servicedesk >}}) | [Courses Material]({{< var rc.material >}})"
 code: HPC0
 name: Introduction to Linux for HPC
+
 ---
 ```
 
@@ -106,6 +108,21 @@ Done! The standard presentation is created. You can write the main content for t
 You are now ready to create your slides by editing the `index.qmd` in the root of the repository. For more information
 on writing RevealJS slides in Quarto see the [RevealJS](https://quarto.org/docs/presentations/revealjs/) guide and the
 [Revealjs Reference](https://quarto.org/docs/reference/formats/presentations/revealjs.html).
+
+## Preview locally
+
+You'll need a working quarto.  This can be installed from conda and you'll also want to install the theme extension:
+
+```
+conda create -n quarto -c conda-forge quarto
+conda activate quarto
+quarto install --no-prompt extension grantmcdermott/quarto-revealjs-clean
+```
+
+You can then preview this via:
+```
+quarto preview
+```
 
 ## Publish Locally
 

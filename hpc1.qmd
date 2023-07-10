@@ -1,9 +1,10 @@
 ---
 format:
-  revealjs:
+  clean-revealjs:
+    self-contained: true
     navigation-mode: linear
     controls-layout: bottom-right
-    controls: true
+    controls: false
     footer: "[Research IT Website]({{< var rc.website >}}) | [Research IT Query]({{< var rc.servicedesk >}}) | [Courses Material]({{< var rc.material >}})"
 code: HPC 1
 name: Introduction to High Performance Computing
@@ -24,14 +25,9 @@ name: Introduction to High Performance Computing
 
 ## Useful Links
 
-\
-ARC Website: {{< var rc.website >}}
-
-\
-ARC Documentation {{< var rc.documentation >}}
-
-\
-General queries: {{< var rc.servicedesk >}}
+- ARC Website: {{< var rc.website >}}
+- ARC Documentation {{< var rc.documentation >}}
+- General queries: {{< var rc.servicedesk >}}
 
 ## Training
 
@@ -45,11 +41,9 @@ General queries: {{< var rc.servicedesk >}}
 
 ## Introductions and Motivations
 
-Who are you and why are you here?
-
-What problems are you encountering with your computational work now? 
-
-Why / how do you think HPC will help?
+- Who are you and why are you here?
+- What problems are you encountering with your computational work now? 
+- Why / how do you think HPC will help?
 
 ## Key Concepts
 
@@ -276,10 +270,25 @@ This is:
 ## /nobackup
 
 - Each HPC cluster has it’s own high speed storage service called /nobackup
-- You need to make your own directory (using mkdir)
+- You need to make your own directory (using `mkdir`)
 - Nothing is backed up
 - Files will expire after 90 days not being used
-- Need to set permissions to make files private (ARC3) but not on ARC4.
+- Need to set permissions to make files private ARC3 but not on ARC4.
+
+## Local storage
+
+Each compute node has a small SSD.
+
+- 1Gbyte allocated per job by default via `$TMPDIR`
+- Typically much faster than other storage available
+- Can be increased if required:
+
+   ```{.bash code-line-numbers=false}
+   #$ -l disk=10G
+   ```
+- Limits vary depending on node type, but at least 100G
+
+[More on local storage](https://arcdocs.leeds.ac.uk/usage/scratch.html)
 
 ## Transferring files and data
 
@@ -294,15 +303,122 @@ This is:
 
 `module`
 
-- `avail`: what software could I add
-- `list`: show what is active
-- `add|load`: enable software
-- `rm|unload`: disable software
-- `help`: show details of software
-- `swap|switch`: swap modules
+- `avail` - what software could I add
+- `list` - show what is active
+- `add|load` - enable software
+- `rm|unload` - disable software
+- `help` - show details of software
+- `swap|switch` - swap modules
 
 ## Shared vs Distributed memory jobs
 
 ![](assets/img/hpc1/shared-vs-distributed.png)
+
+## Submit some parallel jobs
+
+Let's look at and compare a few submissions:
+
+- serial
+- threaded
+- distributed
+
+## GPUs
+
+Three different types of GPU available
+
+ARC3:
+
+- 2xK80 (1 node)
+- 4xP100 (6 nodes)
+
+ARC4:
+
+- 4xV100 (3 nodes)
+
+Some extras in private queues
+
+## Submitting a GPU job
+
+ARC4:
+```{.bash code-line-numbers=false}
+#$ -l coproc_v100=1
+```
+ARC3:
+```{.bash code-line-numbers=false}
+#$ -l coproc_p100=1
+```
+or
+```{.bash code-line-numbers=false}
+#$ -l coproc_k80=1
+```
+
+Should not ask for memory or cpu cores
+
+[More on GPGPU](https://arcdocs.leeds.ac.uk/usage/gpgpu.html)
+
+## Large memory nodes
+
+ARC4:
+```{.bash code-line-numbers=false}
+#$ -l node_type=40core-768G
+```
+ARC3:
+```{.bash code-line-numbers=false}
+#$ -l node_type=24core-768G
+```
+
+Also allows jobs to run for up to 96hrs
+
+## Interactive jobs
+
+General advice, don't use them unless you have to.
+
+```{.bash code-line-numbers=false}
+qrsh -l h_rt=0:15:0 -pty y bash -i
+```
+
+[More in interactive jobs](https://arcdocs.leeds.ac.uk/usage/interactive.html)
+
+## Task arrays
+
+When you want to run lots of similar jobs
+
+```{.bash code-line-numbers=false}
+# Run 100 jobs from 1-100
+#$ -t 1-100
+# Don't run more than two at a time
+#$ -tc 2
+
+if[ $SGE_TASK_ID == $SGE_TASK_FIRST ]; then
+  echo I am the first job
+fi
+
+echo I am job $SGE_TASK_ID
+
+if [ $SGE_TASK_ID == $SGE_TASK_LAST ]; then
+  echo I am the last job
+fi
+```
+
+
+[More on task arrays](https://arcdocs.leeds.ac.uk/usage/taskarrays.html)
+
+## Restartable jobs
+
+For when 48hrs isn't enough
+
+At its simplest, just finish with a return code of 99 from the last line of your code, and the job will be rescheduled:
+
+```{.bash code-line-numbers=false}
+exit 99
+```
+
+[More on restartable jobs](https://arcdocs.leeds.ac.uk/usage/advanced.html#restartable-jobs)
+
+## Questions and time for recap
+
+- Something we've not covered that you'd like a look at
+- Anything we have covered but you'd like to go over more
+- A further look at [arcdocs](https://arcdocs.leeds.ac.uk)
 
 {{< include _end.qmd >}}
