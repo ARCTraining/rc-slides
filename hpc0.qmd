@@ -86,7 +86,7 @@ https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.m
 
 
 ## Logging in 1/3
-- [ARC Documentation >> Login]({{< var rc.login >}})
+- [ARC Documentation on Logging on]({{< var rc.login >}})
 - How you login depends on your:
   - Host Operating System
   - Connection
@@ -99,13 +99,13 @@ https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.m
 
 ## Logging in 2/3
 - Host Operating System:
-  - OSx or Linux:
+  - OSX or Linux:
     - Use `terminal`
   - Windows:
     - Use `MobaXTerm`
 
 ::: {.notes}
-- "The OSx `terminal` is already a Linux command line interface program:"
+- "The OSX `terminal` is already a Linux command line interface program:"
   - "Which may work slightly differently from the HPC Linux command line, but it will be broadly similar."
 - "`MobaXTerm` is software that you should be able to download, install and run without needing help from systems administators."
   - "It provides a sort of bridge between your host Windows machine and other machines you connect with."
@@ -838,8 +838,7 @@ touch test0/test01/test_file
   </tr>
   <tr>
     <td>`wc`</td>
-    <td>Print newline, word, and byte counts for each FILE, and a total line if
-more than one FILE is specified. A word is a non-zero-length sequence of characters delimited by white space.</td>
+    <td>Print newline, word, and byte counts for each FILE, and a total line if more than one FILE is specified. A word is a non-zero-length sequence of characters delimited by white space.</td>
   </tr>
   <tr>
     <td>`grep`</td>
@@ -1293,7 +1292,7 @@ for f in *.txt
 
 ::: {.notes}
 - Scripts you write that you commonly want to run can be put somehwere sensible and this can be added to your PATH.
-- If there is more time, perhaps look at the `find` command.
+- If there is more time, perhaps look at some other `built-in` commands.
 :::
 
 

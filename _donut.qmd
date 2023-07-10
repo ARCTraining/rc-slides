@@ -3,13 +3,20 @@
 - Activate '`Speaker View`':
   - From the `slide-menu-button` (bars in the lower left), select:
     - `Tools` (at the top) >> `Speaker View` (from the list).
-  - This should open the '`Speaker View`'.
-    - Locate and read the `Notes` (lower right).
+- A new Web browser window should open showing the '`Speaker View`'.
+  - Locate this and read the `Notes Pane` (lower right).
 
 ::: {.notes}
-- The current slide in `Slide View` and `Speaker View` should synchronise:
-  - So moving on to the next slide should do the same in both windows/tabs.
-- `Speaker View` shows a preview of the next slide in the right upper pane above these notes.
-- Move on to the title slide:
-   - Use the down or right keyboard cursor keys or activate the `controls-arrow` that looks like `>` in the lower right of the slide.
+- The default layout of of `Speaker View` has three panes:
+  - `Slide Pane` (left) shows the current slide.
+  - `Notes Pane` are these notes.
+  - `Upcoming Pane` (upper right).
+    - This should show the next slide.
+    - Click `Layout: Default` in the top right to change the Layout if you want to.
+- The current slide in `Slide View` and in the `Speaker View` `Slide Pane` should synchronise:
+  - So changing slide in one should do the same in the other.
+- Move on to the next slide - the `Title Slide`:
+  - Use the down or right keyboard cursor keys or activate the `controls-arrow` that looks like `>` in the lower right of the displayed slide.
+- If you have activated the `Upcoming Pane` the keyboard cursor keys will change what is in there.
+  - To move on in the presentation, activate (click back into) the main `Slide Pane`.
 :::
