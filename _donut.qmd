@@ -1,17 +1,15 @@
 ## Presentation set up guide
-- If using Teams share the Web browser window containing the slides ('`Slide View`').
+- Share the Web browser window containing the slides ('`Slide View`').
 - Activate '`Speaker View`':
   - From the `slide-menu-button` (bars in the lower left), select:
     - `Tools` (at the top) >> `Speaker View` (from the list).
   - This should open the '`Speaker View`'.
     - Locate and read the `Notes` (lower right).
-- If in a classroom, there should be a way to project a different view to what you can see on the lecturn display facing you.
 
 ::: {.notes}
 - The current slide in `Slide View` and `Speaker View` should synchronise:
   - So moving on to the next slide should do the same in both windows/tabs.
 - `Speaker View` shows a preview of the next slide in the right upper pane above these notes.
-- Presentations delivered using Teams.
 - Move on to the title slide:
    - Use the down or right keyboard cursor keys or activate the `controls-arrow` that looks like `>` in the lower right of the slide.
 :::
