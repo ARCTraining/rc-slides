@@ -1284,7 +1284,7 @@ for f in *.txt
 - Create and run a shell script to print out the first line of each file in a directory. Test using the wildcards directory.
 - Hints:
   - Use the `history` command to see the commands you executed.
-  - You could pipe this into tail and direct it into a file and then use the `nano` - a text editor to modify this into a script.
+  - You could pipe this into tail and direct it into a file and then use `nano` to modify this into a script.
   - Modify the file permissions so you can execute the file. 
   - To execute a script called '`script.sh`' issue the following command:
 ```{.bash code-line-numbers=false}
