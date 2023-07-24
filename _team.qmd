@@ -1,33 +1,19 @@
-## Research Computing at Leeds {.smaller}
+## Research Computing {.smaller}
 <!--
   - {{< var rc.team >}}
 -->
-- A centralised [Team](https://arc.leeds.ac.uk/about/team/) and service supporting researchers with research computing platforms, consultancy and training.
-- We have capacity to help with developing funding proposals, recruiting specialists and can provide costed support to deliver research projects.
+- A [Team](https://arc.leeds.ac.uk/about/team/) and service supporting researchers.
+  - Support use of research computing platforms.
+  - Develop and deliver training.
+  - Consultancy:
+    - Help detailing research computing parts of funding proposals.
+    - Help with recruiting specialists.
+    - We may have capacity to provide costed support to deliver research projects.
 - For details please see our [Website]({{< var rc.website >}})
 - For support and queries, please [send us a ticket via the IT Service Desk]({{< var rc.servicedesk >}})
 
 ::: {.notes}
-- Read slide title and first point:
-  - "Research Computing at Leeds is a..."
-- Click the `Team` link.
-- In the `Slide View` Web browser window a new `Team Tab` should open showing the the `Research Computing Team Web Page`
-- Find the `Team Tab` and scroll down to show the current team...
-- Introduce yourself:
-  - "My name is..."
-    - "I joined the team as a Research Software Engineer (RSE)..."
-      - Say when.
-    - "I am leading the training today."
-- Ask helpers to introduce themselves.
-- Close tab that openend and return to the `Speaker View` window.
-- Read the second and third points:
-  - "We have..."
-- Click on the `Website` link.
-- In the `Slide View` window a new `Website Tab` should have open.
-- Find the `Website Tab` and scroll down the `Research Computing Website Home Page` pointing out some sections/features:
-  - Documentation
-  - Search
-  - Contact Us
-- Close the `Website Tab` and return to the `Speaker View` window.
-- Move to the next slide.
+- If you follow a link then a new tab will open in the `Slide View` Web browser.
+  - This will want closing or the `Slide View` activating again as he main tab in the browser.
+- Maybe point out some sections/features on the `Research Computing Website`.
 :::

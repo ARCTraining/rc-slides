@@ -21,8 +21,7 @@ name: Introduction to Linux for HPC
 ![](assets/img/hpc0/training.png)
 
 ::: {.notes}
-- Read slide:
-  - "We are developing and providing training in the following themes..."
+"We provide training about..."
 :::
 
 
@@ -31,22 +30,18 @@ name: Introduction to Linux for HPC
 ![](assets/img/hpc0/portfolio.png)
 
 ::: {.notes}
-- Skipping/hiding slide until there is an updated graphic of what training we are delivering as training courses...
+Slide hidden until an updated graphic of training portfolio is produced...
 :::
 
 
-## Aims {.smaller}
-- Get aquainted.
-- Gain experience and build confidence in using a Linux command line.
-- Prepare for [HPC1: Introduction to High Performance Computing](https://arc.leeds.ac.uk/training/courses/hpc1/) (HPC1).
+## Aims of this training {.smaller}
+- Build your confidence in using command line Linux.
+- Prepare you for [HPC1: Introduction to High Performance Computing](https://arc.leeds.ac.uk/training/courses/hpc1/) (HPC1).
 - Get feedback from you about the training.
 
 ::: {.notes}
-- Read slide:
-  - "Our training aims today are to..."
-- Attempt to use Forms form or Hackpad to get partipants to introduce themselves and why they want to use the HPC.
-- "Please interrupt if you are having difficulty hearing or following the presentation..."
-  - "Please ask questions, or ask for things to be clarified or repeated..."
+- Attempt to use Forms form or Hackpad for introductions.
+- Encourage interruptions and questions.
 :::
 
 
@@ -71,8 +66,8 @@ https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.m
 - Shell scripting basics
 
 ::: {.notes}
-- "This slide shows the syllabus and what we plan to go through in the next 3 hours."
-- "We'll aim to have 5 to 10 minute breaks roughly every 30 minutes."
+- The plan for the next 3 hours.
+- Aim for 5 to 10 minute breaks roughly every 30 minutes.
 :::
 
 
@@ -83,8 +78,7 @@ https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.m
   - Connection
 
 ::: {.notes}
-- "The Website provides details about logging in"
-- "How you login depends on your host Operating System and connection..."
+- The Website provides details about logging in.
 :::
 
 
@@ -96,11 +90,11 @@ https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.m
     - Use `MobaXTerm`
 
 ::: {.notes}
-- "The OSX `terminal` is already a Linux command line interface program:"
-  - "Which may work slightly differently from the HPC Linux command line, but it will be broadly similar."
-- "`MobaXTerm` is software that you should be able to download, install and run without needing help from systems administators."
-  - "It provides a sort of bridge between your host Windows machine and other machines you connect with."
-- Conduct a poll about what host Operating Systems participants expect to use to connect to the HPC.
+- Your local terminal provides something like the command line Linux on ARC3/ARC4
+interface program.
+- `MobaXTerm` is software you can download, install and run without needing help from systems administators.
+  - It provides a sort of bridge between your host Windows machine and other machines you connect with.
+- Maybe conduct a poll about what host Operating Systems participants expect to use to connect to the HPC.
 :::
 
 
@@ -112,10 +106,8 @@ https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.m
     - But connected to the [University VPN](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0014410) is like 'on campus'
 
 ::: {.notes}
-- Read slide:
-  - "In terms of connection: On campus, but using wifi is like being 'off campus'..." 
+- In terms of connection: On campus, but using wifi is like being 'off campus'... 
 - The University Virtual Private Network (VPN) is a type of secure network connection, enabling your computer to access the University network when working remotely.
-- Maybe conduct a poll on what types of connection participants expect to use to connect to the HPC.
 :::
 
 
@@ -140,53 +132,42 @@ https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.m
 
 
 ## The shell interface {.smaller}
-- You login to a ('BASH') 'shell' and your 'Home Directory'
-- A 'shell' is a terminal emulator program.
-  - It is a window with a `prompt` at which textual commands are entered.
-  - Standard Output (std.out) and Standard Error (std.err) streams get displayed in the window.
+- A shell is a terminal emulator program an scripting language.
+- The terminal is a window with a prompt at which textual commands are entered.
+- Standard Output (stdout) and Standard Error (stderr) streams get displayed in the window.
 - During login, your set up is finalised by reading some files that reside in your Home Directory.
-
-::: {.notes}
-- Read slide:
-  - "When you login, you login to..."
-- "We will enter some commands after these next few slides..."
-:::
+- When logged in you will be in your Home Directory.
 
 
 ## What is BASH? {.smaller}
-- An example of what it looks like:
+- A type of shell that for example looks like:
 ![](assets/img/hpc0/bash.png)
-
-::: {.notes}
-- `bash` is a particular type of shell.
-:::
 
 
 ## What is a shell? 1/2 {.smaller}
 ![](assets/img/hpc0/shell.png)
 
 ::: {.notes}
-- "Human users interface with the system via a shell."
-- "A shell communicates with the kernel."
-- "The kernel communicates with computer hardware and provides access the filesystem."
-- "There are a variety of Linux kernels and shells."
+- Human users interface with the system via a shell.
+- A shell communicates with the kernel.
+- The kernel communicates with computer hardware and provides access the filesystem.
+- There are a variety of Linux kernels and shells.
 :::
 
 
 ## What is a shell? 2/2 {.smaller}
-- Shells have '`built-in`' commands:
+- Shells have `built-in` commands:
   - When called from a shell, `built-in` commands execute directly in the shell, without invoking (calling) other programs.
-- Shells call other programs by name, and these are found via the users '`PATH`' - a variable and ordered list of filesystem directories.
-- "On HPC resources at Leeds:
+- Shells call other programs by name, and these are found via the users `PATH`:
+  - A variable and ordered list of filesystem directories.
+- On HPC resources at Leeds:
    Additional Linux command utilities have been added and will be on your `PATH` for convenience.
   - Additional software has been installed.
-    - Some of this is only available via a module system
+    - Some of this is only available via a module system.
 
 ::: {.notes}
-- Read slide
-  - "Shells have built-in commands..."
-- "Details of the module system and how to use it are:"
-  - "Not covered in this course, but in HPC1."
+- Details of the module system and how to use it are covered in HPC1.
+- Details of installing software is covered in HPC2.
 :::
 
 
@@ -194,15 +175,16 @@ https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.m
 ![](assets/img/hpc0/filesystem.png)
 
 ::: {.notes}
-- "The image shows a simplified filesystem."
-  - "We will look at what the actual file system looks like shortly..."
-- "A Linux 'Directory' is like a Windows 'Folder':"
-  - "A thing that can hold files and sub-folders/sub-directories."
-- "Directories are arranged in a heirarchy."
-  - "The top directory is the 'Root Directory'."
-- "Each user has a 'Home Directory':"
-  - "Where they login to."
-  - "Where their profile is stored."
+- The image shows a simplified filesystem.
+  - We will look at the actual file system shortly...
+- A Linux `Directory` is like a Windows `Folder`:
+  - A thing that can hold files and sub-folders/sub-directories.
+- Directories are arranged in a heirarchy.
+  - The top directory is the `Root Directory`.
+- Each user has a `Home Directory`:"
+  - Where they login to.
+  - Where their profile is stored.
+- Linux has `symlinks` where Windows has `shortcuts`.
 :::
 
 
@@ -210,8 +192,8 @@ https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.m
 ![](assets/img/hpc0/slash.png)
 
 ::: {.notes}
-- "The file path separator in Linux is the forward slash."
-- "The file path separator in Windows is the back slash."
+- The file path separator in Linux is the forward slash.
+- The file path separator in Windows is the back slash.
 :::
 
 
@@ -219,11 +201,10 @@ https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.m
 ![](assets/img/hpc0/filesystem-absolute.png)
 
 ::: {.notes}
-- "The slide shows an absolute file path."
-- "The 'Root Directory' is referred to by a back slash."
-  - "All absolute file paths start from the 'Root Directory'..." 
-- Perhaps explain the file path further.
-- "Linux does not have drive letters like Windows."
+- The slide shows an absolute file path.
+- The `Root Directory` is referred to by a back slash.
+  - All absolute file paths start from the `Root Directory`
+- Linux does not have drive letters like Windows.
 :::
 
 
@@ -231,9 +212,8 @@ https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.m
 ![](assets/img/hpc0/filesystem-relative.png)
 
 ::: {.notes}
-- "The slide shows a relative file path."
-- "'`..`' refers to one level up in the directory heirarchy."
-- Perhaps explain the file path further.
+- The slide shows a relative file path.
+- `..` refers to one level up in the directory heirarchy.
 :::
 
 
@@ -243,57 +223,33 @@ https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.m
 [user@host ~]$
 ```
 - Only:
-  - '`user`' is your username
-  - '`host`'
-    - starts '`login1.`' or '`login2.`'
-    - and ends '`arc3`' or '`arc4`'
-- The '`~`' (tilda) in the prompt indicates that you are in your Home Directory.
-- The '`$`' symbol is the end of the prompt and is where commands can be typed and entered.
+  - `user` is your username
+  - `host`
+    - starts `login1.` or `login2.`
+    - and ends `arc3` or `arc4`
+- The `~` (tilde) in the prompt indicates that you are in your Home Directory.
+- The `$` (dollar) symbol is the end of the prompt and is where commands get typed/entered.
 
 ::: {.notes}
-- Read slide:
-  - "Upon login..."
-- "You are always in a directory:"
-  - "The 'Working Directory'"
-  - "By default this is where things are created or read from..."
 - Is it time for a break 1?
 - Users can modify the prompt and set different colours and languages...
 :::
 
 
 ## First commands {.smaller}
-\
-\
-<table>
-  <tr>
-    <th>Command</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>`pwd`</td>
-    <td>Print the current working directory</td>
-  </tr>
-  <tr>
-    <td>`man`</td>
-    <td>Load the manual</td>
-  </tr>
-  <tr>
-    <td>`ls`</td>
-    <td>List the contents of a directory</td>
-  </tr>
-  <tr>
-    <td>`mkdir`</td>
-    <td>Make a new directory</td>
-  </tr>
-  <tr>
-    <td>`cd`</td>
-    <td>Change directory</td>
-  </tr>
-</table>
+| Command | Description |
+| :--- | :--- |
+| `pwd` | Print the current working directory |
+| `man` | Load the manual |
+| `ls` | List the contents of a directory |
+| `mkdir` | Make a new directory |
+| `cd` | Change directory |
 
 ::: {.notes}
-- "The table contains 'safe commands' - they don't change anything. So using them should not cause any damage..."
-- "We will look at these in turn now..."
+- The table contains safe commands
+  - These don't change anything.
+  - Using them should not cause any damage!
+- These are looked at in turn.
 :::
 
 
@@ -304,13 +260,11 @@ https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.m
 /home/homeXX/user
 ```
 - When you run this the output will be slightly different:
-  - '`XX`' should be a number like '`01`' or '`02`'
-  - '`user`' should be your username
+  - `XX` should be `01` or `02`
+  - `user` should be your username
 
 ::: {.notes}
-- Read slide:
-  - "PWD is a command to print..."
-- "Run from the user `Home directory` PWD reports the absolute path of the user `Home Directory`."
+- `pwd` is pronounced `pee-double-you-dee`.
 :::
 
 
@@ -350,10 +304,6 @@ pwd: pwd [-LP]
     cannot be read.
 ```
 
-::: {.notes}
-- "Over to you to try this first exercise..."
-:::
-
 
 ## `--help` and `man` {.smaller}
 - `--help` is a command option that prints help about using that command.
@@ -363,10 +313,8 @@ pwd: pwd [-LP]
 - Use `<space_bar>` to page through.
 
 ::: {.notes}
-- Read slide:
-  - "Minus minus help..."
+- `--help` is pronounced `minus-minus-help`.
 :::
-
 
 ## `--help` and `man` demo {.smaller}
 
@@ -405,9 +353,8 @@ man ls
 ```
 
 ::: {.notes}
-- "Over to you to try this exercise..."
 - Maybe conduct a poll to find out who is ready to move on.
-- Is it time for a break 1?
+- Is it time for a break?
 :::
 
 
@@ -415,14 +362,12 @@ man ls
 - A command to list the contents of a directory.
 - There are many options for `ls`
   - The `-a` option will list all the contents of a directory.
-    - Files and directories starting with '`.`' are hidden by default.
+    - Files and directories starting with `.` are hidden by default.
   - The `-l` option will list each item line by line with added details.
   - The `-H` option will report sizes in a more human readable format.
 
-
 ::: {.notes}
-- (Read slide)
-  - "ls is a command..."
+- `ls` is pronounced `el-ess`.
 :::
 
 
@@ -435,11 +380,6 @@ ls -a -l
 ls -l -a
 ```
 
-::: {.notes}
-- (Read slide)
-  - "Options can be..."
-:::
-
 
 ## `ls` 3/4 {.smaller}
 ```{.bash code-line-numbers=false}
@@ -451,19 +391,18 @@ drwxr-xr-x     3 root root    4096 MMM DD hh:mm ..
 ```
 
 ::: {.notes}
-- "Entering '`ls -al`' should usually result in something like what is shown."
-- "The `...` shown in the output may be many more lines of output depending on what was listed."
-- "The first line is different to the others."
-  - "The number after total is a complicated metric to do with how linked the thing being listed is."
-- "The first part of other output lines detail permissions:"
-  - "Permissions and other details listed are explained later..."
-- "The last part of other output lines sre the names of the things listed."
-  - "'`.`' would be the directory listed."
-  - "'`..`' would be the parent of that directory."
-- "Details will look a bit different for listing you do."
-  - "For instance:"
-    - "'`user`' should be your username."
-    - "'`MMM`' would be three letters representing the month a file was created e.g. '`Jun`'."
+- Entering `ls -al` (pronounced `el-ess-minus-aye-el`) should usually result in something like what is shown.
+- The `...` shown in the slide may be many more lines of output depending on what was listed.
+- The first line is different to the others.
+  - The number after total is a complicated metric to do with how linked the thing being listed is.
+- The first part of other output lines detail permissions:
+  - Permissions and other details listed are explained later...
+- The last part of other output lines sre the names of the things listed.
+  - `.` is the directory listed.
+  - `..` is the parent of that directory.
+- Details will look different to what is shown in the slide, for instance:
+  - `user`: your username."
+  - `MMM`: three letters representing the month a file was created e.g. `Jun`.
 :::
 
 
@@ -474,8 +413,8 @@ drwxr-xr-x     3 root root    4096 MMM DD hh:mm ..
 ```
 
 ::: {.notes}
-- "Issuing an '`ls -al ~`' should list the details of everything in your Home Directory."
-  - "This shold reveal any 'hidden' files and directories..."
+- `ls -al ~` should list the details of everything in your Home Directory.
+  - Including any `hidden` files and directories..."
 :::
 
 
@@ -484,13 +423,13 @@ drwxr-xr-x     3 root root    4096 MMM DD hh:mm ..
 ```{.bash code-line-numbers=false}
 ls /
 ```
-- The output lists what is in the Root directory.
+- The output lists what is in the Root Directory.
 - Enter:
 ```{.bash code-line-numbers=false}
 ls ~
 ```
-- The output lists everything that is in your home directory that is not hidden.
-  - For new users, this is nothing - not even a '`README.txt`'!
+- The output lists everything that is in your Home Directory that is not hidden.
+  - For new users, this is nothing - not even a `README`!
 - Enter:
 ```{.bash code-line-numbers=false}
 ls -al ~
@@ -498,7 +437,7 @@ ls -al ~
 - The output lists everything in your Home Directory.
 
 ::: {.notes}
-- "Over to you to try this exercise..."
+- Maybe poll progress.
 :::
 
 
@@ -512,11 +451,9 @@ ls -al ~
 
 ::: {.notes}
 - (Read slide)
-  - "The .bash_history file is a..."
-- "You may have other hidden files and folders and more may get added as you use commands and applications."
-- "It is important to know these exist so as not to accidentally delete them."
-- "Only modify them carefully if at all!"
-  - "This means by creating a backup copy before trying things."
+- Other hidden files and folders get added as you use commands and applications.
+  - These often contain configuration details.
+- It is important to know these exist so as not to accidentally delete them.
 :::
 
 
@@ -533,14 +470,13 @@ mkdir: cannot create directory ‘test’: File exists
 ```
 
 ::: {.notes}
-- (Read slide)
-  - "mkdir is a command to..."
+- `mkdir` is pronounced `muck-der`.
 :::
 
 
 ## `mkdir` 2/2 {.smaller}
-- The '`-p`' option allows for creating parent directories.
-- The following creates the directory '`test2`' and in this the directory '`test3`'.
+- The `-p` option allows for creating parent directories.
+- The following creates the directory `test2` and in this the directory `test3`.
 ```{.bash code-line-numbers=false}
 mkdir -p test2/test3
 ```
@@ -550,11 +486,6 @@ mkdir -p test2/test3
 [user@host ~]$ mkdir /test
 mkdir: cannot create directory ‘/test’: Permission denied
 ```
-
-::: {.notes}
-- (Read slide)
-  - "The mkdir -p option allows for creating parent directories...."
-:::
 
 
 ## `cd` {.smaller}
@@ -576,8 +507,7 @@ mkdir: cannot create directory ‘/test’: Permission denied
   - `cd` with no arguments or `cd ~`
 
 ::: {.notes}
-- (Read slide)
-  - "cd is a command..."
+- `cd` is pronounced `see-dee`.
 :::
 
 
@@ -593,7 +523,7 @@ mkdir: cannot create directory ‘/test’: Permission denied
 - Check if there is a directory with your user name in `/nobackup/` and if not create it.
 
 ::: {.notes}
-- "Over to you for another quick exercise"
+- Maybe poll who is ready to move on.
 :::
 
 
@@ -602,8 +532,6 @@ mkdir: cannot create directory ‘/test’: Permission denied
 - Any questions?
 
 ::: {.notes}
-- Read slide:
-  - "You can..."
 - Is it time for a break?
 :::
 
@@ -627,7 +555,7 @@ mkdir: cannot create directory ‘/test’: Permission denied
 - The prompt cursor does not have to be at the end of what is written at the prompt to submit what is there to the interpreter (run it).
 - The tab key `<Tab>` can be used to help autocomplete file paths.
   - Press `<Tab>` repeatedly two or three times to reveal optional paths.
-    - This can make your computer output an audible 'beep'!
+    - This can make your computer output an audible "bleep"!
 - Copy and paste using the mouse:
   - Highlight by left-click-hold and drag mouse.
   - Copy with right click then select copy option.
@@ -635,7 +563,7 @@ mkdir: cannot create directory ‘/test’: Permission denied
   - Or paste highlighted text using third mouse button.
 
 ::: {.notes}
-- `<ctrl> + <c>` copies in Windows, but cancels in Linux!
+- `<ctrl> + <c>` (pronounced `control-see`) copies in Windows, but cancels in Linux!
 :::
 
 
@@ -651,35 +579,13 @@ mkdir: cannot create directory ‘/test’: Permission denied
 
 
 ## More commands {.smaller}
-\
-\
-<table>
-  <tr>
-    <th>Command</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>`mv`</td>
-    <td>Move a file or directory (can be used to rename)</td>
-  </tr>
-  <tr>
-    <td>`cp`</td>
-    <td>Copy a file or directory - using the `-r` option</td>
-  </tr>
-  <tr>
-    <td>`touch`</td>
-    <td>Access or create a file or directory.</td>
-  </tr>
-  <tr>
-    <td>`rmdir`</td>
-    <td>Remove (delete) a directory</td>
-  </tr>
-  <tr>
-    <td>`rm`</td>
-    <td>Remove (delete) a file or a directory - using the `-r` option</td>
-  </tr>
-</table>
-\
+| Command | Description |
+| :--- | :--- |
+| `mv` | Move a file or directory (can be used to rename) |
+| `cp` | Copy a file or directory - using the `-r` option |
+| `touch` | Access or create a file or directory |
+| `rmdir` | Remove (delete) a directory |
+| `rm` | Remove (delete) a file or a directory - using the `-r` option |
 
 ::: {.notes}
 - Perhaps warn users to take more care with these!
@@ -692,6 +598,11 @@ mkdir: cannot create directory ‘/test’: Permission denied
 ```{.bash code-line-numbers=false}
 mv test test_renamed
 ```
+
+::: {.notes}
+- `mv` is pronounced `em-vee`.
+:::
+
 
 ## `cp` {.smaller}
 - A command to copy a file or directory
@@ -709,6 +620,10 @@ cp: omitting directory 'test'
 cp -r test test_copy
 ```
 
+::: {.notes}
+- `cp` is pronounced `see-pee`.
+:::
+
 
 ## `touch`, `>`, `>>` {.smaller}
 - `touch` is a command that touches will either:
@@ -723,8 +638,7 @@ ls > ls.out
 - '`>>`' can be used in place of '`>`' to append to rather than overwrite the file.
 
 ::: {.notes}
-- Maybe point out:
-  - Multiple processes writing to the same file simultaneously can make a mess!
+- Maybe point out that multiple processes writing to the same file simultaneously can make a mess!
 :::
 
 
@@ -745,20 +659,25 @@ rmdir: failed to remove 'test': Directory not empty
 rmdir: failed to remove '/root': Permission denied
 ```
 
+::: {.notes}
+- `rmdir` is pronounced `rem-der` or `are-em-der`.
+:::
+
 
 ## `rm` {.smaller}
 - A command to remove (delete) files and directories.
-- The following will remove a file called '`test`':
+- The following will remove a file called `test`:
 ```{.bash code-line-numbers=false}
 rm test
 ```
-- To delete a directory and all contents the '`-r`' option can be used.
-- The '`-i`' option allows for interactivity so the user can choose what to delete.
-- The '`-f`' option forces.
-- Take care with `rm`, especially combined with '`-r`' and '`-f`' options.
+- To delete a directory and all contents the `-r` option can be used.
+- The `-i` option allows for interactivity so the user can choose what to delete.
+- The `-f` option forces.
+- Take care with `rm`, especially combined with `-r` and `-f` options.
 
 ::: {.notes}
 - Take care especially using wildcards, as it is all too easy to delete everything!
+  - We will look at wildcards a bit later...
 :::
 
 
@@ -767,6 +686,7 @@ rm test
 - Offer a demo?
 :::
 
+
 ## `mv`, `cp`, `rmdir`, `rm`, `touch`, `>`, `>>` exercise {.smaller}
 - Create some directories and files as follows:
 ```{.bash code-line-numbers=false}
@@ -774,12 +694,12 @@ mkdir -P test0/test01
 mkdir test0/test02
 touch test0/test01/test_file
 ```
-- Copy '`test0/test01`' into '`test0/test03`'
-- Move '`test0/test02`' into '`test0/test04`'
-- Delete '`test0/test03`'
-- Direct the output of '`ls`' into '`ls.out`'
-- Append the output of '`ls -al`' into '`ls.out`'
-- Next we will be using `cat` and `less` to look at the contents of '`ls.out`'...
+- Copy `test0/test01` into `test0/test03`
+- Move `test0/test02` into `test0/test04`
+- Delete `test0/test03`
+- Direct the output of `ls` into `ls.out`
+- Append the output of `ls -al` into `ls.out`
+- Next we will be using `cat` and `less` to look at the contents of `ls.out`...
   - So if you are waiting then look into using these commands...
 
 
@@ -792,49 +712,21 @@ touch test0/test01/test_file
 
 
 ## Yet more commands {.smaller}
-\
-<table>
-  <tr>
-    <th>Command</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>`cat`</td>
-    <td>Concatenate and print.</td>
-  </tr>
-  <tr>
-    <td>`less`</td>
-    <td>Open into a paginated reader view</td>
-  </tr>
-  <tr>
-    <td>`sort`</td>
-    <td>Sort lines</td>
-  </tr>
-  <tr>
-    <td>`cut`</td>
-    <td>Cut lines based on a given character</td>
-  </tr>
-  <tr>
-    <td>`head`</td>
-    <td>Print the first lines of a file (default 10)</td>
-  </tr>
-  <tr>
-    <td>`tail`</td>
-    <td>Print the last lines of a file (default 10)</td>
-  </tr>
-  <tr>
-    <td>`wc`</td>
-    <td>Print newline, word, and byte counts for each FILE, and a total line if more than one FILE is specified. A word is a non-zero-length sequence of characters delimited by white space.</td>
-  </tr>
-  <tr>
-    <td>`grep`</td>
-    <td>Filter lines</td>
-  </tr>
-  <tr>
-    <td>`sed`</td>
-    <td>Stream editor</td>
-  </tr>
-</table>
+| Command | Description |
+| :--- | :--- |
+| `cat` | Concatenate and print |
+| `less` | Open into a paginated reader view |
+| `sort` | Sort lines |
+| `cut` | Cut lines based on a given character |
+| `head` | Print the first lines of a file (default 10) |
+| `tail` | Print the last lines of a file (default 10) |
+| `wc` | Print newline, word, and byte counts for each FILE, and a total line if more than one FILE is specified. A word is a non-zero-length sequence of characters delimited by white space |
+| `grep` | Filter lines |
+| `sed` | Stream editor |
+
+::: {.notes}
+- Let's look at these in turn...
+:::
 
 
 ## git clone exercise {.smaller}
@@ -843,7 +735,7 @@ touch test0/test01/test_file
 git clone https://github.com/ARCTraining/shell-training/
 ```
 - git is a distributed version control system
-- Change directory into the directory called 'shell-training'.
+- Change directory into the directory called `shell-training`.
 - List the directory contents.
 
 
@@ -853,7 +745,7 @@ git clone https://github.com/ARCTraining/shell-training/
 - The `sort` command will sort lines (by default alphabetically).
 - The `cut` command will cut lines based on a given character.
 - Commands that create an output stream can have the output piped into another command that can process the stream using the symbol '`|`'. 
-  - For example two files '`test`' and '`test2`' can be concatenated, sorted alphabetically and piped into head as follows: 
+  - For example two files `test` and `test2` can be concatenated, sorted alphabetically and piped into head as follows: 
 ```{.bash code-line-numbers=false}
 cat test test2 | sort | head
 ```
@@ -863,6 +755,7 @@ cat test test2 | sort | head
 ::: {.notes}
 - Offer a demo?
 :::
+
 
 ## `cat`, `sort` and `cut` exercise {.smaller}
 
@@ -934,13 +827,13 @@ sort *.txt | sed -n 50p
 ```{.bash code-line-numbers=false}
 sed 's/foo/bar/'
 ```
-- This program replaces all instance of 'foo' with 'bar' on every line.
+- This program replaces all instance of `foo` with `bar` on every line.
 - Beware of `sed` as it can modify files.
 
 
 ## `grep`
 - A command to print all lines containing or not containing a string of characters.
-- The following will stream out all input lines containing 'foo':
+- The following will stream out all input lines containing `foo`:
 ```{.bash code-line-numbers=false}
 grep foo
 ```
@@ -949,10 +842,12 @@ grep foo
 grep -v foo
 ```
 
+
 ## `sed` and `grep` demo 
 ::: {.notes}
 - Offer a demo?
 :::
+
 
 ## data challenge exercise {.smaller}
 
@@ -1041,7 +936,7 @@ drwx------ 3 <owner> <group> <size> <date> <time> ..
 ## Permissions 4/4 {.smaller}
 - Permissions may be changed using the `chmod` command.
 - Specific permissions can be granted or removed or all permissions can be specified.
-- The following would set permissions ```-rwx------``` to '`test0/test/test-file`':
+- The following would set permissions `-rwx------` to `test0/test/test-file`:
 ```{.bash code-line-numbers=false}
 chmod 700 test0/test/test-file
 
@@ -1058,7 +953,7 @@ chmod 700 test0/test/test-file
 chmod u+x test0/test/test-file
 ```
 - octal value = read (4) + write (2) + execute (1)
-- "Later on we will set permissions on a file to execute it."
+- A later exercise will require adding execute permissions for a file...
 :::
 
 
@@ -1084,7 +979,7 @@ var=1
 echo $var
 ```
 - The variable `var` is set equal to the number `1`.
-- `echo` is a command that will send what comes after it to the Standard Output (`std.out`).
+- `echo` is a command that will send what comes after it to the Standard Output (stdout).
 - The value of the variable is accessed using the `$` symbol followed by the name of the variable.
 - The command `printenv` will print all the variables in use.
 
@@ -1114,7 +1009,7 @@ for ((i=2;i<=265;i=i*2)) do echo $i; done
 ```{.bash code-line-numbers=false}
 for f in *; do echo $f; done
 ```
-- Where there is a '`;`' there can be a new line:
+- Where there is a `;` there can be a new line:
 ```{.bash code-line-numbers=false}
 for f in *
  do echo $f
@@ -1127,7 +1022,7 @@ for f in *
 ::: {.panel-tabset}
 
 ### Problem
-- Use a for loop to create five directories called `calculation_?`, where `?` is a number. 
+- Use a for loop to create five directories called `calculation_?`, where `?` is a number.
 
 ### Solution
 - For loop with an iterator syntax
@@ -1137,7 +1032,7 @@ do
 mkdir calculation_$i
 done
 ```
-- '`i++`' is shorthand for '`i=i+1`'
+- `i++` is shorthand for `i=i+1`
 - For loop with a sequence syntax
 ```{.bash code-line-numbers=false}
 for i in {1..5}
@@ -1185,6 +1080,14 @@ done
 `ls a[12].txt`
 ```
 
+::: {.notes}
+- `*` is pronounced `star`.
+- `?` is pronounced `question-mark`.
+- `[` is pronounced `start-square-bracket`
+- `]` is pronounced `end-square-bracket`
+:::
+
+
 
 ## Wildcards exercise {.smaller}
 
@@ -1230,11 +1133,6 @@ for f in *.txt
 - This is because `>` overwrites the output of cat to `new-file.txt` for each element in the sequence.
 - Using `>>` instead would result in each file's content being appended to the end of `new-file.txt`
 
-
-2.  - The content of `new-file.txt` will be the same as `xyz.txt`
-    - On each iteration the contents of a different file are written to `new-file.txt`, overwriting whatever was written on the previous iteration
-    - This is because we used `>` to write the output of cat to `new-file.txt`
-    - Using `>>` instead would result in each file's content being appended to the end of `new-file.txt`
 :::
 
 
@@ -1255,7 +1153,7 @@ for f in *.txt
 ## Shell Scripts {.smaller}
 - These are simple text files.
   - By convention the filename ends `.sh`.
-- The file should start with a 'shebang' line which tells the Linux system what command to run:
+- The file should start with a `shebang` line which tells the Linux system what command to run:
 ```{.bash code-line-numbers=false}
 #!/bin/bash
 ```
@@ -1279,7 +1177,7 @@ for f in *.txt
   - Pipe the `history` output into `tail`.
   - Direct the ouput into a file and then use `nano` to modify this into a script.
   - Modify the file permissions so you can execute the file.
-  - If you named the script '`script.sh`' issue the following command to run it:
+  - If you named the script `script.sh` issue the following command to run it:
 ```{.bash code-line-numbers=false}
 ./script.sh
 ```
