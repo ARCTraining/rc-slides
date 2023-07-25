@@ -34,23 +34,26 @@ Slide hidden until an updated graphic of training portfolio is produced...
 :::
 
 
-## Aims of this training {.smaller}
-- Build your confidence in using command line Linux.
-- Prepare you for [HPC1: Introduction to High Performance Computing](https://arc.leeds.ac.uk/training/courses/hpc1/) (HPC1).
-- Get feedback from you about the training.
+## Aims of this training
+- Build your confidence in using command line Linux
+- Prepare you for [HPC1: Introduction to High Performance Computing](https://arc.leeds.ac.uk/training/courses/hpc1/)
+- Get feedback from you about the training
 
 ::: {.notes}
-- Attempt to use Forms form or Hackpad for introductions.
+- Attempt to use `Forms` or `Hackpad` for introductions.
 - Encourage interruptions and questions.
 :::
 
 
-## Syllabus {.smaller}
+## Syllabus
 <!--
 This should match what is in:
 https://github.com/ARCLeeds/arcleeds.github.io/tree/master/_data/training_courses.yml
 https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.md
 -->
+:::: {.columns}
+
+::: {.column}
 - Logging in
 - Entering commands
 - Finding out about commands
@@ -58,12 +61,18 @@ https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.m
 - Commands to list, create, copy, move and delete files
 - Hidden files
 - Command history
+:::
+
+::: {.column}
 - Control key combinations
 - Editing files
 - File permissions
 - Commands to explore and filter data
 - Wildcards
 - Shell scripting basics
+:::
+
+::::
 
 ::: {.notes}
 - The plan for the next 3 hours.
@@ -71,41 +80,32 @@ https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.m
 :::
 
 
-## Logging in 1/3
+## Logging in
 - [ARC Documentation on Logging on]({{< var rc.login >}})
 - How you login depends on your:
-  - Host Operating System
-  - Connection
 
-::: {.notes}
-- The Website provides details about logging in.
+:::: {.columns}
+
+::: {.column}
+### Host Operating System
+- OSX/Linux:
+  - Use `terminal`
+- Windows:
+  - Use `MobaXTerm`
 :::
 
+::: {.column}
+### Connection
+- On campus (wireless is like 'off campus')
+- Off campus (connected to the [University VPN](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0014410) is like 'on campus')
+:::
 
-## Logging in 2/3
-- Host Operating System:
-  - OSX or Linux:
-    - Use `terminal`
-  - Windows:
-    - Use `MobaXTerm`
+::::
 
 ::: {.notes}
-- Your local terminal provides something like the command line Linux on ARC3/ARC4
-interface program.
 - `MobaXTerm` is software you can download, install and run without needing help from systems administators.
   - It provides a sort of bridge between your host Windows machine and other machines you connect with.
 - Maybe conduct a poll about what host Operating Systems participants expect to use to connect to the HPC.
-:::
-
-
-## Logging in 3/3
-- Connection
-  - On campus
-    - Wireless is like 'off campus'
-  - Off campus
-    - But connected to the [University VPN](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0014410) is like 'on campus'
-
-::: {.notes}
 - In terms of connection: On campus, but using wifi is like being 'off campus'... 
 - The University Virtual Private Network (VPN) is a type of secure network connection, enabling your computer to access the University network when working remotely.
 :::
@@ -120,70 +120,88 @@ interface program.
 
 
 ## Logging in exercise
-- Please login.
+- Please login
 
 ::: {.notes}
 - Conduct a poll to find out who is logged on.
 - Organise help if necessary...
   - Maybe suggest one-to-ones with helpers...
 - Those that cannot login can still follow along for a bit...
-- Is it time for a break 1?
+- Is it time for a break?
 :::
 
 
-## The shell interface {.smaller}
-- A shell is a terminal emulator program an scripting language.
-- The terminal is a window with a prompt at which textual commands are entered.
-- Standard Output (stdout) and Standard Error (stderr) streams get displayed in the window.
-- During login, your set up is finalised by reading some files that reside in your Home Directory.
-- When logged in you will be in your Home Directory.
+## What is a shell? 1/5
+- A shell is a terminal emulator program and scripting language
+- The terminal is a window on the screen with a prompt at which textual commands are entered and where Standard Output (stdout) and Standard Error (stderr) streams get displayed
+- During login, a user set up is finalised by reading files from the user Home Directory
+- When logged in the user is in their Home Directory
+
+::: {.notes}
+A terminal used to be all there was to interface between a human and the machine in early computer systems.
+:::
 
 
-## What is BASH? {.smaller}
-- A type of shell that for example looks like:
+## What is a shell? 2/5
+- BASH (bash) is a type of shell
 ![](assets/img/hpc0/bash.png)
 
+::: {.notes}
+The image shows what it looked like after a user issued a couple of commands in a bash.
+:::
 
-## What is a shell? 1/2 {.smaller}
+
+## What is a shell? 3/5
+<!--
+Euler diagrams are not yet supported in Mermaid, but this feature might be coming: https://github.com/mermaid-js/mermaid/issues/2583
+-->
 ![](assets/img/hpc0/shell.png)
 
 ::: {.notes}
-- Human users interface with the system via a shell.
-- A shell communicates with the kernel.
-- The kernel communicates with computer hardware and provides access the filesystem.
-- There are a variety of Linux kernels and shells.
+- Human users interface with the system via a shell
+- A shell communicates with the kernel
+- The kernel communicates with computer hardware and provides access the filesystem
+- There are a variety of Linux kernels and shells
 :::
 
 
-## What is a shell? 2/2 {.smaller}
+## What is a shell? 4/5
 - Shells have `built-in` commands:
-  - When called from a shell, `built-in` commands execute directly in the shell, without invoking (calling) other programs.
-- Shells call other programs by name, and these are found via the users `PATH`:
-  - A variable and ordered list of filesystem directories.
-- On HPC resources at Leeds:
-   Additional Linux command utilities have been added and will be on your `PATH` for convenience.
-  - Additional software has been installed.
-    - Some of this is only available via a module system.
+  - When called from a shell, these run without invoking (calling) other programs
+- Shells call other programs by name, and these are looked for following a `PATH`
+- `PATH` is a variable and ordered list of filesystem directories
+- Each user has a `PATH` set upon login
+
+
+## What is a shell? 5/5
+- On HPC resources at Leeds additional Linux command utilities are available
+- Additional software has also been installed and made available via a module system
+- This is all accessed via the user shell
 
 ::: {.notes}
-- Details of the module system and how to use it are covered in HPC1.
-- Details of installing software is covered in HPC2.
+- Using the module system is covered in HPC1.
 :::
 
 
 ## Filesystem basics {.smaller}
+<!-- Mermaid is not ready for this yet, but it is supposedly in development: https://github.com/mermaid-js/mermaid/issues/2645
+``` {mermaid}
+directories
+  file1: f
+  directory1: d
+    file2: file
+    file3: file
+    directory2: d
+  directory3: dir
+```
+-->
 ![](assets/img/hpc0/filesystem.png)
 
 ::: {.notes}
 - The image shows a simplified filesystem.
-  - We will look at the actual file system shortly...
-- A Linux `Directory` is like a Windows `Folder`:
-  - A thing that can hold files and sub-folders/sub-directories.
+- A Linux Directory is like a Windows Folder
 - Directories are arranged in a heirarchy.
   - The top directory is the `Root Directory`.
-- Each user has a `Home Directory`:"
-  - Where they login to.
-  - Where their profile is stored.
 - Linux has `symlinks` where Windows has `shortcuts`.
 :::
 
@@ -217,26 +235,23 @@ interface program.
 :::
 
 
-## The default prompt {.smaller}
-- Upon login, you should see a prompt that looks like the following:
+## The default prompt
+- Upon login, you should see a prompt that looks like:
 ```{.bash code-line-numbers=false}
 [user@host ~]$
 ```
-- Only:
-  - `user` is your username
-  - `host`
-    - starts `login1.` or `login2.`
-    - and ends `arc3` or `arc4`
-- The `~` (tilde) in the prompt indicates that you are in your Home Directory.
-- The `$` (dollar) symbol is the end of the prompt and is where commands get typed/entered.
+- `user` should be your username
+- `host` should start `login1.` or `login2.` and end `arc3` or `arc4`
+- The `~` (tilde) indicates you are in your Home Directory
+- After the `$` (dollar) is where commands are formulated and entered
 
 ::: {.notes}
-- Is it time for a break 1?
+- Is it time for a break?
 - Users can modify the prompt and set different colours and languages...
 :::
 
 
-## First commands {.smaller}
+## First commands
 | Command | Description |
 | :--- | :--- |
 | `pwd` | Print the current working directory |
@@ -253,8 +268,8 @@ interface program.
 :::
 
 
-## `pwd` {.smaller}
-- A command to print the working directory.
+## `pwd`
+- A command to print the working directory
 ```{.bash code-line-numbers=false}
 [user@host ~]$ pwd
 /home/homeXX/user
@@ -268,25 +283,25 @@ interface program.
 :::
 
 
-## `pwd` demo {.smaller}
+## `pwd` demo
 
 ::: {.notes}
 - Do a quick demo.
-- If using Teams, then remember to share the right windows...
+- If using Teams, take care to share the right windows...
 :::
 
 
 ## `pwd` exercise {.smaller}
-- Type '`pwd`' at the prompt by typing the letters, then press the `<return>` or `<enter>` key.
+- Type '`pwd`' at the prompt by typing the letters, then press the `<return>` or `<enter>` key:
 ```{.bash code-line-numbers=false}
 [user@host ~]$ pwd
 /home/homeXX/user
 ```
-- To print help about the `pwd` command enter:
+- Print help about the `pwd` command:
 ```{.bash code-line-numbers=false}
 pwd --help
 ```
-- The result should look like:
+- It should look like:
 ```{.bash code-line-numbers=false}
 [user@host ~]$ pwd -- help
 pwd: pwd [-LP]
@@ -305,18 +320,19 @@ pwd: pwd [-LP]
 ```
 
 
-## `--help` and `man` {.smaller}
-- `--help` is a command option that prints help about using that command.
-- `man` is a command to bring up the manual.
-- For help using `man`: press the h-key `<h>`.
-- To quit the help about `man`, or `man` itself: press `<q>`.
-- Use `<space_bar>` to page through.
+## `--help` and `man`
+- `--help` is a command option that prints help about using the command
+- `man` is a command to bring up the manual
+- For help using `man`: press the h-key `<h>.
+- To quit the help about `man`, or `man` itself: press `<q>`
+- Use `<space_bar>` to page through
 
 ::: {.notes}
 - `--help` is pronounced `minus-minus-help`.
 :::
 
-## `--help` and `man` demo {.smaller}
+
+## `--help` and `man` demo
 
 ::: {.notes}
 - Demo
@@ -335,7 +351,7 @@ man bash-builtins
 :::
 
 
-## `--help` and `man` exercise {.smaller}
+## `--help` and `man` exercise
 - Enter:
 ```{.bash code-line-numbers=false}
 man man
@@ -358,21 +374,21 @@ man ls
 :::
 
 
-## `ls` 1/4 {.smaller}
-- A command to list the contents of a directory.
-- There are many options for `ls`
-  - The `-a` option will list all the contents of a directory.
-    - Files and directories starting with `.` are hidden by default.
-  - The `-l` option will list each item line by line with added details.
-  - The `-H` option will report sizes in a more human readable format.
+## `ls` 1/4
+- A command to list the contents of a directory
+- There are many options for `ls`:
+  - The `-a` option will list all the contents of a directory
+    - Files and directories starting with `.` are hidden by default
+  - The `-l` option will list each item line by line with added details
+  - The `-H` option will report sizes in a more human readable format
 
 ::: {.notes}
 - `ls` is pronounced `el-ess`.
 :::
 
 
-## `ls` 2/4 {.smaller}
-- Options can be listed in any order or combined - the following are equivallent:
+## `ls` 2/4
+- Options can be listed in any order or combined - the following are equivalent:
 ```{.bash code-line-numbers=false}
 ls -al
 ls -la
@@ -381,7 +397,7 @@ ls -l -a
 ```
 
 
-## `ls` 3/4 {.smaller}
+## `ls` 3/4
 ```{.bash code-line-numbers=false}
 [user@host ~]$ ls -al
 total 8
@@ -402,17 +418,17 @@ drwxr-xr-x     3 root root    4096 MMM DD hh:mm ..
   - `..` is the parent of that directory.
 - Details will look different to what is shown in the slide, for instance:
   - `user`: your username."
-  - `MMM`: three letters representing the month a file was created e.g. `Jun`.
 :::
 
 
-## `ls` 3/3 {.smaller}
-- The following should result in many more lines of output.
+## `ls` 4/4
+- The following should result in many more lines of output:
 ```{.bash code-line-numbers=false}
 [user@host ~]$ ls -al ~
 ```
 
 ::: {.notes}
+  - `MMM`: three letters representing the month a file was created e.g. `Jun`.
 - `ls -al ~` should list the details of everything in your Home Directory.
   - Including any `hidden` files and directories..."
 :::
@@ -423,12 +439,12 @@ drwxr-xr-x     3 root root    4096 MMM DD hh:mm ..
 ```{.bash code-line-numbers=false}
 ls /
 ```
-- The output lists what is in the Root Directory.
+- The output should be a list of what is in the Root Directory.
 - Enter:
 ```{.bash code-line-numbers=false}
 ls ~
 ```
-- The output lists everything that is in your Home Directory that is not hidden.
+- The output should be a list of everything that is in your Home Directory that is not hidden.
   - For new users, this is nothing - not even a `README`!
 - Enter:
 ```{.bash code-line-numbers=false}
@@ -441,25 +457,24 @@ ls -al ~
 :::
 
 
-## Home directory hidden files and folders {.smaller}
+## Home directory hidden files and folders
 - `.bash_history`
-  - A log of commands that you have entered.
+  - A log of commands that you have entered
 - `.bash_profile`
-  - Finalises your user login shell.
+  - Finalises your user login shell
 - `.bashrc`
-  - Finalises your user subshell.
+  - Finalises your user subshell
 
 ::: {.notes}
-- (Read slide)
 - Other hidden files and folders get added as you use commands and applications.
   - These often contain configuration details.
 - It is important to know these exist so as not to accidentally delete them.
 :::
 
 
-## `mkdir` 1/2 {.smaller}
+## `mkdir` 1/2
 - A command to create a directory.
-- The following is for creating a directory named '`test`':
+- The following is for creating a directory named `test`:
 ```{.bash code-line-numbers=false}
 mkdir test
 ```
@@ -474,13 +489,13 @@ mkdir: cannot create directory ‘test’: File exists
 :::
 
 
-## `mkdir` 2/2 {.smaller}
-- The `-p` option allows for creating parent directories.
-- The following creates the directory `test2` and in this the directory `test3`.
+## `mkdir` 2/2
+- The `-p` option allows for creating parent directories
+- The following creates the directory `test2` and in this the directory `test3`
 ```{.bash code-line-numbers=false}
 mkdir -p test2/test3
 ```
-- To create a directory, you must have permission to write to the directory in which it is being created.
+- To create a directory, you must have permission to write to the directory in which it is being created
 - Without write permissions a warning is printed, for example:
 ```{.bash code-line-numbers=false}
 [user@host ~]$ mkdir /test
@@ -488,8 +503,8 @@ mkdir: cannot create directory ‘/test’: Permission denied
 ```
 
 
-## `cd` {.smaller}
-- A command to change directory.
+## `cd` 1/2
+- A command to change directory
 ```{.bash code-line-numbers=false}
 [user@host ~]$ cd test
 [user@host test]$ cd ~
@@ -503,22 +518,29 @@ mkdir: cannot create directory ‘/test’: Permission denied
 [user@host ~]$ cd /root
 -bash: cd: /root: Permission denied
 ```
-- To return to your home directory use:
-  - `cd` with no arguments or `cd ~`
 
 ::: {.notes}
 - `cd` is pronounced `see-dee`.
 :::
 
 
-## `ls`, `mkdir` and `cd` demo {.smaller}
+## `cd` 1/2
+- To return to your home directory use:
+  - `cd` with no arguments or `cd ~`
+
+::: {.notes}
+- To change directories more efficiently users might like to learn about `pushd`, `popd` and `dirs`.
+:::
+
+
+## `ls`, `mkdir` and `cd` demo
 
 ::: {.notes}
 - Demo making, listing and moving into directories.
 :::
 
 
-## `ls`, `mkdir` and `cd` exercise {.smaller}
+## `ls`, `mkdir` and `cd` exercise
 - Use `ls`, `mkdir` and `cd` in your home directory.
 - Check if there is a directory with your user name in `/nobackup/` and if not create it.
 
@@ -527,7 +549,7 @@ mkdir: cannot create directory ‘/test’: Permission denied
 :::
 
 
-## Check point 1 {.smaller}
+## Check point
 - You can only list or change into directories you have permission to read.
 - Any questions?
 
@@ -537,48 +559,45 @@ mkdir: cannot create directory ‘/test’: Permission denied
 
 
 ## Time savers 1/2 {.smaller}
-- `<up>` and `<down>` arrow keys will load previously entered commands into the prompt.
-- The control key `<Ctrl>` can be used in combination with other keys to do things:
-  - `<Ctrl>` and `<c>` will cancel
-    - This can terminate a running command or cancel/clear what is at the prompt.
-  - At the prompt:
-    - `<Ctrl>` and `<a>` will move the cursor to the start of what is at the prompt
-    - `<Ctrl>` and `<e>` will move the cursor to the end of what is at the prompt
-    - `<Ctrl>` and `<r>` will do a reverse search through the history of commands entered at the prompt which can then be edited or entered.
+- `<up>` and `<down>` arrow keys allow you to scroll previously entered commands
+  - `<return>` will enter the command
+- Pressing the control key `<Ctrl>` and another key will often do things:
+  - `<Ctrl> + <c>` will cancel
+    - This can terminate a running command or cancel what is at the prompt
+  - `<Ctrl> + <a>` will move the cursor to the start of what is at the prompt
+  - `<Ctrl> + <e>` will move the cursor to the end of what is at the prompt
+  - `<Ctrl> + <r>` will do a reverse search through the history of commands entered at the prompt which can then be edited or entered
 
 ::: {.notes}
-- An overview of the hidden files and directories is given later...
-:::
-
-
-## Time savers 2/2 {.smaller}
-- The prompt cursor does not have to be at the end of what is written at the prompt to submit what is there to the interpreter (run it).
-- The tab key `<Tab>` can be used to help autocomplete file paths.
-  - Press `<Tab>` repeatedly two or three times to reveal optional paths.
-    - This can make your computer output an audible "bleep"!
-- Copy and paste using the mouse:
-  - Highlight by left-click-hold and drag mouse.
-  - Copy with right click then select copy option.
-  - Paste with right click and select paste option
-  - Or paste highlighted text using third mouse button.
-
-::: {.notes}
+- There are some states where `<Ctrl> + <c>` will not manage to escape you back to the prompt.
 - `<ctrl> + <c>` (pronounced `control-see`) copies in Windows, but cancels in Linux!
 :::
 
 
-## Time savers demo {.smaller}
+## Time savers 2/2 {.smaller}
+- The prompt cursor does not have to be at the end of what is written at the prompt to submit what is there to the interpreter (run it)
+- The tab key `<Tab>` can be used to help autocomplete file paths
+  - Press `<Tab>` repeatedly two or three times to reveal optional paths
+    - This can make your computer output an audible "bleep"
+- Copy and paste using the mouse:
+  - Highlight by left-click-hold and drag mouse
+  - Copy with right click then select copy option
+  - Paste with right click and select paste option
+  - Or paste highlighted text using third mouse button
 
 
-## Time savers exercise {.smaller}
-- Use `<up>` and `<down>` arrow keys to load previously entered commands into the prompt.
-- Use `<Ctrl>` and `<a>`, and `<Ctrl>` and `<e>` to move the cursor between the start and end of what is at the prompt.
-- Use `<Ctrl>` and `<c>` to cancel.
-- Use `<Ctrl>` and `<r>` to reverse search through the history of commands, and select one to edit or run.
-- Use copy and paste to paste a command at the prompt.
+## Time savers demo
 
 
-## More commands {.smaller}
+## Time savers exercise
+- Use `<up>` and `<down>` arrow keys to load previously entered commands into the prompt
+- Use `<Ctrl> + <a>`, and `<Ctrl>` and `<e>` to move the cursor between the start and end of what is at the prompt
+- Use `<Ctrl> + <c>` to cancel
+- Use `<Ctrl> + <r>` to reverse search through the history of commands, and select one to edit or run
+- Use copy and paste to paste a command at the prompt
+
+
+## More commands
 | Command | Description |
 | :--- | :--- |
 | `mv` | Move a file or directory (can be used to rename) |
@@ -592,9 +611,9 @@ mkdir: cannot create directory ‘/test’: Permission denied
 :::
 
 
-## `mv` {.smaller}
+## `mv`
 - A command to move a file or directory (can be used to rename)
-- The following would rename the file/directory '`test`' to '`test_renamed`'
+- The following would rename the file/directory `test` to `test_renamed`
 ```{.bash code-line-numbers=false}
 mv test test_renamed
 ```
@@ -604,18 +623,18 @@ mv test test_renamed
 :::
 
 
-## `cp` {.smaller}
+## `cp`
 - A command to copy a file or directory
-- If '`test`' is a file the following would make a copy named '`test_copy`':
+- If `test` is a file the following would make a copy named `test_copy`:
 ```{.bash code-line-numbers=false}
 cp test test_copy
 ```
-- If '`test`' is a directory a warning would be printed:
+- If `test` is a directory a warning would be printed:
 ```{.bash code-line-numbers=false}
 [user@host ~]$ cp test test_copy
 cp: omitting directory 'test'
 ```
-- The '`-r`' option can copy a directory:
+- The `-r` option can copy a directory:
 ```{.bash code-line-numbers=false}
 cp -r test test_copy
 ```
@@ -625,24 +644,22 @@ cp -r test test_copy
 :::
 
 
-## `touch`, `>`, `>>` {.smaller}
-- `touch` is a command that touches will either:
-  - Create an empty file, or
-  - Update file access and modification times to the current time.
-- the symbol '`>`' can be used to direct the standard output to a file.
+## `touch`, `>`, `>>`
+- `touch` is a command that will create an empty file, or update the time a file was last accessed to the current time
+- the symbol `>` can be used to direct the standard output to a file.
   - This will overwrite any existing file.
-- The following would direct the output of `ls` to a file named '`ls.out`' 
+- The following would direct the output of `ls` to a file named `README`
 ```{.bash code-line-numbers=false}
-ls > ls.out
+ls > README
 ```
-- '`>>`' can be used in place of '`>`' to append to rather than overwrite the file.
+- `>>` can be used in place of `>` to append to rather than overwrite the file
 
 ::: {.notes}
 - Maybe point out that multiple processes writing to the same file simultaneously can make a mess!
 :::
 
 
-## `rmdir` {.smaller}
+## `rmdir`
 - A command to remove (delete) a directory.
 ```{.bash code-line-numbers=false}
 rmdir test
@@ -664,7 +681,7 @@ rmdir: failed to remove '/root': Permission denied
 :::
 
 
-## `rm` {.smaller}
+## `rm`
 - A command to remove (delete) files and directories.
 - The following will remove a file called `test`:
 ```{.bash code-line-numbers=false}
@@ -681,13 +698,13 @@ rm test
 :::
 
 
-## `mv`, `cp`, `rmdir`, `rm`, `touch`, `>`, `>>` demo {.smaller} {visibility="hidden"}
+## `mv`, `cp`, `rmdir`, `rm`, `touch`, `>`, `>>` demo {visibility="hidden"}
 ::: {.notes}
 - Offer a demo?
 :::
 
 
-## `mv`, `cp`, `rmdir`, `rm`, `touch`, `>`, `>>` exercise {.smaller}
+## `mv`, `cp`, `rmdir`, `rm`, `touch`, `>`, `>>` exercise
 - Create some directories and files as follows:
 ```{.bash code-line-numbers=false}
 mkdir -P test0/test01
@@ -699,11 +716,9 @@ touch test0/test01/test_file
 - Delete `test0/test03`
 - Direct the output of `ls` into `ls.out`
 - Append the output of `ls -al` into `ls.out`
-- Next we will be using `cat` and `less` to look at the contents of `ls.out`...
-  - So if you are waiting then look into using these commands...
 
 
-## Check point 2 {.smaller}
+## Check point 2
 - Any questions?
 
 ::: {.notes}
@@ -711,41 +726,41 @@ touch test0/test01/test_file
 :::
 
 
-## Yet more commands {.smaller}
+## Yet more commands
 | Command | Description |
-| :--- | :--- |
+| --- | --- |
 | `cat` | Concatenate and print |
 | `less` | Open into a paginated reader view |
 | `sort` | Sort lines |
 | `cut` | Cut lines based on a given character |
 | `head` | Print the first lines of a file (default 10) |
 | `tail` | Print the last lines of a file (default 10) |
-| `wc` | Print newline, word, and byte counts for each FILE, and a total line if more than one FILE is specified. A word is a non-zero-length sequence of characters delimited by white space |
-| `grep` | Filter lines |
-| `sed` | Stream editor |
+| `wc` | Print newline, word, and byte counts |
+
+: {tbl-colwidths="[25,75]"}
 
 ::: {.notes}
 - Let's look at these in turn...
+- A word is a non-zero-length sequence of characters delimited by white
 :::
 
 
-## git clone exercise {.smaller}
+## git clone exercise
 - Get a copy of some data using the following `git` command:
 ```{.bash code-line-numbers=false}
 git clone https://github.com/ARCTraining/shell-training/
 ```
-- git is a distributed version control system
+- `git` is a distributed version control system
 - Change directory into the directory called `shell-training`.
 - List the directory contents.
 
 
-## `cat`, `sort` and `cut` {.smaller}
-- The `cat` command will concatenate and print to standard output.
-  - This can be used to stream one thing after another.
-- The `sort` command will sort lines (by default alphabetically).
-- The `cut` command will cut lines based on a given character.
-- Commands that create an output stream can have the output piped into another command that can process the stream using the symbol '`|`'. 
-  - For example two files `test` and `test2` can be concatenated, sorted alphabetically and piped into head as follows: 
+## `cat`, `sort` and `cut`
+- `cat` concatenates (stream one thing after another) and prints to standard output
+- `sort` sorts lines (by default alphabetically)
+- `cut` cuts lines based on a given character
+- Commands that create an output stream can have the output piped into another command that can process the stream using the symbol `|`
+  - For example two files `test` and `test2` can be concatenated, sorted alphabetically and piped into head as follows:
 ```{.bash code-line-numbers=false}
 cat test test2 | sort | head
 ```
@@ -770,74 +785,76 @@ Hint: `cut -d ',' -f 2` will split lines around the comma and yield the second f
 ```{.bash code-line-numbers=false}
 cat birds.txt | sort | cut -d ',' -f 2 > sorted-birds.txt
 ```
-\
-\
-- Another option to achieve the same is to use `awk` instead of `cut`:
+Another option uses `awk` instead of `cut`:
 ```{.bash code-line-numbers=false}
 cat birds.txt | sort | awk '{FS=","}{print $2}' > sorted-birds.txt
 ```
-- `awk` is a scripting language used for manipulating data and generating reports.
-  - It supports variables, numeric functions, string functions, and logical operators.
+- `awk` is a scripting language used for manipulating data and generating reports
+  - It supports variables, numeric functions, string functions, and logical operators
   - It allows for setting field seperators of multiple characters, whereas `cut` is restricted to a single character field seperator. 
-- The '`{FS=","}`' part of the `awk` command sets the field seperator to a comma, to set as a space followed by a comma use '`{FS=" ,"}`'
+- The `{FS=","}` part of the `awk` command sets the field seperator to a comma, to set as a space followed by a comma use `{FS=" ,"}`
 
 :::
 
 
-## `head` and `tail` {.smaller}
-- The `head` command prints the first lines of a file.
-- The `tail` command prints the last lines of a file.
-- The default number of lines is 10.
- - This can be changed with the '`-n`' option
+## `head` and `tail`
+- The `head` command prints the first lines of a file
+- The `tail` command prints the last lines of a file
+- The default number of lines is 10
+  - This can be changed with the `-n` option
 
 
-## `head` and `tail` exercise {.smaller}
+## `head` and `tail` exercise
 
 ::: {.panel-tabset}
 
 ### Problem
-- List all the lines in the files in `IOM-animals` directory alphabetically and find the `50th` item.
+List all the lines in the files in `IOM-animals` directory alphabetically and find the `50th` item.
 
 ### Solution
-- Use `head` to get the first 50 lines and `pipe it` to `tail` to get the last one:
+Use `head` to get the first 50 lines and `pipe it` to `tail` to get the last one:
 ```{.bash code-line-numbers=false}
 sort *.txt | head -n 50 | tail -n 1
 ```
-\
-\
-- Another option is to use the `sed` command instead of `head` and `tail`:
+Another option is to use the `sed` command instead of `head` and `tail`:
 ```{.bash code-line-numbers=false}
 sort *.txt | sed -n 50p
 ```
 :::
 
 
-## `sed` 1/2 {.smaller}
-- A program command tool for stream editing.
-- `sed` reads an input stream and produces an output stream.
-  - Internally it has a pattern space and a hold buffer.
-  - Data is read from the input stream until the next newline character and placed into the pattern space.
-  - Operations can be performed on the data in the pattern space.
-  - Data can be exchanged between the pattern space and the hold buffer.
-  - Once all specified operations have been performed, the pattern space is ouput and a newline characer is added at the end.
+## Yet even more commands
+| Command | Description |
+| --- | --- |
+| `grep` | Filter lines |
+| `sed` | Stream editor |
 
 
-## `sed` 2/2 {.smaller}
+## `sed` 1/2
+- A program command tool for stream editing that reads an input stream and produces an output stream
+- Internally it has a pattern space and a hold buffer
+- Data is read from the input stream until the next newline character and placed into the pattern space
+- Operations can be performed on the data in the pattern space
+- Data can be exchanged between the pattern space and the hold buffer
+- Once all specified operations have been performed, the pattern space is ouput and a newline characer is added at the end
+
+
+## `sed` 2/2
 - A simple `sed` program:
 ```{.bash code-line-numbers=false}
 sed 's/foo/bar/'
 ```
-- This program replaces all instance of `foo` with `bar` on every line.
-- Beware of `sed` as it can modify files.
+- This program replaces all instance of `foo` with `bar` on every line
+- Take care using `sed` as it can modify files
 
 
 ## `grep`
-- A command to print all lines containing or not containing a string of characters.
+- A command to print all lines containing or not containing a string of characters
 - The following will stream out all input lines containing `foo`:
 ```{.bash code-line-numbers=false}
 grep foo
 ```
-- The following will stream out all input lines not containing 'foo':
+- The following will stream out all input lines not containing `foo`:
 ```{.bash code-line-numbers=false}
 grep -v foo
 ```
@@ -849,7 +866,7 @@ grep -v foo
 :::
 
 
-## data challenge exercise {.smaller}
+## Data challenge exercise
 
 ::: {.panel-tabset}
 
@@ -862,18 +879,15 @@ grep -v foo
 
 
 ### Solution
-- Using `grep`:
+Using `grep`:
 ```{.bash code-line-numbers=false}
 wc -w values* | sort -n | grep -v '100 values'
 ```
-\
-- Using `head`:
+Using `head`:
 ```{.bash code-line-numbers=false}
 wc -w values* | sort -n | head
 ```
-\
-\
-- Alternatively `awk` could be used:
+Using `awk`:
 ```{.bash code-line-numbers=false}
 wc -w values* | sort -n | awk '$1 != 100 {print $0}'
 ```
@@ -881,10 +895,10 @@ wc -w values* | sort -n | awk '$1 != 100 {print $0}'
 
 
 ## Permissions 1/4 {.smaller}
-- File permissions can be identified using the `ls` command with the `-l` option.
-- By default, the owner has read, write and execute permissions on a directory they create, and read and write (but not execute) permission on a file they create.
-- On ARC4, group and all have no permissions by default.
-- On ARC3, group and all have read permissions on files and also execute permissions on directories by default.
+- File permissions can be identified using the `ls` command with the `-l` option
+- By default, the owner has read, write and execute permissions on a directory they create, and read and write (but not execute) permission on a file they create
+- On ARC4, group and all have no permissions by default
+- On ARC3, group and all have read permissions on files and also execute permissions on directories by default
 ```{.bash code-line-numbers=false}
 [user@host ~]$ mkdirs -p test0/test
 [user@host ~]$ touch test0/test/test-file
@@ -919,34 +933,58 @@ drwx------ 3 <owner> <group> <size> <date> <time> ..
 ```
 
 
-## Permissions 3/4 {.smaller}
+## Permissions 3/4
 ### Type and permissions examples
+:::: {.columns}
+
+::: {.column}
 - ```drwxr-x---```
   - type: directory
-  - owner permissions: read, write and execute
-  - group user permissions: read and execute
-  - all user permissions: none
+  - permissions
+    - owner: read, write, execute
+    - group: read, execute
+    - all: none
+:::
+
+::: {.column}
 - ```-rw-------```
   - type: file
-  - owner permissions: read and write
-  - group user permissions: none
-  - all user permissions: none
+  - permissions
+    - owner: read, write
+    - group: none
+    - all: none
+:::
+
+::::
 
 
 ## Permissions 4/4 {.smaller}
 - Permissions may be changed using the `chmod` command.
-- Specific permissions can be granted or removed or all permissions can be specified.
-- The following would set permissions `-rwx------` to `test0/test/test-file`:
+- Specific permissions can be granted or removed or all permissions can be specified
+- The following would set permissions `-rwx------` to `test.file`:
 ```{.bash code-line-numbers=false}
-chmod 700 test0/test/test-file
-
+chmod 700 test.file
 ```
 - Don't worry about remembering details of how to change permissions.
-- Try to remember that there are 3 levels of permission:
-  - user (owner), group and all
-- Try to remember that there are 3 types of permission:
-  - read, write and execute
+- Try to remember that there are:
 
+:::: {.columns}
+
+::: {.column}
+- 3 levels of permission:
+  - user
+  - group
+  - all
+:::
+
+::: {.column}
+- 3 types of permission:
+  - read
+  - write
+  - execute
+:::
+
+::::
 ::: {.notes}
 - The following would add user (owner) execute permissions.
 ```{.bash code-line-numbers=false}
@@ -957,14 +995,14 @@ chmod u+x test0/test/test-file
 :::
 
 
-## Groups {.smaller} {visibility="hidden"}
-- System users belong to groups (at least one).
-- A user can change the group assignment for a file or directory to other groups they belong to using the command `chgrp`.
-- The command `groups` can be used to print out what groups there are, and what group a user is part of.
-- This can be useful if you want to share files between those in a group on the system.
+## Groups
+- System users belong to groups (at least one)
+- A user can change the group assignment for a file or directory to other groups they belong to using the command `chgrp`
+- The command `groups` can be used to print out what groups there are, and what group a user is part of
+- This can be useful if you want to share files between those in a group on the system
 
 
-## Check point 3 {.smaller}
+## Check point 3
 - Any questons?
 
 ::: {.notes}
@@ -972,7 +1010,7 @@ chmod u+x test0/test/test-file
 :::
 
 
-## Variables {.smaller}
+## Variables
 - Variables are defined and accessed as follows:
 ```{.bash code-line-numbers=false}
 var=1
@@ -984,27 +1022,27 @@ echo $var
 - The command `printenv` will print all the variables in use.
 
 
-## For loop 1/2 {.smaller}
-```
-- Example for loop with iterator syntax to print the numbers 1 to 5:
+## For loop 1/2
+### Examples
+- Iterator syntax to print the numbers 1 to 5:
 ```{.bash code-line-numbers=false}
 for ((i=1;i<=5;i=i+1)) do echo $i; done
 ```
-- Example for loop with sequence syntax to print the numbers 1 to 5:
+- Sequence syntax to print the numbers 1 to 5:
 ```{.bash code-line-numbers=false}
 for i in {1..5}; do echo $i; done
 ```
-- Example for loop with sequence syntax to print even numbers from 2 to 10:
+- Sequence syntax to print even numbers from 2 to 10:
 ```{.bash code-line-numbers=false}
 for i in {2..10..2}; do echo $i; done
 ```
-- Example for loop with iterator syntax to print a geometric series from 2 to 256:
+- Iterator syntax to print a geometric series from 2 to 256:
 ```{.bash code-line-numbers=false}
 for ((i=2;i<=265;i=i*2)) do echo $i; done
 ```
 
 
-## For loop 2/2 {.smaller}
+## For loop 2/2
 - Example for loop to loop through directory contents:
 ```{.bash code-line-numbers=false}
 for f in *; do echo $f; done
@@ -1012,12 +1050,12 @@ for f in *; do echo $f; done
 - Where there is a `;` there can be a new line:
 ```{.bash code-line-numbers=false}
 for f in *
- do echo $f
- done
+do echo $f
+done
 ```
 
 
-## For loops exercise 1 {.smaller}
+## For loops exercise 1
 
 ::: {.panel-tabset}
 
@@ -1044,7 +1082,7 @@ done
 :::
 
 
-## For loops exercise 2 {.smaller}
+## For loops exercise 2
 
 ::: {.panel-tabset}
 
@@ -1062,22 +1100,22 @@ done
 :::
 
 
-## Wildcards {.smaller}
+## Wildcards
 - There are 3 types of wildcard in Linux:
   - `*` can represent anything.
   - `?` can represent any single character.
   - `[]` can represent any single characters detailed in the square brackets.
 - The following will list all files starting with a:
 ```{.bash code-line-numbers=false}
-`ls a*`
+ls a*
 ```
 - The following will list all files starting with `a` and ending `.txt` that have one character between these:
 ```{.bash code-line-numbers=false}
-`ls a?.txt`
+ls a?.txt
 ```
 - The following will list all files starting with `a` and ending `.txt` that have any other string with a `0` or a `1` character between these:
 ```{.bash code-line-numbers=false}
-`ls a[12].txt`
+ls a[12].txt
 ```
 
 ::: {.notes}
@@ -1089,7 +1127,7 @@ done
 
 
 
-## Wildcards exercise {.smaller}
+## Wildcards exercise
 
 ::: {.panel-tabset}
 
@@ -1108,12 +1146,12 @@ for f in *.txt
 :::
 
 
-## Quiz {.smaller}
+## Quiz
 
 ::: {.panel-tabset}
 
-### Questions
-1. If the following is run from the wildcards directory. What will be printed?
+### Question
+If the following is run from the wildcards directory. What will be printed?
 ```{.bash code-line-numbers=false}
 for f in *.txt
 > do
@@ -1121,22 +1159,19 @@ for f in *.txt
 > cat $f > new-file.txt
 > done
 ```
-2. What will the contents of `new-file.txt` be and why?
+What will the contents of `new-file.txt` be and why?
 
-### Answers
-1.
-- The command will print the name of each `.txt` file.
-- On each iteration the `echo` command prints a different file name.
-2.
-- The content of `new-file.txt` will be the same as `xyz.txt`
-- On each iteration the contents of a different file are written to `new-file.txt`, overwriting whatever was written on the previous iteration
-- This is because `>` overwrites the output of cat to `new-file.txt` for each element in the sequence.
-- Using `>>` instead would result in each file's content being appended to the end of `new-file.txt`
+### Answer
+- The command will print the name of each `.txt` file:
+  - The `echo` command prints a different file name each iteration
+- The content of `new-file.txt` will be the same as `xyz.txt`:
+  - The contents of a different file are written to `new-file.txt` each iteration, overwriting whatever was written on the previous iteration
+  - Using `>>` instead of `>` would append instead of overwrite.
 
 :::
 
 
-## Editing files {.smaller}
+## Editing files
 - These are three programs available on the system that can be used for text editing:
   - `nano`
   - `vim`
@@ -1151,41 +1186,43 @@ for f in *.txt
 
 
 ## Shell Scripts {.smaller}
-- These are simple text files.
-  - By convention the filename ends `.sh`.
-- The file should start with a `shebang` line which tells the Linux system what command to run:
+- These are simple text files:
+  - By convention the filename ends `.sh`
+- The file should start with a `shebang`:
+  - A line which tells the Linux system what command to run:
 ```{.bash code-line-numbers=false}
 #!/bin/bash
 ```
-- After the 'shebang', simply enter all the commands for the script.
-- Lines starting with '`#`' will be regarded as comments
+- After the `shebang`, simply enter all the commands for the script.
+- Lines starting with `#` will be regarded as comments
   - Use these to make your script easier to understand.
 - To run the script it must have executable permissions.
-- A scripts saved as '`script.sh`' can be run using:
+- A scripts saved as `script.sh` can be run using:
 ```{.bash code-line-numbers=false}
 ./script.sh
 ```
 
 
-## Shell Scripts demo {.smaller}
+## Shell Scripts demo
 
 
 ## Shell Script exercise {.smaller}
 - Create and run a shell script to print out the first line of each file in a directory. Test using the `wildcards` directory.
 - Hints:
-  - Use the `history` command to see the commands you've entered.
-  - Pipe the `history` output into `tail`.
-  - Direct the ouput into a file and then use `nano` to modify this into a script.
-  - Modify the file permissions so you can execute the file.
+  - Use the `history` command to see the commands you've entered
+  - Pipe the `history` output into `tail`
+  - Direct the ouput into a file and then use `nano` to modify this into a script
+  - Modify the file permissions so you can execute the file
   - If you named the script `script.sh` issue the following command to run it:
 ```{.bash code-line-numbers=false}
 ./script.sh
 ```
 
 ::: {.notes}
-- Scripts you write that you commonly want to run can be put somehwere sensible and this can be added to your `PATH` variable.
+- Useful scripts can be put somehwere sensible and this directory can be added to your `PATH`.
 - If there is more time, perhaps look at some other `built-in` commands.
   - `man bash-builtins`
+  - `pushd`, `dirs`, `popd` are perhaps good candidates...
 :::
 
 
