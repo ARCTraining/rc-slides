@@ -1197,7 +1197,7 @@ What will the contents of `new-file.txt` be and why?
 - Lines starting with `#` will be regarded as comments
   - Use these to make your script easier to understand.
 - To run the script it must have executable permissions.
-- A scripts saved as `script.sh` can be run using:
+- A script saved as `script.sh` can be run using:
 ```{.bash code-line-numbers=false}
 ./script.sh
 ```
