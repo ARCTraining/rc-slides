@@ -1,14 +1,21 @@
-## Research Computing Team {.smaller}
+## Research Computing [Team](https://arc.leeds.ac.uk/about/team/) and Service
+<!--
+  - {{< var rc.team >}}
+-->
+- Here to support research(ers)
+  - Provide training
+  - Support users of Grid and Cloud Computing platforms
+  - Provide consultancy
+    - To develop project proposals
+    - To help recruit people with specialist skills
+    - Working directly on research projects
+- For details please see our [Website]({{< var rc.website >}})
+- [Contact us via the IT Service Desk]({{< var rc.servicedesk >}})
 
-Staff: 
-
-- {{< var rc.team >}}
-
-Here for:
-
-- General guidance and advice
-- Access to specialist support and consultancy
-- Research Software Engineering support
-
-Contact via IT Service Desk: {{< var rc.servicedesk >}}
+::: {.notes}
+- If you follow a link then a new tab will open in the `Slide View` Web browser.
+  - This will want closing or the `Slide View` activating again as he main tab in the browser.
+- Maybe point out some sections/features on the `Research Computing Website`.
+- We support use and develop resources. 
+:::
 
