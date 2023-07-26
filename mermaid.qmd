@@ -10,7 +10,19 @@ code: Dev2
 name: Mermaid Diagram Examples
 ---
 
-# Training Portfolio {.smaller}
+## Mermaid {.smaller}
+- https://mermaid.js.org/
+- Mermaid is evolving as a way of developing diagrams using makdown
+- It was originally geared for producing flow diagrams
+- There are some useful examples on the website and online
+- The plan is to replace diagrams produced other ways with diagrams produced with markdown as this becomes easy
+
+
+## Outline
+- This set of slides provides some examples that might be useful templates to adapt for training presentation slides
+
+
+## Training Portfolio {.smaller}
 Some of the boxes are hyperlinks.
 ```{mermaid}
 graph LR;
