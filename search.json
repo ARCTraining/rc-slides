@@ -7,11 +7,11 @@
     "text": "Course Code\nCourse Name"
   },
   {
-    "objectID": "template.html#research-computing-team",
-    "href": "template.html#research-computing-team",
+    "objectID": "template.html#research-computing-team-and-service",
+    "href": "template.html#research-computing-team-and-service",
     "title": "arctraining slides",
-    "section": "Research Computing Team",
-    "text": "Research Computing Team\nStaff:\n\nOllie Clark, Tom Hardcastle, John Hodrien, Nick Rhodes, Patricia Ternes, Andy Turner\n\nHere for:\n\nGeneral guidance and advice\nAccess to specialist support and consultancy\nResearch Software Engineering support\n\nContact via IT Service Desk: https://bit.ly/arc-help"
+    "section": "Research Computing Team and Service",
+    "text": "Research Computing Team and Service\n\n\nHere to support research(ers)\n\nProvide training\nSupport users of Grid and Cloud Computing platforms\nProvide consultancy\n\nTo develop project proposals\nTo help recruit people with specialist skills\nWorking directly on research projects\n\n\nFor details please see our Website\nContact us via the IT Service Desk\n\n\n\nIf you follow a link then a new tab will open in the Slide View Web browser.\n\nThis will want closing or the Slide View activating again as he main tab in the browser.\n\nMaybe point out some sections/features on the Research Computing Website.\nWe support use and develop resources."
   },
   {
     "objectID": "template.html#slide-a",
@@ -42,181 +42,6 @@
     "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: https://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
   },
   {
-    "objectID": "hpc0.html#meta-code",
-    "href": "hpc0.html#meta-code",
-    "title": "arctraining slides",
-    "section": "HPC 0",
-    "text": "HPC 0\nIntroduction to the Unix/Linux command line"
-  },
-  {
-    "objectID": "hpc0.html#research-computing-team",
-    "href": "hpc0.html#research-computing-team",
-    "title": "arctraining slides",
-    "section": "Research Computing Team",
-    "text": "Research Computing Team\nStaff:\n\nOllie Clark, Tom Hardcastle, John Hodrien, Nick Rhodes, Patricia Ternes, Andy Turner\n\nHere for:\n\nGeneral guidance and advice\nAccess to specialist support and consultancy\nResearch Software Engineering support\n\nContact via IT Service Desk: https://bit.ly/arc-help"
-  },
-  {
-    "objectID": "hpc0.html#contact-details",
-    "href": "hpc0.html#contact-details",
-    "title": "arctraining slides",
-    "section": "Contact Details",
-    "text": "Contact Details\n\nARC Website: https://arc.leeds.ac.uk/\n\nGeneral queries: https://bit.ly/arc-help"
-  },
-  {
-    "objectID": "hpc0.html#training",
-    "href": "hpc0.html#training",
-    "title": "arctraining slides",
-    "section": "Training",
-    "text": "Training"
-  },
-  {
-    "objectID": "hpc0.html#archpc-training-portfolio",
-    "href": "hpc0.html#archpc-training-portfolio",
-    "title": "arctraining slides",
-    "section": "ARC/HPC Training Portfolio",
-    "text": "ARC/HPC Training Portfolio\nhttps://arc.leeds.ac.uk/training"
-  },
-  {
-    "objectID": "hpc0.html#purpose-of-today",
-    "href": "hpc0.html#purpose-of-today",
-    "title": "arctraining slides",
-    "section": "Purpose of today",
-    "text": "Purpose of today\n\nIntroduce the command line for new users\nHands on experience and confidence building\nBasic interactions with files and directories: command line execution, directory and file basics, files properties.\nFile manipulation: inspecting and editing files, searching and filtering,\nScripting and workflows: scripting techniques for building workflows."
-  },
-  {
-    "objectID": "hpc0.html#logging-in",
-    "href": "hpc0.html#logging-in",
-    "title": "arctraining slides",
-    "section": "Logging in…",
-    "text": "Logging in…\nUsing MobaXTerm"
-  },
-  {
-    "objectID": "hpc0.html#what-is-bash",
-    "href": "hpc0.html#what-is-bash",
-    "title": "arctraining slides",
-    "section": "What is BASH?",
-    "text": "What is BASH?"
-  },
-  {
-    "objectID": "hpc0.html#what-is-a-shell",
-    "href": "hpc0.html#what-is-a-shell",
-    "title": "arctraining slides",
-    "section": "What is a shell?",
-    "text": "What is a shell?"
-  },
-  {
-    "objectID": "hpc0.html#mobaxterm",
-    "href": "hpc0.html#mobaxterm",
-    "title": "arctraining slides",
-    "section": "MobaXTerm",
-    "text": "MobaXTerm\nLaunch…"
-  },
-  {
-    "objectID": "hpc0.html#filesystem-basics",
-    "href": "hpc0.html#filesystem-basics",
-    "title": "arctraining slides",
-    "section": "Filesystem basics",
-    "text": "Filesystem basics"
-  },
-  {
-    "objectID": "hpc0.html#forward-slash-and-backslash",
-    "href": "hpc0.html#forward-slash-and-backslash",
-    "title": "arctraining slides",
-    "section": "Forward slash / and backslash\n",
-    "text": "Forward slash / and backslash"
-  },
-  {
-    "objectID": "hpc0.html#filesystem-basics-absolute-path",
-    "href": "hpc0.html#filesystem-basics-absolute-path",
-    "title": "arctraining slides",
-    "section": "Filesystem basics: absolute path",
-    "text": "Filesystem basics: absolute path"
-  },
-  {
-    "objectID": "hpc0.html#filesystem-basics-relative-path",
-    "href": "hpc0.html#filesystem-basics-relative-path",
-    "title": "arctraining slides",
-    "section": "Filesystem basics: relative path",
-    "text": "Filesystem basics: relative path"
-  },
-  {
-    "objectID": "hpc0.html#exercise-0",
-    "href": "hpc0.html#exercise-0",
-    "title": "arctraining slides",
-    "section": "Exercise 0",
-    "text": "Exercise 0\nLogging in\nWe are using ARC4, one of the University HPC clusters today.\nYou’ll use MobaXterm to connect:\nssh &lt;username&gt;@arc4.leeds.ac.uk\n&lt;username&gt; is your university username."
-  },
-  {
-    "objectID": "hpc0.html#exercise-1",
-    "href": "hpc0.html#exercise-1",
-    "title": "arctraining slides",
-    "section": "Exercise 1",
-    "text": "Exercise 1\nSetup\nFirst, get hold of the sample data we will be using today.\nType this in your command shell:\ngit clone https://github.com/callaghanmt/shell-training/"
-  },
-  {
-    "objectID": "hpc0.html#exercise-2",
-    "href": "hpc0.html#exercise-2",
-    "title": "arctraining slides",
-    "section": "Exercise 2",
-    "text": "Exercise 2\n\nProblemSolution\n\n\nTwo new commands:\n\nThe sort command will sort lines alphabetically\nYou can use the cut command to split lines of text based on a given character e.g.\ncut -d ',' -f 2 will split lines around the comma and give you the second part\n\n\n\n\nCombine cat, cut, and sort to print out the Latin names from birds.txt in alphabetical order.\nSave the output to a new file.\n\n\n\n\n[user@host IOM-animals]$ cat birds.txt | sort | cut -d ',' -f 2\n[user@host IOM-animals]$ cat birds.txt | sort | cut -d ',' -f 2 &gt; sorted-birds.txt"
-  },
-  {
-    "objectID": "hpc0.html#exercise-3",
-    "href": "hpc0.html#exercise-3",
-    "title": "arctraining slides",
-    "section": "Exercise 3",
-    "text": "Exercise 3\n\nProblemSolution\n\n\nList all the animals on the Isle of Mann alphabetically and find the 50th item in that list.\n\n\nTo get the 50th line, use head to get the first 50 lines and pipe it to tail to get the last one:\n[user@host IOM-animals]$ sort *.txt | head -50 | tail -1\ncoot, fulica atra"
-  },
-  {
-    "objectID": "hpc0.html#exercise-4",
-    "href": "hpc0.html#exercise-4",
-    "title": "arctraining slides",
-    "section": "Exercise 4",
-    "text": "Exercise 4\n\nProblemSolution\n\n\nshell-training/data/ contains 300 data files, each of which should contain 100 values. One of these files is missing some data though. . .\n\nUse a series of commands connected by pipes to identify the file with missing data. Hints:\n\nwc -w will tell you the number of values in a file\nsort -n will sort numerically\n\n\n\n[user@host data]$ wc -w values* | sort -n | head -1\n99 values 44\n\nwc -w tells you how many values are in each file\nsort this output to put the files in order of the number of values\nuse head to select the first line, which contains the name of the file with the smallest number of values"
-  },
-  {
-    "objectID": "hpc0.html#exercise-5",
-    "href": "hpc0.html#exercise-5",
-    "title": "arctraining slides",
-    "section": "Exercise 5",
-    "text": "Exercise 5\n\nProblemSolution\n\n\n\nUse a for loop to create five directories called calculation_?, where ? is a number.\nUse a loop to create five directories, each one the parent of the next.\n\n\n\n\n[user@host ~]$ for (( i=1 ; i&lt;=5 ; i++ ))\n&gt; do\n&gt; mkdir calculation_$i\n&gt; done\n[user@host ~]$\n[user@host ~]$ for (( i=1 ; i&lt;=5 ; i++ ))\n&gt; do\n&gt; mkdir calculation_$i\n&gt; cd calculation_$i\n&gt; done\n[user@host calculation_5]$\n\nIn the second case, two commands are executed each time you go through the loop. A new directory is created and then the working directory is changed to the new directory.\nOn the next iteration, the new directory is then created inside the previous one."
-  },
-  {
-    "objectID": "hpc0.html#exercise-6",
-    "href": "hpc0.html#exercise-6",
-    "title": "arctraining slides",
-    "section": "Exercise 6",
-    "text": "Exercise 6\n\nProblemSolution\n\n\n\nIn the wildcards directory, create a variable called files listing all of the text files. \nLoop through this list and print out the first line from each file.\n\n\n\n\n[user@host wildcards]$ files=$( ls *.txt )\n[user@host wildcards]$ for f in $files\n&gt; do\n&gt; head -1 $f\n&gt; done"
-  },
-  {
-    "objectID": "hpc0.html#exercise-7",
-    "href": "hpc0.html#exercise-7",
-    "title": "arctraining slides",
-    "section": "Exercise 7",
-    "text": "Exercise 7\n\nProblemSolution\n\n\n\nWhat will this command print to the screen?\n\n[user@host wildcards]$ for filename in *.txt\n&gt; do\n&gt; echo $filename\n&gt; cat $filename &gt; new-file.txt\n&gt; done\n\n\n\nWhat will the contents of new-file.txt be and why?\n\n\n\n\n\nThe name of each .txt file in the current directory\nOn each iteration the echo command prints a different file name\n\n\n\n\n\n\nThe content of new-file.txt will be the same as xyz.txt\nOn each iteration the contents of a different file are written to new-file.txt, overwriting whatever was written on the previous iteration\nThis is because we used &gt; to write the output of cat to new-file.txt\nUsing &gt;&gt; instead would result in each file’s content being appended to the end of new-file.txt"
-  },
-  {
-    "objectID": "hpc0.html#thank-you",
-    "href": "hpc0.html#thank-you",
-    "title": "arctraining slides",
-    "section": "Thank you",
-    "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: https://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "arctraining slides",
-    "section": "",
-    "text": "Public facing homepage for arctraining Quarto slides collection."
-  },
-  {
-    "objectID": "index.html#slides",
-    "href": "index.html#slides",
-    "title": "arctraining slides",
-    "section": "Slides:",
-    "text": "Slides:\nNote: this page is under construction. As soon as the slides are available, the link will be provided.\n\nHPC0: Introduction to Linux for HPC\nHPC1: Introduction to High Performance Computing\nHPC2: Applications and containers on HPC\nHPC3: Computer architectures and shared memory parallel programming\nHPC5: Introduction to GPU programming with CUDA\nHPC6: HPC for Life Sciences and Bioinformatics\nSWD1a: Introduction to Python programming\nSWD1b: Introduction to R programming\nSWD2: Version Control with Git and GitHub\nSWD3: Software development practices for Research\nSWD4: Cloud computing for Research\nSWD5: Scientific Python\nSWD6: High performance Python\nSWD7: Introduction to reproducible workflows in Python"
-  },
-  {
     "objectID": "hpc1.html#meta-code",
     "href": "hpc1.html#meta-code",
     "title": "arctraining slides",
@@ -224,11 +49,11 @@
     "text": "HPC 1\nIntroduction to High Performance Computing"
   },
   {
-    "objectID": "hpc1.html#research-computing-team",
-    "href": "hpc1.html#research-computing-team",
+    "objectID": "hpc1.html#research-computing-team-and-service",
+    "href": "hpc1.html#research-computing-team-and-service",
     "title": "arctraining slides",
-    "section": "Research Computing Team",
-    "text": "Research Computing Team\nStaff:\n\nOllie Clark, Tom Hardcastle, John Hodrien, Nick Rhodes, Patricia Ternes, Andy Turner\n\nHere for:\n\nGeneral guidance and advice\nAccess to specialist support and consultancy\nResearch Software Engineering support\n\nContact via IT Service Desk: https://bit.ly/arc-help"
+    "section": "Research Computing Team and Service",
+    "text": "Research Computing Team and Service\n\n\nHere to support research(ers)\n\nProvide training\nSupport users of Grid and Cloud Computing platforms\nProvide consultancy\n\nTo develop project proposals\nTo help recruit people with specialist skills\nWorking directly on research projects\n\n\nFor details please see our Website\nContact us via the IT Service Desk\n\n\n\nIf you follow a link then a new tab will open in the Slide View Web browser.\n\nThis will want closing or the Slide View activating again as he main tab in the browser.\n\nMaybe point out some sections/features on the Research Computing Website.\nWe support use and develop resources."
   },
   {
     "objectID": "hpc1.html#purpose-of-hpc1",
@@ -579,5 +404,649 @@
     "title": "arctraining slides",
     "section": "Thank you",
     "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: https://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "arctraining slides",
+    "section": "",
+    "text": "Public facing homepage for arctraining Quarto slides collection."
+  },
+  {
+    "objectID": "index.html#slides",
+    "href": "index.html#slides",
+    "title": "arctraining slides",
+    "section": "Slides:",
+    "text": "Slides:\nNote: this page is under construction. As soon as the slides are available, the link will be provided.\n\nHPC0: Introduction to Linux for HPC\nHPC1: Introduction to High Performance Computing\nHPC2: Applications and containers on HPC\nHPC3: Computer architectures and shared memory parallel programming\nHPC5: Introduction to GPU programming with CUDA\nHPC6: HPC for Life Sciences and Bioinformatics\nSWD1a: Introduction to Python programming\nSWD1b: Introduction to R programming\nSWD2: Version Control with Git and GitHub\nSWD3: Software development practices for Research\nSWD4: Cloud computing for Research\nSWD5: Scientific Python\nSWD6: High performance Python\nSWD7: Introduction to reproducible workflows in Python"
+  },
+  {
+    "objectID": "hpc0.html#meta-code",
+    "href": "hpc0.html#meta-code",
+    "title": "arctraining slides",
+    "section": "HPC 0",
+    "text": "HPC 0\nIntroduction to Linux for HPC"
+  },
+  {
+    "objectID": "hpc0.html#research-computing-team-and-service",
+    "href": "hpc0.html#research-computing-team-and-service",
+    "title": "arctraining slides",
+    "section": "Research Computing Team and Service",
+    "text": "Research Computing Team and Service\n\n\nHere to support research(ers)\n\nProvide training\nSupport users of Grid and Cloud Computing platforms\nProvide consultancy\n\nTo develop project proposals\nTo help recruit people with specialist skills\nWorking directly on research projects\n\n\nFor details please see our Website\nContact us via the IT Service Desk\n\n\n\nIf you follow a link then a new tab will open in the Slide View Web browser.\n\nThis will want closing or the Slide View activating again as he main tab in the browser.\n\nMaybe point out some sections/features on the Research Computing Website.\nWe support use and develop resources."
+  },
+  {
+    "objectID": "hpc0.html#training-themes",
+    "href": "hpc0.html#training-themes",
+    "title": "arctraining slides",
+    "section": "Training Themes",
+    "text": "Training Themes\n\n\n“We provide training about…”"
+  },
+  {
+    "objectID": "hpc0.html#aims-of-this-training",
+    "href": "hpc0.html#aims-of-this-training",
+    "title": "arctraining slides",
+    "section": "Aims of this training",
+    "text": "Aims of this training\n\nBuild your confidence in using command line Linux\nPrepare you for HPC1: Introduction to High Performance Computing\nGet feedback from you about the training\n\n\n\nAttempt to use Forms or Hackpad for introductions.\nEncourage interruptions and questions."
+  },
+  {
+    "objectID": "hpc0.html#syllabus",
+    "href": "hpc0.html#syllabus",
+    "title": "arctraining slides",
+    "section": "Syllabus",
+    "text": "Syllabus\n\n\n\n\nLogging in\nEntering commands\nFinding out about commands\nFile system navigation\nCommands to list, create, copy, move and delete files\nHidden files\nCommand history\n\n\n\nControl key combinations\nEditing files\nFile permissions\nCommands to explore and filter data\nWildcards\nShell scripting basics\n\n\n\n\n\nThe plan for the next 3 hours.\nAim for 5 to 10 minute breaks roughly every 30 minutes."
+  },
+  {
+    "objectID": "hpc0.html#logging-in",
+    "href": "hpc0.html#logging-in",
+    "title": "arctraining slides",
+    "section": "Logging in",
+    "text": "Logging in\n\nARC Documentation on Logging on\nHow you login depends on your:\n\n\n\nHost Operating System\n\nOSX/Linux:\n\nUse terminal\n\nWindows:\n\nUse MobaXTerm\n\n\n\nConnection\n\nOn campus (wireless is like ‘off campus’)\nOff campus (connected to the University VPN is like ‘on campus’)\n\n\n\n\n\nMobaXTerm is software you can download, install and run without needing help from systems administators.\n\nIt provides a sort of bridge between your host Windows machine and other machines you connect with.\n\nMaybe conduct a poll about what host Operating Systems participants expect to use to connect to the HPC.\nIn terms of connection: On campus, but using wifi is like being ‘off campus’…\nThe University Virtual Private Network (VPN) is a type of secure network connection, enabling your computer to access the University network when working remotely."
+  },
+  {
+    "objectID": "hpc0.html#logging-in-demos",
+    "href": "hpc0.html#logging-in-demos",
+    "title": "arctraining slides",
+    "section": "Logging in demos",
+    "text": "Logging in demos\n\n\nDemo login from OSX/Linux.\nDemo login from Windows."
+  },
+  {
+    "objectID": "hpc0.html#logging-in-exercise",
+    "href": "hpc0.html#logging-in-exercise",
+    "title": "arctraining slides",
+    "section": "Logging in exercise",
+    "text": "Logging in exercise\n\nPlease login\n\n\n\nConduct a poll to find out who is logged on.\nOrganise help if necessary…\n\nMaybe suggest one-to-ones with helpers…\n\nThose that cannot login can still follow along for a bit…\nIs it time for a break?"
+  },
+  {
+    "objectID": "hpc0.html#what-is-a-shell-15",
+    "href": "hpc0.html#what-is-a-shell-15",
+    "title": "arctraining slides",
+    "section": "What is a shell? 1/5",
+    "text": "What is a shell? 1/5\n\nA shell is a terminal emulator program and scripting language\nThe terminal is a window on the screen with a prompt at which textual commands are entered and where Standard Output (stdout) and Standard Error (stderr) streams get displayed\nDuring login, a user set up is finalised by reading files from the user Home Directory\nWhen logged in the user is in their Home Directory\n\n\nA terminal used to be all there was to interface between a human and the machine in early computer systems."
+  },
+  {
+    "objectID": "hpc0.html#what-is-a-shell-25",
+    "href": "hpc0.html#what-is-a-shell-25",
+    "title": "arctraining slides",
+    "section": "What is a shell? 2/5",
+    "text": "What is a shell? 2/5\n\nBASH (bash) is a type of shell \n\n\nThe image shows what it looked like after a user issued a couple of commands in a bash."
+  },
+  {
+    "objectID": "hpc0.html#what-is-a-shell-35",
+    "href": "hpc0.html#what-is-a-shell-35",
+    "title": "arctraining slides",
+    "section": "What is a shell? 3/5",
+    "text": "What is a shell? 3/5\n\n\n\n\nHuman users interface with the system via a shell\nA shell communicates with the kernel\nThe kernel communicates with computer hardware and provides access the filesystem\nThere are a variety of Linux kernels and shells"
+  },
+  {
+    "objectID": "hpc0.html#what-is-a-shell-45",
+    "href": "hpc0.html#what-is-a-shell-45",
+    "title": "arctraining slides",
+    "section": "What is a shell? 4/5",
+    "text": "What is a shell? 4/5\n\nShells have built-in commands:\n\nWhen called from a shell, these run without invoking (calling) other programs\n\nShells call other programs by name, and these are looked for following a PATH\nPATH is a variable and ordered list of filesystem directories\nEach user has a PATH set upon login"
+  },
+  {
+    "objectID": "hpc0.html#what-is-a-shell-55",
+    "href": "hpc0.html#what-is-a-shell-55",
+    "title": "arctraining slides",
+    "section": "What is a shell? 5/5",
+    "text": "What is a shell? 5/5\n\nOn HPC resources at Leeds additional Linux command utilities are available\nAdditional software has also been installed and made available via a module system\nThis is all accessed via the user shell\n\n\n\nUsing the module system is covered in HPC1."
+  },
+  {
+    "objectID": "hpc0.html#filesystem-basics",
+    "href": "hpc0.html#filesystem-basics",
+    "title": "arctraining slides",
+    "section": "Filesystem basics",
+    "text": "Filesystem basics\n\n\n\n\nThe image shows a simplified filesystem.\nA Linux Directory is like a Windows Folder\nDirectories are arranged in a heirarchy.\n\nThe top directory is the Root Directory.\n\nLinux has symlinks where Windows has shortcuts."
+  },
+  {
+    "objectID": "hpc0.html#forward-slash-and-back-slash",
+    "href": "hpc0.html#forward-slash-and-back-slash",
+    "title": "arctraining slides",
+    "section": "Forward-slash / and back-slash  ",
+    "text": "Forward-slash / and back-slash  \n\n\n\nThe file path separator in Linux is the forward slash.\nThe file path separator in Windows is the back slash."
+  },
+  {
+    "objectID": "hpc0.html#absolute-path",
+    "href": "hpc0.html#absolute-path",
+    "title": "arctraining slides",
+    "section": "Absolute path",
+    "text": "Absolute path\n\n\n\nThe slide shows an absolute file path.\nThe Root Directory is referred to by a back slash.\n\nAll absolute file paths start from the Root Directory\n\nLinux does not have drive letters like Windows."
+  },
+  {
+    "objectID": "hpc0.html#relative-path",
+    "href": "hpc0.html#relative-path",
+    "title": "arctraining slides",
+    "section": "Relative path",
+    "text": "Relative path\n\n\n\nThe slide shows a relative file path.\n.. refers to one level up in the directory heirarchy."
+  },
+  {
+    "objectID": "hpc0.html#the-default-prompt",
+    "href": "hpc0.html#the-default-prompt",
+    "title": "arctraining slides",
+    "section": "The default prompt",
+    "text": "The default prompt\n\nUpon login, you should see a prompt that looks like:\n\n[user@host ~]$\n\nuser should be your username\nhost should start login1. or login2. and end arc3 or arc4\nThe ~ (tilde) indicates you are in your Home Directory\nAfter the $ (dollar) is where commands are formulated and entered\n\n\n\nIs it time for a break?\nUsers can modify the prompt and set different colours and languages…"
+  },
+  {
+    "objectID": "hpc0.html#first-commands",
+    "href": "hpc0.html#first-commands",
+    "title": "arctraining slides",
+    "section": "First commands",
+    "text": "First commands\n\n\n\nCommand\nDescription\n\n\n\n\npwd\nPrint the current working directory\n\n\nman\nLoad the manual\n\n\nls\nList the contents of a directory\n\n\nmkdir\nMake a new directory\n\n\ncd\nChange directory\n\n\n\n\n\nThe table contains safe commands\n\nThese don’t change anything.\nUsing them should not cause any damage!\n\nThese are looked at in turn."
+  },
+  {
+    "objectID": "hpc0.html#pwd",
+    "href": "hpc0.html#pwd",
+    "title": "arctraining slides",
+    "section": "pwd",
+    "text": "pwd\n\nA command to print the working directory\n\n[user@host ~]$ pwd\n/home/homeXX/user\n\nWhen you run this the output will be slightly different:\n\nXX should be 01 or 02\nuser should be your username\n\n\n\n\npwd is pronounced pee-double-you-dee."
+  },
+  {
+    "objectID": "hpc0.html#pwd-demo",
+    "href": "hpc0.html#pwd-demo",
+    "title": "arctraining slides",
+    "section": "pwd demo",
+    "text": "pwd demo\n\n\nDo a quick demo.\nIf using Teams, take care to share the right windows…"
+  },
+  {
+    "objectID": "hpc0.html#pwd-exercise",
+    "href": "hpc0.html#pwd-exercise",
+    "title": "arctraining slides",
+    "section": "pwd exercise",
+    "text": "pwd exercise\n\nType ‘pwd’ at the prompt by typing the letters, then press the &lt;return&gt; or &lt;enter&gt; key:\n\n[user@host ~]$ pwd\n/home/homeXX/user\n\nPrint help about the pwd command:\n\npwd --help\n\nIt should look like:\n\n[user@host ~]$ pwd -- help\npwd: pwd [-LP]\n    Print the name of the current working directory.\n    \n    Options:\n      -L    print the value of $PWD if it names the current working\n            directory\n      -P    print the physical directory, without any symbolic links\n    \n    By default, `pwd' behaves as if `-L' were specified.\n    \n    Exit Status:\n    Returns 0 unless an invalid option is given or the current directory\n    cannot be read."
+  },
+  {
+    "objectID": "hpc0.html#help-and-man",
+    "href": "hpc0.html#help-and-man",
+    "title": "arctraining slides",
+    "section": "--help and man",
+    "text": "--help and man\n\n--help is a command option that prints help about using the command\nman is a command to bring up the manual\nFor help using man: press the h-key `.\nTo quit the help about man, or man itself: press &lt;q&gt;\nUse &lt;space_bar&gt; to page through\n\n\n\n--help is pronounced minus-minus-help."
+  },
+  {
+    "objectID": "hpc0.html#help-and-man-demo",
+    "href": "hpc0.html#help-and-man-demo",
+    "title": "arctraining slides",
+    "section": "--help and man demo",
+    "text": "--help and man demo\n\n\nDemo\n\npwd --help\nman pwd\nman bash\nman bash-builtins"
+  },
+  {
+    "objectID": "hpc0.html#help-and-man-exercise",
+    "href": "hpc0.html#help-and-man-exercise",
+    "title": "arctraining slides",
+    "section": "--help and man exercise",
+    "text": "--help and man exercise\n\nEnter:\n\nman man\n\nFor help using man: press the h-key &lt;h&gt;.\nTo quit the help about man or any man page: press &lt;q&gt;.\nTo page through a man page: press &lt;space_bar&gt;.\nEnter:\n\nman pwd\n\nEnter:\n\nman ls\n\n\nMaybe conduct a poll to find out who is ready to move on.\nIs it time for a break?"
+  },
+  {
+    "objectID": "hpc0.html#ls-14",
+    "href": "hpc0.html#ls-14",
+    "title": "arctraining slides",
+    "section": "ls 1/4",
+    "text": "ls 1/4\n\nA command to list the contents of a directory\nThere are many options for ls:\n\nThe -a option will list all the contents of a directory\n\nFiles and directories starting with . are hidden by default\n\nThe -l option will list each item line by line with added details\nThe -H option will report sizes in a more human readable format\n\n\n\n\nls is pronounced el-ess."
+  },
+  {
+    "objectID": "hpc0.html#ls-24",
+    "href": "hpc0.html#ls-24",
+    "title": "arctraining slides",
+    "section": "ls 2/4",
+    "text": "ls 2/4\n\nOptions can be listed in any order or combined - the following are equivalent:\n\nls -al\nls -la\nls -a -l\nls -l -a"
+  },
+  {
+    "objectID": "hpc0.html#ls-34",
+    "href": "hpc0.html#ls-34",
+    "title": "arctraining slides",
+    "section": "ls 3/4",
+    "text": "ls 3/4\n[user@host ~]$ ls -al\ntotal 8\ndrwx------     2 user group   4096 MMM DD hh:mm .\ndrwxr-xr-x     3 root root    4096 MMM DD hh:mm ..\n...\n\n\nEntering ls -al (pronounced el-ess-minus-aye-el) should usually result in something like what is shown.\nThe ... shown in the slide may be many more lines of output depending on what was listed.\nThe first line is different to the others.\n\nThe number after total is a complicated metric to do with how linked the thing being listed is.\n\nThe first part of other output lines detail permissions:\n\nPermissions and other details listed are explained later…\n\nThe last part of other output lines sre the names of the things listed.\n\n. is the directory listed.\n.. is the parent of that directory.\n\nDetails will look different to what is shown in the slide, for instance:\n\nuser: your username.”"
+  },
+  {
+    "objectID": "hpc0.html#ls-44",
+    "href": "hpc0.html#ls-44",
+    "title": "arctraining slides",
+    "section": "ls 4/4",
+    "text": "ls 4/4\n\nThe following should result in many more lines of output:\n\n[user@host ~]$ ls -al ~\n\n\nMMM: three letters representing the month a file was created e.g. Jun.\nls -al ~ should list the details of everything in your Home Directory.\n\nIncluding any hidden files and directories…”"
+  },
+  {
+    "objectID": "hpc0.html#ls-exercise",
+    "href": "hpc0.html#ls-exercise",
+    "title": "arctraining slides",
+    "section": "ls exercise",
+    "text": "ls exercise\n\nEnter:\n\nls /\n\nThe output should be a list of what is in the Root Directory.\nEnter:\n\nls ~\n\nThe output should be a list of everything that is in your Home Directory that is not hidden.\n\nFor new users, this is nothing - not even a README!\n\nEnter:\n\nls -al ~\n\nThe output lists everything in your Home Directory.\n\n\n\nMaybe poll progress."
+  },
+  {
+    "objectID": "hpc0.html#home-directory-hidden-files-and-folders",
+    "href": "hpc0.html#home-directory-hidden-files-and-folders",
+    "title": "arctraining slides",
+    "section": "Home directory hidden files and folders",
+    "text": "Home directory hidden files and folders\n\n.bash_history\n\nA log of commands that you have entered\n\n.bash_profile\n\nFinalises your user login shell\n\n.bashrc\n\nFinalises your user subshell\n\n\n\n\nOther hidden files and folders get added as you use commands and applications.\n\nThese often contain configuration details.\n\nIt is important to know these exist so as not to accidentally delete them."
+  },
+  {
+    "objectID": "hpc0.html#mkdir-12",
+    "href": "hpc0.html#mkdir-12",
+    "title": "arctraining slides",
+    "section": "mkdir 1/2",
+    "text": "mkdir 1/2\n\nA command to create a directory.\nThe following is for creating a directory named test:\n\nmkdir test\n\nAttempting to create a directory that already exists prints a warning.\n\n[user@host ~]$ mkdir test\nmkdir: cannot create directory ‘test’: File exists\n\n\nmkdir is pronounced muck-der."
+  },
+  {
+    "objectID": "hpc0.html#mkdir-22",
+    "href": "hpc0.html#mkdir-22",
+    "title": "arctraining slides",
+    "section": "mkdir 2/2",
+    "text": "mkdir 2/2\n\nThe -p option allows for creating parent directories\nThe following creates the directory test2 and in this the directory test3\n\nmkdir -p test2/test3\n\nTo create a directory, you must have permission to write to the directory in which it is being created\nWithout write permissions a warning is printed, for example:\n\n[user@host ~]$ mkdir /test\nmkdir: cannot create directory ‘/test’: Permission denied"
+  },
+  {
+    "objectID": "hpc0.html#cd-12",
+    "href": "hpc0.html#cd-12",
+    "title": "arctraining slides",
+    "section": "cd 1/2",
+    "text": "cd 1/2\n\nA command to change directory\n\n[user@host ~]$ cd test\n[user@host test]$ cd ~\n[user@host ~]$ cd test\n[user@host test]$ cd\n[user@host ~]$\n\nNotice that the prompt changes.\nWithout read permission you cannot change into a directory and a warning is printed:\n\n[user@host ~]$ cd /root\n-bash: cd: /root: Permission denied\n\n\ncd is pronounced see-dee."
+  },
+  {
+    "objectID": "hpc0.html#cd-12-1",
+    "href": "hpc0.html#cd-12-1",
+    "title": "arctraining slides",
+    "section": "cd 1/2",
+    "text": "cd 1/2\n\nTo return to your home directory use:\n\ncd with no arguments or cd ~\n\n\n\n\nTo change directories more efficiently users might like to learn about pushd, popd and dirs."
+  },
+  {
+    "objectID": "hpc0.html#ls-mkdir-and-cd-demo",
+    "href": "hpc0.html#ls-mkdir-and-cd-demo",
+    "title": "arctraining slides",
+    "section": "ls, mkdir and cd demo",
+    "text": "ls, mkdir and cd demo\n\n\nDemo making, listing and moving into directories."
+  },
+  {
+    "objectID": "hpc0.html#ls-mkdir-and-cd-exercise",
+    "href": "hpc0.html#ls-mkdir-and-cd-exercise",
+    "title": "arctraining slides",
+    "section": "ls, mkdir and cd exercise",
+    "text": "ls, mkdir and cd exercise\n\nUse ls, mkdir and cd in your home directory.\nCheck if there is a directory with your user name in /nobackup/ and if not create it.\n\n\n\nMaybe poll who is ready to move on."
+  },
+  {
+    "objectID": "hpc0.html#check-point",
+    "href": "hpc0.html#check-point",
+    "title": "arctraining slides",
+    "section": "Check point",
+    "text": "Check point\n\nYou can only list or change into directories you have permission to read.\nAny questions?\n\n\n\nIs it time for a break?"
+  },
+  {
+    "objectID": "hpc0.html#time-savers-12",
+    "href": "hpc0.html#time-savers-12",
+    "title": "arctraining slides",
+    "section": "Time savers 1/2",
+    "text": "Time savers 1/2\n\n&lt;up&gt; and &lt;down&gt; arrow keys allow you to scroll previously entered commands\n\n&lt;return&gt; will enter the command\n\nPressing the control key &lt;Ctrl&gt; and another key will often do things:\n\n&lt;Ctrl&gt; + &lt;c&gt; will cancel\n\nThis can terminate a running command or cancel what is at the prompt\n\n&lt;Ctrl&gt; + &lt;a&gt; will move the cursor to the start of what is at the prompt\n&lt;Ctrl&gt; + &lt;e&gt; will move the cursor to the end of what is at the prompt\n&lt;Ctrl&gt; + &lt;r&gt; will do a reverse search through the history of commands entered at the prompt which can then be edited or entered\n\n\n\n\nThere are some states where &lt;Ctrl&gt; + &lt;c&gt; will not manage to escape you back to the prompt.\n&lt;ctrl&gt; + &lt;c&gt; (pronounced control-see) copies in Windows, but cancels in Linux!"
+  },
+  {
+    "objectID": "hpc0.html#time-savers-22",
+    "href": "hpc0.html#time-savers-22",
+    "title": "arctraining slides",
+    "section": "Time savers 2/2",
+    "text": "Time savers 2/2\n\nThe prompt cursor does not have to be at the end of what is written at the prompt to submit what is there to the interpreter (run it)\nThe tab key &lt;Tab&gt; can be used to help autocomplete file paths\n\nPress &lt;Tab&gt; repeatedly two or three times to reveal optional paths\n\nThis can make your computer output an audible “bleep”\n\n\nCopy and paste using the mouse:\n\nHighlight by left-click-hold and drag mouse\nCopy with right click then select copy option\nPaste with right click and select paste option\nOr paste highlighted text using third mouse button"
+  },
+  {
+    "objectID": "hpc0.html#time-savers-demo",
+    "href": "hpc0.html#time-savers-demo",
+    "title": "arctraining slides",
+    "section": "Time savers demo",
+    "text": "Time savers demo"
+  },
+  {
+    "objectID": "hpc0.html#time-savers-exercise",
+    "href": "hpc0.html#time-savers-exercise",
+    "title": "arctraining slides",
+    "section": "Time savers exercise",
+    "text": "Time savers exercise\n\nUse &lt;up&gt; and &lt;down&gt; arrow keys to load previously entered commands into the prompt\nUse &lt;Ctrl&gt; + &lt;a&gt;, and &lt;Ctrl&gt; and &lt;e&gt; to move the cursor between the start and end of what is at the prompt\nUse &lt;Ctrl&gt; + &lt;c&gt; to cancel\nUse &lt;Ctrl&gt; + &lt;r&gt; to reverse search through the history of commands, and select one to edit or run\nUse copy and paste to paste a command at the prompt"
+  },
+  {
+    "objectID": "hpc0.html#more-commands",
+    "href": "hpc0.html#more-commands",
+    "title": "arctraining slides",
+    "section": "More commands",
+    "text": "More commands\n\n\n\nCommand\nDescription\n\n\n\n\nmv\nMove a file or directory (can be used to rename)\n\n\ncp\nCopy a file or directory - using the -r option\n\n\ntouch\nAccess or create a file or directory\n\n\nrmdir\nRemove (delete) a directory\n\n\nrm\nRemove (delete) a file or a directory - using the -r option\n\n\n\n\n\nPerhaps warn users to take more care with these!"
+  },
+  {
+    "objectID": "hpc0.html#mv",
+    "href": "hpc0.html#mv",
+    "title": "arctraining slides",
+    "section": "mv",
+    "text": "mv\n\nA command to move a file or directory (can be used to rename)\nThe following would rename the file/directory test to test_renamed\n\nmv test test_renamed\n\n\nmv is pronounced em-vee."
+  },
+  {
+    "objectID": "hpc0.html#cp",
+    "href": "hpc0.html#cp",
+    "title": "arctraining slides",
+    "section": "cp",
+    "text": "cp\n\nA command to copy a file or directory\nIf test is a file the following would make a copy named test_copy:\n\ncp test test_copy\n\nIf test is a directory a warning would be printed:\n\n[user@host ~]$ cp test test_copy\ncp: omitting directory 'test'\n\nThe -r option can copy a directory:\n\ncp -r test test_copy\n\n\ncp is pronounced see-pee."
+  },
+  {
+    "objectID": "hpc0.html#touch",
+    "href": "hpc0.html#touch",
+    "title": "arctraining slides",
+    "section": "touch, >, >>",
+    "text": "touch, &gt;, &gt;&gt;\n\ntouch is a command that will create an empty file, or update the time a file was last accessed to the current time\nthe symbol &gt; can be used to direct the standard output to a file.\n\nThis will overwrite any existing file.\n\nThe following would direct the output of ls to a file named README\n\nls &gt; README\n\n&gt;&gt; can be used in place of &gt; to append to rather than overwrite the file\n\n\n\nMaybe point out that multiple processes writing to the same file simultaneously can make a mess!"
+  },
+  {
+    "objectID": "hpc0.html#rmdir",
+    "href": "hpc0.html#rmdir",
+    "title": "arctraining slides",
+    "section": "rmdir",
+    "text": "rmdir\n\nA command to remove (delete) a directory.\n\nrmdir test\n\nIt will only remove the directory if it is empty.\nIf the directory is not empty, there will be a warning and the directory is not deleted.\n\n[user@host ~]$ rmdir test\nrmdir: failed to remove 'test': Directory not empty\n\nIf the user does not have permission to delete the directory, a warning is printed.\n\n[user@host ~]$ rmdir /root\nrmdir: failed to remove '/root': Permission denied\n\n\nrmdir is pronounced rem-der or are-em-der."
+  },
+  {
+    "objectID": "hpc0.html#rm",
+    "href": "hpc0.html#rm",
+    "title": "arctraining slides",
+    "section": "rm",
+    "text": "rm\n\nA command to remove (delete) files and directories.\nThe following will remove a file called test:\n\nrm test\n\nTo delete a directory and all contents the -r option can be used.\nThe -i option allows for interactivity so the user can choose what to delete.\nThe -f option forces.\nTake care with rm, especially combined with -r and -f options.\n\n\n\nTake care especially using wildcards, as it is all too easy to delete everything!\n\nWe will look at wildcards a bit later…"
+  },
+  {
+    "objectID": "hpc0.html#mv-cp-rmdir-rm-touch-exercise",
+    "href": "hpc0.html#mv-cp-rmdir-rm-touch-exercise",
+    "title": "arctraining slides",
+    "section": "mv, cp, rmdir, rm, touch, >, >> exercise",
+    "text": "mv, cp, rmdir, rm, touch, &gt;, &gt;&gt; exercise\n\nCreate some directories and files as follows:\n\nmkdir -P test0/test01\nmkdir test0/test02\ntouch test0/test01/test_file\n\nCopy test0/test01 into test0/test03\nMove test0/test02 into test0/test04\nDelete test0/test03\nDirect the output of ls into ls.out\nAppend the output of ls -al into ls.out"
+  },
+  {
+    "objectID": "hpc0.html#check-point-2",
+    "href": "hpc0.html#check-point-2",
+    "title": "arctraining slides",
+    "section": "Check point 2",
+    "text": "Check point 2\n\nAny questions?\n\n\n\nIs it time for a break?"
+  },
+  {
+    "objectID": "hpc0.html#yet-more-commands",
+    "href": "hpc0.html#yet-more-commands",
+    "title": "arctraining slides",
+    "section": "Yet more commands",
+    "text": "Yet more commands\n\n\n\n\n\n\n\nCommand\nDescription\n\n\n\n\ncat\nConcatenate and print\n\n\nless\nOpen into a paginated reader view\n\n\nsort\nSort lines\n\n\ncut\nCut lines based on a given character\n\n\nhead\nPrint the first lines of a file (default 10)\n\n\ntail\nPrint the last lines of a file (default 10)\n\n\nwc\nPrint newline, word, and byte counts\n\n\n\n\n\nLet’s look at these in turn…\nA word is a non-zero-length sequence of characters delimited by white"
+  },
+  {
+    "objectID": "hpc0.html#git-clone-exercise",
+    "href": "hpc0.html#git-clone-exercise",
+    "title": "arctraining slides",
+    "section": "git clone exercise",
+    "text": "git clone exercise\n\nGet a copy of some data using the following git command:\n\ngit clone https://github.com/ARCTraining/shell-training/\n\ngit is a distributed version control system\nChange directory into the directory called shell-training.\nList the directory contents."
+  },
+  {
+    "objectID": "hpc0.html#cat-sort-and-cut",
+    "href": "hpc0.html#cat-sort-and-cut",
+    "title": "arctraining slides",
+    "section": "cat, sort and cut",
+    "text": "cat, sort and cut\n\ncat concatenates (stream one thing after another) and prints to standard output\nsort sorts lines (by default alphabetically)\ncut cuts lines based on a given character\nCommands that create an output stream can have the output piped into another command that can process the stream using the symbol |\n\nFor example two files test and test2 can be concatenated, sorted alphabetically and piped into head as follows:\n\ncat test test2 | sort | head"
+  },
+  {
+    "objectID": "hpc0.html#cat-sort-and-cut-exercise",
+    "href": "hpc0.html#cat-sort-and-cut-exercise",
+    "title": "arctraining slides",
+    "section": "cat, sort and cut exercise",
+    "text": "cat, sort and cut exercise\n\nProblemSolution\n\n\n\nCombine cat, cut, and sort to print out the Latin names from the file IOM-animals/birds.txt in alphabetical order.\nSave the output to a new file. Hint: cut -d ',' -f 2 will split lines around the comma and yield the second field.\n\n\n\ncat birds.txt | sort | cut -d ',' -f 2 &gt; sorted-birds.txt\nAnother option uses awk instead of cut:\ncat birds.txt | sort | awk '{FS=\",\"}{print $2}' &gt; sorted-birds.txt\n\nawk is a scripting language used for manipulating data and generating reports\n\nIt supports variables, numeric functions, string functions, and logical operators\nIt allows for setting field seperators of multiple characters, whereas cut is restricted to a single character field seperator.\n\nThe {FS=\",\"} part of the awk command sets the field seperator to a comma, to set as a space followed by a comma use {FS=\" ,\"}"
+  },
+  {
+    "objectID": "hpc0.html#head-and-tail",
+    "href": "hpc0.html#head-and-tail",
+    "title": "arctraining slides",
+    "section": "head and tail",
+    "text": "head and tail\n\nThe head command prints the first lines of a file\nThe tail command prints the last lines of a file\nThe default number of lines is 10\n\nThis can be changed with the -n option"
+  },
+  {
+    "objectID": "hpc0.html#head-and-tail-exercise",
+    "href": "hpc0.html#head-and-tail-exercise",
+    "title": "arctraining slides",
+    "section": "head and tail exercise",
+    "text": "head and tail exercise\n\nProblemSolution\n\n\nList all the lines in the files in IOM-animals directory alphabetically and find the 50th item.\n\n\nUse head to get the first 50 lines and pipe it to tail to get the last one:\nsort *.txt | head -n 50 | tail -n 1\nAnother option is to use the sed command instead of head and tail:\nsort *.txt | sed -n 50p"
+  },
+  {
+    "objectID": "hpc0.html#yet-even-more-commands",
+    "href": "hpc0.html#yet-even-more-commands",
+    "title": "arctraining slides",
+    "section": "Yet even more commands",
+    "text": "Yet even more commands\n\n\n\nCommand\nDescription\n\n\n\n\ngrep\nFilter lines\n\n\nsed\nStream editor"
+  },
+  {
+    "objectID": "hpc0.html#sed-12",
+    "href": "hpc0.html#sed-12",
+    "title": "arctraining slides",
+    "section": "sed 1/2",
+    "text": "sed 1/2\n\nA program command tool for stream editing that reads an input stream and produces an output stream\nInternally it has a pattern space and a hold buffer\nData is read from the input stream until the next newline character and placed into the pattern space\nOperations can be performed on the data in the pattern space\nData can be exchanged between the pattern space and the hold buffer\nOnce all specified operations have been performed, the pattern space is ouput and a newline characer is added at the end"
+  },
+  {
+    "objectID": "hpc0.html#sed-22",
+    "href": "hpc0.html#sed-22",
+    "title": "arctraining slides",
+    "section": "sed 2/2",
+    "text": "sed 2/2\n\nA simple sed program:\n\nsed 's/foo/bar/'\n\nThis program replaces all instance of foo with bar on every line\nTake care using sed as it can modify files"
+  },
+  {
+    "objectID": "hpc0.html#grep",
+    "href": "hpc0.html#grep",
+    "title": "arctraining slides",
+    "section": "grep",
+    "text": "grep\n\nA command to print all lines containing or not containing a string of characters\nThe following will stream out all input lines containing foo:\n\ngrep foo\n\nThe following will stream out all input lines not containing foo:\n\ngrep -v foo"
+  },
+  {
+    "objectID": "hpc0.html#sed-and-grep-demo",
+    "href": "hpc0.html#sed-and-grep-demo",
+    "title": "arctraining slides",
+    "section": "sed and grep demo",
+    "text": "sed and grep demo\n\n\nOffer a demo?"
+  },
+  {
+    "objectID": "hpc0.html#data-challenge-exercise",
+    "href": "hpc0.html#data-challenge-exercise",
+    "title": "arctraining slides",
+    "section": "Data challenge exercise",
+    "text": "Data challenge exercise\n\nProblemSolution\n\n\n\nshell-training/data/ contains 300 data files, each of which should contain 100 values. One or more of these files are missing some data though…\nUse a series of commands connected by pipes to identify which files have missing data.\nHints:\n\nwc -w will tell you the number of values in a file\nsort -n will sort numerically\n\n\n\n\nUsing grep:\nwc -w values* | sort -n | grep -v '100 values'\nUsing head:\nwc -w values* | sort -n | head\nUsing awk:\nwc -w values* | sort -n | awk '$1 != 100 {print $0}'"
+  },
+  {
+    "objectID": "hpc0.html#permissions-14",
+    "href": "hpc0.html#permissions-14",
+    "title": "arctraining slides",
+    "section": "Permissions 1/4",
+    "text": "Permissions 1/4\n\nFile permissions can be identified using the ls command with the -l option\nBy default, the owner has read, write and execute permissions on a directory they create, and read and write (but not execute) permission on a file they create\nOn ARC4, group and all have no permissions by default\nOn ARC3, group and all have read permissions on files and also execute permissions on directories by default\n\n[user@host ~]$ mkdirs -p test0/test\n[user@host ~]$ touch test0/test/test-file\n[user@host ~]$ ls -la test0/test\ndrwx------ 2 &lt;owner&gt; &lt;group&gt; &lt;size&gt; &lt;date&gt; &lt;time&gt; .\ndrwx------ 3 &lt;owner&gt; &lt;group&gt; &lt;size&gt; &lt;date&gt; &lt;time&gt; ..\n-rw------- 1 &lt;owner&gt; &lt;group&gt; &lt;size&gt; &lt;date&gt; &lt;time&gt; test-file"
+  },
+  {
+    "objectID": "hpc0.html#permissions-24",
+    "href": "hpc0.html#permissions-24",
+    "title": "arctraining slides",
+    "section": "Permissions 2/4",
+    "text": "Permissions 2/4\n\nA schematic to help explain what ls -l shows:\n\n-rw------- 1 &lt;owner&gt; &lt;group&gt; &lt;size&gt; &lt;date&gt; &lt;time&gt; test-file\n     |     |    |       |       |      |      |\n     |     |    |       |       |      |      +----&gt; time last modified\n     |     |    |       |       |      +-----------&gt; date last modified\n     |     |    |       |       +------------------&gt; size in bytes\n     |     |    |       +--------------------------&gt; group assignment\n     |     |    +----------------------------------&gt; owner username\n     |     +---------------------------------------&gt; number of hard link\n     +---------------------------------------------&gt; type and permissions\n\nA schematic to help explain the type and permissions part:\n\n-rw-------\n| |  |  |\n| |  |  +----&gt; all user permissions (3 characters)\n| |  +-------&gt; group user permissions (3 characters)\n| +----------&gt; owner permissions (3 characters)\n+------------&gt; type (1 character)"
+  },
+  {
+    "objectID": "hpc0.html#permissions-34",
+    "href": "hpc0.html#permissions-34",
+    "title": "arctraining slides",
+    "section": "Permissions 3/4",
+    "text": "Permissions 3/4\nType and permissions examples\n\n\n\ndrwxr-x---\n\ntype: directory\npermissions\n\nowner: read, write, execute\ngroup: read, execute\nall: none\n\n\n\n\n\n-rw-------\n\ntype: file\npermissions\n\nowner: read, write\ngroup: none\nall: none"
+  },
+  {
+    "objectID": "hpc0.html#permissions-44",
+    "href": "hpc0.html#permissions-44",
+    "title": "arctraining slides",
+    "section": "Permissions 4/4",
+    "text": "Permissions 4/4\n\nPermissions may be changed using the chmod command.\nSpecific permissions can be granted or removed or all permissions can be specified\nThe following would set permissions -rwx------ to test.file:\n\nchmod 700 test.file\n\nDon’t worry about remembering details of how to change permissions.\nTry to remember that there are:\n\n\n\n\n3 levels of permission:\n\nuser\ngroup\nall\n\n\n\n\n3 types of permission:\n\nread\nwrite\nexecute\n\n\n\n\n\n\nThe following would add user (owner) execute permissions.\n\nchmod u+x test0/test/test-file\n\noctal value = read (4) + write (2) + execute (1)\nA later exercise will require adding execute permissions for a file…"
+  },
+  {
+    "objectID": "hpc0.html#groups",
+    "href": "hpc0.html#groups",
+    "title": "arctraining slides",
+    "section": "Groups",
+    "text": "Groups\n\nSystem users belong to groups (at least one)\nA user can change the group assignment for a file or directory to other groups they belong to using the command chgrp\nThe command groups can be used to print out what groups there are, and what group a user is part of\nThis can be useful if you want to share files between those in a group on the system"
+  },
+  {
+    "objectID": "hpc0.html#check-point-3",
+    "href": "hpc0.html#check-point-3",
+    "title": "arctraining slides",
+    "section": "Check point 3",
+    "text": "Check point 3\n\nAny questons?\n\n\n\nTime for a break?"
+  },
+  {
+    "objectID": "hpc0.html#variables",
+    "href": "hpc0.html#variables",
+    "title": "arctraining slides",
+    "section": "Variables",
+    "text": "Variables\n\nVariables are defined and accessed as follows:\n\nvar=1\necho $var\n\nThe variable var is set equal to the number 1.\necho is a command that will send what comes after it to the Standard Output (stdout).\nThe value of the variable is accessed using the $ symbol followed by the name of the variable.\nThe command printenv will print all the variables in use."
+  },
+  {
+    "objectID": "hpc0.html#for-loop-12",
+    "href": "hpc0.html#for-loop-12",
+    "title": "arctraining slides",
+    "section": "For loop 1/2",
+    "text": "For loop 1/2\nExamples\n\nIterator syntax to print the numbers 1 to 5:\n\nfor ((i=1;i&lt;=5;i=i+1)) do echo $i; done\n\nSequence syntax to print the numbers 1 to 5:\n\nfor i in {1..5}; do echo $i; done\n\nSequence syntax to print even numbers from 2 to 10:\n\nfor i in {2..10..2}; do echo $i; done\n\nIterator syntax to print a geometric series from 2 to 256:\n\nfor ((i=2;i&lt;=265;i=i*2)) do echo $i; done"
+  },
+  {
+    "objectID": "hpc0.html#for-loop-22",
+    "href": "hpc0.html#for-loop-22",
+    "title": "arctraining slides",
+    "section": "For loop 2/2",
+    "text": "For loop 2/2\n\nExample for loop to loop through directory contents:\n\nfor f in *; do echo $f; done\n\nWhere there is a ; there can be a new line:\n\nfor f in *\ndo echo $f\ndone"
+  },
+  {
+    "objectID": "hpc0.html#for-loops-exercise-1",
+    "href": "hpc0.html#for-loops-exercise-1",
+    "title": "arctraining slides",
+    "section": "For loops exercise 1",
+    "text": "For loops exercise 1\n\nProblemSolution\n\n\n\nUse a for loop to create five directories called calculation_?, where ? is a number.\n\n\n\n\nFor loop with an iterator syntax\n\nfor ((i=1;i&lt;6;i++))\ndo\nmkdir calculation_$i\ndone\n\ni++ is shorthand for i=i+1\nFor loop with a sequence syntax\n\nfor i in {1..5}\ndo\nmkdir calculation_$i\ndone"
+  },
+  {
+    "objectID": "hpc0.html#for-loops-exercise-2",
+    "href": "hpc0.html#for-loops-exercise-2",
+    "title": "arctraining slides",
+    "section": "For loops exercise 2",
+    "text": "For loops exercise 2\n\nProblemSolution\n\n\n\nUse a for loop to create five directories, each one the parent of the next.\n\n\n\nfor i in {1..5}; do\nmkdir calculation_$i\ncd calculation_$i\ndone"
+  },
+  {
+    "objectID": "hpc0.html#wildcards",
+    "href": "hpc0.html#wildcards",
+    "title": "arctraining slides",
+    "section": "Wildcards",
+    "text": "Wildcards\n\nIn Linux:\n\n* can represent anything.\n? can represent any single character.\n[] can represent any single characters detailed in the square brackets.\n\nThe following will list all files starting with a:\n\nls a*\n\nThe following will list all files starting with a and ending .txt that have one character between these:\n\nls a?.txt\n\nThe following will list all files starting with a and ending .txt that have any other string with a 0 or a 1 character between these:\n\nls a[12].txt\n\n\n* is pronounced star.\n? is pronounced question-mark.\n[ is pronounced start-square-bracket\n] is pronounced end-square-bracket"
+  },
+  {
+    "objectID": "hpc0.html#wildcards-exercise",
+    "href": "hpc0.html#wildcards-exercise",
+    "title": "arctraining slides",
+    "section": "Wildcards exercise",
+    "text": "Wildcards exercise\n\nProblemSolution\n\n\n\nPrint out the first line of each file in the wildcards directory.\n\n\n\nfor f in *.txt\n&gt; do\n&gt; head -n 1 $f\n&gt; done"
+  },
+  {
+    "objectID": "hpc0.html#quiz",
+    "href": "hpc0.html#quiz",
+    "title": "arctraining slides",
+    "section": "Quiz",
+    "text": "Quiz\n\nQuestionAnswer\n\n\nIf the following is run from the wildcards directory. What will be printed?\nfor f in *.txt\n&gt; do\n&gt; echo $f\n&gt; cat $f &gt; new-file.txt\n&gt; done\nWhat will the contents of new-file.txt be and why?\n\n\n\nThe command will print the name of each .txt file:\n\nThe echo command prints a different file name each iteration\n\nThe content of new-file.txt will be the same as xyz.txt:\n\nThe contents of a different file are written to new-file.txt each iteration, overwriting whatever was written on the previous iteration\nUsing &gt;&gt; instead of &gt; would append instead of overwrite."
+  },
+  {
+    "objectID": "hpc0.html#editing-files",
+    "href": "hpc0.html#editing-files",
+    "title": "arctraining slides",
+    "section": "Editing files",
+    "text": "Editing files\n\nThese are three programs available on the system that can be used for text editing:\n\nnano\nvim\nemacs\n\nIf you are unfamiliar with any of these, we recommend you try nano.\nCare is needed if transferring scripts and data between Windows and Linux due to differences in line endings.\n\ndos2unix and unix2dos may be helpful to get this right.\n\n\n\n\nData/File transfer is covered in HPC1."
+  },
+  {
+    "objectID": "hpc0.html#shell-scripts",
+    "href": "hpc0.html#shell-scripts",
+    "title": "arctraining slides",
+    "section": "Shell Scripts",
+    "text": "Shell Scripts\n\nThese are simple text files:\n\nBy convention the filename ends .sh\n\nThe file should start with a shebang:\n\nA line which tells the Linux system what command to run:\n\n#!/bin/bash\nAfter the shebang, simply enter all the commands for the script.\nLines starting with # will be regarded as comments\n\nUse these to make your script easier to understand.\n\nTo run the script it must have executable permissions.\nA script saved as script.sh can be run using:\n\n./script.sh"
+  },
+  {
+    "objectID": "hpc0.html#shell-scripts-demo",
+    "href": "hpc0.html#shell-scripts-demo",
+    "title": "arctraining slides",
+    "section": "Shell Scripts demo",
+    "text": "Shell Scripts demo"
+  },
+  {
+    "objectID": "hpc0.html#shell-script-exercise",
+    "href": "hpc0.html#shell-script-exercise",
+    "title": "arctraining slides",
+    "section": "Shell Script exercise",
+    "text": "Shell Script exercise\n\nCreate and run a shell script to print out the first line of each file in a directory. Test using the wildcards directory.\nHints:\n\nUse the history command to see the commands you’ve entered\nPipe the history output into tail\nDirect the ouput into a file and then use nano to modify this into a script\nModify the file permissions so you can execute the file\nIf you named the script script.sh issue the following command to run it:\n\n./script.sh\n\n\n\nUseful scripts can be put somehwere sensible and this directory can be added to your PATH.\nIf there is more time, perhaps look at some other built-in commands.\n\nman bash-builtins\npushd, dirs, popd are perhaps good candidates…"
+  },
+  {
+    "objectID": "hpc0.html#thank-you",
+    "href": "hpc0.html#thank-you",
+    "title": "arctraining slides",
+    "section": "Thank you",
+    "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: https://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
+  },
+  {
+    "objectID": "donut.html#presentation-set-up-guide",
+    "href": "donut.html#presentation-set-up-guide",
+    "title": "arctraining slides",
+    "section": "Presentation set up guide",
+    "text": "Presentation set up guide\n\nShare the Web browser window containing the slides (‘Slide View’).\nActivate ‘Speaker View’:\n\nFrom the slide-menu-button (bars in the lower left), select:\n\nTools (at the top) &gt;&gt; Speaker View (from the list).\n\n\nA new Web browser window should open showing the ‘Speaker View’.\n\nLocate this and read the Notes Pane (lower right).\n\n\n\n\nThe default Speaker View layout has three panes:\n\nSlide Pane (left) shows the current slide.\nNotes Pane (lower right) are these notes.\nUpcoming Pane (upper right).\n\nThis should show the next slide.\nLayout: Default can be actioned to change the Layout.\n\n\nThe current slide in Slide View and in the Speaker View Slide Pane should synchronise:\n\nSo changing slide in one should do the same in the other.\n\nMove on to the next slide - the Title Slide:\n\nUse the down or right keyboard cursor keys or activate the controls-arrow that looks like &gt; in the lower right &gt;- If you have activated the Upcoming Pane the keyboard cursor keys will change what is in there.\nTo move on in the presentation, activate (click back into) the main Slide Pane."
+  },
+  {
+    "objectID": "donut.html#meta-code",
+    "href": "donut.html#meta-code",
+    "title": "arctraining slides",
+    "section": "Donut",
+    "text": "Donut\nA Guide to delivering Presentations Using Quarto"
+  },
+  {
+    "objectID": "donut.html#research-computing-team-and-service",
+    "href": "donut.html#research-computing-team-and-service",
+    "title": "arctraining slides",
+    "section": "Research Computing Team and Service",
+    "text": "Research Computing Team and Service\n\n\nHere to support research(ers)\n\nProvide training\nSupport users of Grid and Cloud Computing platforms\nProvide consultancy\n\nTo develop project proposals\nTo help recruit people with specialist skills\nWorking directly on research projects\n\n\nFor details please see our Website\nContact us via the IT Service Desk\n\n\n\nIf you follow a link then a new tab will open in the Slide View Web browser.\n\nThis will want closing or the Slide View activating again as he main tab in the browser.\n\nMaybe point out some sections/features on the Research Computing Website.\nWe support use and develop resources."
+  },
+  {
+    "objectID": "donut.html#polls-and-forms",
+    "href": "donut.html#polls-and-forms",
+    "title": "arctraining slides",
+    "section": "Polls and Forms",
+    "text": "Polls and Forms\n\nPolls are best prepared in advance.\n\nThere are two main types of Poll:\n\n“Emoji Polls”\n“Forms Polls”"
+  },
+  {
+    "objectID": "donut.html#emoji-polls",
+    "href": "donut.html#emoji-polls",
+    "title": "arctraining slides",
+    "section": "Emoji Polls",
+    "text": "Emoji Polls\n\nConducted from within Teams chat\nCopy the following and then press the space bar after each end parenthesis ) to turn the text into an emoji:\nDo you like emoji polls?\n(thumbsup) yes\n(heart) no\nThe thumbsup and heart emojis are the first two emojis that are in the reaction list of users by default."
+  },
+  {
+    "objectID": "donut.html#forms-polls",
+    "href": "donut.html#forms-polls",
+    "title": "arctraining slides",
+    "section": "Forms Polls",
+    "text": "Forms Polls\n\nA Forms poll can be added ad hoc in a Teams chat:\n\nSelect the three dots ... below the message box and then search for or add Forms.\nOr add using the + option at the top of the chat.\n\nHowever, this use of Forms is being phased out in preference for a Polls App.\nThe Polls App however, is not available in the University of Leeds Office 365 offerring currently to test and the version that can be used in the chat does not seem to have an easy way to collect the results!\nIt might be best to prepare some Forms forms in advance using the Forms in Office 365 (https://www.microsoft365.com/launch/forms).\n\nSharing these simply involves copying the URL and pasting it into the chat.\n\nFor example: https://forms.office.com/pages/designpagev2.aspx?lang=en-GB&origin=OfficeDotCom&route=Start&subpage=design&id=qO3qvR3IzkWGPlIypTW3yy7GBfs2qsFOjWB83KLaHnVUNzFZS1VCTENOVEJUMDdKVEEyNURDRlY2USQlQCN0PWcu"
+  },
+  {
+    "objectID": "donut.html#hackpads-or-forms",
+    "href": "donut.html#hackpads-or-forms",
+    "title": "arctraining slides",
+    "section": "Hackpads or Forms",
+    "text": "Hackpads or Forms\n\nThese can be used for participants to introduce themselves to us.\nParticipants should have all the links already in an email."
+  },
+  {
+    "objectID": "donut.html#feedback-and-questions",
+    "href": "donut.html#feedback-and-questions",
+    "title": "arctraining slides",
+    "section": "Feedback and questions",
+    "text": "Feedback and questions\n\nPlease encourage interruptions especially for participants having difficulty hearing or following the presentation…\nPeriodically pause and ask if participants have any questions or want anything repeated…"
+  },
+  {
+    "objectID": "donut.html#getting-feedback",
+    "href": "donut.html#getting-feedback",
+    "title": "arctraining slides",
+    "section": "Getting Feedback",
+    "text": "Getting Feedback\n\nPlease encourage participants to provide honest feedback about presentations and the training so we can improve.\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
   }
 ]
