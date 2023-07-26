@@ -1,0 +1,70 @@
+---
+format:
+  clean-revealjs:
+    self-contained: true
+    navigation-mode: linear
+    controls-layout: bottom-right
+    controls: false
+    footer: "[Research IT Website]({{< var rc.website >}}) | [Research IT Query]({{< var rc.servicedesk >}}) | [Courses Material]({{< var rc.material >}})"
+code: Java0
+name: Introduction to Java Programming
+---
+
+{{< include _title.qmd >}}
+
+{{< include _team.qmd >}}
+
+## Course Schematic
+
+```{mermaid}
+flowchart LR;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+::: {.notes}
+Speaker notes
+:::
+
+
+## Java 1/2
+- [Java](https://en.wikipedia.org/wiki/Java_(programming_language)) is a high-level, class-based, object-oriented programming language.
+- Java source code is human readable plain text written using a [Unicode](https://en.wikipedia.org/wiki/Unicode) character set.
+  - The Unicode could be [ASCII](https://en.wikipedia.org/wiki/ASCIIhttps://en.wikipedia.org/wiki/Unicode) which uses 8 bit bytesto represent up to 128 unique characters.
+- The syntax of Java is similar to [C](https://en.wikipedia.org/wiki/C_(programming_language)) and [C++](https://en.wikipedia.org/wiki/C%2B%2B).
+
+## Java 2/2
+- Compiled [Java bytecode](https://en.wikipedia.org/wiki/Java_bytecode) is run on a [Java virtual machine](https://en.wikipedia.org/wiki/Java_virtual_machine) (JVM).
+- The JVM can be installed and run on most operating systems and computer architectures making Java applications highly portable and suited to distributed working (with different components of the system running on different computers).
+- The Java runtime provides dynamic capabilities (such as reflection and runtime code modification) that are typically not available in traditional compiled languages.
+
+## General development workflow
+- Creating and running a simple Java application typically involves three main steps:
+1. Writing Java source code.
+2. Compiling the Java source code into [Java bytecode](https://en.wikipedia.org/wiki/Java_bytecode).
+3. Executing/running the Java byte code.
+
+
+## Java Classes
+- A Java class is created by a special declaration in a source code file which matches the name of the file.
+- Java Class names cannot start with a number
+
+
+## Exercise {.smaller}
+
+::: {.panel-tabset}
+
+### Problem
+
+XYZ
+
+### Solution
+
+ABC
+
+:::
+
+
+{{< include _end.qmd >}}

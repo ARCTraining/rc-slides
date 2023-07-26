@@ -1,0 +1,40 @@
+---
+format:
+  clean-revealjs:
+    self-contained: true
+    navigation-mode: linear
+    controls-layout: bottom-right
+    controls: false
+    footer: "[Research IT Website]({{< var rc.website >}}) | [Research IT Query]({{< var rc.servicedesk >}}) | [Courses Material]({{< var rc.material >}})"
+code: Dev2
+name: Mermaid Diagram Examples
+---
+
+# Training Portfolio {.smaller}
+Some of the boxes are hyperlinks.
+```{mermaid}
+graph LR;
+    A[HPC0]-->B;
+    B[HPC1]-->C[HPC2];
+    D[Cloud0];
+    F[Python0]-->G;
+    G[Python1]-->H[Python2];
+    E[Git0]-->G;
+    E-->J;
+    I[Java0]-->J;
+    J[Java1]-->K[Java2];
+    click A "hpc0.html" "HPC0 Introduction to Linux Command Line";
+    click B "hpc1.html" "HPC1 Introduction to HPC at Leeds";
+    click C "hpc2.html" "HPC2";
+    click I "java0.html" "Java0: Introdution to Java Programming";
+```
+
+
+## Euler diagrams
+- Euler diagrams are not yet supported in Mermaid, but this feature might be coming:
+  - [https://github.com/mermaid-js/mermaid/issues/2583](https://github.com/mermaid-js/mermaid/issues/2583)
+
+
+## Filesystem diagrams
+- Mermaid is not ready for this yet, but it is supposedly in development:
+  - [https://github.com/mermaid-js/mermaid/issues/2583](https://github.com/mermaid-js/mermaid/issues/2645)

@@ -7,12 +7,12 @@ format:
 
 Public facing homepage for arctraining Quarto slides collection.
 
-## Slides: 
+## Courses
 
 Note: this page is under construction. As soon as the slides are available,
 the link will be provided.
 
-- [x] [HPC0: Introduction to Linux for HPC](./hpc0.qmd)
+- [x] [HPC0: Introduction to Linux for HPC](hpc0.qmd)
 - [x] [HPC1: Introduction to High Performance Computing](hpc1.qmd)
 - [ ] HPC2: Applications and containers on HPC
 - [ ] HPC3: Computer architectures and shared memory parallel programming
@@ -26,3 +26,9 @@ the link will be provided.
 - [ ] SWD5: Scientific Python
 - [ ] SWD6: High performance Python
 - [ ] SWD7: Introduction to reproducible workflows in Python
+- [ ] [Java0: Introduction to Java programming](java0.qmd)
+
+## Developer Resources
+- [x] [Donut: A Guide to delivering Presentations Using Quarto](donut.qmd)
+- [x] [Template](template.qmd)
+- [x] [Mermaid Diagram Examples](mermaid.qmd)

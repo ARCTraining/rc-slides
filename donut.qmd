@@ -9,7 +9,7 @@ code: Donut
 name: A Guide to delivering Presentations Using Quarto
 ---
 
-## Presentation set up guide
+## A Guide to delivering Presentations Using Quarto {.smaller}
 - Share the Web browser window containing the slides ('`Slide View`').
 - Activate '`Speaker View`':
   - From the `slide-menu-button` (bars in the lower left), select:
@@ -32,12 +32,6 @@ name: A Guide to delivering Presentations Using Quarto
 :::
 
 
-{{< include _title.qmd >}}
-
-
-{{< include _team.qmd >}}
-
-
 ## Polls and Forms
 - Polls are best prepared in advance.
   - There are two main types of Poll:
@@ -47,35 +41,40 @@ name: A Guide to delivering Presentations Using Quarto
 ## Emoji Polls
 - Conducted from within Teams chat
 - Copy the following and then press the space bar after each end parenthesis `)` to turn the text into an emoji:
-\
+```
 Do you like emoji polls?
-\
 (thumbsup) yes
-\
 (heart) no
-- The `thumbsup` and `heart` emojis  are the first two emojis that are in the reaction list of users by default.
+```
+- The `thumbsup` and `heart` emojis  are the first two emojis that are in the reaction list of Teams users by default.
 
 
-## Forms Polls
+## Forms Polls {.smaller}
 - A `Forms` poll can be added ad hoc in a Teams chat:
-  - Select the three dots `...` below the message box and then search for or add `Forms`.
-  - Or add using the `+` option at the top of the chat.
-- However, this use of `Forms` is being phased out in preference for a `Polls App`.
-- The `Polls App` however, is not available in the University of Leeds Office 365 offerring currently to test and the version that can be used in the chat does not seem to have an easy way to collect the results!
-- It might be best to prepare some `Forms` forms in advance using the `Forms` in Office 365 (https://www.microsoft365.com/launch/forms).
-  - Sharing these simply involves copying the URL and pasting it into the chat.
-- For example: https://forms.office.com/pages/designpagev2.aspx?lang=en-GB&origin=OfficeDotCom&route=Start&subpage=design&id=qO3qvR3IzkWGPlIypTW3yy7GBfs2qsFOjWB83KLaHnVUNzFZS1VCTENOVEJUMDdKVEEyNURDRlY2USQlQCN0PWcu
-
+  - Select the three dots `...` below the message box and then search for or add `Forms`
+  - Or add using the `+` option at the top of the chat
+- However, this use of `Forms` is being phased out in preference for a `Polls App`
+  - The `Polls App` however, is not available in the University of Leeds Office 365 offerring
+  - Collecting result from the Teams chat version is borked!
+- It might be best to prepare some `Forms` forms in advance using the [`Forms` in Office 365](https://www.microsoft365.com/launch/forms)
+  - Sharing these simply involves copying the URL and pasting it into the chat
+- [Example](https://forms.office.com/pages/designpagev2.aspx?lang=en-GB&origin=OfficeDotCom&route=Start&subpage=design&id=qO3qvR3IzkWGPlIypTW3yy7GBfs2qsFOjWB83KLaHnVUNzFZS1VCTENOVEJUMDdKVEEyNURDRlY2USQlQCN0PWcu)
+  - Clicking here should take you to a form (the URL can be pasted into a Teams chat)
 
 ## Hackpads or Forms
-- These can be used for participants to introduce themselves to us.
-- Participants should have all the links already in an email.
+- These can be used for participants to introduce themselves to us
+- Participants should have all the links already in an email
 
 
-## Feedback and questions
-- Please encourage interruptions especially for participants having difficulty hearing or following the presentation...
+## Breaks, feedback and questions
+- Please encourage interruptions especially for participants experience difficulty hearing or following the presentation...
 - Periodically pause and ask if participants have any questions or want anything repeated...
+- Ideally there should be at least:
+  - A 5 minute break after 30 minutes (or before)
+  - A 10 minute break after a further 30 minutes (or before)
+  - A 5 minute break after a further 30 minutes (or before)
+  - A longer break after a further 30 minutes (or before)
 
 
 ## Getting Feedback
-- Please encourage participants to provide honest feedback about presentations and the training so we can improve.
+- Please encourage participants to provide honest feedback about presentations and the training so we can improve
