@@ -11,7 +11,7 @@ name: Mermaid Diagram Examples
 ---
 
 ## Mermaid {.smaller}
-- https://mermaid.js.org/
+- [https://mermaid.js.org/](https://mermaid.js.org/)
 - Mermaid is evolving as a way of developing diagrams using makdown
 - It was originally geared for producing flow diagrams
 - There are some useful examples on the website and online
