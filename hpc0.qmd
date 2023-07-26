@@ -1,5 +1,5 @@
 ---
-format: 
+format:
   clean-revealjs:
     self-contained: true
     navigation-mode: linear
@@ -1100,12 +1100,12 @@ done
 :::
 
 
-## Wildcards
-- There are 3 types of wildcard in Linux:
+## Wildcards {.smaller}
+- In Linux:
   - `*` can represent anything.
   - `?` can represent any single character.
   - `[]` can represent any single characters detailed in the square brackets.
-- The following will list all files starting with a:
+- The following will list all files starting with `a`:
 ```{.bash code-line-numbers=false}
 ls a*
 ```
