@@ -103,7 +103,7 @@ https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.m
 ::::
 
 ::: {.notes}
-- `MobaXTerm` is software you can download, install and run without needing help from systems administators.
+- `MobaXTerm` is software you can download, install and run without needing help from systems administrators.
   - It provides a sort of bridge between your host Windows machine and other machines you connect with.
 - Maybe conduct a poll about what host Operating Systems participants expect to use to connect to the HPC.
 - In terms of connection: On campus, but using wifi is like being 'off campus'... 
@@ -707,12 +707,12 @@ rm test
 ## `mv`, `cp`, `rmdir`, `rm`, `touch`, `>`, `>>` exercise
 - Create some directories and files as follows:
 ```{.bash code-line-numbers=false}
-mkdir -P test0/test01
+mkdir -p test0/test01
 mkdir test0/test02
 touch test0/test01/test_file
 ```
 - Copy `test0/test01` into `test0/test03`
-- Move `test0/test02` into `test0/test04`
+- Rename `test0/test02` into `test0/test04`
 - Delete `test0/test03`
 - Direct the output of `ls` into `ls.out`
 - Append the output of `ls -al` into `ls.out`
@@ -791,8 +791,8 @@ cat birds.txt | sort | awk '{FS=","}{print $2}' > sorted-birds.txt
 ```
 - `awk` is a scripting language used for manipulating data and generating reports
   - It supports variables, numeric functions, string functions, and logical operators
-  - It allows for setting field seperators of multiple characters, whereas `cut` is restricted to a single character field seperator. 
-- The `{FS=","}` part of the `awk` command sets the field seperator to a comma, to set as a space followed by a comma use `{FS=" ,"}`
+  - It allows for setting field separators of multiple characters, whereas `cut` is restricted to a single character field separator. 
+- The `{FS=","}` part of the `awk` command sets the field separator to a comma, to set as a space followed by a comma use `{FS=" ,"}`
 
 :::
 
@@ -1119,7 +1119,7 @@ ls a[12].txt
 ```
 
 ::: {.notes}
-- `*` is pronounced `star`.
+- `*` is pronounced `star` or `asterisk`.
 - `?` is pronounced `question-mark`.
 - `[` is pronounced `start-square-bracket`
 - `]` is pronounced `end-square-bracket`
@@ -1211,7 +1211,7 @@ What will the contents of `new-file.txt` be and why?
 - Hints:
   - Use the `history` command to see the commands you've entered
   - Pipe the `history` output into `tail`
-  - Direct the ouput into a file and then use `nano` to modify this into a script
+  - Direct the output into a file and then use `nano` to modify this into a script
   - Modify the file permissions so you can execute the file
   - If you named the script `script.sh` issue the following command to run it:
 ```{.bash code-line-numbers=false}
@@ -1219,7 +1219,7 @@ What will the contents of `new-file.txt` be and why?
 ```
 
 ::: {.notes}
-- Useful scripts can be put somehwere sensible and this directory can be added to your `PATH`.
+- Useful scripts can be put somewhere sensible and this directory can be added to your `PATH`.
 - If there is more time, perhaps look at some other `built-in` commands.
   - `man bash-builtins`
   - `pushd`, `dirs`, `popd` are perhaps good candidates...
