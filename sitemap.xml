@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ARCTraining.github.io/rc-slides/template.html</loc>
-    <lastmod>2023-07-26T14:39:04.640Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ARCTraining.github.io/rc-slides/hpc1.html</loc>
-    <lastmod>2023-07-26T14:39:03.704Z</lastmod>
+    <loc>https://ARCTraining.github.io/rc-slides/donut.html</loc>
+    <lastmod>2023-10-11T09:19:49.753Z</lastmod>
   </url>
   <url>
     <loc>https://ARCTraining.github.io/rc-slides/index.html</loc>
-    <lastmod>2023-07-26T14:38:58.864Z</lastmod>
+    <lastmod>2023-10-11T09:19:47.669Z</lastmod>
   </url>
   <url>
     <loc>https://ARCTraining.github.io/rc-slides/hpc0.html</loc>
-    <lastmod>2023-07-26T14:39:02.784Z</lastmod>
+    <lastmod>2023-10-11T09:19:43.613Z</lastmod>
   </url>
   <url>
-    <loc>https://ARCTraining.github.io/rc-slides/donut.html</loc>
-    <lastmod>2023-07-26T14:39:04.212Z</lastmod>
+    <loc>https://ARCTraining.github.io/rc-slides/hpc1.html</loc>
+    <lastmod>2023-10-11T09:19:45.665Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ARCTraining.github.io/rc-slides/template.html</loc>
+    <lastmod>2023-10-11T09:19:49.169Z</lastmod>
   </url>
 </urlset>
