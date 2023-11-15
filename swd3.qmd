@@ -1,0 +1,17 @@
+---
+format: 
+  clean-revealjs:
+    self-contained: true
+    navigation-mode: linear
+    controls-layout: bottom-right
+    controls: false
+    footer: "[Research IT Website]({{< var rc.website >}}) | [Research IT Query]({{< var rc.servicedesk >}}) | [Courses Material]({{< var rc.material >}})"
+name: Software development practices for Research
+code: SWD3
+---
+
+{{< include _title.qmd >}}
+{{< include _team.qmd >}}
+{{< include swd3/sdlc.qmd >}}
+{{< include swd3/structure.qmd >}}
+{{< include swd3/good-practices.qmd >}}

@@ -1,0 +1,70 @@
+## Basic Structure Suggestion {.smaller}
+
+```{.bash}
+# The most basic structure for a Python project should look like:
+my-model
+├── src
+│   └── __init__.py
+|   └── my_model.py
+└── tests
+|   ├── __init__.py
+|   └── test_my_model.py
+├── README.md
+└── requirements
+```
+
+::: {.panel-tabset #small80}
+### Modules
+
+- Code files with `.py` extension
+
+### Packages
+
+- Directory to group modules.
+- For a folder with several modules to be recognized as a package it is necessary to include the file `__init__.py`
+
+### Test
+
+- All tests units (files and methods) must be named starting with `test_` and placed inside a package (or subpackage) called `tests`.
+- Tests can be grouped in just one folder for the entire repository or they can be organized within each package/subpackage.
+
+### Readme
+
+- Is a guide that gives users a detailed description of a project you have worked on
+- It is the first file a person will see when they encounter your project, so it should be fairly brief but detailed.
+- See how to write a good README file in this [`freecodecamp` post](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/).
+
+### Requirements
+
+- Text information about all the necessary additional libraries, modules, and packages.
+- This can be replaced by files like: [`environment.yml`](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file), [`pyproject.toml`](https://packaging.python.org/en/latest/tutorials/packaging-projects/#creating-pyproject-toml), [`setup.py`](https://www.pythonforthelab.com/blog/how-create-setup-file-your-project/).
+
+:::
+
+## Advanced Project Structure {.smaller}
+
+Template from [mkrapp github](https://github.com/mkrapp/cookiecutter-reproducible-science)
+
+```bash
+.
+├── AUTHORS.md
+├── LICENSE
+├── README.md
+├── bin                <- Your compiled model code can be stored here (not tracked by git)
+├── config             <- Configuration files, e.g., for doxygen or for your model if needed
+├── data
+│   ├── external       <- Data from third party sources.
+│   ├── interim        <- Intermediate data that has been transformed.
+│   ├── processed      <- The final, canonical data sets for modeling.
+│   └── raw            <- The original, immutable data dump.
+├── docs               <- Documentation, e.g., doxygen or scientific papers (not tracked by git)
+├── notebooks          <- Ipython or R notebooks
+├── reports            <- For a manuscript source, e.g., LaTeX, Markdown, etc., or any project reports
+│   └── figures        <- Figures for the manuscript or reports
+└── src                <- Source code for this project
+    ├── data           <- scripts and programs to process data
+    ├── external       <- Any external source code, e.g., pull other git projects, or external libraries
+    ├── models         <- Source code for your own model
+    ├── tools          <- Any helper scripts go here
+    └── visualization  <- Scripts for visualisation of your results, e.g., matplotlib, ggplot2 related.
+```
