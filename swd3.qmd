@@ -15,3 +15,4 @@ code: SWD3
 {{< include swd3/sdlc.qmd >}}
 {{< include swd3/structure.qmd >}}
 {{< include swd3/good-practices.qmd >}}
+{{< include swd3/project.qmd >}}

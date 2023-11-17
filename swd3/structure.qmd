@@ -1,32 +1,25 @@
 ## Basic Structure Suggestion {.smaller}
 
 ```{.bash}
-# The most basic structure for a Python project should look like:
+# The most basic structure for a code project should look like:
 my-model
-├── src
-│   └── __init__.py
-|   └── my_model.py
-└── tests
-|   ├── __init__.py
-|   └── test_my_model.py
 ├── README.md
-└── requirements
+├── requirements.txt
+├── src                <- Source code for this project
+└── tests              <- Test code for this project
 ```
 
-::: {.panel-tabset #small80}
-### Modules
+::: {.panel-tabset}
 
-- Code files with `.py` extension
+<!-- These were for python - so not necessary for more broad talk
+### Source Code
 
-### Packages
-
-- Directory to group modules.
-- For a folder with several modules to be recognized as a package it is necessary to include the file `__init__.py`
 
 ### Test
 
 - All tests units (files and methods) must be named starting with `test_` and placed inside a package (or subpackage) called `tests`.
 - Tests can be grouped in just one folder for the entire repository or they can be organized within each package/subpackage.
+-->
 
 ### Readme
 
@@ -43,7 +36,7 @@ my-model
 
 ## Advanced Project Structure {.smaller}
 
-Template from [mkrapp github](https://github.com/mkrapp/cookiecutter-reproducible-science)
+Template based on [mkrapp github](https://github.com/mkrapp/cookiecutter-reproducible-science)
 
 ```bash
 .
@@ -61,10 +54,11 @@ Template from [mkrapp github](https://github.com/mkrapp/cookiecutter-reproducibl
 ├── notebooks          <- Ipython or R notebooks
 ├── reports            <- For a manuscript source, e.g., LaTeX, Markdown, etc., or any project reports
 │   └── figures        <- Figures for the manuscript or reports
-└── src                <- Source code for this project
-    ├── data           <- scripts and programs to process data
-    ├── external       <- Any external source code, e.g., pull other git projects, or external libraries
-    ├── models         <- Source code for your own model
-    ├── tools          <- Any helper scripts go here
-    └── visualization  <- Scripts for visualisation of your results, e.g., matplotlib, ggplot2 related.
+├── src                <- Source code for this project
+│   ├── data           <- scripts and programs to process data
+│   ├── external       <- Any external source code, e.g., pull other git projects, or external libraries
+│   ├── models         <- Source code for your own model
+│   ├── tools          <- Any helper scripts go here
+│   └── visualization  <- Scripts for visualisation of your results, e.g., matplotlib, ggplot2 related.
+└── tests              <- Test code for this project
 ```
