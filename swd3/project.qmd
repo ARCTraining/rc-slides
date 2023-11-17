@@ -1,0 +1,123 @@
+## Bringing it all together {.smaller}
+
+### The Hypotenuse Problem
+
+Calculating the hypotenuse
+
+$$ c = \sqrt{a^2 + b^2} $$
+
+
+General Design
+
+- 1 squared function
+- 1 sum function
+- 1 square root function
+- 1 hypotenuse function that uses the other functions
+
+
+## Workflow {.smaller}
+
+1. Install Git, Anaconda, VScode
+2. Create a GitHub repository + Licence + .gitignore + Readme
+3. Setup GH Action for testing
+4. Clone GH repository in local machine
+5. Create project structure
+6. Setup tests
+7. Develop code
+8. Push to github
+9. Add docstring
+10. Create simple documentation
+11. Push to github
+12. Setup file and local install
+
+## Extra: documentation {.smaller}
+
+- Create docstring for every function
+- Install `sphinx`
+- Start the basic structure using: $ sphinx-quickstart docs
+- Use the apidoc to get docstrings: `$ sphinx-apidoc -o docs .`
+- Edit files:
+
+::: {.panel-tabset}
+
+### `conf.py`
+
+- add extentions: `'sphinx.ext.todo', 'sphinx.ext.viewcode', 'sphinx.ext.autodoc'`.
+- change theme: `sphinx_rtd_theme`
+- add the `src` (change the folder name as necessary!) folder as path:
+
+```python
+ import os
+ import sys
+ sys.path.insert(0, os.path.abspath('../src'))
+```
+
+### `index.rst`
+
+Add extra files after `Contents`
+
+```
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   dependencies
+   usage
+   functions
+```
+
+### `dependencies.rst`
+
+List all your dependencies:
+
+```
+Dependencies
+============
+
+- python
+- pytest
+- flake8
+- black
+- sphinx
+```
+
+### `usage.rst`
+
+Explain how to use your software
+
+```
+Usage Guide
+============
+
+To start working with this repository you need to clone it onto your local
+machine: ::
+
+    $ git clone https://github.com/...
+
+
+Next ...
+```
+
+### `functions.rst`
+
+Create a function file with the following:
+
+```
+Calc Module
+--------------------------------
+
+.. automodule:: calc
+   :members:
+   :undoc-members:
+   :show-inheritance:
+```
+
+:::
+
+## Extra: documentation Action {.smaller}
+
+Create a new GH action to create a nice website for your documentation.
+
+- The action is available [here](https://github.com/patricia-ternes/hypot-2023/blob/main/.github/workflows/documentation.yml)
+- You may need update GH Actions permissions to allow `write`
+- After a successful documentation action, you need to select `gh-pages` branch to activate your website
