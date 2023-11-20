@@ -12,6 +12,12 @@ code: SWD3
 
 {{< include _title.qmd >}}
 {{< include _team.qmd >}}
+
+## Useful Links
+
+- [GitHub Project Demo](https://github.com/ARCTraining/swd3-demo)
+- [Alan Turing Institute - Research Software Engineering Course Material](https://alan-turing-institute.github.io/rse-course/html/index.html)
+
 {{< include swd3/sdlc.qmd >}}
 {{< include swd3/structure.qmd >}}
 {{< include swd3/good-practices.qmd >}}

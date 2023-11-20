@@ -19,22 +19,23 @@ General Design
 
 1. Install Git, Anaconda, VScode
 2. Create a GitHub repository + Licence + .gitignore + Readme
-3. Setup GH Action for testing
+3. Setup GH Action for testing (Python Application)
 4. Clone GH repository in local machine
-5. Create project structure
-6. Setup tests
+5. Create project structure (source and test folders)
+6. Setup tests (start with `test_`)
 7. Develop code
-8. Push to github
-9. Add docstring
-10. Create simple documentation
-11. Push to github
-12. Setup file and local install
+8. Add docstring (you can use `autoDocstring - Python Docstring Generator on VS Code`)
+9. Lint code and tests
+10. Push to github
+11. EXTRA: Create Sphinx documentation
+12. EXTRA: Setup file and local install
+13. EXTRA: GH Release
 
-## Extra: documentation {.smaller}
+## Extra: Sphinx documentation {.smaller}
 
 - Create docstring for every function
 - Install `sphinx`
-- Start the basic structure using: $ sphinx-quickstart docs
+- Start the basic structure using: `$ sphinx-quickstart docs`
 - Use the apidoc to get docstrings: `$ sphinx-apidoc -o docs .`
 - Edit files:
 
@@ -103,8 +104,8 @@ Next ...
 Create a function file with the following:
 
 ```
-Calc Module
---------------------------------
+API reference
+=============
 
 .. automodule:: calc
    :members:
@@ -121,3 +122,62 @@ Create a new GH action to create a nice website for your documentation.
 - The action is available [here](https://github.com/patricia-ternes/hypot-2023/blob/main/.github/workflows/documentation.yml)
 - You may need update GH Actions permissions to allow `write`
 - After a successful documentation action, you need to select `gh-pages` branch to activate your website
+
+## Extra: Setup file
+
+Create a `setup.py` file like:
+
+```python
+import setuptools
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name="hypot",
+    version="0.1.0",
+    author="Patricia Ternes",
+    author_email="p.ternesdallagnollo@leeds.ac.uk",
+    description="The hypot SWD3 demo package",
+    packages=setuptools.find_packages(),
+    classifiers=[
+        "Programming Language :: Python :: 3.9",
+        "Intended Audience :: Science/Research/Learning",
+    ],
+    python_requires=">=3.9",
+)
+```
+
+## Local Installation
+
+**Install:** install the hypot package into the environment using:
+
+```bash
+$ python setup.py install
+```
+
+**Usage:** if you want to create a personalised script, you
+can import the hypot modules as follows:
+
+```python
+from hypot.calc import squared, addition, sqroot
+```
+
+**Remove:** If you want to remove your package, use pip:
+
+```bash
+$ pip uninstall hypot
+```
+
+## Release
+
+Release in GitHub are based in tags with the following structure:
+
+`v0.5.2`
+
+| Change | Release  | Example |
+| ------ | -------- | ------- |
+| Major  | Breaking | 0       |
+| Minor  | Feature  | 5       |
+| Patch  | Fix      | 2       |
+
