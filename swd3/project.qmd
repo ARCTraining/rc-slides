@@ -19,19 +19,17 @@ General Design
 
 1. Install Git, Anaconda, VScode
 2. Create a GitHub repository + Licence + .gitignore + Readme
-3. Setup GH Action for testing
+3. Setup GH Action for testing (Python Application)
 4. Clone GH repository in local machine
-5. Create project structure
-6. Setup tests
+5. Create project structure (source and test folders)
+6. Setup tests (start with `test_`)
 7. Develop code
-8. Add docstring
-9. Push to github
-
-### Extra Steps
-
-10. Create Sphinx documentation
-11. Setup file and local install
-12. GH Release
+8. Add docstring (you can use `autoDocstring - Python Docstring Generator on VS Code`)
+9. Lint code and tests
+10. Push to github
+11. EXTRA: Create Sphinx documentation
+12. EXTRA: Setup file and local install
+13. EXTRA: GH Release
 
 ## Extra: Sphinx documentation {.smaller}
 
