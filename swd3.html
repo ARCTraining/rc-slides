@@ -1257,6 +1257,13 @@ overflow: hidden!important;
 display:block!important;
 }</style></aside>
 </section>
+<section id="useful-links" class="slide level2">
+<h2>Useful Links</h2>
+<ul>
+<li><a href="https://github.com/ARCTraining/swd3-demo">GitHub Project Demo</a></li>
+<li><a href="https://alan-turing-institute.github.io/rse-course/html/index.html">Alan Turing Institute - Research Software Engineering Course Material</a></li>
+</ul>
+</section>
 <section id="software-development-life-cycle-sdlc" class="slide level2">
 <h2>Software Development Life Cycle (SDLC)</h2>
 
@@ -1426,7 +1433,7 @@ display:block!important;
 </section>
 <section id="advanced-project-structure" class="slide level2 smaller">
 <h2>Advanced Project Structure</h2>
-<p>Template based on <a href="https://github.com/mkrapp/cookiecutter-reproducible-science">mkrapp github</a></p>
+<p>Template based on <a href="https://github.com/mkrapp/cookiecutter-reproducible-science">mkrapp/cookiecutter-reproducible-science github</a></p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="bu">.</span></span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="ex">├──</span> AUTHORS.md</span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="ex">├──</span> LICENSE</span>
@@ -1684,24 +1691,25 @@ display:block!important;
 <ol type="1">
 <li>Install Git, Anaconda, VScode</li>
 <li>Create a GitHub repository + Licence + .gitignore + Readme</li>
-<li>Setup GH Action for testing</li>
+<li>Setup GH Action for testing (Python Application)</li>
 <li>Clone GH repository in local machine</li>
-<li>Create project structure</li>
-<li>Setup tests</li>
+<li>Create project structure (source and test folders)</li>
+<li>Setup tests (start with <code>test_</code>)</li>
 <li>Develop code</li>
+<li>Add docstring (you can use <code>autoDocstring - Python Docstring Generator on VS Code</code>)</li>
+<li>Lint code and tests</li>
 <li>Push to github</li>
-<li>Add docstring</li>
-<li>Create simple documentation</li>
-<li>Push to github</li>
-<li>Setup file and local install</li>
+<li>EXTRA: Create Sphinx documentation</li>
+<li>EXTRA: Setup file and local install</li>
+<li>EXTRA: GH Release</li>
 </ol>
 </section>
-<section id="extra-documentation" class="slide level2 smaller">
-<h2>Extra: documentation</h2>
+<section id="extra-sphinx-documentation" class="slide level2 smaller">
+<h2>Extra: Sphinx documentation</h2>
 <ul>
 <li>Create docstring for every function</li>
 <li>Install <code>sphinx</code></li>
-<li>Start the basic structure using: $ sphinx-quickstart docs</li>
+<li>Start the basic structure using: <code>$ sphinx-quickstart docs</code></li>
 <li>Use the apidoc to get docstrings: <code>$ sphinx-apidoc -o docs .</code></li>
 <li>Edit files:</li>
 </ul>
@@ -1754,8 +1762,8 @@ Next ...</code></pre>
 </div>
 <div id="tabset-5-5">
 <p>Create a function file with the following:</p>
-<pre><code>Calc Module
---------------------------------
+<pre><code>API reference
+=============
 
 .. automodule:: calc
    :members:
@@ -1773,6 +1781,68 @@ Next ...</code></pre>
 <li>You may need update GH Actions permissions to allow <code>write</code></li>
 <li>After a successful documentation action, you need to select <code>gh-pages</code> branch to activate your website</li>
 </ul>
+</section>
+<section id="extra-setup-file" class="slide level2">
+<h2>Extra: Setup file</h2>
+<p>Create a <code>setup.py</code> file like:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a><span class="im">import</span> setuptools</span>
+<span id="cb18-2"><a href="#cb18-2"></a></span>
+<span id="cb18-3"><a href="#cb18-3"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&quot;README.md&quot;</span>, <span class="st">&quot;r&quot;</span>) <span class="im">as</span> fh:</span>
+<span id="cb18-4"><a href="#cb18-4"></a>    long_description <span class="op">=</span> fh.read()</span>
+<span id="cb18-5"><a href="#cb18-5"></a></span>
+<span id="cb18-6"><a href="#cb18-6"></a>setuptools.setup(</span>
+<span id="cb18-7"><a href="#cb18-7"></a>    name<span class="op">=</span><span class="st">&quot;hypot&quot;</span>,</span>
+<span id="cb18-8"><a href="#cb18-8"></a>    version<span class="op">=</span><span class="st">&quot;0.1.0&quot;</span>,</span>
+<span id="cb18-9"><a href="#cb18-9"></a>    author<span class="op">=</span><span class="st">&quot;Patricia Ternes&quot;</span>,</span>
+<span id="cb18-10"><a href="#cb18-10"></a>    author_email<span class="op">=</span><span class="st">&quot;p.ternesdallagnollo@leeds.ac.uk&quot;</span>,</span>
+<span id="cb18-11"><a href="#cb18-11"></a>    description<span class="op">=</span><span class="st">&quot;The hypot SWD3 demo package&quot;</span>,</span>
+<span id="cb18-12"><a href="#cb18-12"></a>    packages<span class="op">=</span>setuptools.find_packages(),</span>
+<span id="cb18-13"><a href="#cb18-13"></a>    classifiers<span class="op">=</span>[</span>
+<span id="cb18-14"><a href="#cb18-14"></a>        <span class="st">&quot;Programming Language :: Python :: 3.9&quot;</span>,</span>
+<span id="cb18-15"><a href="#cb18-15"></a>        <span class="st">&quot;Intended Audience :: Science/Research/Learning&quot;</span>,</span>
+<span id="cb18-16"><a href="#cb18-16"></a>    ],</span>
+<span id="cb18-17"><a href="#cb18-17"></a>    python_requires<span class="op">=</span><span class="st">&quot;&gt;=3.9&quot;</span>,</span>
+<span id="cb18-18"><a href="#cb18-18"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="local-installation" class="slide level2">
+<h2>Local Installation</h2>
+<p><strong>Install:</strong> install the hypot package into the environment using:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1"></a><span class="ex">$</span> python setup.py install</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Usage:</strong> if you want to create a personalised script, you can import the hypot modules as follows:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a><span class="im">from</span> hypot.calc <span class="im">import</span> squared, addition, sqroot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Remove:</strong> If you want to remove your package, use pip:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1"></a><span class="ex">$</span> pip uninstall hypot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="release" class="slide level2">
+<h2>Release</h2>
+<p>Release in GitHub are based in tags with the following structure:</p>
+<p><code>v0.5.2</code></p>
+<table>
+<thead>
+<tr class="header">
+<th>Change</th>
+<th>Release</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Major</td>
+<td>Breaking</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>Minor</td>
+<td>Feature</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>Patch</td>
+<td>Fix</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
 
 <div class="footer footer-default">
 <p><a href="https://arc.leeds.ac.uk/">Research IT Website</a> | <a href="https://bit.ly/arc-help">Research IT Query</a> | <a href="https://arctraining.github.io/">Courses Material</a></p>

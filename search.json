@@ -1,150 +1,108 @@
 [
   {
-    "objectID": "swd3.html#meta-code",
-    "href": "swd3.html#meta-code",
+    "objectID": "template.html#meta-code",
+    "href": "template.html#meta-code",
     "title": "arctraining slides",
-    "section": "SWD3",
-    "text": "SWD3\nSoftware development practices for Research"
+    "section": "Course Code",
+    "text": "Course Code\nCourse Name"
   },
   {
-    "objectID": "swd3.html#research-computing-team-and-service",
-    "href": "swd3.html#research-computing-team-and-service",
+    "objectID": "template.html#research-computing-team-and-service",
+    "href": "template.html#research-computing-team-and-service",
     "title": "arctraining slides",
     "section": "Research Computing Team and Service",
     "text": "Research Computing Team and Service\n\n\nHere to support research(ers)\n\nProvide training\nSupport users of Grid and Cloud Computing platforms\nProvide consultancy\n\nTo develop project proposals\nTo help recruit people with specialist skills\nWorking directly on research projects\n\n\nFor details please see our Website\nContact us via the IT Service Desk\n\n\n\nIf you follow a link then a new tab will open in the Slide View Web browser.\n\nThis will want closing or the Slide View activating again as he main tab in the browser.\n\nMaybe point out some sections/features on the Research Computing Website.\nWe support use and develop resources."
   },
   {
-    "objectID": "swd3.html#software-development-life-cycle-sdlc",
-    "href": "swd3.html#software-development-life-cycle-sdlc",
+    "objectID": "template.html#slide-a",
+    "href": "template.html#slide-a",
     "title": "arctraining slides",
-    "section": "Software Development Life Cycle (SDLC)",
-    "text": "Software Development Life Cycle (SDLC)"
+    "section": "Slide A",
+    "text": "Slide A\nTemporary content"
   },
   {
-    "objectID": "swd3.html#sdlc",
-    "href": "swd3.html#sdlc",
+    "objectID": "template.html#slide-b",
+    "href": "template.html#slide-b",
+    "title": "arctraining slides",
+    "section": "Slide B",
+    "text": "Slide B\nTemporary content"
+  },
+  {
+    "objectID": "template.html#slide-c",
+    "href": "template.html#slide-c",
+    "title": "arctraining slides",
+    "section": "Slide C",
+    "text": "Slide C\nTemporary content"
+  },
+  {
+    "objectID": "template.html#thank-you",
+    "href": "template.html#thank-you",
+    "title": "arctraining slides",
+    "section": "Thank you",
+    "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: https://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
+  },
+  {
+    "objectID": "swd3/project.html",
+    "href": "swd3/project.html",
+    "title": "arctraining slides",
+    "section": "",
+    "text": "Calculating the hypotenuse\n\\[ c = \\sqrt{a^2 + b^2} \\]\nGeneral Design\n\n1 squared function\n1 sum function\n1 square root function\n1 hypotenuse function that uses the other functions"
+  },
+  {
+    "objectID": "swd3/project.html#bringing-it-all-together",
+    "href": "swd3/project.html#bringing-it-all-together",
+    "title": "arctraining slides",
+    "section": "",
+    "text": "Calculating the hypotenuse\n\\[ c = \\sqrt{a^2 + b^2} \\]\nGeneral Design\n\n1 squared function\n1 sum function\n1 square root function\n1 hypotenuse function that uses the other functions"
+  },
+  {
+    "objectID": "swd3/project.html#workflow",
+    "href": "swd3/project.html#workflow",
+    "title": "arctraining slides",
+    "section": "Workflow",
+    "text": "Workflow\n\nInstall Git, Anaconda, VScode\nCreate a GitHub repository + Licence + .gitignore + Readme\nSetup GH Action for testing (Python Application)\nClone GH repository in local machine\nCreate project structure (source and test folders)\nSetup tests (start with test_)\nDevelop code\nAdd docstring (you can use autoDocstring - Python Docstring Generator on VS Code)\nLint code and tests\nPush to github\nEXTRA: Create Sphinx documentation\nEXTRA: Setup file and local install\nEXTRA: GH Release"
+  },
+  {
+    "objectID": "swd3/project.html#extra-sphinx-documentation",
+    "href": "swd3/project.html#extra-sphinx-documentation",
+    "title": "arctraining slides",
+    "section": "Extra: Sphinx documentation",
+    "text": "Extra: Sphinx documentation\n\nCreate docstring for every function\nInstall sphinx\nStart the basic structure using: $ sphinx-quickstart docs\nUse the apidoc to get docstrings: $ sphinx-apidoc -o docs .\nEdit files:\n\n\nconf.pyindex.rstdependencies.rstusage.rstfunctions.rst\n\n\n\nadd extentions: 'sphinx.ext.todo', 'sphinx.ext.viewcode', 'sphinx.ext.autodoc'.\nchange theme: sphinx_rtd_theme\nadd the src (change the folder name as necessary!) folder as path:\n\n import os\n import sys\n sys.path.insert(0, os.path.abspath('../src'))\n\n\nAdd extra files after Contents\n.. toctree::\n   :maxdepth: 2\n   :caption: Contents:\n\n   dependencies\n   usage\n   functions\n\n\nList all your dependencies:\nDependencies\n============\n\n- python\n- pytest\n- flake8\n- black\n- sphinx\n\n\nExplain how to use your software\nUsage Guide\n============\n\nTo start working with this repository you need to clone it onto your local\nmachine: ::\n\n    $ git clone https://github.com/...\n\n\nNext ...\n\n\nCreate a function file with the following:\nAPI reference\n=============\n\n.. automodule:: calc\n   :members:\n   :undoc-members:\n   :show-inheritance:"
+  },
+  {
+    "objectID": "swd3/project.html#extra-documentation-action",
+    "href": "swd3/project.html#extra-documentation-action",
+    "title": "arctraining slides",
+    "section": "Extra: documentation Action",
+    "text": "Extra: documentation Action\nCreate a new GH action to create a nice website for your documentation.\n\nThe action is available here\nYou may need update GH Actions permissions to allow write\nAfter a successful documentation action, you need to select gh-pages branch to activate your website"
+  },
+  {
+    "objectID": "swd3/project.html#extra-setup-file",
+    "href": "swd3/project.html#extra-setup-file",
+    "title": "arctraining slides",
+    "section": "Extra: Setup file",
+    "text": "Extra: Setup file\nCreate a setup.py file like:\nimport setuptools\n\nwith open(\"README.md\", \"r\") as fh:\n    long_description = fh.read()\n\nsetuptools.setup(\n    name=\"hypot\",\n    version=\"0.1.0\",\n    author=\"Patricia Ternes\",\n    author_email=\"p.ternesdallagnollo@leeds.ac.uk\",\n    description=\"The hypot SWD3 demo package\",\n    packages=setuptools.find_packages(),\n    classifiers=[\n        \"Programming Language :: Python :: 3.9\",\n        \"Intended Audience :: Science/Research/Learning\",\n    ],\n    python_requires=\"&gt;=3.9\",\n)"
+  },
+  {
+    "objectID": "swd3/project.html#local-installation",
+    "href": "swd3/project.html#local-installation",
+    "title": "arctraining slides",
+    "section": "Local Installation",
+    "text": "Local Installation\nInstall: install the hypot package into the environment using:\n$ python setup.py install\nUsage: if you want to create a personalised script, you can import the hypot modules as follows:\nfrom hypot.calc import squared, addition, sqroot\nRemove: If you want to remove your package, use pip:\n$ pip uninstall hypot"
+  },
+  {
+    "objectID": "swd3/project.html#release",
+    "href": "swd3/project.html#release",
+    "title": "arctraining slides",
+    "section": "Release",
+    "text": "Release\nRelease in GitHub are based in tags with the following structure:\nv0.5.2\n\n\n\nChange\nRelease\nExample\n\n\n\n\nMajor\nBreaking\n0\n\n\nMinor\nFeature\n5\n\n\nPatch\nFix\n2"
+  },
+  {
+    "objectID": "swd3/sdlc.html#sdlc",
+    "href": "swd3/sdlc.html#sdlc",
     "title": "arctraining slides",
     "section": "SDLC",
     "text": "SDLC\n\nIdeationRequirementsDesignDevelopmentTestDeploymentMaintenance\n\n\n\n\n\nWhat are we going to do?\n\n\nBrainstorming\nResearch\n\n\n\n\n\n\n\n\n\n\nHow are we going to do it?\n\nSome topics to help define requirements include:\n\nfinal goal\nproject scope (how to reach the final goal)\nwhat is feasible (and how)\nwhat is priority\nwhat resources are available\ndeadlines\npotential risks\n\n\nWarning: Each person involved in the project may have a different need.\n\n\n\n\n\n\n\n\n\n\nWhat is the software architecture?\n\nWhen designing software, the object-oriented approach is a common programming paradigm.\nObject-oriented components:\n\nClasses: A user-defined type\nObject instances: A particular object instantiated from a class.\nMethods: A function which is “built in” to a class\nConstructor: A special method called when instantiating a new object\n\nSome principles: abstraction, encapsulation, decomposition, generalisation\n\n\nSee more: \n\n\n\n\n\n\n\nIs this where the fun begins?\n\n\nTake your time\n\n\n\n\n\nDevelopment is usually the most time consuming step in a Software Development Life Cycle.\n\n\n\n\n\nIs this software good?\n\nIn this step, errors and failures are identified by exposing the code to an environment similar to the end-user experience.\nThere are several types of testing, some examples include:\n\nUnit testing: are all components working?\nIntegration testing: are all components working when fitted together?\nPerformance testing: how does the software perform against different workloads? It is fast? Stable?\nFunctional testing: is the software aligned with Software Requirement Specification?\n\n\n\n\n\n\n\n\n\n\nCan other people use my code?\n\nYou can use platforms like GitHub to release your software.\n\nThe functionality of the software is linked to several specifications related to the operating system and versions of packages and other software related to the project.\nListing these specifications will help others to replicate the environment in which the software was developed.\n\n\n\n\n\n\n\n\n\n\nIs it over?\n\nWe can classify maintenance into a few categories:\n\nCorrective: fix reported errors/failures.\nPreventive: regular checks and fixes.\nPerfective: optimize implemented features, adding new features.\nAdaptive: keep the software updated according to changes external to the project (new programming language version, new regulation, etc.)."
-  },
-  {
-    "objectID": "swd3.html#basic-structure-suggestion",
-    "href": "swd3.html#basic-structure-suggestion",
-    "title": "arctraining slides",
-    "section": "Basic Structure Suggestion",
-    "text": "Basic Structure Suggestion\n# The most basic structure for a code project should look like:\nmy-model\n├── README.md\n├── requirements.txt\n├── src                &lt;- Source code for this project\n└── tests              &lt;- Test code for this project\n\nReadmeRequirements\n\n\n\nIs a guide that gives users a detailed description of a project you have worked on\nIt is the first file a person will see when they encounter your project, so it should be fairly brief but detailed.\nSee how to write a good README file in this freecodecamp post.\n\n\n\n\nText information about all the necessary additional libraries, modules, and packages.\nThis can be replaced by files like: environment.yml, pyproject.toml, setup.py."
-  },
-  {
-    "objectID": "swd3.html#advanced-project-structure",
-    "href": "swd3.html#advanced-project-structure",
-    "title": "arctraining slides",
-    "section": "Advanced Project Structure",
-    "text": "Advanced Project Structure\nTemplate based on mkrapp github\n.\n├── AUTHORS.md\n├── LICENSE\n├── README.md\n├── bin                &lt;- Your compiled model code can be stored here (not tracked by git)\n├── config             &lt;- Configuration files, e.g., for doxygen or for your model if needed\n├── data\n│   ├── external       &lt;- Data from third party sources.\n│   ├── interim        &lt;- Intermediate data that has been transformed.\n│   ├── processed      &lt;- The final, canonical data sets for modeling.\n│   └── raw            &lt;- The original, immutable data dump.\n├── docs               &lt;- Documentation, e.g., doxygen or scientific papers (not tracked by git)\n├── notebooks          &lt;- Ipython or R notebooks\n├── reports            &lt;- For a manuscript source, e.g., LaTeX, Markdown, etc., or any project reports\n│   └── figures        &lt;- Figures for the manuscript or reports\n├── src                &lt;- Source code for this project\n│   ├── data           &lt;- scripts and programs to process data\n│   ├── external       &lt;- Any external source code, e.g., pull other git projects, or external libraries\n│   ├── models         &lt;- Source code for your own model\n│   ├── tools          &lt;- Any helper scripts go here\n│   └── visualization  &lt;- Scripts for visualisation of your results, e.g., matplotlib, ggplot2 related.\n└── tests              &lt;- Test code for this project"
-  },
-  {
-    "objectID": "swd3.html#virtual-environments",
-    "href": "swd3.html#virtual-environments",
-    "title": "arctraining slides",
-    "section": "Virtual Environments",
-    "text": "Virtual Environments\nIf application A needs version 1.0 of a particular module but application B needs version 2.0, then the requirements are in conflict and installing either version 1.0 or 2.0 will leave one application unable to run.\nThe solution for this problem is to create a virtual environment, a self-contained directory tree that contains installation for particular versions of software/packages.\nConda\n\nConda is an open source package management system and environment management system that runs on Windows, macOS, and Linux.\nIt offers dependency and environment management for any language—Python, R, Ruby, Lua, Scala, Java, JavaScript, C/ C++, Fortran, and more.\nEasy user install via Anaconda."
-  },
-  {
-    "objectID": "swd3.html#code-formatting",
-    "href": "swd3.html#code-formatting",
-    "title": "arctraining slides",
-    "section": "Code formatting",
-    "text": "Code formatting\n# myscript.py:\nx = {  'a':37,'b':42,\n'c':927}\ny = 'hello '+       'world'\nclass foo  (     object  ):\n   def f    (self   ):\n       return       y **2\n   def g(self, x :int,\n       y : int=42\n       ) -&gt; int:\n       return x--y\ndef f  (   a ) :\n   return      37+-a[42-a :  y*3]"
-  },
-  {
-    "objectID": "swd3.html#coding-conventions",
-    "href": "swd3.html#coding-conventions",
-    "title": "arctraining slides",
-    "section": "Coding conventions",
-    "text": "Coding conventions\nIf your language or project has a standard policy, use that. For example:\n\nPython: PEP8\nR: Google’s guide for R, tidyverse style guide\nC++: Google’s style guide\nJulia: Official style guide"
-  },
-  {
-    "objectID": "swd3.html#linters",
-    "href": "swd3.html#linters",
-    "title": "arctraining slides",
-    "section": "Linters",
-    "text": "Linters\nLinters are automated tools which enforce coding conventions and check for common mistakes. For example:\n\nPython:\n\nflake8 (flags any syntax/style errors)\nblack (enforces the style)\nisort (“Sorts” imports alphabetically in groups)"
-  },
-  {
-    "objectID": "swd3.html#example-flake8-linter",
-    "href": "swd3.html#example-flake8-linter",
-    "title": "arctraining slides",
-    "section": "Example: Flake8 Linter",
-    "text": "Example: Flake8 Linter\n$ conda install flake8\n$ flake8 myscript.py\nmyscript.py:2:6: E201 whitespace after '{'\nmyscript.py:2:11: E231 missing whitespace after ':'\nmyscript.py:2:14: E231 missing whitespace after ','\nmyscript.py:2:18: E231 missing whitespace after ':'\nmyscript.py:3:1: E128 continuation line under-indented for visual indent\nmyscript.py:3:4: E231 missing whitespace after ':'\nmyscript.py:4:13: E225 missing whitespace around operator\nmyscript.py:4:14: E222 multiple spaces after operator\nmyscript.py:5:1: E302 expected 2 blank lines, found 0\nmyscript.py:5:13: E201 whitespace after '('\nmyscript.py:5:25: E202 whitespace before ')'\nmyscript.py:6:4: E111 indentation is not a multiple of 4\nmyscript.py:6:9: E211 whitespace before '('\nmyscript.py:6:20: E202 whitespace before ')'\nmyscript.py:7:8: E111 indentation is not a multiple of 4\nmyscript.py:7:14: E271 multiple spaces after keyword\nmyscript.py:7:25: E225 missing whitespace around operator\nmyscript.py:8:4: E301 expected 1 blank line, found 0\nmyscript.py:8:4: E111 indentation is not a multiple of 4\nmyscript.py:8:17: E203 whitespace before ':'\nmyscript.py:8:18: E231 missing whitespace after ':'\nmyscript.py:9:8: E128 continuation line under-indented for visual indent\nmyscript.py:9:9: E203 whitespace before ':'\nmyscript.py:9:15: E252 missing whitespace around parameter equals\nmyscript.py:9:16: E252 missing whitespace around parameter equals\nmyscript.py:10:8: E124 closing bracket does not match visual indentation\nmyscript.py:10:8: E125 continuation line with same indent as next logical line\nmyscript.py:11:8: E111 indentation is not a multiple of 4\nmyscript.py:12:1: E302 expected 2 blank lines, found 0\nmyscript.py:12:6: E211 whitespace before '('\nmyscript.py:12:9: E201 whitespace after '('\nmyscript.py:12:13: E202 whitespace before ')'\nmyscript.py:12:15: E203 whitespace before ':'\nmyscript.py:13:4: E111 indentation is not a multiple of 4\nmyscript.py:13:10: E271 multiple spaces after keyword\nmyscript.py:13:26: E203 whitespace before ':'\nmyscript.py:13:34: W291 trailing whitespace"
-  },
-  {
-    "objectID": "swd3.html#example-black-code-formatter",
-    "href": "swd3.html#example-black-code-formatter",
-    "title": "arctraining slides",
-    "section": "Example: Black Code Formatter",
-    "text": "Example: Black Code Formatter\n\nInstall and run Black\n\n$ conda install black\n$ black myscript.py\n\nCheck the file!\n\n# myscript.py:\nx = {\"a\": 37, \"b\": 42, \"c\": 927}\ny = \"hello \" + \"world\"\n\n\nclass foo(object):\n    def f(self):\n        return y**2\n\n    def g(self, x: int, y: int = 42) -&gt; int:\n        return x - -y\n\n\ndef f(a):\n    return 37 + -a[42 - a : y * 3]"
-  },
-  {
-    "objectID": "swd3.html#ide",
-    "href": "swd3.html#ide",
-    "title": "arctraining slides",
-    "section": "IDE",
-    "text": "IDE\nUsing an Integrated development environment (IDE) will certainly save you time, but the advantages of using an IDE go beyond that. Below are some IDE advantages\n\nSyntax highlighting\nText autocompletion\nRefactoring options\nEasily Importing libraries\nBuild, compile, or run\n\nVisual Studio Code\nTo install VS Code follow the instructions here."
-  },
-  {
-    "objectID": "swd3.html#vsc-example-automatically-using-black",
-    "href": "swd3.html#vsc-example-automatically-using-black",
-    "title": "arctraining slides",
-    "section": "VSC Example: automatically using black",
-    "text": "VSC Example: automatically using black\nConfigure VSC to use Black: Code (or File) &gt; Preferences &gt; Settings\n\nSearch for python formatting provider and choose black\nSearch for format on save and check the box to enable\n\nSelect interpreter: View &gt; Command Palette.. (or Ctrl+Shift+P)\n\nSearch for Python: Select Interpreter\nChoose the correct environment\n\nNow the Black package is going to fix your codes layout every time you save a code file."
-  },
-  {
-    "objectID": "swd3.html#version-control",
-    "href": "swd3.html#version-control",
-    "title": "arctraining slides",
-    "section": "Version Control",
-    "text": "Version Control\n\nPiled Higher and Deeper by Jorge Cham"
-  },
-  {
-    "objectID": "swd3.html#test-driven-development",
-    "href": "swd3.html#test-driven-development",
-    "title": "arctraining slides",
-    "section": "Test-driven development",
-    "text": "Test-driven development\nExample, suppose we need to find the result of a number divided by another number:\n\nNaive solutionTDD solution\n\n\n\nWrite a function a_div_b.\nCall it interactively on two or three different inputs.\nIf it produces the wrong answer, fix the function and re-run that test.\n\nThis clearly works — after all, thousands of scientists are doing it right now — but there’s a better way\n\n\n\nWrite a short function for each test.\nWrite a a_div_b function that should pass those tests.\nIf a_div_b produces any wrong answers, fix it and re-run the test functions.\n\nWriting the tests before writing the function they exercise is called test-driven development (TDD). Its advocates believe it produces better code faster because:\n\nIf people write tests after writing the thing to be tested, they are subject to confirmation bias, i.e., they subconsciously write tests to show that their code is correct, rather than to find errors.\nWriting tests helps programmers figure out what the function is actually supposed to do."
-  },
-  {
-    "objectID": "swd3.html#possible-tests-a_div_b-example",
-    "href": "swd3.html#possible-tests-a_div_b-example",
-    "title": "arctraining slides",
-    "section": "Possible tests: a_div_b example",
-    "text": "Possible tests: a_div_b example\nLet’s think in all possible scenarios for this problem and how we could test them.\n\nBigger by smallerSmaller by biggerNegative numbers\n\n\n\nUsing 4 and 2, the answer should be 2.\n\nassert a_div_b(4, 2) == 2\n\nOr… the answer should be larger than 1.\n\nassert a_div_b(8, 7) &gt; 1\n\n\n\nUsing 2 and 4, the answer should be 0.5.\n\nassert a_div_b(2, 4) == 0.5\n\nOr… the answer should be smaller than 1.\n\nassert a_div_b(7, 8) &lt; 1\n\n\n\nUsing -4 and -2, the answer should be 2.\n\nassert a_div_b(-4, -2) == 2\n\nOr… the answer should be positive.\n\nassert a_div_b(-4, -2) &gt; 0"
-  },
-  {
-    "objectID": "swd3.html#bringing-it-all-together",
-    "href": "swd3.html#bringing-it-all-together",
-    "title": "arctraining slides",
-    "section": "Bringing it all together",
-    "text": "Bringing it all together\nThe Hypotenuse Problem\nCalculating the hypotenuse\n\\[ c = \\sqrt{a^2 + b^2} \\]\nGeneral Design\n\n1 squared function\n1 sum function\n1 square root function\n1 hypotenuse function that uses the other functions"
-  },
-  {
-    "objectID": "swd3.html#workflow",
-    "href": "swd3.html#workflow",
-    "title": "arctraining slides",
-    "section": "Workflow",
-    "text": "Workflow\n\nInstall Git, Anaconda, VScode\nCreate a GitHub repository + Licence + .gitignore + Readme\nSetup GH Action for testing\nClone GH repository in local machine\nCreate project structure\nSetup tests\nDevelop code\nPush to github\nAdd docstring\nCreate simple documentation\nPush to github\nSetup file and local install"
-  },
-  {
-    "objectID": "swd3.html#extra-documentation",
-    "href": "swd3.html#extra-documentation",
-    "title": "arctraining slides",
-    "section": "Extra: documentation",
-    "text": "Extra: documentation\n\nCreate docstring for every function\nInstall sphinx\nStart the basic structure using: $ sphinx-quickstart docs\nUse the apidoc to get docstrings: $ sphinx-apidoc -o docs .\nEdit files:\n\n\nconf.pyindex.rstdependencies.rstusage.rstfunctions.rst\n\n\n\nadd extentions: 'sphinx.ext.todo', 'sphinx.ext.viewcode', 'sphinx.ext.autodoc'.\nchange theme: sphinx_rtd_theme\nadd the src (change the folder name as necessary!) folder as path:\n\n import os\n import sys\n sys.path.insert(0, os.path.abspath('../src'))\n\n\nAdd extra files after Contents\n.. toctree::\n   :maxdepth: 2\n   :caption: Contents:\n\n   dependencies\n   usage\n   functions\n\n\nList all your dependencies:\nDependencies\n============\n\n- python\n- pytest\n- flake8\n- black\n- sphinx\n\n\nExplain how to use your software\nUsage Guide\n============\n\nTo start working with this repository you need to clone it onto your local\nmachine: ::\n\n    $ git clone https://github.com/...\n\n\nNext ...\n\n\nCreate a function file with the following:\nCalc Module\n--------------------------------\n\n.. automodule:: calc\n   :members:\n   :undoc-members:\n   :show-inheritance:"
-  },
-  {
-    "objectID": "swd3.html#extra-documentation-action",
-    "href": "swd3.html#extra-documentation-action",
-    "title": "arctraining slides",
-    "section": "Extra: documentation Action",
-    "text": "Extra: documentation Action\nCreate a new GH action to create a nice website for your documentation.\n\nThe action is available here\nYou may need update GH Actions permissions to allow write\nAfter a successful documentation action, you need to select gh-pages branch to activate your website\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
   },
   {
     "objectID": "donut.html#presentation-set-up-guide",
@@ -574,109 +532,18 @@
     "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: https://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
   },
   {
-    "objectID": "swd3/good-practices.html",
-    "href": "swd3/good-practices.html",
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "arctraining slides",
     "section": "",
-    "text": "If application A needs version 1.0 of a particular module but application B needs version 2.0, then the requirements are in conflict and installing either version 1.0 or 2.0 will leave one application unable to run.\nThe solution for this problem is to create a virtual environment, a self-contained directory tree that contains installation for particular versions of software/packages.\n\n\n\nConda is an open source package management system and environment management system that runs on Windows, macOS, and Linux.\nIt offers dependency and environment management for any language—Python, R, Ruby, Lua, Scala, Java, JavaScript, C/ C++, Fortran, and more.\nEasy user install via Anaconda."
+    "text": "Public facing homepage for arctraining Quarto slides collection."
   },
   {
-    "objectID": "swd3/good-practices.html#virtual-environments",
-    "href": "swd3/good-practices.html#virtual-environments",
+    "objectID": "index.html#slides",
+    "href": "index.html#slides",
     "title": "arctraining slides",
-    "section": "",
-    "text": "If application A needs version 1.0 of a particular module but application B needs version 2.0, then the requirements are in conflict and installing either version 1.0 or 2.0 will leave one application unable to run.\nThe solution for this problem is to create a virtual environment, a self-contained directory tree that contains installation for particular versions of software/packages.\n\n\n\nConda is an open source package management system and environment management system that runs on Windows, macOS, and Linux.\nIt offers dependency and environment management for any language—Python, R, Ruby, Lua, Scala, Java, JavaScript, C/ C++, Fortran, and more.\nEasy user install via Anaconda."
-  },
-  {
-    "objectID": "swd3/good-practices.html#code-formatting",
-    "href": "swd3/good-practices.html#code-formatting",
-    "title": "arctraining slides",
-    "section": "Code formatting",
-    "text": "Code formatting\n# myscript.py:\nx = {  'a':37,'b':42,\n'c':927}\ny = 'hello '+       'world'\nclass foo  (     object  ):\n   def f    (self   ):\n       return       y **2\n   def g(self, x :int,\n       y : int=42\n       ) -&gt; int:\n       return x--y\ndef f  (   a ) :\n   return      37+-a[42-a :  y*3]"
-  },
-  {
-    "objectID": "swd3/good-practices.html#coding-conventions",
-    "href": "swd3/good-practices.html#coding-conventions",
-    "title": "arctraining slides",
-    "section": "Coding conventions",
-    "text": "Coding conventions\nIf your language or project has a standard policy, use that. For example:\n\nPython: PEP8\nR: Google’s guide for R, tidyverse style guide\nC++: Google’s style guide\nJulia: Official style guide"
-  },
-  {
-    "objectID": "swd3/good-practices.html#linters",
-    "href": "swd3/good-practices.html#linters",
-    "title": "arctraining slides",
-    "section": "Linters",
-    "text": "Linters\nLinters are automated tools which enforce coding conventions and check for common mistakes. For example:\n\nPython:\n\nflake8 (flags any syntax/style errors)\nblack (enforces the style)\nisort (“Sorts” imports alphabetically in groups)"
-  },
-  {
-    "objectID": "swd3/good-practices.html#example-flake8-linter",
-    "href": "swd3/good-practices.html#example-flake8-linter",
-    "title": "arctraining slides",
-    "section": "Example: Flake8 Linter",
-    "text": "Example: Flake8 Linter\n$ conda install flake8\n$ flake8 myscript.py\nmyscript.py:2:6: E201 whitespace after '{'\nmyscript.py:2:11: E231 missing whitespace after ':'\nmyscript.py:2:14: E231 missing whitespace after ','\nmyscript.py:2:18: E231 missing whitespace after ':'\nmyscript.py:3:1: E128 continuation line under-indented for visual indent\nmyscript.py:3:4: E231 missing whitespace after ':'\nmyscript.py:4:13: E225 missing whitespace around operator\nmyscript.py:4:14: E222 multiple spaces after operator\nmyscript.py:5:1: E302 expected 2 blank lines, found 0\nmyscript.py:5:13: E201 whitespace after '('\nmyscript.py:5:25: E202 whitespace before ')'\nmyscript.py:6:4: E111 indentation is not a multiple of 4\nmyscript.py:6:9: E211 whitespace before '('\nmyscript.py:6:20: E202 whitespace before ')'\nmyscript.py:7:8: E111 indentation is not a multiple of 4\nmyscript.py:7:14: E271 multiple spaces after keyword\nmyscript.py:7:25: E225 missing whitespace around operator\nmyscript.py:8:4: E301 expected 1 blank line, found 0\nmyscript.py:8:4: E111 indentation is not a multiple of 4\nmyscript.py:8:17: E203 whitespace before ':'\nmyscript.py:8:18: E231 missing whitespace after ':'\nmyscript.py:9:8: E128 continuation line under-indented for visual indent\nmyscript.py:9:9: E203 whitespace before ':'\nmyscript.py:9:15: E252 missing whitespace around parameter equals\nmyscript.py:9:16: E252 missing whitespace around parameter equals\nmyscript.py:10:8: E124 closing bracket does not match visual indentation\nmyscript.py:10:8: E125 continuation line with same indent as next logical line\nmyscript.py:11:8: E111 indentation is not a multiple of 4\nmyscript.py:12:1: E302 expected 2 blank lines, found 0\nmyscript.py:12:6: E211 whitespace before '('\nmyscript.py:12:9: E201 whitespace after '('\nmyscript.py:12:13: E202 whitespace before ')'\nmyscript.py:12:15: E203 whitespace before ':'\nmyscript.py:13:4: E111 indentation is not a multiple of 4\nmyscript.py:13:10: E271 multiple spaces after keyword\nmyscript.py:13:26: E203 whitespace before ':'\nmyscript.py:13:34: W291 trailing whitespace"
-  },
-  {
-    "objectID": "swd3/good-practices.html#example-black-code-formatter",
-    "href": "swd3/good-practices.html#example-black-code-formatter",
-    "title": "arctraining slides",
-    "section": "Example: Black Code Formatter",
-    "text": "Example: Black Code Formatter\n\nInstall and run Black\n\n$ conda install black\n$ black myscript.py\n\nCheck the file!\n\n# myscript.py:\nx = {\"a\": 37, \"b\": 42, \"c\": 927}\ny = \"hello \" + \"world\"\n\n\nclass foo(object):\n    def f(self):\n        return y**2\n\n    def g(self, x: int, y: int = 42) -&gt; int:\n        return x - -y\n\n\ndef f(a):\n    return 37 + -a[42 - a : y * 3]"
-  },
-  {
-    "objectID": "swd3/good-practices.html#ide",
-    "href": "swd3/good-practices.html#ide",
-    "title": "arctraining slides",
-    "section": "IDE",
-    "text": "IDE\nUsing an Integrated development environment (IDE) will certainly save you time, but the advantages of using an IDE go beyond that. Below are some IDE advantages\n\nSyntax highlighting\nText autocompletion\nRefactoring options\nEasily Importing libraries\nBuild, compile, or run\n\n\nVisual Studio Code\nTo install VS Code follow the instructions here."
-  },
-  {
-    "objectID": "swd3/good-practices.html#vsc-example-automatically-using-black",
-    "href": "swd3/good-practices.html#vsc-example-automatically-using-black",
-    "title": "arctraining slides",
-    "section": "VSC Example: automatically using black",
-    "text": "VSC Example: automatically using black\nConfigure VSC to use Black: Code (or File) &gt; Preferences &gt; Settings\n\nSearch for python formatting provider and choose black\nSearch for format on save and check the box to enable\n\nSelect interpreter: View &gt; Command Palette.. (or Ctrl+Shift+P)\n\nSearch for Python: Select Interpreter\nChoose the correct environment\n\nNow the Black package is going to fix your codes layout every time you save a code file."
-  },
-  {
-    "objectID": "swd3/good-practices.html#version-control",
-    "href": "swd3/good-practices.html#version-control",
-    "title": "arctraining slides",
-    "section": "Version Control",
-    "text": "Version Control\n\n\n\nPiled Higher and Deeper by Jorge Cham"
-  },
-  {
-    "objectID": "swd3/good-practices.html#test-driven-development",
-    "href": "swd3/good-practices.html#test-driven-development",
-    "title": "arctraining slides",
-    "section": "Test-driven development",
-    "text": "Test-driven development\nExample, suppose we need to find the result of a number divided by another number:\n\nNaive solutionTDD solution\n\n\n\nWrite a function a_div_b.\nCall it interactively on two or three different inputs.\nIf it produces the wrong answer, fix the function and re-run that test.\n\nThis clearly works — after all, thousands of scientists are doing it right now — but there’s a better way\n\n\n\nWrite a short function for each test.\nWrite a a_div_b function that should pass those tests.\nIf a_div_b produces any wrong answers, fix it and re-run the test functions.\n\nWriting the tests before writing the function they exercise is called test-driven development (TDD). Its advocates believe it produces better code faster because:\n\nIf people write tests after writing the thing to be tested, they are subject to confirmation bias, i.e., they subconsciously write tests to show that their code is correct, rather than to find errors.\nWriting tests helps programmers figure out what the function is actually supposed to do."
-  },
-  {
-    "objectID": "swd3/good-practices.html#possible-tests-a_div_b-example",
-    "href": "swd3/good-practices.html#possible-tests-a_div_b-example",
-    "title": "arctraining slides",
-    "section": "Possible tests: a_div_b example",
-    "text": "Possible tests: a_div_b example\nLet’s think in all possible scenarios for this problem and how we could test them.\n\nBigger by smallerSmaller by biggerNegative numbers\n\n\n\nUsing 4 and 2, the answer should be 2.\n\nassert a_div_b(4, 2) == 2\n\nOr… the answer should be larger than 1.\n\nassert a_div_b(8, 7) &gt; 1\n\n\n\nUsing 2 and 4, the answer should be 0.5.\n\nassert a_div_b(2, 4) == 0.5\n\nOr… the answer should be smaller than 1.\n\nassert a_div_b(7, 8) &lt; 1\n\n\n\nUsing -4 and -2, the answer should be 2.\n\nassert a_div_b(-4, -2) == 2\n\nOr… the answer should be positive.\n\nassert a_div_b(-4, -2) &gt; 0"
-  },
-  {
-    "objectID": "swd3/structure.html",
-    "href": "swd3/structure.html",
-    "title": "arctraining slides",
-    "section": "",
-    "text": "# The most basic structure for a code project should look like:\nmy-model\n├── README.md\n├── requirements.txt\n├── src                &lt;- Source code for this project\n└── tests              &lt;- Test code for this project\n\nReadmeRequirements\n\n\n\nIs a guide that gives users a detailed description of a project you have worked on\nIt is the first file a person will see when they encounter your project, so it should be fairly brief but detailed.\nSee how to write a good README file in this freecodecamp post.\n\n\n\n\nText information about all the necessary additional libraries, modules, and packages.\nThis can be replaced by files like: environment.yml, pyproject.toml, setup.py."
-  },
-  {
-    "objectID": "swd3/structure.html#basic-structure-suggestion",
-    "href": "swd3/structure.html#basic-structure-suggestion",
-    "title": "arctraining slides",
-    "section": "",
-    "text": "# The most basic structure for a code project should look like:\nmy-model\n├── README.md\n├── requirements.txt\n├── src                &lt;- Source code for this project\n└── tests              &lt;- Test code for this project\n\nReadmeRequirements\n\n\n\nIs a guide that gives users a detailed description of a project you have worked on\nIt is the first file a person will see when they encounter your project, so it should be fairly brief but detailed.\nSee how to write a good README file in this freecodecamp post.\n\n\n\n\nText information about all the necessary additional libraries, modules, and packages.\nThis can be replaced by files like: environment.yml, pyproject.toml, setup.py."
-  },
-  {
-    "objectID": "swd3/structure.html#advanced-project-structure",
-    "href": "swd3/structure.html#advanced-project-structure",
-    "title": "arctraining slides",
-    "section": "Advanced Project Structure",
-    "text": "Advanced Project Structure\nTemplate based on mkrapp github\n.\n├── AUTHORS.md\n├── LICENSE\n├── README.md\n├── bin                &lt;- Your compiled model code can be stored here (not tracked by git)\n├── config             &lt;- Configuration files, e.g., for doxygen or for your model if needed\n├── data\n│   ├── external       &lt;- Data from third party sources.\n│   ├── interim        &lt;- Intermediate data that has been transformed.\n│   ├── processed      &lt;- The final, canonical data sets for modeling.\n│   └── raw            &lt;- The original, immutable data dump.\n├── docs               &lt;- Documentation, e.g., doxygen or scientific papers (not tracked by git)\n├── notebooks          &lt;- Ipython or R notebooks\n├── reports            &lt;- For a manuscript source, e.g., LaTeX, Markdown, etc., or any project reports\n│   └── figures        &lt;- Figures for the manuscript or reports\n├── src                &lt;- Source code for this project\n│   ├── data           &lt;- scripts and programs to process data\n│   ├── external       &lt;- Any external source code, e.g., pull other git projects, or external libraries\n│   ├── models         &lt;- Source code for your own model\n│   ├── tools          &lt;- Any helper scripts go here\n│   └── visualization  &lt;- Scripts for visualisation of your results, e.g., matplotlib, ggplot2 related.\n└── tests              &lt;- Test code for this project"
+    "section": "Slides:",
+    "text": "Slides:\nNote: this page is under construction. As soon as the slides are available, the link will be provided.\n\nHPC0: Introduction to Linux for HPC\nHPC1: Introduction to High Performance Computing\nHPC2: Applications and containers on HPC\nHPC3: Computer architectures and shared memory parallel programming\nHPC5: Introduction to GPU programming with CUDA\nHPC6: HPC for Life Sciences and Bioinformatics\nSWD1a: Introduction to Python programming\nSWD1b: Introduction to R programming\nSWD2: Version Control with Git and GitHub\nSWD3: Software development practices for Research\nSWD4: Cloud computing for Research\nSWD5: Scientific Python\nSWD6: High performance Python\nSWD7: Introduction to reproducible workflows in Python"
   },
   {
     "objectID": "hpc0.html#meta-code",
@@ -1246,101 +1113,283 @@
     "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: https://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
   },
   {
-    "objectID": "swd3/sdlc.html#sdlc",
-    "href": "swd3/sdlc.html#sdlc",
-    "title": "arctraining slides",
-    "section": "SDLC",
-    "text": "SDLC\n\nIdeationRequirementsDesignDevelopmentTestDeploymentMaintenance\n\n\n\n\n\nWhat are we going to do?\n\n\nBrainstorming\nResearch\n\n\n\n\n\n\n\n\n\n\nHow are we going to do it?\n\nSome topics to help define requirements include:\n\nfinal goal\nproject scope (how to reach the final goal)\nwhat is feasible (and how)\nwhat is priority\nwhat resources are available\ndeadlines\npotential risks\n\n\nWarning: Each person involved in the project may have a different need.\n\n\n\n\n\n\n\n\n\n\nWhat is the software architecture?\n\nWhen designing software, the object-oriented approach is a common programming paradigm.\nObject-oriented components:\n\nClasses: A user-defined type\nObject instances: A particular object instantiated from a class.\nMethods: A function which is “built in” to a class\nConstructor: A special method called when instantiating a new object\n\nSome principles: abstraction, encapsulation, decomposition, generalisation\n\n\nSee more: \n\n\n\n\n\n\n\nIs this where the fun begins?\n\n\nTake your time\n\n\n\n\n\nDevelopment is usually the most time consuming step in a Software Development Life Cycle.\n\n\n\n\n\nIs this software good?\n\nIn this step, errors and failures are identified by exposing the code to an environment similar to the end-user experience.\nThere are several types of testing, some examples include:\n\nUnit testing: are all components working?\nIntegration testing: are all components working when fitted together?\nPerformance testing: how does the software perform against different workloads? It is fast? Stable?\nFunctional testing: is the software aligned with Software Requirement Specification?\n\n\n\n\n\n\n\n\n\n\nCan other people use my code?\n\nYou can use platforms like GitHub to release your software.\n\nThe functionality of the software is linked to several specifications related to the operating system and versions of packages and other software related to the project.\nListing these specifications will help others to replicate the environment in which the software was developed.\n\n\n\n\n\n\n\n\n\n\nIs it over?\n\nWe can classify maintenance into a few categories:\n\nCorrective: fix reported errors/failures.\nPreventive: regular checks and fixes.\nPerfective: optimize implemented features, adding new features.\nAdaptive: keep the software updated according to changes external to the project (new programming language version, new regulation, etc.)."
-  },
-  {
-    "objectID": "swd3/project.html",
-    "href": "swd3/project.html",
+    "objectID": "swd3/structure.html",
+    "href": "swd3/structure.html",
     "title": "arctraining slides",
     "section": "",
-    "text": "Calculating the hypotenuse\n\\[ c = \\sqrt{a^2 + b^2} \\]\nGeneral Design\n\n1 squared function\n1 sum function\n1 square root function\n1 hypotenuse function that uses the other functions"
+    "text": "# The most basic structure for a code project should look like:\nmy-model\n├── README.md\n├── requirements.txt\n├── src                &lt;- Source code for this project\n└── tests              &lt;- Test code for this project\n\nReadmeRequirements\n\n\n\nIs a guide that gives users a detailed description of a project you have worked on\nIt is the first file a person will see when they encounter your project, so it should be fairly brief but detailed.\nSee how to write a good README file in this freecodecamp post.\n\n\n\n\nText information about all the necessary additional libraries, modules, and packages.\nThis can be replaced by files like: environment.yml, pyproject.toml, setup.py."
   },
   {
-    "objectID": "swd3/project.html#bringing-it-all-together",
-    "href": "swd3/project.html#bringing-it-all-together",
+    "objectID": "swd3/structure.html#basic-structure-suggestion",
+    "href": "swd3/structure.html#basic-structure-suggestion",
     "title": "arctraining slides",
     "section": "",
-    "text": "Calculating the hypotenuse\n\\[ c = \\sqrt{a^2 + b^2} \\]\nGeneral Design\n\n1 squared function\n1 sum function\n1 square root function\n1 hypotenuse function that uses the other functions"
+    "text": "# The most basic structure for a code project should look like:\nmy-model\n├── README.md\n├── requirements.txt\n├── src                &lt;- Source code for this project\n└── tests              &lt;- Test code for this project\n\nReadmeRequirements\n\n\n\nIs a guide that gives users a detailed description of a project you have worked on\nIt is the first file a person will see when they encounter your project, so it should be fairly brief but detailed.\nSee how to write a good README file in this freecodecamp post.\n\n\n\n\nText information about all the necessary additional libraries, modules, and packages.\nThis can be replaced by files like: environment.yml, pyproject.toml, setup.py."
   },
   {
-    "objectID": "swd3/project.html#workflow",
-    "href": "swd3/project.html#workflow",
+    "objectID": "swd3/structure.html#advanced-project-structure",
+    "href": "swd3/structure.html#advanced-project-structure",
     "title": "arctraining slides",
-    "section": "Workflow",
-    "text": "Workflow\n\nInstall Git, Anaconda, VScode\nCreate a GitHub repository + Licence + .gitignore + Readme\nSetup GH Action for testing\nClone GH repository in local machine\nCreate project structure\nSetup tests\nDevelop code\nPush to github\nAdd docstring\nCreate simple documentation\nPush to github\nSetup file and local install"
+    "section": "Advanced Project Structure",
+    "text": "Advanced Project Structure\nTemplate based on mkrapp/cookiecutter-reproducible-science github\n.\n├── AUTHORS.md\n├── LICENSE\n├── README.md\n├── bin                &lt;- Your compiled model code can be stored here (not tracked by git)\n├── config             &lt;- Configuration files, e.g., for doxygen or for your model if needed\n├── data\n│   ├── external       &lt;- Data from third party sources.\n│   ├── interim        &lt;- Intermediate data that has been transformed.\n│   ├── processed      &lt;- The final, canonical data sets for modeling.\n│   └── raw            &lt;- The original, immutable data dump.\n├── docs               &lt;- Documentation, e.g., doxygen or scientific papers (not tracked by git)\n├── notebooks          &lt;- Ipython or R notebooks\n├── reports            &lt;- For a manuscript source, e.g., LaTeX, Markdown, etc., or any project reports\n│   └── figures        &lt;- Figures for the manuscript or reports\n├── src                &lt;- Source code for this project\n│   ├── data           &lt;- scripts and programs to process data\n│   ├── external       &lt;- Any external source code, e.g., pull other git projects, or external libraries\n│   ├── models         &lt;- Source code for your own model\n│   ├── tools          &lt;- Any helper scripts go here\n│   └── visualization  &lt;- Scripts for visualisation of your results, e.g., matplotlib, ggplot2 related.\n└── tests              &lt;- Test code for this project"
   },
   {
-    "objectID": "swd3/project.html#extra-documentation",
-    "href": "swd3/project.html#extra-documentation",
-    "title": "arctraining slides",
-    "section": "Extra: documentation",
-    "text": "Extra: documentation\n\nCreate docstring for every function\nInstall sphinx\nStart the basic structure using: $ sphinx-quickstart docs\nUse the apidoc to get docstrings: $ sphinx-apidoc -o docs .\nEdit files:\n\n\nconf.pyindex.rstdependencies.rstusage.rstfunctions.rst\n\n\n\nadd extentions: 'sphinx.ext.todo', 'sphinx.ext.viewcode', 'sphinx.ext.autodoc'.\nchange theme: sphinx_rtd_theme\nadd the src (change the folder name as necessary!) folder as path:\n\n import os\n import sys\n sys.path.insert(0, os.path.abspath('../src'))\n\n\nAdd extra files after Contents\n.. toctree::\n   :maxdepth: 2\n   :caption: Contents:\n\n   dependencies\n   usage\n   functions\n\n\nList all your dependencies:\nDependencies\n============\n\n- python\n- pytest\n- flake8\n- black\n- sphinx\n\n\nExplain how to use your software\nUsage Guide\n============\n\nTo start working with this repository you need to clone it onto your local\nmachine: ::\n\n    $ git clone https://github.com/...\n\n\nNext ...\n\n\nCreate a function file with the following:\nCalc Module\n--------------------------------\n\n.. automodule:: calc\n   :members:\n   :undoc-members:\n   :show-inheritance:"
-  },
-  {
-    "objectID": "swd3/project.html#extra-documentation-action",
-    "href": "swd3/project.html#extra-documentation-action",
-    "title": "arctraining slides",
-    "section": "Extra: documentation Action",
-    "text": "Extra: documentation Action\nCreate a new GH action to create a nice website for your documentation.\n\nThe action is available here\nYou may need update GH Actions permissions to allow write\nAfter a successful documentation action, you need to select gh-pages branch to activate your website"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "swd3/good-practices.html",
+    "href": "swd3/good-practices.html",
     "title": "arctraining slides",
     "section": "",
-    "text": "Public facing homepage for arctraining Quarto slides collection."
+    "text": "If application A needs version 1.0 of a particular module but application B needs version 2.0, then the requirements are in conflict and installing either version 1.0 or 2.0 will leave one application unable to run.\nThe solution for this problem is to create a virtual environment, a self-contained directory tree that contains installation for particular versions of software/packages.\n\n\n\nConda is an open source package management system and environment management system that runs on Windows, macOS, and Linux.\nIt offers dependency and environment management for any language—Python, R, Ruby, Lua, Scala, Java, JavaScript, C/ C++, Fortran, and more.\nEasy user install via Anaconda."
   },
   {
-    "objectID": "index.html#slides",
-    "href": "index.html#slides",
+    "objectID": "swd3/good-practices.html#virtual-environments",
+    "href": "swd3/good-practices.html#virtual-environments",
     "title": "arctraining slides",
-    "section": "Slides:",
-    "text": "Slides:\nNote: this page is under construction. As soon as the slides are available, the link will be provided.\n\nHPC0: Introduction to Linux for HPC\nHPC1: Introduction to High Performance Computing\nHPC2: Applications and containers on HPC\nHPC3: Computer architectures and shared memory parallel programming\nHPC5: Introduction to GPU programming with CUDA\nHPC6: HPC for Life Sciences and Bioinformatics\nSWD1a: Introduction to Python programming\nSWD1b: Introduction to R programming\nSWD2: Version Control with Git and GitHub\nSWD3: Software development practices for Research\nSWD4: Cloud computing for Research\nSWD5: Scientific Python\nSWD6: High performance Python\nSWD7: Introduction to reproducible workflows in Python"
+    "section": "",
+    "text": "If application A needs version 1.0 of a particular module but application B needs version 2.0, then the requirements are in conflict and installing either version 1.0 or 2.0 will leave one application unable to run.\nThe solution for this problem is to create a virtual environment, a self-contained directory tree that contains installation for particular versions of software/packages.\n\n\n\nConda is an open source package management system and environment management system that runs on Windows, macOS, and Linux.\nIt offers dependency and environment management for any language—Python, R, Ruby, Lua, Scala, Java, JavaScript, C/ C++, Fortran, and more.\nEasy user install via Anaconda."
   },
   {
-    "objectID": "template.html#meta-code",
-    "href": "template.html#meta-code",
+    "objectID": "swd3/good-practices.html#code-formatting",
+    "href": "swd3/good-practices.html#code-formatting",
     "title": "arctraining slides",
-    "section": "Course Code",
-    "text": "Course Code\nCourse Name"
+    "section": "Code formatting",
+    "text": "Code formatting\n# myscript.py:\nx = {  'a':37,'b':42,\n'c':927}\ny = 'hello '+       'world'\nclass foo  (     object  ):\n   def f    (self   ):\n       return       y **2\n   def g(self, x :int,\n       y : int=42\n       ) -&gt; int:\n       return x--y\ndef f  (   a ) :\n   return      37+-a[42-a :  y*3]"
   },
   {
-    "objectID": "template.html#research-computing-team-and-service",
-    "href": "template.html#research-computing-team-and-service",
+    "objectID": "swd3/good-practices.html#coding-conventions",
+    "href": "swd3/good-practices.html#coding-conventions",
+    "title": "arctraining slides",
+    "section": "Coding conventions",
+    "text": "Coding conventions\nIf your language or project has a standard policy, use that. For example:\n\nPython: PEP8\nR: Google’s guide for R, tidyverse style guide\nC++: Google’s style guide\nJulia: Official style guide"
+  },
+  {
+    "objectID": "swd3/good-practices.html#linters",
+    "href": "swd3/good-practices.html#linters",
+    "title": "arctraining slides",
+    "section": "Linters",
+    "text": "Linters\nLinters are automated tools which enforce coding conventions and check for common mistakes. For example:\n\nPython:\n\nflake8 (flags any syntax/style errors)\nblack (enforces the style)\nisort (“Sorts” imports alphabetically in groups)"
+  },
+  {
+    "objectID": "swd3/good-practices.html#example-flake8-linter",
+    "href": "swd3/good-practices.html#example-flake8-linter",
+    "title": "arctraining slides",
+    "section": "Example: Flake8 Linter",
+    "text": "Example: Flake8 Linter\n$ conda install flake8\n$ flake8 myscript.py\nmyscript.py:2:6: E201 whitespace after '{'\nmyscript.py:2:11: E231 missing whitespace after ':'\nmyscript.py:2:14: E231 missing whitespace after ','\nmyscript.py:2:18: E231 missing whitespace after ':'\nmyscript.py:3:1: E128 continuation line under-indented for visual indent\nmyscript.py:3:4: E231 missing whitespace after ':'\nmyscript.py:4:13: E225 missing whitespace around operator\nmyscript.py:4:14: E222 multiple spaces after operator\nmyscript.py:5:1: E302 expected 2 blank lines, found 0\nmyscript.py:5:13: E201 whitespace after '('\nmyscript.py:5:25: E202 whitespace before ')'\nmyscript.py:6:4: E111 indentation is not a multiple of 4\nmyscript.py:6:9: E211 whitespace before '('\nmyscript.py:6:20: E202 whitespace before ')'\nmyscript.py:7:8: E111 indentation is not a multiple of 4\nmyscript.py:7:14: E271 multiple spaces after keyword\nmyscript.py:7:25: E225 missing whitespace around operator\nmyscript.py:8:4: E301 expected 1 blank line, found 0\nmyscript.py:8:4: E111 indentation is not a multiple of 4\nmyscript.py:8:17: E203 whitespace before ':'\nmyscript.py:8:18: E231 missing whitespace after ':'\nmyscript.py:9:8: E128 continuation line under-indented for visual indent\nmyscript.py:9:9: E203 whitespace before ':'\nmyscript.py:9:15: E252 missing whitespace around parameter equals\nmyscript.py:9:16: E252 missing whitespace around parameter equals\nmyscript.py:10:8: E124 closing bracket does not match visual indentation\nmyscript.py:10:8: E125 continuation line with same indent as next logical line\nmyscript.py:11:8: E111 indentation is not a multiple of 4\nmyscript.py:12:1: E302 expected 2 blank lines, found 0\nmyscript.py:12:6: E211 whitespace before '('\nmyscript.py:12:9: E201 whitespace after '('\nmyscript.py:12:13: E202 whitespace before ')'\nmyscript.py:12:15: E203 whitespace before ':'\nmyscript.py:13:4: E111 indentation is not a multiple of 4\nmyscript.py:13:10: E271 multiple spaces after keyword\nmyscript.py:13:26: E203 whitespace before ':'\nmyscript.py:13:34: W291 trailing whitespace"
+  },
+  {
+    "objectID": "swd3/good-practices.html#example-black-code-formatter",
+    "href": "swd3/good-practices.html#example-black-code-formatter",
+    "title": "arctraining slides",
+    "section": "Example: Black Code Formatter",
+    "text": "Example: Black Code Formatter\n\nInstall and run Black\n\n$ conda install black\n$ black myscript.py\n\nCheck the file!\n\n# myscript.py:\nx = {\"a\": 37, \"b\": 42, \"c\": 927}\ny = \"hello \" + \"world\"\n\n\nclass foo(object):\n    def f(self):\n        return y**2\n\n    def g(self, x: int, y: int = 42) -&gt; int:\n        return x - -y\n\n\ndef f(a):\n    return 37 + -a[42 - a : y * 3]"
+  },
+  {
+    "objectID": "swd3/good-practices.html#ide",
+    "href": "swd3/good-practices.html#ide",
+    "title": "arctraining slides",
+    "section": "IDE",
+    "text": "IDE\nUsing an Integrated development environment (IDE) will certainly save you time, but the advantages of using an IDE go beyond that. Below are some IDE advantages\n\nSyntax highlighting\nText autocompletion\nRefactoring options\nEasily Importing libraries\nBuild, compile, or run\n\n\nVisual Studio Code\nTo install VS Code follow the instructions here."
+  },
+  {
+    "objectID": "swd3/good-practices.html#vsc-example-automatically-using-black",
+    "href": "swd3/good-practices.html#vsc-example-automatically-using-black",
+    "title": "arctraining slides",
+    "section": "VSC Example: automatically using black",
+    "text": "VSC Example: automatically using black\nConfigure VSC to use Black: Code (or File) &gt; Preferences &gt; Settings\n\nSearch for python formatting provider and choose black\nSearch for format on save and check the box to enable\n\nSelect interpreter: View &gt; Command Palette.. (or Ctrl+Shift+P)\n\nSearch for Python: Select Interpreter\nChoose the correct environment\n\nNow the Black package is going to fix your codes layout every time you save a code file."
+  },
+  {
+    "objectID": "swd3/good-practices.html#version-control",
+    "href": "swd3/good-practices.html#version-control",
+    "title": "arctraining slides",
+    "section": "Version Control",
+    "text": "Version Control\n\n\n\nPiled Higher and Deeper by Jorge Cham"
+  },
+  {
+    "objectID": "swd3/good-practices.html#test-driven-development",
+    "href": "swd3/good-practices.html#test-driven-development",
+    "title": "arctraining slides",
+    "section": "Test-driven development",
+    "text": "Test-driven development\nExample, suppose we need to find the result of a number divided by another number:\n\nNaive solutionTDD solution\n\n\n\nWrite a function a_div_b.\nCall it interactively on two or three different inputs.\nIf it produces the wrong answer, fix the function and re-run that test.\n\nThis clearly works — after all, thousands of scientists are doing it right now — but there’s a better way\n\n\n\nWrite a short function for each test.\nWrite a a_div_b function that should pass those tests.\nIf a_div_b produces any wrong answers, fix it and re-run the test functions.\n\nWriting the tests before writing the function they exercise is called test-driven development (TDD). Its advocates believe it produces better code faster because:\n\nIf people write tests after writing the thing to be tested, they are subject to confirmation bias, i.e., they subconsciously write tests to show that their code is correct, rather than to find errors.\nWriting tests helps programmers figure out what the function is actually supposed to do."
+  },
+  {
+    "objectID": "swd3/good-practices.html#possible-tests-a_div_b-example",
+    "href": "swd3/good-practices.html#possible-tests-a_div_b-example",
+    "title": "arctraining slides",
+    "section": "Possible tests: a_div_b example",
+    "text": "Possible tests: a_div_b example\nLet’s think in all possible scenarios for this problem and how we could test them.\n\nBigger by smallerSmaller by biggerNegative numbers\n\n\n\nUsing 4 and 2, the answer should be 2.\n\nassert a_div_b(4, 2) == 2\n\nOr… the answer should be larger than 1.\n\nassert a_div_b(8, 7) &gt; 1\n\n\n\nUsing 2 and 4, the answer should be 0.5.\n\nassert a_div_b(2, 4) == 0.5\n\nOr… the answer should be smaller than 1.\n\nassert a_div_b(7, 8) &lt; 1\n\n\n\nUsing -4 and -2, the answer should be 2.\n\nassert a_div_b(-4, -2) == 2\n\nOr… the answer should be positive.\n\nassert a_div_b(-4, -2) &gt; 0"
+  },
+  {
+    "objectID": "swd3.html#meta-code",
+    "href": "swd3.html#meta-code",
+    "title": "arctraining slides",
+    "section": "SWD3",
+    "text": "SWD3\nSoftware development practices for Research"
+  },
+  {
+    "objectID": "swd3.html#research-computing-team-and-service",
+    "href": "swd3.html#research-computing-team-and-service",
     "title": "arctraining slides",
     "section": "Research Computing Team and Service",
     "text": "Research Computing Team and Service\n\n\nHere to support research(ers)\n\nProvide training\nSupport users of Grid and Cloud Computing platforms\nProvide consultancy\n\nTo develop project proposals\nTo help recruit people with specialist skills\nWorking directly on research projects\n\n\nFor details please see our Website\nContact us via the IT Service Desk\n\n\n\nIf you follow a link then a new tab will open in the Slide View Web browser.\n\nThis will want closing or the Slide View activating again as he main tab in the browser.\n\nMaybe point out some sections/features on the Research Computing Website.\nWe support use and develop resources."
   },
   {
-    "objectID": "template.html#slide-a",
-    "href": "template.html#slide-a",
+    "objectID": "swd3.html#useful-links",
+    "href": "swd3.html#useful-links",
     "title": "arctraining slides",
-    "section": "Slide A",
-    "text": "Slide A\nTemporary content"
+    "section": "Useful Links",
+    "text": "Useful Links\n\nGitHub Project Demo\nAlan Turing Institute - Research Software Engineering Course Material"
   },
   {
-    "objectID": "template.html#slide-b",
-    "href": "template.html#slide-b",
+    "objectID": "swd3.html#software-development-life-cycle-sdlc",
+    "href": "swd3.html#software-development-life-cycle-sdlc",
     "title": "arctraining slides",
-    "section": "Slide B",
-    "text": "Slide B\nTemporary content"
+    "section": "Software Development Life Cycle (SDLC)",
+    "text": "Software Development Life Cycle (SDLC)"
   },
   {
-    "objectID": "template.html#slide-c",
-    "href": "template.html#slide-c",
+    "objectID": "swd3.html#sdlc",
+    "href": "swd3.html#sdlc",
     "title": "arctraining slides",
-    "section": "Slide C",
-    "text": "Slide C\nTemporary content"
+    "section": "SDLC",
+    "text": "SDLC\n\nIdeationRequirementsDesignDevelopmentTestDeploymentMaintenance\n\n\n\n\n\nWhat are we going to do?\n\n\nBrainstorming\nResearch\n\n\n\n\n\n\n\n\n\n\nHow are we going to do it?\n\nSome topics to help define requirements include:\n\nfinal goal\nproject scope (how to reach the final goal)\nwhat is feasible (and how)\nwhat is priority\nwhat resources are available\ndeadlines\npotential risks\n\n\nWarning: Each person involved in the project may have a different need.\n\n\n\n\n\n\n\n\n\n\nWhat is the software architecture?\n\nWhen designing software, the object-oriented approach is a common programming paradigm.\nObject-oriented components:\n\nClasses: A user-defined type\nObject instances: A particular object instantiated from a class.\nMethods: A function which is “built in” to a class\nConstructor: A special method called when instantiating a new object\n\nSome principles: abstraction, encapsulation, decomposition, generalisation\n\n\nSee more: \n\n\n\n\n\n\n\nIs this where the fun begins?\n\n\nTake your time\n\n\n\n\n\nDevelopment is usually the most time consuming step in a Software Development Life Cycle.\n\n\n\n\n\nIs this software good?\n\nIn this step, errors and failures are identified by exposing the code to an environment similar to the end-user experience.\nThere are several types of testing, some examples include:\n\nUnit testing: are all components working?\nIntegration testing: are all components working when fitted together?\nPerformance testing: how does the software perform against different workloads? It is fast? Stable?\nFunctional testing: is the software aligned with Software Requirement Specification?\n\n\n\n\n\n\n\n\n\n\nCan other people use my code?\n\nYou can use platforms like GitHub to release your software.\n\nThe functionality of the software is linked to several specifications related to the operating system and versions of packages and other software related to the project.\nListing these specifications will help others to replicate the environment in which the software was developed.\n\n\n\n\n\n\n\n\n\n\nIs it over?\n\nWe can classify maintenance into a few categories:\n\nCorrective: fix reported errors/failures.\nPreventive: regular checks and fixes.\nPerfective: optimize implemented features, adding new features.\nAdaptive: keep the software updated according to changes external to the project (new programming language version, new regulation, etc.)."
   },
   {
-    "objectID": "template.html#thank-you",
-    "href": "template.html#thank-you",
+    "objectID": "swd3.html#basic-structure-suggestion",
+    "href": "swd3.html#basic-structure-suggestion",
     "title": "arctraining slides",
-    "section": "Thank you",
-    "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: https://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
+    "section": "Basic Structure Suggestion",
+    "text": "Basic Structure Suggestion\n# The most basic structure for a code project should look like:\nmy-model\n├── README.md\n├── requirements.txt\n├── src                &lt;- Source code for this project\n└── tests              &lt;- Test code for this project\n\nReadmeRequirements\n\n\n\nIs a guide that gives users a detailed description of a project you have worked on\nIt is the first file a person will see when they encounter your project, so it should be fairly brief but detailed.\nSee how to write a good README file in this freecodecamp post.\n\n\n\n\nText information about all the necessary additional libraries, modules, and packages.\nThis can be replaced by files like: environment.yml, pyproject.toml, setup.py."
+  },
+  {
+    "objectID": "swd3.html#advanced-project-structure",
+    "href": "swd3.html#advanced-project-structure",
+    "title": "arctraining slides",
+    "section": "Advanced Project Structure",
+    "text": "Advanced Project Structure\nTemplate based on mkrapp/cookiecutter-reproducible-science github\n.\n├── AUTHORS.md\n├── LICENSE\n├── README.md\n├── bin                &lt;- Your compiled model code can be stored here (not tracked by git)\n├── config             &lt;- Configuration files, e.g., for doxygen or for your model if needed\n├── data\n│   ├── external       &lt;- Data from third party sources.\n│   ├── interim        &lt;- Intermediate data that has been transformed.\n│   ├── processed      &lt;- The final, canonical data sets for modeling.\n│   └── raw            &lt;- The original, immutable data dump.\n├── docs               &lt;- Documentation, e.g., doxygen or scientific papers (not tracked by git)\n├── notebooks          &lt;- Ipython or R notebooks\n├── reports            &lt;- For a manuscript source, e.g., LaTeX, Markdown, etc., or any project reports\n│   └── figures        &lt;- Figures for the manuscript or reports\n├── src                &lt;- Source code for this project\n│   ├── data           &lt;- scripts and programs to process data\n│   ├── external       &lt;- Any external source code, e.g., pull other git projects, or external libraries\n│   ├── models         &lt;- Source code for your own model\n│   ├── tools          &lt;- Any helper scripts go here\n│   └── visualization  &lt;- Scripts for visualisation of your results, e.g., matplotlib, ggplot2 related.\n└── tests              &lt;- Test code for this project"
+  },
+  {
+    "objectID": "swd3.html#virtual-environments",
+    "href": "swd3.html#virtual-environments",
+    "title": "arctraining slides",
+    "section": "Virtual Environments",
+    "text": "Virtual Environments\nIf application A needs version 1.0 of a particular module but application B needs version 2.0, then the requirements are in conflict and installing either version 1.0 or 2.0 will leave one application unable to run.\nThe solution for this problem is to create a virtual environment, a self-contained directory tree that contains installation for particular versions of software/packages.\nConda\n\nConda is an open source package management system and environment management system that runs on Windows, macOS, and Linux.\nIt offers dependency and environment management for any language—Python, R, Ruby, Lua, Scala, Java, JavaScript, C/ C++, Fortran, and more.\nEasy user install via Anaconda."
+  },
+  {
+    "objectID": "swd3.html#code-formatting",
+    "href": "swd3.html#code-formatting",
+    "title": "arctraining slides",
+    "section": "Code formatting",
+    "text": "Code formatting\n# myscript.py:\nx = {  'a':37,'b':42,\n'c':927}\ny = 'hello '+       'world'\nclass foo  (     object  ):\n   def f    (self   ):\n       return       y **2\n   def g(self, x :int,\n       y : int=42\n       ) -&gt; int:\n       return x--y\ndef f  (   a ) :\n   return      37+-a[42-a :  y*3]"
+  },
+  {
+    "objectID": "swd3.html#coding-conventions",
+    "href": "swd3.html#coding-conventions",
+    "title": "arctraining slides",
+    "section": "Coding conventions",
+    "text": "Coding conventions\nIf your language or project has a standard policy, use that. For example:\n\nPython: PEP8\nR: Google’s guide for R, tidyverse style guide\nC++: Google’s style guide\nJulia: Official style guide"
+  },
+  {
+    "objectID": "swd3.html#linters",
+    "href": "swd3.html#linters",
+    "title": "arctraining slides",
+    "section": "Linters",
+    "text": "Linters\nLinters are automated tools which enforce coding conventions and check for common mistakes. For example:\n\nPython:\n\nflake8 (flags any syntax/style errors)\nblack (enforces the style)\nisort (“Sorts” imports alphabetically in groups)"
+  },
+  {
+    "objectID": "swd3.html#example-flake8-linter",
+    "href": "swd3.html#example-flake8-linter",
+    "title": "arctraining slides",
+    "section": "Example: Flake8 Linter",
+    "text": "Example: Flake8 Linter\n$ conda install flake8\n$ flake8 myscript.py\nmyscript.py:2:6: E201 whitespace after '{'\nmyscript.py:2:11: E231 missing whitespace after ':'\nmyscript.py:2:14: E231 missing whitespace after ','\nmyscript.py:2:18: E231 missing whitespace after ':'\nmyscript.py:3:1: E128 continuation line under-indented for visual indent\nmyscript.py:3:4: E231 missing whitespace after ':'\nmyscript.py:4:13: E225 missing whitespace around operator\nmyscript.py:4:14: E222 multiple spaces after operator\nmyscript.py:5:1: E302 expected 2 blank lines, found 0\nmyscript.py:5:13: E201 whitespace after '('\nmyscript.py:5:25: E202 whitespace before ')'\nmyscript.py:6:4: E111 indentation is not a multiple of 4\nmyscript.py:6:9: E211 whitespace before '('\nmyscript.py:6:20: E202 whitespace before ')'\nmyscript.py:7:8: E111 indentation is not a multiple of 4\nmyscript.py:7:14: E271 multiple spaces after keyword\nmyscript.py:7:25: E225 missing whitespace around operator\nmyscript.py:8:4: E301 expected 1 blank line, found 0\nmyscript.py:8:4: E111 indentation is not a multiple of 4\nmyscript.py:8:17: E203 whitespace before ':'\nmyscript.py:8:18: E231 missing whitespace after ':'\nmyscript.py:9:8: E128 continuation line under-indented for visual indent\nmyscript.py:9:9: E203 whitespace before ':'\nmyscript.py:9:15: E252 missing whitespace around parameter equals\nmyscript.py:9:16: E252 missing whitespace around parameter equals\nmyscript.py:10:8: E124 closing bracket does not match visual indentation\nmyscript.py:10:8: E125 continuation line with same indent as next logical line\nmyscript.py:11:8: E111 indentation is not a multiple of 4\nmyscript.py:12:1: E302 expected 2 blank lines, found 0\nmyscript.py:12:6: E211 whitespace before '('\nmyscript.py:12:9: E201 whitespace after '('\nmyscript.py:12:13: E202 whitespace before ')'\nmyscript.py:12:15: E203 whitespace before ':'\nmyscript.py:13:4: E111 indentation is not a multiple of 4\nmyscript.py:13:10: E271 multiple spaces after keyword\nmyscript.py:13:26: E203 whitespace before ':'\nmyscript.py:13:34: W291 trailing whitespace"
+  },
+  {
+    "objectID": "swd3.html#example-black-code-formatter",
+    "href": "swd3.html#example-black-code-formatter",
+    "title": "arctraining slides",
+    "section": "Example: Black Code Formatter",
+    "text": "Example: Black Code Formatter\n\nInstall and run Black\n\n$ conda install black\n$ black myscript.py\n\nCheck the file!\n\n# myscript.py:\nx = {\"a\": 37, \"b\": 42, \"c\": 927}\ny = \"hello \" + \"world\"\n\n\nclass foo(object):\n    def f(self):\n        return y**2\n\n    def g(self, x: int, y: int = 42) -&gt; int:\n        return x - -y\n\n\ndef f(a):\n    return 37 + -a[42 - a : y * 3]"
+  },
+  {
+    "objectID": "swd3.html#ide",
+    "href": "swd3.html#ide",
+    "title": "arctraining slides",
+    "section": "IDE",
+    "text": "IDE\nUsing an Integrated development environment (IDE) will certainly save you time, but the advantages of using an IDE go beyond that. Below are some IDE advantages\n\nSyntax highlighting\nText autocompletion\nRefactoring options\nEasily Importing libraries\nBuild, compile, or run\n\nVisual Studio Code\nTo install VS Code follow the instructions here."
+  },
+  {
+    "objectID": "swd3.html#vsc-example-automatically-using-black",
+    "href": "swd3.html#vsc-example-automatically-using-black",
+    "title": "arctraining slides",
+    "section": "VSC Example: automatically using black",
+    "text": "VSC Example: automatically using black\nConfigure VSC to use Black: Code (or File) &gt; Preferences &gt; Settings\n\nSearch for python formatting provider and choose black\nSearch for format on save and check the box to enable\n\nSelect interpreter: View &gt; Command Palette.. (or Ctrl+Shift+P)\n\nSearch for Python: Select Interpreter\nChoose the correct environment\n\nNow the Black package is going to fix your codes layout every time you save a code file."
+  },
+  {
+    "objectID": "swd3.html#version-control",
+    "href": "swd3.html#version-control",
+    "title": "arctraining slides",
+    "section": "Version Control",
+    "text": "Version Control\n\nPiled Higher and Deeper by Jorge Cham"
+  },
+  {
+    "objectID": "swd3.html#test-driven-development",
+    "href": "swd3.html#test-driven-development",
+    "title": "arctraining slides",
+    "section": "Test-driven development",
+    "text": "Test-driven development\nExample, suppose we need to find the result of a number divided by another number:\n\nNaive solutionTDD solution\n\n\n\nWrite a function a_div_b.\nCall it interactively on two or three different inputs.\nIf it produces the wrong answer, fix the function and re-run that test.\n\nThis clearly works — after all, thousands of scientists are doing it right now — but there’s a better way\n\n\n\nWrite a short function for each test.\nWrite a a_div_b function that should pass those tests.\nIf a_div_b produces any wrong answers, fix it and re-run the test functions.\n\nWriting the tests before writing the function they exercise is called test-driven development (TDD). Its advocates believe it produces better code faster because:\n\nIf people write tests after writing the thing to be tested, they are subject to confirmation bias, i.e., they subconsciously write tests to show that their code is correct, rather than to find errors.\nWriting tests helps programmers figure out what the function is actually supposed to do."
+  },
+  {
+    "objectID": "swd3.html#possible-tests-a_div_b-example",
+    "href": "swd3.html#possible-tests-a_div_b-example",
+    "title": "arctraining slides",
+    "section": "Possible tests: a_div_b example",
+    "text": "Possible tests: a_div_b example\nLet’s think in all possible scenarios for this problem and how we could test them.\n\nBigger by smallerSmaller by biggerNegative numbers\n\n\n\nUsing 4 and 2, the answer should be 2.\n\nassert a_div_b(4, 2) == 2\n\nOr… the answer should be larger than 1.\n\nassert a_div_b(8, 7) &gt; 1\n\n\n\nUsing 2 and 4, the answer should be 0.5.\n\nassert a_div_b(2, 4) == 0.5\n\nOr… the answer should be smaller than 1.\n\nassert a_div_b(7, 8) &lt; 1\n\n\n\nUsing -4 and -2, the answer should be 2.\n\nassert a_div_b(-4, -2) == 2\n\nOr… the answer should be positive.\n\nassert a_div_b(-4, -2) &gt; 0"
+  },
+  {
+    "objectID": "swd3.html#bringing-it-all-together",
+    "href": "swd3.html#bringing-it-all-together",
+    "title": "arctraining slides",
+    "section": "Bringing it all together",
+    "text": "Bringing it all together\nThe Hypotenuse Problem\nCalculating the hypotenuse\n\\[ c = \\sqrt{a^2 + b^2} \\]\nGeneral Design\n\n1 squared function\n1 sum function\n1 square root function\n1 hypotenuse function that uses the other functions"
+  },
+  {
+    "objectID": "swd3.html#workflow",
+    "href": "swd3.html#workflow",
+    "title": "arctraining slides",
+    "section": "Workflow",
+    "text": "Workflow\n\nInstall Git, Anaconda, VScode\nCreate a GitHub repository + Licence + .gitignore + Readme\nSetup GH Action for testing (Python Application)\nClone GH repository in local machine\nCreate project structure (source and test folders)\nSetup tests (start with test_)\nDevelop code\nAdd docstring (you can use autoDocstring - Python Docstring Generator on VS Code)\nLint code and tests\nPush to github\nEXTRA: Create Sphinx documentation\nEXTRA: Setup file and local install\nEXTRA: GH Release"
+  },
+  {
+    "objectID": "swd3.html#extra-sphinx-documentation",
+    "href": "swd3.html#extra-sphinx-documentation",
+    "title": "arctraining slides",
+    "section": "Extra: Sphinx documentation",
+    "text": "Extra: Sphinx documentation\n\nCreate docstring for every function\nInstall sphinx\nStart the basic structure using: $ sphinx-quickstart docs\nUse the apidoc to get docstrings: $ sphinx-apidoc -o docs .\nEdit files:\n\n\nconf.pyindex.rstdependencies.rstusage.rstfunctions.rst\n\n\n\nadd extentions: 'sphinx.ext.todo', 'sphinx.ext.viewcode', 'sphinx.ext.autodoc'.\nchange theme: sphinx_rtd_theme\nadd the src (change the folder name as necessary!) folder as path:\n\n import os\n import sys\n sys.path.insert(0, os.path.abspath('../src'))\n\n\nAdd extra files after Contents\n.. toctree::\n   :maxdepth: 2\n   :caption: Contents:\n\n   dependencies\n   usage\n   functions\n\n\nList all your dependencies:\nDependencies\n============\n\n- python\n- pytest\n- flake8\n- black\n- sphinx\n\n\nExplain how to use your software\nUsage Guide\n============\n\nTo start working with this repository you need to clone it onto your local\nmachine: ::\n\n    $ git clone https://github.com/...\n\n\nNext ...\n\n\nCreate a function file with the following:\nAPI reference\n=============\n\n.. automodule:: calc\n   :members:\n   :undoc-members:\n   :show-inheritance:"
+  },
+  {
+    "objectID": "swd3.html#extra-documentation-action",
+    "href": "swd3.html#extra-documentation-action",
+    "title": "arctraining slides",
+    "section": "Extra: documentation Action",
+    "text": "Extra: documentation Action\nCreate a new GH action to create a nice website for your documentation.\n\nThe action is available here\nYou may need update GH Actions permissions to allow write\nAfter a successful documentation action, you need to select gh-pages branch to activate your website"
+  },
+  {
+    "objectID": "swd3.html#extra-setup-file",
+    "href": "swd3.html#extra-setup-file",
+    "title": "arctraining slides",
+    "section": "Extra: Setup file",
+    "text": "Extra: Setup file\nCreate a setup.py file like:\nimport setuptools\n\nwith open(\"README.md\", \"r\") as fh:\n    long_description = fh.read()\n\nsetuptools.setup(\n    name=\"hypot\",\n    version=\"0.1.0\",\n    author=\"Patricia Ternes\",\n    author_email=\"p.ternesdallagnollo@leeds.ac.uk\",\n    description=\"The hypot SWD3 demo package\",\n    packages=setuptools.find_packages(),\n    classifiers=[\n        \"Programming Language :: Python :: 3.9\",\n        \"Intended Audience :: Science/Research/Learning\",\n    ],\n    python_requires=\"&gt;=3.9\",\n)"
+  },
+  {
+    "objectID": "swd3.html#local-installation",
+    "href": "swd3.html#local-installation",
+    "title": "arctraining slides",
+    "section": "Local Installation",
+    "text": "Local Installation\nInstall: install the hypot package into the environment using:\n$ python setup.py install\nUsage: if you want to create a personalised script, you can import the hypot modules as follows:\nfrom hypot.calc import squared, addition, sqroot\nRemove: If you want to remove your package, use pip:\n$ pip uninstall hypot"
+  },
+  {
+    "objectID": "swd3.html#release",
+    "href": "swd3.html#release",
+    "title": "arctraining slides",
+    "section": "Release",
+    "text": "Release\nRelease in GitHub are based in tags with the following structure:\nv0.5.2\n\n\n\nChange\nRelease\nExample\n\n\n\n\nMajor\nBreaking\n0\n\n\nMinor\nFeature\n5\n\n\nPatch\nFix\n2\n\n\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
   }
 ]

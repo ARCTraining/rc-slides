@@ -131,24 +131,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol type="1">
 <li>Install Git, Anaconda, VScode</li>
 <li>Create a GitHub repository + Licence + .gitignore + Readme</li>
-<li>Setup GH Action for testing</li>
+<li>Setup GH Action for testing (Python Application)</li>
 <li>Clone GH repository in local machine</li>
-<li>Create project structure</li>
-<li>Setup tests</li>
+<li>Create project structure (source and test folders)</li>
+<li>Setup tests (start with <code>test_</code>)</li>
 <li>Develop code</li>
+<li>Add docstring (you can use <code>autoDocstring - Python Docstring Generator on VS Code</code>)</li>
+<li>Lint code and tests</li>
 <li>Push to github</li>
-<li>Add docstring</li>
-<li>Create simple documentation</li>
-<li>Push to github</li>
-<li>Setup file and local install</li>
+<li>EXTRA: Create Sphinx documentation</li>
+<li>EXTRA: Setup file and local install</li>
+<li>EXTRA: GH Release</li>
 </ol>
 </section>
-<section id="extra-documentation" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="extra-documentation">Extra: documentation</h2>
+<section id="extra-sphinx-documentation" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="extra-sphinx-documentation">Extra: Sphinx documentation</h2>
 <ul>
 <li>Create docstring for every function</li>
 <li>Install <code>sphinx</code></li>
-<li>Start the basic structure using: $ sphinx-quickstart docs</li>
+<li>Start the basic structure using: <code>$ sphinx-quickstart docs</code></li>
 <li>Use the apidoc to get docstrings: <code>$ sphinx-apidoc -o docs .</code></li>
 <li>Edit files:</li>
 </ul>
@@ -201,8 +202,8 @@ Next ...</code></pre>
 </div>
 <div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
 <p>Create a function file with the following:</p>
-<pre><code>Calc Module
---------------------------------
+<pre><code>API reference
+=============
 
 .. automodule:: calc
    :members:
@@ -220,6 +221,68 @@ Next ...</code></pre>
 <li>You may need update GH Actions permissions to allow <code>write</code></li>
 <li>After a successful documentation action, you need to select <code>gh-pages</code> branch to activate your website</li>
 </ul>
+</section>
+<section id="extra-setup-file" class="level2">
+<h2 class="anchored" data-anchor-id="extra-setup-file">Extra: Setup file</h2>
+<p>Create a <code>setup.py</code> file like:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> setuptools</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"README.md"</span>, <span class="st">"r"</span>) <span class="im">as</span> fh:</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    long_description <span class="op">=</span> fh.read()</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>setuptools.setup(</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    name<span class="op">=</span><span class="st">"hypot"</span>,</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    version<span class="op">=</span><span class="st">"0.1.0"</span>,</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    author<span class="op">=</span><span class="st">"Patricia Ternes"</span>,</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    author_email<span class="op">=</span><span class="st">"p.ternesdallagnollo@leeds.ac.uk"</span>,</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    description<span class="op">=</span><span class="st">"The hypot SWD3 demo package"</span>,</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    packages<span class="op">=</span>setuptools.find_packages(),</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    classifiers<span class="op">=</span>[</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Programming Language :: Python :: 3.9"</span>,</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Intended Audience :: Science/Research/Learning"</span>,</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    ],</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    python_requires<span class="op">=</span><span class="st">"&gt;=3.9"</span>,</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="local-installation" class="level2">
+<h2 class="anchored" data-anchor-id="local-installation">Local Installation</h2>
+<p><strong>Install:</strong> install the hypot package into the environment using:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python setup.py install</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Usage:</strong> if you want to create a personalised script, you can import the hypot modules as follows:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> hypot.calc <span class="im">import</span> squared, addition, sqroot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Remove:</strong> If you want to remove your package, use pip:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pip uninstall hypot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="release" class="level2">
+<h2 class="anchored" data-anchor-id="release">Release</h2>
+<p>Release in GitHub are based in tags with the following structure:</p>
+<p><code>v0.5.2</code></p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Change</th>
+<th>Release</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Major</td>
+<td>Breaking</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>Minor</td>
+<td>Feature</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>Patch</td>
+<td>Fix</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
 
 
 </section>
