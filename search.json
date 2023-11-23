@@ -641,7 +641,7 @@
     "href": "hpc0.html#filesystem-basics",
     "title": "arctraining slides",
     "section": "Filesystem basics",
-    "text": "Filesystem basics\n\n\n\n\nThe image shows a simplified filesystem.\nA Linux Directory is like a Windows Folder\nDirectories are arranged in a heirarchy.\n\nThe top directory is the Root Directory.\n\nLinux has symlinks where Windows has shortcuts."
+    "text": "Filesystem basics\n\n\n\n\nThe image shows a simplified filesystem.\nA Linux Directory is like a Windows Folder\nDirectories are arranged in a hierarchy.\n\nThe top directory is the Root Directory.\n\nLinux has symlinks where Windows has shortcuts."
   },
   {
     "objectID": "hpc0.html#forward-slash-and-back-slash",
@@ -655,14 +655,14 @@
     "href": "hpc0.html#absolute-path",
     "title": "arctraining slides",
     "section": "Absolute path",
-    "text": "Absolute path\n\n\n\nThe slide shows an absolute file path.\nThe Root Directory is referred to by a back slash.\n\nAll absolute file paths start from the Root Directory\n\nLinux does not have drive letters like Windows."
+    "text": "Absolute path\n\n\n\nThe slide shows an absolute file path.\nThe Root Directory is referred to by a forward slash.\n\nAll absolute file paths start from the Root Directory\n\nLinux does not have drive letters like Windows."
   },
   {
     "objectID": "hpc0.html#relative-path",
     "href": "hpc0.html#relative-path",
     "title": "arctraining slides",
     "section": "Relative path",
-    "text": "Relative path\n\n\n\nThe slide shows a relative file path.\n.. refers to one level up in the directory heirarchy."
+    "text": "Relative path\n\n\n\nThe slide shows a relative file path.\n.. refers to one level up in the directory hierarchy."
   },
   {
     "objectID": "hpc0.html#the-default-prompt",
@@ -949,14 +949,14 @@
     "href": "hpc0.html#sed-12",
     "title": "arctraining slides",
     "section": "sed 1/2",
-    "text": "sed 1/2\n\nA program command tool for stream editing that reads an input stream and produces an output stream\nInternally it has a pattern space and a hold buffer\nData is read from the input stream until the next newline character and placed into the pattern space\nOperations can be performed on the data in the pattern space\nData can be exchanged between the pattern space and the hold buffer\nOnce all specified operations have been performed, the pattern space is ouput and a newline characer is added at the end"
+    "text": "sed 1/2\n\nA program command tool for stream editing that reads an input stream and produces an output stream\nInternally it has a pattern space and a hold buffer\nData is read from the input stream until the next newline character and placed into the pattern space\nOperations can be performed on the data in the pattern space\nData can be exchanged between the pattern space and the hold buffer\nOnce all specified operations have been performed, the pattern space is output and a newline character is added at the end"
   },
   {
     "objectID": "hpc0.html#sed-22",
     "href": "hpc0.html#sed-22",
     "title": "arctraining slides",
     "section": "sed 2/2",
-    "text": "sed 2/2\n\nA simple sed program:\n\nsed 's/foo/bar/'\n\nThis program replaces all instance of foo with bar on every line\nTake care using sed as it can modify files"
+    "text": "sed 2/2\n\nA simple sed program:\n\nsed 's/foo/bar/'\n\nThis program replaces all instances of foo with bar on every line\nTake care using sed as it can modify files"
   },
   {
     "objectID": "hpc0.html#grep",
@@ -1019,7 +1019,7 @@
     "href": "hpc0.html#check-point-3",
     "title": "arctraining slides",
     "section": "Check point 3",
-    "text": "Check point 3\n\nAny questons?\n\n\n\nTime for a break?"
+    "text": "Check point 3\n\nAny questions?\n\n\n\nTime for a break?"
   },
   {
     "objectID": "hpc0.html#variables",
@@ -1061,7 +1061,7 @@
     "href": "hpc0.html#wildcards",
     "title": "arctraining slides",
     "section": "Wildcards",
-    "text": "Wildcards\n\nIn Linux:\n\n* can represent anything.\n? can represent any single character.\n[] can represent any single characters detailed in the square brackets.\n\nThe following will list all files starting with a:\n\nls a*\n\nThe following will list all files starting with a and ending .txt that have one character between these:\n\nls a?.txt\n\nThe following will list all files starting with a and ending .txt that have any other string with a 0 or a 1 character between these:\n\nls a[12].txt\n\n\n* is pronounced star or asterisk.\n? is pronounced question-mark.\n[ is pronounced start-square-bracket\n] is pronounced end-square-bracket"
+    "text": "Wildcards\n\nIn Linux:\n\n* can represent anything.\n? can represent any single character.\n[] can represent any single character detailed in the square brackets.\n\nThe following will list all files starting with a:\n\nls a*\n\nThe following will list all files starting with a and ending .txt that have one character between these:\n\nls a?.txt\n\nThe following will list all files starting with a and ending .txt that have any other string with a 0 or a 1 character between these:\n\nls a[12].txt\n\n\n* is pronounced star or asterisk.\n? is pronounced question-mark.\n[ is pronounced start-square-bracket\n] is pronounced end-square-bracket"
   },
   {
     "objectID": "hpc0.html#wildcards-exercise",
