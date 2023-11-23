@@ -200,7 +200,7 @@ directories
 ::: {.notes}
 - The image shows a simplified filesystem.
 - A Linux Directory is like a Windows Folder
-- Directories are arranged in a heirarchy.
+- Directories are arranged in a hierarchy.
   - The top directory is the `Root Directory`.
 - Linux has `symlinks` where Windows has `shortcuts`.
 :::
@@ -220,7 +220,7 @@ directories
 
 ::: {.notes}
 - The slide shows an absolute file path.
-- The `Root Directory` is referred to by a back slash.
+- The `Root Directory` is referred to by a forward slash.
   - All absolute file paths start from the `Root Directory`
 - Linux does not have drive letters like Windows.
 :::
@@ -231,7 +231,7 @@ directories
 
 ::: {.notes}
 - The slide shows a relative file path.
-- `..` refers to one level up in the directory heirarchy.
+- `..` refers to one level up in the directory hierarchy.
 :::
 
 
@@ -836,7 +836,7 @@ sort *.txt | sed -n 50p
 - Data is read from the input stream until the next newline character and placed into the pattern space
 - Operations can be performed on the data in the pattern space
 - Data can be exchanged between the pattern space and the hold buffer
-- Once all specified operations have been performed, the pattern space is ouput and a newline characer is added at the end
+- Once all specified operations have been performed, the pattern space is output and a newline character is added at the end
 
 
 ## `sed` 2/2
@@ -844,7 +844,7 @@ sort *.txt | sed -n 50p
 ```{.bash code-line-numbers=false}
 sed 's/foo/bar/'
 ```
-- This program replaces all instance of `foo` with `bar` on every line
+- This program replaces all instances of `foo` with `bar` on every line
 - Take care using `sed` as it can modify files
 
 
@@ -1003,7 +1003,7 @@ chmod u+x test0/test/test-file
 
 
 ## Check point 3
-- Any questons?
+- Any questions?
 
 ::: {.notes}
 - Time for a break?
@@ -1104,7 +1104,7 @@ done
 - In Linux:
   - `*` can represent anything.
   - `?` can represent any single character.
-  - `[]` can represent any single characters detailed in the square brackets.
+  - `[]` can represent any single character detailed in the square brackets.
 - The following will list all files starting with `a`:
 ```{.bash code-line-numbers=false}
 ls a*
