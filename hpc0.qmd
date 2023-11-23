@@ -380,7 +380,7 @@ man ls
   - The `-a` option will list all the contents of a directory
     - Files and directories starting with `.` are hidden by default
   - The `-l` option will list each item line by line with added details
-  - The `-H` option will report sizes in a more human readable format
+  - The `-h` option will report sizes in a more human readable format
 
 ::: {.notes}
 - `ls` is pronounced `el-ess`.
