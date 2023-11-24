@@ -79,7 +79,7 @@ name: Introduction to High Performance Computing
 ## Serial and parallel programs
 
 - Serial programs run on a single CPU core, solving one problem at a time.
-- Paralel programs run across multiple CPU cores, splitting the workload between them and solving the problem faster.
+- Parallel programs run across multiple CPU cores, splitting the workload between them and solving the problem faster.
 
 ## Serial Program
 
