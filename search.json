@@ -686,46 +686,18 @@
     "text": "pwd\n\nA command to print the working directory\n\n[user@host ~]$ pwd\n/home/homeXX/user\n\nWhen you run this the output will be slightly different:\n\nXX should be 01 or 02\nuser should be your username\n\n\n\n\npwd is pronounced pee-double-you-dee."
   },
   {
-    "objectID": "hpc0.html#pwd-demo",
-    "href": "hpc0.html#pwd-demo",
-    "title": "arctraining slides",
-    "section": "pwd demo",
-    "text": "pwd demo\n\n\nDo a quick demo.\nIf using Teams, take care to share the right windows…"
-  },
-  {
     "objectID": "hpc0.html#pwd-exercise",
     "href": "hpc0.html#pwd-exercise",
     "title": "arctraining slides",
     "section": "pwd exercise",
-    "text": "pwd exercise\n\nType ‘pwd’ at the prompt by typing the letters, then press the &lt;return&gt; or &lt;enter&gt; key:\n\n[user@host ~]$ pwd\n/home/homeXX/user\n\nPrint help about the pwd command:\n\npwd --help\n\nIt should look like:\n\n[user@host ~]$ pwd -- help\npwd: pwd [-LP]\n    Print the name of the current working directory.\n    \n    Options:\n      -L    print the value of $PWD if it names the current working\n            directory\n      -P    print the physical directory, without any symbolic links\n    \n    By default, `pwd' behaves as if `-L' were specified.\n    \n    Exit Status:\n    Returns 0 unless an invalid option is given or the current directory\n    cannot be read."
-  },
-  {
-    "objectID": "hpc0.html#help-and-man",
-    "href": "hpc0.html#help-and-man",
-    "title": "arctraining slides",
-    "section": "--help and man",
-    "text": "--help and man\n\n--help is a command option that prints help about using the command\nman is a command to bring up the manual\nFor help using man: press the h-key `.\nTo quit the help about man, or man itself: press &lt;q&gt;\nUse &lt;space_bar&gt; to page through\n\n\n\n--help is pronounced minus-minus-help."
-  },
-  {
-    "objectID": "hpc0.html#help-and-man-demo",
-    "href": "hpc0.html#help-and-man-demo",
-    "title": "arctraining slides",
-    "section": "--help and man demo",
-    "text": "--help and man demo\n\n\nDemo\n\npwd --help\nman pwd\nman bash\nman bash-builtins"
-  },
-  {
-    "objectID": "hpc0.html#help-and-man-exercise",
-    "href": "hpc0.html#help-and-man-exercise",
-    "title": "arctraining slides",
-    "section": "--help and man exercise",
-    "text": "--help and man exercise\n\nEnter:\n\nman man\n\nFor help using man: press the h-key &lt;h&gt;.\nTo quit the help about man or any man page: press &lt;q&gt;.\nTo page through a man page: press &lt;space_bar&gt;.\nEnter:\n\nman pwd\n\nEnter:\n\nman ls\n\n\nMaybe conduct a poll to find out who is ready to move on.\nIs it time for a break?"
+    "text": "pwd exercise\n\nType ‘pwd’ at the prompt by typing the letters, then press the &lt;return&gt; or &lt;enter&gt; key:\n\n[user@host ~]$ pwd\n/home/homeXX/user"
   },
   {
     "objectID": "hpc0.html#ls-14",
     "href": "hpc0.html#ls-14",
     "title": "arctraining slides",
     "section": "ls 1/4",
-    "text": "ls 1/4\n\nA command to list the contents of a directory\nThere are many options for ls:\n\nThe -a option will list all the contents of a directory\n\nFiles and directories starting with . are hidden by default\n\nThe -l option will list each item line by line with added details\nThe -H option will report sizes in a more human readable format\n\n\n\n\nls is pronounced el-ess."
+    "text": "ls 1/4\n\nA command to list the contents of a directory\nThere are many options for ls:\n\nThe -a option will list all the contents of a directory\n\nFiles and directories starting with . are hidden by default\n\nThe -l option will list each item line by line with added details\nThe -h option will report sizes in a more human readable format\n\n\n\n\nls is pronounced el-ess."
   },
   {
     "objectID": "hpc0.html#ls-24",
@@ -756,11 +728,25 @@
     "text": "ls exercise\n\nEnter:\n\nls /\n\nThe output should be a list of what is in the Root Directory.\nEnter:\n\nls ~\n\nThe output should be a list of everything that is in your Home Directory that is not hidden.\n\nFor new users, this is nothing - not even a README!\n\nEnter:\n\nls -al ~\n\nThe output lists everything in your Home Directory.\n\n\n\nMaybe poll progress."
   },
   {
+    "objectID": "hpc0.html#help-and-man",
+    "href": "hpc0.html#help-and-man",
+    "title": "arctraining slides",
+    "section": "--help and man",
+    "text": "--help and man\n\n--help is a command option that prints help about using the command\nman is a command to bring up the manual\nFor help using man: press the h-key `.\nTo quit the help about man, or man itself: press &lt;q&gt;\nUse &lt;space_bar&gt; to page through\n\n\n\n--help is pronounced minus-minus-help."
+  },
+  {
+    "objectID": "hpc0.html#help-and-man-exercise",
+    "href": "hpc0.html#help-and-man-exercise",
+    "title": "arctraining slides",
+    "section": "--help and man exercise",
+    "text": "--help and man exercise\n\nEnter:\n\nman man\n\nFor help using man: press the h-key &lt;h&gt;.\nTo quit the help about man or any man page: press &lt;q&gt;.\nTo page through a man page: press &lt;space_bar&gt;.\nEnter:\n\nls --help\n\nEnter:\n\nman ls\n\n\nMaybe conduct a poll to find out who is ready to move on.\nIs it time for a break?"
+  },
+  {
     "objectID": "hpc0.html#home-directory-hidden-files-and-folders",
     "href": "hpc0.html#home-directory-hidden-files-and-folders",
     "title": "arctraining slides",
     "section": "Home directory hidden files and folders",
-    "text": "Home directory hidden files and folders\n\n.bash_history\n\nA log of commands that you have entered\n\n.bash_profile\n\nFinalises your user login shell\n\n.bashrc\n\nFinalises your user subshell\n\n\n\n\nOther hidden files and folders get added as you use commands and applications.\n\nThese often contain configuration details.\n\nIt is important to know these exist so as not to accidentally delete them."
+    "text": "Home directory hidden files and folders\n\n.bash_profile\n\nFinalises your user login shell\n\n.bashrc\n\nFinalises your user subshell\n\n\n\n\nOther hidden files and folders get added as you use commands and applications.\n\nThese often contain configuration details.\n\nIt is important to know these exist so as not to accidentally delete them."
   },
   {
     "objectID": "hpc0.html#mkdir-12",
@@ -838,6 +824,13 @@
     "title": "arctraining slides",
     "section": "Time savers exercise",
     "text": "Time savers exercise\n\nUse &lt;up&gt; and &lt;down&gt; arrow keys to load previously entered commands into the prompt\nUse &lt;Ctrl&gt; + &lt;a&gt;, and &lt;Ctrl&gt; and &lt;e&gt; to move the cursor between the start and end of what is at the prompt\nUse &lt;Ctrl&gt; + &lt;c&gt; to cancel\nUse &lt;Ctrl&gt; + &lt;r&gt; to reverse search through the history of commands, and select one to edit or run\nUse copy and paste to paste a command at the prompt"
+  },
+  {
+    "objectID": "hpc0.html#history-command",
+    "href": "hpc0.html#history-command",
+    "title": "arctraining slides",
+    "section": "history command",
+    "text": "history command\n\nhistory\n\nAnother way to repeat previous work is to use the history command to get a list of commands that have been executed, and then to use ![number] to repeat one of those commands.\n\n.bash_history\n\nA log of commands that you have entered is saved in this hidden file in your home directory."
   },
   {
     "objectID": "hpc0.html#more-commands",
