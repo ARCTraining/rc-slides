@@ -263,7 +263,7 @@
     "href": "hpc1.html#serial-and-parallel-programs",
     "title": "arctraining slides",
     "section": "Serial and parallel programs",
-    "text": "Serial and parallel programs\n\nSerial programs run on a single CPU core, solving one problem at a time.\nParalel programs run across multiple CPU cores, splitting the workload between them and solving the problem faster."
+    "text": "Serial and parallel programs\n\nSerial programs run on a single CPU core, solving one problem at a time.\nParallel programs run across multiple CPU cores, splitting the workload between them and solving the problem faster."
   },
   {
     "objectID": "hpc1.html#serial-program",
