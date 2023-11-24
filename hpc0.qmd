@@ -283,95 +283,12 @@ directories
 :::
 
 
-## `pwd` demo
-
-::: {.notes}
-- Do a quick demo.
-- If using Teams, take care to share the right windows...
-:::
-
-
-## `pwd` exercise {.smaller}
+## `pwd` exercise
 - Type '`pwd`' at the prompt by typing the letters, then press the `<return>` or `<enter>` key:
 ```{.bash code-line-numbers=false}
 [user@host ~]$ pwd
 /home/homeXX/user
 ```
-- Print help about the `pwd` command:
-```{.bash code-line-numbers=false}
-pwd --help
-```
-- It should look like:
-```{.bash code-line-numbers=false}
-[user@host ~]$ pwd -- help
-pwd: pwd [-LP]
-    Print the name of the current working directory.
-    
-    Options:
-      -L	print the value of $PWD if it names the current working
-    		directory
-      -P	print the physical directory, without any symbolic links
-    
-    By default, `pwd' behaves as if `-L' were specified.
-    
-    Exit Status:
-    Returns 0 unless an invalid option is given or the current directory
-    cannot be read.
-```
-
-
-## `--help` and `man`
-- `--help` is a command option that prints help about using the command
-- `man` is a command to bring up the manual
-- For help using `man`: press the h-key `<h>.
-- To quit the help about `man`, or `man` itself: press `<q>`
-- Use `<space_bar>` to page through
-
-::: {.notes}
-- `--help` is pronounced `minus-minus-help`.
-:::
-
-
-## `--help` and `man` demo
-
-::: {.notes}
-- Demo
-```{.bash code-line-numbers=false}
-pwd --help
-```
-```{.bash code-line-numbers=false}
-man pwd
-```
-```{.bash code-line-numbers=false}
-man bash
-```
-```{.bash code-line-numbers=false}
-man bash-builtins
-```
-:::
-
-
-## `--help` and `man` exercise
-- Enter:
-```{.bash code-line-numbers=false}
-man man
-```
-- For help using `man`: press the h-key `<h>`.
-- To quit the help about `man` or any man page: press `<q>`.
-- To page through a man page: press `<space_bar>`.
-- Enter:
-```{.bash code-line-numbers=false}
-man pwd
-```
-- Enter:
-```{.bash code-line-numbers=false}
-man ls
-```
-
-::: {.notes}
-- Maybe conduct a poll to find out who is ready to move on.
-- Is it time for a break?
-:::
 
 
 ## `ls` 1/4
@@ -380,7 +297,7 @@ man ls
   - The `-a` option will list all the contents of a directory
     - Files and directories starting with `.` are hidden by default
   - The `-l` option will list each item line by line with added details
-  - The `-H` option will report sizes in a more human readable format
+  - The `-h` option will report sizes in a more human readable format
 
 ::: {.notes}
 - `ls` is pronounced `el-ess`.
@@ -457,9 +374,42 @@ ls -al ~
 :::
 
 
+## `--help` and `man`
+- `--help` is a command option that prints help about using the command
+- `man` is a command to bring up the manual
+- For help using `man`: press the h-key `<h>.
+- To quit the help about `man`, or `man` itself: press `<q>`
+- Use `<space_bar>` to page through
+
+::: {.notes}
+- `--help` is pronounced `minus-minus-help`.
+:::
+
+
+## `--help` and `man` exercise
+- Enter:
+```{.bash code-line-numbers=false}
+man man
+```
+- For help using `man`: press the h-key `<h>`.
+- To quit the help about `man` or any man page: press `<q>`.
+- To page through a man page: press `<space_bar>`.
+- Enter:
+```{.bash code-line-numbers=false}
+ls --help
+```
+- Enter:
+```{.bash code-line-numbers=false}
+man ls
+```
+
+::: {.notes}
+- Maybe conduct a poll to find out who is ready to move on.
+- Is it time for a break?
+:::
+
+
 ## Home directory hidden files and folders
-- `.bash_history`
-  - A log of commands that you have entered
 - `.bash_profile`
   - Finalises your user login shell
 - `.bashrc`
@@ -595,6 +545,15 @@ mkdir: cannot create directory ‘/test’: Permission denied
 - Use `<Ctrl> + <c>` to cancel
 - Use `<Ctrl> + <r>` to reverse search through the history of commands, and select one to edit or run
 - Use copy and paste to paste a command at the prompt
+
+
+## `history` command
+- `history`
+  - Another way to repeat previous work is to use the `history` command to get a list of commands that have been executed, and then to use `![number]` to repeat one of those commands.
+
+- `.bash_history`
+  - A log of commands that you have entered is saved in this hidden file in your home directory.
+
 
 
 ## More commands
@@ -1124,7 +1083,6 @@ ls a[12].txt
 - `[` is pronounced `start-square-bracket`
 - `]` is pronounced `end-square-bracket`
 :::
-
 
 
 ## Wildcards exercise
