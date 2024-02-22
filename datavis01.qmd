@@ -1,0 +1,82 @@
+---
+format: 
+  clean-revealjs:
+    self-contained: true
+    navigation-mode: linear
+    controls-layout: bottom-right
+    controls: false
+    footer: "[Research IT Website]({{< var rc.website >}}) | [Research IT Query]({{< var rc.servicedesk >}}) | [Courses Material]({{< var rc.material >}})"
+code: DataVis 101
+name: Introduction to Data Visualisation with Python
+---
+
+{{< include _title.qmd >}}
+{{< include _team.qmd >}}
+
+## Course objectives
+
+This course should help you to:
+
+- Become familiar with best practice with regards to scientific data visualisation
+- Build a toolkit of resources to help you create objective, informative plots
+- Use Python and Python libraries such as Matplotlib and Seaborn to create aesthetically pleasing graphics
+- Be aware of some common issues when it comes to data visualisation
+
+## Documentation
+
+- Course notes
+- These slides: https://arctraining.github.io/rc-slides/datavis
+- Hackpad
+
+##
+
+::: {.panel-tabset}
+
+### What is Python
+
+- A flexible, human-readable programming language with simple "syntax"
+- It is commonly used for:
+    - data analytics
+    - scientific programming 
+    - visualisation
+- It has a huge collection of specialised libraries to solve specific research problems
+- It is Open Source
+
+### What is Data Visualisation
+
+- A way of graphically representing data
+- Can include plots, graphs, charts, schematics, maps, infographics
+- Commonly found in research papers, publications, policy documents, on conference posters, in talks, on news reports...
+
+:::
+
+## Why do you want to learn data vis or Python?
+
+Add a line to the hackpad!
+
+- What's your name and role?
+- What department or research group are you in?
+- What are you hoping to learn?
+
+## Some examples
+
+![Calculate internal gravity and pressure in planetesimals](datavis-figs/PRAM.png)
+
+##
+
+![Estimate subsidence of volcanic edifices on planets](datavis-figs/volcanoes.png)
+
+##
+
+![Map faults on the surface of Mars](datavis-figs/Figure_1.png)
+
+##
+
+![Model the thermal evolution of meteorite parent bodies](datavis-figs/gr007.jpg)
+
+##
+
+![Plot and analyse x-ray element maps](datavis-figs/Slide84.jpg)
+
+# Data Visualisation: Theory
+
