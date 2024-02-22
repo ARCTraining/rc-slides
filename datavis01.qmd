@@ -80,3 +80,62 @@ Add a line to the hackpad!
 
 # Data Visualisation: Theory
 
+## Aims for this section
+
+By the end of this section, you should...
+
+- Be able to recognise possible issues with scientific figures and be able to critically evaluate data visualisations
+- Have a framework to build useful, objective figures to illustrate your results
+- Have resources to further investigate different aspects of scientific figure making
+
+SO
+ource material: _Ten Simple Rules for Better Figures_ by [Rougier, Droettboom and Bourne, 2014](https://doi.org/10.1371/journal.pcbi.1003833)
+
+## Rule 1: Know Your Audience
+
+Who will be reading it, in what context?
+
+:::: {.columns}
+
+::: {.column width="40%"}
+- You
+- Your supervisor(s)
+- General scientific or research audience
+- Experts in your field
+- Experts in a specific method you use
+- The general public
+- Policy makers
+- Undergraduate students
+:::
+
+::: {.column width="60%"}
+- Scientific journal
+- A general lecture on a research area
+- An outreach event
+- Updating funders
+- Funding application
+- Thesis examiners
+:::
+
+::::
+
+
+
+## Rule 2: Identify Your Message
+
+## Rule 3: Adapt the Figure to the Support Medium
+
+## Rule 4: Captions Are Not Optional
+
+## Rule 5: Do Not Trust the Defaults
+
+## Rule 6: Use Colour Effectively
+
+## Rule 7: Do Not Mislead the Reader
+
+## Rule 8: Avoid “Chartjunk”
+
+## Rule 9: Message Outshines Beauty
+
+## Rule 10: Get the Right Tool(s)
+
