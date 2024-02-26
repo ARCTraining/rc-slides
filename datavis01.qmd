@@ -5,6 +5,7 @@ format:
     navigation-mode: linear
     controls-layout: bottom-right
     controls: false
+    preview-links: auto
     footer: "[Research IT Website]({{< var rc.website >}}) | [Research IT Query]({{< var rc.servicedesk >}}) | [Courses Material]({{< var rc.material >}})"
 code: DataVis 101
 name: Introduction to Data Visualisation with Python
@@ -88,8 +89,7 @@ By the end of this section, you should...
 - Have a framework to build useful, objective figures to illustrate your results
 - Have resources to further investigate different aspects of scientific figure making
 
-SO
-ource material: _Ten Simple Rules for Better Figures_ by [Rougier, Droettboom and Bourne, 2014](https://doi.org/10.1371/journal.pcbi.1003833)
+Source material: _Ten Simple Rules for Better Figures_ by [Rougier, Droettboom and Bourne, 2014](https://doi.org/10.1371/journal.pcbi.1003833)
 
 ## Rule 1: Know Your Audience
 
@@ -119,23 +119,215 @@ Who will be reading it, in what context?
 
 ::::
 
+---
 
+- Understand the needs and knowledge level of your audience
+- Adjust the complexity of your visualisation to match
+- Make sure your visualisation is easily readable and understandable for your intended audience
+
+---
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![a. Using default settings, basic histogram](datavis-figs/hist_1.png)
+:::
+
+::: {.column width="50%"}
+![b. Customising the colour palette, using Seaborn library, multi-panelled figure](datavis-figs/hist_2.png)
+:::
+
+::::
+
+---
 
 ## Rule 2: Identify Your Message
 
+- The figure should express an idea quickly and succinctly
+- It's important to know exactly what the message of the figure is
+- Part of this is ensuring *you* know what the message is
+  - People can get stuck knowing they "need to make a figure for this chunk of results" but are not sure what they actually need to convey
+
+---
+
+![Trying to pick the right plot for your use-case](datavis-figs/chart-chart1.jpg)
+
+---
+
+![Seaborn categorises its functions for you](datavis-figs/function_overview_8_0.png)
+
+See ["Overview of seaborn plotting functions"](https://seaborn.pydata.org/tutorial/function_overview.html#overview-of-seaborn-plotting-functions) from the Seaborn docs
+---
+
+## Browsing documentation galleries can be a good idea...
+
+- [Matplotlib "Plot Types" gallery](https://matplotlib.org/stable/plot_types/index.html#plot-types){preview-link="true"}
+- [Matplotlib general gallery](https://matplotlib.org/stable/gallery/index.html){preview-link="true"}
+- [Seaborn example gallery](https://seaborn.pydata.org/examples/index.html){preview-link="true"}
+- [Pandas chart visualisation guide](https://pandas.pydata.org/docs/user_guide/visualization.html#chart-visualization){preview-link="true"}
+
+Also, check and see what other researchers in your field are using...
+---
+
 ## Rule 3: Adapt the Figure to the Support Medium
+
+- Understand what medium the figure will be displayed in
+- Adapt the figure appropriately
+- Related to **Rule 1: Know Your Audience** but more focus on physical medium:
+  - Projected on a screen?
+  - High resolution printed poster?
+  - Journal article read online and zoomable?
+  - Likely to be printed out in greyscale?
+
+---
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![a. Small font size and line thickness](datavis-figs/hist_3.png)
+:::
+
+::: {.column width="50%"}
+![b. Large font size, heavy line weight](datavis-figs/hist_4.png)
+:::
+
+::::
+
+---
+
+Technical considerations:
+
+- Font size
+- Vector graphics vs. raster image
+- Line weight
+- DPI or resolution
+- Colour profile: RGB or CMYK
+
+---
 
 ## Rule 4: Captions Are Not Optional
 
+- Captions provide additional context for the figure
+- They help the reader to interpret the figure correctly
+- They should be treated like axes labels, a legend... e.g. **essential!**
+
+---
+
+What might a caption look like...
+
+- In a published research article?
+- On a conference poster?
+- In a seminar or talk?
+- On an outreach leaflet?
+- In a policy document?
+
+---
+
 ## Rule 5: Do Not Trust the Defaults
+
+- Default settings in your chosen plotting software may not suit your needs entirely
+- Adjust settings as needed
+
+---
+
+::: {.panel-tabset}
+
+### Using default settings
+
+![a. Using default settings, basic histogram](datavis-figs/hist_1.png)
+
+### Some customisation
+
+![b. Customising the colour palette, using Seaborn library, multi-panelled figure](datavis-figs/hist_2.png){width=40%}
+
+:::
+
+---
+
+::: {.panel-tabset}
+
+### Using default settings
+
+![a. Using default settings, basic scatter plot](datavis-figs/scatter1.png)
+
+### Some customisation
+
+![b. Customising the colour palette and changing figure parameters](datavis-figs/scatter2.png)
+
+:::
+
+Of course, the solution might also be that a different plot shows your results more clearly... remember *Rule 2: Identify Your Message*!
+---
 
 ## Rule 6: Use Colour Effectively
 
+- Colour can be an important asset in your scientific visualisations
+- Must be used mindfully to avoid confusion
+
+According to Edward Tufte [1983](<https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003833#pcbi.1003833>), colour can be either your greatest ally or your worst enemy if not used properly [(Rougier et al., 2014)](<https://doi.org/10.1371/journal.pcbi.1003833>).
+
+---
+
+## Uses for Colour
+
+- Adding an additional dimension to your figures
+- Adding clarity to different marker or line styles
+- For emphasis
+- For heatmaps
+
+---
+
+
+
+---
+
+## Pitfalls of Colour-Use
+
+- Relying purely on colour to distinguish can cause issues with colour vision deficiencies, printing in greyscale, different screen settings
+- Colour maps may not accurately represent your data - non-perceptually uniform
+
+---
+
+## Best Practice
+
+It is a good practice to, where possible, avoid conveying information purely through color. You should always consider adding other ways to convey the same information besides just color.
+
+---
+
+## Further Reading
+
+- [Designing colour-blind-friendly visualizations](<https://www.tableau.com/en-gb/blog/examining-data-viz-rules-dont-use-red-green-together>)
+- [Coloring for Colorblindness](<https://davidmathlogic.com/colorblind/>)
+- [The misuse of colour in science communication](<https://www.nature.com/articles/s41467-020-19160-7>)
+- [Scientific colour maps user guide](<https://www.fabiocrameri.ch/ws/media-library/ce2eb6eee7c345f999e61c02e2733962/readme_scientificcolourmaps.pdf>)
+
+---
+
 ## Rule 7: Do Not Mislead the Reader
+
+- Figures should represent data as objectively as possible
+- Avoid creating misleading figures
+
+---
 
 ## Rule 8: Avoid “Chartjunk”
 
+- Chartjunk refers to all the unnecessary or confusing visual elements found in a figure
+- Avoid overloading a figure with too much detail
+
+---
+
 ## Rule 9: Message Outshines Beauty
 
+- The key requirement of a scientific graphic is to communicate scientific results
+- Aesthetics should not distract from the message
+
+---
+
 ## Rule 10: Get the Right Tool(s)
+
+- Use appropriate tools for data visualisation
+- Scripting languages like Python and R can be more efficient for producing multiple similar plots
+
+---
 
