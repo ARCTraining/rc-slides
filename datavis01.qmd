@@ -183,11 +183,11 @@ Also, check and see what other researchers in your field are using...
 
 :::: {.columns}
 
-::: {.column width="50%"}
+::: {.column width="45%"}
 ![a. Small font size and line thickness](datavis-figs/hist_3.png)
 :::
 
-::: {.column width="50%"}
+::: {.column width="45%"}
 ![b. Large font size, heavy line weight](datavis-figs/hist_4.png)
 :::
 
@@ -277,20 +277,82 @@ According to Edward Tufte [1983](<https://journals.plos.org/ploscompbiol/article
 
 ---
 
+![Estimate subsidence of volcanic edifices on planets - using both colour and symbol shape to differentiate.](datavis-figs/volcanoes.png)
 
+---
+
+
+![Topographical map of Mars; co-ordinates system not plotted to avoid discussion on Martian projection systems!](datavis-figs/mars1.png)
 
 ---
 
 ## Pitfalls of Colour-Use
 
 - Relying purely on colour to distinguish can cause issues with colour vision deficiencies, printing in greyscale, different screen settings
-- Colour maps may not accurately represent your data - non-perceptually uniform
+- Colour maps may not accurately represent your data - non-perceptually uniform maps
+  - [Matplotlib colour maps documentation](https://matplotlib.org/stable/users/explain/colors/colormaps.html){preview-link="true"}
+  -[Even more in depth colour maps, with Proplot](https://proplot.readthedocs.io/en/latest/colormaps.html){preview-link="true"}
+  - Colour can be used to accidentally infer order where there is none
+
+---
+
+![Rainbow colour maps such as "jet" have previously been popular despite their issues. "Plasma" is "perceptually uniform" but can obscure details in extreme values.](datavis-figs/mars2.png)
+
+---
+
+!["Terrain" has similar issues to "jet"...](datavis-figs/mars3.png)
+
+---
+
+![Cividis is both "perceptually uniform" and also appears the same to audiences with and without colour vision deficiencies, but has the same issues as "plasma" with obscuring features in plots with a wide dynamic range.](datavis-figs/mars4.png)
+
+---
+
+![Spring is a terrible colour map, even if it's pretty.](datavis-figs/mars5.png)
+
+---
+
+![It can be easier to see the issues in an image than in a map](datavis-figs/leia.png)
+
+---
+
+![Sometimes you do need a plot that will pick up these sorts of features in the dark and bright areas!](datavis-figs/mars7.png)
+
+---
+
+![Other packages such as "Cmocean" also provide well-designed scientific colour maps.](datavis-figs/mars8.png)
+
+---
+
+![Other packages such as "Cmocean" also provide well-designed scientific colour maps... and some strange ones](datavis-figs/mars9.png)
+
+---
+
+![Plot and analyse x-ray element maps](datavis-figs/Slide84.jpg)
+
+---
+
+How can colour infer order?
+
+::: {.panel-tabset}
+
+### First plot
+
+![](datavis-figs/scatter_a.png)
+
+### Second plot
+
+![](datavis-figs/scatter_b.png)
+
+:::
 
 ---
 
 ## Best Practice
 
-It is a good practice to, where possible, avoid conveying information purely through color. You should always consider adding other ways to convey the same information besides just color.
+- It is a good practice to, where possible, avoid conveying information purely through color. You should always consider adding other ways to convey the same information besides just color.
+
+- Ensure that colour does not infer order where there is none!
 
 ---
 
@@ -307,6 +369,14 @@ It is a good practice to, where possible, avoid conveying information purely thr
 
 - Figures should represent data as objectively as possible
 - Avoid creating misleading figures
+
+---
+
+![Bubble plot, where "z" value is shown by both colour map and size](datavis-figs/bubble.png)
+
+---
+
+![All of these represent the same data...](datavis-figs/sizes.png)
 
 ---
 
