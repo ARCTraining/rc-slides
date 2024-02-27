@@ -344,6 +344,31 @@ How can colour infer order?
 
 ![](datavis-figs/scatter_b.png)
 
+### Visual encoding
+
+Data can be encoded by other means aside from colour... which of these could be ordered or infer order?
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- Size
+- Shape
+- Grouping
+- Area
+- Position
+:::
+
+::: {.column width="50%"}
+- Saturation
+- Line pattern
+- Line weight
+- Angle
+- Connections
+:::
+
+::::
+
+
 :::
 
 ---
@@ -370,6 +395,37 @@ How can colour infer order?
 - Figures should represent data as objectively as possible
 - Avoid creating misleading figures
 
+This seems straightforward - *to make a good scientific visualisations, don't do academic fraud* - but actually, it's easier to accidentally misrepresent data than you might think.
+
+---
+
+Unintentional misleading of your audience often arises through not fully understanding how you have visually encoded your data.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- Size
+- Shape
+- Colour
+- Grouping
+- Area
+- Position
+:::
+
+::: {.column width="50%"}
+- Saturation
+- Line pattern
+- Line weight
+- Angle
+- Connections
+:::
+
+::::
+
+---
+
+![Stacked barplots; both panels show the same data](datavis-figs/barplot_comparison.png)
+
 ---
 
 ![Bubble plot, where "z" value is shown by both colour map and size](datavis-figs/bubble.png)
@@ -380,10 +436,39 @@ How can colour infer order?
 
 ---
 
+![Both represent the same data...](datavis-figs/dnd_corr1.png)
+
+---
+
+![Both represent the same data...](datavis-figs/dnd_corr2.png)
+
+---
+
+![Both represent the same data...](datavis-figs/dnd_corr3.png)
+
+---
+
 ## Rule 8: Avoid “Chartjunk”
 
 - Chartjunk refers to all the unnecessary or confusing visual elements found in a figure
 - Avoid overloading a figure with too much detail
+
+But do:
+
+- Add enough annotations that the reader understands the figure
+- Understand that this is subjective!
+
+If your figure is confusing, try fixing it **by removing something rather than adding extra labels**!
+
+---
+
+![Yikes.](datavis-figs/chartjunk.png)
+
+---
+
+- When should we use gridlines?
+- When are annotations helpful?
+- What about legends? Are they chart junk?
 
 ---
 
@@ -394,10 +479,73 @@ How can colour infer order?
 
 ---
 
+![Jet is rubish, and pretty ugly... but Spring is also a terrible colour map, even if it's pretty.](datavis-figs/mars5.png)
+
+---
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+![Murphy Quinlan et al. (2021)](datavis-figs/jgre21625-fig-0009-m.png)
+
+:::
+
+::: {.column width="40%"}
+
+
+- I really dislike the look and colour scheme of this, but I have to admit it does a better job of representing my data
+
+:::
+
+::::
+
+---
+
 ## Rule 10: Get the Right Tool(s)
 
 - Use appropriate tools for data visualisation
 - Scripting languages like Python and R can be more efficient for producing multiple similar plots
+- While it is absolutely ok to use a graphics package to add annotations etc. to your plots if you are more comfortable with this, remember to always think about how **reproducible** your workflow is
 
 ---
+
+Tools and libraries within Python; * denotes library used in this course
+
+::: {.panel-tabset}
+
+
+### Basic plots
+
+- [Matplotlib Library](https://matplotlib.org/stable/) *
+- [Seaborn Library](https://seaborn.pydata.org/index.html) *
+- If working with dataframes, the inbuilt plotting functions in [pandas](https://pandas.pydata.org/docs/user_guide/visualization.html) *
+- [Plotly](https://plotly.com/python/)
+
+
+### Statistical plots
+
+- [Seaborn](https://seaborn.pydata.org/index.html)*
+- [Vega-Altair](https://altair-viz.github.io/)
+
+
+### Geospatial
+
+- [Cartopy](https://scitools.org.uk/cartopy/docs/latest/)
+- [PyGMT](https://www.pygmt.org/latest/index.html)
+- [Geopandas](https://geopandas.org/en/stable/)
+
+### Custom
+
+- Usually [Matplotlib](https://matplotlib.org/stable/) is the best option if you want total control over every aspect of your plot, and want to build something that doesn't look like any examples from library galleries
+
+### Infographics
+
+- You can use Matplotlib or Seaborn to create some simple, schematic-type plots
+- This is one of the areas where a graphics program will probably outshine other tools!
+
+
+:::
+
+# Lets build some plots!
 
