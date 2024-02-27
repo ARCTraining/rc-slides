@@ -69,7 +69,15 @@ Add a line to the hackpad!
 
 ##
 
-![Map faults on the surface of Mars](datavis-figs/Figure_1.png)
+![Map faults on the surface of Mars](datavis-figs/Mars_faults_1.png)
+
+##
+
+![Map faults on the surface of Mars](datavis-figs/Mars_faults_2.png)
+
+##
+
+![Map faults on the surface of Mars](datavis-figs/Mars_stats1.png)
 
 ##
 
