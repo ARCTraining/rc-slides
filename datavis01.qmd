@@ -53,27 +53,13 @@ This course should help you to:
 
 ## Why do you want to learn data vis or Python?
 
-Add a line to the hackpad!
+Lets look at the survey results...
 
-- What's your name and role?
-- What department or research group are you in?
-- What are you hoping to learn?
-
-## Some examples
-
-![Calculate internal gravity and pressure in planetesimals](datavis-figs/PRAM.png)
 
 ##
-
-![Estimate subsidence of volcanic edifices on planets](datavis-figs/volcanoes.png)
-
-##
+Some examples...
 
 ![Map faults on the surface of Mars](datavis-figs/Mars_faults_1.png)
-
-##
-
-![Map faults on the surface of Mars](datavis-figs/Mars_faults_2.png)
 
 ##
 
@@ -123,26 +109,35 @@ Who will be reading it, in what context?
 - Updating funders
 - Funding application
 - Thesis examiners
+
+What different requirements might these audiences/contexts have?
 :::
 
 ::::
 
 ---
 
-- Understand the needs and knowledge level of your audience
+- Understand the *needs* and *knowledge level* of your audience
 - Adjust the complexity of your visualisation to match
-- Make sure your visualisation is easily readable and understandable for your intended audience
+
+Consider:
+
+- Figure type
+- Annotations, labels
+- Amount of data being shown
+- Terminology and jargon
+
 
 ---
 
 :::: {.columns}
 
 ::: {.column width="50%"}
-![a. Using default settings, basic histogram](datavis-figs/hist_1.png)
+![a. Using default settings, basic histogram](datavis-figs/hist_1.png){width=75%}
 :::
 
 ::: {.column width="50%"}
-![b. Customising the colour palette, using Seaborn library, multi-panelled figure](datavis-figs/hist_2.png)
+![b. Customising the colour palette, using Seaborn library, multi-panelled figure](datavis-figs/hist_2.png){width=75%}
 :::
 
 ::::
@@ -152,9 +147,10 @@ Who will be reading it, in what context?
 ## Rule 2: Identify Your Message
 
 - The figure should express an idea quickly and succinctly
-- It's important to know exactly what the message of the figure is
 - Part of this is ensuring *you* know what the message is
   - People can get stuck knowing they "need to make a figure for this chunk of results" but are not sure what they actually need to convey
+- Come up with a one-sentence statement that captures your results, before building the plot
+- Show your plots to your colleagues and see if they can deduce the key point
 
 ---
 
@@ -174,6 +170,8 @@ See ["Overview of seaborn plotting functions"](https://seaborn.pydata.org/tutori
 - [Seaborn example gallery](https://seaborn.pydata.org/examples/index.html){preview-link="true"}
 - [Pandas chart visualisation guide](https://pandas.pydata.org/docs/user_guide/visualization.html#chart-visualization){preview-link="true"}
 
+But be careful not to pick an obscure, strange plot just because it looks pretty!
+
 Also, check and see what other researchers in your field are using...
 ---
 
@@ -192,11 +190,11 @@ Also, check and see what other researchers in your field are using...
 :::: {.columns}
 
 ::: {.column width="45%"}
-![a. Small font size and line thickness](datavis-figs/hist_3.png)
+![a. Small font size and line thickness](datavis-figs/hist_3.png){width=75%}
 :::
 
 ::: {.column width="45%"}
-![b. Large font size, heavy line weight](datavis-figs/hist_4.png)
+![b. Large font size, heavy line weight](datavis-figs/hist_4.png){width=80%}
 :::
 
 ::::
@@ -234,7 +232,8 @@ What might a caption look like...
 ## Rule 5: Do Not Trust the Defaults
 
 - Default settings in your chosen plotting software may not suit your needs entirely
-- Adjust settings as needed
+    - Defaults may be outdated, not suited to your field of research, or not be accessible
+- Adjust settings as needed - but also recognise when this might be a time-sink!
 
 ---
 
@@ -246,7 +245,7 @@ What might a caption look like...
 
 ### Some customisation
 
-![b. Customising the colour palette, using Seaborn library, multi-panelled figure](datavis-figs/hist_2.png){width=40%}
+![b. Customising the colour palette, using Seaborn library, multi-panelled figure](datavis-figs/hist_2.png){width=30%}
 
 :::
 
@@ -278,37 +277,36 @@ According to Edward Tufte [1983](<https://journals.plos.org/ploscompbiol/article
 
 ## Uses for Colour
 
-- Adding an additional dimension to your figures
+- Adding an additional dimension to your figures (caution!)
 - Adding clarity to different marker or line styles
 - For emphasis
 - For heatmaps
 
 ---
 
-![Estimate subsidence of volcanic edifices on planets - using both colour and symbol shape to differentiate.](datavis-figs/volcanoes.png)
+Low resolution image not intended to be scaled up... 
+
+![Estimate subsidence of volcanic edifices on planets - using both colour and symbol shape to differentiate.](datavis-figs/volcanoes.png){width=40%}
 
 ---
 
 
-![Topographical map of Mars; co-ordinates system not plotted to avoid discussion on Martian projection systems!](datavis-figs/mars1.png)
+![Topographical map of Mars; co-ordinates system not plotted to avoid discussion on Martian projection systems!](datavis-figs/mars1.png){width=40%}
 
 ---
 
 ## Pitfalls of Colour-Use
 
 - Relying purely on colour to distinguish can cause issues with colour vision deficiencies, printing in greyscale, different screen settings
+    - Check if this will be an issue using an online tool such as [Viz Palette](https://projects.susielu.com/viz-palette){preview-link="true"}
 - Colour maps may not accurately represent your data - non-perceptually uniform maps
   - [Matplotlib colour maps documentation](https://matplotlib.org/stable/users/explain/colors/colormaps.html){preview-link="true"}
-  -[Even more in depth colour maps, with Proplot](https://proplot.readthedocs.io/en/latest/colormaps.html){preview-link="true"}
+  - [Even more in depth colour maps, with Proplot](https://proplot.readthedocs.io/en/latest/colormaps.html){preview-link="true"}
   - Colour can be used to accidentally infer order where there is none
 
 ---
 
 ![Rainbow colour maps such as "jet" have previously been popular despite their issues. "Plasma" is "perceptually uniform" but can obscure details in extreme values.](datavis-figs/mars2.png)
-
----
-
-!["Terrain" has similar issues to "jet"...](datavis-figs/mars3.png)
 
 ---
 
@@ -320,11 +318,13 @@ According to Edward Tufte [1983](<https://journals.plos.org/ploscompbiol/article
 
 ---
 
-![It can be easier to see the issues in an image than in a map](datavis-figs/leia.png)
+![Sometimes you do need a plot that will pick up these sorts of features in the dark and bright areas!](datavis-figs/mars7.png)
 
 ---
 
-![Sometimes you do need a plot that will pick up these sorts of features in the dark and bright areas!](datavis-figs/mars7.png)
+![It can be easier to see the issues in an image than in a map](datavis-figs/leia.png)
+
+
 
 ---
 
@@ -385,7 +385,11 @@ Data can be encoded by other means aside from colour... which of these could be 
 
 - It is a good practice to, where possible, avoid conveying information purely through color. You should always consider adding other ways to convey the same information besides just color.
 
+- Check that your colour choices will be easily distinguishable from one another
+
 - Ensure that colour does not infer order where there is none!
+
+- Use perceptually uniform colour maps whenever possible
 
 ---
 
@@ -403,7 +407,11 @@ Data can be encoded by other means aside from colour... which of these could be 
 - Figures should represent data as objectively as possible
 - Avoid creating misleading figures
 
-This seems straightforward - *to make a good scientific visualisations, don't do academic fraud* - but actually, it's easier to accidentally misrepresent data than you might think.
+This seems straightforward:
+
+>*to make a good scientific visualisations, don't do academic fraud* 
+
+but actually, it's easier to accidentally misrepresent data than you might think.
 
 ---
 
@@ -557,3 +565,6 @@ Tools and libraries within Python; * denotes library used in this course
 
 # Lets build some plots!
 
+- Using Google Colab
+- Follow along coding session
+- Our Colab notebooks will be shared with you
