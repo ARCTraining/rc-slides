@@ -1311,7 +1311,7 @@ display:block!important;
 <ul>
 <li><p><strong>Node</strong>: the physical machine/server. In current systems, a node would typically include one or more processors, as well as memory and other hardware.</p></li>
 <li><p><strong>Processor</strong>: the central processing unit (CPU) inside the node, which contains one or more cores.</p></li>
-<li><p><strong>Core</strong>: Refers to the basic computation unit of the CPU. This is unit that carries out the actual computations.</p></li>
+<li><p><strong>Core</strong>: Refers to the basic computation unit of the CPU. This is the unit that carries out the actual computations.</p></li>
 </ul>
 </section>
 <section id="leeds-facilities" class="slide level2">
@@ -1424,11 +1424,11 @@ display:block!important;
 </section>
 <section id="exercise-1.4" class="slide level2">
 <h2>Exercise 1.4</h2>
-<p>How could you read a PDF file or a HTML document on the cluster?</p>
+<p>How could you read a PDF file or an HTML document on the cluster?</p>
 </section>
 <section id="hpc-at-leeds" class="slide level2">
 <h2>HPC at Leeds</h2>
-<p>ARC4 is latest incarnation of central HPC at Leeds.</p>
+<p>ARC4 is the latest incarnation of central HPC at Leeds.</p>
 <p>HPC currently comprised of two facilities called ARC3 and ARC4</p>
 <p>All Faculties are shareholders and so it is important that all who can benefit from the use of this facility do so.</p>
 </section>
@@ -1436,7 +1436,7 @@ display:block!important;
 <h2>ARC3</h2>
 <p>2 x login nodes: 24 cores and 128GB RAM</p>
 <p>252 x standard compute nodes: 24 cores and 128GB RAM (=6048 cores); 100GB SSD</p>
-<p>4 x High Memory (24 core and 768GB nodes)</p>
+<p>4 x High Memory (24 cores and 768GB nodes)</p>
 <p>6 x P100 GPU nodes (24 core, 128GB and 4 x NVidia P100)</p>
 <p>2 x K80 GPU nodes (24 core, 128GB and 2 x NVidia K80)</p>
 <p>2 x Intel Xeon Phi (Knights Landing) vector processor nodes</p>
@@ -1445,8 +1445,8 @@ display:block!important;
 <section id="arc4" class="slide level2 smaller">
 <h2>ARC4</h2>
 <p>2 x login nodes: 40 cores and 192GB RAM</p>
-<p>149 x standard compute nodes: 40 cores and 192GB RAM (=6048 cores); 100GB SSD</p>
-<p>4 x High Memory (40 core and 768GB nodes)</p>
+<p>149 x standard compute nodes: 40 cores and 192GB RAM (=5960 cores); 100GB SSD</p>
+<p>4 x High Memory (40 cores and 768GB nodes)</p>
 <p>3 x V100 GPU nodes (40 core, 192GB and 4 x NVidia V100)</p>
 <p>1.2PB of high speed storage: /nobackup</p>
 </section>
@@ -1520,11 +1520,11 @@ display:block!important;
 <section id="nobackup" class="slide level2">
 <h2>/nobackup</h2>
 <ul>
-<li>Each HPC cluster has it’s own high speed storage service called /nobackup</li>
+<li>Each HPC cluster has its own high speed storage service called /nobackup</li>
 <li>You need to make your own directory (using <code>mkdir</code>)</li>
 <li>Nothing is backed up</li>
 <li>Files will expire after 90 days not being used</li>
-<li>Need to set permissions to make files private ARC3 but not on ARC4.</li>
+<li>Need to set permissions to make files private on ARC3 but not on ARC4.</li>
 </ul>
 </section>
 <section id="local-storage" class="slide level2">
@@ -1597,7 +1597,7 @@ display:block!important;
 <div class="sourceCode" id="cb4" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -l coproc_p100=1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>or</p>
 <div class="sourceCode" id="cb5" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -l coproc_k80=1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Should not ask for memory or cpu cores</p>
+<p>Should not ask for memory or CPU cores</p>
 <p><a href="https://arcdocs.leeds.ac.uk/usage/gpgpu.html">More on GPGPU</a></p>
 </section>
 <section id="large-memory-nodes" class="slide level2">

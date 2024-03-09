@@ -1,367 +1,143 @@
 [
   {
-    "objectID": "hpc1.html#meta-code",
-    "href": "hpc1.html#meta-code",
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "arctraining slides",
-    "section": "HPC 1",
-    "text": "HPC 1\nIntroduction to High Performance Computing"
+    "section": "",
+    "text": "Public facing homepage for arctraining Quarto slides collection."
   },
   {
-    "objectID": "hpc1.html#research-computing-team-and-service",
-    "href": "hpc1.html#research-computing-team-and-service",
+    "objectID": "index.html#slides",
+    "href": "index.html#slides",
+    "title": "arctraining slides",
+    "section": "Slides:",
+    "text": "Slides:\nNote: this page is under construction. As soon as the slides are available, the link will be provided.\n\nHPC0: Introduction to Linux for HPC\nHPC1: Introduction to High Performance Computing\nHPC2: Applications and containers on HPC\nHPC3: Computer architectures and shared memory parallel programming\nHPC5: Introduction to GPU programming with CUDA\nHPC6: HPC for Life Sciences and Bioinformatics\nSWD1a: Introduction to Python programming\nSWD1b: Introduction to R programming\nSWD2: Version Control with Git and GitHub\nSWD3: Software development practices for Research\nSWD4: Cloud computing for Research\nSWD5: Scientific Python\nSWD6: High performance Python\nSWD7: Introduction to reproducible workflows in Python"
+  },
+  {
+    "objectID": "swd3/sdlc.html#sdlc",
+    "href": "swd3/sdlc.html#sdlc",
+    "title": "arctraining slides",
+    "section": "SDLC",
+    "text": "SDLC\n\nIdeationRequirementsDesignDevelopmentTestDeploymentMaintenance\n\n\n\n\n\nWhat are we going to do?\n\n\nBrainstorming\nResearch\n\n\n\n\n\n\n\n\n\n\nHow are we going to do it?\n\nSome topics to help define requirements include:\n\nfinal goal\nproject scope (how to reach the final goal)\nwhat is feasible (and how)\nwhat is priority\nwhat resources are available\ndeadlines\npotential risks\n\n\nWarning: Each person involved in the project may have a different need.\n\n\n\n\n\n\n\n\n\n\nWhat is the software architecture?\n\nWhen designing software, the object-oriented approach is a common programming paradigm.\nObject-oriented components:\n\nClasses: A user-defined type\nObject instances: A particular object instantiated from a class.\nMethods: A function which is “built in” to a class\nConstructor: A special method called when instantiating a new object\n\nSome principles: abstraction, encapsulation, decomposition, generalisation\n\n\nSee more: \n\n\n\n\n\n\n\nIs this where the fun begins?\n\n\nTake your time\n\n\n\n\n\nDevelopment is usually the most time consuming step in a Software Development Life Cycle.\n\n\n\n\n\nIs this software good?\n\nIn this step, errors and failures are identified by exposing the code to an environment similar to the end-user experience.\nThere are several types of testing, some examples include:\n\nUnit testing: are all components working?\nIntegration testing: are all components working when fitted together?\nPerformance testing: how does the software perform against different workloads? It is fast? Stable?\nFunctional testing: is the software aligned with Software Requirement Specification?\n\n\n\n\n\n\n\n\n\n\nCan other people use my code?\n\nYou can use platforms like GitHub to release your software.\n\nThe functionality of the software is linked to several specifications related to the operating system and versions of packages and other software related to the project.\nListing these specifications will help others to replicate the environment in which the software was developed.\n\n\n\n\n\n\n\n\n\n\nIs it over?\n\nWe can classify maintenance into a few categories:\n\nCorrective: fix reported errors/failures.\nPreventive: regular checks and fixes.\nPerfective: optimize implemented features, adding new features.\nAdaptive: keep the software updated according to changes external to the project (new programming language version, new regulation, etc.)."
+  },
+  {
+    "objectID": "swd3/project.html",
+    "href": "swd3/project.html",
+    "title": "arctraining slides",
+    "section": "",
+    "text": "Calculating the hypotenuse\n\\[ c = \\sqrt{a^2 + b^2} \\]\nGeneral Design\n\n1 squared function\n1 sum function\n1 square root function\n1 hypotenuse function that uses the other functions"
+  },
+  {
+    "objectID": "swd3/project.html#bringing-it-all-together",
+    "href": "swd3/project.html#bringing-it-all-together",
+    "title": "arctraining slides",
+    "section": "",
+    "text": "Calculating the hypotenuse\n\\[ c = \\sqrt{a^2 + b^2} \\]\nGeneral Design\n\n1 squared function\n1 sum function\n1 square root function\n1 hypotenuse function that uses the other functions"
+  },
+  {
+    "objectID": "swd3/project.html#workflow",
+    "href": "swd3/project.html#workflow",
+    "title": "arctraining slides",
+    "section": "Workflow",
+    "text": "Workflow\n\nInstall Git, Anaconda, VScode\nCreate a GitHub repository + Licence + .gitignore + Readme\nSetup GH Action for testing (Python Application)\nClone GH repository in local machine\nCreate project structure (source and test folders)\nSetup tests (start with test_)\nDevelop code\nAdd docstring (you can use autoDocstring - Python Docstring Generator on VS Code)\nLint code and tests\nPush to github\nEXTRA: Create Sphinx documentation\nEXTRA: Setup file and local install\nEXTRA: GH Release"
+  },
+  {
+    "objectID": "swd3/project.html#extra-sphinx-documentation",
+    "href": "swd3/project.html#extra-sphinx-documentation",
+    "title": "arctraining slides",
+    "section": "Extra: Sphinx documentation",
+    "text": "Extra: Sphinx documentation\n\nCreate docstring for every function\nInstall sphinx\nStart the basic structure using: $ sphinx-quickstart docs\nUse the apidoc to get docstrings: $ sphinx-apidoc -o docs .\nEdit files:\n\n\nconf.pyindex.rstdependencies.rstusage.rstfunctions.rst\n\n\n\nadd extentions: 'sphinx.ext.todo', 'sphinx.ext.viewcode', 'sphinx.ext.autodoc'.\nchange theme: sphinx_rtd_theme\nadd the src (change the folder name as necessary!) folder as path:\n\n import os\n import sys\n sys.path.insert(0, os.path.abspath('../src'))\n\n\nAdd extra files after Contents\n.. toctree::\n   :maxdepth: 2\n   :caption: Contents:\n\n   dependencies\n   usage\n   functions\n\n\nList all your dependencies:\nDependencies\n============\n\n- python\n- pytest\n- flake8\n- black\n- sphinx\n\n\nExplain how to use your software\nUsage Guide\n============\n\nTo start working with this repository you need to clone it onto your local\nmachine: ::\n\n    $ git clone https://github.com/...\n\n\nNext ...\n\n\nCreate a function file with the following:\nAPI reference\n=============\n\n.. automodule:: calc\n   :members:\n   :undoc-members:\n   :show-inheritance:"
+  },
+  {
+    "objectID": "swd3/project.html#extra-documentation-action",
+    "href": "swd3/project.html#extra-documentation-action",
+    "title": "arctraining slides",
+    "section": "Extra: documentation Action",
+    "text": "Extra: documentation Action\nCreate a new GH action to create a nice website for your documentation.\n\nThe action is available here\nYou may need update GH Actions permissions to allow write\nAfter a successful documentation action, you need to select gh-pages branch to activate your website"
+  },
+  {
+    "objectID": "swd3/project.html#extra-setup-file",
+    "href": "swd3/project.html#extra-setup-file",
+    "title": "arctraining slides",
+    "section": "Extra: Setup file",
+    "text": "Extra: Setup file\nCreate a setup.py file like:\nimport setuptools\n\nwith open(\"README.md\", \"r\") as fh:\n    long_description = fh.read()\n\nsetuptools.setup(\n    name=\"hypot\",\n    version=\"0.1.0\",\n    author=\"Patricia Ternes\",\n    author_email=\"p.ternesdallagnollo@leeds.ac.uk\",\n    description=\"The hypot SWD3 demo package\",\n    packages=setuptools.find_packages(),\n    classifiers=[\n        \"Programming Language :: Python :: 3.9\",\n        \"Intended Audience :: Science/Research/Learning\",\n    ],\n    python_requires=\"&gt;=3.9\",\n)"
+  },
+  {
+    "objectID": "swd3/project.html#local-installation",
+    "href": "swd3/project.html#local-installation",
+    "title": "arctraining slides",
+    "section": "Local Installation",
+    "text": "Local Installation\nInstall: install the hypot package into the environment using:\n$ python setup.py install\nUsage: if you want to create a personalised script, you can import the hypot modules as follows:\nfrom hypot.calc import squared, addition, sqroot\nRemove: If you want to remove your package, use pip:\n$ pip uninstall hypot"
+  },
+  {
+    "objectID": "swd3/project.html#release",
+    "href": "swd3/project.html#release",
+    "title": "arctraining slides",
+    "section": "Release",
+    "text": "Release\nRelease in GitHub are based in tags with the following structure:\nv0.5.2\n\n\n\nChange\nRelease\nExample\n\n\n\n\nMajor\nBreaking\n0\n\n\nMinor\nFeature\n5\n\n\nPatch\nFix\n2"
+  },
+  {
+    "objectID": "donut.html#presentation-set-up-guide",
+    "href": "donut.html#presentation-set-up-guide",
+    "title": "arctraining slides",
+    "section": "Presentation set up guide",
+    "text": "Presentation set up guide\n\nShare the Web browser window containing the slides (‘Slide View’).\nActivate ‘Speaker View’:\n\nFrom the slide-menu-button (bars in the lower left), select:\n\nTools (at the top) &gt;&gt; Speaker View (from the list).\n\n\nA new Web browser window should open showing the ‘Speaker View’.\n\nLocate this and read the Notes Pane (lower right).\n\n\n\n\nThe default Speaker View layout has three panes:\n\nSlide Pane (left) shows the current slide.\nNotes Pane (lower right) are these notes.\nUpcoming Pane (upper right).\n\nThis should show the next slide.\nLayout: Default can be actioned to change the Layout.\n\n\nThe current slide in Slide View and in the Speaker View Slide Pane should synchronise:\n\nSo changing slide in one should do the same in the other.\n\nMove on to the next slide - the Title Slide:\n\nUse the down or right keyboard cursor keys or activate the controls-arrow that looks like &gt; in the lower right &gt;- If you have activated the Upcoming Pane the keyboard cursor keys will change what is in there.\nTo move on in the presentation, activate (click back into) the main Slide Pane."
+  },
+  {
+    "objectID": "donut.html#meta-code",
+    "href": "donut.html#meta-code",
+    "title": "arctraining slides",
+    "section": "Donut",
+    "text": "Donut\nA Guide to delivering Presentations Using Quarto"
+  },
+  {
+    "objectID": "donut.html#research-computing-team-and-service",
+    "href": "donut.html#research-computing-team-and-service",
     "title": "arctraining slides",
     "section": "Research Computing Team and Service",
     "text": "Research Computing Team and Service\n\n\nHere to support research(ers)\n\nProvide training\nSupport users of Grid and Cloud Computing platforms\nProvide consultancy\n\nTo develop project proposals\nTo help recruit people with specialist skills\nWorking directly on research projects\n\n\nFor details please see our Website\nContact us via the IT Service Desk\n\n\n\nIf you follow a link then a new tab will open in the Slide View Web browser.\n\nThis will want closing or the Slide View activating again as he main tab in the browser.\n\nMaybe point out some sections/features on the Research Computing Website.\nWe support use and develop resources."
   },
   {
-    "objectID": "hpc1.html#purpose-of-hpc1",
-    "href": "hpc1.html#purpose-of-hpc1",
+    "objectID": "donut.html#polls-and-forms",
+    "href": "donut.html#polls-and-forms",
     "title": "arctraining slides",
-    "section": "Purpose of HPC1",
-    "text": "Purpose of HPC1\n\nIntroducing Research Computing and the HPCs at Leeds\nHands on with Linux and ARC4\nRunning code\nBatch and Interactive jobs\nData management\nJoys of parallel jobs\nAdvanced job submissions"
+    "section": "Polls and Forms",
+    "text": "Polls and Forms\n\nPolls are best prepared in advance.\n\nThere are two main types of Poll:\n\n“Emoji Polls”\n“Forms Polls”"
   },
   {
-    "objectID": "hpc1.html#useful-links",
-    "href": "hpc1.html#useful-links",
+    "objectID": "donut.html#emoji-polls",
+    "href": "donut.html#emoji-polls",
     "title": "arctraining slides",
-    "section": "Useful Links",
-    "text": "Useful Links\n\nARC Website: https://arc.leeds.ac.uk/\nARC Documentation https://arcdocs.leeds.ac.uk\nGeneral queries: https://bit.ly/arc-help"
+    "section": "Emoji Polls",
+    "text": "Emoji Polls\n\nConducted from within Teams chat\nCopy the following and then press the space bar after each end parenthesis ) to turn the text into an emoji:\nDo you like emoji polls?\n(thumbsup) yes\n(heart) no\nThe thumbsup and heart emojis are the first two emojis that are in the reaction list of users by default."
   },
   {
-    "objectID": "hpc1.html#training",
-    "href": "hpc1.html#training",
+    "objectID": "donut.html#forms-polls",
+    "href": "donut.html#forms-polls",
     "title": "arctraining slides",
-    "section": "Training",
-    "text": "Training"
+    "section": "Forms Polls",
+    "text": "Forms Polls\n\nA Forms poll can be added ad hoc in a Teams chat:\n\nSelect the three dots ... below the message box and then search for or add Forms.\nOr add using the + option at the top of the chat.\n\nHowever, this use of Forms is being phased out in preference for a Polls App.\nThe Polls App however, is not available in the University of Leeds Office 365 offerring currently to test and the version that can be used in the chat does not seem to have an easy way to collect the results!\nIt might be best to prepare some Forms forms in advance using the Forms in Office 365 (https://www.microsoft365.com/launch/forms).\n\nSharing these simply involves copying the URL and pasting it into the chat.\n\nFor example: https://forms.office.com/pages/designpagev2.aspx?lang=en-GB&origin=OfficeDotCom&route=Start&subpage=design&id=qO3qvR3IzkWGPlIypTW3yy7GBfs2qsFOjWB83KLaHnVUNzFZS1VCTENOVEJUMDdKVEEyNURDRlY2USQlQCN0PWcu"
   },
   {
-    "objectID": "hpc1.html#archpc-training-portfolio",
-    "href": "hpc1.html#archpc-training-portfolio",
+    "objectID": "donut.html#hackpads-or-forms",
+    "href": "donut.html#hackpads-or-forms",
     "title": "arctraining slides",
-    "section": "ARC/HPC Training Portfolio",
-    "text": "ARC/HPC Training Portfolio\nhttps://arc.leeds.ac.uk/training"
+    "section": "Hackpads or Forms",
+    "text": "Hackpads or Forms\n\nThese can be used for participants to introduce themselves to us.\nParticipants should have all the links already in an email."
   },
   {
-    "objectID": "hpc1.html#introductions-and-motivations",
-    "href": "hpc1.html#introductions-and-motivations",
+    "objectID": "donut.html#feedback-and-questions",
+    "href": "donut.html#feedback-and-questions",
     "title": "arctraining slides",
-    "section": "Introductions and Motivations",
-    "text": "Introductions and Motivations\n\nWho are you and why are you here?\nWhat problems are you encountering with your computational work now? \nWhy / how do you think HPC will help?"
+    "section": "Feedback and questions",
+    "text": "Feedback and questions\n\nPlease encourage interruptions especially for participants having difficulty hearing or following the presentation…\nPeriodically pause and ask if participants have any questions or want anything repeated…"
   },
   {
-    "objectID": "hpc1.html#key-concepts",
-    "href": "hpc1.html#key-concepts",
+    "objectID": "donut.html#getting-feedback",
+    "href": "donut.html#getting-feedback",
     "title": "arctraining slides",
-    "section": "Key Concepts",
-    "text": "Key Concepts\n\nHigh Performance Computing (HPC)\nHigh Throughput Computing (HTC)\n“Supercomputing”"
-  },
-  {
-    "objectID": "hpc1.html#applications",
-    "href": "hpc1.html#applications",
-    "title": "arctraining slides",
-    "section": "Applications",
-    "text": "Applications"
-  },
-  {
-    "objectID": "hpc1.html#terminology",
-    "href": "hpc1.html#terminology",
-    "title": "arctraining slides",
-    "section": "Terminology",
-    "text": "Terminology\n\nNode: the physical machine/server. In current systems, a node would typically include one or more processors, as well as memory and other hardware.\nProcessor: the central processing unit (CPU) inside the node, which contains one or more cores.\nCore: Refers to the basic computation unit of the CPU. This is unit that carries out the actual computations."
-  },
-  {
-    "objectID": "hpc1.html#leeds-facilities",
-    "href": "hpc1.html#leeds-facilities",
-    "title": "arctraining slides",
-    "section": "Leeds facilities",
-    "text": "Leeds facilities\n\nARC3 brought into service in 2017\nARC4 brought into service in 2019"
-  },
-  {
-    "objectID": "hpc1.html#a-supercomputer-isnt",
-    "href": "hpc1.html#a-supercomputer-isnt",
-    "title": "arctraining slides",
-    "section": "A Supercomputer isn’t…",
-    "text": "A Supercomputer isn’t…"
-  },
-  {
-    "objectID": "hpc1.html#single-computer-vs-grid-of-computers",
-    "href": "hpc1.html#single-computer-vs-grid-of-computers",
-    "title": "arctraining slides",
-    "section": "Single computer vs grid of computers",
-    "text": "Single computer vs grid of computers"
-  },
-  {
-    "objectID": "hpc1.html#serial-and-parallel-programs",
-    "href": "hpc1.html#serial-and-parallel-programs",
-    "title": "arctraining slides",
-    "section": "Serial and parallel programs",
-    "text": "Serial and parallel programs\n\nSerial programs run on a single CPU core, solving one problem at a time.\nParallel programs run across multiple CPU cores, splitting the workload between them and solving the problem faster."
-  },
-  {
-    "objectID": "hpc1.html#serial-program",
-    "href": "hpc1.html#serial-program",
-    "title": "arctraining slides",
-    "section": "Serial Program",
-    "text": "Serial Program"
-  },
-  {
-    "objectID": "hpc1.html#parallel-program",
-    "href": "hpc1.html#parallel-program",
-    "title": "arctraining slides",
-    "section": "Parallel Program",
-    "text": "Parallel Program"
-  },
-  {
-    "objectID": "hpc1.html#amdahls-law",
-    "href": "hpc1.html#amdahls-law",
-    "title": "arctraining slides",
-    "section": "Amdahl’s Law",
-    "text": "Amdahl’s Law\n\n\n\nDaniels220 at English Wikipedia, CC BY-SA 3.0 https://creativecommons.org/licenses/by-sa/3.0, via Wikimedia Commons"
-  },
-  {
-    "objectID": "hpc1.html#basic-parallel-machine",
-    "href": "hpc1.html#basic-parallel-machine",
-    "title": "arctraining slides",
-    "section": "Basic parallel machine",
-    "text": "Basic parallel machine"
-  },
-  {
-    "objectID": "hpc1.html#differences-from-desktop-computing",
-    "href": "hpc1.html#differences-from-desktop-computing",
-    "title": "arctraining slides",
-    "section": "Differences from Desktop computing?",
-    "text": "Differences from Desktop computing?\n\nWe don’t log on to compute nodes directly\n\nsubmit jobs via a batch scheduling system\n\nNot a GUI-based environment\nSystem is shared with many other users\nResources more tightly monitored and controlled\n\nMemory\nCPU usage (‘cores’)\nTime"
-  },
-  {
-    "objectID": "hpc1.html#benefits-of-using-hpc",
-    "href": "hpc1.html#benefits-of-using-hpc",
-    "title": "arctraining slides",
-    "section": "Benefits of using HPC",
-    "text": "Benefits of using HPC\n\nSpeed\nVolume\nCost\nEfficiency\nConvenience"
-  },
-  {
-    "objectID": "hpc1.html#parallel-paradigms",
-    "href": "hpc1.html#parallel-paradigms",
-    "title": "arctraining slides",
-    "section": "Parallel Paradigms",
-    "text": "Parallel Paradigms\nFrom a systems perspective:\n\nShared memory parallelism\nDistributed memory parallelism\n\nUnless you are writing your own codes, the software developer takes care of this."
-  },
-  {
-    "objectID": "hpc1.html#basic-hpc-system-layout",
-    "href": "hpc1.html#basic-hpc-system-layout",
-    "title": "arctraining slides",
-    "section": "Basic HPC system layout",
-    "text": "Basic HPC system layout"
-  },
-  {
-    "objectID": "hpc1.html#exercise-1.1",
-    "href": "hpc1.html#exercise-1.1",
-    "title": "arctraining slides",
-    "section": "Exercise 1.1",
-    "text": "Exercise 1.1\nWhat do the following Linux commands do? How might they be used on the HPC service?\n\nls\npwd\nmkdir\ncp\nwget\nrm"
-  },
-  {
-    "objectID": "hpc1.html#exercise-1.2",
-    "href": "hpc1.html#exercise-1.2",
-    "title": "arctraining slides",
-    "section": "Exercise 1.2",
-    "text": "Exercise 1.2\nOn the HPC service, you have a ‘HOME’ directory of 10GB and can create a directory on the /nobackup drive.\nUsing the man pages (or Google…) investigate how you could use the following commands to manage your storage:\n\nquota\ndf\ndu"
-  },
-  {
-    "objectID": "hpc1.html#exercise-1.3",
-    "href": "hpc1.html#exercise-1.3",
-    "title": "arctraining slides",
-    "section": "Exercise 1.3",
-    "text": "Exercise 1.3\nLinux systems include a number of file compression routines.\nFind out which ones are available on the cluster and use them to create a compressed archive of a directory and its contents."
-  },
-  {
-    "objectID": "hpc1.html#exercise-1.4",
-    "href": "hpc1.html#exercise-1.4",
-    "title": "arctraining slides",
-    "section": "Exercise 1.4",
-    "text": "Exercise 1.4\nHow could you read a PDF file or a HTML document on the cluster?"
-  },
-  {
-    "objectID": "hpc1.html#hpc-at-leeds",
-    "href": "hpc1.html#hpc-at-leeds",
-    "title": "arctraining slides",
-    "section": "HPC at Leeds",
-    "text": "HPC at Leeds\nARC4 is latest incarnation of central HPC at Leeds.\nHPC currently comprised of two facilities called ARC3 and ARC4\nAll Faculties are shareholders and so it is important that all who can benefit from the use of this facility do so."
-  },
-  {
-    "objectID": "hpc1.html#arc3",
-    "href": "hpc1.html#arc3",
-    "title": "arctraining slides",
-    "section": "ARC3",
-    "text": "ARC3\n2 x login nodes: 24 cores and 128GB RAM\n252 x standard compute nodes: 24 cores and 128GB RAM (=6048 cores); 100GB SSD\n4 x High Memory (24 core and 768GB nodes)\n6 x P100 GPU nodes (24 core, 128GB and 4 x NVidia P100)\n2 x K80 GPU nodes (24 core, 128GB and 2 x NVidia K80)\n2 x Intel Xeon Phi (Knights Landing) vector processor nodes\n836TB of high speed storage: /nobackup"
-  },
-  {
-    "objectID": "hpc1.html#arc4",
-    "href": "hpc1.html#arc4",
-    "title": "arctraining slides",
-    "section": "ARC4",
-    "text": "ARC4\n2 x login nodes: 40 cores and 192GB RAM\n149 x standard compute nodes: 40 cores and 192GB RAM (=6048 cores); 100GB SSD\n4 x High Memory (40 core and 768GB nodes)\n3 x V100 GPU nodes (40 core, 192GB and 4 x NVidia V100)\n1.2PB of high speed storage: /nobackup"
-  },
-  {
-    "objectID": "hpc1.html#exercise-2",
-    "href": "hpc1.html#exercise-2",
-    "title": "arctraining slides",
-    "section": "Exercise 2",
-    "text": "Exercise 2\nWe’re going to download some files to have a play with:\ngit clone https://github.com/ARCTraining/hpc1-files.git"
-  },
-  {
-    "objectID": "hpc1.html#sge",
-    "href": "hpc1.html#sge",
-    "title": "arctraining slides",
-    "section": "SGE",
-    "text": "SGE\nSGE is a sophisticated scheduler:\n\nCan define usage policies.\nControl maximum limits.\nFair distribution of resources.\nProduces detailed usage accounting information."
-  },
-  {
-    "objectID": "hpc1.html#queue-tools",
-    "href": "hpc1.html#queue-tools",
-    "title": "arctraining slides",
-    "section": "Queue tools",
-    "text": "Queue tools\n\nqsub: submit a batch job\nqrsh: run an interactive job\nqdel: delete a job\nqstat: Details on queued or running jobs\nqacct: Details on previous completed jobs\nqsched: A hint as to when your job might run"
-  },
-  {
-    "objectID": "hpc1.html#submit-some-serial-r-jobs",
-    "href": "hpc1.html#submit-some-serial-r-jobs",
-    "title": "arctraining slides",
-    "section": "Submit some serial R jobs",
-    "text": "Submit some serial R jobs\nWe’re going to submit a job from the 1_R directory"
-  },
-  {
-    "objectID": "hpc1.html#scheduling-notes",
-    "href": "hpc1.html#scheduling-notes",
-    "title": "arctraining slides",
-    "section": "Scheduling notes",
-    "text": "Scheduling notes\nOur clusters adopt a “fair share” policy\n\nJobs preferentially run based on current and previous usage from Faculty. Same applies when comparing users in same Faculty.\nThe lower the usage, the higher the priority (and vice versa).\n“Backfilling” is used to fit smaller jobs in between the top priority jobs. All jobs have specified run time, and so the scheduler will run lower priority jobs if they will start and finish before the highest priority jobs are scheduled to start. Thus indicating a realistic runtime for a job, will make short jobs eligible to be backfilled, potentially shortening their wait-time."
-  },
-  {
-    "objectID": "hpc1.html#submit-a-serial-python-job",
-    "href": "hpc1.html#submit-a-serial-python-job",
-    "title": "arctraining slides",
-    "section": "Submit a serial Python job",
-    "text": "Submit a serial Python job\nCan you now do the same for a Python job in the 2_Python directory?\nTo run this Python code you do not need any modules loaded and can run it with:\npython example1.py"
-  },
-  {
-    "objectID": "hpc1.html#normal-end-of-part-1",
-    "href": "hpc1.html#normal-end-of-part-1",
-    "title": "arctraining slides",
-    "section": "Normal end of Part 1",
-    "text": "Normal end of Part 1\nQuestions, recap"
-  },
-  {
-    "objectID": "hpc1.html#drives-and-directories",
-    "href": "hpc1.html#drives-and-directories",
-    "title": "arctraining slides",
-    "section": "Drives and Directories",
-    "text": "Drives and Directories\nHPC users have access to two storage areas:\n\nA HOME directory\nSpace on /nobackup"
-  },
-  {
-    "objectID": "hpc1.html#home-directory",
-    "href": "hpc1.html#home-directory",
-    "title": "arctraining slides",
-    "section": "Home Directory",
-    "text": "Home Directory\nThis is:\n\nPrivate to you\nBacked up\nLimited to 10GB storage (ARC)\nShared between machines"
-  },
-  {
-    "objectID": "hpc1.html#nobackup",
-    "href": "hpc1.html#nobackup",
-    "title": "arctraining slides",
-    "section": "/nobackup",
-    "text": "/nobackup\n\nEach HPC cluster has it’s own high speed storage service called /nobackup\nYou need to make your own directory (using mkdir)\nNothing is backed up\nFiles will expire after 90 days not being used\nNeed to set permissions to make files private ARC3 but not on ARC4."
-  },
-  {
-    "objectID": "hpc1.html#local-storage",
-    "href": "hpc1.html#local-storage",
-    "title": "arctraining slides",
-    "section": "Local storage",
-    "text": "Local storage\nEach compute node has a small SSD.\n\n1Gbyte allocated per job by default via $TMPDIR\nTypically much faster than other storage available\nCan be increased if required:\n#$ -l disk=10G\nLimits vary depending on node type, but at least 100G\n\nMore on local storage"
-  },
-  {
-    "objectID": "hpc1.html#transferring-files-and-data",
-    "href": "hpc1.html#transferring-files-and-data",
-    "title": "arctraining slides",
-    "section": "Transferring files and data",
-    "text": "Transferring files and data\n\nscp or rsync command line utility\nwget (to download from a remote server)\ngit (version control)\nsmbclient to copy from local M:/ and N:/ drives on campus\nGoogle Drive and OneDrive (via rclone)\ngraphical programs like Cyberduck or Filezilla (or indeed MobaXterm)"
-  },
-  {
-    "objectID": "hpc1.html#module-system",
-    "href": "hpc1.html#module-system",
-    "title": "arctraining slides",
-    "section": "Module system",
-    "text": "Module system\nmodule\n\navail - what software could I add\nlist - show what is active\nadd|load - enable software\nrm|unload - disable software\nhelp - show details of software\nswap|switch - swap modules"
-  },
-  {
-    "objectID": "hpc1.html#shared-vs-distributed-memory-jobs",
-    "href": "hpc1.html#shared-vs-distributed-memory-jobs",
-    "title": "arctraining slides",
-    "section": "Shared vs Distributed memory jobs",
-    "text": "Shared vs Distributed memory jobs"
-  },
-  {
-    "objectID": "hpc1.html#submit-some-parallel-jobs",
-    "href": "hpc1.html#submit-some-parallel-jobs",
-    "title": "arctraining slides",
-    "section": "Submit some parallel jobs",
-    "text": "Submit some parallel jobs\nLet’s look at and compare a few submissions:\n\nserial\nthreaded\ndistributed"
-  },
-  {
-    "objectID": "hpc1.html#gpus",
-    "href": "hpc1.html#gpus",
-    "title": "arctraining slides",
-    "section": "GPUs",
-    "text": "GPUs\nThree different types of GPU available\nARC3:\n\n2xK80 (1 node)\n4xP100 (6 nodes)\n\nARC4:\n\n4xV100 (3 nodes)\n\nSome extras in private queues"
-  },
-  {
-    "objectID": "hpc1.html#submitting-a-gpu-job",
-    "href": "hpc1.html#submitting-a-gpu-job",
-    "title": "arctraining slides",
-    "section": "Submitting a GPU job",
-    "text": "Submitting a GPU job\nARC4:\n#$ -l coproc_v100=1\nARC3:\n#$ -l coproc_p100=1\nor\n#$ -l coproc_k80=1\nShould not ask for memory or cpu cores\nMore on GPGPU"
-  },
-  {
-    "objectID": "hpc1.html#large-memory-nodes",
-    "href": "hpc1.html#large-memory-nodes",
-    "title": "arctraining slides",
-    "section": "Large memory nodes",
-    "text": "Large memory nodes\nARC4:\n#$ -l node_type=40core-768G\nARC3:\n#$ -l node_type=24core-768G\nAlso allows jobs to run for up to 96hrs"
-  },
-  {
-    "objectID": "hpc1.html#interactive-jobs",
-    "href": "hpc1.html#interactive-jobs",
-    "title": "arctraining slides",
-    "section": "Interactive jobs",
-    "text": "Interactive jobs\nGeneral advice, don’t use them unless you have to.\nqrsh -l h_rt=0:15:0 -pty y bash -i\nMore in interactive jobs"
-  },
-  {
-    "objectID": "hpc1.html#task-arrays",
-    "href": "hpc1.html#task-arrays",
-    "title": "arctraining slides",
-    "section": "Task arrays",
-    "text": "Task arrays\nWhen you want to run lots of similar jobs\n# Run 100 jobs from 1-100\n#$ -t 1-100\n# Don't run more than two at a time\n#$ -tc 2\n\nif[ $SGE_TASK_ID == $SGE_TASK_FIRST ]; then\n  echo I am the first job\nfi\n\necho I am job $SGE_TASK_ID\n\nif [ $SGE_TASK_ID == $SGE_TASK_LAST ]; then\n  echo I am the last job\nfi\nMore on task arrays"
-  },
-  {
-    "objectID": "hpc1.html#restartable-jobs",
-    "href": "hpc1.html#restartable-jobs",
-    "title": "arctraining slides",
-    "section": "Restartable jobs",
-    "text": "Restartable jobs\nFor when 48hrs isn’t enough\nAt its simplest, just finish with a return code of 99 from the last line of your code, and the job will be rescheduled:\nexit 99\nMore on restartable jobs"
-  },
-  {
-    "objectID": "hpc1.html#questions-and-time-for-recap",
-    "href": "hpc1.html#questions-and-time-for-recap",
-    "title": "arctraining slides",
-    "section": "Questions and time for recap",
-    "text": "Questions and time for recap\n\nSomething we’ve not covered that you’d like a look at\nAnything we have covered but you’d like to go over more\nA further look at arcdocs"
-  },
-  {
-    "objectID": "hpc1.html#thank-you",
-    "href": "hpc1.html#thank-you",
-    "title": "arctraining slides",
-    "section": "Thank you",
-    "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: https://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
+    "section": "Getting Feedback",
+    "text": "Getting Feedback\n\nPlease encourage participants to provide honest feedback about presentations and the training so we can improve.\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
   },
   {
     "objectID": "datavis01.html#meta-code",
@@ -565,160 +341,6 @@
     "title": "arctraining slides",
     "section": "Rule 10: Get the Right Tool(s)",
     "text": "Rule 10: Get the Right Tool(s)\n\nUse appropriate tools for data visualisation\nScripting languages like Python and R can be more efficient for producing multiple similar plots\nWhile it is absolutely ok to use a graphics package to add annotations etc. to your plots if you are more comfortable with this, remember to always think about how reproducible your workflow is"
-  },
-  {
-    "objectID": "swd3/project.html",
-    "href": "swd3/project.html",
-    "title": "arctraining slides",
-    "section": "",
-    "text": "Calculating the hypotenuse\n\\[ c = \\sqrt{a^2 + b^2} \\]\nGeneral Design\n\n1 squared function\n1 sum function\n1 square root function\n1 hypotenuse function that uses the other functions"
-  },
-  {
-    "objectID": "swd3/project.html#bringing-it-all-together",
-    "href": "swd3/project.html#bringing-it-all-together",
-    "title": "arctraining slides",
-    "section": "",
-    "text": "Calculating the hypotenuse\n\\[ c = \\sqrt{a^2 + b^2} \\]\nGeneral Design\n\n1 squared function\n1 sum function\n1 square root function\n1 hypotenuse function that uses the other functions"
-  },
-  {
-    "objectID": "swd3/project.html#workflow",
-    "href": "swd3/project.html#workflow",
-    "title": "arctraining slides",
-    "section": "Workflow",
-    "text": "Workflow\n\nInstall Git, Anaconda, VScode\nCreate a GitHub repository + Licence + .gitignore + Readme\nSetup GH Action for testing (Python Application)\nClone GH repository in local machine\nCreate project structure (source and test folders)\nSetup tests (start with test_)\nDevelop code\nAdd docstring (you can use autoDocstring - Python Docstring Generator on VS Code)\nLint code and tests\nPush to github\nEXTRA: Create Sphinx documentation\nEXTRA: Setup file and local install\nEXTRA: GH Release"
-  },
-  {
-    "objectID": "swd3/project.html#extra-sphinx-documentation",
-    "href": "swd3/project.html#extra-sphinx-documentation",
-    "title": "arctraining slides",
-    "section": "Extra: Sphinx documentation",
-    "text": "Extra: Sphinx documentation\n\nCreate docstring for every function\nInstall sphinx\nStart the basic structure using: $ sphinx-quickstart docs\nUse the apidoc to get docstrings: $ sphinx-apidoc -o docs .\nEdit files:\n\n\nconf.pyindex.rstdependencies.rstusage.rstfunctions.rst\n\n\n\nadd extentions: 'sphinx.ext.todo', 'sphinx.ext.viewcode', 'sphinx.ext.autodoc'.\nchange theme: sphinx_rtd_theme\nadd the src (change the folder name as necessary!) folder as path:\n\n import os\n import sys\n sys.path.insert(0, os.path.abspath('../src'))\n\n\nAdd extra files after Contents\n.. toctree::\n   :maxdepth: 2\n   :caption: Contents:\n\n   dependencies\n   usage\n   functions\n\n\nList all your dependencies:\nDependencies\n============\n\n- python\n- pytest\n- flake8\n- black\n- sphinx\n\n\nExplain how to use your software\nUsage Guide\n============\n\nTo start working with this repository you need to clone it onto your local\nmachine: ::\n\n    $ git clone https://github.com/...\n\n\nNext ...\n\n\nCreate a function file with the following:\nAPI reference\n=============\n\n.. automodule:: calc\n   :members:\n   :undoc-members:\n   :show-inheritance:"
-  },
-  {
-    "objectID": "swd3/project.html#extra-documentation-action",
-    "href": "swd3/project.html#extra-documentation-action",
-    "title": "arctraining slides",
-    "section": "Extra: documentation Action",
-    "text": "Extra: documentation Action\nCreate a new GH action to create a nice website for your documentation.\n\nThe action is available here\nYou may need update GH Actions permissions to allow write\nAfter a successful documentation action, you need to select gh-pages branch to activate your website"
-  },
-  {
-    "objectID": "swd3/project.html#extra-setup-file",
-    "href": "swd3/project.html#extra-setup-file",
-    "title": "arctraining slides",
-    "section": "Extra: Setup file",
-    "text": "Extra: Setup file\nCreate a setup.py file like:\nimport setuptools\n\nwith open(\"README.md\", \"r\") as fh:\n    long_description = fh.read()\n\nsetuptools.setup(\n    name=\"hypot\",\n    version=\"0.1.0\",\n    author=\"Patricia Ternes\",\n    author_email=\"p.ternesdallagnollo@leeds.ac.uk\",\n    description=\"The hypot SWD3 demo package\",\n    packages=setuptools.find_packages(),\n    classifiers=[\n        \"Programming Language :: Python :: 3.9\",\n        \"Intended Audience :: Science/Research/Learning\",\n    ],\n    python_requires=\"&gt;=3.9\",\n)"
-  },
-  {
-    "objectID": "swd3/project.html#local-installation",
-    "href": "swd3/project.html#local-installation",
-    "title": "arctraining slides",
-    "section": "Local Installation",
-    "text": "Local Installation\nInstall: install the hypot package into the environment using:\n$ python setup.py install\nUsage: if you want to create a personalised script, you can import the hypot modules as follows:\nfrom hypot.calc import squared, addition, sqroot\nRemove: If you want to remove your package, use pip:\n$ pip uninstall hypot"
-  },
-  {
-    "objectID": "swd3/project.html#release",
-    "href": "swd3/project.html#release",
-    "title": "arctraining slides",
-    "section": "Release",
-    "text": "Release\nRelease in GitHub are based in tags with the following structure:\nv0.5.2\n\n\n\nChange\nRelease\nExample\n\n\n\n\nMajor\nBreaking\n0\n\n\nMinor\nFeature\n5\n\n\nPatch\nFix\n2"
-  },
-  {
-    "objectID": "swd3/good-practices.html",
-    "href": "swd3/good-practices.html",
-    "title": "arctraining slides",
-    "section": "",
-    "text": "If application A needs version 1.0 of a particular module but application B needs version 2.0, then the requirements are in conflict and installing either version 1.0 or 2.0 will leave one application unable to run.\nThe solution for this problem is to create a virtual environment, a self-contained directory tree that contains installation for particular versions of software/packages.\n\n\n\nConda is an open source package management system and environment management system that runs on Windows, macOS, and Linux.\nIt offers dependency and environment management for any language—Python, R, Ruby, Lua, Scala, Java, JavaScript, C/ C++, Fortran, and more.\nEasy user install via Anaconda."
-  },
-  {
-    "objectID": "swd3/good-practices.html#virtual-environments",
-    "href": "swd3/good-practices.html#virtual-environments",
-    "title": "arctraining slides",
-    "section": "",
-    "text": "If application A needs version 1.0 of a particular module but application B needs version 2.0, then the requirements are in conflict and installing either version 1.0 or 2.0 will leave one application unable to run.\nThe solution for this problem is to create a virtual environment, a self-contained directory tree that contains installation for particular versions of software/packages.\n\n\n\nConda is an open source package management system and environment management system that runs on Windows, macOS, and Linux.\nIt offers dependency and environment management for any language—Python, R, Ruby, Lua, Scala, Java, JavaScript, C/ C++, Fortran, and more.\nEasy user install via Anaconda."
-  },
-  {
-    "objectID": "swd3/good-practices.html#code-formatting",
-    "href": "swd3/good-practices.html#code-formatting",
-    "title": "arctraining slides",
-    "section": "Code formatting",
-    "text": "Code formatting\n# myscript.py:\nx = {  'a':37,'b':42,\n'c':927}\ny = 'hello '+       'world'\nclass foo  (     object  ):\n   def f    (self   ):\n       return       y **2\n   def g(self, x :int,\n       y : int=42\n       ) -&gt; int:\n       return x--y\ndef f  (   a ) :\n   return      37+-a[42-a :  y*3]"
-  },
-  {
-    "objectID": "swd3/good-practices.html#coding-conventions",
-    "href": "swd3/good-practices.html#coding-conventions",
-    "title": "arctraining slides",
-    "section": "Coding conventions",
-    "text": "Coding conventions\nIf your language or project has a standard policy, use that. For example:\n\nPython: PEP8\nR: Google’s guide for R, tidyverse style guide\nC++: Google’s style guide\nJulia: Official style guide"
-  },
-  {
-    "objectID": "swd3/good-practices.html#linters",
-    "href": "swd3/good-practices.html#linters",
-    "title": "arctraining slides",
-    "section": "Linters",
-    "text": "Linters\nLinters are automated tools which enforce coding conventions and check for common mistakes. For example:\n\nPython:\n\nflake8 (flags any syntax/style errors)\nblack (enforces the style)\nisort (“Sorts” imports alphabetically in groups)"
-  },
-  {
-    "objectID": "swd3/good-practices.html#example-flake8-linter",
-    "href": "swd3/good-practices.html#example-flake8-linter",
-    "title": "arctraining slides",
-    "section": "Example: Flake8 Linter",
-    "text": "Example: Flake8 Linter\n$ conda install flake8\n$ flake8 myscript.py\nmyscript.py:2:6: E201 whitespace after '{'\nmyscript.py:2:11: E231 missing whitespace after ':'\nmyscript.py:2:14: E231 missing whitespace after ','\nmyscript.py:2:18: E231 missing whitespace after ':'\nmyscript.py:3:1: E128 continuation line under-indented for visual indent\nmyscript.py:3:4: E231 missing whitespace after ':'\nmyscript.py:4:13: E225 missing whitespace around operator\nmyscript.py:4:14: E222 multiple spaces after operator\nmyscript.py:5:1: E302 expected 2 blank lines, found 0\nmyscript.py:5:13: E201 whitespace after '('\nmyscript.py:5:25: E202 whitespace before ')'\nmyscript.py:6:4: E111 indentation is not a multiple of 4\nmyscript.py:6:9: E211 whitespace before '('\nmyscript.py:6:20: E202 whitespace before ')'\nmyscript.py:7:8: E111 indentation is not a multiple of 4\nmyscript.py:7:14: E271 multiple spaces after keyword\nmyscript.py:7:25: E225 missing whitespace around operator\nmyscript.py:8:4: E301 expected 1 blank line, found 0\nmyscript.py:8:4: E111 indentation is not a multiple of 4\nmyscript.py:8:17: E203 whitespace before ':'\nmyscript.py:8:18: E231 missing whitespace after ':'\nmyscript.py:9:8: E128 continuation line under-indented for visual indent\nmyscript.py:9:9: E203 whitespace before ':'\nmyscript.py:9:15: E252 missing whitespace around parameter equals\nmyscript.py:9:16: E252 missing whitespace around parameter equals\nmyscript.py:10:8: E124 closing bracket does not match visual indentation\nmyscript.py:10:8: E125 continuation line with same indent as next logical line\nmyscript.py:11:8: E111 indentation is not a multiple of 4\nmyscript.py:12:1: E302 expected 2 blank lines, found 0\nmyscript.py:12:6: E211 whitespace before '('\nmyscript.py:12:9: E201 whitespace after '('\nmyscript.py:12:13: E202 whitespace before ')'\nmyscript.py:12:15: E203 whitespace before ':'\nmyscript.py:13:4: E111 indentation is not a multiple of 4\nmyscript.py:13:10: E271 multiple spaces after keyword\nmyscript.py:13:26: E203 whitespace before ':'\nmyscript.py:13:34: W291 trailing whitespace"
-  },
-  {
-    "objectID": "swd3/good-practices.html#example-black-code-formatter",
-    "href": "swd3/good-practices.html#example-black-code-formatter",
-    "title": "arctraining slides",
-    "section": "Example: Black Code Formatter",
-    "text": "Example: Black Code Formatter\n\nInstall and run Black\n\n$ conda install black\n$ black myscript.py\n\nCheck the file!\n\n# myscript.py:\nx = {\"a\": 37, \"b\": 42, \"c\": 927}\ny = \"hello \" + \"world\"\n\n\nclass foo(object):\n    def f(self):\n        return y**2\n\n    def g(self, x: int, y: int = 42) -&gt; int:\n        return x - -y\n\n\ndef f(a):\n    return 37 + -a[42 - a : y * 3]"
-  },
-  {
-    "objectID": "swd3/good-practices.html#ide",
-    "href": "swd3/good-practices.html#ide",
-    "title": "arctraining slides",
-    "section": "IDE",
-    "text": "IDE\nUsing an Integrated development environment (IDE) will certainly save you time, but the advantages of using an IDE go beyond that. Below are some IDE advantages\n\nSyntax highlighting\nText autocompletion\nRefactoring options\nEasily Importing libraries\nBuild, compile, or run\n\n\nVisual Studio Code\nTo install VS Code follow the instructions here."
-  },
-  {
-    "objectID": "swd3/good-practices.html#vsc-example-automatically-using-black",
-    "href": "swd3/good-practices.html#vsc-example-automatically-using-black",
-    "title": "arctraining slides",
-    "section": "VSC Example: automatically using black",
-    "text": "VSC Example: automatically using black\nConfigure VSC to use Black: Code (or File) &gt; Preferences &gt; Settings\n\nSearch for python formatting provider and choose black\nSearch for format on save and check the box to enable\n\nSelect interpreter: View &gt; Command Palette.. (or Ctrl+Shift+P)\n\nSearch for Python: Select Interpreter\nChoose the correct environment\n\nNow the Black package is going to fix your codes layout every time you save a code file."
-  },
-  {
-    "objectID": "swd3/good-practices.html#version-control",
-    "href": "swd3/good-practices.html#version-control",
-    "title": "arctraining slides",
-    "section": "Version Control",
-    "text": "Version Control\n\n\n\nPiled Higher and Deeper by Jorge Cham"
-  },
-  {
-    "objectID": "swd3/good-practices.html#test-driven-development",
-    "href": "swd3/good-practices.html#test-driven-development",
-    "title": "arctraining slides",
-    "section": "Test-driven development",
-    "text": "Test-driven development\nExample, suppose we need to find the result of a number divided by another number:\n\nNaive solutionTDD solution\n\n\n\nWrite a function a_div_b.\nCall it interactively on two or three different inputs.\nIf it produces the wrong answer, fix the function and re-run that test.\n\nThis clearly works — after all, thousands of scientists are doing it right now — but there’s a better way\n\n\n\nWrite a short function for each test.\nWrite a a_div_b function that should pass those tests.\nIf a_div_b produces any wrong answers, fix it and re-run the test functions.\n\nWriting the tests before writing the function they exercise is called test-driven development (TDD). Its advocates believe it produces better code faster because:\n\nIf people write tests after writing the thing to be tested, they are subject to confirmation bias, i.e., they subconsciously write tests to show that their code is correct, rather than to find errors.\nWriting tests helps programmers figure out what the function is actually supposed to do."
-  },
-  {
-    "objectID": "swd3/good-practices.html#possible-tests-a_div_b-example",
-    "href": "swd3/good-practices.html#possible-tests-a_div_b-example",
-    "title": "arctraining slides",
-    "section": "Possible tests: a_div_b example",
-    "text": "Possible tests: a_div_b example\nLet’s think in all possible scenarios for this problem and how we could test them.\n\nBigger by smallerSmaller by biggerNegative numbers\n\n\n\nUsing 4 and 2, the answer should be 2.\n\nassert a_div_b(4, 2) == 2\n\nOr… the answer should be larger than 1.\n\nassert a_div_b(8, 7) &gt; 1\n\n\n\nUsing 2 and 4, the answer should be 0.5.\n\nassert a_div_b(2, 4) == 0.5\n\nOr… the answer should be smaller than 1.\n\nassert a_div_b(7, 8) &lt; 1\n\n\n\nUsing -4 and -2, the answer should be 2.\n\nassert a_div_b(-4, -2) == 2\n\nOr… the answer should be positive.\n\nassert a_div_b(-4, -2) &gt; 0"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "arctraining slides",
-    "section": "",
-    "text": "Public facing homepage for arctraining Quarto slides collection."
-  },
-  {
-    "objectID": "index.html#slides",
-    "href": "index.html#slides",
-    "title": "arctraining slides",
-    "section": "Slides:",
-    "text": "Slides:\nNote: this page is under construction. As soon as the slides are available, the link will be provided.\n\nHPC0: Introduction to Linux for HPC\nHPC1: Introduction to High Performance Computing\nHPC2: Applications and containers on HPC\nHPC3: Computer architectures and shared memory parallel programming\nHPC5: Introduction to GPU programming with CUDA\nHPC6: HPC for Life Sciences and Bioinformatics\nSWD1a: Introduction to Python programming\nSWD1b: Introduction to R programming\nSWD2: Version Control with Git and GitHub\nSWD3: Software development practices for Research\nSWD4: Cloud computing for Research\nSWD5: Scientific Python\nSWD6: High performance Python\nSWD7: Introduction to reproducible workflows in Python"
   },
   {
     "objectID": "hpc0.html#meta-code",
@@ -1281,95 +903,410 @@
     "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: https://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
   },
   {
-    "objectID": "donut.html#presentation-set-up-guide",
-    "href": "donut.html#presentation-set-up-guide",
+    "objectID": "hpc1.html#meta-code",
+    "href": "hpc1.html#meta-code",
     "title": "arctraining slides",
-    "section": "Presentation set up guide",
-    "text": "Presentation set up guide\n\nShare the Web browser window containing the slides (‘Slide View’).\nActivate ‘Speaker View’:\n\nFrom the slide-menu-button (bars in the lower left), select:\n\nTools (at the top) &gt;&gt; Speaker View (from the list).\n\n\nA new Web browser window should open showing the ‘Speaker View’.\n\nLocate this and read the Notes Pane (lower right).\n\n\n\n\nThe default Speaker View layout has three panes:\n\nSlide Pane (left) shows the current slide.\nNotes Pane (lower right) are these notes.\nUpcoming Pane (upper right).\n\nThis should show the next slide.\nLayout: Default can be actioned to change the Layout.\n\n\nThe current slide in Slide View and in the Speaker View Slide Pane should synchronise:\n\nSo changing slide in one should do the same in the other.\n\nMove on to the next slide - the Title Slide:\n\nUse the down or right keyboard cursor keys or activate the controls-arrow that looks like &gt; in the lower right &gt;- If you have activated the Upcoming Pane the keyboard cursor keys will change what is in there.\nTo move on in the presentation, activate (click back into) the main Slide Pane."
+    "section": "HPC 1",
+    "text": "HPC 1\nIntroduction to High Performance Computing"
   },
   {
-    "objectID": "donut.html#meta-code",
-    "href": "donut.html#meta-code",
-    "title": "arctraining slides",
-    "section": "Donut",
-    "text": "Donut\nA Guide to delivering Presentations Using Quarto"
-  },
-  {
-    "objectID": "donut.html#research-computing-team-and-service",
-    "href": "donut.html#research-computing-team-and-service",
+    "objectID": "hpc1.html#research-computing-team-and-service",
+    "href": "hpc1.html#research-computing-team-and-service",
     "title": "arctraining slides",
     "section": "Research Computing Team and Service",
     "text": "Research Computing Team and Service\n\n\nHere to support research(ers)\n\nProvide training\nSupport users of Grid and Cloud Computing platforms\nProvide consultancy\n\nTo develop project proposals\nTo help recruit people with specialist skills\nWorking directly on research projects\n\n\nFor details please see our Website\nContact us via the IT Service Desk\n\n\n\nIf you follow a link then a new tab will open in the Slide View Web browser.\n\nThis will want closing or the Slide View activating again as he main tab in the browser.\n\nMaybe point out some sections/features on the Research Computing Website.\nWe support use and develop resources."
   },
   {
-    "objectID": "donut.html#polls-and-forms",
-    "href": "donut.html#polls-and-forms",
+    "objectID": "hpc1.html#purpose-of-hpc1",
+    "href": "hpc1.html#purpose-of-hpc1",
     "title": "arctraining slides",
-    "section": "Polls and Forms",
-    "text": "Polls and Forms\n\nPolls are best prepared in advance.\n\nThere are two main types of Poll:\n\n“Emoji Polls”\n“Forms Polls”"
+    "section": "Purpose of HPC1",
+    "text": "Purpose of HPC1\n\nIntroducing Research Computing and the HPCs at Leeds\nHands on with Linux and ARC4\nRunning code\nBatch and Interactive jobs\nData management\nJoys of parallel jobs\nAdvanced job submissions"
   },
   {
-    "objectID": "donut.html#emoji-polls",
-    "href": "donut.html#emoji-polls",
+    "objectID": "hpc1.html#useful-links",
+    "href": "hpc1.html#useful-links",
     "title": "arctraining slides",
-    "section": "Emoji Polls",
-    "text": "Emoji Polls\n\nConducted from within Teams chat\nCopy the following and then press the space bar after each end parenthesis ) to turn the text into an emoji:\nDo you like emoji polls?\n(thumbsup) yes\n(heart) no\nThe thumbsup and heart emojis are the first two emojis that are in the reaction list of users by default."
+    "section": "Useful Links",
+    "text": "Useful Links\n\nARC Website: https://arc.leeds.ac.uk/\nARC Documentation https://arcdocs.leeds.ac.uk\nGeneral queries: https://bit.ly/arc-help"
   },
   {
-    "objectID": "donut.html#forms-polls",
-    "href": "donut.html#forms-polls",
+    "objectID": "hpc1.html#training",
+    "href": "hpc1.html#training",
     "title": "arctraining slides",
-    "section": "Forms Polls",
-    "text": "Forms Polls\n\nA Forms poll can be added ad hoc in a Teams chat:\n\nSelect the three dots ... below the message box and then search for or add Forms.\nOr add using the + option at the top of the chat.\n\nHowever, this use of Forms is being phased out in preference for a Polls App.\nThe Polls App however, is not available in the University of Leeds Office 365 offerring currently to test and the version that can be used in the chat does not seem to have an easy way to collect the results!\nIt might be best to prepare some Forms forms in advance using the Forms in Office 365 (https://www.microsoft365.com/launch/forms).\n\nSharing these simply involves copying the URL and pasting it into the chat.\n\nFor example: https://forms.office.com/pages/designpagev2.aspx?lang=en-GB&origin=OfficeDotCom&route=Start&subpage=design&id=qO3qvR3IzkWGPlIypTW3yy7GBfs2qsFOjWB83KLaHnVUNzFZS1VCTENOVEJUMDdKVEEyNURDRlY2USQlQCN0PWcu"
+    "section": "Training",
+    "text": "Training"
   },
   {
-    "objectID": "donut.html#hackpads-or-forms",
-    "href": "donut.html#hackpads-or-forms",
+    "objectID": "hpc1.html#archpc-training-portfolio",
+    "href": "hpc1.html#archpc-training-portfolio",
     "title": "arctraining slides",
-    "section": "Hackpads or Forms",
-    "text": "Hackpads or Forms\n\nThese can be used for participants to introduce themselves to us.\nParticipants should have all the links already in an email."
+    "section": "ARC/HPC Training Portfolio",
+    "text": "ARC/HPC Training Portfolio\nhttps://arc.leeds.ac.uk/training"
   },
   {
-    "objectID": "donut.html#feedback-and-questions",
-    "href": "donut.html#feedback-and-questions",
+    "objectID": "hpc1.html#introductions-and-motivations",
+    "href": "hpc1.html#introductions-and-motivations",
     "title": "arctraining slides",
-    "section": "Feedback and questions",
-    "text": "Feedback and questions\n\nPlease encourage interruptions especially for participants having difficulty hearing or following the presentation…\nPeriodically pause and ask if participants have any questions or want anything repeated…"
+    "section": "Introductions and Motivations",
+    "text": "Introductions and Motivations\n\nWho are you and why are you here?\nWhat problems are you encountering with your computational work now? \nWhy / how do you think HPC will help?"
   },
   {
-    "objectID": "donut.html#getting-feedback",
-    "href": "donut.html#getting-feedback",
+    "objectID": "hpc1.html#key-concepts",
+    "href": "hpc1.html#key-concepts",
     "title": "arctraining slides",
-    "section": "Getting Feedback",
-    "text": "Getting Feedback\n\nPlease encourage participants to provide honest feedback about presentations and the training so we can improve.\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
+    "section": "Key Concepts",
+    "text": "Key Concepts\n\nHigh Performance Computing (HPC)\nHigh Throughput Computing (HTC)\n“Supercomputing”"
   },
   {
-    "objectID": "swd3/structure.html",
-    "href": "swd3/structure.html",
+    "objectID": "hpc1.html#applications",
+    "href": "hpc1.html#applications",
     "title": "arctraining slides",
-    "section": "",
-    "text": "# The most basic structure for a code project should look like:\nmy-model\n├── README.md\n├── requirements.txt\n├── src                &lt;- Source code for this project\n└── tests              &lt;- Test code for this project\n\nReadmeRequirements\n\n\n\nIs a guide that gives users a detailed description of a project you have worked on\nIt is the first file a person will see when they encounter your project, so it should be fairly brief but detailed.\nSee how to write a good README file in this freecodecamp post.\n\n\n\n\nText information about all the necessary additional libraries, modules, and packages.\nThis can be replaced by files like: environment.yml, pyproject.toml, setup.py."
+    "section": "Applications",
+    "text": "Applications"
   },
   {
-    "objectID": "swd3/structure.html#basic-structure-suggestion",
-    "href": "swd3/structure.html#basic-structure-suggestion",
+    "objectID": "hpc1.html#terminology",
+    "href": "hpc1.html#terminology",
     "title": "arctraining slides",
-    "section": "",
-    "text": "# The most basic structure for a code project should look like:\nmy-model\n├── README.md\n├── requirements.txt\n├── src                &lt;- Source code for this project\n└── tests              &lt;- Test code for this project\n\nReadmeRequirements\n\n\n\nIs a guide that gives users a detailed description of a project you have worked on\nIt is the first file a person will see when they encounter your project, so it should be fairly brief but detailed.\nSee how to write a good README file in this freecodecamp post.\n\n\n\n\nText information about all the necessary additional libraries, modules, and packages.\nThis can be replaced by files like: environment.yml, pyproject.toml, setup.py."
+    "section": "Terminology",
+    "text": "Terminology\n\nNode: the physical machine/server. In current systems, a node would typically include one or more processors, as well as memory and other hardware.\nProcessor: the central processing unit (CPU) inside the node, which contains one or more cores.\nCore: Refers to the basic computation unit of the CPU. This is the unit that carries out the actual computations."
   },
   {
-    "objectID": "swd3/structure.html#advanced-project-structure",
-    "href": "swd3/structure.html#advanced-project-structure",
+    "objectID": "hpc1.html#leeds-facilities",
+    "href": "hpc1.html#leeds-facilities",
     "title": "arctraining slides",
-    "section": "Advanced Project Structure",
-    "text": "Advanced Project Structure\nTemplate based on mkrapp/cookiecutter-reproducible-science github\n.\n├── AUTHORS.md\n├── LICENSE\n├── README.md\n├── bin                &lt;- Your compiled model code can be stored here (not tracked by git)\n├── config             &lt;- Configuration files, e.g., for doxygen or for your model if needed\n├── data\n│   ├── external       &lt;- Data from third party sources.\n│   ├── interim        &lt;- Intermediate data that has been transformed.\n│   ├── processed      &lt;- The final, canonical data sets for modeling.\n│   └── raw            &lt;- The original, immutable data dump.\n├── docs               &lt;- Documentation, e.g., doxygen or scientific papers (not tracked by git)\n├── notebooks          &lt;- Ipython or R notebooks\n├── reports            &lt;- For a manuscript source, e.g., LaTeX, Markdown, etc., or any project reports\n│   └── figures        &lt;- Figures for the manuscript or reports\n├── src                &lt;- Source code for this project\n│   ├── data           &lt;- scripts and programs to process data\n│   ├── external       &lt;- Any external source code, e.g., pull other git projects, or external libraries\n│   ├── models         &lt;- Source code for your own model\n│   ├── tools          &lt;- Any helper scripts go here\n│   └── visualization  &lt;- Scripts for visualisation of your results, e.g., matplotlib, ggplot2 related.\n└── tests              &lt;- Test code for this project"
+    "section": "Leeds facilities",
+    "text": "Leeds facilities\n\nARC3 brought into service in 2017\nARC4 brought into service in 2019"
   },
   {
-    "objectID": "swd3/sdlc.html#sdlc",
-    "href": "swd3/sdlc.html#sdlc",
+    "objectID": "hpc1.html#a-supercomputer-isnt",
+    "href": "hpc1.html#a-supercomputer-isnt",
     "title": "arctraining slides",
-    "section": "SDLC",
-    "text": "SDLC\n\nIdeationRequirementsDesignDevelopmentTestDeploymentMaintenance\n\n\n\n\n\nWhat are we going to do?\n\n\nBrainstorming\nResearch\n\n\n\n\n\n\n\n\n\n\nHow are we going to do it?\n\nSome topics to help define requirements include:\n\nfinal goal\nproject scope (how to reach the final goal)\nwhat is feasible (and how)\nwhat is priority\nwhat resources are available\ndeadlines\npotential risks\n\n\nWarning: Each person involved in the project may have a different need.\n\n\n\n\n\n\n\n\n\n\nWhat is the software architecture?\n\nWhen designing software, the object-oriented approach is a common programming paradigm.\nObject-oriented components:\n\nClasses: A user-defined type\nObject instances: A particular object instantiated from a class.\nMethods: A function which is “built in” to a class\nConstructor: A special method called when instantiating a new object\n\nSome principles: abstraction, encapsulation, decomposition, generalisation\n\n\nSee more: \n\n\n\n\n\n\n\nIs this where the fun begins?\n\n\nTake your time\n\n\n\n\n\nDevelopment is usually the most time consuming step in a Software Development Life Cycle.\n\n\n\n\n\nIs this software good?\n\nIn this step, errors and failures are identified by exposing the code to an environment similar to the end-user experience.\nThere are several types of testing, some examples include:\n\nUnit testing: are all components working?\nIntegration testing: are all components working when fitted together?\nPerformance testing: how does the software perform against different workloads? It is fast? Stable?\nFunctional testing: is the software aligned with Software Requirement Specification?\n\n\n\n\n\n\n\n\n\n\nCan other people use my code?\n\nYou can use platforms like GitHub to release your software.\n\nThe functionality of the software is linked to several specifications related to the operating system and versions of packages and other software related to the project.\nListing these specifications will help others to replicate the environment in which the software was developed.\n\n\n\n\n\n\n\n\n\n\nIs it over?\n\nWe can classify maintenance into a few categories:\n\nCorrective: fix reported errors/failures.\nPreventive: regular checks and fixes.\nPerfective: optimize implemented features, adding new features.\nAdaptive: keep the software updated according to changes external to the project (new programming language version, new regulation, etc.)."
+    "section": "A Supercomputer isn’t…",
+    "text": "A Supercomputer isn’t…"
+  },
+  {
+    "objectID": "hpc1.html#single-computer-vs-grid-of-computers",
+    "href": "hpc1.html#single-computer-vs-grid-of-computers",
+    "title": "arctraining slides",
+    "section": "Single computer vs grid of computers",
+    "text": "Single computer vs grid of computers"
+  },
+  {
+    "objectID": "hpc1.html#serial-and-parallel-programs",
+    "href": "hpc1.html#serial-and-parallel-programs",
+    "title": "arctraining slides",
+    "section": "Serial and parallel programs",
+    "text": "Serial and parallel programs\n\nSerial programs run on a single CPU core, solving one problem at a time.\nParallel programs run across multiple CPU cores, splitting the workload between them and solving the problem faster."
+  },
+  {
+    "objectID": "hpc1.html#serial-program",
+    "href": "hpc1.html#serial-program",
+    "title": "arctraining slides",
+    "section": "Serial Program",
+    "text": "Serial Program"
+  },
+  {
+    "objectID": "hpc1.html#parallel-program",
+    "href": "hpc1.html#parallel-program",
+    "title": "arctraining slides",
+    "section": "Parallel Program",
+    "text": "Parallel Program"
+  },
+  {
+    "objectID": "hpc1.html#amdahls-law",
+    "href": "hpc1.html#amdahls-law",
+    "title": "arctraining slides",
+    "section": "Amdahl’s Law",
+    "text": "Amdahl’s Law\n\n\n\nDaniels220 at English Wikipedia, CC BY-SA 3.0 https://creativecommons.org/licenses/by-sa/3.0, via Wikimedia Commons"
+  },
+  {
+    "objectID": "hpc1.html#basic-parallel-machine",
+    "href": "hpc1.html#basic-parallel-machine",
+    "title": "arctraining slides",
+    "section": "Basic parallel machine",
+    "text": "Basic parallel machine"
+  },
+  {
+    "objectID": "hpc1.html#differences-from-desktop-computing",
+    "href": "hpc1.html#differences-from-desktop-computing",
+    "title": "arctraining slides",
+    "section": "Differences from Desktop computing?",
+    "text": "Differences from Desktop computing?\n\nWe don’t log on to compute nodes directly\n\nsubmit jobs via a batch scheduling system\n\nNot a GUI-based environment\nSystem is shared with many other users\nResources more tightly monitored and controlled\n\nMemory\nCPU usage (‘cores’)\nTime"
+  },
+  {
+    "objectID": "hpc1.html#benefits-of-using-hpc",
+    "href": "hpc1.html#benefits-of-using-hpc",
+    "title": "arctraining slides",
+    "section": "Benefits of using HPC",
+    "text": "Benefits of using HPC\n\nSpeed\nVolume\nCost\nEfficiency\nConvenience"
+  },
+  {
+    "objectID": "hpc1.html#parallel-paradigms",
+    "href": "hpc1.html#parallel-paradigms",
+    "title": "arctraining slides",
+    "section": "Parallel Paradigms",
+    "text": "Parallel Paradigms\nFrom a systems perspective:\n\nShared memory parallelism\nDistributed memory parallelism\n\nUnless you are writing your own codes, the software developer takes care of this."
+  },
+  {
+    "objectID": "hpc1.html#basic-hpc-system-layout",
+    "href": "hpc1.html#basic-hpc-system-layout",
+    "title": "arctraining slides",
+    "section": "Basic HPC system layout",
+    "text": "Basic HPC system layout"
+  },
+  {
+    "objectID": "hpc1.html#exercise-1.1",
+    "href": "hpc1.html#exercise-1.1",
+    "title": "arctraining slides",
+    "section": "Exercise 1.1",
+    "text": "Exercise 1.1\nWhat do the following Linux commands do? How might they be used on the HPC service?\n\nls\npwd\nmkdir\ncp\nwget\nrm"
+  },
+  {
+    "objectID": "hpc1.html#exercise-1.2",
+    "href": "hpc1.html#exercise-1.2",
+    "title": "arctraining slides",
+    "section": "Exercise 1.2",
+    "text": "Exercise 1.2\nOn the HPC service, you have a ‘HOME’ directory of 10GB and can create a directory on the /nobackup drive.\nUsing the man pages (or Google…) investigate how you could use the following commands to manage your storage:\n\nquota\ndf\ndu"
+  },
+  {
+    "objectID": "hpc1.html#exercise-1.3",
+    "href": "hpc1.html#exercise-1.3",
+    "title": "arctraining slides",
+    "section": "Exercise 1.3",
+    "text": "Exercise 1.3\nLinux systems include a number of file compression routines.\nFind out which ones are available on the cluster and use them to create a compressed archive of a directory and its contents."
+  },
+  {
+    "objectID": "hpc1.html#exercise-1.4",
+    "href": "hpc1.html#exercise-1.4",
+    "title": "arctraining slides",
+    "section": "Exercise 1.4",
+    "text": "Exercise 1.4\nHow could you read a PDF file or an HTML document on the cluster?"
+  },
+  {
+    "objectID": "hpc1.html#hpc-at-leeds",
+    "href": "hpc1.html#hpc-at-leeds",
+    "title": "arctraining slides",
+    "section": "HPC at Leeds",
+    "text": "HPC at Leeds\nARC4 is the latest incarnation of central HPC at Leeds.\nHPC currently comprised of two facilities called ARC3 and ARC4\nAll Faculties are shareholders and so it is important that all who can benefit from the use of this facility do so."
+  },
+  {
+    "objectID": "hpc1.html#arc3",
+    "href": "hpc1.html#arc3",
+    "title": "arctraining slides",
+    "section": "ARC3",
+    "text": "ARC3\n2 x login nodes: 24 cores and 128GB RAM\n252 x standard compute nodes: 24 cores and 128GB RAM (=6048 cores); 100GB SSD\n4 x High Memory (24 cores and 768GB nodes)\n6 x P100 GPU nodes (24 core, 128GB and 4 x NVidia P100)\n2 x K80 GPU nodes (24 core, 128GB and 2 x NVidia K80)\n2 x Intel Xeon Phi (Knights Landing) vector processor nodes\n836TB of high speed storage: /nobackup"
+  },
+  {
+    "objectID": "hpc1.html#arc4",
+    "href": "hpc1.html#arc4",
+    "title": "arctraining slides",
+    "section": "ARC4",
+    "text": "ARC4\n2 x login nodes: 40 cores and 192GB RAM\n149 x standard compute nodes: 40 cores and 192GB RAM (=5960 cores); 100GB SSD\n4 x High Memory (40 cores and 768GB nodes)\n3 x V100 GPU nodes (40 core, 192GB and 4 x NVidia V100)\n1.2PB of high speed storage: /nobackup"
+  },
+  {
+    "objectID": "hpc1.html#exercise-2",
+    "href": "hpc1.html#exercise-2",
+    "title": "arctraining slides",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nWe’re going to download some files to have a play with:\ngit clone https://github.com/ARCTraining/hpc1-files.git"
+  },
+  {
+    "objectID": "hpc1.html#sge",
+    "href": "hpc1.html#sge",
+    "title": "arctraining slides",
+    "section": "SGE",
+    "text": "SGE\nSGE is a sophisticated scheduler:\n\nCan define usage policies.\nControl maximum limits.\nFair distribution of resources.\nProduces detailed usage accounting information."
+  },
+  {
+    "objectID": "hpc1.html#queue-tools",
+    "href": "hpc1.html#queue-tools",
+    "title": "arctraining slides",
+    "section": "Queue tools",
+    "text": "Queue tools\n\nqsub: submit a batch job\nqrsh: run an interactive job\nqdel: delete a job\nqstat: Details on queued or running jobs\nqacct: Details on previous completed jobs\nqsched: A hint as to when your job might run"
+  },
+  {
+    "objectID": "hpc1.html#submit-some-serial-r-jobs",
+    "href": "hpc1.html#submit-some-serial-r-jobs",
+    "title": "arctraining slides",
+    "section": "Submit some serial R jobs",
+    "text": "Submit some serial R jobs\nWe’re going to submit a job from the 1_R directory"
+  },
+  {
+    "objectID": "hpc1.html#scheduling-notes",
+    "href": "hpc1.html#scheduling-notes",
+    "title": "arctraining slides",
+    "section": "Scheduling notes",
+    "text": "Scheduling notes\nOur clusters adopt a “fair share” policy\n\nJobs preferentially run based on current and previous usage from Faculty. Same applies when comparing users in same Faculty.\nThe lower the usage, the higher the priority (and vice versa).\n“Backfilling” is used to fit smaller jobs in between the top priority jobs. All jobs have specified run time, and so the scheduler will run lower priority jobs if they will start and finish before the highest priority jobs are scheduled to start. Thus indicating a realistic runtime for a job, will make short jobs eligible to be backfilled, potentially shortening their wait-time."
+  },
+  {
+    "objectID": "hpc1.html#submit-a-serial-python-job",
+    "href": "hpc1.html#submit-a-serial-python-job",
+    "title": "arctraining slides",
+    "section": "Submit a serial Python job",
+    "text": "Submit a serial Python job\nCan you now do the same for a Python job in the 2_Python directory?\nTo run this Python code you do not need any modules loaded and can run it with:\npython example1.py"
+  },
+  {
+    "objectID": "hpc1.html#normal-end-of-part-1",
+    "href": "hpc1.html#normal-end-of-part-1",
+    "title": "arctraining slides",
+    "section": "Normal end of Part 1",
+    "text": "Normal end of Part 1\nQuestions, recap"
+  },
+  {
+    "objectID": "hpc1.html#drives-and-directories",
+    "href": "hpc1.html#drives-and-directories",
+    "title": "arctraining slides",
+    "section": "Drives and Directories",
+    "text": "Drives and Directories\nHPC users have access to two storage areas:\n\nA HOME directory\nSpace on /nobackup"
+  },
+  {
+    "objectID": "hpc1.html#home-directory",
+    "href": "hpc1.html#home-directory",
+    "title": "arctraining slides",
+    "section": "Home Directory",
+    "text": "Home Directory\nThis is:\n\nPrivate to you\nBacked up\nLimited to 10GB storage (ARC)\nShared between machines"
+  },
+  {
+    "objectID": "hpc1.html#nobackup",
+    "href": "hpc1.html#nobackup",
+    "title": "arctraining slides",
+    "section": "/nobackup",
+    "text": "/nobackup\n\nEach HPC cluster has its own high speed storage service called /nobackup\nYou need to make your own directory (using mkdir)\nNothing is backed up\nFiles will expire after 90 days not being used\nNeed to set permissions to make files private on ARC3 but not on ARC4."
+  },
+  {
+    "objectID": "hpc1.html#local-storage",
+    "href": "hpc1.html#local-storage",
+    "title": "arctraining slides",
+    "section": "Local storage",
+    "text": "Local storage\nEach compute node has a small SSD.\n\n1Gbyte allocated per job by default via $TMPDIR\nTypically much faster than other storage available\nCan be increased if required:\n#$ -l disk=10G\nLimits vary depending on node type, but at least 100G\n\nMore on local storage"
+  },
+  {
+    "objectID": "hpc1.html#transferring-files-and-data",
+    "href": "hpc1.html#transferring-files-and-data",
+    "title": "arctraining slides",
+    "section": "Transferring files and data",
+    "text": "Transferring files and data\n\nscp or rsync command line utility\nwget (to download from a remote server)\ngit (version control)\nsmbclient to copy from local M:/ and N:/ drives on campus\nGoogle Drive and OneDrive (via rclone)\ngraphical programs like Cyberduck or Filezilla (or indeed MobaXterm)"
+  },
+  {
+    "objectID": "hpc1.html#module-system",
+    "href": "hpc1.html#module-system",
+    "title": "arctraining slides",
+    "section": "Module system",
+    "text": "Module system\nmodule\n\navail - what software could I add\nlist - show what is active\nadd|load - enable software\nrm|unload - disable software\nhelp - show details of software\nswap|switch - swap modules"
+  },
+  {
+    "objectID": "hpc1.html#shared-vs-distributed-memory-jobs",
+    "href": "hpc1.html#shared-vs-distributed-memory-jobs",
+    "title": "arctraining slides",
+    "section": "Shared vs Distributed memory jobs",
+    "text": "Shared vs Distributed memory jobs"
+  },
+  {
+    "objectID": "hpc1.html#submit-some-parallel-jobs",
+    "href": "hpc1.html#submit-some-parallel-jobs",
+    "title": "arctraining slides",
+    "section": "Submit some parallel jobs",
+    "text": "Submit some parallel jobs\nLet’s look at and compare a few submissions:\n\nserial\nthreaded\ndistributed"
+  },
+  {
+    "objectID": "hpc1.html#gpus",
+    "href": "hpc1.html#gpus",
+    "title": "arctraining slides",
+    "section": "GPUs",
+    "text": "GPUs\nThree different types of GPU available\nARC3:\n\n2xK80 (1 node)\n4xP100 (6 nodes)\n\nARC4:\n\n4xV100 (3 nodes)\n\nSome extras in private queues"
+  },
+  {
+    "objectID": "hpc1.html#submitting-a-gpu-job",
+    "href": "hpc1.html#submitting-a-gpu-job",
+    "title": "arctraining slides",
+    "section": "Submitting a GPU job",
+    "text": "Submitting a GPU job\nARC4:\n#$ -l coproc_v100=1\nARC3:\n#$ -l coproc_p100=1\nor\n#$ -l coproc_k80=1\nShould not ask for memory or CPU cores\nMore on GPGPU"
+  },
+  {
+    "objectID": "hpc1.html#large-memory-nodes",
+    "href": "hpc1.html#large-memory-nodes",
+    "title": "arctraining slides",
+    "section": "Large memory nodes",
+    "text": "Large memory nodes\nARC4:\n#$ -l node_type=40core-768G\nARC3:\n#$ -l node_type=24core-768G\nAlso allows jobs to run for up to 96hrs"
+  },
+  {
+    "objectID": "hpc1.html#interactive-jobs",
+    "href": "hpc1.html#interactive-jobs",
+    "title": "arctraining slides",
+    "section": "Interactive jobs",
+    "text": "Interactive jobs\nGeneral advice, don’t use them unless you have to.\nqrsh -l h_rt=0:15:0 -pty y bash -i\nMore in interactive jobs"
+  },
+  {
+    "objectID": "hpc1.html#task-arrays",
+    "href": "hpc1.html#task-arrays",
+    "title": "arctraining slides",
+    "section": "Task arrays",
+    "text": "Task arrays\nWhen you want to run lots of similar jobs\n# Run 100 jobs from 1-100\n#$ -t 1-100\n# Don't run more than two at a time\n#$ -tc 2\n\nif[ $SGE_TASK_ID == $SGE_TASK_FIRST ]; then\n  echo I am the first job\nfi\n\necho I am job $SGE_TASK_ID\n\nif [ $SGE_TASK_ID == $SGE_TASK_LAST ]; then\n  echo I am the last job\nfi\nMore on task arrays"
+  },
+  {
+    "objectID": "hpc1.html#restartable-jobs",
+    "href": "hpc1.html#restartable-jobs",
+    "title": "arctraining slides",
+    "section": "Restartable jobs",
+    "text": "Restartable jobs\nFor when 48hrs isn’t enough\nAt its simplest, just finish with a return code of 99 from the last line of your code, and the job will be rescheduled:\nexit 99\nMore on restartable jobs"
+  },
+  {
+    "objectID": "hpc1.html#questions-and-time-for-recap",
+    "href": "hpc1.html#questions-and-time-for-recap",
+    "title": "arctraining slides",
+    "section": "Questions and time for recap",
+    "text": "Questions and time for recap\n\nSomething we’ve not covered that you’d like a look at\nAnything we have covered but you’d like to go over more\nA further look at arcdocs"
+  },
+  {
+    "objectID": "hpc1.html#thank-you",
+    "href": "hpc1.html#thank-you",
+    "title": "arctraining slides",
+    "section": "Thank you",
+    "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: https://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
+  },
+  {
+    "objectID": "template.html#meta-code",
+    "href": "template.html#meta-code",
+    "title": "arctraining slides",
+    "section": "Course Code",
+    "text": "Course Code\nCourse Name"
+  },
+  {
+    "objectID": "template.html#research-computing-team-and-service",
+    "href": "template.html#research-computing-team-and-service",
+    "title": "arctraining slides",
+    "section": "Research Computing Team and Service",
+    "text": "Research Computing Team and Service\n\n\nHere to support research(ers)\n\nProvide training\nSupport users of Grid and Cloud Computing platforms\nProvide consultancy\n\nTo develop project proposals\nTo help recruit people with specialist skills\nWorking directly on research projects\n\n\nFor details please see our Website\nContact us via the IT Service Desk\n\n\n\nIf you follow a link then a new tab will open in the Slide View Web browser.\n\nThis will want closing or the Slide View activating again as he main tab in the browser.\n\nMaybe point out some sections/features on the Research Computing Website.\nWe support use and develop resources."
+  },
+  {
+    "objectID": "template.html#slide-a",
+    "href": "template.html#slide-a",
+    "title": "arctraining slides",
+    "section": "Slide A",
+    "text": "Slide A\nTemporary content"
+  },
+  {
+    "objectID": "template.html#slide-b",
+    "href": "template.html#slide-b",
+    "title": "arctraining slides",
+    "section": "Slide B",
+    "text": "Slide B\nTemporary content"
+  },
+  {
+    "objectID": "template.html#slide-c",
+    "href": "template.html#slide-c",
+    "title": "arctraining slides",
+    "section": "Slide C",
+    "text": "Slide C\nTemporary content"
+  },
+  {
+    "objectID": "template.html#thank-you",
+    "href": "template.html#thank-you",
+    "title": "arctraining slides",
+    "section": "Thank you",
+    "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: https://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
   },
   {
     "objectID": "swd3.html#meta-code",
@@ -1547,45 +1484,108 @@
     "text": "Release\nRelease in GitHub are based in tags with the following structure:\nv0.5.2\n\n\n\nChange\nRelease\nExample\n\n\n\n\nMajor\nBreaking\n0\n\n\nMinor\nFeature\n5\n\n\nPatch\nFix\n2\n\n\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
   },
   {
-    "objectID": "template.html#meta-code",
-    "href": "template.html#meta-code",
+    "objectID": "swd3/good-practices.html",
+    "href": "swd3/good-practices.html",
     "title": "arctraining slides",
-    "section": "Course Code",
-    "text": "Course Code\nCourse Name"
+    "section": "",
+    "text": "If application A needs version 1.0 of a particular module but application B needs version 2.0, then the requirements are in conflict and installing either version 1.0 or 2.0 will leave one application unable to run.\nThe solution for this problem is to create a virtual environment, a self-contained directory tree that contains installation for particular versions of software/packages.\n\n\n\nConda is an open source package management system and environment management system that runs on Windows, macOS, and Linux.\nIt offers dependency and environment management for any language—Python, R, Ruby, Lua, Scala, Java, JavaScript, C/ C++, Fortran, and more.\nEasy user install via Anaconda."
   },
   {
-    "objectID": "template.html#research-computing-team-and-service",
-    "href": "template.html#research-computing-team-and-service",
+    "objectID": "swd3/good-practices.html#virtual-environments",
+    "href": "swd3/good-practices.html#virtual-environments",
     "title": "arctraining slides",
-    "section": "Research Computing Team and Service",
-    "text": "Research Computing Team and Service\n\n\nHere to support research(ers)\n\nProvide training\nSupport users of Grid and Cloud Computing platforms\nProvide consultancy\n\nTo develop project proposals\nTo help recruit people with specialist skills\nWorking directly on research projects\n\n\nFor details please see our Website\nContact us via the IT Service Desk\n\n\n\nIf you follow a link then a new tab will open in the Slide View Web browser.\n\nThis will want closing or the Slide View activating again as he main tab in the browser.\n\nMaybe point out some sections/features on the Research Computing Website.\nWe support use and develop resources."
+    "section": "",
+    "text": "If application A needs version 1.0 of a particular module but application B needs version 2.0, then the requirements are in conflict and installing either version 1.0 or 2.0 will leave one application unable to run.\nThe solution for this problem is to create a virtual environment, a self-contained directory tree that contains installation for particular versions of software/packages.\n\n\n\nConda is an open source package management system and environment management system that runs on Windows, macOS, and Linux.\nIt offers dependency and environment management for any language—Python, R, Ruby, Lua, Scala, Java, JavaScript, C/ C++, Fortran, and more.\nEasy user install via Anaconda."
   },
   {
-    "objectID": "template.html#slide-a",
-    "href": "template.html#slide-a",
+    "objectID": "swd3/good-practices.html#code-formatting",
+    "href": "swd3/good-practices.html#code-formatting",
     "title": "arctraining slides",
-    "section": "Slide A",
-    "text": "Slide A\nTemporary content"
+    "section": "Code formatting",
+    "text": "Code formatting\n# myscript.py:\nx = {  'a':37,'b':42,\n'c':927}\ny = 'hello '+       'world'\nclass foo  (     object  ):\n   def f    (self   ):\n       return       y **2\n   def g(self, x :int,\n       y : int=42\n       ) -&gt; int:\n       return x--y\ndef f  (   a ) :\n   return      37+-a[42-a :  y*3]"
   },
   {
-    "objectID": "template.html#slide-b",
-    "href": "template.html#slide-b",
+    "objectID": "swd3/good-practices.html#coding-conventions",
+    "href": "swd3/good-practices.html#coding-conventions",
     "title": "arctraining slides",
-    "section": "Slide B",
-    "text": "Slide B\nTemporary content"
+    "section": "Coding conventions",
+    "text": "Coding conventions\nIf your language or project has a standard policy, use that. For example:\n\nPython: PEP8\nR: Google’s guide for R, tidyverse style guide\nC++: Google’s style guide\nJulia: Official style guide"
   },
   {
-    "objectID": "template.html#slide-c",
-    "href": "template.html#slide-c",
+    "objectID": "swd3/good-practices.html#linters",
+    "href": "swd3/good-practices.html#linters",
     "title": "arctraining slides",
-    "section": "Slide C",
-    "text": "Slide C\nTemporary content"
+    "section": "Linters",
+    "text": "Linters\nLinters are automated tools which enforce coding conventions and check for common mistakes. For example:\n\nPython:\n\nflake8 (flags any syntax/style errors)\nblack (enforces the style)\nisort (“Sorts” imports alphabetically in groups)"
   },
   {
-    "objectID": "template.html#thank-you",
-    "href": "template.html#thank-you",
+    "objectID": "swd3/good-practices.html#example-flake8-linter",
+    "href": "swd3/good-practices.html#example-flake8-linter",
     "title": "arctraining slides",
-    "section": "Thank you",
-    "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: https://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
+    "section": "Example: Flake8 Linter",
+    "text": "Example: Flake8 Linter\n$ conda install flake8\n$ flake8 myscript.py\nmyscript.py:2:6: E201 whitespace after '{'\nmyscript.py:2:11: E231 missing whitespace after ':'\nmyscript.py:2:14: E231 missing whitespace after ','\nmyscript.py:2:18: E231 missing whitespace after ':'\nmyscript.py:3:1: E128 continuation line under-indented for visual indent\nmyscript.py:3:4: E231 missing whitespace after ':'\nmyscript.py:4:13: E225 missing whitespace around operator\nmyscript.py:4:14: E222 multiple spaces after operator\nmyscript.py:5:1: E302 expected 2 blank lines, found 0\nmyscript.py:5:13: E201 whitespace after '('\nmyscript.py:5:25: E202 whitespace before ')'\nmyscript.py:6:4: E111 indentation is not a multiple of 4\nmyscript.py:6:9: E211 whitespace before '('\nmyscript.py:6:20: E202 whitespace before ')'\nmyscript.py:7:8: E111 indentation is not a multiple of 4\nmyscript.py:7:14: E271 multiple spaces after keyword\nmyscript.py:7:25: E225 missing whitespace around operator\nmyscript.py:8:4: E301 expected 1 blank line, found 0\nmyscript.py:8:4: E111 indentation is not a multiple of 4\nmyscript.py:8:17: E203 whitespace before ':'\nmyscript.py:8:18: E231 missing whitespace after ':'\nmyscript.py:9:8: E128 continuation line under-indented for visual indent\nmyscript.py:9:9: E203 whitespace before ':'\nmyscript.py:9:15: E252 missing whitespace around parameter equals\nmyscript.py:9:16: E252 missing whitespace around parameter equals\nmyscript.py:10:8: E124 closing bracket does not match visual indentation\nmyscript.py:10:8: E125 continuation line with same indent as next logical line\nmyscript.py:11:8: E111 indentation is not a multiple of 4\nmyscript.py:12:1: E302 expected 2 blank lines, found 0\nmyscript.py:12:6: E211 whitespace before '('\nmyscript.py:12:9: E201 whitespace after '('\nmyscript.py:12:13: E202 whitespace before ')'\nmyscript.py:12:15: E203 whitespace before ':'\nmyscript.py:13:4: E111 indentation is not a multiple of 4\nmyscript.py:13:10: E271 multiple spaces after keyword\nmyscript.py:13:26: E203 whitespace before ':'\nmyscript.py:13:34: W291 trailing whitespace"
+  },
+  {
+    "objectID": "swd3/good-practices.html#example-black-code-formatter",
+    "href": "swd3/good-practices.html#example-black-code-formatter",
+    "title": "arctraining slides",
+    "section": "Example: Black Code Formatter",
+    "text": "Example: Black Code Formatter\n\nInstall and run Black\n\n$ conda install black\n$ black myscript.py\n\nCheck the file!\n\n# myscript.py:\nx = {\"a\": 37, \"b\": 42, \"c\": 927}\ny = \"hello \" + \"world\"\n\n\nclass foo(object):\n    def f(self):\n        return y**2\n\n    def g(self, x: int, y: int = 42) -&gt; int:\n        return x - -y\n\n\ndef f(a):\n    return 37 + -a[42 - a : y * 3]"
+  },
+  {
+    "objectID": "swd3/good-practices.html#ide",
+    "href": "swd3/good-practices.html#ide",
+    "title": "arctraining slides",
+    "section": "IDE",
+    "text": "IDE\nUsing an Integrated development environment (IDE) will certainly save you time, but the advantages of using an IDE go beyond that. Below are some IDE advantages\n\nSyntax highlighting\nText autocompletion\nRefactoring options\nEasily Importing libraries\nBuild, compile, or run\n\n\nVisual Studio Code\nTo install VS Code follow the instructions here."
+  },
+  {
+    "objectID": "swd3/good-practices.html#vsc-example-automatically-using-black",
+    "href": "swd3/good-practices.html#vsc-example-automatically-using-black",
+    "title": "arctraining slides",
+    "section": "VSC Example: automatically using black",
+    "text": "VSC Example: automatically using black\nConfigure VSC to use Black: Code (or File) &gt; Preferences &gt; Settings\n\nSearch for python formatting provider and choose black\nSearch for format on save and check the box to enable\n\nSelect interpreter: View &gt; Command Palette.. (or Ctrl+Shift+P)\n\nSearch for Python: Select Interpreter\nChoose the correct environment\n\nNow the Black package is going to fix your codes layout every time you save a code file."
+  },
+  {
+    "objectID": "swd3/good-practices.html#version-control",
+    "href": "swd3/good-practices.html#version-control",
+    "title": "arctraining slides",
+    "section": "Version Control",
+    "text": "Version Control\n\n\n\nPiled Higher and Deeper by Jorge Cham"
+  },
+  {
+    "objectID": "swd3/good-practices.html#test-driven-development",
+    "href": "swd3/good-practices.html#test-driven-development",
+    "title": "arctraining slides",
+    "section": "Test-driven development",
+    "text": "Test-driven development\nExample, suppose we need to find the result of a number divided by another number:\n\nNaive solutionTDD solution\n\n\n\nWrite a function a_div_b.\nCall it interactively on two or three different inputs.\nIf it produces the wrong answer, fix the function and re-run that test.\n\nThis clearly works — after all, thousands of scientists are doing it right now — but there’s a better way\n\n\n\nWrite a short function for each test.\nWrite a a_div_b function that should pass those tests.\nIf a_div_b produces any wrong answers, fix it and re-run the test functions.\n\nWriting the tests before writing the function they exercise is called test-driven development (TDD). Its advocates believe it produces better code faster because:\n\nIf people write tests after writing the thing to be tested, they are subject to confirmation bias, i.e., they subconsciously write tests to show that their code is correct, rather than to find errors.\nWriting tests helps programmers figure out what the function is actually supposed to do."
+  },
+  {
+    "objectID": "swd3/good-practices.html#possible-tests-a_div_b-example",
+    "href": "swd3/good-practices.html#possible-tests-a_div_b-example",
+    "title": "arctraining slides",
+    "section": "Possible tests: a_div_b example",
+    "text": "Possible tests: a_div_b example\nLet’s think in all possible scenarios for this problem and how we could test them.\n\nBigger by smallerSmaller by biggerNegative numbers\n\n\n\nUsing 4 and 2, the answer should be 2.\n\nassert a_div_b(4, 2) == 2\n\nOr… the answer should be larger than 1.\n\nassert a_div_b(8, 7) &gt; 1\n\n\n\nUsing 2 and 4, the answer should be 0.5.\n\nassert a_div_b(2, 4) == 0.5\n\nOr… the answer should be smaller than 1.\n\nassert a_div_b(7, 8) &lt; 1\n\n\n\nUsing -4 and -2, the answer should be 2.\n\nassert a_div_b(-4, -2) == 2\n\nOr… the answer should be positive.\n\nassert a_div_b(-4, -2) &gt; 0"
+  },
+  {
+    "objectID": "swd3/structure.html",
+    "href": "swd3/structure.html",
+    "title": "arctraining slides",
+    "section": "",
+    "text": "# The most basic structure for a code project should look like:\nmy-model\n├── README.md\n├── requirements.txt\n├── src                &lt;- Source code for this project\n└── tests              &lt;- Test code for this project\n\nReadmeRequirements\n\n\n\nIs a guide that gives users a detailed description of a project you have worked on\nIt is the first file a person will see when they encounter your project, so it should be fairly brief but detailed.\nSee how to write a good README file in this freecodecamp post.\n\n\n\n\nText information about all the necessary additional libraries, modules, and packages.\nThis can be replaced by files like: environment.yml, pyproject.toml, setup.py."
+  },
+  {
+    "objectID": "swd3/structure.html#basic-structure-suggestion",
+    "href": "swd3/structure.html#basic-structure-suggestion",
+    "title": "arctraining slides",
+    "section": "",
+    "text": "# The most basic structure for a code project should look like:\nmy-model\n├── README.md\n├── requirements.txt\n├── src                &lt;- Source code for this project\n└── tests              &lt;- Test code for this project\n\nReadmeRequirements\n\n\n\nIs a guide that gives users a detailed description of a project you have worked on\nIt is the first file a person will see when they encounter your project, so it should be fairly brief but detailed.\nSee how to write a good README file in this freecodecamp post.\n\n\n\n\nText information about all the necessary additional libraries, modules, and packages.\nThis can be replaced by files like: environment.yml, pyproject.toml, setup.py."
+  },
+  {
+    "objectID": "swd3/structure.html#advanced-project-structure",
+    "href": "swd3/structure.html#advanced-project-structure",
+    "title": "arctraining slides",
+    "section": "Advanced Project Structure",
+    "text": "Advanced Project Structure\nTemplate based on mkrapp/cookiecutter-reproducible-science github\n.\n├── AUTHORS.md\n├── LICENSE\n├── README.md\n├── bin                &lt;- Your compiled model code can be stored here (not tracked by git)\n├── config             &lt;- Configuration files, e.g., for doxygen or for your model if needed\n├── data\n│   ├── external       &lt;- Data from third party sources.\n│   ├── interim        &lt;- Intermediate data that has been transformed.\n│   ├── processed      &lt;- The final, canonical data sets for modeling.\n│   └── raw            &lt;- The original, immutable data dump.\n├── docs               &lt;- Documentation, e.g., doxygen or scientific papers (not tracked by git)\n├── notebooks          &lt;- Ipython or R notebooks\n├── reports            &lt;- For a manuscript source, e.g., LaTeX, Markdown, etc., or any project reports\n│   └── figures        &lt;- Figures for the manuscript or reports\n├── src                &lt;- Source code for this project\n│   ├── data           &lt;- scripts and programs to process data\n│   ├── external       &lt;- Any external source code, e.g., pull other git projects, or external libraries\n│   ├── models         &lt;- Source code for your own model\n│   ├── tools          &lt;- Any helper scripts go here\n│   └── visualization  &lt;- Scripts for visualisation of your results, e.g., matplotlib, ggplot2 related.\n└── tests              &lt;- Test code for this project"
   }
 ]
