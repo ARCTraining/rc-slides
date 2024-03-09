@@ -61,7 +61,7 @@ name: Introduction to High Performance Computing
 
 - **Processor**: the central processing unit (CPU) inside the node, which contains one or more  cores.
 
-- **Core**: Refers to the basic computation unit of the CPU. This is unit that carries out the actual computations.
+- **Core**: Refers to the basic computation unit of the CPU. This is the unit that carries out the actual computations.
 
 ## Leeds facilities
 
@@ -162,11 +162,11 @@ Find out which ones are available on the cluster and use them to create a
 compressed archive of a directory and its contents.
 
 ## Exercise 1.4
-How could you read a PDF file or a HTML document on the cluster?
+How could you read a PDF file or an HTML document on the cluster?
 
 ## HPC at Leeds
 
-ARC4 is latest incarnation of central HPC at Leeds.
+ARC4 is the latest incarnation of central HPC at Leeds.
 
 HPC currently comprised of two facilities called ARC3 and ARC4
 
@@ -179,7 +179,7 @@ from the use of this facility do so.
 
 252 x standard compute nodes: 24 cores and 128GB RAM (=6048 cores); 100GB SSD
 
-4 x High Memory (24 core and 768GB nodes)
+4 x High Memory (24 cores and 768GB nodes)
 
 6 x P100 GPU nodes (24 core, 128GB and 4 x NVidia P100)
 
@@ -193,9 +193,9 @@ from the use of this facility do so.
 
 2 x login nodes: 40 cores and 192GB RAM
 
-149 x standard compute nodes: 40 cores and 192GB RAM (=6048 cores); 100GB SSD
+149 x standard compute nodes: 40 cores and 192GB RAM (=5960 cores); 100GB SSD
 
-4 x High Memory (40 core and 768GB nodes)
+4 x High Memory (40 cores and 768GB nodes)
 
 3 x V100 GPU nodes (40 core, 192GB and 4 x NVidia V100)
 
@@ -269,11 +269,11 @@ This is:
 
 ## /nobackup
 
-- Each HPC cluster has it’s own high speed storage service called /nobackup
+- Each HPC cluster has its own high speed storage service called /nobackup
 - You need to make your own directory (using `mkdir`)
 - Nothing is backed up
 - Files will expire after 90 days not being used
-- Need to set permissions to make files private ARC3 but not on ARC4.
+- Need to set permissions to make files private on ARC3 but not on ARC4.
 
 ## Local storage
 
@@ -352,7 +352,7 @@ or
 #$ -l coproc_k80=1
 ```
 
-Should not ask for memory or cpu cores
+Should not ask for memory or CPU cores
 
 [More on GPGPU](https://arcdocs.leeds.ac.uk/usage/gpgpu.html)
 
