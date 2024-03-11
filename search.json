@@ -179,21 +179,14 @@
     "href": "datavis01.html#why-do-you-want-to-learn-data-vis-or-python",
     "title": "arctraining slides",
     "section": "Why do you want to learn data vis or Python?",
-    "text": "Why do you want to learn data vis or Python?\nAdd a line to the hackpad!\n\nWhat’s your name and role?\nWhat department or research group are you in?\nWhat are you hoping to learn?"
-  },
-  {
-    "objectID": "datavis01.html#some-examples",
-    "href": "datavis01.html#some-examples",
-    "title": "arctraining slides",
-    "section": "Some examples",
-    "text": "Some examples\n\nCalculate internal gravity and pressure in planetesimals"
+    "text": "Why do you want to learn data vis or Python?\nLets look at the survey results…"
   },
   {
     "objectID": "datavis01.html#section-1",
     "href": "datavis01.html#section-1",
     "title": "arctraining slides",
     "section": "",
-    "text": "Estimate subsidence of volcanic edifices on planets"
+    "text": "Some examples…\n\nMap faults on the surface of Mars"
   },
   {
     "objectID": "datavis01.html#section-2",
@@ -207,25 +200,11 @@
     "href": "datavis01.html#section-3",
     "title": "arctraining slides",
     "section": "",
-    "text": "Map faults on the surface of Mars"
+    "text": "Model the thermal evolution of meteorite parent bodies"
   },
   {
     "objectID": "datavis01.html#section-4",
     "href": "datavis01.html#section-4",
-    "title": "arctraining slides",
-    "section": "",
-    "text": "Map faults on the surface of Mars"
-  },
-  {
-    "objectID": "datavis01.html#section-5",
-    "href": "datavis01.html#section-5",
-    "title": "arctraining slides",
-    "section": "",
-    "text": "Model the thermal evolution of meteorite parent bodies"
-  },
-  {
-    "objectID": "datavis01.html#section-6",
-    "href": "datavis01.html#section-6",
     "title": "arctraining slides",
     "section": "",
     "text": "Plot and analyse x-ray element maps"
@@ -242,21 +221,21 @@
     "href": "datavis01.html#rule-1-know-your-audience",
     "title": "arctraining slides",
     "section": "Rule 1: Know Your Audience",
-    "text": "Rule 1: Know Your Audience\nWho will be reading it, in what context?\n\n\n\nYou\nYour supervisor(s)\nGeneral scientific or research audience\nExperts in your field\nExperts in a specific method you use\nThe general public\nPolicy makers\nUndergraduate students\n\n\n\nScientific journal\nA general lecture on a research area\nAn outreach event\nUpdating funders\nFunding application\nThesis examiners"
+    "text": "Rule 1: Know Your Audience\nWho will be reading it, in what context?\n\n\n\nYou\nYour supervisor(s)\nGeneral scientific or research audience\nExperts in your field\nExperts in a specific method you use\nThe general public\nPolicy makers\nUndergraduate students\n\n\n\nScientific journal\nA general lecture on a research area\nAn outreach event\nUpdating funders\nFunding application\nThesis examiners\n\nWhat different requirements might these audiences/contexts have?"
   },
   {
     "objectID": "datavis01.html#rule-2-identify-your-message",
     "href": "datavis01.html#rule-2-identify-your-message",
     "title": "arctraining slides",
     "section": "Rule 2: Identify Your Message",
-    "text": "Rule 2: Identify Your Message\n\nThe figure should express an idea quickly and succinctly\nIt’s important to know exactly what the message of the figure is\nPart of this is ensuring you know what the message is\n\nPeople can get stuck knowing they “need to make a figure for this chunk of results” but are not sure what they actually need to convey"
+    "text": "Rule 2: Identify Your Message\n\nThe figure should express an idea quickly and succinctly\nPart of this is ensuring you know what the message is\n\nPeople can get stuck knowing they “need to make a figure for this chunk of results” but are not sure what they actually need to convey\n\nCome up with a one-sentence statement that captures your results, before building the plot\nShow your plots to your colleagues and see if they can deduce the key point"
   },
   {
     "objectID": "datavis01.html#browsing-documentation-galleries-can-be-a-good-idea",
     "href": "datavis01.html#browsing-documentation-galleries-can-be-a-good-idea",
     "title": "arctraining slides",
     "section": "Browsing documentation galleries can be a good idea…",
-    "text": "Browsing documentation galleries can be a good idea…\n\nMatplotlib “Plot Types” gallery\nMatplotlib general gallery\nSeaborn example gallery\nPandas chart visualisation guide\n\nAlso, check and see what other researchers in your field are using…"
+    "text": "Browsing documentation galleries can be a good idea…\n\nMatplotlib “Plot Types” gallery\nMatplotlib general gallery\nSeaborn example gallery\nPandas chart visualisation guide\n\nBut be careful not to pick an obscure, strange plot just because it looks pretty!\nAlso, check and see what other researchers in your field are using…"
   },
   {
     "objectID": "datavis01.html#rule-3-adapt-the-figure-to-the-support-medium",
@@ -277,7 +256,7 @@
     "href": "datavis01.html#rule-5-do-not-trust-the-defaults",
     "title": "arctraining slides",
     "section": "Rule 5: Do Not Trust the Defaults",
-    "text": "Rule 5: Do Not Trust the Defaults\n\nDefault settings in your chosen plotting software may not suit your needs entirely\nAdjust settings as needed"
+    "text": "Rule 5: Do Not Trust the Defaults\n\nDefault settings in your chosen plotting software may not suit your needs entirely\n\nDefaults may be outdated, not suited to your field of research, or not be accessible\n\nAdjust settings as needed - but also recognise when this might be a time-sink!"
   },
   {
     "objectID": "datavis01.html#rule-6-use-colour-effectively",
@@ -291,21 +270,21 @@
     "href": "datavis01.html#uses-for-colour",
     "title": "arctraining slides",
     "section": "Uses for Colour",
-    "text": "Uses for Colour\n\nAdding an additional dimension to your figures\nAdding clarity to different marker or line styles\nFor emphasis\nFor heatmaps"
+    "text": "Uses for Colour\n\nAdding an additional dimension to your figures (caution!)\nAdding clarity to different marker or line styles\nFor emphasis\nFor heatmaps"
   },
   {
     "objectID": "datavis01.html#pitfalls-of-colour-use",
     "href": "datavis01.html#pitfalls-of-colour-use",
     "title": "arctraining slides",
     "section": "Pitfalls of Colour-Use",
-    "text": "Pitfalls of Colour-Use\n\nRelying purely on colour to distinguish can cause issues with colour vision deficiencies, printing in greyscale, different screen settings\nColour maps may not accurately represent your data - non-perceptually uniform maps\n\nMatplotlib colour maps documentation -Even more in depth colour maps, with Proplot\nColour can be used to accidentally infer order where there is none"
+    "text": "Pitfalls of Colour-Use\n\nRelying purely on colour to distinguish can cause issues with colour vision deficiencies, printing in greyscale, different screen settings\n\nCheck if this will be an issue using an online tool such as Viz Palette\n\nColour maps may not accurately represent your data - non-perceptually uniform maps\n\nMatplotlib colour maps documentation\nEven more in depth colour maps, with Proplot\nColour can be used to accidentally infer order where there is none"
   },
   {
     "objectID": "datavis01.html#best-practice",
     "href": "datavis01.html#best-practice",
     "title": "arctraining slides",
     "section": "Best Practice",
-    "text": "Best Practice\n\nIt is a good practice to, where possible, avoid conveying information purely through color. You should always consider adding other ways to convey the same information besides just color.\nEnsure that colour does not infer order where there is none!"
+    "text": "Best Practice\n\nIt is a good practice to, where possible, avoid conveying information purely through color. You should always consider adding other ways to convey the same information besides just color.\nCheck that your colour choices will be easily distinguishable from one another\nEnsure that colour does not infer order where there is none!\nUse perceptually uniform colour maps whenever possible"
   },
   {
     "objectID": "datavis01.html#further-reading",
@@ -319,7 +298,7 @@
     "href": "datavis01.html#rule-7-do-not-mislead-the-reader",
     "title": "arctraining slides",
     "section": "Rule 7: Do Not Mislead the Reader",
-    "text": "Rule 7: Do Not Mislead the Reader\n\nFigures should represent data as objectively as possible\nAvoid creating misleading figures\n\nThis seems straightforward - to make a good scientific visualisations, don’t do academic fraud - but actually, it’s easier to accidentally misrepresent data than you might think."
+    "text": "Rule 7: Do Not Mislead the Reader\n\nFigures should represent data as objectively as possible\nAvoid creating misleading figures\n\nThis seems straightforward:\n\nto make a good scientific visualisations, don’t do academic fraud\n\nbut actually, it’s easier to accidentally misrepresent data than you might think."
   },
   {
     "objectID": "datavis01.html#rule-8-avoid-chartjunk",
