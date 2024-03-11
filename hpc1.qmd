@@ -195,7 +195,7 @@ from the use of this facility do so.
 
 149 x standard compute nodes: 40 cores and 192GB RAM (=5960 cores); 100GB SSD
 
-4 x High Memory (40 cores and 768GB nodes)
+2 x High Memory (40 cores and 768GB nodes)
 
 3 x V100 GPU nodes (40 core, 192GB and 4 x NVidia V100)
 
