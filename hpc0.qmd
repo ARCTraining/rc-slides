@@ -76,7 +76,7 @@ https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.m
 
 ::: {.notes}
 - The plan for the next 3 hours.
-- Aim for 5 to 10 minute breaks roughly every 30 minutes.
+- There will be 3 short comfort breaks.
 :::
 
 
@@ -133,9 +133,9 @@ https://github.com/ARCTraining/rc-lesson-plans/blob/main/hpc0/hpc0-lesson-plan.m
 
 ## What is a shell? 1/5
 - A shell is a terminal emulator program and scripting language
-- The terminal is a window on the screen with a prompt at which textual commands are entered and where Standard Output (stdout) and Standard Error (stderr) streams get displayed
-- During login, a user set up is finalised by reading files from the user Home Directory
-- When logged in the user is in their Home Directory
+- The terminal is a window on the screen with a prompt at which commands are entered and where Standard Output (stdout) and Standard Error (stderr) streams get displayed
+- During login, set up is finalised by reading files from your `HOME` directory
+- When you login you start in your `HOME` directory
 
 ::: {.notes}
 A terminal used to be all there was to interface between a human and the machine in early computer systems.
@@ -168,15 +168,15 @@ Euler diagrams are not yet supported in Mermaid, but this feature might be comin
 ## What is a shell? 4/5
 - Shells have `built-in` commands:
   - When called from a shell, these run without invoking (calling) other programs
-- Shells call other programs by name, and these are looked for following a `PATH`
+- Shells call other programs by name, and these are looked for in the user `PATH`
 - `PATH` is a variable and ordered list of filesystem directories
 - Each user has a `PATH` set upon login
-
+- `PATH` is a variable and can be changed
 
 ## What is a shell? 5/5
-- On HPC resources at Leeds additional Linux command utilities are available
+- On ARC3 and ARC4 additional Linux command utilities are available
 - Additional software has also been installed and made available via a module system
-- This is all accessed via the user shell
+- This functionality can differ between ARC3 and ARC4, but is all accessed via the shell
 
 ::: {.notes}
 - Using the module system is covered in HPC1.
@@ -198,10 +198,10 @@ directories
 ![](assets/img/hpc0/filesystem.png)
 
 ::: {.notes}
-- The image shows a simplified filesystem.
-- A Linux Directory is like a Windows Folder
-- Directories are arranged in a hierarchy.
-  - The top directory is the `Root Directory`.
+- The image shows a simplified filesystem
+- A Linux `directory` is like a Windows `folder`
+- Directories are arranged in a hierarchy
+  - The top directory is the `Root Directory` (`/`)
 - Linux has `symlinks` where Windows has `shortcuts`.
 :::
 
@@ -238,12 +238,13 @@ directories
 ## The default prompt
 - Upon login, you should see a prompt that looks like:
 ```{.bash code-line-numbers=false}
-[user@host ~]$
+[exuser@host ~]$
 ```
-- `user` should be your username
+- `exuser` should be your username
 - `host` should start `login1.` or `login2.` and end `arc3` or `arc4`
 - The `~` (tilde) indicates you are in your Home Directory
 - After the `$` (dollar) is where commands are formulated and entered
+- In example commands often the $ is there, but you should enter only the part after the $
 
 ::: {.notes}
 - Is it time for a break?
@@ -271,8 +272,8 @@ directories
 ## `pwd`
 - A command to print the working directory
 ```{.bash code-line-numbers=false}
-[user@host ~]$ pwd
-/home/homeXX/user
+[exuser@host ~]$ pwd
+/home/homeXX/exuser
 ```
 - When you run this the output will be slightly different:
   - `XX` should be `01` or `02`
@@ -286,12 +287,12 @@ directories
 ## `pwd` exercise
 - Type '`pwd`' at the prompt by typing the letters, then press the `<return>` or `<enter>` key:
 ```{.bash code-line-numbers=false}
-[user@host ~]$ pwd
-/home/homeXX/user
+[exuser@host ~]$ pwd
+/home/homeXX/exuser
 ```
 
 
-## `ls` 1/4
+## `ls` 1/3
 - A command to list the contents of a directory
 - There are many options for `ls`:
   - The `-a` option will list all the contents of a directory
@@ -304,22 +305,22 @@ directories
 :::
 
 
-## `ls` 2/4
-- Options can be listed in any order or combined - the following are equivalent:
+## `ls` 2/3
+- Options as for most commands can be listed in any order and they can be combined - the following are equivalent:
 ```{.bash code-line-numbers=false}
-ls -al
-ls -la
-ls -a -l
-ls -l -a
+$ ls -al
+$ ls -la
+$ ls -a -l
+$ ls -l -a
 ```
+- Note that the prompt has been abbreviated to $ in these examples...
 
-
-## `ls` 3/4
+## `ls` 3/3
 ```{.bash code-line-numbers=false}
-[user@host ~]$ ls -al
+[exuser@host ~]$ ls -al
 total 8
-drwx------     2 user group   4096 MMM DD hh:mm .
-drwxr-xr-x     3 root root    4096 MMM DD hh:mm ..
+drwx-------     2 user group   4096 MMM DD hh:mm .
+drwxr-xr-x-     3 root root    4096 MMM DD hh:mm ..
 ...
 ```
 
@@ -330,44 +331,27 @@ drwxr-xr-x     3 root root    4096 MMM DD hh:mm ..
   - The number after total is a complicated metric to do with how linked the thing being listed is.
 - The first part of other output lines detail permissions:
   - Permissions and other details listed are explained later...
-- The last part of other output lines sre the names of the things listed.
+- The last part of other output lines are the names of the things listed.
   - `.` is the directory listed.
   - `..` is the parent of that directory.
-- Details will look different to what is shown in the slide, for instance:
-  - `user`: your username."
-:::
-
-
-## `ls` 4/4
-- The following should result in many more lines of output:
-```{.bash code-line-numbers=false}
-[user@host ~]$ ls -al ~
-```
-
-::: {.notes}
-  - `MMM`: three letters representing the month a file was created e.g. `Jun`.
-- `ls -al ~` should list the details of everything in your Home Directory.
-  - Including any `hidden` files and directories..."
+- Details look different to what is shown in the slide, for instance:
+  - `exuser`: your username."
 :::
 
 
 ## `ls` exercise {.smaller}
-- Enter:
+- List the Root directory:
 ```{.bash code-line-numbers=false}
-ls /
+$ ls /
 ```
-- The output should be a list of what is in the Root Directory.
-- Enter:
+- List the non-hidden contents of your Home directory:
 ```{.bash code-line-numbers=false}
-ls ~
+$ ls ~
 ```
-- The output should be a list of everything that is in your Home Directory that is not hidden.
-  - For new users, this is nothing - not even a `README`!
-- Enter:
+-- List all the details of the contents of your Home directory including the hidden files and directories:
 ```{.bash code-line-numbers=false}
-ls -al ~
+$ ls -a -l ~
 ```
-- The output lists everything in your Home Directory.
 
 ::: {.notes}
 - Maybe poll progress.
@@ -387,18 +371,18 @@ ls -al ~
 
 
 ## `--help` and `man` exercise
-- Enter:
+- Bring up the manual page about the manual:
 ```{.bash code-line-numbers=false}
 man man
 ```
 - For help using `man`: press the h-key `<h>`.
 - To quit the help about `man` or any man page: press `<q>`.
 - To page through a man page: press `<space_bar>`.
-- Enter:
+- Have a look at the help for `ls`:
 ```{.bash code-line-numbers=false}
-ls --help
+$ ls --help
 ```
-- Enter:
+- Bring up the manual page about `ls`:
 ```{.bash code-line-numbers=false}
 man ls
 ```
@@ -424,13 +408,13 @@ man ls
 
 ## `mkdir` 1/2
 - A command to create a directory.
-- The following is for creating a directory named `test`:
+- The following should create a directory named `test` so long as you are in a directory where you have permission to write:
 ```{.bash code-line-numbers=false}
-mkdir test
+$ mkdir test
 ```
-- Attempting to create a directory that already exists prints a warning.
+- Attempting to create a directory that already exists should print a warning:
 ```{.bash code-line-numbers=false}
-[user@host ~]$ mkdir test
+$ mkdir test
 mkdir: cannot create directory ‘test’: File exists
 ```
 
@@ -441,44 +425,36 @@ mkdir: cannot create directory ‘test’: File exists
 
 ## `mkdir` 2/2
 - The `-p` option allows for creating parent directories
-- The following creates the directory `test2` and in this the directory `test3`
+- With write permission, the following should create the directory `test2` and in this the directory `test3`
 ```{.bash code-line-numbers=false}
-mkdir -p test2/test3
+$ mkdir -p test2/test3
 ```
 - To create a directory, you must have permission to write to the directory in which it is being created
 - Without write permissions a warning is printed, for example:
 ```{.bash code-line-numbers=false}
-[user@host ~]$ mkdir /test
+$ mkdir /test
 mkdir: cannot create directory ‘/test’: Permission denied
 ```
 
 
-## `cd` 1/2
+## `cd`
 - A command to change directory
+- Change to the `test` directory (from the current directory):
 ```{.bash code-line-numbers=false}
-[user@host ~]$ cd test
-[user@host test]$ cd ~
-[user@host ~]$ cd test
-[user@host test]$ cd
-[user@host ~]$
+$ cd test
 ```
-- Notice that the prompt changes.
+- Change to the user HOME directory:
+```{.bash code-line-numbers=false}
+$ cd ~
+$ cd
 - Without read permission you cannot change into a directory and a warning is printed:
 ```{.bash code-line-numbers=false}
-[user@host ~]$ cd /root
+$ cd /root
 -bash: cd: /root: Permission denied
 ```
 
 ::: {.notes}
 - `cd` is pronounced `see-dee`.
-:::
-
-
-## `cd` 1/2
-- To return to your home directory use:
-  - `cd` with no arguments or `cd ~`
-
-::: {.notes}
 - To change directories more efficiently users might like to learn about `pushd`, `popd` and `dirs`.
 :::
 
@@ -492,7 +468,11 @@ mkdir: cannot create directory ‘/test’: Permission denied
 
 ## `ls`, `mkdir` and `cd` exercise
 - Use `ls`, `mkdir` and `cd` in your home directory.
-- Check if there is a directory with your user name in `/nobackup/` and if not create it.
+- Make a directory for your files in `/nobackup` (change "exuser" to be your USERNAME):
+```{.bash code-line-numbers=false}
+$ mkdir /nobackup/exuser
+```
+
 
 ::: {.notes}
 - Maybe poll who is ready to move on.
@@ -553,7 +533,7 @@ mkdir: cannot create directory ‘/test’: Permission denied
 
 - `.bash_history`
   - A log of commands that you have entered is saved in this hidden file in your home directory.
-
+  - The commands for a session are only written to the file when you exit - If your session crashes, the commands are not written.
 
 
 ## More commands
@@ -574,7 +554,7 @@ mkdir: cannot create directory ‘/test’: Permission denied
 - A command to move a file or directory (can be used to rename)
 - The following would rename the file/directory `test` to `test_renamed`
 ```{.bash code-line-numbers=false}
-mv test test_renamed
+$ mv test test_renamed
 ```
 
 ::: {.notes}
@@ -586,16 +566,16 @@ mv test test_renamed
 - A command to copy a file or directory
 - If `test` is a file the following would make a copy named `test_copy`:
 ```{.bash code-line-numbers=false}
-cp test test_copy
+$ cp test test_copy
 ```
 - If `test` is a directory a warning would be printed:
 ```{.bash code-line-numbers=false}
-[user@host ~]$ cp test test_copy
+$ cp test test_copy
 cp: omitting directory 'test'
 ```
 - The `-r` option can copy a directory:
 ```{.bash code-line-numbers=false}
-cp -r test test_copy
+$ cp -r test test_copy
 ```
 
 ::: {.notes}
@@ -609,7 +589,7 @@ cp -r test test_copy
   - This will overwrite any existing file.
 - The following would direct the output of `ls` to a file named `README`
 ```{.bash code-line-numbers=false}
-ls > README
+$ ls > README
 ```
 - `>>` can be used in place of `>` to append to rather than overwrite the file
 
@@ -621,17 +601,17 @@ ls > README
 ## `rmdir`
 - A command to remove (delete) a directory.
 ```{.bash code-line-numbers=false}
-rmdir test
+$ rmdir test
 ```
 - It will only remove the directory if it is empty.
 - If the directory is not empty, there will be a warning and the directory is not deleted.
 ```{.bash code-line-numbers=false}
-[user@host ~]$ rmdir test
+$ rmdir test
 rmdir: failed to remove 'test': Directory not empty
 ```
 - If the user does not have permission to delete the directory, a warning is printed.
 ```{.bash code-line-numbers=false}
-[user@host ~]$ rmdir /root
+$ rmdir /root
 rmdir: failed to remove '/root': Permission denied
 ```
 
@@ -644,7 +624,7 @@ rmdir: failed to remove '/root': Permission denied
 - A command to remove (delete) files and directories.
 - The following will remove a file called `test`:
 ```{.bash code-line-numbers=false}
-rm test
+$ rm test
 ```
 - To delete a directory and all contents the `-r` option can be used.
 - The `-i` option allows for interactivity so the user can choose what to delete.
@@ -666,9 +646,9 @@ rm test
 ## `mv`, `cp`, `rmdir`, `rm`, `touch`, `>`, `>>` exercise
 - Create some directories and files as follows:
 ```{.bash code-line-numbers=false}
-mkdir -p test0/test01
-mkdir test0/test02
-touch test0/test01/test_file
+$ mkdir -p test0/test01
+$ mkdir test0/test02
+$ touch test0/test01/test_file
 ```
 - Copy `test0/test01` into `test0/test03`
 - Rename `test0/test02` into `test0/test04`
@@ -707,31 +687,31 @@ touch test0/test01/test_file
 ## git clone exercise
 - Get a copy of some data using the following `git` command:
 ```{.bash code-line-numbers=false}
-git clone https://github.com/ARCTraining/shell-training/
+$ git clone https://github.com/ARCTraining/shell-training/
 ```
 - `git` is a distributed version control system
 - Change directory into the directory called `shell-training`.
 - List the directory contents.
 
 
-## `cat`, `sort` and `cut`
-- `cat` concatenates (stream one thing after another) and prints to standard output
+## `cat`, `sort`, `cut` and pipe `|`
+- `cat` concatenates (streams one thing after another) and prints to standard output
 - `sort` sorts lines (by default alphabetically)
 - `cut` cuts lines based on a given character
 - Commands that create an output stream can have the output piped into another command that can process the stream using the symbol `|`
   - For example two files `test` and `test2` can be concatenated, sorted alphabetically and piped into head as follows:
 ```{.bash code-line-numbers=false}
-cat test test2 | sort | head
+$ cat test test2 | sort | head
 ```
 
 
-## `cat`, `sort` and `cut` demo {visibility="hidden"}
+## `cat`, `sort`, `cut`, pipe `|` demo {visibility="hidden"}
 ::: {.notes}
 - Offer a demo?
 :::
 
 
-## `cat`, `sort` and `cut` exercise {.smaller}
+## `cat`, `sort`, `cut`, pipe `|` exercise {.smaller}
 
 ::: {.panel-tabset}
 
@@ -742,11 +722,11 @@ Hint: `cut -d ',' -f 2` will split lines around the comma and yield the second f
 
 ### Solution
 ```{.bash code-line-numbers=false}
-cat birds.txt | sort | cut -d ',' -f 2 > sorted-birds.txt
+$ cat birds.txt | sort | cut -d ',' -f 2 > sorted-birds.txt
 ```
 Another option uses `awk` instead of `cut`:
 ```{.bash code-line-numbers=false}
-cat birds.txt | sort | awk '{FS=","}{print $2}' > sorted-birds.txt
+$ cat birds.txt | sort | awk '{FS=","}{print $2}' > sorted-birds.txt
 ```
 - `awk` is a scripting language used for manipulating data and generating reports
   - It supports variables, numeric functions, string functions, and logical operators
@@ -773,11 +753,11 @@ List all the lines in the files in `IOM-animals` directory alphabetically and fi
 ### Solution
 Use `head` to get the first 50 lines and `pipe it` to `tail` to get the last one:
 ```{.bash code-line-numbers=false}
-sort *.txt | head -n 50 | tail -n 1
+$ sort *.txt | head -n 50 | tail -n 1
 ```
 Another option is to use the `sed` command instead of `head` and `tail`:
 ```{.bash code-line-numbers=false}
-sort *.txt | sed -n 50p
+$ sort *.txt | sed -n 50p
 ```
 :::
 
@@ -801,7 +781,7 @@ sort *.txt | sed -n 50p
 ## `sed` 2/2
 - A simple `sed` program:
 ```{.bash code-line-numbers=false}
-sed 's/foo/bar/'
+$ sed 's/foo/bar/'
 ```
 - This program replaces all instances of `foo` with `bar` on every line
 - Take care using `sed` as it can modify files
@@ -811,11 +791,11 @@ sed 's/foo/bar/'
 - A command to print all lines containing or not containing a string of characters
 - The following will stream out all input lines containing `foo`:
 ```{.bash code-line-numbers=false}
-grep foo
+$ grep foo
 ```
 - The following will stream out all input lines not containing `foo`:
 ```{.bash code-line-numbers=false}
-grep -v foo
+$ grep -v foo
 ```
 
 
@@ -840,15 +820,15 @@ grep -v foo
 ### Solution
 Using `grep`:
 ```{.bash code-line-numbers=false}
-wc -w values* | sort -n | grep -v '100 values'
+$ wc -w values* | sort -n | grep -v '100 values'
 ```
 Using `head`:
 ```{.bash code-line-numbers=false}
-wc -w values* | sort -n | head
+$ wc -w values* | sort -n | head
 ```
 Using `awk`:
 ```{.bash code-line-numbers=false}
-wc -w values* | sort -n | awk '$1 != 100 {print $0}'
+$ wc -w values* | sort -n | awk '$1 != 100 {print $0}'
 ```
 :::
 
@@ -859,32 +839,33 @@ wc -w values* | sort -n | awk '$1 != 100 {print $0}'
 - On ARC4, group and all have no permissions by default
 - On ARC3, group and all have read permissions on files and also execute permissions on directories by default
 ```{.bash code-line-numbers=false}
-[user@host ~]$ mkdirs -p test0/test
-[user@host ~]$ touch test0/test/test-file
-[user@host ~]$ ls -la test0/test
-drwx------ 2 <owner> <group> <size> <date> <time> .
-drwx------ 3 <owner> <group> <size> <date> <time> ..
--rw------- 1 <owner> <group> <size> <date> <time> test-file
+$ mkdirs -p test0/test
+$ touch test0/test/test-file
+$ ls -la test0/test
+drwx------- 2 <owner> <group> <size> <date> <time> .
+drwx------- 3 <owner> <group> <size> <date> <time> ..
+-rw-------- 1 <owner> <group> <size> <date> <time> test-file
 ```
 
 
 ## Permissions 2/4 {.smaller}
 - A schematic to help explain what `ls -l` shows:
 ```
--rw------- 1 <owner> <group> <size> <date> <time> test-file
-     |     |    |       |       |      |      |
-     |     |    |       |       |      |      +----> time last modified
-     |     |    |       |       |      +-----------> date last modified
-     |     |    |       |       +------------------> size in bytes
-     |     |    |       +--------------------------> group assignment
-     |     |    +----------------------------------> owner username
-     |     +---------------------------------------> number of hard link
-     +---------------------------------------------> type and permissions
+-rw-------- 1 <owner> <group> <size> <date> <time> test-file
+     |      |    |       |       |      |      |
+     |      |    |       |       |      |      +----> time last modified
+     |      |    |       |       |      +-----------> date last modified
+     |      |    |       |       +------------------> size in bytes
+     |      |    |       +--------------------------> group assignment
+     |      |    +----------------------------------> owner username
+     |      +---------------------------------------> number of hard link
+     +----------------------------------------------> type and permissions
 ```
 - A schematic to help explain the type and permissions part:
 ```
--rw-------
-| |  |  |
+-rw--------
+| |  |  | |
+| |  |  | +--> another type
 | |  |  +----> all user permissions (3 characters)
 | |  +-------> group user permissions (3 characters)
 | +----------> owner permissions (3 characters)
@@ -897,7 +878,7 @@ drwx------ 3 <owner> <group> <size> <date> <time> ..
 :::: {.columns}
 
 ::: {.column}
-- ```drwxr-x---```
+- ```drwxr-x----```
   - type: directory
   - permissions
     - owner: read, write, execute
@@ -906,7 +887,7 @@ drwx------ 3 <owner> <group> <size> <date> <time> ..
 :::
 
 ::: {.column}
-- ```-rw-------```
+- ```-rw--------```
   - type: file
   - permissions
     - owner: read, write
@@ -972,8 +953,8 @@ chmod u+x test0/test/test-file
 ## Variables
 - Variables are defined and accessed as follows:
 ```{.bash code-line-numbers=false}
-var=1
-echo $var
+$ var=1
+$ echo $var
 ```
 - The variable `var` is set equal to the number `1`.
 - `echo` is a command that will send what comes after it to the Standard Output (stdout).
@@ -985,30 +966,30 @@ echo $var
 ### Examples
 - Iterator syntax to print the numbers 1 to 5:
 ```{.bash code-line-numbers=false}
-for ((i=1;i<=5;i=i+1)) do echo $i; done
+$ for ((i=1;i<=5;i=i+1)) do echo $i; done
 ```
 - Sequence syntax to print the numbers 1 to 5:
 ```{.bash code-line-numbers=false}
-for i in {1..5}; do echo $i; done
+$ for i in {1..5}; do echo $i; done
 ```
 - Sequence syntax to print even numbers from 2 to 10:
 ```{.bash code-line-numbers=false}
-for i in {2..10..2}; do echo $i; done
+$ for i in {2..10..2}; do echo $i; done
 ```
 - Iterator syntax to print a geometric series from 2 to 256:
 ```{.bash code-line-numbers=false}
-for ((i=2;i<=265;i=i*2)) do echo $i; done
+$ for ((i=2;i<=265;i=i*2)) do echo $i; done
 ```
 
 
 ## For loop 2/2
 - Example for loop to loop through directory contents:
 ```{.bash code-line-numbers=false}
-for f in *; do echo $f; done
+$ for f in *; do echo $f; done
 ```
 - Where there is a `;` there can be a new line:
 ```{.bash code-line-numbers=false}
-for f in *
+$ for f in *
 do echo $f
 done
 ```
@@ -1024,7 +1005,7 @@ done
 ### Solution
 - For loop with an iterator syntax
 ```{.bash code-line-numbers=false}
-for ((i=1;i<6;i++))
+$ for ((i=1;i<6;i++))
 do
 mkdir calculation_$i
 done
@@ -1032,7 +1013,7 @@ done
 - `i++` is shorthand for `i=i+1`
 - For loop with a sequence syntax
 ```{.bash code-line-numbers=false}
-for i in {1..5}
+$ for i in {1..5}
 do
 mkdir calculation_$i
 done
@@ -1050,7 +1031,7 @@ done
 
 ### Solution
 ```{.bash code-line-numbers=false}
-for i in {1..5}; do
+$ for i in {1..5}; do
 mkdir calculation_$i
 cd calculation_$i
 done
@@ -1066,15 +1047,15 @@ done
   - `[]` can represent any single character detailed in the square brackets.
 - The following will list all files starting with `a`:
 ```{.bash code-line-numbers=false}
-ls a*
+$ ls a*
 ```
 - The following will list all files starting with `a` and ending `.txt` that have one character between these:
 ```{.bash code-line-numbers=false}
-ls a?.txt
+$ ls a?.txt
 ```
 - The following will list all files starting with `a` and ending `.txt` that have any other string with a `0` or a `1` character between these:
 ```{.bash code-line-numbers=false}
-ls a[12].txt
+$ ls a[12].txt
 ```
 
 ::: {.notes}
@@ -1095,10 +1076,10 @@ ls a[12].txt
 ### Solution
 
 ```{.bash code-line-numbers=false}
-for f in *.txt
-> do
-> head -n 1 $f
-> done
+$ for f in *.txt
+do
+head -n 1 $f
+done
 ```
 
 :::
@@ -1111,11 +1092,11 @@ for f in *.txt
 ### Question
 If the following is run from the wildcards directory. What will be printed?
 ```{.bash code-line-numbers=false}
-for f in *.txt
-> do
-> echo $f
-> cat $f > new-file.txt
-> done
+$ for f in *.txt
+do
+echo $f
+cat $f > new-file.txt
+done
 ```
 What will the contents of `new-file.txt` be and why?
 
@@ -1157,7 +1138,7 @@ What will the contents of `new-file.txt` be and why?
 - To run the script it must have executable permissions.
 - A script saved as `script.sh` can be run using:
 ```{.bash code-line-numbers=false}
-./script.sh
+$ ./script.sh
 ```
 
 
@@ -1171,10 +1152,6 @@ What will the contents of `new-file.txt` be and why?
   - Pipe the `history` output into `tail`
   - Direct the output into a file and then use `nano` to modify this into a script
   - Modify the file permissions so you can execute the file
-  - If you named the script `script.sh` issue the following command to run it:
-```{.bash code-line-numbers=false}
-./script.sh
-```
 
 ::: {.notes}
 - Useful scripts can be put somewhere sensible and this directory can be added to your `PATH`.
