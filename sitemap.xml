@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ARCTraining.github.io/rc-slides/index.html</loc>
-    <lastmod>2024-03-11T23:03:00.752Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ARCTraining.github.io/rc-slides/swd3/sdlc.html</loc>
-    <lastmod>2024-03-11T23:03:00.012Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ARCTraining.github.io/rc-slides/swd3/project.html</loc>
-    <lastmod>2024-03-11T23:02:59.188Z</lastmod>
+    <loc>https://ARCTraining.github.io/rc-slides/datavis01.html</loc>
+    <lastmod>2024-06-27T11:33:03.328Z</lastmod>
   </url>
   <url>
     <loc>https://ARCTraining.github.io/rc-slides/donut.html</loc>
-    <lastmod>2024-03-11T23:02:57.520Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ARCTraining.github.io/rc-slides/datavis01.html</loc>
-    <lastmod>2024-03-11T23:02:56.720Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ARCTraining.github.io/rc-slides/hpc0.html</loc>
-    <lastmod>2024-03-11T23:02:54.740Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ARCTraining.github.io/rc-slides/hpc1.html</loc>
-    <lastmod>2024-03-11T23:02:55.548Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ARCTraining.github.io/rc-slides/template.html</loc>
-    <lastmod>2024-03-11T23:02:57.088Z</lastmod>
+    <lastmod>2024-06-27T11:33:01.328Z</lastmod>
   </url>
   <url>
     <loc>https://ARCTraining.github.io/rc-slides/swd3.html</loc>
-    <lastmod>2024-03-11T23:02:58.508Z</lastmod>
+    <lastmod>2024-06-27T11:32:58.772Z</lastmod>
   </url>
   <url>
-    <loc>https://ARCTraining.github.io/rc-slides/swd3/good-practices.html</loc>
-    <lastmod>2024-03-11T23:02:59.632Z</lastmod>
+    <loc>https://ARCTraining.github.io/rc-slides/hpc1.html</loc>
+    <lastmod>2024-06-27T11:32:57.376Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ARCTraining.github.io/rc-slides/swd3/project.html</loc>
+    <lastmod>2024-06-27T11:32:56.080Z</lastmod>
   </url>
   <url>
     <loc>https://ARCTraining.github.io/rc-slides/swd3/structure.html</loc>
-    <lastmod>2024-03-11T23:03:00.304Z</lastmod>
+    <lastmod>2024-06-27T11:32:55.024Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ARCTraining.github.io/rc-slides/swd3/sdlc.html</loc>
+    <lastmod>2024-06-27T11:32:55.692Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ARCTraining.github.io/rc-slides/swd3/good-practices.html</loc>
+    <lastmod>2024-06-27T11:32:56.544Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ARCTraining.github.io/rc-slides/template.html</loc>
+    <lastmod>2024-06-27T11:32:57.772Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ARCTraining.github.io/rc-slides/hpc0.html</loc>
+    <lastmod>2024-06-27T11:33:00.860Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ARCTraining.github.io/rc-slides/index.html</loc>
+    <lastmod>2024-06-27T11:33:02.092Z</lastmod>
   </url>
 </urlset>
