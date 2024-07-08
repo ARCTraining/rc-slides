@@ -1,0 +1,163 @@
+## Software Development Life Cycle (SDLC)
+
+![](./assets/img/sdlc/software-lifecicle.jpg)
+
+## SDLC {.smaller}
+
+::: {.panel-tabset}
+
+### Ideation
+
+:::: {.columns}
+::::: {.column width="80%"}
+:::::: {.subhead}
+What are we going to do?
+::::::
+
+- Brainstorming
+- Research
+:::::
+
+::::: {.column width="20%"}
+![](./assets/img/sdlc/ideation.jpg)
+:::::
+::::
+
+### Requirements
+
+:::: {.columns}
+::::: {.column width="80%"}
+:::::: {.subhead}
+How are we going to do it?
+::::::
+
+Some topics to help define requirements include:
+
+- final goal
+- project scope (how to reach the final goal)
+- what is feasible (and how)
+- what is priority
+- what resources are available
+- deadlines
+- potential risks
+
+:::::: {.warning}
+Warning: Each person involved in the project may have a different need.
+::::::
+:::::
+
+::::: {.column width="20%"}
+![](./assets/img/sdlc/requirements.png)
+:::::
+::::
+
+### Design
+
+:::: {.columns}
+::::: {.column width="80%"}
+:::::: {.subhead}
+What is the software architecture?
+::::::
+
+When designing software, the object-oriented approach is a common programming paradigm.
+
+Object-oriented components:
+
+- **Classes:** A user-defined type
+- **Object instances:** A particular object instantiated from a class.
+- **Methods:** A function which is “built in” to a class
+- **Constructor:** A special method called when instantiating a new object
+
+Some principles: abstraction, encapsulation, decomposition, generalisation
+
+::::
+::::: {.column width="20%"}
+![](./assets/img/sdlc/design.png)
+
+See more:
+[![](./assets/img/sdlc/uml.png)](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-class-diagram-tutorial/)
+:::::
+::::
+
+### Development
+
+:::: {.columns}
+::::: {.column width="80%"}
+:::::: {.subhead}
+Is this where the fun begins?
+::::::
+
+:::::: {.highlight}
+Take your time
+::::::
+:::::
+
+::::: {.column width="20%"}
+![](./assets/img/sdlc/dev.png)
+:::::
+::::
+
+Development is usually the most time consuming step in a Software Development Life Cycle.
+
+### Test
+
+:::: {.columns}
+::::: {.column width="80%"}
+:::::: {.subhead}
+Is this software good?
+::::::
+
+In this step, errors and failures are identified by exposing the code to an environment similar to the end-user experience.
+
+There are several types of testing, some examples include:
+
+- **Unit testing:** are all components working?
+- **Integration testing:** are all components working when fitted together?
+- **Performance testing:** how does the software perform against different workloads? It is fast? Stable?
+- **Functional testing:** is the software aligned with Software Requirement Specification?
+:::::
+
+::::: {.column width="20%"}
+![](./assets/img/sdlc/test.png)
+:::::
+::::
+
+### Deployment
+
+:::: {.columns}
+::::: {.column width="80%"}
+:::::: {.subhead}
+Can other people use my code?
+::::::
+
+You can use platforms like [GitHub](https://github.com/) to release your software.
+
+- The **functionality** of the software is linked to **several specifications** related to the operating system and versions of packages and other software related to the project.
+- **Listing these specifications will help** others to replicate the environment in which the software was developed.
+:::::
+
+::::: {.column width="20%"}
+![](./assets/img/sdlc/deployment.png)
+:::::
+::::
+
+### Maintenance
+
+:::: {.columns}
+::::: {.column width="80%"}
+:::::: {.subhead}
+Is it over?
+::::::
+
+We can classify maintenance into a few categories:
+
+- **Corrective:** fix reported errors/failures.
+- **Preventive:** regular checks and fixes.
+- **Perfective:** optimize implemented features, adding new features.
+- **Adaptive:** keep the software updated according to changes external to the project (new programming language version, new regulation, etc.).
+:::::
+::::: {.column width="20%"}
+![](./assets/img/sdlc/maintenance.png)
+:::::
+::::
+:::
