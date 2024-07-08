@@ -5,7 +5,9 @@ format:
     navigation-mode: linear
     controls-layout: bottom-right
     controls: false
-    footer: "[Research IT Website]({{< var rc.website >}}) | [Research IT Query]({{< var rc.servicedesk >}}) | [Courses Material]({{< var rc.material >}})"
+    footer: "[Research IT Website]({{< var rc.website >}}) | [Research IT Query]({{< var rc.servicedesk >}}) | [Courses Material]({{< var rc.material >}}) | [Useful Links](#useful-links)"
+    mermaid:
+      theme: neutral
 name: Software development practices for Research
 code: SWD3_2024
 ---
@@ -13,12 +15,11 @@ code: SWD3_2024
 {{< include _title.qmd >}}
 {{< include _team.qmd >}}
 
+
+{{< include swd3_2024/new-content.qmd >}}
+
+
 ## Useful Links
 
 - [GitHub Project Demo](https://github.com/ARCTraining/swd3-demo)
 - [Alan Turing Institute - Research Software Engineering Course Material](https://alan-turing-institute.github.io/rse-course/html/index.html)
-
-{{< include swd3_2024/sdlc.qmd >}}
-{{< include swd3_2024/structure.qmd >}}
-{{< include swd3_2024/good-practices.qmd >}}
-{{< include swd3_2024/project.qmd >}}

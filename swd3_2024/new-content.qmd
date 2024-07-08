@@ -1,0 +1,177 @@
+## Presentation content
+
+Note: [Useful Links](#useful-links) are compiled at the end of this presentation.
+
+## Why apply software dev principles to your coding?
+
+```{mermaid}
+flowchart LR
+  subgraph lab[1. Lab analysis of samples]
+    direction TB
+    A[Primary Standards: known comp. - P1] --> 
+    B(Samples: unknown comp.) --> 
+    C[Primary Standards again: known comp. - P2]
+  end
+  subgraph inst[2. Instrument validation after data collection]
+    direction LR
+    D[/Do P1 and P2<br>match each other<br>within error?/]-->|Yes| F
+    D -->|No| E
+    E(Instrument drift)
+    F[/Do P1 and P2 match<br>published values<br> within error?/]
+    F -->|No| G
+    G(Calibration issue)
+  end
+  lab ---> inst
+  F -->|Yes| pos
+  E --> neg
+  G --> neg
+  neg(fa:fa-ban Results not valid)
+  pos(Results may be valid)
+  pos --> posnext[Test scientific<br>validity of results]
+  neg -.-> negnext[Check instrument settings<br>Rerun analyses]
+```
+
+- Without the above documented steps, my results would not be publishable or considered in any way robust
+- How do we implement a similar workflow for computational research?
+  - We treat code as a laboratory instrument!
+
+# Anything worth doing, is worth doing well
+
+
+# Anything worth doing well, is worth doing poorly at first
+
+
+# Using git
+
+##
+
+### git workflow
+
+```{mermaid}
+gitGraph
+   commit id: "First commit"
+   commit id: "Add README.md"
+```
+
+##
+
+### git workflow
+
+```{mermaid}
+gitGraph
+   commit id: "First commit"
+   commit id: "Add README.md"
+   branch first-feature
+   checkout first-feature
+   commit id: "Adding code"
+```
+
+##
+
+### git workflow
+
+```{mermaid}
+gitGraph
+   commit id: "First commit"
+   commit id: "Add README.md"
+   branch first-feature
+   checkout first-feature
+   commit id: "Adding code"
+   commit
+   commit
+   checkout main
+   merge first-feature id: "Tests pass"
+```
+
+##
+
+### git workflow
+
+```{mermaid}
+gitGraph
+   commit id: "First commit"
+   commit id: "Add README.md"
+   branch first-feature
+   checkout first-feature
+   commit id: "Adding code"
+   commit
+   commit
+   checkout main
+   merge first-feature id: "Tests pass"
+   branch new-feature
+   checkout new-feature
+   commit
+```
+
+##
+
+### git workflow
+
+```{mermaid}
+gitGraph
+   commit id: "First commit"
+   commit id: "Add README.md"
+   branch first-feature
+   checkout first-feature
+   commit id: "Adding code"
+   commit
+   commit
+   checkout main
+   merge first-feature id: "Tests pass"
+   branch new-feature
+   checkout new-feature
+   commit
+   commit id: "Tests fail!" type:REVERSE
+```
+
+##
+
+### git workflow
+
+```{mermaid}
+gitGraph
+   commit id: "First commit"
+   commit id: "Add README.md"
+   branch first-feature
+   checkout first-feature
+   commit id: "Adding code"
+   commit
+   commit
+   checkout main
+   merge first-feature id: "Tests pass"
+   branch new-feature
+   checkout new-feature
+   commit
+   commit id: "Tests fail!" type:REVERSE
+   checkout main
+   branch new-feature-02
+   commit
+   commit
+```
+
+##
+
+### git workflow
+
+```{mermaid}
+gitGraph
+   commit id: "First commit"
+   commit id: "Add README.md"
+   branch first-feature
+   checkout first-feature
+   commit id: "Adding code"
+   commit
+   commit
+   checkout main
+   merge first-feature id: "Tests pass"
+   branch new-feature
+   checkout new-feature
+   commit
+   commit id: "Tests fail!" type:REVERSE
+   checkout main
+   branch new-feature-02
+   commit
+   commit
+   checkout main
+   merge new-feature-02 id: "Tests pass still"
+```
