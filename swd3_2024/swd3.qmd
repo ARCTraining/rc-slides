@@ -1,0 +1,365 @@
+## Software Development Skills for Research Computing
+
+During this course, you will:
+
+- Learn to apply basic software development practices to improve your code
+- Get to grips with organising your code-base
+- Develop a blueprint for dealing with dependencies, conda environments, and code versions
+- Learn about various tools and resources you can implement in the future
+
+## Software Development Skills for Research Computing
+
+During this course, you will **not**:
+
+- Learn **best practice** software development: we are going for a *good enough* approach as opposed to perfect, but can point you to resources if you want to learn more 
+- Become a software developer overnight: it takes practise!
+- Learn the complicated mathematics behind your numerical models or statistical analysis, or how to implement these in Python
+
+## Agenda
+
+| Start time | End time | Duration | Content |
+|---|---|---|---|
+| **10:00** | **10:50** | **50 min** | **Intro presentation** |
+| 10:50 | 11:00 | _10 min_ | _Short break_ |
+| **11:00** | **12:00** | **60 min** | **Version control and project organisation** |
+| 12:00 | 13:00 | _60 min_ | _Lunch_ |
+| **13:00** | **13:50** | **50 min** | **Testing and linting code** |
+| 13:50 | 14:00 | _10 min_ | _Short break_ |
+| **14:00** | **14:45** | **45 min** | **Documentation and automated workflows** |
+| 14:45 | 15:00 | _15 min_ | _Short break_ |
+| **15:00** | **15:45** | **45 min** | **Packaging and releases** |
+| **15:45** | **16:00** | **15 min** | **Questions, wrap-up** |
+
+## Course notes
+
+- [Documentation and detailed notes](https://murphyqm.github.io/swd3-notes/){preview-link="true"}
+- [DeReLiCT code](https://derelict.streamlit.app/) - the bare minimum to stop your code falling down
+- [Basic Python Project Structure](https://package-your-python.streamlit.app/) - interactive webapp to generate code snippets to set up your project
+
+
+## Why apply software dev principles to your coding?
+
+An example from my research: Electron Microprobe Analysis 
+
+```{mermaid}
+flowchart LR
+  subgraph lab[1. Lab analysis of samples]
+    direction TB
+    A[Primary Standards: known comp. - P1] --> 
+    B(Samples: unknown comp.) --> 
+    C[Primary Standards again: known comp. - P2]
+  end
+  lab -..-> END[2. Instrument validation after data collection]
+```
+
+- Bracket samples with standards of known composition (published and trusted standards)
+
+## Why apply software dev principles to your coding?
+
+```{mermaid}
+flowchart LR
+  subgraph inst[2. Instrument validation after data collection]
+    direction LR
+    D[/Do P1 and P2<br>match each other<br>within error?/]-->|Yes| F
+    D -->|No| E
+    E(Instrument drift)
+    F[/Do P1 and P2 match<br>published values<br> within error?/]
+    F -->|No| G
+    G(Calibration issue)
+  end
+  START[1. Lab analysis of samples] -.-> inst
+  F -->|Yes| pos
+  E --> neg
+  G --> neg
+  neg(fa:fa-ban Results not valid)
+  pos(Results may be valid)
+  pos --> posnext[Test scientific<br>validity of results]
+  neg -.-> negnext[Check instrument settings<br>Rerun analyses]
+```
+
+- Compare standards to each other to see results are consistent over time
+- Compare standards to their published compositions
+   - Well-established allowable error
+
+## Why apply software dev principles to your coding?
+
+```{mermaid}
+flowchart LR
+  subgraph lab[1. Lab analysis of samples]
+    direction TB
+    A[Primary Standards: known comp. - P1] --> 
+    B(Samples: unknown comp.) --> 
+    C[Primary Standards again: known comp. - P2]
+  end
+  subgraph inst[2. Instrument validation after data collection]
+    direction LR
+    D[/Do P1 and P2<br>match each other<br>within error?/]-->|Yes| F
+    D -->|No| E
+    E(Instrument drift)
+    F[/Do P1 and P2 match<br>published values<br> within error?/]
+    F -->|No| G
+    G(Calibration issue)
+  end
+  lab ---> inst
+  F -->|Yes| pos
+  E --> neg
+  G --> neg
+  neg(fa:fa-ban Results not valid)
+  pos(Results may be valid)
+  pos --> posnext[Test scientific<br>validity of results]
+  neg -.-> negnext[Check instrument settings<br>Rerun analyses]
+```
+
+- Without the above documented steps, my results would not be publishable or considered in any way robust
+- How do we implement a similar workflow for computational research?
+  - We treat code as a laboratory instrument!
+
+## GitHub codespaces and devcontainers
+
+- Today, we are going to be using GitHub codespaces to run our code
+- This is essentially just a remote linux machine running in the cloud
+- You get restricted free access (120 hours per month) which is plenty for this course
+- When using what we've discussed for your own research, install everything locally
+- We have created a template repository for you to use
+
+> Make sure you have a GitHub account and know your login details!
+
+## Version Control {.smaller}
+
+![[Piled Higher and Deeper by Jorge Cham](http://www.phdcomics.com)](./assets/img/git/phd101212s.png)
+
+## Version Control
+
+- Manual: naming files `v1`, `v2`, etc.
+- Automated: using trackchanges on worddocs, overleaf etc.
+- Automated plain text: using SVN, **git** etc.
+
+We are going to use [`git`](https://git-scm.com/):
+
+- Free, open source
+- Simple, easy to learn
+- Fast
+- Very widely used within research community
+- Lots of tools built around it
+
+##
+
+### git workflow
+
+```{mermaid}
+gitGraph
+   commit id: "First commit"
+   commit id: "Add README.md"
+```
+
+##
+
+### git workflow
+
+```{mermaid}
+gitGraph
+   commit id: "First commit"
+   commit id: "Add README.md"
+   branch first-feature
+   checkout first-feature
+   commit id: "Adding code"
+```
+
+##
+
+### git workflow
+
+```{mermaid}
+gitGraph
+   commit id: "First commit"
+   commit id: "Add README.md"
+   branch first-feature
+   checkout first-feature
+   commit id: "Adding code"
+   commit
+   commit
+   checkout main
+   merge first-feature id: "Tests pass"
+```
+
+##
+
+### git workflow
+
+```{mermaid}
+gitGraph
+   commit id: "First commit"
+   commit id: "Add README.md"
+   branch first-feature
+   checkout first-feature
+   commit id: "Adding code"
+   commit
+   commit
+   checkout main
+   merge first-feature id: "Tests pass"
+   branch new-feature
+   checkout new-feature
+   commit
+```
+
+##
+
+### git workflow
+
+```{mermaid}
+gitGraph
+   commit id: "First commit"
+   commit id: "Add README.md"
+   branch first-feature
+   checkout first-feature
+   commit id: "Adding code"
+   commit
+   commit
+   checkout main
+   merge first-feature id: "Tests pass"
+   branch new-feature
+   checkout new-feature
+   commit
+   commit id: "Tests fail!" type:REVERSE
+```
+
+##
+
+### git workflow
+
+```{mermaid}
+gitGraph
+   commit id: "First commit"
+   commit id: "Add README.md"
+   branch first-feature
+   checkout first-feature
+   commit id: "Adding code"
+   commit
+   commit
+   checkout main
+   merge first-feature id: "Tests pass"
+   branch new-feature
+   checkout new-feature
+   commit
+   commit id: "Tests fail!" type:REVERSE
+   checkout main
+   branch new-feature-02
+   commit
+   commit
+```
+
+##
+
+### git workflow
+
+```{mermaid}
+gitGraph
+   commit id: "First commit"
+   commit id: "Add README.md"
+   branch first-feature
+   checkout first-feature
+   commit id: "Adding code"
+   commit
+   commit
+   checkout main
+   merge first-feature id: "Tests pass"
+   branch new-feature
+   checkout new-feature
+   commit
+   commit id: "Tests fail!" type:REVERSE
+   checkout main
+   branch new-feature-02
+   commit
+   commit
+   checkout main
+   merge new-feature-02 id: "Tests pass still"
+```
+
+## Project organisation
+
+What does your project currently look like?
+
+- Lots of Python scripts in different folders?
+- Very long, convoluted Python files?
+- Tests?
+- Comments?
+
+How do you share your Python work?
+
+How do you record what version of each script you used?
+
+How do you transfer your work to the HPC system and back?
+
+
+## Basic Structure Suggestion {.smaller}
+
+```{.bash}
+# The most basic structure for a code project should look like:
+my-model
+├── README.md
+├── requirements.txt
+├── src                <- Source code for this project
+└── tests              <- Test code for this project
+```
+
+::: {.panel-tabset}
+
+<!-- These were for python - so not necessary for more broad talk
+### Source Code
+
+
+### Test
+
+- All tests units (files and methods) must be named starting with `test_` and placed inside a package (or subpackage) called `tests`.
+- Tests can be grouped in just one folder for the entire repository or they can be organized within each package/subpackage.
+-->
+
+### Readme
+
+- Is a guide that gives users a detailed description of a project you have worked on
+- It is the first file a person will see when they encounter your project, so it should be fairly brief but detailed.
+- See how to write a good README file in this [`freecodecamp` post](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/).
+
+### Requirements
+
+- Text information about all the necessary additional libraries, modules, and packages.
+- This can be replaced by files like: [`environment.yml`](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file), [`pyproject.toml`](https://packaging.python.org/en/latest/tutorials/packaging-projects/#creating-pyproject-toml), [`setup.py`](https://www.pythonforthelab.com/blog/how-create-setup-file-your-project/).
+
+:::
+
+## Advanced Project Structure {.smaller}
+
+Template based on [mkrapp/cookiecutter-reproducible-science github](https://github.com/mkrapp/cookiecutter-reproducible-science)
+
+```bash
+.
+├── AUTHORS.md
+├── LICENSE
+├── README.md
+├── bin                <- Your compiled model code can be stored here (not tracked by git)
+├── config             <- Configuration files, e.g., for doxygen or for your model if needed
+├── data
+│   ├── external       <- Data from third party sources.
+│   ├── interim        <- Intermediate data that has been transformed.
+│   ├── processed      <- The final, canonical data sets for modeling.
+│   └── raw            <- The original, immutable data dump.
+├── docs               <- Documentation, e.g., doxygen or scientific papers (not tracked by git)
+├── notebooks          <- Ipython or R notebooks
+├── reports            <- For a manuscript source, e.g., LaTeX, Markdown, etc., or any project reports
+│   └── figures        <- Figures for the manuscript or reports
+├── src                <- Source code for this project
+│   ├── data           <- scripts and programs to process data
+│   ├── external       <- Any external source code, e.g., pull other git projects, or external libraries
+│   ├── models         <- Source code for your own model
+│   ├── tools          <- Any helper scripts go here
+│   └── visualization  <- Scripts for visualisation of your results, e.g., matplotlib, ggplot2 related.
+└── tests              <- Test code for this project
+```
+
+## Testing code
+
+## Linting and Formatting code
+
+## Documentation
+
+## Releases on GitHub

@@ -9,14 +9,14 @@ format:
     mermaid:
       theme: neutral
 name: Software development practices for Research
-code: SWD3_2024
+code: SWD3 2024
 ---
 
 {{< include _title.qmd >}}
 {{< include _team.qmd >}}
 
 
-{{< include swd3_2024/new-content.qmd >}}
+{{< include swd3_2024/swd3.qmd >}}
 
 
 ## Useful Links
