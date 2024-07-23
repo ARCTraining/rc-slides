@@ -124,6 +124,8 @@ flowchart LR
 
 > Make sure you have a GitHub account and know your login details!
 
+# Version Control
+
 ## Version Control {.smaller}
 
 ![[Piled Higher and Deeper by Jorge Cham](http://www.phdcomics.com)](./assets/img/git/phd101212s.png)
@@ -152,6 +154,10 @@ gitGraph
    commit id: "Add README.md"
 ```
 
+- Make some change to file `README.md`
+- Add the file: `git add README.md`
+- Commit the file with a message: `git commit -m "My note goes here"`
+
 ##
 
 ### git workflow
@@ -164,6 +170,10 @@ gitGraph
    checkout first-feature
    commit id: "Adding code"
 ```
+
+- Create a new branch called `first-feature`: `git branch first-feature`
+- Swap over to that branch: `git checkout first-feature`
+- Then the usual add and commit: `git add .`, `git commit` -> without the `-m` for message, this will open a text editor for you to add a message
 
 ##
 
@@ -181,6 +191,9 @@ gitGraph
    checkout main
    merge first-feature id: "Tests pass"
 ```
+
+- After making a series of changes, we can run tests on our code
+- We can merge the changes back to the main branch if we are happy
 
 ##
 
@@ -275,6 +288,31 @@ gitGraph
    merge new-feature-02 id: "Tests pass still"
 ```
 
+##
+
+## Version control
+
+### Essential git commands
+
+We will implement these later!
+
+```bash
+git status # check on status of current git repo
+git branch NAME # create a branch called NAME
+git checkout NAME # swap over to the branch called NAME
+git add . # stage all changed files for commit, you can replace "." with FILE to add a single file called FILE
+git commit # commit the staged files (this will open your text editor to create a commit message)
+git push origin NAME # push local commits to the remote branch tracking the branch NAME
+```
+
+## Version control
+
+- All your files and the git history will be stored in a public repository on GitHub
+- Transparency, easy to see your process, useful for reviewing code
+- Don't worry about your "messy workings" being visible - it's part of the scientific process
+
+# Project Organisation
+
 ## Project organisation
 
 What does your project currently look like?
@@ -295,37 +333,98 @@ How do you transfer your work to the HPC system and back?
 
 ```{.bash}
 # The most basic structure for a code project should look like:
-my-model
+my-package
 ├── README.md
-├── requirements.txt
+├── pyproject.toml
 ├── src                <- Source code for this project
 └── tests              <- Test code for this project
 ```
 
 ::: {.panel-tabset}
 
-<!-- These were for python - so not necessary for more broad talk
 ### Source Code
 
-
-### Test
-
-- All tests units (files and methods) must be named starting with `test_` and placed inside a package (or subpackage) called `tests`.
-- Tests can be grouped in just one folder for the entire repository or they can be organized within each package/subpackage.
--->
+- Your python code, including an `__init__.py` file to turn it into a package
 
 ### Readme
 
-- Is a guide that gives users a detailed description of a project you have worked on
-- It is the first file a person will see when they encounter your project, so it should be fairly brief but detailed.
+- This is a guide that gives users a detailed description of the contents of the repository: in this case, your Python package
+- It is the first file a person will see when they encounter your project, so it should be succinct
 - See how to write a good README file in this [`freecodecamp` post](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/).
 
-### Requirements
+### pyproject.toml
 
-- Text information about all the necessary additional libraries, modules, and packages.
-- This can be replaced by files like: [`environment.yml`](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file), [`pyproject.toml`](https://packaging.python.org/en/latest/tutorials/packaging-projects/#creating-pyproject-toml), [`setup.py`](https://www.pythonforthelab.com/blog/how-create-setup-file-your-project/).
+- Text information about all the necessary additional libraries, the structure of the project, your name etc.
+- Allows you to install the code in `src/` as a Python package to use elsewhere on your system
+- Find out more about the format of the [`pyproject.toml`](https://packaging.python.org/en/latest/tutorials/packaging-projects/#creating-pyproject-toml) file
+- This can be replaced by/supplemented by files like: [`environment.yml`](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file), [`setup.py`](https://www.pythonforthelab.com/blog/how-create-setup-file-your-project/).
+
+### tests
+
+- This folder contains tests that run small sections of your code with known expected results
+- All tests units (files and methods) must be named starting with `test_` and placed inside a directory called `tests`.
+- Tests can be grouped in just one folder for the entire repository or they can be organized within each package/subpackage.
 
 :::
+
+## Two directory structure
+
+- I keep my large-scale code development separate from my scientific output
+- For example, I want to analyse the thermal evolution of a planet for a scientific papers
+    - I build a numerical model of the heating and cooling of the planet
+    - I use this model to test a range of parameters and compare to various datasets
+- I might be able to reuse my numerical model in other situations so want to keep this separate
+- I know that my research process involves lots of exploratory plotting and analysis, which produces lots of scripts, and I don't want these to get mixed up with my model code
+
+## Repository 1: the numerical model as a Python package
+
+```text
+planet-evolution/            The package git repository
+├── src/  
+│   └── planet_evolution/     
+│       ├── __init__.py      Makes the folder a package.
+│       └── source.py        An example module containing source code.
+├── tests/
+|   ├── __init__.py          Sets up the test suite.
+│   └── test_source.py       A file containing tests for the code in source.py.
+├── README.md                README with information about the project.
+├── docs                     Package documentation
+├── pyproject.toml           Allows me to install this as a package
+├── LICENSE                  License text to allow for reuse
+└── CITATION.cff             Citation file that makes it easy for people to cite you!
+```
+
+This model can be installed as a package, cited in your research, and reused in a later project.
+
+## Repository 2: my scientific analysis
+
+```bash
+pallasite-parent-body-evolution/    The project git repository
+├── LICENSE
+├── README.md
+├── env.yml or requirements.txt     The libraries I need for analysis (including planet_evolution!)
+├── data                            I usually load in large data from storage elsewhere
+│   ├── interim                     But sometimes do keep small summary datafiles in the repository
+│   ├── processed
+│   └── raw
+├── docs                            Notes on analysis, process etc.
+├── notebooks                       Jupyter notebooks used for analysis
+├── reports                         For a manuscript source, e.g., LaTeX, Markdown, etc., or any project reports
+│   └── figures                     Figures for the manuscript or reports
+├── src                             Source code for this project
+│   ├── data                        Scripts and programs to process data
+│   ├── tools                       Any helper scripts go here
+│   └── visualization               Scripts for visualisation of your results, e.g., matplotlib, ggplot2 related.
+└── tests                           Test code for this project, benchmarking, comparison to analytical models
+```
+
+::: {style="font-size: 50%;"}
+
+This is the actual work for the scientific project - while others are unlikely to use this code as-is, it's public and citeable so that you can point to a specific version in your published paper and readers can reproduce your work with it if they wish.
+
+Adapted/modified from [mkrapp/cookiecutter-reproducible-science github](https://github.com/mkrapp/cookiecutter-reproducible-science)
+
+::: 
 
 ## Advanced Project Structure {.smaller}
 
@@ -356,10 +455,106 @@ Template based on [mkrapp/cookiecutter-reproducible-science github](https://gith
 └── tests              <- Test code for this project
 ```
 
+# Testing code
+
 ## Testing code
 
-## Linting and Formatting code
+Remember our example of using known standards to check the instruments in the lab?
 
-## Documentation
+This is the equivalent for computational work!
 
-## Releases on GitHub
+- Tests ensure that your code runs in the way it's intended to
+- Tests will flag if any changes you made either
+    - Produce an error or break the code
+    - "Silently" introduce errors - the code still runs, but the output is different
+
+
+## Testing code
+
+::: {style="font-size: 50%;"}
+
+> The good news is, you’ve probably already created a test without realizing it. Remember when you ran your application and used it for the first time? Did you check the features and experiment using them? That’s known as exploratory testing and is a form of manual testing.
+> 
+> Exploratory testing is a form of testing that is done without a plan. In an exploratory test, you’re just exploring the application.
+> 
+> To have a complete set of manual tests, all you need to do is make a list of all the features your application has, the different types of input it can accept, and the expected results. Now, every time you make a change to your code, you need to go through every single item on that list and check it.
+>
+> That doesn’t sound like much fun, does it?
+
+From [RealPython: Getting Started With Testing in Python](https://realpython.com/python-testing/)
+:::
+
+Lots and lots of great accessible resources for learning about this and implementing this:
+
+- [Hitchiker's Guide to Python: Testing your code](https://docs.python-guide.org/writing/tests/)
+- [A gentle introduction to Unit Testing in Python](https://machinelearningmastery.com/a-gentle-introduction-to-unit-testing-in-python/)
+- [RealPython: Getting Started With Testing in Python](https://realpython.com/python-testing/)
+
+
+## Testing code
+
+
+Python tests generally rely on `assert` statements or similar, where the test passes `if`:
+
+```python
+package_function_output == expected_example_output
+```
+
+::: {style="font-size: 50%;"}
+N.B. rarely in scientific applications can we use `==` as we are often dealing with floats and some degree of error; we will discuss the various alternatives that allow tolerances during the testing session.
+:::
+
+::: {.panel-tabset}
+### Unit Tests
+
+- Tests each individual little piece of code
+- Each function in your project should have a unit test
+- Tests edgecases
+
+### Integration Tests
+
+- Tests how the package works together as a whole
+- Tests various combinations of functions
+- Tests the full workflow you use for research
+
+:::
+
+## Testing your science
+
+This is often where tutorials stop when it comes to code testing: but you also need to scientifically validate your code!
+
+- Unit Testing and Integration Testing test that the code is functional, it does not check for scientific validity
+- Depending on your area/the code you are writing, you might need to test for:
+    - Numerical precision and accuracy
+    - Stability
+    - Agreement with previous numerical models/analytical solutions*
+    - Scientific sense: does the answer make physical sense? (Does the thing cool down when you expect it to? Does time run forwards?)
+
+::: {style="font-size: 50%;"}
+There are other problems with the circle of purely validating numerical models against other numerical models... but that is too long a debate for today!
+:::
+
+## Testing your science
+
+- In our two-repository set up, tests for science can be split across both:
+    - Some tests will always need to be true (the model should *always* be cooling, gravitational acceleration should *always* be >20 ms^-2 on a giant planet etc.)
+    - Some tests will be specific to your application for a scientific output and can live in that second repository
+
+::: {style="font-size: 50%;"}
+* There are other problems with the circle of purely validating numerical models against other numerical models... but that is too long a debate for today!
+:::
+
+# Linting and Formatting code
+
+- This is the equivalent of spellchecker for your code
+- Do yourself a favour and ensure whatever IDE you are using has this enabled!
+
+You can also format the code after the fact:
+
+- [Black formatter](https://black.vercel.app/){preview-link="true"}
+
+# Documentation
+
+**Comment your code!**
+
+# Releases on GitHub
