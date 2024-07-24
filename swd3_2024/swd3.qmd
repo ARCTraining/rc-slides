@@ -288,8 +288,6 @@ gitGraph
    merge new-feature-02 id: "Tests pass still"
 ```
 
-##
-
 ## Version control
 
 ### Essential git commands
@@ -546,15 +544,211 @@ There are other problems with the circle of purely validating numerical models a
 
 # Linting and Formatting code
 
+## Coding conventions {.smaller}
+
+If your language or project has a standard policy, use that. For example:
+
+- Python: [PEP8](https://www.python.org/dev/peps/pep-0008/)
+- R: [Google's guide for R](https://google.github.io/styleguide/Rguide.xml), [tidyverse style guide](https://style.tidyverse.org/)
+- C++: [Google's style guide](https://google.github.io/styleguide/cppguide.html)
+- Julia: [Official style guide](https://docs.julialang.org/en/v1/manual/style-guide/index.html)
+
+## Linters
+
+Linters are automated tools which enforce coding conventions and check for 
+common mistakes. For example:
+
+- Python:
+  - [flake8](https://flake8.pycqa.org/en/latest/index.html) (flags any syntax/style errors)
+  - [black](https://black.readthedocs.io/) (enforces the style)
+  - [isort](https://pycqa.github.io/isort/) ("Sorts" imports alphabetically in groups)
+
+## Example: Flake8 Linter
+
+```bash
+$ conda install flake8
+$ flake8 myscript.py
+myscript.py:2:6: E201 whitespace after '{'
+myscript.py:2:11: E231 missing whitespace after ':'
+myscript.py:2:14: E231 missing whitespace after ','
+myscript.py:2:18: E231 missing whitespace after ':'
+myscript.py:3:1: E128 continuation line under-indented for visual indent
+myscript.py:3:4: E231 missing whitespace after ':'
+myscript.py:4:13: E225 missing whitespace around operator
+myscript.py:4:14: E222 multiple spaces after operator
+myscript.py:5:1: E302 expected 2 blank lines, found 0
+myscript.py:5:13: E201 whitespace after '('
+myscript.py:5:25: E202 whitespace before ')'
+myscript.py:6:4: E111 indentation is not a multiple of 4
+myscript.py:6:9: E211 whitespace before '('
+myscript.py:6:20: E202 whitespace before ')'
+myscript.py:7:8: E111 indentation is not a multiple of 4
+myscript.py:7:14: E271 multiple spaces after keyword
+myscript.py:7:25: E225 missing whitespace around operator
+myscript.py:8:4: E301 expected 1 blank line, found 0
+myscript.py:8:4: E111 indentation is not a multiple of 4
+myscript.py:8:17: E203 whitespace before ':'
+myscript.py:8:18: E231 missing whitespace after ':'
+myscript.py:9:8: E128 continuation line under-indented for visual indent
+myscript.py:9:9: E203 whitespace before ':'
+myscript.py:9:15: E252 missing whitespace around parameter equals
+myscript.py:9:16: E252 missing whitespace around parameter equals
+myscript.py:10:8: E124 closing bracket does not match visual indentation
+myscript.py:10:8: E125 continuation line with same indent as next logical line
+myscript.py:11:8: E111 indentation is not a multiple of 4
+myscript.py:12:1: E302 expected 2 blank lines, found 0
+myscript.py:12:6: E211 whitespace before '('
+myscript.py:12:9: E201 whitespace after '('
+myscript.py:12:13: E202 whitespace before ')'
+myscript.py:12:15: E203 whitespace before ':'
+myscript.py:13:4: E111 indentation is not a multiple of 4
+myscript.py:13:10: E271 multiple spaces after keyword
+myscript.py:13:26: E203 whitespace before ':'
+myscript.py:13:34: W291 trailing whitespace
+```
+
+## Linters and Formatters
+
 - This is the equivalent of spellchecker for your code
 - Do yourself a favour and ensure whatever IDE you are using has this enabled!
+- I prefer having the linter run while you code, rather than running after, but this is personal preference
+- Many different tools available, we will have some preloaded in our devcontainer
 
-You can also format the code after the fact:
+You can see what the Black code formatter will do to your code here:
 
 - [Black formatter](https://black.vercel.app/){preview-link="true"}
 
+# Dependencies and Virtual Environments
+
+## Virtual Environments {.smaller}
+
+If application A needs version 1.0 of a particular module but application B
+needs version 2.0, then the requirements are in conflict and installing either
+version 1.0 or 2.0 will leave one application unable to run.
+
+The solution for this problem is to create a virtual environment, a
+self-contained directory tree that contains installation for particular versions
+of software/packages.
+
+### Conda
+
+- [Conda](https://docs.conda.io/en/latest/) is an open source package management
+system and environment management system that runs on Windows, macOS, and Linux.
+- It offers dependency and environment management for any language—Python, R, 
+Ruby, Lua, Scala, Java, JavaScript, C/ C++, Fortran, and more.
+- Easy user install via [Anaconda](https://www.anaconda.com/download).
+- We will be using the minimal [MiniForge installation](https://github.com/conda-forge/miniforge/blob/main/README.md) in our devcontainer
+
 # Documentation
 
-**Comment your code!**
+## Commenting your code
+
+- The most basic version of documentation is ensuring that your code is well-commented
+- This helps make sure you know what's happening in your code
+
+```python
+# Comments should be short, sweet, and to the point
+```
+
+```python
+constant = 1.5  # Comments can be inline too
+```
+
+- Comments should add additional context, can contain links
+- Don't add comments for the sake of commenting
+
+## Commenting your code
+
+- Comments to yourself can also help you to outline and plan your code
+- You can write pseudocode in comments to help plan functions
+
+See this example from [RealPython](https://realpython.com/python-comments-guide/):
+
+```python
+from collections import defaultdict
+
+def get_top_cities(prices):
+    top_cities = defaultdict(int)
+
+    # For each price range
+        # Get city searches in that price
+        # Count num times city was searched
+        # Take top 3 cities & add to dict
+
+    return dict(top_cities)
+```
+
+## Commenting for others
+
+In later iterations of your code you might want to clean up your comments to yourself and formalise your documentation more
+
+- In functions, you should add a [docstring](https://peps.python.org/pep-0257/#one-line-docstrings)
+
+Here's an example of a single-line docstring from the [PEP 257 docstring guidelines](https://peps.python.org/pep-0257/#one-line-docstrings)
+```python
+def kos_root():
+    """Return the pathname of the KOS root directory."""
+    global _kos_root
+    if _kos_root: return _kos_root
+    ...
+```
+
+##
+
+Docstrings can be [multiline](https://peps.python.org/pep-0257/#multi-line-docstrings) too:
+
+```python
+def complex(real=0.0, imag=0.0):
+    """Form a complex number.
+
+    Keyword arguments:
+    real -- the real part (default 0.0)
+    imag -- the imaginary part (default 0.0)
+    """
+    if imag == 0.0 and real == 0.0:
+        return complex_zero
+```
 
 # Releases on GitHub
+
+## Releases
+
+> [Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases#about-releases) are deployable software iterations you can package and make available for a wider audience to download and use.
+
+- A release takes a snapshot of your entire repository at a specific time, bundles it all into a zipped file, and stamps it with a version number (like v1.2.0), making it easy for you to reference the exact version of your code you used for a scientific project
+- You can link your GitHub repository to Zenodo and get a DOI for your releases
+
+- [Creating a release on GitHub](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release){preview-link="true"}
+
+# Working with an old project
+
+##
+
+You probably already have multiple different projects in progress, and don't have the time or capacity to go back and organise everything as we've explained. 
+
+What can you do when faced with an overwhelmingly messy codebase?
+
+Apply the DeReLiCT acronym:
+
+- Dependencies
+- Repository
+- License
+- Citation
+- Testing
+
+Learn more [here](https://derelict.streamlit.app/).
+
+## Agenda
+
+| Start time | End time | Duration | Content |
+|---|---|---|---|
+| **10:00** | **10:50** | **50 min** | **Intro presentation** |
+| 10:50 | 11:00 | _10 min_ | _Short break_ |
+| **11:00** | **12:00** | **60 min** | **Version control and project organisation** |
+| 12:00 | 13:00 | _60 min_ | _Lunch_ |
+| **13:00** | **13:50** | **50 min** | **Testing and linting code** |
+| 13:50 | 14:00 | _10 min_ | _Short break_ |
+| **14:00** | **14:45** | **45 min** | **Documentation and automated workflows** |
+| 14:45 | 15:00 | _15 min_ | _Short break_ |
+| **15:00** | **15:45** | **45 min** | **Packaging and releases** |
+| **15:45** | **16:00** | **15 min** | **Questions, wrap-up** |
