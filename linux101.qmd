@@ -29,6 +29,81 @@ Aims of this training:
 
 ## Format of this course
 
-This is a **2 hour tutorial** designed for you to follow along. 
+This is a **2 hour tutorial**. The first half will involve lecture slides with some background information, while the second half will use some coding.
 
-Before this course, you were asked to set up access to bash.
+These lecture slides are based on the [Software Carpentries documentation on Unix Shell basics](https://swcarpentry.github.io/shell-novice/).
+
+Once you finish this tutorial, we recommend you read through the extended notes available.
+
+## Syllabus
+
+- Introduction to the command line and common terminology
+
+## Interacting with a computer {.smaller}
+
+When we use a computer, we interact with the hardware through an **operating system** or **OS**.
+
+Common operating systems for research computers include:
+
+- Microsoft Windows
+- MacOS
+- Linux
+
+We are going to be looking at Linux today, which is a family of operating systems that are **Open Source** and are widely used in research, for example on **High Performance Computing** platforms like ARC4 or Aire.
+
+## Interacting with a computer {.smaller}
+
+When we use a computer, like our desktop or laptop, we often use a **Graphical User Interface** or a **GUI**.
+
+- GUIs allow us to interact with a computer through graphical means: icons, text, buttons, windows. GUIs usually involve using a mouse and clicking into menus.
+- The Windows desktop and MacOS desktop are GUIs that let you control the computer graphically.
+- Many computer programs also have GUIs: for example, Excel.
+
+![](assets/img/linux101/excel-gui.png){fig-align="center" fig-alt="A screenshot of Excel."}
+
+## Interacting with a computer {.smaller}
+
+As well as using a GUI, we can also interact with computers using a **Command Line Interface** or a **CLI**.
+
+- CLIs allow us to interact with a computer through text-based commands typed into the command-line.
+- While GUIs can be simple and intuitive to use, they can make it difficult to reproduce workflows:
+  - Sometimes you have to record by hand (or with a screen recording) what sub-options from different menus you used;
+  - Updates to GUIs can make it difficult to find the same menu options;
+  - A workflow with multiple steps can be tedious to repeat for multiple datasets (having to click through multiple layers of menu options for each dataset).
+- Many large research machines (such as the HPC machines ARC4 and Aire here at Leeds) *do not have a GUI* and so you need to interact with them through a **CLI**.
+
+## Command Line Interfaces {.smaller}
+
+- There are multiple different CLIs available:
+  - General-purpose CLIs are available for each **Operating System** for general computer control:
+    - Windows Command Prompt;
+    - Windows Powershell;
+    - Mac Terminal;
+  - Some specific programs have their own custom CLIs:
+    - Anaconda Prompt for Windows;
+    - Git Bash for Windows;
+- Today, we are going to be using a **Unix Shell**:
+  - This is the general-purpose CLI that underpins both Linux and Mac;
+  - We will use Bash, a popular Unix Shell.
+
+## Poll
+
+Throughout this presentation, we will be using quick polls to gauge your familiarity with concepts.
+
+Let's test it out:
+
+[Click here to go to Poll](https://universityofleeds.display.vevox.com#/present/694695/QXJ5D66AV3MLKLG1A1X1){target="_blank"}
+
+
+## Bash
+
+How do we access Bash?
+
+- Bash is the default shell on Unix systems like Linux or Mac
+- Bash is also available through many command-line tools for Windows:
+  - Git Bash for Windows
+  - Anaconda Prompt
+
+We're going to use a **virtual machine** for this course: this is a Linux machine running in the cloud.
+
+##
