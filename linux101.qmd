@@ -1,0 +1,34 @@
+---
+format:
+  revealjs:
+    self-contained: true
+    navigation-mode: linear
+    controls-layout: bottom-right
+    controls: false
+    footer: "[Research IT Website]({{< var rc.website >}}) | [Research IT Query]({{< var rc.servicedesk >}}) | [Courses Material]({{< var rc.material >}})"
+code: HPC 0
+name: Introduction to Linux for HPC
+---
+
+
+{{< include _title.qmd >}}
+
+## Introduction to Linux
+
+Aims of this training:
+
+- Introduce you to using command line interface (CLI) Linux
+- Build your confidence in navigating Linux file systems using the command line
+- Enable you to use Linux without a graphical user interface (GUI)
+- Prepare you for [HPC1: Introduction to High Performance Computing](https://arc.leeds.ac.uk/training/courses/hpc1/)
+
+::: {.notes}
+- This is a brief, introductory level session. 
+- Do not assume knowledge of file systems/directory structures/other computing background.
+:::
+
+## Format of this course
+
+This is a **2 hour tutorial** designed for you to follow along. 
+
+Before this course, you were asked to set up access to bash.
