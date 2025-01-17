@@ -5,7 +5,7 @@ format:
     navigation-mode: linear
     controls-layout: bottom-right
     controls: false
-    footer: "[Research IT Website]({{< var rc.website >}}) | [Research IT Query]({{< var rc.servicedesk >}}) | [Courses Material]({{< var rc.material >}})"
+    footer: "[Research IT Website]({{< var rc.website >}}) | [Research IT Query]({{< var rc.servicedesk >}}) | [Courses Material]({{< var rc.material >}}) | [Cheat sheet](#cheat-sheet)"
 code: HPC 0
 name: Introduction to Linux for HPC
 ---
@@ -29,11 +29,19 @@ Aims of this training:
 
 ## Format of this course
 
-This is a **2 hour tutorial**. The first half will involve lecture slides with some background information, while the second half will use some coding.
+This is a **2.5 hour tutorial**. We will be trying out what we are learning, so be ready for some typing!
 
-These lecture slides are based on the [Software Carpentries documentation on Unix Shell basics](https://swcarpentry.github.io/shell-novice/).
+These lecture slides are based on the [Software Carpentries documentation on Unix Shell basics](https://swcarpentry.github.io/shell-novice/), but use different examples to learn the same commands.
 
-Once you finish this tutorial, we recommend you read through the extended notes available.
+Once you finish this tutorial, we recommend you read through the extended notes available and follow through the tutorial there: you can do this work from the same *virtual machine* we will be using today.
+
+## Format of these slides {.smaller}
+
+- Everything you need for this session is in these slides.
+- We recommend you have a copy open on your computer.
+- If you have enough room on your screen, have these notes and your command line side-by-side.
+- These notes should also be viewable via mobile if you don't mind not being able to copy and paste!
+- There is a quick reference [cheat sheet](#cheat-sheet) linked in the footer; you can return to your place in the slideshow from this cheat sheet using the back button.
 
 ## Syllabus
 
@@ -106,4 +114,40 @@ How do we access Bash?
 
 We're going to use a **virtual machine** for this course: this is a Linux machine running in the cloud.
 
-##
+## Insert slides here for login details
+
+
+## Cheat Sheet {.smaller .scrollable #cheat-sheet background-color="#f5e0fd"}
+
+Use the back button in your browser to return to the slide you were previously on.
+
+**If you are lost, you can always `cd` home!**
+
+| Command | Description |
+| :--- | :--- |
+| `cd` | Change directory to home |
+| `cd dir-name` | Change directory to `dir-name` |
+| `pwd` | Print the current working directory - where am I? |
+| `name --help` | Load the manual for `name` - on Codespaces |
+| `man name` | Load the manual for `name` - on Aire/ARC |
+| `ls` | List the contents of a directory |
+| `mkdir` | Make a new directory |
+
+Some more `cd` commands:
+
+| Command | Description |
+| :--- | :--- |
+| `cd ..` | Go up a level to the parent directory |
+| `cd -` | Go back to the previous directory |
+| `cd ~/dir-name` | Go to `dir-name`, a directory in the home directory |
+
+Some more `ls` commands:
+
+| Command | Description |
+| :--- | :--- |
+| `ls -F` | List the contents of a dir, with symbols for content type |
+| `ls -a` | List *all* contents, including hidden files and directories |
+
+::: footer
+<!-- Remove footer from this page -->
+:::
