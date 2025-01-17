@@ -100,10 +100,10 @@ Throughout this presentation, we will be using quick polls to gauge your familia
 
 Let's test it out:
 
-[Click here to go to Poll](https://universityofleeds.display.vevox.com#/present/694695/QXJ5D66AV3MLKLG1A1X1){target="_blank"}
+[Click here to go to Poll](https://universityofleeds.display.vevox.com#/present/696636/ULXGUZROA4XT20VKGCAZ){target="_blank"}
 
 
-## Bash
+## Bash {.smaller}
 
 How do we access Bash?
 
@@ -114,7 +114,471 @@ How do we access Bash?
 
 We're going to use a **virtual machine** for this course: this is a Linux machine running in the cloud.
 
-## Insert slides here for login details
+This means that everyone here can run it with the exact same set-up; you only need a browser.
+
+## File system on Linux
+
+```{mermaid}
+%%| fig-align: center
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%
+flowchart
+    
+    / o--obin
+    / o--odev
+    / o--oetc
+    / o--ohome
+    home o--omy-username
+    home o--omy-friend
+    / o--otmp
+
+    my-username o--o all_my_files
+```
+
+Each rectangle is a folder or **directory** (**dir** for short)
+
+::: {.notes}
+- This shows a sketch of a file system.
+- We have a hierarchy of folders or directories sitting inside one another.
+:::
+
+## File system on Linux
+
+```{mermaid}
+%%| fig-align: center
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%
+flowchart
+    
+    / o--obin
+    / o--odev
+    / o--oetc
+    / o--ohome
+    home o--omy-username
+    home o--omy-friend
+    / o--otmp
+
+    my-username o--o all_my_files
+
+    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+```
+
+Each rectangle is a folder or **directory** (**dir** for short)
+
+::: {.notes}
+- This branching system starts from the root (the forward slash) at the very top
+- Inside this root directory, we have a bunch of system folders - we don't need to worry about these now.
+:::
+
+## File system on Linux
+
+```{mermaid}
+%%| fig-align: center
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%
+flowchart
+    
+    / o--obin
+    / o--odev
+    / o--oetc
+    / o--ohome
+    home o--omy-username
+    home o--omy-friend
+    / o--otmp
+
+    my-username o--o all_my_files
+
+    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+```
+
+Each rectangle is a folder or **directory** (**dir** for short)
+
+::: {.notes}
+- One of the directories is called "home": ths contains all the home directories of users.
+- The home directories are usually called after their owner's username.
+- If you look in this directory on a personal or family computer, you might find a handful of user home directories
+- If you look at this directory on a university HPC system, like Aire, you'll find hundreds of user home directories
+:::
+
+## File system on Linux
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%
+flowchart
+    
+    / o--obin
+    / o--odev
+    / o--oetc
+    / o--ohome
+    home o--omy-username
+    home o--omy-friend
+    / o--otmp
+
+    my-username o--o all_my_files
+
+    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+```
+
+The `my-username` folder is your **user home directory**
+
+::: {.notes}
+- Confusingly, we refer to this highlighted directory as your *home* directory
+- Even though there is a folder one level up that is called home!
+:::
+
+## File system on Linux
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%
+flowchart
+    
+    / o--obin
+    / o--odev
+    / o--oetc
+    / o--ohome
+    home o--omy-username
+    home o--omy-friend
+    / o--otmp
+
+    my-username o--o all_my_files
+
+    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+```
+
+How do we describe the address of this home directory?
+
+::: {.notes}
+- How do we describe where this directory or folder is?
+- We describe it in a similar way to a website URL, using it's path
+- We need to know all the folders directly above it...
+- You've already used folders and directories if you've ever saved a file from Word or Excel, or opened a pdf in your browser.
+:::
+
+## File system on Linux
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%
+flowchart
+    
+    / o--obin
+    / o--odev
+    / o--oetc
+    / o--ohome
+    home o--omy-username
+    home o--omy-friend
+    / o--otmp
+
+    my-username o--o all_my_files
+
+    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+```
+
+The folders in the address are `/`, `home` and `my-username`
+
+::: {.notes}
+- Above our username directory, we have home and the root (which is denoted by just a forward slash)
+:::
+
+## File system on Linux
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%
+flowchart
+    
+    / o--obin
+    / o--odev
+    / o--oetc
+    / o--ohome
+    home o--omy-username
+    home o--omy-friend
+    / o--otmp
+
+    my-username o--o all_my_files
+
+    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+```
+
+Stick them together like a URL: `/home/my-username`
+
+::: {.notes}
+- We just have to put them together like a web address (because the internet is basically just a giant file structure)
+:::
+
+## File system on Linux
+
+On Windows, file paths use backlashes ( `\` ) instead of forward slashes (`/`)!
+
+- This can cause confusion and errors if you are writing scripts that load in data from certain file paths, and need to use both Windows and Linux!
+- Thankfully there are lots of ways around this, including libraries for handling paths in Python and R
+
+::: {.notes}
+- It's useful to note that Windows uses slashes in the opposite direction for file paths.
+- We're not going to focus on this today as we are using only Linux
+- But if you get an error while coding it's useful to keep this in mind.
+:::
+
+## File system on Linux
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%
+flowchart
+    
+    / o--obin
+    / o--odev
+    / o--oetc
+    / o--ohome
+    home o--omy-username
+    home o--omy-friend
+    / o--otmp
+
+    my-username o--o all_my_files
+
+    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+```
+
+Stick them together like a URL: `/home/my-username`
+
+::: {.notes}
+- Back to our file system.
+- Today, everything we are doing will be in our home directory, so let's just focus on that!
+- When you log in to a linux system, this is usually where you will be dropped!
+:::
+
+## File system on Linux
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%
+flowchart
+    
+    / o--ohome
+    home o--omy-username
+
+    my-username o--o all_my_files
+
+    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+```
+
+`/home/my-username/all_my_files` is a bit long...
+
+::: {.notes}
+- Typing the full path to our files and folders is a bit tedious
+- lets look at a shorter way
+:::
+
+## File system on Linux
+
+::: {layout-ncol=2}
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%
+flowchart
+    
+    / o--ohome
+    home o--omy-username
+
+    my-username o--o all_my_files
+
+    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+```
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%
+flowchart
+    
+    home["~"] o--o all_my_files
+
+    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+
+```
+:::
+
+`/home/my-username/all_my_files` is a bit long...
+
+::: {.notes}
+- Typing the full path to our files and folders is a bit tedious
+- lets look at a shorter way
+:::
+
+## File system on Linux
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%
+flowchart
+    
+    home["~"] o--o all_my_files
+
+    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+```
+
+
+- To save us from typing out `/home/my-username` every time we refer to a directory or file, we can use the shortcut `~`, called a *tilde*
+- This turns `/home/my-username/all_my_files` to `~/all_my_files`
+
+## Let's explore some files!
+
+Time to explore some files on a Linux system!
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%
+flowchart TD
+    A["home/vscode/ <br> or ~"] o--o B[red-folder]
+    A o--o C[pink-folder]
+    A o--o D[blue-folder]
+
+    B o--o r1([red-1.txt ])
+    B o--o r2([red-2.txt ])
+    B o--o r3([red-3.txt ])
+
+    C o--o P1[pink-sub-folder]
+    C o--o p2(["pink-file.md <br>"])
+    C o--o p3{{"say_hi.sh <br>"}}
+
+    P1 o--o p4(["**helloworld.py** <br>"])
+    P1 o--o p5(["pink-data.csv <br>"])
+
+    D o--o b1(["**blue.r** <br>"])
+
+```
+
+## Using our custom virtual machine {.smaller}
+
+For this course, we've built a custom virtual machine for you to use.
+
+This requires a **GitHub** account which you were asked to set up before this course.
+
+(Don't worry if you haven't - please go and quickly sign up to [GitHub](https://github.com/signup) now!)
+
+- There are many other ways to access the bash shell, such as on one of the HPC systems here at Leeds, or by installing [git bash](https://git-scm.com/downloads/win) on Windows, or using the terminal on Linux or Mac.
+- We want everyone in the class to have the same directory structure and environment which is why we are using a virtual machine!
+
+## Launch virtual machine
+
+Insert instructions here
+
+## Launch virtual machine
+
+Insert instructions here
+
+## Very first command: `cd`
+
+We're going to use the `cd` command to bring us to our home directory.
+
+
+## Directory map {.smaller .scrollable #map}
+
+Use the back button in your browser to return to the slide you were previously on.
+```{mermaid}
+flowchart TD
+    START:::hidden --> |cd|A
+    A[home/vscode/] -->|cd red-folder| B[red-folder/ ]
+    A[home/vscode/] -->|cd pink-folder| C[pink-folder/ ]
+    A[home/vscode/] -->|cd blue-folder| D[blue-folder/ ]
+
+    B --- r1([red-1.txt ])
+    B --- r2([red-2.txt ])
+    B --- r3([red-3.txt ])
+
+    C --- |cd pink-sub-folder|P1[pink-sub-folder/ ]
+    C --- p2([pink-file.md ])
+    C --- |./say_hi.sh|p3{{say_hi.sh }}
+
+    P1 --- |python helloworld.py|p4([**helloworld.py** ])
+    P1 --- p5([pink-data.csv ])
+
+    D --- |Rscript blue.r|b1([**blue.r** ])
+
+```
+
+Scroll down to see key:
+
+```{mermaid}
+flowchart TD
+  E[folder] -->|CLI argument|F([file])
+  E[folder] -->|CLI argument|G{{executable}}
+```
+
+You can use `cat filename` to print out the content of a file, or `nano filename` to open the nano text editor.
+You can also use `code filename` to open it in vscode on your virtual machine.
+
+On the HPC system, you'll likely use `nano` to edit code if you ever need to.
 
 
 ## Cheat Sheet {.smaller .scrollable #cheat-sheet background-color="#f5e0fd"}
