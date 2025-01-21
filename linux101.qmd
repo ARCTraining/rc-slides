@@ -537,10 +537,134 @@ Insert instructions here
 
 Insert instructions here
 
+## The terminal
+
+Once you've launched your virtual machine, you will see a terminal window something like this:
+
+::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [/workspaces/bash-codespaces-template]{style="color: #00FFFF"} [(main)]{style="color: #FF7F50"} [$ ▮]{style="color: white"}
+
+[_ ]{style="color: black"}
+:::
+
+:::::{.fragment .fade-in}
+
+
+
+::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [<u>/workspaces/bash-codespaces-template</u>]{style="color: #00FFFF"} [(main)]{style="color: #FF7F50"} [$ ▮]{style="color: white"}
+
+[_ ]{style="color: black"}
+:::
+
+The <u>underlined section</u> is your directory *path*.
+
+:::::
+
+
+## The terminal
+
+Once you've launched your virtual machine, you will see a terminal window something like this:
+
+::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [/workspaces/bash-codespaces-template]{style="color: #00FFFF"} [(main)]{style="color: #FF7F50"} [$ ▮]{style="color: white"}
+
+[_ ]{style="color: black"}
+:::
+
+:::::{.fragment .fade-in}
+
+
+
+::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [/workspaces/bash-codespaces-template]{style="color: #00FFFF"} [<u>(main)</u>]{style="color: #FF7F50"} [$ ▮]{style="color: white"}
+
+[_ ]{style="color: black"}
+:::
+
+The <u>underlined section</u> has to do with the **git version control system**: not a topic for today, but you can learn about this in SWD2!
+
+:::::
+
+## The terminal
+
+Once you've launched your virtual machine, you will see a terminal window something like this:
+
+::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [/workspaces/bash-codespaces-template]{style="color: #00FFFF"} [(main)]{style="color: #FF7F50"} [$ ▮]{style="color: white"}
+
+[_ ]{style="color: black"}
+:::
+
+:::::{.fragment .fade-in}
+
+::: {style="font-size: 0.7em"}
+The dollar symbol ($) and rectangle (▮) on the right hand side are the end of the prompt and the cursor.
+
+- The $ tells you where the computer's message ends, and where you can enter your commands.
+- The ▮ (which will probably be slowly flashing) tells you where the cursor is; this often looks more like a vertical line ( | ) in other programs like Word.
+:::
+
+:::::
+
+## The terminal
+
+If you click on the ▮ or the space just to the right of the $ you can type in your message:
+
+::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [/workspaces/bash-codespaces-template]{style="color: #00FFFF"} [(main)]{style="color: #FF7F50"} [$ hello▮]{style="color: white"}
+
+[_ ]{style="color: black"}
+:::
+
+
+Anything you type will be in **white** text in the terminal; the cursor will blink at the end of the text.
+
+To *send* the argument or message, you need to press ENTER on your keyboard.
+
+## The terminal
+
+If you click on the ▮ or the space just to the right of the $ you can type in your message:
+
+::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [/folders]{style="color: #00FFFF"} [(main)]{style="color: #FF7F50"} [$]{style="color: grey"} [**this is the code you type**]{style="color: white"} [↵]{style="color: #DDA0DD"}
+
+[_ ]{style="color: black"}
+:::
+
+- The code you need to type/copy and paste is shown in **bold** white
+- We will hide the cursor and fade the prompt ($) to grey
+- We will show an ENTER symbol in pink to remind you how to enter the command
+
 ## Very first command: `cd`
 
 We're going to use the `cd` command to bring us to our home directory.
 
+::: {style="font-size: 1.2em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+ [_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$ ▮]{style="color: white"}
+:::
 
 ## Directory map {.smaller .scrollable #map}
 
