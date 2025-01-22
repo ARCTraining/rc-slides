@@ -495,6 +495,12 @@ flowchart
 - To save us from typing out `/home/my-username` every time we refer to a directory or file, we can use the shortcut `~`, called a *tilde*
 - This turns `/home/my-username/all_my_files` to `~/all_my_files`
 
+## Poll
+
+Let's test your familiarity with Linux file paths!
+
+[Click here to go to Poll](https://universityofleeds.display.vevox.com#/present/696636/ULXGUZROA4XT20VKGCAZ){target="_blank"}
+
 ## Let's explore some files!
 
 Time to explore some files on a Linux system!
@@ -577,7 +583,6 @@ Once you've launched your virtual machine, you will see a terminal window someth
 The <u>underlined section</u> is your directory *path*.
 
 :::::
-
 
 ## The terminal
 
@@ -865,6 +870,13 @@ What will the output be?
 - Folders or directories get a trailing forward slash (`/`);
 - *Executables* get an asterisk (`*`);
 :::
+
+## Poll
+
+Let's test your familiarity with these commands!
+
+[Click here to go to Poll](https://universityofleeds.display.vevox.com#/present/696636/ULXGUZROA4XT20VKGCAZ){target="_blank"}
+
 
 ## Recap
 
@@ -1231,6 +1243,14 @@ flowchart TD
 
 Hint: what can we see with `ls .. ` from the current directory?
 
+## Poll
+
+What if we are in `pink-subfolder` (if it's our *working directory*), and want the path to `pink-file.md`?
+
+
+[Click here to go to Poll](https://universityofleeds.display.vevox.com#/present/696636/ULXGUZROA4XT20VKGCAZ){target="_blank"}
+
+
 ## Relative paths
 
 `../pink-file.md`
@@ -1295,6 +1315,13 @@ which lists useful commands.
 4. When naming files, give them a sensible file ending: `.txt`, `.md`, `.py` etc.
 
 If you're working with old files/directories that have spaces in their names, you'll need to wrap the path in single quotation marks, `'like this.txt'`
+
+## Poll
+
+Choose some sensible Linux file and folder names!
+
+[Click here to go to Poll](https://universityofleeds.display.vevox.com#/present/696636/ULXGUZROA4XT20VKGCAZ){target="_blank"}
+
 
 ## Making files and directories {.smaller}
 
@@ -1473,6 +1500,14 @@ This means CTRL and x▮
 
 This will close the Nano text editor and return you to the command line.
 
+## Poll
+
+How comfortable are you using Nano?
+
+[Click here to go to Poll](https://universityofleeds.display.vevox.com#/present/696636/ULXGUZROA4XT20VKGCAZ){target="_blank"}
+
+
+
 ## Using arrow keys ↑ ↓
 
 - In the Nano text editor, you cannot click on the text to move the cursor: 
@@ -1624,6 +1659,13 @@ The `cp` or copy command allows us to copy files or directories to specified loc
 :::
 
 :::::
+
+## Poll
+
+How comfortable are you with exploring and handling directories using the commands we have covered?
+
+[Click here to go to Poll](https://universityofleeds.display.vevox.com#/present/696636/ULXGUZROA4XT20VKGCAZ){target="_blank"}
+
 
 ## Deleting with `rm`
 
