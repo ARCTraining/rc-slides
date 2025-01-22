@@ -13,6 +13,8 @@ name: Introduction to Linux for HPC
 
 {{< include _title.qmd >}}
 
+# Introduction section
+
 ## Introduction to Linux
 
 Aims of this training:
@@ -50,6 +52,8 @@ Once you finish this tutorial, we recommend you read through the extended notes 
 - Navigating filesystems from the command line
 - Creating and editing files and directories
 - Running simple scripts
+
+# Ways of interacting with a computer
 
 ## Interacting with a computer {.smaller}
 
@@ -106,7 +110,6 @@ Let's test it out:
 
 [Click here to go to Poll](https://universityofleeds.display.vevox.com#/present/696636/ULXGUZROA4XT20VKGCAZ){target="_blank"}
 
-
 ## Bash {.smaller}
 
 How do we access Bash?
@@ -119,6 +122,8 @@ How do we access Bash?
 We're going to use a **virtual machine** for this course: this is a Linux machine running in the cloud.
 
 This means that everyone here can run it with the exact same set-up; you only need a browser.
+
+# Linux filesystems
 
 ## File system on Linux
 
@@ -522,6 +527,8 @@ flowchart TD
 
 ```
 
+# First steps in bash
+
 ## Using our custom virtual machine {.smaller}
 
 For this course, we've built a custom virtual machine for you to use.
@@ -868,6 +875,8 @@ So far, we've used:
 - `ls -F` (`ls` with the *flag or option* `-F`) to list out the categories of the content in the directory;
 - `ls dir-name` (`ls` with the *argument* `dir-name`) to list out the content of the sub-directory `dir-name`;
 
+# Navigating filesystems with bash
+
 ## Format of bash commands
 
 You've already cracked how bash works with these few commands!
@@ -991,6 +1000,8 @@ but can also be incredibly unhelpful and overwhelming if you don't know what you
 [_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/pink-folder]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls -a**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"} [???]{style="color: grey; font-size: 0.8em;"}
 
 :::::
+
+# More complex directory structures
 
 ## `ls -a` {.smaller}
 
@@ -1264,11 +1275,13 @@ We've covered an awful lot of commands now!
 - If at any point in the course you need a refresher, just click the link at the bottom of the screen to the **Cheat Sheet**
 which lists useful commands.
 
+# Creating and editing files and directories
+
 ## Making files and directories
 
-- You can create a directory with the command `mkdir`, and the name of the new directory as an argument:
+- You can create a directory with the command `mkdir` (*make directory*), and the name of the new directory as an argument:
   - `mkdir new-dir-name`
-- You ca create files with the command `touch`, and the name of the new file as an argument:
+- You can create files with the command `touch`, and the name of the new file as an argument:
  - `touch new-file-name.txt`
 - You can provide a path (absolute or relative) instead of a name if you want to create the folder or file somewhere other that the current working directory.
 
@@ -1279,8 +1292,705 @@ which lists useful commands.
 2. Don't begin a name with a hyphen/dash (so no files called `-this`); Linux will think this is a flag/option to a command.
 3. Stick with numbers, letters, full stops, dashes/hyphens and underscores.
   - Special characters like $, %, &, *, / etc. have special meanings on the command line and can lead to confusion!
+4. When naming files, give them a sensible file ending: `.txt`, `.md`, `.py` etc.
 
 If you're working with old files/directories that have spaces in their names, you'll need to wrap the path in single quotation marks, `'like this.txt'`
+
+## Making files and directories {.smaller}
+
+- Try creating some folders and files in your home directory (`~`)
+  - `mkdir path-to-new-folder`
+  - `touch path-to-new-file`
+- If you want to create multiple nested folders at once, you can use the `-p` option:
+
+::::: {style="font-size: 1em; text-align: left; background-color: black; color: white; font-family: monospace"}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**mkdir -p new1/new2/new3**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::::
+
+- You can create multiple new folders in the same directory by just listing all the new names, separate by spaces:
+
+::::: {style="font-size: 1em; text-align: left; background-color: black; color: white; font-family: monospace"}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**mkdir new1 new2 new3**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::::
+
+## Editing files
+
+::::: {style="font-size: 0.7em;"}
+
+Oftentimes, when you're doing research on a platform like Aire, you don't need to do extensive manual editing of files;
+for example, if you are running multiple R scripts, you would write and test these on your desktop computer and then transfer
+them over to Aire.
+:::::
+
+- Sometimes, you might need to edit a file from the command line.
+- One popular tool that is installed on almost all systems is Nano
+- To launch Nano, you just need to type the `nano` command followed by the name of a file (this can be a new or existing file; Nano will create a file for you if it doesn't exist)
+
+## Editing files with Nano
+
+::::: {style="font-size: 1em; text-align: left; background-color: black; color: white; font-family: monospace"}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**nano new-file.txt**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::::
+
+This will open up a new screen in your terminal...
+
+## Editing files with Nano
+
+::::: {style="font-size: 1em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"} [ &nbsp; GNU nano 7.2 &nbsp; &nbsp;  &nbsp;   new-file.txt &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]{style="color: black; background-color: white; text-align: center;"}
+
+[▮]{style="color: white"}
+
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}
+
+::: {style="text-align: center;"}
+
+[New File]{style="color: black; background-color: white; text-align: center;"}
+
+[\^G]{style="color: black; background-color: white;"} Help &nbsp; &nbsp; [\^O]{style="color: black; background-color: white;"} Write Out &nbsp; &nbsp; [\^X]{style="color: black; background-color: white;"} Exit
+
+:::
+
+:::::
+
+The cursor is shown by the rectangle symbol [▮]{style="color: white; background-color: black;"}
+
+## Editing files with Nano
+
+::::: {style="font-size: 1em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"} [ &nbsp; GNU nano 7.2 &nbsp; &nbsp;  &nbsp;   new-file.txt &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]{style="color: black; background-color: white; text-align: center;"}
+
+You can type in this file;
+
+you don't need to click on it.▮
+
+
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}
+
+::: {style="text-align: center;"}
+
+[New File]{style="color: black; background-color: white; text-align: center;"}
+
+[\^G]{style="color: black; background-color: white;"} Help &nbsp; &nbsp; [\^O]{style="color: black; background-color: white;"} Write Out &nbsp; &nbsp; [\^X]{style="color: black; background-color: white;"} Exit
+
+:::
+
+:::::
+
+You can start typing.
+
+## Editing files with Nano
+
+::::: {style="font-size: 1em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"} [ &nbsp; GNU nano 7.2 &nbsp; &nbsp;  &nbsp;   new-file.txt &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]{style="color: black; background-color: white; text-align: center;"}
+
+To save your edits,
+
+hit \^O to write out.
+
+This means CTRL and o▮
+
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}
+
+::: {style="text-align: center;"}
+
+[New File]{style="color: black; background-color: white; text-align: center;"}
+
+[\^G]{style="color: black; background-color: white;"} Help &nbsp; &nbsp; [\^O]{style="color: black; background-color: white;"} Write Out &nbsp; &nbsp; [\^X]{style="color: black; background-color: white;"} Exit
+
+:::
+
+:::::
+
+## Editing files with Nano
+
+::::: {style="font-size: 1em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"} [ &nbsp; GNU nano 7.2 &nbsp; &nbsp;  &nbsp;   new-file.txt &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]{style="color: black; background-color: white; text-align: center;"}
+
+To save your edits,
+
+hit \^O to write out.
+
+This means CTRL and o▮
+
+[_ ]{style="color: black"}
+
+[&nbsp; *Hit ENTER to accept the filename*]{style="color: #00FF00; font-size: 0.7em;"}
+
+
+
+[File Name to write: new-file.txt &nbsp; &nbsp;]{style="color: black; background-color: white;"}
+
+::: {style="text-align: center;"}
+
+[\^G]{style="color: black; background-color: white;"} Help &nbsp; &nbsp; [\^C]{style="color: black; background-color: white;"} Cancel
+
+:::
+
+:::::
+
+## Editing files with Nano
+
+::::: {style="font-size: 1em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"} [ &nbsp; GNU nano 7.2 &nbsp; &nbsp;  &nbsp;   new-file.txt &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]{style="color: black; background-color: white; text-align: center;"}
+
+To save your edits,
+
+hit \^X to exit.
+
+This means CTRL and x▮
+
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}
+
+::: {style="text-align: center;"}
+
+[Wrote 3 lines]{style="color: black; background-color: white; text-align: center;"}
+
+[\^G]{style="color: black; background-color: white;"} Help &nbsp; &nbsp; [\^O]{style="color: black; background-color: white;"} Write Out &nbsp; &nbsp; [\^X]{style="color: black; background-color: white;"} Exit
+
+:::
+
+:::::
+
+This will close the Nano text editor and return you to the command line.
+
+## Using arrow keys ↑ ↓
+
+- In the Nano text editor, you cannot click on the text to move the cursor: 
+  - You need to use the arrow keys on your keyboard to navigate the text.  ← ↑	→	↓
+- What happens when you use the up and down arrows when you have exited from Nano and are back in the shell?
+
+:::{.fragment .fade-in}
+
+::::: {style="font-size: 0.7em;"}
+
+- The arrow keys allow you to "scroll" through previous commands you've used
+- If you don't want to use a previous command and want to stop scrolling, use \^C to cancel (CTRL and c at the same time)
+
+:::::
+
+:::
+
+## Modifying files and directories: `mv`
+
+The `mv` (move) command allows us to move a file or folder to a specified location:
+
+- Move the file `file-name` to the directory `new-location`: `mv file-name new-location`
+- Move the directory `dir-name` to the directory `new-location`: `mv dir-name new-location`
+
+If you move the file or directory to the same location it's already in, it renames it.
+
+## Modifying files and directories: `mv`
+
+::::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/somewhere]{style="color: #00FFFF"} [$]{style="color: grey"} [**cd**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**touch test-file.txt**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls -F**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[blue-folder/  pink-folder/ red-folder/]{style="color: #00FFFF"} [test-file.txt]{style="color: white"}
+
+:::
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**mv test-file.txt test-file.md**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls -F**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[blue-folder/  pink-folder/ red-folder/]{style="color: #00FFFF"} [test-file.md]{style="color: white"}
+
+:::
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**mv test-file.md blue-folder**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::
+
+:::::
+
+:::{.fragment .fade-in}
+What's the result of `ls` and `ls blue-folder` now? Repeat this with a new directory in your home directory.
+:::
+
+## Modifying files and directories: `mv`
+
+- Do you use the same *syntax* to move directories and files?
+  - Yes, `mv` works *recursively* and moves directories (and everything in them).
+
+After this course, experiment with moving directories around the virtual machine.
+
+- Don't worry about messing up the directory structure - you can rebuild a new VM at any point.
+- This is a safe sandbox to experiment in!
+
+**BUT, it's important to note that you can accidentally overwrite files using `mv`: this is why it's useful to practise and get used to using this command in a safe place!**
+
+## Modifying files and directories: `cp` {.smaller}
+
+The `cp` or copy command allows us to copy files or directories to specified locations.
+
+::::: {style="font-size: 1em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/somewhere]{style="color: #00FFFF"} [$]{style="color: grey"} [**cd**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**touch new-test.txt**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+[_ ]{style="color: black"} [You can us ls or ls -F to check the file is created]{style="color: #DDA0DD; font-size: 0.9em;"}
+
+:::
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**nano new-test.txt**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+[_ ]{style="color: black"} [Add some text to the file. After saving, check the content with cat:]{style="color: #DDA0DD; font-size: 0.9em;"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**cat new-test.txt**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**cp new-test.txt new-test-2.txt**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+[_ ]{style="color: black"} [Check the content of new-test-2.txt with cat]{style="color: #DDA0DD; font-size: 0.9em;"}
+:::
+
+:::::
+
+## Modifying files and directories: `cp` {.smaller}
+
+The `cp` or copy command allows us to copy files or directories to specified locations.
+
+::::: {style="font-size: 0.9em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**mkdir -p test-dir/sub-dir/sub-sub-dir other-test-dir**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::{.fragment .fade-in}
+
+[_ ]{style="color: black"} [Explore your new dirs with cd and ls, then return to ~]{style="color: #DDA0DD; font-size: 0.9em;"}
+:::
+
+:::{.fragment .fade-in}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**cp test-dir/sub-dir/sub-sub-dir other-test-dir**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::
+
+:::{.fragment .fade-in}
+
+[_ ]{style="color: black"} cp: -r not specified; omitting directory 'test-dir/sub-dir/sub-sub-dir'
+
+[_ ]{style="color: black"} [We need to add a -r to our command, which means "recursive"]{style="color: #DDA0DD; font-size: 0.9em;"}
+:::
+
+:::{.fragment .fade-in}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**cp -r test-dir/sub-dir/sub-sub-dir other-test-dir**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::
+
+:::::
+
+## Deleting with `rm`
+
+Almost everyone who's used Linux before will have a horror story about the command `rm` (remove), and accidentally deleting files they didn't mean to.
+
+**But** being able to delete and clean up files is very important, especially when using a shared resource (like Aire) that has **storage quotas**.
+
+Let's clean up all the test files we just made.
+
+::::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"} [Check what files you want to delete]{style="color: #DDA0DD; font-size: 0.9em;"}
+
+:::{.fragment .fade-in}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**rm new-test.txt new-test-2.txt**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::
+
+:::::
+
+## Deleting with `rm`
+
+Deleting directories
+
+::::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**rm test-dir**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"} [Delete a directory]{style="color: #DDA0DD; font-size: 0.9em;"}
+
+:::{.fragment .fade-in}
+
+[_ ]{style="color: black"} rm: cannot remove 'test-dir/': Is a directory
+
+[Like cp, we need to tell rm we want it to act recursively, with -r]{style="color: #DDA0DD; font-size: 0.9em;"}
+:::
+
+:::{.fragment .fade-in}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**rm -r test-dir**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"} [Delete a directory]{style="color: #DDA0DD; font-size: 0.9em;"}
+
+:::
+
+:::::
+
+This is very powerful and can quickly delete directories of important data!
+
+
+**`rm` does not send things to the *recycling bin* or equivalent: it hard-deletes them; data is usually not recoverable.**
+
+## Deleting with `rm`
+
+A cautionary exercise
+
+Look at the following command and try to predict what it does:
+
+**Do not run!** `rm -rf *` **Do not run!** 
+
+:::{.fragment .fade-in style="font-size: 0.7em;"}
+
+- `rm`: the delete command (remove)
+- `-r`: recursive, so will eat through directories
+- `-f`: force - do not ask for clarification, just delete
+- `*`: a "wildcard" character; instead of providing a file or directory name, this essentially means **everything**
+:::
+
+:::{.fragment .fade-in style="font-size: 0.7em;"}
+
+Before we go on a break, `cd` back to your home directory, and experience the abject horror of `rm`.
+
+**Run `rm -rf *` from `/home/vscode`.  Only do this in your virtual machine on codespaces, never on a research machine**
+
+:::
+
+## Rebuild codespaces
+
+- Click on the `>< Codespaces` button in the lower left of your screen, then select "Rebuild Container" from the menu that pops up.
+- Take a break while it's re-building (remember to lock your screen if leaving your pc unattended)
+
+# Interactive scripts
+
+## Bash scripts
+
+- Use `ls -F` to list out the contents of `~/pink-folder`
+- What are the three categories of content?
+  - What kind of file is `say_hi.sh`?
+
+:::{.fragment .fade-in}
+
+**This is an *executable* file - like a Windows `.exe` file - you can run it.**
+
+Let's read it first and predict what it will do:
+
+- Use `cat say_hi.sh` to print out the contents
+
+:::
+
+## Bash scripts
+What's in `say_hi.sh`?
+
+```{.bash code-line-numbers="1|2|3|4|5|6"}
+#!/bin/sh
+echo "hello!"
+echo "Running this file prints out a number of greetings"
+echo "What's your name? (type your name in below)"
+read yourname
+echo "Nice to meet you, $yourname!"
+```
+
+:::{style="font-size: 0.6em;"}
+- `#!/bin/bash`: this is known as "shebang bin bash" tells Linux to use Bash to parse the file - we don't need to worry about this, beyond knowing to include it at the beginning of a shell script.
+- The `echo` will just print out (or echo back) any arguments after it.
+  - Try running `echo Hello` in your terminal
+- The `read` command waits for you to type input and press enter, then saves it to a variable
+  - Try running `read greeting` and pressing enter
+  - On the next line, type `Hello`, and press enter
+  - Now, type `echo $greeting` and press enter
+- Variables generally start with `$`
+
+:::
+
+## Bash scripts
+What's in `say_hi.sh`?
+
+```{.bash}
+#!/bin/sh
+echo "hello!"
+echo "Running this file prints out a number of greetings"
+echo "What's your name? (type your name in below)"
+read yourname
+echo "Nice to meet you, $yourname!"
+```
+
+What do we predict it's going to do?
+
+::::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/pink-folder]{style="color: #00FFFF"} [$]{style="color: grey"} [**./say_hi.sh**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+[Run using ./ in front of the script name]{style="color: #DDA0DD; font-size: 0.9em;"}
+:::::
+
+## Bash scripts
+
+Let's create a simple bash script. `cd` to home and open a new file with Nano:
+
+::::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/pink-folder]{style="color: #00FFFF"} [$]{style="color: grey"} [**cd**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**nano test-script.sh**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::::
+
+
+```{.bash code-line-numbers="1|2|3|4|5|6"}
+#!/bin/bash
+touch test-file-auto.txt
+mkdir new-dir-auto
+cp test-file-auto.txt new-dir-auto
+echo "Put this text in the job report" > job-report.txt
+
+```
+
+Save the file with Nano.
+
+## Bash scripts {.smaller}
+
+- Check the contents of your home directory using `ls -F`
+  - What category does your new script show as?
+- Try using `ls -l`
+
+:::{.fragment .fade-in}
+
+It's just a regular file: we need to make it executable!
+
+::::: {style="font-size: 1em; text-align: left; background-color: black; color: white; font-family: monospace"}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**chmod +x test-script.sh**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::::
+
+The `chmod` command changes or modifies file permissions: you need permission to be able to execute a bash script.
+
+- `+x` add executable permissions
+- `test-script.sh` is the name of the script you want to apply permissions to.
+
+Now, try `ls -F` again!
+:::
+
+## Run your Bash script
+
+::::: {style="font-size: 1em; text-align: left; background-color: black; color: white; font-family: monospace"}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**./test-script.sh**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::::
+
+What did it do?
+
+::: {.incremental}
+- What did the line `echo "Put this text in the job report" > job-report.txt` do?
+  - The `>` operator directs the output from `echo "your message"` to the file `job-report.txt`
+:::
+
+## Run your Bash script
+
+::: {.incremental}
+- Try to  rerun the code, what happens?
+- Replace the line `mkdir new-dir-auto` with `mkdir -p new-dir-auto` and rerun, what happens?
+  - The `-p` option (in addition to allowing you to create nested files) also allows you to try to make a folder, and if it already exists, doesn't fail
+:::
+
+## Run your Bash script
+
+::: {.incremental}
+- Change the line `echo "Put this text in the job report" > job-report.txt` to `echo "Put this text in the job report" >> job-report.txt`, what does this do?
+  - The message now gets *appended* to the file instead of overwriting
+- Add more messages by repeating `echo "message" > job-report.txt` or `echo "message" >> job-report.txt` and seeing how they behave.
+:::
+
+## Other scripts
+
+In general, on the HPC system, you will want to run scripts in other languages, like `R` or `Python` (amongst many, many others).
+
+- The way you load in a certain language varies depending on the system
+  - You'll learn how to do this on Aire at HPC 1
+- Our system is very simple but has Python and R installed
+- Often times, you will want to write a bash script that tells other scripts (written in R, Python etc.) to run
+
+## R scripts
+
+`cd` home, and then into the directory `blue-folder`:
+
+::::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/wherever]{style="color: #00FFFF"} [$]{style="color: grey"} [**cd**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+::: {.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**cd blue-folder**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::
+
+::: {.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/blue-folder]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::
+
+::: {.fragment .fade-in}
+[_ ]{style="color: black"}[blue.R]{style="color: white"}
+
+[This is an R script; if R is installed on the system it can be run with the command Rscript. Check what is in the file before running it with the command cat.]{style="color: #DDA0DD; font-size: 0.9em;"}
+:::
+
+::: {.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/blue-folder]{style="color: #00FFFF"} [$]{style="color: grey"} [**cat blue.R**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::
+
+::: {.fragment .fade-in}
+[_ ]{style="color: black"}[print("Hello World")]{style="color: white"} [Ok, lets run it]{style="color: #DDA0DD; font-size: 0.9em;"}
+:::
+
+::: {.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/blue-folder]{style="color: #00FFFF"} [$]{style="color: grey"} [**Rscript blue.R**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::
+
+:::::
+
+## R scripts
+
+::: {.incremental}
+- The R script ran, and printed the results out onto the screen
+
+What if we wanted the results saved to a text file?
+
+- In general, it's a good idea to do this in R and ensure all your results are saved in the correct data format etc.
+- However, it can be useful to save printed messages to a file for safe keeping: use a bash script
+
+What if we wanted to run multiple R scripts?
+
+- We could write a bash script to do this!
+
+:::
+
+## R scripts + bash
+
+Let's create a bash script called `r-bash.sh` and save it alongside `blue.R`; remember you'll need to do `chmod +x r-bash.sh`.
+
+```{.bash}
+#!/bin/bash
+
+Rscript blue.R
+
+```
+
+Run this: `./r-bash.sh` ; what happens?
+
+::: {.fragment .fade-in}
+
+```{.bash}
+#!/bin/bash
+
+Rscript blue.R >> output_log.txt
+
+```
+
+Run this: `./r-bash.sh` ; what happens? Use `cat` to read the output of `output_log.txt`
+
+:::
+
+## Python scripts
+
+We can do the exact same with Python scripts; we only need slightly different commands to run the `.py` script.
+
+## Python scripts
+
+`cd` home, and then into the directory `pink-folder/pink-sub-folder`:
+
+::::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/wherever]{style="color: #00FFFF"} [$]{style="color: grey"} [**cd**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+::: {.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**cd pink-folder/pink-sub-folder**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::
+
+::: {.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/pink-folder/pink-subfolder]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::
+
+::: {.fragment .fade-in}
+[_ ]{style="color: black"}[helloworld.py  pink-data.csv]{style="color: white"}
+
+[Check what is in the Python file before running it with the command cat.]{style="color: #DDA0DD; font-size: 0.9em;"}
+:::
+
+::: {.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/pink-folder/pink-subfolder]{style="color: #00FFFF"} [$]{style="color: grey"} [**cat helloworld.py**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::
+
+::: {.fragment .fade-in}
+[_ ]{style="color: black"}[print("Hello World")]{style="color: white"} [Ok, lets run it]{style="color: #DDA0DD; font-size: 0.9em;"}
+:::
+
+::: {.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/pink-folder/pink-subfolder]{style="color: #00FFFF"} [$]{style="color: grey"} [**python helloworld.py**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::
+
+:::::
+
+## Python + bash scripts
+
+Write a bash script that runs the Python script `helloworld.py` and saves the output to a text file.
+
+- Remember to always start with `#!/bin/bash`
+- Change the permissions on your bash script with `chmod +x name-of-script.sh`
+
+::: {.fragment .fade-in}
+
+```{.bash}
+#!/bin/bash
+
+python helloworld.py >> output_log.txt
+
+```
+
+Run this with `./script-name.sh` and check the contents of `output_log.txt`
+
+:::
+
+## Executable scripts
+
+- Always check the contents of any files/scripts you want to run, to ensure you understand what they are doing.
+- Use `chmod +x script-name.sh` to make a bash file executable.
+- When running Python or R scripts for research, you will need to carefully specify what version of the language (and any libraries/packages) are being used
+- Be careful of overwriting data using `>` to write files.
 
 ## Directory map {.smaller .scrollable #map}
 
@@ -1335,8 +2045,9 @@ Use the back button in your browser to return to the slide you were previously o
 | `name --help` | Load the manual for `name` - on Codespaces |
 | `man name` | Load the manual for `name` - on Aire/ARC |
 | `ls` | List the contents of a directory |
-| `cat` | Print out the contents of a file |
-| `mkdir` | Make a new directory |
+| `cat file-name` | Print out the contents of a file called `file-name` |
+| `mkdir dir-name` | Make a new directory called `dir-name` |
+| `touch file-name` | Make a new file/update the last-edited date of a file called `file-name` |
 
 Some more `cd` commands:
 
@@ -1352,6 +2063,17 @@ Some more `ls` commands:
 | :--- | :--- |
 | `ls -F` | List the contents of a dir, with symbols for content type |
 | `ls -a` | List *all* contents, including hidden files and directories |
+| `ls -l` | List contents, including permissions, the owner and their "group", and when the content was edited |
+
+
+Commands for working with files and directories:
+
+| Command | Description |
+| :--- | :--- |
+| `cp` |  |
+| `mv` |  |
+| `rm` |  |
+| `mkdir -p dir-name` | Make a new directory call `dir-name` if it doesn't already exist |
 
 ::: footer
 <!-- Remove footer from this page -->
