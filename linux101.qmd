@@ -45,7 +45,11 @@ Once you finish this tutorial, we recommend you read through the extended notes 
 
 ## Syllabus
 
-- Introduction to the command line and common terminology
+- Interacting with a computer: operating systems, GUIs and CLIs, bash
+- File systems on Linux
+- Navigating filesystems from the command line
+- Creating and editing files and directories
+- Running simple scripts
 
 ## Interacting with a computer {.smaller}
 
@@ -499,7 +503,7 @@ config:
 ---
 %%{init: {'themeVariables': { 'fontSize': '28px'}}}%%
 flowchart TD
-    A["home/vscode/ <br> or ~"] o--o B[red-folder]
+    A["/home/vscode/ <br> or ~"] o--o B[red-folder]
     A o--o C[pink-folder]
     A o--o D[blue-folder]
 
@@ -624,7 +628,7 @@ The dollar symbol ($) and rectangle (▮) on the right hand side are the end of 
 
 ## The terminal
 
-If you click on the ▮ or the space just to the right of the $ you can type in your message:
+If you click on the [▮]{style="color: white; background-color: black"} or the space just to the right of the [$]{style="color: white; background-color: black"} you can type in your message:
 
 ::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
 
@@ -642,29 +646,641 @@ To *send* the argument or message, you need to press ENTER on your keyboard.
 
 ## The terminal
 
-If you click on the ▮ or the space just to the right of the $ you can type in your message:
+If you click on the [▮]{style="color: white; background-color: black"} or the space just to the right of the [$]{style="color: white; background-color: black"} you can type in your message:
 
 ::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
 
 [_ ]{style="color: black"}
 
-[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [/folders]{style="color: #00FFFF"} [(main)]{style="color: #FF7F50"} [$]{style="color: grey"} [**this is the code you type**]{style="color: white"} [↵]{style="color: #DDA0DD"}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [/folders]{style="color: #00FFFF"} [(main)]{style="color: #FF7F50"} [$]{style="color: grey"} [**this is the code you type**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
 
 [_ ]{style="color: black"}
 :::
 
 - The code you need to type/copy and paste is shown in **bold** white
 - We will hide the cursor and fade the prompt ($) to grey
-- We will show an ENTER symbol in pink to remind you how to enter the command
+- We will show an ENTER symbol in pink to remind you how to enter the command (↵)
 
 ## Very first command: `cd`
 
 We're going to use the `cd` command to bring us to our home directory.
 
-::: {style="font-size: 1.2em; text-align: left; background-color: black; color: white; font-family: monospace"}
+::::: {style="font-size: 1.2em; text-align: left; background-color: black; color: white; font-family: monospace"}
+[_ ]{style="color: black"}
 
- [_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$ ▮]{style="color: white"}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [/folders]{style="color: #00FFFF"} [(main)]{style="color: #FF7F50"} [$]{style="color: grey"} [▮]{style="color: white"}
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [/folders]{style="color: #00FFFF"} [(main)]{style="color: #FF7F50"} [$]{style="color: grey"} [**cd**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
 :::
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [▮]{style="color: white"}
+:::
+
+[_ ]{style="color: black"}
+:::::
+
+## Very first command: `cd`
+
+- `cd` stands for *change directory*
+- It brings us back to our *home directory*, `~` or `/home/vscode`
+
+:::{.fragment .fade-in}
+- Our virtual machine is a little bit weird because it starts us off in a different folder: on most Linux systems, when you log in, you will immediately be in your home directory
+:::
+
+::::: {style="font-size: 1.2em; text-align: left; background-color: black; color: white; font-family: monospace"}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [▮]{style="color: white"}
+:::::
+
+## What's in this folder?
+
+Now that you know how to find home (from wherever in the file system you are), you need to know what's *in* your home directory.
+
+- You can *list* out the files and folders in your directory with the command `ls`
+
+## What's in this folder? `ls` to list
+
+Using the `ls` command to list out the contents of the directory:
+
+::::: {style="font-size: 1.2em; text-align: left; background-color: black; color: white; font-family: monospace"}
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [▮]{style="color: white"}
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[blue-folder    pink-folder    red-folder]{style="color: #00FFFF"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [▮]{style="color: white"}
+:::
+
+[_ ]{style="color: black"}
+:::::
+
+## What's in this folder? `ls` to list
+
+How do we know if `blue-folder` is a file or a directory? (imagine it has a less descriptive name)
+
+::::: {style="font-size: 1.2em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+[_ ]{style="color: black"}[blue-folder    pink-folder    red-folder]{style="color: #00FFFF"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [▮]{style="color: white"}
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls -F**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::
+
+:::::
+
+## What's in this folder? `ls` to list
+
+We can use `ls -F`: this tells us the category of the "things" in the directory
+
+- If the name ends in a trailing forward slash (like `this/`) then the item is a directory or folder
+
+::::: {style="font-size: 1.2em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls -F**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+[_ ]{style="color: black"}[blue-folder/    pink-folder/    red-folder/]{style="color: #00FFFF"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [▮]{style="color: white"}
+
+
+:::::
+
+## What's in this folder? `ls` to list
+
+This is what we expected: we saw in our directory map that we have three directories in our home (`~`): `red-folder`, `pink-folder`, and `blue-folder`.
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%
+flowchart TD
+    A["/home/vscode/ <br> or ~"] o--o B[red-folder]
+    A o--o C[pink-folder]
+    A o--o D[blue-folder]
+
+    B o--o r1([red-1.txt ])
+    B o--o r2([red-2.txt ])
+    B o--o r3([red-3.txt ])
+
+    C o--o P1[pink-sub-folder]
+    C o--o p2(["pink-file.md <br>"])
+    C o--o p3{{"say_hi.sh <br>"}}
+
+    P1 o--o p4(["**helloworld.py** <br>"])
+    P1 o--o p5(["pink-data.csv <br>"])
+
+    D o--o b1(["**blue.r** <br>"])
+
+```
+
+## What's in this folder? `ls` to list
+
+Let's list what's inside `pink-folder`...
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%
+flowchart TD
+    A["/home/vscode/ <br> or ~"] o--o B[red-folder]
+    A o--o C[pink-folder]
+    A o--o D[blue-folder]
+
+    B o--o r1([red-1.txt ])
+    B o--o r2([red-2.txt ])
+    B o--o r3([red-3.txt ])
+
+    C o--o P1[pink-sub-folder]
+    C o--o p2(["pink-file.md <br>"])
+    C o--o p3{{"say_hi.sh <br>"}}
+
+    P1 o--o p4(["**helloworld.py** <br>"])
+    P1 o--o p5(["pink-data.csv <br>"])
+
+    D o--o b1(["**blue.r** <br>"])
+
+```
+
+## What's in this folder? `ls` to list
+
+We can use `ls name-of-folder` to tell us what's in a sub-directory.
+
+What will the output be?
+
+::::: {style="font-size: 1.2em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls pink-folder**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[pink-file.md ]{style="color: white"} [  pink-subfolder  ]{style="color: #00FFFF"} [  say_hi.sh  ]{style="color: #00FF00"}
+:::
+
+:::::
+
+## What's in this folder? `ls` to list
+
+We can use `ls -F name-of-folder` to tell us what's in a sub-directory and what category the items are.
+
+What will the output be?
+
+::::: {style="font-size: 1.0em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls -F pink-folder**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[pink-file.md ]{style="color: white"} [  pink-subfolder/  ]{style="color: #00FFFF"} [  say_hi.sh*  ]{style="color: #00FF00"}
+:::
+
+:::::
+
+:::{.fragment .fade-in}
+- Files get no added symbols;
+- Folders or directories get a trailing forward slash (`/`);
+- *Executables* get an asterisk (`*`);
+:::
+
+## Recap
+
+So far, we've used:
+
+- `cd` on it's own to go to our home directory;
+- `ls` on it's own to list out the contents of our current directory (our home);
+- `ls -F` (`ls` with the *flag or option* `-F`) to list out the categories of the content in the directory;
+- `ls dir-name` (`ls` with the *argument* `dir-name`) to list out the content of the sub-directory `dir-name`;
+
+## Format of bash commands
+
+You've already cracked how bash works with these few commands!
+
+::::: {style="font-size: 1.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[$]{style="color: white"} [ls]{style="color: #00FFFF"} [-F]{style="color: #00FF00"} [dir-name]{style="color: #DDA0DD;"}
+
+:::: {style="font-size: 0.7em;"}
+:::{.fragment .fade-in}
+
+- [$ → prompt]{style="color: white;"}
+- [ls → command]{style="color: #00FFFF;"}
+- [-F → option]{style="color: #00FF00;"}
+- [dir-name → argument]{style="color: #DDA0DD;"}
+
+:::
+::::
+
+:::::
+
+## Adding arguments to `cd`
+
+We've used `cd` on it's own to access our home directory - what happens when we give it an argument?
+
+What will the output be?
+
+::::: {style="font-size: 1.2em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**cd pink-folder**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::{.fragment .fade-in}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/pink-folder]{style="color: #00FFFF"} [$]{style="color: grey"} [▮]{style="color: white"}
+:::
+
+:::::
+
+:::{.fragment .fade-in}
+We've moved *down* our directory structure, into the directory `pink-folder`
+:::
+
+## Explore with `cd` and `ls`
+
+- Remember, you can return to home from anywhere with `cd` and no options or arguments
+- Use `ls` to find out what is in the different directories
+- Use `cd name-of-dir` to move to a subdirectory
+- Use the [directory map](#map) if lost
+- Use the `clear` command to clean up your terminal screen if it's getting too messy:
+
+
+::::: {style="font-size: 1.2em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**clear**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::::
+
+## Getting help
+
+There are two different ways of getting information about commands and their options and arguments within the shell:
+
+- `man arg`
+- `arg --help`
+
+On our virtual machine, we are going to use the section option, `arg --help`. Try running `ls --help`:
+
+::::: {style="font-size: 1.2em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls --help**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::::
+
+## Getting help
+
+You'll be faced with a wall of text and will have to scroll to find the top of it:
+
+::::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls --help**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+Usage: ls [OPTION]... [FILE]...
+
+List information about the FILEs (the current directory by default).
+
+Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+
+Mandatory arguments to long options are mandatory for short options too.
+
+  -a, --all :                 do not ignore entries starting with .
+
+  -A, --almost-all :          do not list implied . and ..
+
+[and on, and on, and on...]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::::
+
+## Getting help {.smaller}
+
+This can be really useful for quickly checking the arguments and options to commands you half-remember,
+but can also be incredibly unhelpful and overwhelming if you don't know what you're looking at!
+
+- *Searching online is your friend!*
+- If you know the argument name, say `ls`, wrap it in quotation marks in your search to require it;
+- Search the term alongside terms like *bash*, *linux*, *command line*, *explanation*;
+- For example, I might search **"ls -F" explanation**
+- Stack Overflow and Stack Exchange (Q&A forums) can be useful sources, usually with a bit of conversation back and forth and likely some disagreement/argument about the *best* way of doing something.
+
+## Getting help
+
+- What does the command `ls -a` do?
+  - Can you find an answer with `ls --help`?
+  - What happens if you run `ls -a` inside `pink-folder`?
+  - Can you find an answer by searching online?
+
+::::: {style="font-size: 1em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/somewhere]{style="color: #00FFFF"} [$]{style="color: grey"} [**cd**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"} [go back to home]{style="color: grey; font-size: 0.8em;"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**cd pink-folder**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}  [go to folder]{style="color: grey; font-size: 0.8em;"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/pink-folder]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls -a**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"} [???]{style="color: grey; font-size: 0.8em;"}
+
+:::::
+
+## `ls -a` {.smaller}
+
+::::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/pink-folder]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls -a**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"} [ .  ..]{style="color: #00FFFF"} [pink-file.md ]{style="color: white"} [  pink-subfolder  ]{style="color: #00FFFF"} [  say_hi.sh  ]{style="color: #00FF00"} [.super-secret-hidden-file]{style="color: white"}  [.super-secret-hidden-folder]{style="color: #00FFFF"} 
+:::
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/pink-folder]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls -F -a**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"} [ ./  ../]{style="color: #00FFFF"} [pink-file.md ]{style="color: white"} [  pink-subfolder/  ]{style="color: #00FFFF"} [  say_hi.sh*  ]{style="color: #00FF00"} [.super-secret-hidden-file]{style="color: white"}  [.super-secret-hidden-folder/]{style="color: #00FFFF"} 
+:::
+
+:::::
+
+:::{.fragment .fade-in}
+What's in these weird directories `.` and `..`?
+
+- Try exploring them with `ls .` and `ls ..`
+- Try going to them using `cd .` and `cd ..`
+- You can use the command `pwd` (path to the working directory) to print out exactly where you are (using `/home/vscode` instead of `~`)
+:::
+
+## `ls -a` {.smaller}
+
+> What's in these weird directories `.` and `..`?
+> 
+> - Try exploring them with `ls .` and `ls ..`
+> - Try going to them using `cd .` and `cd ..`
+> - You can use the command `pwd` (path to the working directory) to print out exactly where you are (using `/home/vscode` instead of `~`)
+
+
+- The single dot `.` stands for the current directory - the place you get when you use `pwd`
+- The double dot `..` stands for the directory above the current directory.
+- If you are currently in `~/pink-folder/pink-subfolder`:
+  - The single dot `.` is the folder `~/pink-folder/pink-subfolder`
+  - The double dot `..` is the folder `~/pink-folder`
+
+
+## Relative paths
+
+So far, we've looked at *absolute paths* that start up at `~` or `/home/vscode`.
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%
+flowchart TD
+    A["/home/vscode/ <br> or ~"] o--o B[red-folder]
+    A o--o C[pink-folder]
+    A o--o D[blue-folder]
+
+    B o--o r1([red-1.txt ])
+    B o--o r2([red-2.txt ])
+    B o--o r3([red-3.txt ])
+
+    C o--o P1[pink-sub-folder]
+    C o--o p2(["pink-file.md <br>"])
+    C o--o p3{{"say_hi.sh <br>"}}
+
+    P1 o--o p4(["**helloworld.py** <br>"])
+    P1 o--o p5(["pink-data.csv <br>"])
+
+    D o--o b1(["**blue.r** <br>"])
+
+```
+
+## Relative paths
+
+So far, we've looked at *absolute paths* that start up at `~` or `/home/vscode`.
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%
+flowchart TD
+    A["/home/vscode/ <br> or ~"] o--o B[red-folder]
+    A o--o C[pink-folder]
+    A o--o D[blue-folder]
+
+    B o--o r1([red-1.txt ])
+    B o--o r2([red-2.txt ])
+    B o--o r3([red-3.txt ])
+
+    C o--o P1[pink-sub-folder]
+    C o--o p2(["pink-file.md <br>"])
+    C o--o p3{{"say_hi.sh <br>"}}
+
+    P1 o--o p4(["**helloworld.py** <br>"])
+    P1 o--o p5(["pink-data.csv <br>"])
+
+    D o--o b1(["**blue.r** <br>"])
+
+    style A fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style C fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style P1 fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style p4 fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+
+```
+
+`~/pink-folder/pink-sub-folder/helloworld.py`
+
+## Relative paths
+
+But if we are already in `pink-folder` (if it's our *working directory*), we can use a relative path:
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%
+flowchart TD
+    A["/home/vscode/ <br> or ~"] o--o B[red-folder]
+    A o--o C[pink-folder]
+    A o--o D[blue-folder]
+
+    B o--o r1([red-1.txt ])
+    B o--o r2([red-2.txt ])
+    B o--o r3([red-3.txt ])
+
+    C o--o P1[pink-sub-folder]
+    C o--o p2(["pink-file.md <br>"])
+    C o--o p3{{"say_hi.sh <br>"}}
+
+    P1 o--o p4(["**helloworld.py** <br>"])
+    P1 o--o p5(["pink-data.csv <br>"])
+
+    D o--o b1(["**blue.r** <br>"])
+
+    style C fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style P1 fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style p4 fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+
+```
+
+`pink-sub-folder/helloworld.py`
+
+## Relative paths
+
+But if we are already in `pink-subfolder` (if it's our *working directory*), we can use a relative path:
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%
+flowchart TD
+    A["/home/vscode/ <br> or ~"] o--o B[red-folder]
+    A o--o C[pink-folder]
+    A o--o D[blue-folder]
+
+    B o--o r1([red-1.txt ])
+    B o--o r2([red-2.txt ])
+    B o--o r3([red-3.txt ])
+
+    C o--o P1[pink-sub-folder]
+    C o--o p2(["pink-file.md <br>"])
+    C o--o p3{{"say_hi.sh <br>"}}
+
+    P1 o--o p4(["**helloworld.py** <br>"])
+    P1 o--o p5(["pink-data.csv <br>"])
+
+    D o--o b1(["**blue.r** <br>"])
+
+    style P1 fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style p4 fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+
+```
+
+`helloworld.py`
+
+## Relative paths
+
+What if we are in `pink-subfolder` (if it's our *working directory*), and want the path to `pink-file.md`?
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%
+flowchart TD
+    A["/home/vscode/ <br> or ~"] o--o B[red-folder]
+    A o--o C[pink-folder]
+    A o--o D[blue-folder]
+
+    B o--o r1([red-1.txt ])
+    B o--o r2([red-2.txt ])
+    B o--o r3([red-3.txt ])
+
+    C o--o P1[pink-sub-folder]
+    C o--o p2(["pink-file.md <br>"])
+    C o--o p3{{"say_hi.sh <br>"}}
+
+    P1 o--o p4(["**helloworld.py** <br>"])
+    P1 o--o p5(["pink-data.csv <br>"])
+
+    D o--o b1(["**blue.r** <br>"])
+
+    style P1 fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style p2 fill:#ff0,stroke:#333,stroke-width:10px,color:#333
+
+```
+
+Hint: what can we see with `ls .. ` from the current directory?
+
+## Relative paths
+
+`../pink-file.md`
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%
+flowchart TD
+    A["/home/vscode/ <br> or ~"] o--o B[red-folder]
+    A o--o C[pink-folder]
+    A o--o D[blue-folder]
+
+    B o--o r1([red-1.txt ])
+    B o--o r2([red-2.txt ])
+    B o--o r3([red-3.txt ])
+
+    C o--o P1[pink-sub-folder]
+    C o--o p2(["pink-file.md <br>"])
+    C o--o p3{{"say_hi.sh <br>"}}
+
+    P1 o--o p4(["**helloworld.py** <br>"])
+    P1 o--o p5(["pink-data.csv <br>"])
+
+    D o--o b1(["**blue.r** <br>"])
+
+    style P1 fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style p2 fill:#ff0,stroke:#333,stroke-width:10px,color:#333
+
+```
+
+We can use the command `cat` with a path to a file to read out the contents: try `cat ../pink-file.md`
+
+## Recap
+
+We've covered an awful lot of commands now!
+
+- If at any point in the course you need a refresher, just click the link at the bottom of the screen to the **Cheat Sheet**
+which lists useful commands.
+
+## Making files and directories
+
+- You can create a directory with the command `mkdir`, and the name of the new directory as an argument:
+  - `mkdir new-dir-name`
+- You ca create files with the command `touch`, and the name of the new file as an argument:
+ - `touch new-file-name.txt`
+- You can provide a path (absolute or relative) instead of a name if you want to create the folder or file somewhere other that the current working directory.
+
+## Rules for file and directory names {.smaller}
+
+1. Don't use spaces in names; Linux will think you are entering two separate arguments to a command.
+  - Break up words with hyphens or underscores instead `like_this` `or-this`!
+2. Don't begin a name with a hyphen/dash (so no files called `-this`); Linux will think this is a flag/option to a command.
+3. Stick with numbers, letters, full stops, dashes/hyphens and underscores.
+  - Special characters like $, %, &, *, / etc. have special meanings on the command line and can lead to confusion!
+
+If you're working with old files/directories that have spaces in their names, you'll need to wrap the path in single quotation marks, `'like this.txt'`
 
 ## Directory map {.smaller .scrollable #map}
 
@@ -672,9 +1288,9 @@ Use the back button in your browser to return to the slide you were previously o
 ```{mermaid}
 flowchart TD
     START:::hidden --> |cd|A
-    A[home/vscode/] -->|cd red-folder| B[red-folder/ ]
-    A[home/vscode/] -->|cd pink-folder| C[pink-folder/ ]
-    A[home/vscode/] -->|cd blue-folder| D[blue-folder/ ]
+    A[/home/vscode/] -->|cd red-folder| B[red-folder/ ]
+    A[/home/vscode/] -->|cd pink-folder| C[pink-folder/ ]
+    A[/home/vscode/] -->|cd blue-folder| D[blue-folder/ ]
 
     B --- r1([red-1.txt ])
     B --- r2([red-2.txt ])
@@ -719,6 +1335,7 @@ Use the back button in your browser to return to the slide you were previously o
 | `name --help` | Load the manual for `name` - on Codespaces |
 | `man name` | Load the manual for `name` - on Aire/ARC |
 | `ls` | List the contents of a directory |
+| `cat` | Print out the contents of a file |
 | `mkdir` | Make a new directory |
 
 Some more `cd` commands:
