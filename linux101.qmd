@@ -31,11 +31,15 @@ Aims of this training:
 
 ## Format of this course
 
-This is a **2.5 hour tutorial**. We will be trying out what we are learning, so be ready for some typing!
+- This is a **2.5 hour tutorial**. We will be trying out what we are learning, so be ready for some typing!
 
-These lecture slides are based on the [Software Carpentries documentation on Unix Shell basics](https://swcarpentry.github.io/shell-novice/), but use different examples to learn the same commands.
+- These lecture slides are based on the [Software Carpentries documentation on Unix Shell basics](https://swcarpentry.github.io/shell-novice/), but is a shorter course and uses different examples.
 
-Once you finish this tutorial, we recommend you read through the extended notes available and follow through the tutorial there: you can do this work from the same *virtual machine* we will be using today.
+- Once you finish this tutorial, we recommend you read through the Software Carpentries material and follow through the tutorial there: you can do this work from the same *virtual machine* we will be using today.
+
+::: {.notes}
+- We include notes at the end on how to use our virtual machine to run the Software Carpentries material
+:::
 
 ## Format of these slides {.smaller}
 
@@ -45,6 +49,13 @@ Once you finish this tutorial, we recommend you read through the extended notes 
 - These notes should also be viewable via mobile if you don't mind not being able to copy and paste!
 - There is a quick reference [cheat sheet](#cheat-sheet) linked in the footer; you can return to your place in the slideshow from this cheat sheet using the back button.
 
+::: {.notes}
+
+- The cheat sheet can be used from any point in the tutorial; you can just click the back arrow
+and return to the exact point in the slides
+
+:::
+
 ## Syllabus
 
 - Interacting with a computer: operating systems, GUIs and CLIs, bash
@@ -53,7 +64,123 @@ Once you finish this tutorial, we recommend you read through the extended notes 
 - Creating and editing files and directories
 - Running simple scripts
 
+::: {.notes}
+- If we don't manage to cover all these topics, you will be able to follow on at home.
+:::
+
+## Learning method {.smaller}
+
+The aim *is not for you to leave knowing loads of Linux Bash commands*!
+
+- There are many fantastically
+useful commands we won't cover today (read through the [Software Carpentries course](https://swcarpentry.github.io/shell-novice/)
+after this for some extra commands);
+- The aim is for you to get a feel for how Linux's command line works,
+to be able to problem solve and find the commands you need.
+- This is an introductory course for complete beginners: of course, you're welcome here if you want a refresher, but expect for
+the course to be slow-paced.
+
+::: {.notes}
+
+- Emphasise that the point is *not* to teach lots of shortcuts and commands.
+- It's ok not to remember commands from today - the point is that if you want to do something on Linux,
+you'll be better able to search for and then understand the answer.
+
+:::
+
+## PRIMM method {.smaller}
+
+It's helpful for you as a learner to understand the PRIMM structure so you can apply it while working through this course. Not every step
+will be relevant or used at every stage of the course!
+
+::: {.panel-tabset}
+
+### What's PRIMM?
+
+PRIMM is a pedagogical method specifically aimed at teaching text-based programming. While research into adult programming
+learners is very limited (especially in terms of demographics; many key studies that are cited have overwhelmingly homogenous test groups),
+the PRIMM method has a few key benefits:
+
+- It supports learners with different ability levels and who learn at different speeds;
+- It can be applied by learners even if the course materials are not specifically built with it in mind;
+- It can be applied to asynchronous learning materials (for example, if you are using these notes online on your own).
+
+### P
+
+The **P** in PRIMM stands for **predict**:
+
+When you first see a command, script, or piece of code, before running it, predict what you think it will
+do. It's ok to get this wrong: the important thing is to get into the habit of predicting! This
+helps to keep you actively engaged and focused, and begins to build an intuitive sense about the structure of commands.
+
+- What do you think the code is going to do generally?
+- What do you think the output in your terminal is going to look like?
+
+### R 
+
+The **R** in PRIMM stands for **run**:
+
+- Run the code or program;
+- How does the output/effect compare to your prediction?
+  - What did you get right?
+  - What did you misinterpret?
+- Do you understand what happened?
+
+### I 
+
+The **I** in PRIMM stands for **investigate**:
+
+Let's dig a little deeper into the *structure* of code you've used.
+
+- What options or arguments did you use, and what effect did they have?
+- Can you find some documentation on the command you used?
+  - Does the description match how you would describe the code?
+    - If no, why does your understanding of it diverge?
+  - What other options or features are available?
+
+
+
+### M 
+
+The first **M** in PRIMM stands for **modify**:
+
+- Try running the code with different options:
+  - Change only a small thing at a time;
+  - Always predict what you think the output will be!
+  - Compare the actual output with your prediction;
+  - Compare your understanding to the available documentation.
+
+This stage helps you to gradually increase the difficultly of the tasks you are doing!
+
+### M
+
+The second **M** in PRIMM stands for **make**:
+
+This stage is about making the code your own.
+
+- At this stage, you can try implementing snippets of code you've already learned, but to solve a new or different problem;
+- Again, use the previous stages when you are writing your code: *predict* what you think will happen, *run* the code and compare
+the output to your predictions, and *investigate* the structure of it, especially if it does not behave how you intended!
+
+### Key notes
+
+**Read before you write** - research has proven repeatedly the importance of reading and predicting the output of code as
+a method of learning, over just *getting straight into it* and writing code.
+
+- Novice programmers need to acquire accuracy in tracing code *before* they can program independently
+- Trying to write code first leads to frustration and confusion
+
+**Learn in a way that suits you** - if that is copying and pasting commands
+from the slides instead of trying to keep up with typing, *that's ok!*
+
+:::
+
 # Ways of interacting with a computer
+
+::: {.notes}
+- Our first section is going to cover some very high-level concepts about how we use computers
+
+:::
 
 ## Interacting with a computer {.smaller}
 
@@ -76,6 +203,11 @@ When we use a computer, like our desktop or laptop, we often use a **Graphical U
 - Many computer programs also have GUIs: for example, Excel.
 
 ![](assets/img/linux101/excel-gui.png){fig-align="center" fig-alt="A screenshot of Excel."}
+
+::: {.notes}
+- What are some of the benefits of GUIs? See if people have suggestions.
+- What are some of the downsides of using GUIs?
+:::
 
 ## Interacting with a computer {.smaller}
 
@@ -102,6 +234,12 @@ As well as using a GUI, we can also interact with computers using a **Command Li
   - This is the general-purpose CLI that underpins both Linux and Mac;
   - We will use Bash, a popular Unix Shell.
 
+::: {.notes}
+- Essentially, there are many different ways to access a command line, and there are different types
+of command line interfaces!
+- We are teaching you one today that is easy to access, and is used on research HPC systems
+:::
+
 ## Poll
 
 Throughout this presentation, we will be using quick polls to gauge your familiarity with concepts.
@@ -109,6 +247,10 @@ Throughout this presentation, we will be using quick polls to gauge your familia
 Let's test it out:
 
 [Click here to go to Poll](https://universityofleeds.display.vevox.com#/present/696636/ULXGUZROA4XT20VKGCAZ){target="_blank"}
+
+::: {.notes}
+- Open up vevox session and activate relevant poll
+:::
 
 ## Bash {.smaller}
 
@@ -124,6 +266,13 @@ We're going to use a **virtual machine** for this course: this is a Linux machin
 This means that everyone here can run it with the exact same set-up; you only need a browser.
 
 # Linux filesystems
+
+::: {.notes}
+- Before we open up our virtual machine, we are going to talk a little bit about how Linux filesystems work.
+- It's important for us to build a little bit of a mental map before we start using the command line,
+just to make it less confusing.
+- This might seem familiar, if you're used to navigating filesystems on Windows or Mac already!
+:::
 
 ## File system on Linux
 
@@ -152,6 +301,7 @@ Each rectangle is a folder or **directory** (**dir** for short)
 ::: {.notes}
 - This shows a sketch of a file system.
 - We have a hierarchy of folders or directories sitting inside one another.
+- Folders are usually called "directories" on Linux systems, but they mean the same thing.
 :::
 
 ## File system on Linux
@@ -181,7 +331,7 @@ flowchart
 Each rectangle is a folder or **directory** (**dir** for short)
 
 ::: {.notes}
-- This branching system starts from the root (the forward slash) at the very top
+- This branching system starts from the root (the forward slash) at the very top, highlighted in pink.
 - Inside this root directory, we have a bunch of system folders - we don't need to worry about these now.
 :::
 
@@ -212,7 +362,7 @@ flowchart
 Each rectangle is a folder or **directory** (**dir** for short)
 
 ::: {.notes}
-- One of the directories is called "home": ths contains all the home directories of users.
+- One of the directories is called "home": this contains all the home directories of users.
 - The home directories are usually called after their owner's username.
 - If you look in this directory on a personal or family computer, you might find a handful of user home directories
 - If you look at this directory on a university HPC system, like Aire, you'll find hundreds of user home directories
@@ -280,8 +430,7 @@ How do we describe the address of this home directory?
 ::: {.notes}
 - How do we describe where this directory or folder is?
 - We describe it in a similar way to a website URL, using it's path
-- We need to know all the folders directly above it...
-- You've already used folders and directories if you've ever saved a file from Word or Excel, or opened a pdf in your browser.
+- We need to know all the folders directly above it.
 :::
 
 ## File system on Linux
@@ -548,11 +697,45 @@ This requires a **GitHub** account which you were asked to set up before this co
 
 ## Launch virtual machine
 
-Insert instructions here
+::::: {.panel-tabset}
 
-## Launch virtual machine
+### Step 1
 
-Insert instructions here
+One of the pre-requisites for this course was signing up for an account with GitHub,
+as this is the service we use to host the virtual Linux machines for teaching this session.
+
+[Log in to GitHub now (or sign up if you haven't already).](https://github.com/)
+
+### Step 2
+
+Follow this link to open the course repository.
+
+### Step 3
+
+There will be a green button with the word "Code", which will then bring up a menu when clicked.
+
+:::: {layout="[ 30, 70 ]"}
+
+::: {#first-column}
+
+![](assets/img/linux101/code_button.png){fig-align="center" fig-alt="A green button with the word 'Code'."}
+
+↑ [Click this button,]{style="font-size: 0.95em;"}
+[this menu opens ]{style="font-size: 0.95em;"} →
+:::
+
+::: {#second-column}
+![](assets/img/linux101/codespaces-2.png){fig-align="center" fig-alt="A green button with the word 'Code'."}
+:::
+
+::::
+
+
+
+
+
+
+:::::
 
 ## The terminal
 
@@ -1582,7 +1765,7 @@ If you move the file or directory to the same location it's already in, it renam
 What's the result of `ls` and `ls blue-folder` now? Repeat this with a new directory in your home directory.
 :::
 
-## Modifying files and directories: `mv`
+## Modifying files and directories: `mv` {.smaller}
 
 - Do you use the same *syntax* to move directories and files?
   - Yes, `mv` works *recursively* and moves directories (and everything in them).
@@ -1720,7 +1903,13 @@ A cautionary exercise
 
 Look at the following command and try to predict what it does:
 
-**Do not run!** `rm -rf *` **Do not run!** 
+::::: {.panel-tabset}
+
+### Breaking it down
+
+ **Do not run the following snippet!** 
+
+`rm -rf *`
 
 :::{.fragment .fade-in style="font-size: 0.7em;"}
 
@@ -1730,13 +1919,23 @@ Look at the following command and try to predict what it does:
 - `*`: a "wildcard" character; instead of providing a file or directory name, this essentially means **everything**
 :::
 
-:::{.fragment .fade-in style="font-size: 0.7em;"}
+### Face the fear
 
 Before we go on a break, `cd` back to your home directory, and experience the abject horror of `rm`.
+
+:::{.fragment .fade-in style="font-size: 0.7em;"}
 
 **Run `rm -rf *` from `/home/vscode`.  Only do this in your virtual machine on codespaces, never on a research machine**
 
 :::
+
+:::{.fragment .fade-in style="font-size: 0.7em;"}
+
+Use `cd` and `ls` to look around - what does your home directory look like now?
+
+:::
+
+:::::
 
 ## Rebuild codespaces
 
@@ -2033,6 +2232,52 @@ Run this with `./script-name.sh` and check the contents of `output_log.txt`
 - Use `chmod +x script-name.sh` to make a bash file executable.
 - When running Python or R scripts for research, you will need to carefully specify what version of the language (and any libraries/packages) are being used
 - Be careful of overwriting data using `>` to write files.
+
+## Next steps {.smaller}
+
+- A three hour session can introduce the basics, but is not enough to make you
+feel like a Linux shell expert!
+- Your homework: work through the tutorial/session notes for [The Unix Shell](https://swcarpentry.github.io/shell-novice/index.html)
+created by the software carpentry.
+- In order to download the files they use (so that you can follow along all the sessions),
+we just need the URL of the files: *https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip* 
+
+::::: {style="font-size: 0.95em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/wherever]{style="color: #00FFFF"} [$]{style="color: grey"} [**cd**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+[Or to wherever you want to download the files]{style="color: #DDA0DD; font-size: 0.7em;"}
+
+::: {.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**wget https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+[Download the zip file (expect lots of output)]{style="color: #DDA0DD; font-size: 0.7em;"}
+:::
+
+::: {.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**unzip shell-lesson-data.zip**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+[Unzip the folder (expect lots of output)]{style="color: #DDA0DD; font-size: 0.7em;"}
+:::
+
+:::::
+
+## Next steps {.smaller}
+
+::: {.panel-tabset}
+
+### `wget`
+
+- `wget` is a really useful command for downloading data from the internet. It can take a range of different *options* and *arguments*:
+  - Basic use: `wget url-to-data`: this downloads the data to the current working directory, with the folder/file name provided by the URL .
+  - You can provide a different file name for the download either: `wget -O new-nap.zip url-to-data`.
+  - You can provide a location for the file to download to (not the current working directory): `wget -P path/to/folder url-to-data`.
+  - These are only some of the many, many options available!
+
+### `unzip`
+
+- `unzip` is necessary if you are downloading compressed/zipped archives (that end in `.zip`)
+  - Basic use: `unzip filename.zip`; this will unzip the file in the current working directory, into a folder called `filename`.
+  - Check contents: `unzip -l filename.zip` will list the contents of the archive without extracting them.
+
+:::
 
 ## Directory map {.smaller .scrollable #map}
 
