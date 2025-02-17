@@ -182,242 +182,95 @@
     "text": "Rule 10: Get the Right Tool(s)\n\nUse appropriate tools for data visualisation\nScripting languages like Python and R can be more efficient for producing multiple similar plots\nWhile it is absolutely ok to use a graphics package to add annotations etc. to your plots if you are more comfortable with this, remember to always think about how reproducible your workflow is"
   },
   {
-    "objectID": "donut.html#presentation-set-up-guide",
-    "href": "donut.html#presentation-set-up-guide",
+    "objectID": "swd3/project.html",
+    "href": "swd3/project.html",
     "title": "arctraining slides",
-    "section": "Presentation set up guide",
-    "text": "Presentation set up guide\n\nShare the Web browser window containing the slides (‘Slide View’).\nActivate ‘Speaker View’:\n\nFrom the slide-menu-button (bars in the lower left), select:\n\nTools (at the top) &gt;&gt; Speaker View (from the list).\n\n\nA new Web browser window should open showing the ‘Speaker View’.\n\nLocate this and read the Notes Pane (lower right).\n\n\n\n\nThe default Speaker View layout has three panes:\n\nSlide Pane (left) shows the current slide.\nNotes Pane (lower right) are these notes.\nUpcoming Pane (upper right).\n\nThis should show the next slide.\nLayout: Default can be actioned to change the Layout.\n\n\nThe current slide in Slide View and in the Speaker View Slide Pane should synchronise:\n\nSo changing slide in one should do the same in the other.\n\nMove on to the next slide - the Title Slide:\n\nUse the down or right keyboard cursor keys or activate the controls-arrow that looks like &gt; in the lower right &gt;- If you have activated the Upcoming Pane the keyboard cursor keys will change what is in there.\nTo move on in the presentation, activate (click back into) the main Slide Pane."
+    "section": "",
+    "text": "Calculating the hypotenuse\n\\[ c = \\sqrt{a^2 + b^2} \\]\nGeneral Design\n\n1 squared function\n1 sum function\n1 square root function\n1 hypotenuse function that uses the other functions"
   },
   {
-    "objectID": "donut.html#meta-code",
-    "href": "donut.html#meta-code",
+    "objectID": "swd3/project.html#bringing-it-all-together",
+    "href": "swd3/project.html#bringing-it-all-together",
     "title": "arctraining slides",
-    "section": "Donut",
-    "text": "Donut\nA Guide to delivering Presentations Using Quarto"
+    "section": "",
+    "text": "Calculating the hypotenuse\n\\[ c = \\sqrt{a^2 + b^2} \\]\nGeneral Design\n\n1 squared function\n1 sum function\n1 square root function\n1 hypotenuse function that uses the other functions"
   },
   {
-    "objectID": "donut.html#research-computing-team-and-service",
-    "href": "donut.html#research-computing-team-and-service",
-    "title": "arctraining slides",
-    "section": "Research Computing Team and Service",
-    "text": "Research Computing Team and Service\n\n\nHere to support research(ers)\n\nProvide training\nSupport users of Grid and Cloud Computing platforms\nProvide consultancy\n\nTo develop project proposals\nTo help recruit people with specialist skills\nWorking directly on research projects\n\n\nFor details please see our Website\nContact us via the IT Service Desk\n\n\n\nIf you follow a link then a new tab will open in the Slide View Web browser.\n\nThis will want closing or the Slide View activating again as he main tab in the browser.\n\nMaybe point out some sections/features on the Research Computing Website.\nWe support use and develop resources."
-  },
-  {
-    "objectID": "donut.html#polls-and-forms",
-    "href": "donut.html#polls-and-forms",
-    "title": "arctraining slides",
-    "section": "Polls and Forms",
-    "text": "Polls and Forms\n\nPolls are best prepared in advance.\n\nThere are two main types of Poll:\n\n“Emoji Polls”\n“Forms Polls”"
-  },
-  {
-    "objectID": "donut.html#emoji-polls",
-    "href": "donut.html#emoji-polls",
-    "title": "arctraining slides",
-    "section": "Emoji Polls",
-    "text": "Emoji Polls\n\nConducted from within Teams chat\nCopy the following and then press the space bar after each end parenthesis ) to turn the text into an emoji:\nDo you like emoji polls?\n(thumbsup) yes\n(heart) no\nThe thumbsup and heart emojis are the first two emojis that are in the reaction list of users by default."
-  },
-  {
-    "objectID": "donut.html#forms-polls",
-    "href": "donut.html#forms-polls",
-    "title": "arctraining slides",
-    "section": "Forms Polls",
-    "text": "Forms Polls\n\nA Forms poll can be added ad hoc in a Teams chat:\n\nSelect the three dots ... below the message box and then search for or add Forms.\nOr add using the + option at the top of the chat.\n\nHowever, this use of Forms is being phased out in preference for a Polls App.\nThe Polls App however, is not available in the University of Leeds Office 365 offerring currently to test and the version that can be used in the chat does not seem to have an easy way to collect the results!\nIt might be best to prepare some Forms forms in advance using the Forms in Office 365 (https://www.microsoft365.com/launch/forms).\n\nSharing these simply involves copying the URL and pasting it into the chat.\n\nFor example: https://forms.office.com/pages/designpagev2.aspx?lang=en-GB&origin=OfficeDotCom&route=Start&subpage=design&id=qO3qvR3IzkWGPlIypTW3yy7GBfs2qsFOjWB83KLaHnVUNzFZS1VCTENOVEJUMDdKVEEyNURDRlY2USQlQCN0PWcu"
-  },
-  {
-    "objectID": "donut.html#hackpads-or-forms",
-    "href": "donut.html#hackpads-or-forms",
-    "title": "arctraining slides",
-    "section": "Hackpads or Forms",
-    "text": "Hackpads or Forms\n\nThese can be used for participants to introduce themselves to us.\nParticipants should have all the links already in an email."
-  },
-  {
-    "objectID": "donut.html#feedback-and-questions",
-    "href": "donut.html#feedback-and-questions",
-    "title": "arctraining slides",
-    "section": "Feedback and questions",
-    "text": "Feedback and questions\n\nPlease encourage interruptions especially for participants having difficulty hearing or following the presentation…\nPeriodically pause and ask if participants have any questions or want anything repeated…"
-  },
-  {
-    "objectID": "donut.html#getting-feedback",
-    "href": "donut.html#getting-feedback",
-    "title": "arctraining slides",
-    "section": "Getting Feedback",
-    "text": "Getting Feedback\n\nPlease encourage participants to provide honest feedback about presentations and the training so we can improve.\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
-  },
-  {
-    "objectID": "swd3.html#meta-code",
-    "href": "swd3.html#meta-code",
-    "title": "arctraining slides",
-    "section": "SWD3",
-    "text": "SWD3\nSoftware development practices for Research"
-  },
-  {
-    "objectID": "swd3.html#research-computing-team-and-service",
-    "href": "swd3.html#research-computing-team-and-service",
-    "title": "arctraining slides",
-    "section": "Research Computing Team and Service",
-    "text": "Research Computing Team and Service\n\n\nHere to support research(ers)\n\nProvide training\nSupport users of Grid and Cloud Computing platforms\nProvide consultancy\n\nTo develop project proposals\nTo help recruit people with specialist skills\nWorking directly on research projects\n\n\nFor details please see our Website\nContact us via the IT Service Desk\n\n\n\nIf you follow a link then a new tab will open in the Slide View Web browser.\n\nThis will want closing or the Slide View activating again as he main tab in the browser.\n\nMaybe point out some sections/features on the Research Computing Website.\nWe support use and develop resources."
-  },
-  {
-    "objectID": "swd3.html#useful-links",
-    "href": "swd3.html#useful-links",
-    "title": "arctraining slides",
-    "section": "Useful Links",
-    "text": "Useful Links\n\nGitHub Project Demo\nAlan Turing Institute - Research Software Engineering Course Material"
-  },
-  {
-    "objectID": "swd3.html#software-development-life-cycle-sdlc",
-    "href": "swd3.html#software-development-life-cycle-sdlc",
-    "title": "arctraining slides",
-    "section": "Software Development Life Cycle (SDLC)",
-    "text": "Software Development Life Cycle (SDLC)"
-  },
-  {
-    "objectID": "swd3.html#sdlc",
-    "href": "swd3.html#sdlc",
-    "title": "arctraining slides",
-    "section": "SDLC",
-    "text": "SDLC\n\nIdeationRequirementsDesignDevelopmentTestDeploymentMaintenance\n\n\n\n\n\nWhat are we going to do?\n\n\nBrainstorming\nResearch\n\n\n\n\n\n\n\n\n\n\nHow are we going to do it?\n\nSome topics to help define requirements include:\n\nfinal goal\nproject scope (how to reach the final goal)\nwhat is feasible (and how)\nwhat is priority\nwhat resources are available\ndeadlines\npotential risks\n\n\nWarning: Each person involved in the project may have a different need.\n\n\n\n\n\n\n\n\n\n\nWhat is the software architecture?\n\nWhen designing software, the object-oriented approach is a common programming paradigm.\nObject-oriented components:\n\nClasses: A user-defined type\nObject instances: A particular object instantiated from a class.\nMethods: A function which is “built in” to a class\nConstructor: A special method called when instantiating a new object\n\nSome principles: abstraction, encapsulation, decomposition, generalisation\n\n\nSee more: \n\n\n\n\n\n\n\nIs this where the fun begins?\n\n\nTake your time\n\n\n\n\n\nDevelopment is usually the most time consuming step in a Software Development Life Cycle.\n\n\n\n\n\nIs this software good?\n\nIn this step, errors and failures are identified by exposing the code to an environment similar to the end-user experience.\nThere are several types of testing, some examples include:\n\nUnit testing: are all components working?\nIntegration testing: are all components working when fitted together?\nPerformance testing: how does the software perform against different workloads? It is fast? Stable?\nFunctional testing: is the software aligned with Software Requirement Specification?\n\n\n\n\n\n\n\n\n\n\nCan other people use my code?\n\nYou can use platforms like GitHub to release your software.\n\nThe functionality of the software is linked to several specifications related to the operating system and versions of packages and other software related to the project.\nListing these specifications will help others to replicate the environment in which the software was developed.\n\n\n\n\n\n\n\n\n\n\nIs it over?\n\nWe can classify maintenance into a few categories:\n\nCorrective: fix reported errors/failures.\nPreventive: regular checks and fixes.\nPerfective: optimize implemented features, adding new features.\nAdaptive: keep the software updated according to changes external to the project (new programming language version, new regulation, etc.)."
-  },
-  {
-    "objectID": "swd3.html#basic-structure-suggestion",
-    "href": "swd3.html#basic-structure-suggestion",
-    "title": "arctraining slides",
-    "section": "Basic Structure Suggestion",
-    "text": "Basic Structure Suggestion\n# The most basic structure for a code project should look like:\nmy-model\n├── README.md\n├── requirements.txt\n├── src                &lt;- Source code for this project\n└── tests              &lt;- Test code for this project\n\nReadmeRequirements\n\n\n\nIs a guide that gives users a detailed description of a project you have worked on\nIt is the first file a person will see when they encounter your project, so it should be fairly brief but detailed.\nSee how to write a good README file in this freecodecamp post.\n\n\n\n\nText information about all the necessary additional libraries, modules, and packages.\nThis can be replaced by files like: environment.yml, pyproject.toml, setup.py."
-  },
-  {
-    "objectID": "swd3.html#advanced-project-structure",
-    "href": "swd3.html#advanced-project-structure",
-    "title": "arctraining slides",
-    "section": "Advanced Project Structure",
-    "text": "Advanced Project Structure\nTemplate based on mkrapp/cookiecutter-reproducible-science github\n.\n├── AUTHORS.md\n├── LICENSE\n├── README.md\n├── bin                &lt;- Your compiled model code can be stored here (not tracked by git)\n├── config             &lt;- Configuration files, e.g., for doxygen or for your model if needed\n├── data\n│   ├── external       &lt;- Data from third party sources.\n│   ├── interim        &lt;- Intermediate data that has been transformed.\n│   ├── processed      &lt;- The final, canonical data sets for modeling.\n│   └── raw            &lt;- The original, immutable data dump.\n├── docs               &lt;- Documentation, e.g., doxygen or scientific papers (not tracked by git)\n├── notebooks          &lt;- Ipython or R notebooks\n├── reports            &lt;- For a manuscript source, e.g., LaTeX, Markdown, etc., or any project reports\n│   └── figures        &lt;- Figures for the manuscript or reports\n├── src                &lt;- Source code for this project\n│   ├── data           &lt;- scripts and programs to process data\n│   ├── external       &lt;- Any external source code, e.g., pull other git projects, or external libraries\n│   ├── models         &lt;- Source code for your own model\n│   ├── tools          &lt;- Any helper scripts go here\n│   └── visualization  &lt;- Scripts for visualisation of your results, e.g., matplotlib, ggplot2 related.\n└── tests              &lt;- Test code for this project"
-  },
-  {
-    "objectID": "swd3.html#virtual-environments",
-    "href": "swd3.html#virtual-environments",
-    "title": "arctraining slides",
-    "section": "Virtual Environments",
-    "text": "Virtual Environments\nIf application A needs version 1.0 of a particular module but application B needs version 2.0, then the requirements are in conflict and installing either version 1.0 or 2.0 will leave one application unable to run.\nThe solution for this problem is to create a virtual environment, a self-contained directory tree that contains installation for particular versions of software/packages.\nConda\n\nConda is an open source package management system and environment management system that runs on Windows, macOS, and Linux.\nIt offers dependency and environment management for any language—Python, R, Ruby, Lua, Scala, Java, JavaScript, C/ C++, Fortran, and more.\nEasy user install via Anaconda."
-  },
-  {
-    "objectID": "swd3.html#code-formatting",
-    "href": "swd3.html#code-formatting",
-    "title": "arctraining slides",
-    "section": "Code formatting",
-    "text": "Code formatting\n# myscript.py:\nx = {  'a':37,'b':42,\n'c':927}\ny = 'hello '+       'world'\nclass foo  (     object  ):\n   def f    (self   ):\n       return       y **2\n   def g(self, x :int,\n       y : int=42\n       ) -&gt; int:\n       return x--y\ndef f  (   a ) :\n   return      37+-a[42-a :  y*3]"
-  },
-  {
-    "objectID": "swd3.html#coding-conventions",
-    "href": "swd3.html#coding-conventions",
-    "title": "arctraining slides",
-    "section": "Coding conventions",
-    "text": "Coding conventions\nIf your language or project has a standard policy, use that. For example:\n\nPython: PEP8\nR: Google’s guide for R, tidyverse style guide\nC++: Google’s style guide\nJulia: Official style guide"
-  },
-  {
-    "objectID": "swd3.html#linters",
-    "href": "swd3.html#linters",
-    "title": "arctraining slides",
-    "section": "Linters",
-    "text": "Linters\nLinters are automated tools which enforce coding conventions and check for common mistakes. For example:\n\nPython:\n\nflake8 (flags any syntax/style errors)\nblack (enforces the style)\nisort (“Sorts” imports alphabetically in groups)"
-  },
-  {
-    "objectID": "swd3.html#example-flake8-linter",
-    "href": "swd3.html#example-flake8-linter",
-    "title": "arctraining slides",
-    "section": "Example: Flake8 Linter",
-    "text": "Example: Flake8 Linter\n$ conda install flake8\n$ flake8 myscript.py\nmyscript.py:2:6: E201 whitespace after '{'\nmyscript.py:2:11: E231 missing whitespace after ':'\nmyscript.py:2:14: E231 missing whitespace after ','\nmyscript.py:2:18: E231 missing whitespace after ':'\nmyscript.py:3:1: E128 continuation line under-indented for visual indent\nmyscript.py:3:4: E231 missing whitespace after ':'\nmyscript.py:4:13: E225 missing whitespace around operator\nmyscript.py:4:14: E222 multiple spaces after operator\nmyscript.py:5:1: E302 expected 2 blank lines, found 0\nmyscript.py:5:13: E201 whitespace after '('\nmyscript.py:5:25: E202 whitespace before ')'\nmyscript.py:6:4: E111 indentation is not a multiple of 4\nmyscript.py:6:9: E211 whitespace before '('\nmyscript.py:6:20: E202 whitespace before ')'\nmyscript.py:7:8: E111 indentation is not a multiple of 4\nmyscript.py:7:14: E271 multiple spaces after keyword\nmyscript.py:7:25: E225 missing whitespace around operator\nmyscript.py:8:4: E301 expected 1 blank line, found 0\nmyscript.py:8:4: E111 indentation is not a multiple of 4\nmyscript.py:8:17: E203 whitespace before ':'\nmyscript.py:8:18: E231 missing whitespace after ':'\nmyscript.py:9:8: E128 continuation line under-indented for visual indent\nmyscript.py:9:9: E203 whitespace before ':'\nmyscript.py:9:15: E252 missing whitespace around parameter equals\nmyscript.py:9:16: E252 missing whitespace around parameter equals\nmyscript.py:10:8: E124 closing bracket does not match visual indentation\nmyscript.py:10:8: E125 continuation line with same indent as next logical line\nmyscript.py:11:8: E111 indentation is not a multiple of 4\nmyscript.py:12:1: E302 expected 2 blank lines, found 0\nmyscript.py:12:6: E211 whitespace before '('\nmyscript.py:12:9: E201 whitespace after '('\nmyscript.py:12:13: E202 whitespace before ')'\nmyscript.py:12:15: E203 whitespace before ':'\nmyscript.py:13:4: E111 indentation is not a multiple of 4\nmyscript.py:13:10: E271 multiple spaces after keyword\nmyscript.py:13:26: E203 whitespace before ':'\nmyscript.py:13:34: W291 trailing whitespace"
-  },
-  {
-    "objectID": "swd3.html#example-black-code-formatter",
-    "href": "swd3.html#example-black-code-formatter",
-    "title": "arctraining slides",
-    "section": "Example: Black Code Formatter",
-    "text": "Example: Black Code Formatter\n\nInstall and run Black\n\n$ conda install black\n$ black myscript.py\n\nCheck the file!\n\n# myscript.py:\nx = {\"a\": 37, \"b\": 42, \"c\": 927}\ny = \"hello \" + \"world\"\n\n\nclass foo(object):\n    def f(self):\n        return y**2\n\n    def g(self, x: int, y: int = 42) -&gt; int:\n        return x - -y\n\n\ndef f(a):\n    return 37 + -a[42 - a : y * 3]"
-  },
-  {
-    "objectID": "swd3.html#ide",
-    "href": "swd3.html#ide",
-    "title": "arctraining slides",
-    "section": "IDE",
-    "text": "IDE\nUsing an Integrated development environment (IDE) will certainly save you time, but the advantages of using an IDE go beyond that. Below are some IDE advantages\n\nSyntax highlighting\nText autocompletion\nRefactoring options\nEasily Importing libraries\nBuild, compile, or run\n\nVisual Studio Code\nTo install VS Code follow the instructions here."
-  },
-  {
-    "objectID": "swd3.html#vsc-example-automatically-using-black",
-    "href": "swd3.html#vsc-example-automatically-using-black",
-    "title": "arctraining slides",
-    "section": "VSC Example: automatically using black",
-    "text": "VSC Example: automatically using black\nConfigure VSC to use Black: Code (or File) &gt; Preferences &gt; Settings\n\nSearch for python formatting provider and choose black\nSearch for format on save and check the box to enable\n\nSelect interpreter: View &gt; Command Palette.. (or Ctrl+Shift+P)\n\nSearch for Python: Select Interpreter\nChoose the correct environment\n\nNow the Black package is going to fix your codes layout every time you save a code file."
-  },
-  {
-    "objectID": "swd3.html#version-control",
-    "href": "swd3.html#version-control",
-    "title": "arctraining slides",
-    "section": "Version Control",
-    "text": "Version Control\n\nPiled Higher and Deeper by Jorge Cham"
-  },
-  {
-    "objectID": "swd3.html#test-driven-development",
-    "href": "swd3.html#test-driven-development",
-    "title": "arctraining slides",
-    "section": "Test-driven development",
-    "text": "Test-driven development\nExample, suppose we need to find the result of a number divided by another number:\n\nNaive solutionTDD solution\n\n\n\nWrite a function a_div_b.\nCall it interactively on two or three different inputs.\nIf it produces the wrong answer, fix the function and re-run that test.\n\nThis clearly works — after all, thousands of scientists are doing it right now — but there’s a better way\n\n\n\nWrite a short function for each test.\nWrite a a_div_b function that should pass those tests.\nIf a_div_b produces any wrong answers, fix it and re-run the test functions.\n\nWriting the tests before writing the function they exercise is called test-driven development (TDD). Its advocates believe it produces better code faster because:\n\nIf people write tests after writing the thing to be tested, they are subject to confirmation bias, i.e., they subconsciously write tests to show that their code is correct, rather than to find errors.\nWriting tests helps programmers figure out what the function is actually supposed to do."
-  },
-  {
-    "objectID": "swd3.html#possible-tests-a_div_b-example",
-    "href": "swd3.html#possible-tests-a_div_b-example",
-    "title": "arctraining slides",
-    "section": "Possible tests: a_div_b example",
-    "text": "Possible tests: a_div_b example\nLet’s think in all possible scenarios for this problem and how we could test them.\n\nBigger by smallerSmaller by biggerNegative numbers\n\n\n\nUsing 4 and 2, the answer should be 2.\n\nassert a_div_b(4, 2) == 2\n\nOr… the answer should be larger than 1.\n\nassert a_div_b(8, 7) &gt; 1\n\n\n\nUsing 2 and 4, the answer should be 0.5.\n\nassert a_div_b(2, 4) == 0.5\n\nOr… the answer should be smaller than 1.\n\nassert a_div_b(7, 8) &lt; 1\n\n\n\nUsing -4 and -2, the answer should be 2.\n\nassert a_div_b(-4, -2) == 2\n\nOr… the answer should be positive.\n\nassert a_div_b(-4, -2) &gt; 0"
-  },
-  {
-    "objectID": "swd3.html#bringing-it-all-together",
-    "href": "swd3.html#bringing-it-all-together",
-    "title": "arctraining slides",
-    "section": "Bringing it all together",
-    "text": "Bringing it all together\nThe Hypotenuse Problem\nCalculating the hypotenuse\n\\[ c = \\sqrt{a^2 + b^2} \\]\nGeneral Design\n\n1 squared function\n1 sum function\n1 square root function\n1 hypotenuse function that uses the other functions"
-  },
-  {
-    "objectID": "swd3.html#workflow",
-    "href": "swd3.html#workflow",
+    "objectID": "swd3/project.html#workflow",
+    "href": "swd3/project.html#workflow",
     "title": "arctraining slides",
     "section": "Workflow",
     "text": "Workflow\n\nInstall Git, Anaconda, VScode\nCreate a GitHub repository + Licence + .gitignore + Readme\nSetup GH Action for testing (Python Application)\nClone GH repository in local machine\nCreate project structure (source and test folders)\nSetup tests (start with test_)\nDevelop code\nAdd docstring (you can use autoDocstring - Python Docstring Generator on VS Code)\nLint code and tests\nPush to github\nEXTRA: Create Sphinx documentation\nEXTRA: Setup file and local install\nEXTRA: GH Release"
   },
   {
-    "objectID": "swd3.html#extra-sphinx-documentation",
-    "href": "swd3.html#extra-sphinx-documentation",
+    "objectID": "swd3/project.html#extra-sphinx-documentation",
+    "href": "swd3/project.html#extra-sphinx-documentation",
     "title": "arctraining slides",
     "section": "Extra: Sphinx documentation",
     "text": "Extra: Sphinx documentation\n\nCreate docstring for every function\nInstall sphinx\nStart the basic structure using: $ sphinx-quickstart docs\nUse the apidoc to get docstrings: $ sphinx-apidoc -o docs .\nEdit files:\n\n\nconf.pyindex.rstdependencies.rstusage.rstfunctions.rst\n\n\n\nadd extentions: 'sphinx.ext.todo', 'sphinx.ext.viewcode', 'sphinx.ext.autodoc'.\nchange theme: sphinx_rtd_theme\nadd the src (change the folder name as necessary!) folder as path:\n\n import os\n import sys\n sys.path.insert(0, os.path.abspath('../src'))\n\n\nAdd extra files after Contents\n.. toctree::\n   :maxdepth: 2\n   :caption: Contents:\n\n   dependencies\n   usage\n   functions\n\n\nList all your dependencies:\nDependencies\n============\n\n- python\n- pytest\n- flake8\n- black\n- sphinx\n\n\nExplain how to use your software\nUsage Guide\n============\n\nTo start working with this repository you need to clone it onto your local\nmachine: ::\n\n    $ git clone https://github.com/...\n\n\nNext ...\n\n\nCreate a function file with the following:\nAPI reference\n=============\n\n.. automodule:: calc\n   :members:\n   :undoc-members:\n   :show-inheritance:"
   },
   {
-    "objectID": "swd3.html#extra-documentation-action",
-    "href": "swd3.html#extra-documentation-action",
+    "objectID": "swd3/project.html#extra-documentation-action",
+    "href": "swd3/project.html#extra-documentation-action",
     "title": "arctraining slides",
     "section": "Extra: documentation Action",
     "text": "Extra: documentation Action\nCreate a new GH action to create a nice website for your documentation.\n\nThe action is available here\nYou may need update GH Actions permissions to allow write\nAfter a successful documentation action, you need to select gh-pages branch to activate your website"
   },
   {
-    "objectID": "swd3.html#extra-setup-file",
-    "href": "swd3.html#extra-setup-file",
+    "objectID": "swd3/project.html#extra-setup-file",
+    "href": "swd3/project.html#extra-setup-file",
     "title": "arctraining slides",
     "section": "Extra: Setup file",
     "text": "Extra: Setup file\nCreate a setup.py file like:\nimport setuptools\n\nwith open(\"README.md\", \"r\") as fh:\n    long_description = fh.read()\n\nsetuptools.setup(\n    name=\"hypot\",\n    version=\"0.1.0\",\n    author=\"Patricia Ternes\",\n    author_email=\"p.ternesdallagnollo@leeds.ac.uk\",\n    description=\"The hypot SWD3 demo package\",\n    packages=setuptools.find_packages(),\n    classifiers=[\n        \"Programming Language :: Python :: 3.9\",\n        \"Intended Audience :: Science/Research/Learning\",\n    ],\n    python_requires=\"&gt;=3.9\",\n)"
   },
   {
-    "objectID": "swd3.html#local-installation",
-    "href": "swd3.html#local-installation",
+    "objectID": "swd3/project.html#local-installation",
+    "href": "swd3/project.html#local-installation",
     "title": "arctraining slides",
     "section": "Local Installation",
     "text": "Local Installation\nInstall: install the hypot package into the environment using:\n$ python setup.py install\nUsage: if you want to create a personalised script, you can import the hypot modules as follows:\nfrom hypot.calc import squared, addition, sqroot\nRemove: If you want to remove your package, use pip:\n$ pip uninstall hypot"
   },
   {
-    "objectID": "swd3.html#release",
-    "href": "swd3.html#release",
+    "objectID": "swd3/project.html#release",
+    "href": "swd3/project.html#release",
     "title": "arctraining slides",
     "section": "Release",
-    "text": "Release\nRelease in GitHub are based in tags with the following structure:\nv0.5.2\n\n\n\nChange\nRelease\nExample\n\n\n\n\nMajor\nBreaking\n0\n\n\nMinor\nFeature\n5\n\n\nPatch\nFix\n2\n\n\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
+    "text": "Release\nRelease in GitHub are based in tags with the following structure:\nv0.5.2\n\n\n\nChange\nRelease\nExample\n\n\n\n\nMajor\nBreaking\n0\n\n\nMinor\nFeature\n5\n\n\nPatch\nFix\n2"
+  },
+  {
+    "objectID": "swd3/structure.html",
+    "href": "swd3/structure.html",
+    "title": "arctraining slides",
+    "section": "",
+    "text": "# The most basic structure for a code project should look like:\nmy-model\n├── README.md\n├── requirements.txt\n├── src                &lt;- Source code for this project\n└── tests              &lt;- Test code for this project\n\nReadmeRequirements\n\n\n\nIs a guide that gives users a detailed description of a project you have worked on\nIt is the first file a person will see when they encounter your project, so it should be fairly brief but detailed.\nSee how to write a good README file in this freecodecamp post.\n\n\n\n\nText information about all the necessary additional libraries, modules, and packages.\nThis can be replaced by files like: environment.yml, pyproject.toml, setup.py."
+  },
+  {
+    "objectID": "swd3/structure.html#basic-structure-suggestion",
+    "href": "swd3/structure.html#basic-structure-suggestion",
+    "title": "arctraining slides",
+    "section": "",
+    "text": "# The most basic structure for a code project should look like:\nmy-model\n├── README.md\n├── requirements.txt\n├── src                &lt;- Source code for this project\n└── tests              &lt;- Test code for this project\n\nReadmeRequirements\n\n\n\nIs a guide that gives users a detailed description of a project you have worked on\nIt is the first file a person will see when they encounter your project, so it should be fairly brief but detailed.\nSee how to write a good README file in this freecodecamp post.\n\n\n\n\nText information about all the necessary additional libraries, modules, and packages.\nThis can be replaced by files like: environment.yml, pyproject.toml, setup.py."
+  },
+  {
+    "objectID": "swd3/structure.html#advanced-project-structure",
+    "href": "swd3/structure.html#advanced-project-structure",
+    "title": "arctraining slides",
+    "section": "Advanced Project Structure",
+    "text": "Advanced Project Structure\nTemplate based on mkrapp/cookiecutter-reproducible-science github\n.\n├── AUTHORS.md\n├── LICENSE\n├── README.md\n├── bin                &lt;- Your compiled model code can be stored here (not tracked by git)\n├── config             &lt;- Configuration files, e.g., for doxygen or for your model if needed\n├── data\n│   ├── external       &lt;- Data from third party sources.\n│   ├── interim        &lt;- Intermediate data that has been transformed.\n│   ├── processed      &lt;- The final, canonical data sets for modeling.\n│   └── raw            &lt;- The original, immutable data dump.\n├── docs               &lt;- Documentation, e.g., doxygen or scientific papers (not tracked by git)\n├── notebooks          &lt;- Ipython or R notebooks\n├── reports            &lt;- For a manuscript source, e.g., LaTeX, Markdown, etc., or any project reports\n│   └── figures        &lt;- Figures for the manuscript or reports\n├── src                &lt;- Source code for this project\n│   ├── data           &lt;- scripts and programs to process data\n│   ├── external       &lt;- Any external source code, e.g., pull other git projects, or external libraries\n│   ├── models         &lt;- Source code for your own model\n│   ├── tools          &lt;- Any helper scripts go here\n│   └── visualization  &lt;- Scripts for visualisation of your results, e.g., matplotlib, ggplot2 related.\n└── tests              &lt;- Test code for this project"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "arctraining slides",
+    "section": "",
+    "text": "Public facing homepage for arctraining Quarto slides collection."
+  },
+  {
+    "objectID": "index.html#slides",
+    "href": "index.html#slides",
+    "title": "arctraining slides",
+    "section": "Slides:",
+    "text": "Slides:\nNote: this page is under construction. As soon as the slides are available, the link will be provided.\n\nHPC0: Introduction to Linux for HPC\nHPC1: Introduction to High Performance Computing\nHPC2: Applications and containers on HPC\nHPC3: Computer architectures and shared memory parallel programming\nHPC5: Introduction to GPU programming with CUDA\nHPC6: HPC for Life Sciences and Bioinformatics\nSWD1a: Introduction to Python programming\nSWD1b: Introduction to R programming\nSWD2: Version Control with Git and GitHub\nSWD3: Software development practices for Research\nSWD4: Cloud computing for Research\nSWD5: Scientific Python\nSWD6: High performance Python\nSWD7: Introduction to reproducible workflows in Python"
   },
   {
     "objectID": "hpc1.html#meta-code",
@@ -784,174 +637,6 @@
     "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: https://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
   },
   {
-    "objectID": "swd3/project.html",
-    "href": "swd3/project.html",
-    "title": "arctraining slides",
-    "section": "",
-    "text": "Calculating the hypotenuse\n\\[ c = \\sqrt{a^2 + b^2} \\]\nGeneral Design\n\n1 squared function\n1 sum function\n1 square root function\n1 hypotenuse function that uses the other functions"
-  },
-  {
-    "objectID": "swd3/project.html#bringing-it-all-together",
-    "href": "swd3/project.html#bringing-it-all-together",
-    "title": "arctraining slides",
-    "section": "",
-    "text": "Calculating the hypotenuse\n\\[ c = \\sqrt{a^2 + b^2} \\]\nGeneral Design\n\n1 squared function\n1 sum function\n1 square root function\n1 hypotenuse function that uses the other functions"
-  },
-  {
-    "objectID": "swd3/project.html#workflow",
-    "href": "swd3/project.html#workflow",
-    "title": "arctraining slides",
-    "section": "Workflow",
-    "text": "Workflow\n\nInstall Git, Anaconda, VScode\nCreate a GitHub repository + Licence + .gitignore + Readme\nSetup GH Action for testing (Python Application)\nClone GH repository in local machine\nCreate project structure (source and test folders)\nSetup tests (start with test_)\nDevelop code\nAdd docstring (you can use autoDocstring - Python Docstring Generator on VS Code)\nLint code and tests\nPush to github\nEXTRA: Create Sphinx documentation\nEXTRA: Setup file and local install\nEXTRA: GH Release"
-  },
-  {
-    "objectID": "swd3/project.html#extra-sphinx-documentation",
-    "href": "swd3/project.html#extra-sphinx-documentation",
-    "title": "arctraining slides",
-    "section": "Extra: Sphinx documentation",
-    "text": "Extra: Sphinx documentation\n\nCreate docstring for every function\nInstall sphinx\nStart the basic structure using: $ sphinx-quickstart docs\nUse the apidoc to get docstrings: $ sphinx-apidoc -o docs .\nEdit files:\n\n\nconf.pyindex.rstdependencies.rstusage.rstfunctions.rst\n\n\n\nadd extentions: 'sphinx.ext.todo', 'sphinx.ext.viewcode', 'sphinx.ext.autodoc'.\nchange theme: sphinx_rtd_theme\nadd the src (change the folder name as necessary!) folder as path:\n\n import os\n import sys\n sys.path.insert(0, os.path.abspath('../src'))\n\n\nAdd extra files after Contents\n.. toctree::\n   :maxdepth: 2\n   :caption: Contents:\n\n   dependencies\n   usage\n   functions\n\n\nList all your dependencies:\nDependencies\n============\n\n- python\n- pytest\n- flake8\n- black\n- sphinx\n\n\nExplain how to use your software\nUsage Guide\n============\n\nTo start working with this repository you need to clone it onto your local\nmachine: ::\n\n    $ git clone https://github.com/...\n\n\nNext ...\n\n\nCreate a function file with the following:\nAPI reference\n=============\n\n.. automodule:: calc\n   :members:\n   :undoc-members:\n   :show-inheritance:"
-  },
-  {
-    "objectID": "swd3/project.html#extra-documentation-action",
-    "href": "swd3/project.html#extra-documentation-action",
-    "title": "arctraining slides",
-    "section": "Extra: documentation Action",
-    "text": "Extra: documentation Action\nCreate a new GH action to create a nice website for your documentation.\n\nThe action is available here\nYou may need update GH Actions permissions to allow write\nAfter a successful documentation action, you need to select gh-pages branch to activate your website"
-  },
-  {
-    "objectID": "swd3/project.html#extra-setup-file",
-    "href": "swd3/project.html#extra-setup-file",
-    "title": "arctraining slides",
-    "section": "Extra: Setup file",
-    "text": "Extra: Setup file\nCreate a setup.py file like:\nimport setuptools\n\nwith open(\"README.md\", \"r\") as fh:\n    long_description = fh.read()\n\nsetuptools.setup(\n    name=\"hypot\",\n    version=\"0.1.0\",\n    author=\"Patricia Ternes\",\n    author_email=\"p.ternesdallagnollo@leeds.ac.uk\",\n    description=\"The hypot SWD3 demo package\",\n    packages=setuptools.find_packages(),\n    classifiers=[\n        \"Programming Language :: Python :: 3.9\",\n        \"Intended Audience :: Science/Research/Learning\",\n    ],\n    python_requires=\"&gt;=3.9\",\n)"
-  },
-  {
-    "objectID": "swd3/project.html#local-installation",
-    "href": "swd3/project.html#local-installation",
-    "title": "arctraining slides",
-    "section": "Local Installation",
-    "text": "Local Installation\nInstall: install the hypot package into the environment using:\n$ python setup.py install\nUsage: if you want to create a personalised script, you can import the hypot modules as follows:\nfrom hypot.calc import squared, addition, sqroot\nRemove: If you want to remove your package, use pip:\n$ pip uninstall hypot"
-  },
-  {
-    "objectID": "swd3/project.html#release",
-    "href": "swd3/project.html#release",
-    "title": "arctraining slides",
-    "section": "Release",
-    "text": "Release\nRelease in GitHub are based in tags with the following structure:\nv0.5.2\n\n\n\nChange\nRelease\nExample\n\n\n\n\nMajor\nBreaking\n0\n\n\nMinor\nFeature\n5\n\n\nPatch\nFix\n2"
-  },
-  {
-    "objectID": "swd3/structure.html",
-    "href": "swd3/structure.html",
-    "title": "arctraining slides",
-    "section": "",
-    "text": "# The most basic structure for a code project should look like:\nmy-model\n├── README.md\n├── requirements.txt\n├── src                &lt;- Source code for this project\n└── tests              &lt;- Test code for this project\n\nReadmeRequirements\n\n\n\nIs a guide that gives users a detailed description of a project you have worked on\nIt is the first file a person will see when they encounter your project, so it should be fairly brief but detailed.\nSee how to write a good README file in this freecodecamp post.\n\n\n\n\nText information about all the necessary additional libraries, modules, and packages.\nThis can be replaced by files like: environment.yml, pyproject.toml, setup.py."
-  },
-  {
-    "objectID": "swd3/structure.html#basic-structure-suggestion",
-    "href": "swd3/structure.html#basic-structure-suggestion",
-    "title": "arctraining slides",
-    "section": "",
-    "text": "# The most basic structure for a code project should look like:\nmy-model\n├── README.md\n├── requirements.txt\n├── src                &lt;- Source code for this project\n└── tests              &lt;- Test code for this project\n\nReadmeRequirements\n\n\n\nIs a guide that gives users a detailed description of a project you have worked on\nIt is the first file a person will see when they encounter your project, so it should be fairly brief but detailed.\nSee how to write a good README file in this freecodecamp post.\n\n\n\n\nText information about all the necessary additional libraries, modules, and packages.\nThis can be replaced by files like: environment.yml, pyproject.toml, setup.py."
-  },
-  {
-    "objectID": "swd3/structure.html#advanced-project-structure",
-    "href": "swd3/structure.html#advanced-project-structure",
-    "title": "arctraining slides",
-    "section": "Advanced Project Structure",
-    "text": "Advanced Project Structure\nTemplate based on mkrapp/cookiecutter-reproducible-science github\n.\n├── AUTHORS.md\n├── LICENSE\n├── README.md\n├── bin                &lt;- Your compiled model code can be stored here (not tracked by git)\n├── config             &lt;- Configuration files, e.g., for doxygen or for your model if needed\n├── data\n│   ├── external       &lt;- Data from third party sources.\n│   ├── interim        &lt;- Intermediate data that has been transformed.\n│   ├── processed      &lt;- The final, canonical data sets for modeling.\n│   └── raw            &lt;- The original, immutable data dump.\n├── docs               &lt;- Documentation, e.g., doxygen or scientific papers (not tracked by git)\n├── notebooks          &lt;- Ipython or R notebooks\n├── reports            &lt;- For a manuscript source, e.g., LaTeX, Markdown, etc., or any project reports\n│   └── figures        &lt;- Figures for the manuscript or reports\n├── src                &lt;- Source code for this project\n│   ├── data           &lt;- scripts and programs to process data\n│   ├── external       &lt;- Any external source code, e.g., pull other git projects, or external libraries\n│   ├── models         &lt;- Source code for your own model\n│   ├── tools          &lt;- Any helper scripts go here\n│   └── visualization  &lt;- Scripts for visualisation of your results, e.g., matplotlib, ggplot2 related.\n└── tests              &lt;- Test code for this project"
-  },
-  {
-    "objectID": "swd3/sdlc.html#sdlc",
-    "href": "swd3/sdlc.html#sdlc",
-    "title": "arctraining slides",
-    "section": "SDLC",
-    "text": "SDLC\n\nIdeationRequirementsDesignDevelopmentTestDeploymentMaintenance\n\n\n\n\n\nWhat are we going to do?\n\n\nBrainstorming\nResearch\n\n\n\n\n\n\n\n\n\n\nHow are we going to do it?\n\nSome topics to help define requirements include:\n\nfinal goal\nproject scope (how to reach the final goal)\nwhat is feasible (and how)\nwhat is priority\nwhat resources are available\ndeadlines\npotential risks\n\n\nWarning: Each person involved in the project may have a different need.\n\n\n\n\n\n\n\n\n\n\nWhat is the software architecture?\n\nWhen designing software, the object-oriented approach is a common programming paradigm.\nObject-oriented components:\n\nClasses: A user-defined type\nObject instances: A particular object instantiated from a class.\nMethods: A function which is “built in” to a class\nConstructor: A special method called when instantiating a new object\n\nSome principles: abstraction, encapsulation, decomposition, generalisation\n\n\nSee more: \n\n\n\n\n\n\n\nIs this where the fun begins?\n\n\nTake your time\n\n\n\n\n\nDevelopment is usually the most time consuming step in a Software Development Life Cycle.\n\n\n\n\n\nIs this software good?\n\nIn this step, errors and failures are identified by exposing the code to an environment similar to the end-user experience.\nThere are several types of testing, some examples include:\n\nUnit testing: are all components working?\nIntegration testing: are all components working when fitted together?\nPerformance testing: how does the software perform against different workloads? It is fast? Stable?\nFunctional testing: is the software aligned with Software Requirement Specification?\n\n\n\n\n\n\n\n\n\n\nCan other people use my code?\n\nYou can use platforms like GitHub to release your software.\n\nThe functionality of the software is linked to several specifications related to the operating system and versions of packages and other software related to the project.\nListing these specifications will help others to replicate the environment in which the software was developed.\n\n\n\n\n\n\n\n\n\n\nIs it over?\n\nWe can classify maintenance into a few categories:\n\nCorrective: fix reported errors/failures.\nPreventive: regular checks and fixes.\nPerfective: optimize implemented features, adding new features.\nAdaptive: keep the software updated according to changes external to the project (new programming language version, new regulation, etc.)."
-  },
-  {
-    "objectID": "swd3/good-practices.html",
-    "href": "swd3/good-practices.html",
-    "title": "arctraining slides",
-    "section": "",
-    "text": "If application A needs version 1.0 of a particular module but application B needs version 2.0, then the requirements are in conflict and installing either version 1.0 or 2.0 will leave one application unable to run.\nThe solution for this problem is to create a virtual environment, a self-contained directory tree that contains installation for particular versions of software/packages.\n\n\n\nConda is an open source package management system and environment management system that runs on Windows, macOS, and Linux.\nIt offers dependency and environment management for any language—Python, R, Ruby, Lua, Scala, Java, JavaScript, C/ C++, Fortran, and more.\nEasy user install via Anaconda."
-  },
-  {
-    "objectID": "swd3/good-practices.html#virtual-environments",
-    "href": "swd3/good-practices.html#virtual-environments",
-    "title": "arctraining slides",
-    "section": "",
-    "text": "If application A needs version 1.0 of a particular module but application B needs version 2.0, then the requirements are in conflict and installing either version 1.0 or 2.0 will leave one application unable to run.\nThe solution for this problem is to create a virtual environment, a self-contained directory tree that contains installation for particular versions of software/packages.\n\n\n\nConda is an open source package management system and environment management system that runs on Windows, macOS, and Linux.\nIt offers dependency and environment management for any language—Python, R, Ruby, Lua, Scala, Java, JavaScript, C/ C++, Fortran, and more.\nEasy user install via Anaconda."
-  },
-  {
-    "objectID": "swd3/good-practices.html#code-formatting",
-    "href": "swd3/good-practices.html#code-formatting",
-    "title": "arctraining slides",
-    "section": "Code formatting",
-    "text": "Code formatting\n# myscript.py:\nx = {  'a':37,'b':42,\n'c':927}\ny = 'hello '+       'world'\nclass foo  (     object  ):\n   def f    (self   ):\n       return       y **2\n   def g(self, x :int,\n       y : int=42\n       ) -&gt; int:\n       return x--y\ndef f  (   a ) :\n   return      37+-a[42-a :  y*3]"
-  },
-  {
-    "objectID": "swd3/good-practices.html#coding-conventions",
-    "href": "swd3/good-practices.html#coding-conventions",
-    "title": "arctraining slides",
-    "section": "Coding conventions",
-    "text": "Coding conventions\nIf your language or project has a standard policy, use that. For example:\n\nPython: PEP8\nR: Google’s guide for R, tidyverse style guide\nC++: Google’s style guide\nJulia: Official style guide"
-  },
-  {
-    "objectID": "swd3/good-practices.html#linters",
-    "href": "swd3/good-practices.html#linters",
-    "title": "arctraining slides",
-    "section": "Linters",
-    "text": "Linters\nLinters are automated tools which enforce coding conventions and check for common mistakes. For example:\n\nPython:\n\nflake8 (flags any syntax/style errors)\nblack (enforces the style)\nisort (“Sorts” imports alphabetically in groups)"
-  },
-  {
-    "objectID": "swd3/good-practices.html#example-flake8-linter",
-    "href": "swd3/good-practices.html#example-flake8-linter",
-    "title": "arctraining slides",
-    "section": "Example: Flake8 Linter",
-    "text": "Example: Flake8 Linter\n$ conda install flake8\n$ flake8 myscript.py\nmyscript.py:2:6: E201 whitespace after '{'\nmyscript.py:2:11: E231 missing whitespace after ':'\nmyscript.py:2:14: E231 missing whitespace after ','\nmyscript.py:2:18: E231 missing whitespace after ':'\nmyscript.py:3:1: E128 continuation line under-indented for visual indent\nmyscript.py:3:4: E231 missing whitespace after ':'\nmyscript.py:4:13: E225 missing whitespace around operator\nmyscript.py:4:14: E222 multiple spaces after operator\nmyscript.py:5:1: E302 expected 2 blank lines, found 0\nmyscript.py:5:13: E201 whitespace after '('\nmyscript.py:5:25: E202 whitespace before ')'\nmyscript.py:6:4: E111 indentation is not a multiple of 4\nmyscript.py:6:9: E211 whitespace before '('\nmyscript.py:6:20: E202 whitespace before ')'\nmyscript.py:7:8: E111 indentation is not a multiple of 4\nmyscript.py:7:14: E271 multiple spaces after keyword\nmyscript.py:7:25: E225 missing whitespace around operator\nmyscript.py:8:4: E301 expected 1 blank line, found 0\nmyscript.py:8:4: E111 indentation is not a multiple of 4\nmyscript.py:8:17: E203 whitespace before ':'\nmyscript.py:8:18: E231 missing whitespace after ':'\nmyscript.py:9:8: E128 continuation line under-indented for visual indent\nmyscript.py:9:9: E203 whitespace before ':'\nmyscript.py:9:15: E252 missing whitespace around parameter equals\nmyscript.py:9:16: E252 missing whitespace around parameter equals\nmyscript.py:10:8: E124 closing bracket does not match visual indentation\nmyscript.py:10:8: E125 continuation line with same indent as next logical line\nmyscript.py:11:8: E111 indentation is not a multiple of 4\nmyscript.py:12:1: E302 expected 2 blank lines, found 0\nmyscript.py:12:6: E211 whitespace before '('\nmyscript.py:12:9: E201 whitespace after '('\nmyscript.py:12:13: E202 whitespace before ')'\nmyscript.py:12:15: E203 whitespace before ':'\nmyscript.py:13:4: E111 indentation is not a multiple of 4\nmyscript.py:13:10: E271 multiple spaces after keyword\nmyscript.py:13:26: E203 whitespace before ':'\nmyscript.py:13:34: W291 trailing whitespace"
-  },
-  {
-    "objectID": "swd3/good-practices.html#example-black-code-formatter",
-    "href": "swd3/good-practices.html#example-black-code-formatter",
-    "title": "arctraining slides",
-    "section": "Example: Black Code Formatter",
-    "text": "Example: Black Code Formatter\n\nInstall and run Black\n\n$ conda install black\n$ black myscript.py\n\nCheck the file!\n\n# myscript.py:\nx = {\"a\": 37, \"b\": 42, \"c\": 927}\ny = \"hello \" + \"world\"\n\n\nclass foo(object):\n    def f(self):\n        return y**2\n\n    def g(self, x: int, y: int = 42) -&gt; int:\n        return x - -y\n\n\ndef f(a):\n    return 37 + -a[42 - a : y * 3]"
-  },
-  {
-    "objectID": "swd3/good-practices.html#ide",
-    "href": "swd3/good-practices.html#ide",
-    "title": "arctraining slides",
-    "section": "IDE",
-    "text": "IDE\nUsing an Integrated development environment (IDE) will certainly save you time, but the advantages of using an IDE go beyond that. Below are some IDE advantages\n\nSyntax highlighting\nText autocompletion\nRefactoring options\nEasily Importing libraries\nBuild, compile, or run\n\n\nVisual Studio Code\nTo install VS Code follow the instructions here."
-  },
-  {
-    "objectID": "swd3/good-practices.html#vsc-example-automatically-using-black",
-    "href": "swd3/good-practices.html#vsc-example-automatically-using-black",
-    "title": "arctraining slides",
-    "section": "VSC Example: automatically using black",
-    "text": "VSC Example: automatically using black\nConfigure VSC to use Black: Code (or File) &gt; Preferences &gt; Settings\n\nSearch for python formatting provider and choose black\nSearch for format on save and check the box to enable\n\nSelect interpreter: View &gt; Command Palette.. (or Ctrl+Shift+P)\n\nSearch for Python: Select Interpreter\nChoose the correct environment\n\nNow the Black package is going to fix your codes layout every time you save a code file."
-  },
-  {
-    "objectID": "swd3/good-practices.html#version-control",
-    "href": "swd3/good-practices.html#version-control",
-    "title": "arctraining slides",
-    "section": "Version Control",
-    "text": "Version Control\n\n\n\nPiled Higher and Deeper by Jorge Cham"
-  },
-  {
-    "objectID": "swd3/good-practices.html#test-driven-development",
-    "href": "swd3/good-practices.html#test-driven-development",
-    "title": "arctraining slides",
-    "section": "Test-driven development",
-    "text": "Test-driven development\nExample, suppose we need to find the result of a number divided by another number:\n\nNaive solutionTDD solution\n\n\n\nWrite a function a_div_b.\nCall it interactively on two or three different inputs.\nIf it produces the wrong answer, fix the function and re-run that test.\n\nThis clearly works — after all, thousands of scientists are doing it right now — but there’s a better way\n\n\n\nWrite a short function for each test.\nWrite a a_div_b function that should pass those tests.\nIf a_div_b produces any wrong answers, fix it and re-run the test functions.\n\nWriting the tests before writing the function they exercise is called test-driven development (TDD). Its advocates believe it produces better code faster because:\n\nIf people write tests after writing the thing to be tested, they are subject to confirmation bias, i.e., they subconsciously write tests to show that their code is correct, rather than to find errors.\nWriting tests helps programmers figure out what the function is actually supposed to do."
-  },
-  {
-    "objectID": "swd3/good-practices.html#possible-tests-a_div_b-example",
-    "href": "swd3/good-practices.html#possible-tests-a_div_b-example",
-    "title": "arctraining slides",
-    "section": "Possible tests: a_div_b example",
-    "text": "Possible tests: a_div_b example\nLet’s think in all possible scenarios for this problem and how we could test them.\n\nBigger by smallerSmaller by biggerNegative numbers\n\n\n\nUsing 4 and 2, the answer should be 2.\n\nassert a_div_b(4, 2) == 2\n\nOr… the answer should be larger than 1.\n\nassert a_div_b(8, 7) &gt; 1\n\n\n\nUsing 2 and 4, the answer should be 0.5.\n\nassert a_div_b(2, 4) == 0.5\n\nOr… the answer should be smaller than 1.\n\nassert a_div_b(7, 8) &lt; 1\n\n\n\nUsing -4 and -2, the answer should be 2.\n\nassert a_div_b(-4, -2) == 2\n\nOr… the answer should be positive.\n\nassert a_div_b(-4, -2) &gt; 0"
-  },
-  {
     "objectID": "template.html#meta-code",
     "href": "template.html#meta-code",
     "title": "arctraining slides",
@@ -992,6 +677,181 @@
     "title": "arctraining slides",
     "section": "Thank you",
     "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: https://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
+  },
+  {
+    "objectID": "swd3.html#meta-code",
+    "href": "swd3.html#meta-code",
+    "title": "arctraining slides",
+    "section": "SWD3",
+    "text": "SWD3\nSoftware development practices for Research"
+  },
+  {
+    "objectID": "swd3.html#research-computing-team-and-service",
+    "href": "swd3.html#research-computing-team-and-service",
+    "title": "arctraining slides",
+    "section": "Research Computing Team and Service",
+    "text": "Research Computing Team and Service\n\n\nHere to support research(ers)\n\nProvide training\nSupport users of Grid and Cloud Computing platforms\nProvide consultancy\n\nTo develop project proposals\nTo help recruit people with specialist skills\nWorking directly on research projects\n\n\nFor details please see our Website\nContact us via the IT Service Desk\n\n\n\nIf you follow a link then a new tab will open in the Slide View Web browser.\n\nThis will want closing or the Slide View activating again as he main tab in the browser.\n\nMaybe point out some sections/features on the Research Computing Website.\nWe support use and develop resources."
+  },
+  {
+    "objectID": "swd3.html#useful-links",
+    "href": "swd3.html#useful-links",
+    "title": "arctraining slides",
+    "section": "Useful Links",
+    "text": "Useful Links\n\nGitHub Project Demo\nAlan Turing Institute - Research Software Engineering Course Material"
+  },
+  {
+    "objectID": "swd3.html#software-development-life-cycle-sdlc",
+    "href": "swd3.html#software-development-life-cycle-sdlc",
+    "title": "arctraining slides",
+    "section": "Software Development Life Cycle (SDLC)",
+    "text": "Software Development Life Cycle (SDLC)"
+  },
+  {
+    "objectID": "swd3.html#sdlc",
+    "href": "swd3.html#sdlc",
+    "title": "arctraining slides",
+    "section": "SDLC",
+    "text": "SDLC\n\nIdeationRequirementsDesignDevelopmentTestDeploymentMaintenance\n\n\n\n\n\nWhat are we going to do?\n\n\nBrainstorming\nResearch\n\n\n\n\n\n\n\n\n\n\nHow are we going to do it?\n\nSome topics to help define requirements include:\n\nfinal goal\nproject scope (how to reach the final goal)\nwhat is feasible (and how)\nwhat is priority\nwhat resources are available\ndeadlines\npotential risks\n\n\nWarning: Each person involved in the project may have a different need.\n\n\n\n\n\n\n\n\n\n\nWhat is the software architecture?\n\nWhen designing software, the object-oriented approach is a common programming paradigm.\nObject-oriented components:\n\nClasses: A user-defined type\nObject instances: A particular object instantiated from a class.\nMethods: A function which is “built in” to a class\nConstructor: A special method called when instantiating a new object\n\nSome principles: abstraction, encapsulation, decomposition, generalisation\n\n\nSee more: \n\n\n\n\n\n\n\nIs this where the fun begins?\n\n\nTake your time\n\n\n\n\n\nDevelopment is usually the most time consuming step in a Software Development Life Cycle.\n\n\n\n\n\nIs this software good?\n\nIn this step, errors and failures are identified by exposing the code to an environment similar to the end-user experience.\nThere are several types of testing, some examples include:\n\nUnit testing: are all components working?\nIntegration testing: are all components working when fitted together?\nPerformance testing: how does the software perform against different workloads? It is fast? Stable?\nFunctional testing: is the software aligned with Software Requirement Specification?\n\n\n\n\n\n\n\n\n\n\nCan other people use my code?\n\nYou can use platforms like GitHub to release your software.\n\nThe functionality of the software is linked to several specifications related to the operating system and versions of packages and other software related to the project.\nListing these specifications will help others to replicate the environment in which the software was developed.\n\n\n\n\n\n\n\n\n\n\nIs it over?\n\nWe can classify maintenance into a few categories:\n\nCorrective: fix reported errors/failures.\nPreventive: regular checks and fixes.\nPerfective: optimize implemented features, adding new features.\nAdaptive: keep the software updated according to changes external to the project (new programming language version, new regulation, etc.)."
+  },
+  {
+    "objectID": "swd3.html#basic-structure-suggestion",
+    "href": "swd3.html#basic-structure-suggestion",
+    "title": "arctraining slides",
+    "section": "Basic Structure Suggestion",
+    "text": "Basic Structure Suggestion\n# The most basic structure for a code project should look like:\nmy-model\n├── README.md\n├── requirements.txt\n├── src                &lt;- Source code for this project\n└── tests              &lt;- Test code for this project\n\nReadmeRequirements\n\n\n\nIs a guide that gives users a detailed description of a project you have worked on\nIt is the first file a person will see when they encounter your project, so it should be fairly brief but detailed.\nSee how to write a good README file in this freecodecamp post.\n\n\n\n\nText information about all the necessary additional libraries, modules, and packages.\nThis can be replaced by files like: environment.yml, pyproject.toml, setup.py."
+  },
+  {
+    "objectID": "swd3.html#advanced-project-structure",
+    "href": "swd3.html#advanced-project-structure",
+    "title": "arctraining slides",
+    "section": "Advanced Project Structure",
+    "text": "Advanced Project Structure\nTemplate based on mkrapp/cookiecutter-reproducible-science github\n.\n├── AUTHORS.md\n├── LICENSE\n├── README.md\n├── bin                &lt;- Your compiled model code can be stored here (not tracked by git)\n├── config             &lt;- Configuration files, e.g., for doxygen or for your model if needed\n├── data\n│   ├── external       &lt;- Data from third party sources.\n│   ├── interim        &lt;- Intermediate data that has been transformed.\n│   ├── processed      &lt;- The final, canonical data sets for modeling.\n│   └── raw            &lt;- The original, immutable data dump.\n├── docs               &lt;- Documentation, e.g., doxygen or scientific papers (not tracked by git)\n├── notebooks          &lt;- Ipython or R notebooks\n├── reports            &lt;- For a manuscript source, e.g., LaTeX, Markdown, etc., or any project reports\n│   └── figures        &lt;- Figures for the manuscript or reports\n├── src                &lt;- Source code for this project\n│   ├── data           &lt;- scripts and programs to process data\n│   ├── external       &lt;- Any external source code, e.g., pull other git projects, or external libraries\n│   ├── models         &lt;- Source code for your own model\n│   ├── tools          &lt;- Any helper scripts go here\n│   └── visualization  &lt;- Scripts for visualisation of your results, e.g., matplotlib, ggplot2 related.\n└── tests              &lt;- Test code for this project"
+  },
+  {
+    "objectID": "swd3.html#virtual-environments",
+    "href": "swd3.html#virtual-environments",
+    "title": "arctraining slides",
+    "section": "Virtual Environments",
+    "text": "Virtual Environments\nIf application A needs version 1.0 of a particular module but application B needs version 2.0, then the requirements are in conflict and installing either version 1.0 or 2.0 will leave one application unable to run.\nThe solution for this problem is to create a virtual environment, a self-contained directory tree that contains installation for particular versions of software/packages.\nConda\n\nConda is an open source package management system and environment management system that runs on Windows, macOS, and Linux.\nIt offers dependency and environment management for any language—Python, R, Ruby, Lua, Scala, Java, JavaScript, C/ C++, Fortran, and more.\nEasy user install via Anaconda."
+  },
+  {
+    "objectID": "swd3.html#code-formatting",
+    "href": "swd3.html#code-formatting",
+    "title": "arctraining slides",
+    "section": "Code formatting",
+    "text": "Code formatting\n# myscript.py:\nx = {  'a':37,'b':42,\n'c':927}\ny = 'hello '+       'world'\nclass foo  (     object  ):\n   def f    (self   ):\n       return       y **2\n   def g(self, x :int,\n       y : int=42\n       ) -&gt; int:\n       return x--y\ndef f  (   a ) :\n   return      37+-a[42-a :  y*3]"
+  },
+  {
+    "objectID": "swd3.html#coding-conventions",
+    "href": "swd3.html#coding-conventions",
+    "title": "arctraining slides",
+    "section": "Coding conventions",
+    "text": "Coding conventions\nIf your language or project has a standard policy, use that. For example:\n\nPython: PEP8\nR: Google’s guide for R, tidyverse style guide\nC++: Google’s style guide\nJulia: Official style guide"
+  },
+  {
+    "objectID": "swd3.html#linters",
+    "href": "swd3.html#linters",
+    "title": "arctraining slides",
+    "section": "Linters",
+    "text": "Linters\nLinters are automated tools which enforce coding conventions and check for common mistakes. For example:\n\nPython:\n\nflake8 (flags any syntax/style errors)\nblack (enforces the style)\nisort (“Sorts” imports alphabetically in groups)"
+  },
+  {
+    "objectID": "swd3.html#example-flake8-linter",
+    "href": "swd3.html#example-flake8-linter",
+    "title": "arctraining slides",
+    "section": "Example: Flake8 Linter",
+    "text": "Example: Flake8 Linter\n$ conda install flake8\n$ flake8 myscript.py\nmyscript.py:2:6: E201 whitespace after '{'\nmyscript.py:2:11: E231 missing whitespace after ':'\nmyscript.py:2:14: E231 missing whitespace after ','\nmyscript.py:2:18: E231 missing whitespace after ':'\nmyscript.py:3:1: E128 continuation line under-indented for visual indent\nmyscript.py:3:4: E231 missing whitespace after ':'\nmyscript.py:4:13: E225 missing whitespace around operator\nmyscript.py:4:14: E222 multiple spaces after operator\nmyscript.py:5:1: E302 expected 2 blank lines, found 0\nmyscript.py:5:13: E201 whitespace after '('\nmyscript.py:5:25: E202 whitespace before ')'\nmyscript.py:6:4: E111 indentation is not a multiple of 4\nmyscript.py:6:9: E211 whitespace before '('\nmyscript.py:6:20: E202 whitespace before ')'\nmyscript.py:7:8: E111 indentation is not a multiple of 4\nmyscript.py:7:14: E271 multiple spaces after keyword\nmyscript.py:7:25: E225 missing whitespace around operator\nmyscript.py:8:4: E301 expected 1 blank line, found 0\nmyscript.py:8:4: E111 indentation is not a multiple of 4\nmyscript.py:8:17: E203 whitespace before ':'\nmyscript.py:8:18: E231 missing whitespace after ':'\nmyscript.py:9:8: E128 continuation line under-indented for visual indent\nmyscript.py:9:9: E203 whitespace before ':'\nmyscript.py:9:15: E252 missing whitespace around parameter equals\nmyscript.py:9:16: E252 missing whitespace around parameter equals\nmyscript.py:10:8: E124 closing bracket does not match visual indentation\nmyscript.py:10:8: E125 continuation line with same indent as next logical line\nmyscript.py:11:8: E111 indentation is not a multiple of 4\nmyscript.py:12:1: E302 expected 2 blank lines, found 0\nmyscript.py:12:6: E211 whitespace before '('\nmyscript.py:12:9: E201 whitespace after '('\nmyscript.py:12:13: E202 whitespace before ')'\nmyscript.py:12:15: E203 whitespace before ':'\nmyscript.py:13:4: E111 indentation is not a multiple of 4\nmyscript.py:13:10: E271 multiple spaces after keyword\nmyscript.py:13:26: E203 whitespace before ':'\nmyscript.py:13:34: W291 trailing whitespace"
+  },
+  {
+    "objectID": "swd3.html#example-black-code-formatter",
+    "href": "swd3.html#example-black-code-formatter",
+    "title": "arctraining slides",
+    "section": "Example: Black Code Formatter",
+    "text": "Example: Black Code Formatter\n\nInstall and run Black\n\n$ conda install black\n$ black myscript.py\n\nCheck the file!\n\n# myscript.py:\nx = {\"a\": 37, \"b\": 42, \"c\": 927}\ny = \"hello \" + \"world\"\n\n\nclass foo(object):\n    def f(self):\n        return y**2\n\n    def g(self, x: int, y: int = 42) -&gt; int:\n        return x - -y\n\n\ndef f(a):\n    return 37 + -a[42 - a : y * 3]"
+  },
+  {
+    "objectID": "swd3.html#ide",
+    "href": "swd3.html#ide",
+    "title": "arctraining slides",
+    "section": "IDE",
+    "text": "IDE\nUsing an Integrated development environment (IDE) will certainly save you time, but the advantages of using an IDE go beyond that. Below are some IDE advantages\n\nSyntax highlighting\nText autocompletion\nRefactoring options\nEasily Importing libraries\nBuild, compile, or run\n\nVisual Studio Code\nTo install VS Code follow the instructions here."
+  },
+  {
+    "objectID": "swd3.html#vsc-example-automatically-using-black",
+    "href": "swd3.html#vsc-example-automatically-using-black",
+    "title": "arctraining slides",
+    "section": "VSC Example: automatically using black",
+    "text": "VSC Example: automatically using black\nConfigure VSC to use Black: Code (or File) &gt; Preferences &gt; Settings\n\nSearch for python formatting provider and choose black\nSearch for format on save and check the box to enable\n\nSelect interpreter: View &gt; Command Palette.. (or Ctrl+Shift+P)\n\nSearch for Python: Select Interpreter\nChoose the correct environment\n\nNow the Black package is going to fix your codes layout every time you save a code file."
+  },
+  {
+    "objectID": "swd3.html#version-control",
+    "href": "swd3.html#version-control",
+    "title": "arctraining slides",
+    "section": "Version Control",
+    "text": "Version Control\n\nPiled Higher and Deeper by Jorge Cham"
+  },
+  {
+    "objectID": "swd3.html#test-driven-development",
+    "href": "swd3.html#test-driven-development",
+    "title": "arctraining slides",
+    "section": "Test-driven development",
+    "text": "Test-driven development\nExample, suppose we need to find the result of a number divided by another number:\n\nNaive solutionTDD solution\n\n\n\nWrite a function a_div_b.\nCall it interactively on two or three different inputs.\nIf it produces the wrong answer, fix the function and re-run that test.\n\nThis clearly works — after all, thousands of scientists are doing it right now — but there’s a better way\n\n\n\nWrite a short function for each test.\nWrite a a_div_b function that should pass those tests.\nIf a_div_b produces any wrong answers, fix it and re-run the test functions.\n\nWriting the tests before writing the function they exercise is called test-driven development (TDD). Its advocates believe it produces better code faster because:\n\nIf people write tests after writing the thing to be tested, they are subject to confirmation bias, i.e., they subconsciously write tests to show that their code is correct, rather than to find errors.\nWriting tests helps programmers figure out what the function is actually supposed to do."
+  },
+  {
+    "objectID": "swd3.html#possible-tests-a_div_b-example",
+    "href": "swd3.html#possible-tests-a_div_b-example",
+    "title": "arctraining slides",
+    "section": "Possible tests: a_div_b example",
+    "text": "Possible tests: a_div_b example\nLet’s think in all possible scenarios for this problem and how we could test them.\n\nBigger by smallerSmaller by biggerNegative numbers\n\n\n\nUsing 4 and 2, the answer should be 2.\n\nassert a_div_b(4, 2) == 2\n\nOr… the answer should be larger than 1.\n\nassert a_div_b(8, 7) &gt; 1\n\n\n\nUsing 2 and 4, the answer should be 0.5.\n\nassert a_div_b(2, 4) == 0.5\n\nOr… the answer should be smaller than 1.\n\nassert a_div_b(7, 8) &lt; 1\n\n\n\nUsing -4 and -2, the answer should be 2.\n\nassert a_div_b(-4, -2) == 2\n\nOr… the answer should be positive.\n\nassert a_div_b(-4, -2) &gt; 0"
+  },
+  {
+    "objectID": "swd3.html#bringing-it-all-together",
+    "href": "swd3.html#bringing-it-all-together",
+    "title": "arctraining slides",
+    "section": "Bringing it all together",
+    "text": "Bringing it all together\nThe Hypotenuse Problem\nCalculating the hypotenuse\n\\[ c = \\sqrt{a^2 + b^2} \\]\nGeneral Design\n\n1 squared function\n1 sum function\n1 square root function\n1 hypotenuse function that uses the other functions"
+  },
+  {
+    "objectID": "swd3.html#workflow",
+    "href": "swd3.html#workflow",
+    "title": "arctraining slides",
+    "section": "Workflow",
+    "text": "Workflow\n\nInstall Git, Anaconda, VScode\nCreate a GitHub repository + Licence + .gitignore + Readme\nSetup GH Action for testing (Python Application)\nClone GH repository in local machine\nCreate project structure (source and test folders)\nSetup tests (start with test_)\nDevelop code\nAdd docstring (you can use autoDocstring - Python Docstring Generator on VS Code)\nLint code and tests\nPush to github\nEXTRA: Create Sphinx documentation\nEXTRA: Setup file and local install\nEXTRA: GH Release"
+  },
+  {
+    "objectID": "swd3.html#extra-sphinx-documentation",
+    "href": "swd3.html#extra-sphinx-documentation",
+    "title": "arctraining slides",
+    "section": "Extra: Sphinx documentation",
+    "text": "Extra: Sphinx documentation\n\nCreate docstring for every function\nInstall sphinx\nStart the basic structure using: $ sphinx-quickstart docs\nUse the apidoc to get docstrings: $ sphinx-apidoc -o docs .\nEdit files:\n\n\nconf.pyindex.rstdependencies.rstusage.rstfunctions.rst\n\n\n\nadd extentions: 'sphinx.ext.todo', 'sphinx.ext.viewcode', 'sphinx.ext.autodoc'.\nchange theme: sphinx_rtd_theme\nadd the src (change the folder name as necessary!) folder as path:\n\n import os\n import sys\n sys.path.insert(0, os.path.abspath('../src'))\n\n\nAdd extra files after Contents\n.. toctree::\n   :maxdepth: 2\n   :caption: Contents:\n\n   dependencies\n   usage\n   functions\n\n\nList all your dependencies:\nDependencies\n============\n\n- python\n- pytest\n- flake8\n- black\n- sphinx\n\n\nExplain how to use your software\nUsage Guide\n============\n\nTo start working with this repository you need to clone it onto your local\nmachine: ::\n\n    $ git clone https://github.com/...\n\n\nNext ...\n\n\nCreate a function file with the following:\nAPI reference\n=============\n\n.. automodule:: calc\n   :members:\n   :undoc-members:\n   :show-inheritance:"
+  },
+  {
+    "objectID": "swd3.html#extra-documentation-action",
+    "href": "swd3.html#extra-documentation-action",
+    "title": "arctraining slides",
+    "section": "Extra: documentation Action",
+    "text": "Extra: documentation Action\nCreate a new GH action to create a nice website for your documentation.\n\nThe action is available here\nYou may need update GH Actions permissions to allow write\nAfter a successful documentation action, you need to select gh-pages branch to activate your website"
+  },
+  {
+    "objectID": "swd3.html#extra-setup-file",
+    "href": "swd3.html#extra-setup-file",
+    "title": "arctraining slides",
+    "section": "Extra: Setup file",
+    "text": "Extra: Setup file\nCreate a setup.py file like:\nimport setuptools\n\nwith open(\"README.md\", \"r\") as fh:\n    long_description = fh.read()\n\nsetuptools.setup(\n    name=\"hypot\",\n    version=\"0.1.0\",\n    author=\"Patricia Ternes\",\n    author_email=\"p.ternesdallagnollo@leeds.ac.uk\",\n    description=\"The hypot SWD3 demo package\",\n    packages=setuptools.find_packages(),\n    classifiers=[\n        \"Programming Language :: Python :: 3.9\",\n        \"Intended Audience :: Science/Research/Learning\",\n    ],\n    python_requires=\"&gt;=3.9\",\n)"
+  },
+  {
+    "objectID": "swd3.html#local-installation",
+    "href": "swd3.html#local-installation",
+    "title": "arctraining slides",
+    "section": "Local Installation",
+    "text": "Local Installation\nInstall: install the hypot package into the environment using:\n$ python setup.py install\nUsage: if you want to create a personalised script, you can import the hypot modules as follows:\nfrom hypot.calc import squared, addition, sqroot\nRemove: If you want to remove your package, use pip:\n$ pip uninstall hypot"
+  },
+  {
+    "objectID": "swd3.html#release",
+    "href": "swd3.html#release",
+    "title": "arctraining slides",
+    "section": "Release",
+    "text": "Release\nRelease in GitHub are based in tags with the following structure:\nv0.5.2\n\n\n\nChange\nRelease\nExample\n\n\n\n\nMajor\nBreaking\n0\n\n\nMinor\nFeature\n5\n\n\nPatch\nFix\n2\n\n\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
   },
   {
     "objectID": "hpc0.html#meta-code",
@@ -1540,17 +1400,899 @@
     "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: https://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "linux101.html#meta-code",
+    "href": "linux101.html#meta-code",
     "title": "arctraining slides",
-    "section": "",
-    "text": "Public facing homepage for arctraining Quarto slides collection."
+    "section": "HPC 0",
+    "text": "HPC 0\nIntroduction to Linux for HPC"
   },
   {
-    "objectID": "index.html#slides",
-    "href": "index.html#slides",
+    "objectID": "linux101.html#introduction-to-linux",
+    "href": "linux101.html#introduction-to-linux",
     "title": "arctraining slides",
-    "section": "Slides:",
-    "text": "Slides:\nNote: this page is under construction. As soon as the slides are available, the link will be provided.\n\nHPC0: Introduction to Linux for HPC\nHPC1: Introduction to High Performance Computing\nHPC2: Applications and containers on HPC\nHPC3: Computer architectures and shared memory parallel programming\nHPC5: Introduction to GPU programming with CUDA\nHPC6: HPC for Life Sciences and Bioinformatics\nSWD1a: Introduction to Python programming\nSWD1b: Introduction to R programming\nSWD2: Version Control with Git and GitHub\nSWD3: Software development practices for Research\nSWD4: Cloud computing for Research\nSWD5: Scientific Python\nSWD6: High performance Python\nSWD7: Introduction to reproducible workflows in Python"
+    "section": "Introduction to Linux",
+    "text": "Introduction to Linux\nAims of this training:\n\nIntroduce you to using command line interface (CLI) Linux\nBuild your confidence in navigating Linux file systems using the command line\nEnable you to use Linux without a graphical user interface (GUI)\nPrepare you for HPC1: Introduction to High Performance Computing\n\n\n\nThis is a brief, introductory level session.\nDo not assume knowledge of file systems/directory structures/other computing background."
+  },
+  {
+    "objectID": "linux101.html#format-of-this-course",
+    "href": "linux101.html#format-of-this-course",
+    "title": "arctraining slides",
+    "section": "Format of this course",
+    "text": "Format of this course\n\nThis is a 2.5 hour tutorial. We will be trying out what we are learning, so be ready for some typing!\nThese lecture slides are based on the Software Carpentries documentation on Unix Shell basics, but is a shorter course and uses different examples.\nOnce you finish this tutorial, we recommend you read through the Software Carpentries material and follow through the tutorial there: you can do this work from the same virtual machine we will be using today.\n\n\n\nWe include notes at the end on how to use our virtual machine to run the Software Carpentries material"
+  },
+  {
+    "objectID": "linux101.html#format-of-these-slides",
+    "href": "linux101.html#format-of-these-slides",
+    "title": "arctraining slides",
+    "section": "Format of these slides",
+    "text": "Format of these slides\n\nEverything you need for this session is in these slides.\nWe recommend you have a copy open on your computer.\nIf you have enough room on your screen, have these notes and your command line side-by-side.\nThese notes should also be viewable via mobile if you don’t mind not being able to copy and paste!\nThere is a quick reference cheat sheet linked in the footer; you can return to your place in the slideshow from this cheat sheet using the back button.\n\n\n\nThe cheat sheet can be used from any point in the tutorial; you can just click the back arrow and return to the exact point in the slides"
+  },
+  {
+    "objectID": "linux101.html#syllabus",
+    "href": "linux101.html#syllabus",
+    "title": "arctraining slides",
+    "section": "Syllabus",
+    "text": "Syllabus\n\nInteracting with a computer: operating systems, GUIs and CLIs, bash\nFile systems on Linux\nNavigating filesystems from the command line\nCreating and editing files and directories\nRunning simple scripts\n\n\n\nIf we don’t manage to cover all these topics, you will be able to follow on at home."
+  },
+  {
+    "objectID": "linux101.html#learning-method",
+    "href": "linux101.html#learning-method",
+    "title": "arctraining slides",
+    "section": "Learning method",
+    "text": "Learning method\nThe aim is not for you to leave knowing loads of Linux Bash commands!\n\nThere are many fantastically useful commands we won’t cover today (read through the Software Carpentries course after this for some extra commands);\nThe aim is for you to get a feel for how Linux’s command line works, to be able to problem solve and find the commands you need.\nThis is an introductory course for complete beginners: of course, you’re welcome here if you want a refresher, but expect for the course to be slow-paced.\n\n\n\nEmphasise that the point is not to teach lots of shortcuts and commands.\nIt’s ok not to remember commands from today - the point is that if you want to do something on Linux, you’ll be better able to search for and then understand the answer."
+  },
+  {
+    "objectID": "linux101.html#primm-method",
+    "href": "linux101.html#primm-method",
+    "title": "arctraining slides",
+    "section": "PRIMM method",
+    "text": "PRIMM method\nIt’s helpful for you as a learner to understand the PRIMM structure so you can apply it while working through this course. Not every step will be relevant or used at every stage of the course!\n\nWhat’s PRIMM?PRIMMKey notes\n\n\nPRIMM is a pedagogical method specifically aimed at teaching text-based programming. While research into adult programming learners is very limited (especially in terms of demographics; many key studies that are cited have overwhelmingly homogenous test groups), the PRIMM method has a few key benefits:\n\nIt supports learners with different ability levels and who learn at different speeds;\nIt can be applied by learners even if the course materials are not specifically built with it in mind;\nIt can be applied to asynchronous learning materials (for example, if you are using these notes online on your own).\n\n\n\nThe P in PRIMM stands for predict:\nWhen you first see a command, script, or piece of code, before running it, predict what you think it will do. It’s ok to get this wrong: the important thing is to get into the habit of predicting! This helps to keep you actively engaged and focused, and begins to build an intuitive sense about the structure of commands.\n\nWhat do you think the code is going to do generally?\nWhat do you think the output in your terminal is going to look like?\n\n\n\nThe R in PRIMM stands for run:\n\nRun the code or program;\nHow does the output/effect compare to your prediction?\n\nWhat did you get right?\nWhat did you misinterpret?\n\nDo you understand what happened?\n\n\n\nThe I in PRIMM stands for investigate:\nLet’s dig a little deeper into the structure of code you’ve used.\n\nWhat options or arguments did you use, and what effect did they have?\nCan you find some documentation on the command you used?\n\nDoes the description match how you would describe the code?\n\nIf no, why does your understanding of it diverge?\n\nWhat other options or features are available?\n\n\n\n\nThe first M in PRIMM stands for modify:\n\nTry running the code with different options:\n\nChange only a small thing at a time;\nAlways predict what you think the output will be!\nCompare the actual output with your prediction;\nCompare your understanding to the available documentation.\n\n\nThis stage helps you to gradually increase the difficultly of the tasks you are doing!\n\n\nThe second M in PRIMM stands for make:\nThis stage is about making the code your own.\n\nAt this stage, you can try implementing snippets of code you’ve already learned, but to solve a new or different problem;\nAgain, use the previous stages when you are writing your code: predict what you think will happen, run the code and compare the output to your predictions, and investigate the structure of it, especially if it does not behave how you intended!\n\n\n\nRead before you write - research has proven repeatedly the importance of reading and predicting the output of code as a method of learning, over just getting straight into it and writing code.\n\nNovice programmers need to acquire accuracy in tracing code before they can program independently\nTrying to write code first leads to frustration and confusion\n\nLearn in a way that suits you - if that is copying and pasting commands from the slides instead of trying to keep up with typing, that’s ok!"
+  },
+  {
+    "objectID": "linux101.html#interacting-with-a-computer",
+    "href": "linux101.html#interacting-with-a-computer",
+    "title": "arctraining slides",
+    "section": "Interacting with a computer",
+    "text": "Interacting with a computer\nWhen we use a computer, we interact with the hardware through an operating system or OS.\nCommon operating systems for research computers include:\n\nMicrosoft Windows\nMacOS\nLinux\n\nWe are going to be looking at Linux today, which is a family of operating systems that are Open Source and are widely used in research, for example on High Performance Computing platforms like ARC4 or Aire."
+  },
+  {
+    "objectID": "linux101.html#interacting-with-a-computer-1",
+    "href": "linux101.html#interacting-with-a-computer-1",
+    "title": "arctraining slides",
+    "section": "Interacting with a computer",
+    "text": "Interacting with a computer\nWhen we use a computer, like our desktop or laptop, we often use a Graphical User Interface or a GUI.\n\nGUIs allow us to interact with a computer through graphical means: icons, text, buttons, windows. GUIs usually involve using a mouse and clicking into menus.\nThe Windows desktop and MacOS desktop are GUIs that let you control the computer graphically.\nMany computer programs also have GUIs: for example, Excel.\n\n\n\n\nWhat are some of the benefits of GUIs? See if people have suggestions.\nWhat are some of the downsides of using GUIs?"
+  },
+  {
+    "objectID": "linux101.html#interacting-with-a-computer-2",
+    "href": "linux101.html#interacting-with-a-computer-2",
+    "title": "arctraining slides",
+    "section": "Interacting with a computer",
+    "text": "Interacting with a computer\nAs well as using a GUI, we can also interact with computers using a Command Line Interface or a CLI.\n\nCLIs allow us to interact with a computer through text-based commands typed into the command-line.\nWhile GUIs can be simple and intuitive to use, they can make it difficult to reproduce workflows:\n\nSometimes you have to record by hand (or with a screen recording) what sub-options from different menus you used;\nUpdates to GUIs can make it difficult to find the same menu options;\nA workflow with multiple steps can be tedious to repeat for multiple datasets (having to click through multiple layers of menu options for each dataset).\n\nMany large research machines (such as the HPC machines ARC4 and Aire here at Leeds) do not have a GUI and so you need to interact with them through a CLI."
+  },
+  {
+    "objectID": "linux101.html#command-line-interfaces",
+    "href": "linux101.html#command-line-interfaces",
+    "title": "arctraining slides",
+    "section": "Command Line Interfaces",
+    "text": "Command Line Interfaces\n\nThere are multiple different CLIs available:\n\nGeneral-purpose CLIs are available for each Operating System for general computer control:\n\nWindows Command Prompt;\nWindows Powershell;\nMac Terminal;\n\nSome specific programs have their own custom CLIs:\n\nAnaconda Prompt for Windows;\nGit Bash for Windows;\n\n\nToday, we are going to be using a Unix Shell:\n\nThis is the general-purpose CLI that underpins both Linux and Mac;\nWe will use Bash, a popular Unix Shell.\n\n\n\n\nEssentially, there are many different ways to access a command line, and there are different types of command line interfaces!\nWe are teaching you one today that is easy to access, and is used on research HPC systems"
+  },
+  {
+    "objectID": "linux101.html#poll",
+    "href": "linux101.html#poll",
+    "title": "arctraining slides",
+    "section": "Poll",
+    "text": "Poll\nThroughout this presentation, we will be using quick polls to gauge your familiarity with concepts.\nLet’s test it out:\nClick here to go to Poll\n\n\nOpen up vevox session and activate relevant poll"
+  },
+  {
+    "objectID": "linux101.html#bash",
+    "href": "linux101.html#bash",
+    "title": "arctraining slides",
+    "section": "Bash",
+    "text": "Bash\nHow do we access Bash?\n\nBash is the default shell on Unix systems like Linux or Mac\nBash is also available through many command-line tools for Windows:\n\nGit Bash for Windows\nAnaconda Prompt\n\n\nWe’re going to use a virtual machine for this course: this is a Linux machine running in the cloud.\nThis means that everyone here can run it with the exact same set-up; you only need a browser."
+  },
+  {
+    "objectID": "linux101.html#file-system-on-linux",
+    "href": "linux101.html#file-system-on-linux",
+    "title": "arctraining slides",
+    "section": "File system on Linux",
+    "text": "File system on Linux\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--obin\n    / o--odev\n    / o--oetc\n    / o--ohome\n    home o--omy-username\n    home o--omy-friend\n    / o--otmp\n\n    my-username o--o all_my_files\n\n\n\n\n\nEach rectangle is a folder or directory (dir for short)\n\n\nThis shows a sketch of a file system.\nWe have a hierarchy of folders or directories sitting inside one another.\nFolders are usually called “directories” on Linux systems, but they mean the same thing."
+  },
+  {
+    "objectID": "linux101.html#file-system-on-linux-1",
+    "href": "linux101.html#file-system-on-linux-1",
+    "title": "arctraining slides",
+    "section": "File system on Linux",
+    "text": "File system on Linux\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--obin\n    / o--odev\n    / o--oetc\n    / o--ohome\n    home o--omy-username\n    home o--omy-friend\n    / o--otmp\n\n    my-username o--o all_my_files\n\n    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\nEach rectangle is a folder or directory (dir for short)\n\n\nThis branching system starts from the root (the forward slash) at the very top, highlighted in pink.\nInside this root directory, we have a bunch of system folders - we don’t need to worry about these now."
+  },
+  {
+    "objectID": "linux101.html#file-system-on-linux-2",
+    "href": "linux101.html#file-system-on-linux-2",
+    "title": "arctraining slides",
+    "section": "File system on Linux",
+    "text": "File system on Linux\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--obin\n    / o--odev\n    / o--oetc\n    / o--ohome\n    home o--omy-username\n    home o--omy-friend\n    / o--otmp\n\n    my-username o--o all_my_files\n\n    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\nEach rectangle is a folder or directory (dir for short)\n\n\nOne of the directories is called “home”: this contains all the home directories of users.\nThe home directories are usually called after their owner’s username.\nIf you look in this directory on a personal or family computer, you might find a handful of user home directories\nIf you look at this directory on a university HPC system, like Aire, you’ll find hundreds of user home directories"
+  },
+  {
+    "objectID": "linux101.html#file-system-on-linux-3",
+    "href": "linux101.html#file-system-on-linux-3",
+    "title": "arctraining slides",
+    "section": "File system on Linux",
+    "text": "File system on Linux\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--obin\n    / o--odev\n    / o--oetc\n    / o--ohome\n    home o--omy-username\n    home o--omy-friend\n    / o--otmp\n\n    my-username o--o all_my_files\n\n    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\nThe my-username folder is your user home directory\n\n\nConfusingly, we refer to this highlighted directory as your home directory\nEven though there is a folder one level up that is called home!"
+  },
+  {
+    "objectID": "linux101.html#file-system-on-linux-4",
+    "href": "linux101.html#file-system-on-linux-4",
+    "title": "arctraining slides",
+    "section": "File system on Linux",
+    "text": "File system on Linux\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--obin\n    / o--odev\n    / o--oetc\n    / o--ohome\n    home o--omy-username\n    home o--omy-friend\n    / o--otmp\n\n    my-username o--o all_my_files\n\n    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\nHow do we describe the address of this home directory?\n\n\nHow do we describe where this directory or folder is?\nWe describe it in a similar way to a website URL, using it’s path\nWe need to know all the folders directly above it."
+  },
+  {
+    "objectID": "linux101.html#file-system-on-linux-5",
+    "href": "linux101.html#file-system-on-linux-5",
+    "title": "arctraining slides",
+    "section": "File system on Linux",
+    "text": "File system on Linux\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--obin\n    / o--odev\n    / o--oetc\n    / o--ohome\n    home o--omy-username\n    home o--omy-friend\n    / o--otmp\n\n    my-username o--o all_my_files\n\n    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\nThe folders in the address are /, home and my-username\n\n\nAbove our username directory, we have home and the root (which is denoted by just a forward slash)"
+  },
+  {
+    "objectID": "linux101.html#file-system-on-linux-6",
+    "href": "linux101.html#file-system-on-linux-6",
+    "title": "arctraining slides",
+    "section": "File system on Linux",
+    "text": "File system on Linux\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--obin\n    / o--odev\n    / o--oetc\n    / o--ohome\n    home o--omy-username\n    home o--omy-friend\n    / o--otmp\n\n    my-username o--o all_my_files\n\n    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\nStick them together like a URL: /home/my-username\n\n\nWe just have to put them together like a web address (because the internet is basically just a giant file structure)"
+  },
+  {
+    "objectID": "linux101.html#file-system-on-linux-7",
+    "href": "linux101.html#file-system-on-linux-7",
+    "title": "arctraining slides",
+    "section": "File system on Linux",
+    "text": "File system on Linux\nOn Windows, file paths use backlashes ( \\ ) instead of forward slashes (/)!\n\nThis can cause confusion and errors if you are writing scripts that load in data from certain file paths, and need to use both Windows and Linux!\nThankfully there are lots of ways around this, including libraries for handling paths in Python and R\n\n\n\nIt’s useful to note that Windows uses slashes in the opposite direction for file paths.\nWe’re not going to focus on this today as we are using only Linux\nBut if you get an error while coding it’s useful to keep this in mind."
+  },
+  {
+    "objectID": "linux101.html#file-system-on-linux-8",
+    "href": "linux101.html#file-system-on-linux-8",
+    "title": "arctraining slides",
+    "section": "File system on Linux",
+    "text": "File system on Linux\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--obin\n    / o--odev\n    / o--oetc\n    / o--ohome\n    home o--omy-username\n    home o--omy-friend\n    / o--otmp\n\n    my-username o--o all_my_files\n\n    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\nStick them together like a URL: /home/my-username\n\n\nBack to our file system.\nToday, everything we are doing will be in our home directory, so let’s just focus on that!\nWhen you log in to a linux system, this is usually where you will be dropped!"
+  },
+  {
+    "objectID": "linux101.html#file-system-on-linux-9",
+    "href": "linux101.html#file-system-on-linux-9",
+    "title": "arctraining slides",
+    "section": "File system on Linux",
+    "text": "File system on Linux\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--ohome\n    home o--omy-username\n\n    my-username o--o all_my_files\n\n    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n/home/my-username/all_my_files is a bit long…\n\n\nTyping the full path to our files and folders is a bit tedious\nlets look at a shorter way"
+  },
+  {
+    "objectID": "linux101.html#file-system-on-linux-10",
+    "href": "linux101.html#file-system-on-linux-10",
+    "title": "arctraining slides",
+    "section": "File system on Linux",
+    "text": "File system on Linux\n\n\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--ohome\n    home o--omy-username\n\n    my-username o--o all_my_files\n\n    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    home[\"~\"] o--o all_my_files\n\n    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\n\n\n/home/my-username/all_my_files is a bit long…\n\n\nTyping the full path to our files and folders is a bit tedious\nlets look at a shorter way"
+  },
+  {
+    "objectID": "linux101.html#file-system-on-linux-11",
+    "href": "linux101.html#file-system-on-linux-11",
+    "title": "arctraining slides",
+    "section": "File system on Linux",
+    "text": "File system on Linux\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    home[\"~\"] o--o all_my_files\n\n    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\nTo save us from typing out /home/my-username every time we refer to a directory or file, we can use the shortcut ~, called a tilde\nThis turns /home/my-username/all_my_files to ~/all_my_files"
+  },
+  {
+    "objectID": "linux101.html#poll-1",
+    "href": "linux101.html#poll-1",
+    "title": "arctraining slides",
+    "section": "Poll",
+    "text": "Poll\nLet’s test your familiarity with Linux file paths!\nClick here to go to Poll"
+  },
+  {
+    "objectID": "linux101.html#lets-explore-some-files",
+    "href": "linux101.html#lets-explore-some-files",
+    "title": "arctraining slides",
+    "section": "Let’s explore some files!",
+    "text": "Let’s explore some files!\nTime to explore some files on a Linux system!\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%\nflowchart TD\n    A[\"/home/vscode/ &lt;br&gt; or ~\"] o--o B[red-folder]\n    A o--o C[pink-folder]\n    A o--o D[blue-folder]\n\n    B o--o r1([red-1.txt ])\n    B o--o r2([red-2.txt ])\n    B o--o r3([red-3.txt ])\n\n    C o--o P1[pink-sub-folder]\n    C o--o p2([\"pink-file.md &lt;br&gt;\"])\n    C o--o p3{{\"say_hi.sh &lt;br&gt;\"}}\n\n    P1 o--o p4([\"**helloworld.py** &lt;br&gt;\"])\n    P1 o--o p5([\"pink-data.csv &lt;br&gt;\"])\n\n    D o--o b1([\"**blue.r** &lt;br&gt;\"])"
+  },
+  {
+    "objectID": "linux101.html#using-our-custom-virtual-machine",
+    "href": "linux101.html#using-our-custom-virtual-machine",
+    "title": "arctraining slides",
+    "section": "Using our custom virtual machine",
+    "text": "Using our custom virtual machine\nFor this course, we’ve built a custom virtual machine for you to use.\nThis requires a GitHub account which you were asked to set up before this course.\n(Don’t worry if you haven’t - please go and quickly sign up to GitHub now!)\n\nThere are many other ways to access the bash shell, such as on one of the HPC systems here at Leeds, or by installing git bash on Windows, or using the terminal on Linux or Mac.\nWe want everyone in the class to have the same directory structure and environment which is why we are using a virtual machine!"
+  },
+  {
+    "objectID": "linux101.html#launch-virtual-machine",
+    "href": "linux101.html#launch-virtual-machine",
+    "title": "arctraining slides",
+    "section": "Launch virtual machine",
+    "text": "Launch virtual machine\n\nStep 1Step 2Step 3\n\n\nOne of the pre-requisites for this course was signing up for an account with GitHub, as this is the service we use to host the virtual Linux machines for teaching this session.\nLog in to GitHub now (or sign up if you haven’t already).\n\n\nFollow this link to open the course repository.\n\n\nThere will be a green button with the word “Code”, which will then bring up a menu when clicked.\n\n\n\n\n\n\n\n\n↑ Click this button, this menu opens →"
+  },
+  {
+    "objectID": "linux101.html#the-terminal",
+    "href": "linux101.html#the-terminal",
+    "title": "arctraining slides",
+    "section": "The terminal",
+    "text": "The terminal\nOnce you’ve launched your virtual machine, you will see a terminal window something like this:\n\n_\n_@username → /workspaces/bash-codespaces-template (main) $ ▮\n_\n\n\n\n_\n_@username → /workspaces/bash-codespaces-template (main) $ ▮\n_\n\nThe underlined section is your directory path."
+  },
+  {
+    "objectID": "linux101.html#the-terminal-1",
+    "href": "linux101.html#the-terminal-1",
+    "title": "arctraining slides",
+    "section": "The terminal",
+    "text": "The terminal\nOnce you’ve launched your virtual machine, you will see a terminal window something like this:\n\n_\n_@username → /workspaces/bash-codespaces-template (main) $ ▮\n_\n\n\n\n_\n_@username → /workspaces/bash-codespaces-template (main) $ ▮\n_\n\nThe underlined section has to do with the git version control system: not a topic for today, but you can learn about this in SWD2!"
+  },
+  {
+    "objectID": "linux101.html#the-terminal-2",
+    "href": "linux101.html#the-terminal-2",
+    "title": "arctraining slides",
+    "section": "The terminal",
+    "text": "The terminal\nOnce you’ve launched your virtual machine, you will see a terminal window something like this:\n\n_\n_@username → /workspaces/bash-codespaces-template (main) $ ▮\n_\n\n\n\nThe dollar symbol ($) and rectangle (▮) on the right hand side are the end of the prompt and the cursor.\n\nThe $ tells you where the computer’s message ends, and where you can enter your commands.\nThe ▮ (which will probably be slowly flashing) tells you where the cursor is; this often looks more like a vertical line ( | ) in other programs like Word."
+  },
+  {
+    "objectID": "linux101.html#the-terminal-3",
+    "href": "linux101.html#the-terminal-3",
+    "title": "arctraining slides",
+    "section": "The terminal",
+    "text": "The terminal\nIf you click on the ▮ or the space just to the right of the $ you can type in your message:\n\n_\n_@username → /workspaces/bash-codespaces-template (main) $ hello▮\n_\n\nAnything you type will be in white text in the terminal; the cursor will blink at the end of the text.\nTo send the argument or message, you need to press ENTER on your keyboard."
+  },
+  {
+    "objectID": "linux101.html#the-terminal-4",
+    "href": "linux101.html#the-terminal-4",
+    "title": "arctraining slides",
+    "section": "The terminal",
+    "text": "The terminal\nIf you click on the ▮ or the space just to the right of the $ you can type in your message:\n\n_\n_@username → /folders (main) $ this is the code you type ↵\n_\n\n\nThe code you need to type/copy and paste is shown in bold white\nWe will hide the cursor and fade the prompt ($) to grey\nWe will show an ENTER symbol in pink to remind you how to enter the command (↵)"
+  },
+  {
+    "objectID": "linux101.html#very-first-command-cd",
+    "href": "linux101.html#very-first-command-cd",
+    "title": "arctraining slides",
+    "section": "Very first command: cd",
+    "text": "Very first command: cd\nWe’re going to use the cd command to bring us to our home directory.\n\n_\n_@username → /folders (main) $ ▮\n\n_@username → /folders (main) $ cd ↵\n\n\n_@username → ~ $ ▮\n\n_"
+  },
+  {
+    "objectID": "linux101.html#very-first-command-cd-1",
+    "href": "linux101.html#very-first-command-cd-1",
+    "title": "arctraining slides",
+    "section": "Very first command: cd",
+    "text": "Very first command: cd\n\ncd stands for change directory\nIt brings us back to our home directory, ~ or /home/vscode\n\n\n\nOur virtual machine is a little bit weird because it starts us off in a different folder: on most Linux systems, when you log in, you will immediately be in your home directory\n\n\n\n_@username → ~ $ ▮"
+  },
+  {
+    "objectID": "linux101.html#whats-in-this-folder",
+    "href": "linux101.html#whats-in-this-folder",
+    "title": "arctraining slides",
+    "section": "What’s in this folder?",
+    "text": "What’s in this folder?\nNow that you know how to find home (from wherever in the file system you are), you need to know what’s in your home directory.\n\nYou can list out the files and folders in your directory with the command ls"
+  },
+  {
+    "objectID": "linux101.html#whats-in-this-folder-ls-to-list",
+    "href": "linux101.html#whats-in-this-folder-ls-to-list",
+    "title": "arctraining slides",
+    "section": "What’s in this folder? ls to list",
+    "text": "What’s in this folder? ls to list\nUsing the ls command to list out the contents of the directory:\n\n_\n_@username → ~ $ ▮\n\n_@username → ~ $ ls ↵\n\n\n_blue-folder pink-folder red-folder\n_@username → ~ $ ▮\n\n_"
+  },
+  {
+    "objectID": "linux101.html#whats-in-this-folder-ls-to-list-1",
+    "href": "linux101.html#whats-in-this-folder-ls-to-list-1",
+    "title": "arctraining slides",
+    "section": "What’s in this folder? ls to list",
+    "text": "What’s in this folder? ls to list\nHow do we know if blue-folder is a file or a directory? (imagine it has a less descriptive name)\n\n_@username → ~ $ ls ↵\n_blue-folder pink-folder red-folder\n_@username → ~ $ ▮\n\n_@username → ~ $ ls -F ↵"
+  },
+  {
+    "objectID": "linux101.html#whats-in-this-folder-ls-to-list-2",
+    "href": "linux101.html#whats-in-this-folder-ls-to-list-2",
+    "title": "arctraining slides",
+    "section": "What’s in this folder? ls to list",
+    "text": "What’s in this folder? ls to list\nWe can use ls -F: this tells us the category of the “things” in the directory\n\nIf the name ends in a trailing forward slash (like this/) then the item is a directory or folder\n\n\n_@username → ~ $ ls -F ↵\n_blue-folder/ pink-folder/ red-folder/\n_@username → ~ $ ▮"
+  },
+  {
+    "objectID": "linux101.html#whats-in-this-folder-ls-to-list-3",
+    "href": "linux101.html#whats-in-this-folder-ls-to-list-3",
+    "title": "arctraining slides",
+    "section": "What’s in this folder? ls to list",
+    "text": "What’s in this folder? ls to list\nThis is what we expected: we saw in our directory map that we have three directories in our home (~): red-folder, pink-folder, and blue-folder.\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%\nflowchart TD\n    A[\"/home/vscode/ &lt;br&gt; or ~\"] o--o B[red-folder]\n    A o--o C[pink-folder]\n    A o--o D[blue-folder]\n\n    B o--o r1([red-1.txt ])\n    B o--o r2([red-2.txt ])\n    B o--o r3([red-3.txt ])\n\n    C o--o P1[pink-sub-folder]\n    C o--o p2([\"pink-file.md &lt;br&gt;\"])\n    C o--o p3{{\"say_hi.sh &lt;br&gt;\"}}\n\n    P1 o--o p4([\"**helloworld.py** &lt;br&gt;\"])\n    P1 o--o p5([\"pink-data.csv &lt;br&gt;\"])\n\n    D o--o b1([\"**blue.r** &lt;br&gt;\"])"
+  },
+  {
+    "objectID": "linux101.html#whats-in-this-folder-ls-to-list-4",
+    "href": "linux101.html#whats-in-this-folder-ls-to-list-4",
+    "title": "arctraining slides",
+    "section": "What’s in this folder? ls to list",
+    "text": "What’s in this folder? ls to list\nLet’s list what’s inside pink-folder…\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%\nflowchart TD\n    A[\"/home/vscode/ &lt;br&gt; or ~\"] o--o B[red-folder]\n    A o--o C[pink-folder]\n    A o--o D[blue-folder]\n\n    B o--o r1([red-1.txt ])\n    B o--o r2([red-2.txt ])\n    B o--o r3([red-3.txt ])\n\n    C o--o P1[pink-sub-folder]\n    C o--o p2([\"pink-file.md &lt;br&gt;\"])\n    C o--o p3{{\"say_hi.sh &lt;br&gt;\"}}\n\n    P1 o--o p4([\"**helloworld.py** &lt;br&gt;\"])\n    P1 o--o p5([\"pink-data.csv &lt;br&gt;\"])\n\n    D o--o b1([\"**blue.r** &lt;br&gt;\"])"
+  },
+  {
+    "objectID": "linux101.html#whats-in-this-folder-ls-to-list-5",
+    "href": "linux101.html#whats-in-this-folder-ls-to-list-5",
+    "title": "arctraining slides",
+    "section": "What’s in this folder? ls to list",
+    "text": "What’s in this folder? ls to list\nWe can use ls name-of-folder to tell us what’s in a sub-directory.\nWhat will the output be?\n\n_@username → ~ $ ls pink-folder ↵\n\n_pink-file.md pink-subfolder say_hi.sh"
+  },
+  {
+    "objectID": "linux101.html#whats-in-this-folder-ls-to-list-6",
+    "href": "linux101.html#whats-in-this-folder-ls-to-list-6",
+    "title": "arctraining slides",
+    "section": "What’s in this folder? ls to list",
+    "text": "What’s in this folder? ls to list\nWe can use ls -F name-of-folder to tell us what’s in a sub-directory and what category the items are.\nWhat will the output be?\n\n_@username → ~ $ ls -F pink-folder ↵\n\n_pink-file.md pink-subfolder/ say_hi.sh*\n\n\n\n\nFiles get no added symbols;\nFolders or directories get a trailing forward slash (/);\nExecutables get an asterisk (*);"
+  },
+  {
+    "objectID": "linux101.html#poll-2",
+    "href": "linux101.html#poll-2",
+    "title": "arctraining slides",
+    "section": "Poll",
+    "text": "Poll\nLet’s test your familiarity with these commands!\nClick here to go to Poll"
+  },
+  {
+    "objectID": "linux101.html#recap",
+    "href": "linux101.html#recap",
+    "title": "arctraining slides",
+    "section": "Recap",
+    "text": "Recap\nSo far, we’ve used:\n\ncd on it’s own to go to our home directory;\nls on it’s own to list out the contents of our current directory (our home);\nls -F (ls with the flag or option -F) to list out the categories of the content in the directory;\nls dir-name (ls with the argument dir-name) to list out the content of the sub-directory dir-name;"
+  },
+  {
+    "objectID": "linux101.html#format-of-bash-commands",
+    "href": "linux101.html#format-of-bash-commands",
+    "title": "arctraining slides",
+    "section": "Format of bash commands",
+    "text": "Format of bash commands\nYou’ve already cracked how bash works with these few commands!\n\n_$ ls -F dir-name\n\n\n\n$ → prompt\nls → command\n-F → option\ndir-name → argument"
+  },
+  {
+    "objectID": "linux101.html#adding-arguments-to-cd",
+    "href": "linux101.html#adding-arguments-to-cd",
+    "title": "arctraining slides",
+    "section": "Adding arguments to cd",
+    "text": "Adding arguments to cd\nWe’ve used cd on it’s own to access our home directory - what happens when we give it an argument?\nWhat will the output be?\n\n_@username → ~ $ cd pink-folder ↵\n\n_@username → ~/pink-folder $ ▮\n\n\n\nWe’ve moved down our directory structure, into the directory pink-folder"
+  },
+  {
+    "objectID": "linux101.html#explore-with-cd-and-ls",
+    "href": "linux101.html#explore-with-cd-and-ls",
+    "title": "arctraining slides",
+    "section": "Explore with cd and ls",
+    "text": "Explore with cd and ls\n\nRemember, you can return to home from anywhere with cd and no options or arguments\nUse ls to find out what is in the different directories\nUse cd name-of-dir to move to a subdirectory\nUse the directory map if lost\nUse the clear command to clean up your terminal screen if it’s getting too messy:\n\n\n_@username → ~ $ clear ↵"
+  },
+  {
+    "objectID": "linux101.html#getting-help",
+    "href": "linux101.html#getting-help",
+    "title": "arctraining slides",
+    "section": "Getting help",
+    "text": "Getting help\nThere are two different ways of getting information about commands and their options and arguments within the shell:\n\nman arg\narg --help\n\nOn our virtual machine, we are going to use the section option, arg --help. Try running ls --help:\n\n_@username → ~ $ ls –help ↵"
+  },
+  {
+    "objectID": "linux101.html#getting-help-1",
+    "href": "linux101.html#getting-help-1",
+    "title": "arctraining slides",
+    "section": "Getting help",
+    "text": "Getting help\nYou’ll be faced with a wall of text and will have to scroll to find the top of it:\n\n_@username → ~ $ ls –help ↵\nUsage: ls [OPTION]… [FILE]…\nList information about the FILEs (the current directory by default).\nSort entries alphabetically if none of -cftuvSUX nor –sort is specified.\nMandatory arguments to long options are mandatory for short options too.\n-a, –all : do not ignore entries starting with .\n-A, –almost-all : do not list implied . and ..\nand on, and on, and on…"
+  },
+  {
+    "objectID": "linux101.html#getting-help-2",
+    "href": "linux101.html#getting-help-2",
+    "title": "arctraining slides",
+    "section": "Getting help",
+    "text": "Getting help\nThis can be really useful for quickly checking the arguments and options to commands you half-remember, but can also be incredibly unhelpful and overwhelming if you don’t know what you’re looking at!\n\nSearching online is your friend!\nIf you know the argument name, say ls, wrap it in quotation marks in your search to require it;\nSearch the term alongside terms like bash, linux, command line, explanation;\nFor example, I might search “ls -F” explanation\nStack Overflow and Stack Exchange (Q&A forums) can be useful sources, usually with a bit of conversation back and forth and likely some disagreement/argument about the best way of doing something."
+  },
+  {
+    "objectID": "linux101.html#getting-help-3",
+    "href": "linux101.html#getting-help-3",
+    "title": "arctraining slides",
+    "section": "Getting help",
+    "text": "Getting help\n\nWhat does the command ls -a do?\n\nCan you find an answer with ls --help?\nWhat happens if you run ls -a inside pink-folder?\nCan you find an answer by searching online?\n\n\n\n_@username → ~/somewhere $ cd ↵ go back to home\n_@username → ~ $ cd pink-folder ↵ go to folder\n_@username → ~/pink-folder $ ls -a ↵ ???"
+  },
+  {
+    "objectID": "linux101.html#ls--a",
+    "href": "linux101.html#ls--a",
+    "title": "arctraining slides",
+    "section": "ls -a",
+    "text": "ls -a\n\n_@username → ~/pink-folder $ ls -a ↵\n\n_ . .. pink-file.md pink-subfolder say_hi.sh .super-secret-hidden-file .super-secret-hidden-folder\n\n\n_@username → ~/pink-folder $ ls -F -a ↵\n\n\n_ ./ ../ pink-file.md pink-subfolder/ say_hi.sh* .super-secret-hidden-file .super-secret-hidden-folder/\n\n\n\nWhat’s in these weird directories . and ..?\n\nTry exploring them with ls . and ls ..\nTry going to them using cd . and cd ..\nYou can use the command pwd (path to the working directory) to print out exactly where you are (using /home/vscode instead of ~)"
+  },
+  {
+    "objectID": "linux101.html#ls--a-1",
+    "href": "linux101.html#ls--a-1",
+    "title": "arctraining slides",
+    "section": "ls -a",
+    "text": "ls -a\n\nWhat’s in these weird directories . and ..?\n\nTry exploring them with ls . and ls ..\nTry going to them using cd . and cd ..\nYou can use the command pwd (path to the working directory) to print out exactly where you are (using /home/vscode instead of ~)\n\n\n\nThe single dot . stands for the current directory - the place you get when you use pwd\nThe double dot .. stands for the directory above the current directory.\nIf you are currently in ~/pink-folder/pink-subfolder:\n\nThe single dot . is the folder ~/pink-folder/pink-subfolder\nThe double dot .. is the folder ~/pink-folder"
+  },
+  {
+    "objectID": "linux101.html#relative-paths",
+    "href": "linux101.html#relative-paths",
+    "title": "arctraining slides",
+    "section": "Relative paths",
+    "text": "Relative paths\nSo far, we’ve looked at absolute paths that start up at ~ or /home/vscode.\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%\nflowchart TD\n    A[\"/home/vscode/ &lt;br&gt; or ~\"] o--o B[red-folder]\n    A o--o C[pink-folder]\n    A o--o D[blue-folder]\n\n    B o--o r1([red-1.txt ])\n    B o--o r2([red-2.txt ])\n    B o--o r3([red-3.txt ])\n\n    C o--o P1[pink-sub-folder]\n    C o--o p2([\"pink-file.md &lt;br&gt;\"])\n    C o--o p3{{\"say_hi.sh &lt;br&gt;\"}}\n\n    P1 o--o p4([\"**helloworld.py** &lt;br&gt;\"])\n    P1 o--o p5([\"pink-data.csv &lt;br&gt;\"])\n\n    D o--o b1([\"**blue.r** &lt;br&gt;\"])"
+  },
+  {
+    "objectID": "linux101.html#relative-paths-1",
+    "href": "linux101.html#relative-paths-1",
+    "title": "arctraining slides",
+    "section": "Relative paths",
+    "text": "Relative paths\nSo far, we’ve looked at absolute paths that start up at ~ or /home/vscode.\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%\nflowchart TD\n    A[\"/home/vscode/ &lt;br&gt; or ~\"] o--o B[red-folder]\n    A o--o C[pink-folder]\n    A o--o D[blue-folder]\n\n    B o--o r1([red-1.txt ])\n    B o--o r2([red-2.txt ])\n    B o--o r3([red-3.txt ])\n\n    C o--o P1[pink-sub-folder]\n    C o--o p2([\"pink-file.md &lt;br&gt;\"])\n    C o--o p3{{\"say_hi.sh &lt;br&gt;\"}}\n\n    P1 o--o p4([\"**helloworld.py** &lt;br&gt;\"])\n    P1 o--o p5([\"pink-data.csv &lt;br&gt;\"])\n\n    D o--o b1([\"**blue.r** &lt;br&gt;\"])\n\n    style A fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style C fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style P1 fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style p4 fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\n~/pink-folder/pink-sub-folder/helloworld.py"
+  },
+  {
+    "objectID": "linux101.html#relative-paths-2",
+    "href": "linux101.html#relative-paths-2",
+    "title": "arctraining slides",
+    "section": "Relative paths",
+    "text": "Relative paths\nBut if we are already in pink-folder (if it’s our working directory), we can use a relative path:\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%\nflowchart TD\n    A[\"/home/vscode/ &lt;br&gt; or ~\"] o--o B[red-folder]\n    A o--o C[pink-folder]\n    A o--o D[blue-folder]\n\n    B o--o r1([red-1.txt ])\n    B o--o r2([red-2.txt ])\n    B o--o r3([red-3.txt ])\n\n    C o--o P1[pink-sub-folder]\n    C o--o p2([\"pink-file.md &lt;br&gt;\"])\n    C o--o p3{{\"say_hi.sh &lt;br&gt;\"}}\n\n    P1 o--o p4([\"**helloworld.py** &lt;br&gt;\"])\n    P1 o--o p5([\"pink-data.csv &lt;br&gt;\"])\n\n    D o--o b1([\"**blue.r** &lt;br&gt;\"])\n\n    style C fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style P1 fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style p4 fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\npink-sub-folder/helloworld.py"
+  },
+  {
+    "objectID": "linux101.html#relative-paths-3",
+    "href": "linux101.html#relative-paths-3",
+    "title": "arctraining slides",
+    "section": "Relative paths",
+    "text": "Relative paths\nBut if we are already in pink-subfolder (if it’s our working directory), we can use a relative path:\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%\nflowchart TD\n    A[\"/home/vscode/ &lt;br&gt; or ~\"] o--o B[red-folder]\n    A o--o C[pink-folder]\n    A o--o D[blue-folder]\n\n    B o--o r1([red-1.txt ])\n    B o--o r2([red-2.txt ])\n    B o--o r3([red-3.txt ])\n\n    C o--o P1[pink-sub-folder]\n    C o--o p2([\"pink-file.md &lt;br&gt;\"])\n    C o--o p3{{\"say_hi.sh &lt;br&gt;\"}}\n\n    P1 o--o p4([\"**helloworld.py** &lt;br&gt;\"])\n    P1 o--o p5([\"pink-data.csv &lt;br&gt;\"])\n\n    D o--o b1([\"**blue.r** &lt;br&gt;\"])\n\n    style P1 fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style p4 fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\nhelloworld.py"
+  },
+  {
+    "objectID": "linux101.html#relative-paths-4",
+    "href": "linux101.html#relative-paths-4",
+    "title": "arctraining slides",
+    "section": "Relative paths",
+    "text": "Relative paths\nWhat if we are in pink-subfolder (if it’s our working directory), and want the path to pink-file.md?\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%\nflowchart TD\n    A[\"/home/vscode/ &lt;br&gt; or ~\"] o--o B[red-folder]\n    A o--o C[pink-folder]\n    A o--o D[blue-folder]\n\n    B o--o r1([red-1.txt ])\n    B o--o r2([red-2.txt ])\n    B o--o r3([red-3.txt ])\n\n    C o--o P1[pink-sub-folder]\n    C o--o p2([\"pink-file.md &lt;br&gt;\"])\n    C o--o p3{{\"say_hi.sh &lt;br&gt;\"}}\n\n    P1 o--o p4([\"**helloworld.py** &lt;br&gt;\"])\n    P1 o--o p5([\"pink-data.csv &lt;br&gt;\"])\n\n    D o--o b1([\"**blue.r** &lt;br&gt;\"])\n\n    style P1 fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style p2 fill:#ff0,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\nHint: what can we see with ls .. from the current directory?"
+  },
+  {
+    "objectID": "linux101.html#poll-3",
+    "href": "linux101.html#poll-3",
+    "title": "arctraining slides",
+    "section": "Poll",
+    "text": "Poll\nWhat if we are in pink-subfolder (if it’s our working directory), and want the path to pink-file.md?\nClick here to go to Poll"
+  },
+  {
+    "objectID": "linux101.html#relative-paths-5",
+    "href": "linux101.html#relative-paths-5",
+    "title": "arctraining slides",
+    "section": "Relative paths",
+    "text": "Relative paths\n../pink-file.md\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%\nflowchart TD\n    A[\"/home/vscode/ &lt;br&gt; or ~\"] o--o B[red-folder]\n    A o--o C[pink-folder]\n    A o--o D[blue-folder]\n\n    B o--o r1([red-1.txt ])\n    B o--o r2([red-2.txt ])\n    B o--o r3([red-3.txt ])\n\n    C o--o P1[pink-sub-folder]\n    C o--o p2([\"pink-file.md &lt;br&gt;\"])\n    C o--o p3{{\"say_hi.sh &lt;br&gt;\"}}\n\n    P1 o--o p4([\"**helloworld.py** &lt;br&gt;\"])\n    P1 o--o p5([\"pink-data.csv &lt;br&gt;\"])\n\n    D o--o b1([\"**blue.r** &lt;br&gt;\"])\n\n    style P1 fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style p2 fill:#ff0,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\nWe can use the command cat with a path to a file to read out the contents: try cat ../pink-file.md"
+  },
+  {
+    "objectID": "linux101.html#recap-1",
+    "href": "linux101.html#recap-1",
+    "title": "arctraining slides",
+    "section": "Recap",
+    "text": "Recap\nWe’ve covered an awful lot of commands now!\n\nIf at any point in the course you need a refresher, just click the link at the bottom of the screen to the Cheat Sheet which lists useful commands."
+  },
+  {
+    "objectID": "linux101.html#making-files-and-directories",
+    "href": "linux101.html#making-files-and-directories",
+    "title": "arctraining slides",
+    "section": "Making files and directories",
+    "text": "Making files and directories\n\nYou can create a directory with the command mkdir (make directory), and the name of the new directory as an argument:\n\nmkdir new-dir-name\n\nYou can create files with the command touch, and the name of the new file as an argument:\ntouch new-file-name.txt\nYou can provide a path (absolute or relative) instead of a name if you want to create the folder or file somewhere other that the current working directory."
+  },
+  {
+    "objectID": "linux101.html#rules-for-file-and-directory-names",
+    "href": "linux101.html#rules-for-file-and-directory-names",
+    "title": "arctraining slides",
+    "section": "Rules for file and directory names",
+    "text": "Rules for file and directory names\n\nDon’t use spaces in names; Linux will think you are entering two separate arguments to a command.\n\n\nBreak up words with hyphens or underscores instead like_this or-this!\n\n\nDon’t begin a name with a hyphen/dash (so no files called -this); Linux will think this is a flag/option to a command.\nStick with numbers, letters, full stops, dashes/hyphens and underscores.\n\n\nSpecial characters like $, %, &, *, / etc. have special meanings on the command line and can lead to confusion!\n\n\nWhen naming files, give them a sensible file ending: .txt, .md, .py etc.\n\nIf you’re working with old files/directories that have spaces in their names, you’ll need to wrap the path in single quotation marks, 'like this.txt'"
+  },
+  {
+    "objectID": "linux101.html#poll-4",
+    "href": "linux101.html#poll-4",
+    "title": "arctraining slides",
+    "section": "Poll",
+    "text": "Poll\nChoose some sensible Linux file and folder names!\nClick here to go to Poll"
+  },
+  {
+    "objectID": "linux101.html#making-files-and-directories-1",
+    "href": "linux101.html#making-files-and-directories-1",
+    "title": "arctraining slides",
+    "section": "Making files and directories",
+    "text": "Making files and directories\n\nTry creating some folders and files in your home directory (~)\n\nmkdir path-to-new-folder\ntouch path-to-new-file\n\nIf you want to create multiple nested folders at once, you can use the -p option:\n\n\n_@username → ~ $ mkdir -p new1/new2/new3 ↵\n\n\nYou can create multiple new folders in the same directory by just listing all the new names, separate by spaces:\n\n\n_@username → ~ $ mkdir new1 new2 new3 ↵"
+  },
+  {
+    "objectID": "linux101.html#editing-files",
+    "href": "linux101.html#editing-files",
+    "title": "arctraining slides",
+    "section": "Editing files",
+    "text": "Editing files\n\nOftentimes, when you’re doing research on a platform like Aire, you don’t need to do extensive manual editing of files; for example, if you are running multiple R scripts, you would write and test these on your desktop computer and then transfer them over to Aire.\n\n\nSometimes, you might need to edit a file from the command line.\nOne popular tool that is installed on almost all systems is Nano\nTo launch Nano, you just need to type the nano command followed by the name of a file (this can be a new or existing file; Nano will create a file for you if it doesn’t exist)"
+  },
+  {
+    "objectID": "linux101.html#editing-files-with-nano",
+    "href": "linux101.html#editing-files-with-nano",
+    "title": "arctraining slides",
+    "section": "Editing files with Nano",
+    "text": "Editing files with Nano\n\n_@username → ~ $ nano new-file.txt ↵\n\nThis will open up a new screen in your terminal…"
+  },
+  {
+    "objectID": "linux101.html#editing-files-with-nano-1",
+    "href": "linux101.html#editing-files-with-nano-1",
+    "title": "arctraining slides",
+    "section": "Editing files with Nano",
+    "text": "Editing files with Nano\n\n_   GNU nano 7.2       new-file.txt          \n▮\n_\n_\n_\n_\n\nNew File\n^G Help     ^O Write Out     ^X Exit\n\n\nThe cursor is shown by the rectangle symbol ▮"
+  },
+  {
+    "objectID": "linux101.html#editing-files-with-nano-2",
+    "href": "linux101.html#editing-files-with-nano-2",
+    "title": "arctraining slides",
+    "section": "Editing files with Nano",
+    "text": "Editing files with Nano\n\n_   GNU nano 7.2       new-file.txt          \nYou can type in this file;\nyou don’t need to click on it.▮\n_\n_\n_\n\nNew File\n^G Help     ^O Write Out     ^X Exit\n\n\nYou can start typing."
+  },
+  {
+    "objectID": "linux101.html#editing-files-with-nano-3",
+    "href": "linux101.html#editing-files-with-nano-3",
+    "title": "arctraining slides",
+    "section": "Editing files with Nano",
+    "text": "Editing files with Nano\n\n_   GNU nano 7.2       new-file.txt          \nTo save your edits,\nhit ^O to write out.\nThis means CTRL and o▮\n_\n_\n\nNew File\n^G Help     ^O Write Out     ^X Exit"
+  },
+  {
+    "objectID": "linux101.html#editing-files-with-nano-4",
+    "href": "linux101.html#editing-files-with-nano-4",
+    "title": "arctraining slides",
+    "section": "Editing files with Nano",
+    "text": "Editing files with Nano\n\n_   GNU nano 7.2       new-file.txt          \nTo save your edits,\nhit ^O to write out.\nThis means CTRL and o▮\n_\n  Hit ENTER to accept the filename\nFile Name to write: new-file.txt    \n\n^G Help     ^C Cancel"
+  },
+  {
+    "objectID": "linux101.html#editing-files-with-nano-5",
+    "href": "linux101.html#editing-files-with-nano-5",
+    "title": "arctraining slides",
+    "section": "Editing files with Nano",
+    "text": "Editing files with Nano\n\n_   GNU nano 7.2       new-file.txt          \nTo save your edits,\nhit ^X to exit.\nThis means CTRL and x▮\n_\n_\n\nWrote 3 lines\n^G Help     ^O Write Out     ^X Exit\n\n\nThis will close the Nano text editor and return you to the command line."
+  },
+  {
+    "objectID": "linux101.html#poll-5",
+    "href": "linux101.html#poll-5",
+    "title": "arctraining slides",
+    "section": "Poll",
+    "text": "Poll\nHow comfortable are you using Nano?\nClick here to go to Poll"
+  },
+  {
+    "objectID": "linux101.html#using-arrow-keys",
+    "href": "linux101.html#using-arrow-keys",
+    "title": "arctraining slides",
+    "section": "Using arrow keys ↑ ↓",
+    "text": "Using arrow keys ↑ ↓\n\nIn the Nano text editor, you cannot click on the text to move the cursor:\n\nYou need to use the arrow keys on your keyboard to navigate the text. ← ↑ → ↓\n\nWhat happens when you use the up and down arrows when you have exited from Nano and are back in the shell?\n\n\n\n\nThe arrow keys allow you to “scroll” through previous commands you’ve used\nIf you don’t want to use a previous command and want to stop scrolling, use ^C to cancel (CTRL and c at the same time)"
+  },
+  {
+    "objectID": "linux101.html#modifying-files-and-directories-mv",
+    "href": "linux101.html#modifying-files-and-directories-mv",
+    "title": "arctraining slides",
+    "section": "Modifying files and directories: mv",
+    "text": "Modifying files and directories: mv\nThe mv (move) command allows us to move a file or folder to a specified location:\n\nMove the file file-name to the directory new-location: mv file-name new-location\nMove the directory dir-name to the directory new-location: mv dir-name new-location\n\nIf you move the file or directory to the same location it’s already in, it renames it."
+  },
+  {
+    "objectID": "linux101.html#modifying-files-and-directories-mv-1",
+    "href": "linux101.html#modifying-files-and-directories-mv-1",
+    "title": "arctraining slides",
+    "section": "Modifying files and directories: mv",
+    "text": "Modifying files and directories: mv\n\n_@username → ~/somewhere $ cd ↵\n\n_@username → ~ $ touch test-file.txt ↵\n\n\n_@username → ~ $ ls -F ↵\n\n\n_blue-folder/ pink-folder/ red-folder/ test-file.txt\n\n\n_@username → ~ $ mv test-file.txt test-file.md ↵\n\n\n_@username → ~ $ ls -F ↵\n\n\n_blue-folder/ pink-folder/ red-folder/ test-file.md\n\n\n_@username → ~ $ mv test-file.md blue-folder ↵\n\n\n\nWhat’s the result of ls and ls blue-folder now? Repeat this with a new directory in your home directory."
+  },
+  {
+    "objectID": "linux101.html#modifying-files-and-directories-mv-2",
+    "href": "linux101.html#modifying-files-and-directories-mv-2",
+    "title": "arctraining slides",
+    "section": "Modifying files and directories: mv",
+    "text": "Modifying files and directories: mv\n\nDo you use the same syntax to move directories and files?\n\nYes, mv works recursively and moves directories (and everything in them).\n\n\nAfter this course, experiment with moving directories around the virtual machine.\n\nDon’t worry about messing up the directory structure - you can rebuild a new VM at any point.\nThis is a safe sandbox to experiment in!\n\nBUT, it’s important to note that you can accidentally overwrite files using mv: this is why it’s useful to practise and get used to using this command in a safe place!"
+  },
+  {
+    "objectID": "linux101.html#modifying-files-and-directories-cp",
+    "href": "linux101.html#modifying-files-and-directories-cp",
+    "title": "arctraining slides",
+    "section": "Modifying files and directories: cp",
+    "text": "Modifying files and directories: cp\nThe cp or copy command allows us to copy files or directories to specified locations.\n\n_@username → ~/somewhere $ cd ↵\n\n_@username → ~ $ touch new-test.txt ↵\n_ You can us ls or ls -F to check the file is created\n\n\n_@username → ~ $ nano new-test.txt ↵\n_ Add some text to the file. After saving, check the content with cat:\n_@username → ~ $ cat new-test.txt ↵\n\n\n_@username → ~ $ cp new-test.txt new-test-2.txt ↵\n_ Check the content of new-test-2.txt with cat"
+  },
+  {
+    "objectID": "linux101.html#modifying-files-and-directories-cp-1",
+    "href": "linux101.html#modifying-files-and-directories-cp-1",
+    "title": "arctraining slides",
+    "section": "Modifying files and directories: cp",
+    "text": "Modifying files and directories: cp\nThe cp or copy command allows us to copy files or directories to specified locations.\n\n_@username → ~ $ mkdir -p test-dir/sub-dir/sub-sub-dir other-test-dir ↵\n\n_ Explore your new dirs with cd and ls, then return to ~\n\n\n_@username → ~ $ cp test-dir/sub-dir/sub-sub-dir other-test-dir ↵\n\n\n_ cp: -r not specified; omitting directory ‘test-dir/sub-dir/sub-sub-dir’\n_ We need to add a -r to our command, which means “recursive”\n\n\n_@username → ~ $ cp -r test-dir/sub-dir/sub-sub-dir other-test-dir ↵"
+  },
+  {
+    "objectID": "linux101.html#poll-6",
+    "href": "linux101.html#poll-6",
+    "title": "arctraining slides",
+    "section": "Poll",
+    "text": "Poll\nHow comfortable are you with exploring and handling directories using the commands we have covered?\nClick here to go to Poll"
+  },
+  {
+    "objectID": "linux101.html#deleting-with-rm",
+    "href": "linux101.html#deleting-with-rm",
+    "title": "arctraining slides",
+    "section": "Deleting with rm",
+    "text": "Deleting with rm\nAlmost everyone who’s used Linux before will have a horror story about the command rm (remove), and accidentally deleting files they didn’t mean to.\nBut being able to delete and clean up files is very important, especially when using a shared resource (like Aire) that has storage quotas.\nLet’s clean up all the test files we just made.\n\n_@username → ~ $ ls ↵ Check what files you want to delete\n\n_@username → ~ $ rm new-test.txt new-test-2.txt ↵"
+  },
+  {
+    "objectID": "linux101.html#deleting-with-rm-1",
+    "href": "linux101.html#deleting-with-rm-1",
+    "title": "arctraining slides",
+    "section": "Deleting with rm",
+    "text": "Deleting with rm\nDeleting directories\n\n_@username → ~ $ rm test-dir ↵ Delete a directory\n\n_ rm: cannot remove ‘test-dir/’: Is a directory\nLike cp, we need to tell rm we want it to act recursively, with -r\n\n\n_@username → ~ $ rm -r test-dir ↵ Delete a directory\n\n\nThis is very powerful and can quickly delete directories of important data!\nrm does not send things to the recycling bin or equivalent: it hard-deletes them; data is usually not recoverable."
+  },
+  {
+    "objectID": "linux101.html#deleting-with-rm-2",
+    "href": "linux101.html#deleting-with-rm-2",
+    "title": "arctraining slides",
+    "section": "Deleting with rm",
+    "text": "Deleting with rm\nA cautionary exercise\nLook at the following command and try to predict what it does:\n\nBreaking it downFace the fear\n\n\nDo not run the following snippet!\nrm -rf *\n\n\nrm: the delete command (remove)\n-r: recursive, so will eat through directories\n-f: force - do not ask for clarification, just delete\n*: a “wildcard” character; instead of providing a file or directory name, this essentially means everything\n\n\n\n\nBefore we go on a break, cd back to your home directory, and experience the abject horror of rm.\n\nRun rm -rf * from /home/vscode. Only do this in your virtual machine on codespaces, never on a research machine\n\n\nUse cd and ls to look around - what does your home directory look like now?"
+  },
+  {
+    "objectID": "linux101.html#rebuild-codespaces",
+    "href": "linux101.html#rebuild-codespaces",
+    "title": "arctraining slides",
+    "section": "Rebuild codespaces",
+    "text": "Rebuild codespaces\n\nClick on the &gt;&lt; Codespaces button in the lower left of your screen, then select “Rebuild Container” from the menu that pops up.\nTake a break while it’s re-building (remember to lock your screen if leaving your pc unattended)"
+  },
+  {
+    "objectID": "linux101.html#bash-scripts",
+    "href": "linux101.html#bash-scripts",
+    "title": "arctraining slides",
+    "section": "Bash scripts",
+    "text": "Bash scripts\n\nUse ls -F to list out the contents of ~/pink-folder\nWhat are the three categories of content?\n\nWhat kind of file is say_hi.sh?\n\n\n\nThis is an executable file - like a Windows .exe file - you can run it.\nLet’s read it first and predict what it will do:\n\nUse cat say_hi.sh to print out the contents"
+  },
+  {
+    "objectID": "linux101.html#bash-scripts-1",
+    "href": "linux101.html#bash-scripts-1",
+    "title": "arctraining slides",
+    "section": "Bash scripts",
+    "text": "Bash scripts\nWhat’s in say_hi.sh?\n#!/bin/sh\necho \"hello!\"\necho \"Running this file prints out a number of greetings\"\necho \"What's your name? (type your name in below)\"\nread yourname\necho \"Nice to meet you, $yourname!\"\n\n\n#!/bin/bash: this is known as “shebang bin bash” tells Linux to use Bash to parse the file - we don’t need to worry about this, beyond knowing to include it at the beginning of a shell script.\nThe echo will just print out (or echo back) any arguments after it.\n\nTry running echo Hello in your terminal\n\nThe read command waits for you to type input and press enter, then saves it to a variable\n\nTry running read greeting and pressing enter\nOn the next line, type Hello, and press enter\nNow, type echo $greeting and press enter\n\nVariables generally start with $"
+  },
+  {
+    "objectID": "linux101.html#bash-scripts-2",
+    "href": "linux101.html#bash-scripts-2",
+    "title": "arctraining slides",
+    "section": "Bash scripts",
+    "text": "Bash scripts\nWhat’s in say_hi.sh?\n#!/bin/sh\necho \"hello!\"\necho \"Running this file prints out a number of greetings\"\necho \"What's your name? (type your name in below)\"\nread yourname\necho \"Nice to meet you, $yourname!\"\nWhat do we predict it’s going to do?\n\n_@username → ~/pink-folder $ ./say_hi.sh ↵\nRun using ./ in front of the script name"
+  },
+  {
+    "objectID": "linux101.html#bash-scripts-3",
+    "href": "linux101.html#bash-scripts-3",
+    "title": "arctraining slides",
+    "section": "Bash scripts",
+    "text": "Bash scripts\nLet’s create a simple bash script. cd to home and open a new file with Nano:\n\n_@username → ~/pink-folder $ cd ↵\n_@username → ~ $ nano test-script.sh ↵\n\n#!/bin/bash\ntouch test-file-auto.txt\nmkdir new-dir-auto\ncp test-file-auto.txt new-dir-auto\necho \"Put this text in the job report\" &gt; job-report.txt\nSave the file with Nano."
+  },
+  {
+    "objectID": "linux101.html#bash-scripts-4",
+    "href": "linux101.html#bash-scripts-4",
+    "title": "arctraining slides",
+    "section": "Bash scripts",
+    "text": "Bash scripts\n\nCheck the contents of your home directory using ls -F\n\nWhat category does your new script show as?\n\nTry using ls -l\n\n\nIt’s just a regular file: we need to make it executable!\n\n_@username → ~ $ chmod +x test-script.sh ↵\n\nThe chmod command changes or modifies file permissions: you need permission to be able to execute a bash script.\n\n+x add executable permissions\ntest-script.sh is the name of the script you want to apply permissions to.\n\nNow, try ls -F again!"
+  },
+  {
+    "objectID": "linux101.html#run-your-bash-script",
+    "href": "linux101.html#run-your-bash-script",
+    "title": "arctraining slides",
+    "section": "Run your Bash script",
+    "text": "Run your Bash script\n\n_@username → ~ $ ./test-script.sh ↵\n\nWhat did it do?\n\n\nWhat did the line echo \"Put this text in the job report\" &gt; job-report.txt do?\n\nThe &gt; operator directs the output from echo \"your message\" to the file job-report.txt"
+  },
+  {
+    "objectID": "linux101.html#run-your-bash-script-1",
+    "href": "linux101.html#run-your-bash-script-1",
+    "title": "arctraining slides",
+    "section": "Run your Bash script",
+    "text": "Run your Bash script\n\n\nTry to rerun the code, what happens?\nReplace the line mkdir new-dir-auto with mkdir -p new-dir-auto and rerun, what happens?\n\nThe -p option (in addition to allowing you to create nested files) also allows you to try to make a folder, and if it already exists, doesn’t fail"
+  },
+  {
+    "objectID": "linux101.html#run-your-bash-script-2",
+    "href": "linux101.html#run-your-bash-script-2",
+    "title": "arctraining slides",
+    "section": "Run your Bash script",
+    "text": "Run your Bash script\n\n\nChange the line echo \"Put this text in the job report\" &gt; job-report.txt to echo \"Put this text in the job report\" &gt;&gt; job-report.txt, what does this do?\n\nThe message now gets appended to the file instead of overwriting\n\nAdd more messages by repeating echo \"message\" &gt; job-report.txt or echo \"message\" &gt;&gt; job-report.txt and seeing how they behave."
+  },
+  {
+    "objectID": "linux101.html#other-scripts",
+    "href": "linux101.html#other-scripts",
+    "title": "arctraining slides",
+    "section": "Other scripts",
+    "text": "Other scripts\nIn general, on the HPC system, you will want to run scripts in other languages, like R or Python (amongst many, many others).\n\nThe way you load in a certain language varies depending on the system\n\nYou’ll learn how to do this on Aire at HPC 1\n\nOur system is very simple but has Python and R installed\nOften times, you will want to write a bash script that tells other scripts (written in R, Python etc.) to run"
+  },
+  {
+    "objectID": "linux101.html#r-scripts",
+    "href": "linux101.html#r-scripts",
+    "title": "arctraining slides",
+    "section": "R scripts",
+    "text": "R scripts\ncd home, and then into the directory blue-folder:\n\n_@username → ~/wherever $ cd ↵\n\n_@username → ~ $ cd blue-folder ↵\n\n\n_@username → ~/blue-folder $ ls ↵\n\n\n_blue.R\nThis is an R script; if R is installed on the system it can be run with the command Rscript. Check what is in the file before running it with the command cat.\n\n\n_@username → ~/blue-folder $ cat blue.R ↵\n\n\n_print(“Hello World”) Ok, lets run it\n\n\n_@username → ~/blue-folder $ Rscript blue.R ↵"
+  },
+  {
+    "objectID": "linux101.html#r-scripts-1",
+    "href": "linux101.html#r-scripts-1",
+    "title": "arctraining slides",
+    "section": "R scripts",
+    "text": "R scripts\n\n\nThe R script ran, and printed the results out onto the screen\n\nWhat if we wanted the results saved to a text file?\n\nIn general, it’s a good idea to do this in R and ensure all your results are saved in the correct data format etc.\nHowever, it can be useful to save printed messages to a file for safe keeping: use a bash script\n\nWhat if we wanted to run multiple R scripts?\n\nWe could write a bash script to do this!"
+  },
+  {
+    "objectID": "linux101.html#r-scripts-bash",
+    "href": "linux101.html#r-scripts-bash",
+    "title": "arctraining slides",
+    "section": "R scripts + bash",
+    "text": "R scripts + bash\nLet’s create a bash script called r-bash.sh and save it alongside blue.R; remember you’ll need to do chmod +x r-bash.sh.\n#!/bin/bash\n\nRscript blue.R\nRun this: ./r-bash.sh ; what happens?\n\n#!/bin/bash\n\nRscript blue.R &gt;&gt; output_log.txt\nRun this: ./r-bash.sh ; what happens? Use cat to read the output of output_log.txt"
+  },
+  {
+    "objectID": "linux101.html#python-scripts",
+    "href": "linux101.html#python-scripts",
+    "title": "arctraining slides",
+    "section": "Python scripts",
+    "text": "Python scripts\nWe can do the exact same with Python scripts; we only need slightly different commands to run the .py script."
+  },
+  {
+    "objectID": "linux101.html#python-scripts-1",
+    "href": "linux101.html#python-scripts-1",
+    "title": "arctraining slides",
+    "section": "Python scripts",
+    "text": "Python scripts\ncd home, and then into the directory pink-folder/pink-sub-folder:\n\n_@username → ~/wherever $ cd ↵\n\n_@username → ~ $ cd pink-folder/pink-sub-folder ↵\n\n\n_@username → ~/pink-folder/pink-subfolder $ ls ↵\n\n\n_helloworld.py pink-data.csv\nCheck what is in the Python file before running it with the command cat.\n\n\n_@username → ~/pink-folder/pink-subfolder $ cat helloworld.py ↵\n\n\n_print(“Hello World”) Ok, lets run it\n\n\n_@username → ~/pink-folder/pink-subfolder $ python helloworld.py ↵"
+  },
+  {
+    "objectID": "linux101.html#python-bash-scripts",
+    "href": "linux101.html#python-bash-scripts",
+    "title": "arctraining slides",
+    "section": "Python + bash scripts",
+    "text": "Python + bash scripts\nWrite a bash script that runs the Python script helloworld.py and saves the output to a text file.\n\nRemember to always start with #!/bin/bash\nChange the permissions on your bash script with chmod +x name-of-script.sh\n\n\n#!/bin/bash\n\npython helloworld.py &gt;&gt; output_log.txt\nRun this with ./script-name.sh and check the contents of output_log.txt"
+  },
+  {
+    "objectID": "linux101.html#executable-scripts",
+    "href": "linux101.html#executable-scripts",
+    "title": "arctraining slides",
+    "section": "Executable scripts",
+    "text": "Executable scripts\n\nAlways check the contents of any files/scripts you want to run, to ensure you understand what they are doing.\nUse chmod +x script-name.sh to make a bash file executable.\nWhen running Python or R scripts for research, you will need to carefully specify what version of the language (and any libraries/packages) are being used\nBe careful of overwriting data using &gt; to write files."
+  },
+  {
+    "objectID": "linux101.html#next-steps",
+    "href": "linux101.html#next-steps",
+    "title": "arctraining slides",
+    "section": "Next steps",
+    "text": "Next steps\n\nA three hour session can introduce the basics, but is not enough to make you feel like a Linux shell expert!\nYour homework: work through the tutorial/session notes for The Unix Shell created by the software carpentry.\nIn order to download the files they use (so that you can follow along all the sessions), we just need the URL of the files: https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip\n\n\n_@username → ~/wherever $ cd ↵ Or to wherever you want to download the files\n\n_@username → ~ $ wget https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip ↵ Download the zip file (expect lots of output)\n\n\n_@username → ~ $ unzip shell-lesson-data.zip ↵ Unzip the folder (expect lots of output)"
+  },
+  {
+    "objectID": "linux101.html#next-steps-1",
+    "href": "linux101.html#next-steps-1",
+    "title": "arctraining slides",
+    "section": "Next steps",
+    "text": "Next steps\n\nwgetunzip\n\n\n\nwget is a really useful command for downloading data from the internet. It can take a range of different options and arguments:\n\nBasic use: wget url-to-data: this downloads the data to the current working directory, with the folder/file name provided by the URL .\nYou can provide a different file name for the download either: wget -O new-nap.zip url-to-data.\nYou can provide a location for the file to download to (not the current working directory): wget -P path/to/folder url-to-data.\nThese are only some of the many, many options available!\n\n\n\n\n\nunzip is necessary if you are downloading compressed/zipped archives (that end in .zip)\n\nBasic use: unzip filename.zip; this will unzip the file in the current working directory, into a folder called filename.\nCheck contents: unzip -l filename.zip will list the contents of the archive without extracting them."
+  },
+  {
+    "objectID": "linux101.html#map",
+    "href": "linux101.html#map",
+    "title": "arctraining slides",
+    "section": "Directory map",
+    "text": "Directory map\nUse the back button in your browser to return to the slide you were previously on.\n\n\n\n\nflowchart TD\n    START:::hidden --&gt; |cd|A\n    A[/home/vscode/] --&gt;|cd red-folder| B[red-folder/ ]\n    A[/home/vscode/] --&gt;|cd pink-folder| C[pink-folder/ ]\n    A[/home/vscode/] --&gt;|cd blue-folder| D[blue-folder/ ]\n\n    B --- r1([red-1.txt ])\n    B --- r2([red-2.txt ])\n    B --- r3([red-3.txt ])\n\n    C --- |cd pink-sub-folder|P1[pink-sub-folder/ ]\n    C --- p2([pink-file.md ])\n    C --- |./say_hi.sh|p3{{say_hi.sh }}\n\n    P1 --- |python helloworld.py|p4([**helloworld.py** ])\n    P1 --- p5([pink-data.csv ])\n\n    D --- |Rscript blue.r|b1([**blue.r** ])\n\n\n\n\n\n\nScroll down to see key:\n\n\n\n\n\nflowchart TD\n  E[folder] --&gt;|CLI argument|F([file])\n  E[folder] --&gt;|CLI argument|G{{executable}}\n\n\n\n\n\nYou can use cat filename to print out the content of a file, or nano filename to open the nano text editor. You can also use code filename to open it in vscode on your virtual machine.\nOn the HPC system, you’ll likely use nano to edit code if you ever need to."
+  },
+  {
+    "objectID": "linux101.html#cheat-sheet",
+    "href": "linux101.html#cheat-sheet",
+    "title": "arctraining slides",
+    "section": "Cheat Sheet",
+    "text": "Cheat Sheet\nUse the back button in your browser to return to the slide you were previously on.\nIf you are lost, you can always cd home!\n\n\n\n\n\n\n\nCommand\nDescription\n\n\n\n\ncd\nChange directory to home\n\n\ncd dir-name\nChange directory to dir-name\n\n\npwd\nPrint the current working directory - where am I?\n\n\nname --help\nLoad the manual for name - on Codespaces\n\n\nman name\nLoad the manual for name - on Aire/ARC\n\n\nls\nList the contents of a directory\n\n\ncat file-name\nPrint out the contents of a file called file-name\n\n\nmkdir dir-name\nMake a new directory called dir-name\n\n\ntouch file-name\nMake a new file/update the last-edited date of a file called file-name\n\n\n\nSome more cd commands:\n\n\n\n\n\n\n\nCommand\nDescription\n\n\n\n\ncd ..\nGo up a level to the parent directory\n\n\ncd -\nGo back to the previous directory\n\n\ncd ~/dir-name\nGo to dir-name, a directory in the home directory\n\n\n\nSome more ls commands:\n\n\n\n\n\n\n\nCommand\nDescription\n\n\n\n\nls -F\nList the contents of a dir, with symbols for content type\n\n\nls -a\nList all contents, including hidden files and directories\n\n\nls -l\nList contents, including permissions, the owner and their “group”, and when the content was edited\n\n\n\nCommands for working with files and directories:\n\n\n\n\n\n\n\nCommand\nDescription\n\n\n\n\ncp\n\n\n\nmv\n\n\n\nrm\n\n\n\nmkdir -p dir-name\nMake a new directory call dir-name if it doesn’t already exist\n\n\n\n\n\n\n\n\nResearch IT Website | Research IT Query | Courses Material | Cheat sheet"
+  },
+  {
+    "objectID": "swd3/sdlc.html#sdlc",
+    "href": "swd3/sdlc.html#sdlc",
+    "title": "arctraining slides",
+    "section": "SDLC",
+    "text": "SDLC\n\nIdeationRequirementsDesignDevelopmentTestDeploymentMaintenance\n\n\n\n\n\nWhat are we going to do?\n\n\nBrainstorming\nResearch\n\n\n\n\n\n\n\n\n\n\nHow are we going to do it?\n\nSome topics to help define requirements include:\n\nfinal goal\nproject scope (how to reach the final goal)\nwhat is feasible (and how)\nwhat is priority\nwhat resources are available\ndeadlines\npotential risks\n\n\nWarning: Each person involved in the project may have a different need.\n\n\n\n\n\n\n\n\n\n\nWhat is the software architecture?\n\nWhen designing software, the object-oriented approach is a common programming paradigm.\nObject-oriented components:\n\nClasses: A user-defined type\nObject instances: A particular object instantiated from a class.\nMethods: A function which is “built in” to a class\nConstructor: A special method called when instantiating a new object\n\nSome principles: abstraction, encapsulation, decomposition, generalisation\n\n\nSee more: \n\n\n\n\n\n\n\nIs this where the fun begins?\n\n\nTake your time\n\n\n\n\n\nDevelopment is usually the most time consuming step in a Software Development Life Cycle.\n\n\n\n\n\nIs this software good?\n\nIn this step, errors and failures are identified by exposing the code to an environment similar to the end-user experience.\nThere are several types of testing, some examples include:\n\nUnit testing: are all components working?\nIntegration testing: are all components working when fitted together?\nPerformance testing: how does the software perform against different workloads? It is fast? Stable?\nFunctional testing: is the software aligned with Software Requirement Specification?\n\n\n\n\n\n\n\n\n\n\nCan other people use my code?\n\nYou can use platforms like GitHub to release your software.\n\nThe functionality of the software is linked to several specifications related to the operating system and versions of packages and other software related to the project.\nListing these specifications will help others to replicate the environment in which the software was developed.\n\n\n\n\n\n\n\n\n\n\nIs it over?\n\nWe can classify maintenance into a few categories:\n\nCorrective: fix reported errors/failures.\nPreventive: regular checks and fixes.\nPerfective: optimize implemented features, adding new features.\nAdaptive: keep the software updated according to changes external to the project (new programming language version, new regulation, etc.)."
+  },
+  {
+    "objectID": "swd3/good-practices.html",
+    "href": "swd3/good-practices.html",
+    "title": "arctraining slides",
+    "section": "",
+    "text": "If application A needs version 1.0 of a particular module but application B needs version 2.0, then the requirements are in conflict and installing either version 1.0 or 2.0 will leave one application unable to run.\nThe solution for this problem is to create a virtual environment, a self-contained directory tree that contains installation for particular versions of software/packages.\n\n\n\nConda is an open source package management system and environment management system that runs on Windows, macOS, and Linux.\nIt offers dependency and environment management for any language—Python, R, Ruby, Lua, Scala, Java, JavaScript, C/ C++, Fortran, and more.\nEasy user install via Anaconda."
+  },
+  {
+    "objectID": "swd3/good-practices.html#virtual-environments",
+    "href": "swd3/good-practices.html#virtual-environments",
+    "title": "arctraining slides",
+    "section": "",
+    "text": "If application A needs version 1.0 of a particular module but application B needs version 2.0, then the requirements are in conflict and installing either version 1.0 or 2.0 will leave one application unable to run.\nThe solution for this problem is to create a virtual environment, a self-contained directory tree that contains installation for particular versions of software/packages.\n\n\n\nConda is an open source package management system and environment management system that runs on Windows, macOS, and Linux.\nIt offers dependency and environment management for any language—Python, R, Ruby, Lua, Scala, Java, JavaScript, C/ C++, Fortran, and more.\nEasy user install via Anaconda."
+  },
+  {
+    "objectID": "swd3/good-practices.html#code-formatting",
+    "href": "swd3/good-practices.html#code-formatting",
+    "title": "arctraining slides",
+    "section": "Code formatting",
+    "text": "Code formatting\n# myscript.py:\nx = {  'a':37,'b':42,\n'c':927}\ny = 'hello '+       'world'\nclass foo  (     object  ):\n   def f    (self   ):\n       return       y **2\n   def g(self, x :int,\n       y : int=42\n       ) -&gt; int:\n       return x--y\ndef f  (   a ) :\n   return      37+-a[42-a :  y*3]"
+  },
+  {
+    "objectID": "swd3/good-practices.html#coding-conventions",
+    "href": "swd3/good-practices.html#coding-conventions",
+    "title": "arctraining slides",
+    "section": "Coding conventions",
+    "text": "Coding conventions\nIf your language or project has a standard policy, use that. For example:\n\nPython: PEP8\nR: Google’s guide for R, tidyverse style guide\nC++: Google’s style guide\nJulia: Official style guide"
+  },
+  {
+    "objectID": "swd3/good-practices.html#linters",
+    "href": "swd3/good-practices.html#linters",
+    "title": "arctraining slides",
+    "section": "Linters",
+    "text": "Linters\nLinters are automated tools which enforce coding conventions and check for common mistakes. For example:\n\nPython:\n\nflake8 (flags any syntax/style errors)\nblack (enforces the style)\nisort (“Sorts” imports alphabetically in groups)"
+  },
+  {
+    "objectID": "swd3/good-practices.html#example-flake8-linter",
+    "href": "swd3/good-practices.html#example-flake8-linter",
+    "title": "arctraining slides",
+    "section": "Example: Flake8 Linter",
+    "text": "Example: Flake8 Linter\n$ conda install flake8\n$ flake8 myscript.py\nmyscript.py:2:6: E201 whitespace after '{'\nmyscript.py:2:11: E231 missing whitespace after ':'\nmyscript.py:2:14: E231 missing whitespace after ','\nmyscript.py:2:18: E231 missing whitespace after ':'\nmyscript.py:3:1: E128 continuation line under-indented for visual indent\nmyscript.py:3:4: E231 missing whitespace after ':'\nmyscript.py:4:13: E225 missing whitespace around operator\nmyscript.py:4:14: E222 multiple spaces after operator\nmyscript.py:5:1: E302 expected 2 blank lines, found 0\nmyscript.py:5:13: E201 whitespace after '('\nmyscript.py:5:25: E202 whitespace before ')'\nmyscript.py:6:4: E111 indentation is not a multiple of 4\nmyscript.py:6:9: E211 whitespace before '('\nmyscript.py:6:20: E202 whitespace before ')'\nmyscript.py:7:8: E111 indentation is not a multiple of 4\nmyscript.py:7:14: E271 multiple spaces after keyword\nmyscript.py:7:25: E225 missing whitespace around operator\nmyscript.py:8:4: E301 expected 1 blank line, found 0\nmyscript.py:8:4: E111 indentation is not a multiple of 4\nmyscript.py:8:17: E203 whitespace before ':'\nmyscript.py:8:18: E231 missing whitespace after ':'\nmyscript.py:9:8: E128 continuation line under-indented for visual indent\nmyscript.py:9:9: E203 whitespace before ':'\nmyscript.py:9:15: E252 missing whitespace around parameter equals\nmyscript.py:9:16: E252 missing whitespace around parameter equals\nmyscript.py:10:8: E124 closing bracket does not match visual indentation\nmyscript.py:10:8: E125 continuation line with same indent as next logical line\nmyscript.py:11:8: E111 indentation is not a multiple of 4\nmyscript.py:12:1: E302 expected 2 blank lines, found 0\nmyscript.py:12:6: E211 whitespace before '('\nmyscript.py:12:9: E201 whitespace after '('\nmyscript.py:12:13: E202 whitespace before ')'\nmyscript.py:12:15: E203 whitespace before ':'\nmyscript.py:13:4: E111 indentation is not a multiple of 4\nmyscript.py:13:10: E271 multiple spaces after keyword\nmyscript.py:13:26: E203 whitespace before ':'\nmyscript.py:13:34: W291 trailing whitespace"
+  },
+  {
+    "objectID": "swd3/good-practices.html#example-black-code-formatter",
+    "href": "swd3/good-practices.html#example-black-code-formatter",
+    "title": "arctraining slides",
+    "section": "Example: Black Code Formatter",
+    "text": "Example: Black Code Formatter\n\nInstall and run Black\n\n$ conda install black\n$ black myscript.py\n\nCheck the file!\n\n# myscript.py:\nx = {\"a\": 37, \"b\": 42, \"c\": 927}\ny = \"hello \" + \"world\"\n\n\nclass foo(object):\n    def f(self):\n        return y**2\n\n    def g(self, x: int, y: int = 42) -&gt; int:\n        return x - -y\n\n\ndef f(a):\n    return 37 + -a[42 - a : y * 3]"
+  },
+  {
+    "objectID": "swd3/good-practices.html#ide",
+    "href": "swd3/good-practices.html#ide",
+    "title": "arctraining slides",
+    "section": "IDE",
+    "text": "IDE\nUsing an Integrated development environment (IDE) will certainly save you time, but the advantages of using an IDE go beyond that. Below are some IDE advantages\n\nSyntax highlighting\nText autocompletion\nRefactoring options\nEasily Importing libraries\nBuild, compile, or run\n\n\nVisual Studio Code\nTo install VS Code follow the instructions here."
+  },
+  {
+    "objectID": "swd3/good-practices.html#vsc-example-automatically-using-black",
+    "href": "swd3/good-practices.html#vsc-example-automatically-using-black",
+    "title": "arctraining slides",
+    "section": "VSC Example: automatically using black",
+    "text": "VSC Example: automatically using black\nConfigure VSC to use Black: Code (or File) &gt; Preferences &gt; Settings\n\nSearch for python formatting provider and choose black\nSearch for format on save and check the box to enable\n\nSelect interpreter: View &gt; Command Palette.. (or Ctrl+Shift+P)\n\nSearch for Python: Select Interpreter\nChoose the correct environment\n\nNow the Black package is going to fix your codes layout every time you save a code file."
+  },
+  {
+    "objectID": "swd3/good-practices.html#version-control",
+    "href": "swd3/good-practices.html#version-control",
+    "title": "arctraining slides",
+    "section": "Version Control",
+    "text": "Version Control\n\n\n\nPiled Higher and Deeper by Jorge Cham"
+  },
+  {
+    "objectID": "swd3/good-practices.html#test-driven-development",
+    "href": "swd3/good-practices.html#test-driven-development",
+    "title": "arctraining slides",
+    "section": "Test-driven development",
+    "text": "Test-driven development\nExample, suppose we need to find the result of a number divided by another number:\n\nNaive solutionTDD solution\n\n\n\nWrite a function a_div_b.\nCall it interactively on two or three different inputs.\nIf it produces the wrong answer, fix the function and re-run that test.\n\nThis clearly works — after all, thousands of scientists are doing it right now — but there’s a better way\n\n\n\nWrite a short function for each test.\nWrite a a_div_b function that should pass those tests.\nIf a_div_b produces any wrong answers, fix it and re-run the test functions.\n\nWriting the tests before writing the function they exercise is called test-driven development (TDD). Its advocates believe it produces better code faster because:\n\nIf people write tests after writing the thing to be tested, they are subject to confirmation bias, i.e., they subconsciously write tests to show that their code is correct, rather than to find errors.\nWriting tests helps programmers figure out what the function is actually supposed to do."
+  },
+  {
+    "objectID": "swd3/good-practices.html#possible-tests-a_div_b-example",
+    "href": "swd3/good-practices.html#possible-tests-a_div_b-example",
+    "title": "arctraining slides",
+    "section": "Possible tests: a_div_b example",
+    "text": "Possible tests: a_div_b example\nLet’s think in all possible scenarios for this problem and how we could test them.\n\nBigger by smallerSmaller by biggerNegative numbers\n\n\n\nUsing 4 and 2, the answer should be 2.\n\nassert a_div_b(4, 2) == 2\n\nOr… the answer should be larger than 1.\n\nassert a_div_b(8, 7) &gt; 1\n\n\n\nUsing 2 and 4, the answer should be 0.5.\n\nassert a_div_b(2, 4) == 0.5\n\nOr… the answer should be smaller than 1.\n\nassert a_div_b(7, 8) &lt; 1\n\n\n\nUsing -4 and -2, the answer should be 2.\n\nassert a_div_b(-4, -2) == 2\n\nOr… the answer should be positive.\n\nassert a_div_b(-4, -2) &gt; 0"
+  },
+  {
+    "objectID": "donut.html#presentation-set-up-guide",
+    "href": "donut.html#presentation-set-up-guide",
+    "title": "arctraining slides",
+    "section": "Presentation set up guide",
+    "text": "Presentation set up guide\n\nShare the Web browser window containing the slides (‘Slide View’).\nActivate ‘Speaker View’:\n\nFrom the slide-menu-button (bars in the lower left), select:\n\nTools (at the top) &gt;&gt; Speaker View (from the list).\n\n\nA new Web browser window should open showing the ‘Speaker View’.\n\nLocate this and read the Notes Pane (lower right).\n\n\n\n\nThe default Speaker View layout has three panes:\n\nSlide Pane (left) shows the current slide.\nNotes Pane (lower right) are these notes.\nUpcoming Pane (upper right).\n\nThis should show the next slide.\nLayout: Default can be actioned to change the Layout.\n\n\nThe current slide in Slide View and in the Speaker View Slide Pane should synchronise:\n\nSo changing slide in one should do the same in the other.\n\nMove on to the next slide - the Title Slide:\n\nUse the down or right keyboard cursor keys or activate the controls-arrow that looks like &gt; in the lower right &gt;- If you have activated the Upcoming Pane the keyboard cursor keys will change what is in there.\nTo move on in the presentation, activate (click back into) the main Slide Pane."
+  },
+  {
+    "objectID": "donut.html#meta-code",
+    "href": "donut.html#meta-code",
+    "title": "arctraining slides",
+    "section": "Donut",
+    "text": "Donut\nA Guide to delivering Presentations Using Quarto"
+  },
+  {
+    "objectID": "donut.html#research-computing-team-and-service",
+    "href": "donut.html#research-computing-team-and-service",
+    "title": "arctraining slides",
+    "section": "Research Computing Team and Service",
+    "text": "Research Computing Team and Service\n\n\nHere to support research(ers)\n\nProvide training\nSupport users of Grid and Cloud Computing platforms\nProvide consultancy\n\nTo develop project proposals\nTo help recruit people with specialist skills\nWorking directly on research projects\n\n\nFor details please see our Website\nContact us via the IT Service Desk\n\n\n\nIf you follow a link then a new tab will open in the Slide View Web browser.\n\nThis will want closing or the Slide View activating again as he main tab in the browser.\n\nMaybe point out some sections/features on the Research Computing Website.\nWe support use and develop resources."
+  },
+  {
+    "objectID": "donut.html#polls-and-forms",
+    "href": "donut.html#polls-and-forms",
+    "title": "arctraining slides",
+    "section": "Polls and Forms",
+    "text": "Polls and Forms\n\nPolls are best prepared in advance.\n\nThere are two main types of Poll:\n\n“Emoji Polls”\n“Forms Polls”"
+  },
+  {
+    "objectID": "donut.html#emoji-polls",
+    "href": "donut.html#emoji-polls",
+    "title": "arctraining slides",
+    "section": "Emoji Polls",
+    "text": "Emoji Polls\n\nConducted from within Teams chat\nCopy the following and then press the space bar after each end parenthesis ) to turn the text into an emoji:\nDo you like emoji polls?\n(thumbsup) yes\n(heart) no\nThe thumbsup and heart emojis are the first two emojis that are in the reaction list of users by default."
+  },
+  {
+    "objectID": "donut.html#forms-polls",
+    "href": "donut.html#forms-polls",
+    "title": "arctraining slides",
+    "section": "Forms Polls",
+    "text": "Forms Polls\n\nA Forms poll can be added ad hoc in a Teams chat:\n\nSelect the three dots ... below the message box and then search for or add Forms.\nOr add using the + option at the top of the chat.\n\nHowever, this use of Forms is being phased out in preference for a Polls App.\nThe Polls App however, is not available in the University of Leeds Office 365 offerring currently to test and the version that can be used in the chat does not seem to have an easy way to collect the results!\nIt might be best to prepare some Forms forms in advance using the Forms in Office 365 (https://www.microsoft365.com/launch/forms).\n\nSharing these simply involves copying the URL and pasting it into the chat.\n\nFor example: https://forms.office.com/pages/designpagev2.aspx?lang=en-GB&origin=OfficeDotCom&route=Start&subpage=design&id=qO3qvR3IzkWGPlIypTW3yy7GBfs2qsFOjWB83KLaHnVUNzFZS1VCTENOVEJUMDdKVEEyNURDRlY2USQlQCN0PWcu"
+  },
+  {
+    "objectID": "donut.html#hackpads-or-forms",
+    "href": "donut.html#hackpads-or-forms",
+    "title": "arctraining slides",
+    "section": "Hackpads or Forms",
+    "text": "Hackpads or Forms\n\nThese can be used for participants to introduce themselves to us.\nParticipants should have all the links already in an email."
+  },
+  {
+    "objectID": "donut.html#feedback-and-questions",
+    "href": "donut.html#feedback-and-questions",
+    "title": "arctraining slides",
+    "section": "Feedback and questions",
+    "text": "Feedback and questions\n\nPlease encourage interruptions especially for participants having difficulty hearing or following the presentation…\nPeriodically pause and ask if participants have any questions or want anything repeated…"
+  },
+  {
+    "objectID": "donut.html#getting-feedback",
+    "href": "donut.html#getting-feedback",
+    "title": "arctraining slides",
+    "section": "Getting Feedback",
+    "text": "Getting Feedback\n\nPlease encourage participants to provide honest feedback about presentations and the training so we can improve.\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
   }
 ]

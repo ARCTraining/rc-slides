@@ -2,46 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ARCTraining.github.io/rc-slides/datavis01.html</loc>
-    <lastmod>2024-06-27T11:33:03.328Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ARCTraining.github.io/rc-slides/donut.html</loc>
-    <lastmod>2024-06-27T11:33:01.328Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ARCTraining.github.io/rc-slides/swd3.html</loc>
-    <lastmod>2024-06-27T11:32:58.772Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ARCTraining.github.io/rc-slides/hpc1.html</loc>
-    <lastmod>2024-06-27T11:32:57.376Z</lastmod>
+    <lastmod>2025-02-17T14:53:27.480Z</lastmod>
   </url>
   <url>
     <loc>https://ARCTraining.github.io/rc-slides/swd3/project.html</loc>
-    <lastmod>2024-06-27T11:32:56.080Z</lastmod>
+    <lastmod>2025-02-17T14:53:25.761Z</lastmod>
   </url>
   <url>
     <loc>https://ARCTraining.github.io/rc-slides/swd3/structure.html</loc>
-    <lastmod>2024-06-27T11:32:55.024Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ARCTraining.github.io/rc-slides/swd3/sdlc.html</loc>
-    <lastmod>2024-06-27T11:32:55.692Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ARCTraining.github.io/rc-slides/swd3/good-practices.html</loc>
-    <lastmod>2024-06-27T11:32:56.544Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ARCTraining.github.io/rc-slides/template.html</loc>
-    <lastmod>2024-06-27T11:32:57.772Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ARCTraining.github.io/rc-slides/hpc0.html</loc>
-    <lastmod>2024-06-27T11:33:00.860Z</lastmod>
+    <lastmod>2025-02-17T14:53:24.911Z</lastmod>
   </url>
   <url>
     <loc>https://ARCTraining.github.io/rc-slides/index.html</loc>
-    <lastmod>2024-06-27T11:33:02.092Z</lastmod>
+    <lastmod>2025-02-17T14:53:24.201Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ARCTraining.github.io/rc-slides/hpc1.html</loc>
+    <lastmod>2025-02-17T14:53:19.099Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ARCTraining.github.io/rc-slides/template.html</loc>
+    <lastmod>2025-02-17T14:53:16.052Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ARCTraining.github.io/rc-slides/swd3.html</loc>
+    <lastmod>2025-02-17T14:53:15.602Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ARCTraining.github.io/rc-slides/hpc0.html</loc>
+    <lastmod>2025-02-17T14:53:18.287Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ARCTraining.github.io/rc-slides/linux101.html</loc>
+    <lastmod>2025-02-17T14:53:23.370Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ARCTraining.github.io/rc-slides/swd3/sdlc.html</loc>
+    <lastmod>2025-02-17T14:53:24.611Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ARCTraining.github.io/rc-slides/swd3/good-practices.html</loc>
+    <lastmod>2025-02-17T14:53:25.368Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ARCTraining.github.io/rc-slides/donut.html</loc>
+    <lastmod>2025-02-17T14:53:26.210Z</lastmod>
   </url>
 </urlset>
