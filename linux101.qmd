@@ -1,0 +1,2367 @@
+---
+format:
+  revealjs:
+    self-contained: true
+    navigation-mode: linear
+    controls-layout: bottom-right
+    controls: false
+    footer: "[Research IT Website]({{< var rc.website >}}) | [Research IT Query]({{< var rc.servicedesk >}}) | [Courses Material]({{< var rc.material >}}) | [Cheat sheet](#cheat-sheet)"
+code: HPC 0
+name: Introduction to Linux for HPC
+---
+
+
+{{< include _title.qmd >}}
+
+# Introduction section
+
+## Introduction to Linux
+
+Aims of this training:
+
+- Introduce you to using command line interface (CLI) Linux
+- Build your confidence in navigating Linux file systems using the command line
+- Enable you to use Linux without a graphical user interface (GUI)
+- Prepare you for [HPC1: Introduction to High Performance Computing](https://arc.leeds.ac.uk/training/courses/hpc1/)
+
+::: {.notes}
+- This is a brief, introductory level session. 
+- Do not assume knowledge of file systems/directory structures/other computing background.
+:::
+
+## Format of this course
+
+- This is a **2.5 hour tutorial**. We will be trying out what we are learning, so be ready for some typing!
+
+- These lecture slides are based on the [Software Carpentries documentation on Unix Shell basics](https://swcarpentry.github.io/shell-novice/), but is a shorter course and uses different examples.
+
+- Once you finish this tutorial, we recommend you read through the Software Carpentries material and follow through the tutorial there: you can do this work from the same *virtual machine* we will be using today.
+
+::: {.notes}
+- We include notes at the end on how to use our virtual machine to run the Software Carpentries material
+:::
+
+## Format of these slides {.smaller}
+
+- Everything you need for this session is in these slides.
+- We recommend you have a copy open on your computer.
+- If you have enough room on your screen, have these notes and your command line side-by-side.
+- These notes should also be viewable via mobile if you don't mind not being able to copy and paste!
+- There is a quick reference [cheat sheet](#cheat-sheet) linked in the footer; you can return to your place in the slideshow from this cheat sheet using the back button.
+
+::: {.notes}
+
+- The cheat sheet can be used from any point in the tutorial; you can just click the back arrow
+and return to the exact point in the slides
+
+:::
+
+## Syllabus
+
+- Interacting with a computer: operating systems, GUIs and CLIs, bash
+- File systems on Linux
+- Navigating filesystems from the command line
+- Creating and editing files and directories
+- Running simple scripts
+
+::: {.notes}
+- If we don't manage to cover all these topics, you will be able to follow on at home.
+:::
+
+## Learning method {.smaller}
+
+The aim *is not for you to leave knowing loads of Linux Bash commands*!
+
+- There are many fantastically
+useful commands we won't cover today (read through the [Software Carpentries course](https://swcarpentry.github.io/shell-novice/)
+after this for some extra commands);
+- The aim is for you to get a feel for how Linux's command line works,
+to be able to problem solve and find the commands you need.
+- This is an introductory course for complete beginners: of course, you're welcome here if you want a refresher, but expect for
+the course to be slow-paced.
+
+::: {.notes}
+
+- Emphasise that the point is *not* to teach lots of shortcuts and commands.
+- It's ok not to remember commands from today - the point is that if you want to do something on Linux,
+you'll be better able to search for and then understand the answer.
+
+:::
+
+## PRIMM method {.smaller}
+
+It's helpful for you as a learner to understand the PRIMM structure so you can apply it while working through this course. Not every step
+will be relevant or used at every stage of the course!
+
+::: {.panel-tabset}
+
+### What's PRIMM?
+
+PRIMM is a pedagogical method specifically aimed at teaching text-based programming. While research into adult programming
+learners is very limited (especially in terms of demographics; many key studies that are cited have overwhelmingly homogenous test groups),
+the PRIMM method has a few key benefits:
+
+- It supports learners with different ability levels and who learn at different speeds;
+- It can be applied by learners even if the course materials are not specifically built with it in mind;
+- It can be applied to asynchronous learning materials (for example, if you are using these notes online on your own).
+
+### P
+
+The **P** in PRIMM stands for **predict**:
+
+When you first see a command, script, or piece of code, before running it, predict what you think it will
+do. It's ok to get this wrong: the important thing is to get into the habit of predicting! This
+helps to keep you actively engaged and focused, and begins to build an intuitive sense about the structure of commands.
+
+- What do you think the code is going to do generally?
+- What do you think the output in your terminal is going to look like?
+
+### R 
+
+The **R** in PRIMM stands for **run**:
+
+- Run the code or program;
+- How does the output/effect compare to your prediction?
+  - What did you get right?
+  - What did you misinterpret?
+- Do you understand what happened?
+
+### I 
+
+The **I** in PRIMM stands for **investigate**:
+
+Let's dig a little deeper into the *structure* of code you've used.
+
+- What options or arguments did you use, and what effect did they have?
+- Can you find some documentation on the command you used?
+  - Does the description match how you would describe the code?
+    - If no, why does your understanding of it diverge?
+  - What other options or features are available?
+
+
+
+### M 
+
+The first **M** in PRIMM stands for **modify**:
+
+- Try running the code with different options:
+  - Change only a small thing at a time;
+  - Always predict what you think the output will be!
+  - Compare the actual output with your prediction;
+  - Compare your understanding to the available documentation.
+
+This stage helps you to gradually increase the difficultly of the tasks you are doing!
+
+### M
+
+The second **M** in PRIMM stands for **make**:
+
+This stage is about making the code your own.
+
+- At this stage, you can try implementing snippets of code you've already learned, but to solve a new or different problem;
+- Again, use the previous stages when you are writing your code: *predict* what you think will happen, *run* the code and compare
+the output to your predictions, and *investigate* the structure of it, especially if it does not behave how you intended!
+
+### Key notes
+
+**Read before you write** - research has proven repeatedly the importance of reading and predicting the output of code as
+a method of learning, over just *getting straight into it* and writing code.
+
+- Novice programmers need to acquire accuracy in tracing code *before* they can program independently
+- Trying to write code first leads to frustration and confusion
+
+**Learn in a way that suits you** - if that is copying and pasting commands
+from the slides instead of trying to keep up with typing, *that's ok!*
+
+:::
+
+# Ways of interacting with a computer
+
+::: {.notes}
+- Our first section is going to cover some very high-level concepts about how we use computers
+
+:::
+
+## Interacting with a computer {.smaller}
+
+When we use a computer, we interact with the hardware through an **operating system** or **OS**.
+
+Common operating systems for research computers include:
+
+- Microsoft Windows
+- MacOS
+- Linux
+
+We are going to be looking at Linux today, which is a family of operating systems that are **Open Source** and are widely used in research, for example on **High Performance Computing** platforms like ARC4 or Aire.
+
+## Interacting with a computer {.smaller}
+
+When we use a computer, like our desktop or laptop, we often use a **Graphical User Interface** or a **GUI**.
+
+- GUIs allow us to interact with a computer through graphical means: icons, text, buttons, windows. GUIs usually involve using a mouse and clicking into menus.
+- The Windows desktop and MacOS desktop are GUIs that let you control the computer graphically.
+- Many computer programs also have GUIs: for example, Excel.
+
+![](assets/img/linux101/excel-gui.png){fig-align="center" fig-alt="A screenshot of Excel."}
+
+::: {.notes}
+- What are some of the benefits of GUIs? See if people have suggestions.
+- What are some of the downsides of using GUIs?
+:::
+
+## Interacting with a computer {.smaller}
+
+As well as using a GUI, we can also interact with computers using a **Command Line Interface** or a **CLI**.
+
+- CLIs allow us to interact with a computer through text-based commands typed into the command-line.
+- While GUIs can be simple and intuitive to use, they can make it difficult to reproduce workflows:
+  - Sometimes you have to record by hand (or with a screen recording) what sub-options from different menus you used;
+  - Updates to GUIs can make it difficult to find the same menu options;
+  - A workflow with multiple steps can be tedious to repeat for multiple datasets (having to click through multiple layers of menu options for each dataset).
+- Many large research machines (such as the HPC machines ARC4 and Aire here at Leeds) *do not have a GUI* and so you need to interact with them through a **CLI**.
+
+## Command Line Interfaces {.smaller}
+
+- There are multiple different CLIs available:
+  - General-purpose CLIs are available for each **Operating System** for general computer control:
+    - Windows Command Prompt;
+    - Windows Powershell;
+    - Mac Terminal;
+  - Some specific programs have their own custom CLIs:
+    - Anaconda Prompt for Windows;
+    - Git Bash for Windows;
+- Today, we are going to be using a **Unix Shell**:
+  - This is the general-purpose CLI that underpins both Linux and Mac;
+  - We will use Bash, a popular Unix Shell.
+
+::: {.notes}
+- Essentially, there are many different ways to access a command line, and there are different types
+of command line interfaces!
+- We are teaching you one today that is easy to access, and is used on research HPC systems
+:::
+
+## Poll
+
+Throughout this presentation, we will be using quick polls to gauge your familiarity with concepts.
+
+Let's test it out:
+
+[Click here to go to Poll](https://universityofleeds.display.vevox.com#/present/696636/ULXGUZROA4XT20VKGCAZ){target="_blank"}
+
+::: {.notes}
+- Open up vevox session and activate relevant poll
+:::
+
+## Bash {.smaller}
+
+How do we access Bash?
+
+- Bash is the default shell on Unix systems like Linux or Mac
+- Bash is also available through many command-line tools for Windows:
+  - Git Bash for Windows
+  - Anaconda Prompt
+
+We're going to use a **virtual machine** for this course: this is a Linux machine running in the cloud.
+
+This means that everyone here can run it with the exact same set-up; you only need a browser.
+
+# Linux filesystems
+
+::: {.notes}
+- Before we open up our virtual machine, we are going to talk a little bit about how Linux filesystems work.
+- It's important for us to build a little bit of a mental map before we start using the command line,
+just to make it less confusing.
+- This might seem familiar, if you're used to navigating filesystems on Windows or Mac already!
+:::
+
+## File system on Linux
+
+```{mermaid}
+%%| fig-align: center
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%
+flowchart
+    
+    / o--obin
+    / o--odev
+    / o--oetc
+    / o--ohome
+    home o--omy-username
+    home o--omy-friend
+    / o--otmp
+
+    my-username o--o all_my_files
+```
+
+Each rectangle is a folder or **directory** (**dir** for short)
+
+::: {.notes}
+- This shows a sketch of a file system.
+- We have a hierarchy of folders or directories sitting inside one another.
+- Folders are usually called "directories" on Linux systems, but they mean the same thing.
+:::
+
+## File system on Linux
+
+```{mermaid}
+%%| fig-align: center
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%
+flowchart
+    
+    / o--obin
+    / o--odev
+    / o--oetc
+    / o--ohome
+    home o--omy-username
+    home o--omy-friend
+    / o--otmp
+
+    my-username o--o all_my_files
+
+    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+```
+
+Each rectangle is a folder or **directory** (**dir** for short)
+
+::: {.notes}
+- This branching system starts from the root (the forward slash) at the very top, highlighted in pink.
+- Inside this root directory, we have a bunch of system folders - we don't need to worry about these now.
+:::
+
+## File system on Linux
+
+```{mermaid}
+%%| fig-align: center
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%
+flowchart
+    
+    / o--obin
+    / o--odev
+    / o--oetc
+    / o--ohome
+    home o--omy-username
+    home o--omy-friend
+    / o--otmp
+
+    my-username o--o all_my_files
+
+    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+```
+
+Each rectangle is a folder or **directory** (**dir** for short)
+
+::: {.notes}
+- One of the directories is called "home": this contains all the home directories of users.
+- The home directories are usually called after their owner's username.
+- If you look in this directory on a personal or family computer, you might find a handful of user home directories
+- If you look at this directory on a university HPC system, like Aire, you'll find hundreds of user home directories
+:::
+
+## File system on Linux
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%
+flowchart
+    
+    / o--obin
+    / o--odev
+    / o--oetc
+    / o--ohome
+    home o--omy-username
+    home o--omy-friend
+    / o--otmp
+
+    my-username o--o all_my_files
+
+    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+```
+
+The `my-username` folder is your **user home directory**
+
+::: {.notes}
+- Confusingly, we refer to this highlighted directory as your *home* directory
+- Even though there is a folder one level up that is called home!
+:::
+
+## File system on Linux
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%
+flowchart
+    
+    / o--obin
+    / o--odev
+    / o--oetc
+    / o--ohome
+    home o--omy-username
+    home o--omy-friend
+    / o--otmp
+
+    my-username o--o all_my_files
+
+    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+```
+
+How do we describe the address of this home directory?
+
+::: {.notes}
+- How do we describe where this directory or folder is?
+- We describe it in a similar way to a website URL, using it's path
+- We need to know all the folders directly above it.
+:::
+
+## File system on Linux
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%
+flowchart
+    
+    / o--obin
+    / o--odev
+    / o--oetc
+    / o--ohome
+    home o--omy-username
+    home o--omy-friend
+    / o--otmp
+
+    my-username o--o all_my_files
+
+    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+```
+
+The folders in the address are `/`, `home` and `my-username`
+
+::: {.notes}
+- Above our username directory, we have home and the root (which is denoted by just a forward slash)
+:::
+
+## File system on Linux
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%
+flowchart
+    
+    / o--obin
+    / o--odev
+    / o--oetc
+    / o--ohome
+    home o--omy-username
+    home o--omy-friend
+    / o--otmp
+
+    my-username o--o all_my_files
+
+    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+```
+
+Stick them together like a URL: `/home/my-username`
+
+::: {.notes}
+- We just have to put them together like a web address (because the internet is basically just a giant file structure)
+:::
+
+## File system on Linux
+
+On Windows, file paths use backlashes ( `\` ) instead of forward slashes (`/`)!
+
+- This can cause confusion and errors if you are writing scripts that load in data from certain file paths, and need to use both Windows and Linux!
+- Thankfully there are lots of ways around this, including libraries for handling paths in Python and R
+
+::: {.notes}
+- It's useful to note that Windows uses slashes in the opposite direction for file paths.
+- We're not going to focus on this today as we are using only Linux
+- But if you get an error while coding it's useful to keep this in mind.
+:::
+
+## File system on Linux
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%
+flowchart
+    
+    / o--obin
+    / o--odev
+    / o--oetc
+    / o--ohome
+    home o--omy-username
+    home o--omy-friend
+    / o--otmp
+
+    my-username o--o all_my_files
+
+    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+```
+
+Stick them together like a URL: `/home/my-username`
+
+::: {.notes}
+- Back to our file system.
+- Today, everything we are doing will be in our home directory, so let's just focus on that!
+- When you log in to a linux system, this is usually where you will be dropped!
+:::
+
+## File system on Linux
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%
+flowchart
+    
+    / o--ohome
+    home o--omy-username
+
+    my-username o--o all_my_files
+
+    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+```
+
+`/home/my-username/all_my_files` is a bit long...
+
+::: {.notes}
+- Typing the full path to our files and folders is a bit tedious
+- lets look at a shorter way
+:::
+
+## File system on Linux
+
+::: {layout-ncol=2}
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%
+flowchart
+    
+    / o--ohome
+    home o--omy-username
+
+    my-username o--o all_my_files
+
+    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+```
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%
+flowchart
+    
+    home["~"] o--o all_my_files
+
+    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+
+```
+:::
+
+`/home/my-username/all_my_files` is a bit long...
+
+::: {.notes}
+- Typing the full path to our files and folders is a bit tedious
+- lets look at a shorter way
+:::
+
+## File system on Linux
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%
+flowchart
+    
+    home["~"] o--o all_my_files
+
+    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+```
+
+
+- To save us from typing out `/home/my-username` every time we refer to a directory or file, we can use the shortcut `~`, called a *tilde*
+- This turns `/home/my-username/all_my_files` to `~/all_my_files`
+
+## Poll
+
+Let's test your familiarity with Linux file paths!
+
+[Click here to go to Poll](https://universityofleeds.display.vevox.com#/present/696636/ULXGUZROA4XT20VKGCAZ){target="_blank"}
+
+## Let's explore some files!
+
+Time to explore some files on a Linux system!
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%
+flowchart TD
+    A["/home/vscode/ <br> or ~"] o--o B[red-folder]
+    A o--o C[pink-folder]
+    A o--o D[blue-folder]
+
+    B o--o r1([red-1.txt ])
+    B o--o r2([red-2.txt ])
+    B o--o r3([red-3.txt ])
+
+    C o--o P1[pink-sub-folder]
+    C o--o p2(["pink-file.md <br>"])
+    C o--o p3{{"say_hi.sh <br>"}}
+
+    P1 o--o p4(["**helloworld.py** <br>"])
+    P1 o--o p5(["pink-data.csv <br>"])
+
+    D o--o b1(["**blue.r** <br>"])
+
+```
+
+# First steps in bash
+
+## Using our custom virtual machine {.smaller}
+
+For this course, we've built a custom virtual machine for you to use.
+
+This requires a **GitHub** account which you were asked to set up before this course.
+
+(Don't worry if you haven't - please go and quickly sign up to [GitHub](https://github.com/signup) now!)
+
+- There are many other ways to access the bash shell, such as on one of the HPC systems here at Leeds, or by installing [git bash](https://git-scm.com/downloads/win) on Windows, or using the terminal on Linux or Mac.
+- We want everyone in the class to have the same directory structure and environment which is why we are using a virtual machine!
+
+## Launch virtual machine
+
+::::: {.panel-tabset}
+
+### Step 1
+
+One of the pre-requisites for this course was signing up for an account with GitHub,
+as this is the service we use to host the virtual Linux machines for teaching this session.
+
+[Log in to GitHub now (or sign up if you haven't already).](https://github.com/)
+
+### Step 2
+
+Follow this link to open the course repository.
+
+### Step 3
+
+There will be a green button with the word "Code", which will then bring up a menu when clicked.
+
+:::: {layout="[ 30, 70 ]"}
+
+::: {#first-column}
+
+![](assets/img/linux101/code_button.png){fig-align="center" fig-alt="A green button with the word 'Code'."}
+
+↑ [Click this button,]{style="font-size: 0.95em;"}
+[this menu opens ]{style="font-size: 0.95em;"} →
+:::
+
+::: {#second-column}
+![](assets/img/linux101/codespaces-2.png){fig-align="center" fig-alt="A green button with the word 'Code'."}
+:::
+
+::::
+
+
+
+
+
+
+:::::
+
+## The terminal
+
+Once you've launched your virtual machine, you will see a terminal window something like this:
+
+::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [/workspaces/bash-codespaces-template]{style="color: #00FFFF"} [(main)]{style="color: #FF7F50"} [$ ▮]{style="color: white"}
+
+[_ ]{style="color: black"}
+:::
+
+:::::{.fragment .fade-in}
+
+
+
+::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [<u>/workspaces/bash-codespaces-template</u>]{style="color: #00FFFF"} [(main)]{style="color: #FF7F50"} [$ ▮]{style="color: white"}
+
+[_ ]{style="color: black"}
+:::
+
+The <u>underlined section</u> is your directory *path*.
+
+:::::
+
+## The terminal
+
+Once you've launched your virtual machine, you will see a terminal window something like this:
+
+::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [/workspaces/bash-codespaces-template]{style="color: #00FFFF"} [(main)]{style="color: #FF7F50"} [$ ▮]{style="color: white"}
+
+[_ ]{style="color: black"}
+:::
+
+:::::{.fragment .fade-in}
+
+
+
+::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [/workspaces/bash-codespaces-template]{style="color: #00FFFF"} [<u>(main)</u>]{style="color: #FF7F50"} [$ ▮]{style="color: white"}
+
+[_ ]{style="color: black"}
+:::
+
+The <u>underlined section</u> has to do with the **git version control system**: not a topic for today, but you can learn about this in SWD2!
+
+:::::
+
+## The terminal
+
+Once you've launched your virtual machine, you will see a terminal window something like this:
+
+::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [/workspaces/bash-codespaces-template]{style="color: #00FFFF"} [(main)]{style="color: #FF7F50"} [$ ▮]{style="color: white"}
+
+[_ ]{style="color: black"}
+:::
+
+:::::{.fragment .fade-in}
+
+::: {style="font-size: 0.7em"}
+The dollar symbol ($) and rectangle (▮) on the right hand side are the end of the prompt and the cursor.
+
+- The $ tells you where the computer's message ends, and where you can enter your commands.
+- The ▮ (which will probably be slowly flashing) tells you where the cursor is; this often looks more like a vertical line ( | ) in other programs like Word.
+:::
+
+:::::
+
+## The terminal
+
+If you click on the [▮]{style="color: white; background-color: black"} or the space just to the right of the [$]{style="color: white; background-color: black"} you can type in your message:
+
+::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [/workspaces/bash-codespaces-template]{style="color: #00FFFF"} [(main)]{style="color: #FF7F50"} [$ hello▮]{style="color: white"}
+
+[_ ]{style="color: black"}
+:::
+
+
+Anything you type will be in **white** text in the terminal; the cursor will blink at the end of the text.
+
+To *send* the argument or message, you need to press ENTER on your keyboard.
+
+## The terminal
+
+If you click on the [▮]{style="color: white; background-color: black"} or the space just to the right of the [$]{style="color: white; background-color: black"} you can type in your message:
+
+::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [/folders]{style="color: #00FFFF"} [(main)]{style="color: #FF7F50"} [$]{style="color: grey"} [**this is the code you type**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+[_ ]{style="color: black"}
+:::
+
+- The code you need to type/copy and paste is shown in **bold** white
+- We will hide the cursor and fade the prompt ($) to grey
+- We will show an ENTER symbol in pink to remind you how to enter the command (↵)
+
+## Very first command: `cd`
+
+We're going to use the `cd` command to bring us to our home directory.
+
+::::: {style="font-size: 1.2em; text-align: left; background-color: black; color: white; font-family: monospace"}
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [/folders]{style="color: #00FFFF"} [(main)]{style="color: #FF7F50"} [$]{style="color: grey"} [▮]{style="color: white"}
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [/folders]{style="color: #00FFFF"} [(main)]{style="color: #FF7F50"} [$]{style="color: grey"} [**cd**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [▮]{style="color: white"}
+:::
+
+[_ ]{style="color: black"}
+:::::
+
+## Very first command: `cd`
+
+- `cd` stands for *change directory*
+- It brings us back to our *home directory*, `~` or `/home/vscode`
+
+:::{.fragment .fade-in}
+- Our virtual machine is a little bit weird because it starts us off in a different folder: on most Linux systems, when you log in, you will immediately be in your home directory
+:::
+
+::::: {style="font-size: 1.2em; text-align: left; background-color: black; color: white; font-family: monospace"}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [▮]{style="color: white"}
+:::::
+
+## What's in this folder?
+
+Now that you know how to find home (from wherever in the file system you are), you need to know what's *in* your home directory.
+
+- You can *list* out the files and folders in your directory with the command `ls`
+
+## What's in this folder? `ls` to list
+
+Using the `ls` command to list out the contents of the directory:
+
+::::: {style="font-size: 1.2em; text-align: left; background-color: black; color: white; font-family: monospace"}
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [▮]{style="color: white"}
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[blue-folder    pink-folder    red-folder]{style="color: #00FFFF"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [▮]{style="color: white"}
+:::
+
+[_ ]{style="color: black"}
+:::::
+
+## What's in this folder? `ls` to list
+
+How do we know if `blue-folder` is a file or a directory? (imagine it has a less descriptive name)
+
+::::: {style="font-size: 1.2em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+[_ ]{style="color: black"}[blue-folder    pink-folder    red-folder]{style="color: #00FFFF"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [▮]{style="color: white"}
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls -F**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::
+
+:::::
+
+## What's in this folder? `ls` to list
+
+We can use `ls -F`: this tells us the category of the "things" in the directory
+
+- If the name ends in a trailing forward slash (like `this/`) then the item is a directory or folder
+
+::::: {style="font-size: 1.2em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls -F**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+[_ ]{style="color: black"}[blue-folder/    pink-folder/    red-folder/]{style="color: #00FFFF"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [▮]{style="color: white"}
+
+
+:::::
+
+## What's in this folder? `ls` to list
+
+This is what we expected: we saw in our directory map that we have three directories in our home (`~`): `red-folder`, `pink-folder`, and `blue-folder`.
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%
+flowchart TD
+    A["/home/vscode/ <br> or ~"] o--o B[red-folder]
+    A o--o C[pink-folder]
+    A o--o D[blue-folder]
+
+    B o--o r1([red-1.txt ])
+    B o--o r2([red-2.txt ])
+    B o--o r3([red-3.txt ])
+
+    C o--o P1[pink-sub-folder]
+    C o--o p2(["pink-file.md <br>"])
+    C o--o p3{{"say_hi.sh <br>"}}
+
+    P1 o--o p4(["**helloworld.py** <br>"])
+    P1 o--o p5(["pink-data.csv <br>"])
+
+    D o--o b1(["**blue.r** <br>"])
+
+```
+
+## What's in this folder? `ls` to list
+
+Let's list what's inside `pink-folder`...
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%
+flowchart TD
+    A["/home/vscode/ <br> or ~"] o--o B[red-folder]
+    A o--o C[pink-folder]
+    A o--o D[blue-folder]
+
+    B o--o r1([red-1.txt ])
+    B o--o r2([red-2.txt ])
+    B o--o r3([red-3.txt ])
+
+    C o--o P1[pink-sub-folder]
+    C o--o p2(["pink-file.md <br>"])
+    C o--o p3{{"say_hi.sh <br>"}}
+
+    P1 o--o p4(["**helloworld.py** <br>"])
+    P1 o--o p5(["pink-data.csv <br>"])
+
+    D o--o b1(["**blue.r** <br>"])
+
+```
+
+## What's in this folder? `ls` to list
+
+We can use `ls name-of-folder` to tell us what's in a sub-directory.
+
+What will the output be?
+
+::::: {style="font-size: 1.2em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls pink-folder**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[pink-file.md ]{style="color: white"} [  pink-subfolder  ]{style="color: #00FFFF"} [  say_hi.sh  ]{style="color: #00FF00"}
+:::
+
+:::::
+
+## What's in this folder? `ls` to list
+
+We can use `ls -F name-of-folder` to tell us what's in a sub-directory and what category the items are.
+
+What will the output be?
+
+::::: {style="font-size: 1.0em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls -F pink-folder**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[pink-file.md ]{style="color: white"} [  pink-subfolder/  ]{style="color: #00FFFF"} [  say_hi.sh*  ]{style="color: #00FF00"}
+:::
+
+:::::
+
+:::{.fragment .fade-in}
+- Files get no added symbols;
+- Folders or directories get a trailing forward slash (`/`);
+- *Executables* get an asterisk (`*`);
+:::
+
+## Poll
+
+Let's test your familiarity with these commands!
+
+[Click here to go to Poll](https://universityofleeds.display.vevox.com#/present/696636/ULXGUZROA4XT20VKGCAZ){target="_blank"}
+
+
+## Recap
+
+So far, we've used:
+
+- `cd` on it's own to go to our home directory;
+- `ls` on it's own to list out the contents of our current directory (our home);
+- `ls -F` (`ls` with the *flag or option* `-F`) to list out the categories of the content in the directory;
+- `ls dir-name` (`ls` with the *argument* `dir-name`) to list out the content of the sub-directory `dir-name`;
+
+# Navigating filesystems with bash
+
+## Format of bash commands
+
+You've already cracked how bash works with these few commands!
+
+::::: {style="font-size: 1.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[$]{style="color: white"} [ls]{style="color: #00FFFF"} [-F]{style="color: #00FF00"} [dir-name]{style="color: #DDA0DD;"}
+
+:::: {style="font-size: 0.7em;"}
+:::{.fragment .fade-in}
+
+- [$ → prompt]{style="color: white;"}
+- [ls → command]{style="color: #00FFFF;"}
+- [-F → option]{style="color: #00FF00;"}
+- [dir-name → argument]{style="color: #DDA0DD;"}
+
+:::
+::::
+
+:::::
+
+## Adding arguments to `cd`
+
+We've used `cd` on it's own to access our home directory - what happens when we give it an argument?
+
+What will the output be?
+
+::::: {style="font-size: 1.2em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**cd pink-folder**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::{.fragment .fade-in}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/pink-folder]{style="color: #00FFFF"} [$]{style="color: grey"} [▮]{style="color: white"}
+:::
+
+:::::
+
+:::{.fragment .fade-in}
+We've moved *down* our directory structure, into the directory `pink-folder`
+:::
+
+## Explore with `cd` and `ls`
+
+- Remember, you can return to home from anywhere with `cd` and no options or arguments
+- Use `ls` to find out what is in the different directories
+- Use `cd name-of-dir` to move to a subdirectory
+- Use the [directory map](#map) if lost
+- Use the `clear` command to clean up your terminal screen if it's getting too messy:
+
+
+::::: {style="font-size: 1.2em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**clear**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::::
+
+## Getting help
+
+There are two different ways of getting information about commands and their options and arguments within the shell:
+
+- `man arg`
+- `arg --help`
+
+On our virtual machine, we are going to use the section option, `arg --help`. Try running `ls --help`:
+
+::::: {style="font-size: 1.2em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls --help**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::::
+
+## Getting help
+
+You'll be faced with a wall of text and will have to scroll to find the top of it:
+
+::::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls --help**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+Usage: ls [OPTION]... [FILE]...
+
+List information about the FILEs (the current directory by default).
+
+Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+
+Mandatory arguments to long options are mandatory for short options too.
+
+  -a, --all :                 do not ignore entries starting with .
+
+  -A, --almost-all :          do not list implied . and ..
+
+[and on, and on, and on...]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::::
+
+## Getting help {.smaller}
+
+This can be really useful for quickly checking the arguments and options to commands you half-remember,
+but can also be incredibly unhelpful and overwhelming if you don't know what you're looking at!
+
+- *Searching online is your friend!*
+- If you know the argument name, say `ls`, wrap it in quotation marks in your search to require it;
+- Search the term alongside terms like *bash*, *linux*, *command line*, *explanation*;
+- For example, I might search **"ls -F" explanation**
+- Stack Overflow and Stack Exchange (Q&A forums) can be useful sources, usually with a bit of conversation back and forth and likely some disagreement/argument about the *best* way of doing something.
+
+## Getting help
+
+- What does the command `ls -a` do?
+  - Can you find an answer with `ls --help`?
+  - What happens if you run `ls -a` inside `pink-folder`?
+  - Can you find an answer by searching online?
+
+::::: {style="font-size: 1em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/somewhere]{style="color: #00FFFF"} [$]{style="color: grey"} [**cd**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"} [go back to home]{style="color: grey; font-size: 0.8em;"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**cd pink-folder**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}  [go to folder]{style="color: grey; font-size: 0.8em;"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/pink-folder]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls -a**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"} [???]{style="color: grey; font-size: 0.8em;"}
+
+:::::
+
+# More complex directory structures
+
+## `ls -a` {.smaller}
+
+::::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/pink-folder]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls -a**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"} [ .  ..]{style="color: #00FFFF"} [pink-file.md ]{style="color: white"} [  pink-subfolder  ]{style="color: #00FFFF"} [  say_hi.sh  ]{style="color: #00FF00"} [.super-secret-hidden-file]{style="color: white"}  [.super-secret-hidden-folder]{style="color: #00FFFF"} 
+:::
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/pink-folder]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls -F -a**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"} [ ./  ../]{style="color: #00FFFF"} [pink-file.md ]{style="color: white"} [  pink-subfolder/  ]{style="color: #00FFFF"} [  say_hi.sh*  ]{style="color: #00FF00"} [.super-secret-hidden-file]{style="color: white"}  [.super-secret-hidden-folder/]{style="color: #00FFFF"} 
+:::
+
+:::::
+
+:::{.fragment .fade-in}
+What's in these weird directories `.` and `..`?
+
+- Try exploring them with `ls .` and `ls ..`
+- Try going to them using `cd .` and `cd ..`
+- You can use the command `pwd` (path to the working directory) to print out exactly where you are (using `/home/vscode` instead of `~`)
+:::
+
+## `ls -a` {.smaller}
+
+> What's in these weird directories `.` and `..`?
+> 
+> - Try exploring them with `ls .` and `ls ..`
+> - Try going to them using `cd .` and `cd ..`
+> - You can use the command `pwd` (path to the working directory) to print out exactly where you are (using `/home/vscode` instead of `~`)
+
+
+- The single dot `.` stands for the current directory - the place you get when you use `pwd`
+- The double dot `..` stands for the directory above the current directory.
+- If you are currently in `~/pink-folder/pink-subfolder`:
+  - The single dot `.` is the folder `~/pink-folder/pink-subfolder`
+  - The double dot `..` is the folder `~/pink-folder`
+
+
+## Relative paths
+
+So far, we've looked at *absolute paths* that start up at `~` or `/home/vscode`.
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%
+flowchart TD
+    A["/home/vscode/ <br> or ~"] o--o B[red-folder]
+    A o--o C[pink-folder]
+    A o--o D[blue-folder]
+
+    B o--o r1([red-1.txt ])
+    B o--o r2([red-2.txt ])
+    B o--o r3([red-3.txt ])
+
+    C o--o P1[pink-sub-folder]
+    C o--o p2(["pink-file.md <br>"])
+    C o--o p3{{"say_hi.sh <br>"}}
+
+    P1 o--o p4(["**helloworld.py** <br>"])
+    P1 o--o p5(["pink-data.csv <br>"])
+
+    D o--o b1(["**blue.r** <br>"])
+
+```
+
+## Relative paths
+
+So far, we've looked at *absolute paths* that start up at `~` or `/home/vscode`.
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%
+flowchart TD
+    A["/home/vscode/ <br> or ~"] o--o B[red-folder]
+    A o--o C[pink-folder]
+    A o--o D[blue-folder]
+
+    B o--o r1([red-1.txt ])
+    B o--o r2([red-2.txt ])
+    B o--o r3([red-3.txt ])
+
+    C o--o P1[pink-sub-folder]
+    C o--o p2(["pink-file.md <br>"])
+    C o--o p3{{"say_hi.sh <br>"}}
+
+    P1 o--o p4(["**helloworld.py** <br>"])
+    P1 o--o p5(["pink-data.csv <br>"])
+
+    D o--o b1(["**blue.r** <br>"])
+
+    style A fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style C fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style P1 fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style p4 fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+
+```
+
+`~/pink-folder/pink-sub-folder/helloworld.py`
+
+## Relative paths
+
+But if we are already in `pink-folder` (if it's our *working directory*), we can use a relative path:
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%
+flowchart TD
+    A["/home/vscode/ <br> or ~"] o--o B[red-folder]
+    A o--o C[pink-folder]
+    A o--o D[blue-folder]
+
+    B o--o r1([red-1.txt ])
+    B o--o r2([red-2.txt ])
+    B o--o r3([red-3.txt ])
+
+    C o--o P1[pink-sub-folder]
+    C o--o p2(["pink-file.md <br>"])
+    C o--o p3{{"say_hi.sh <br>"}}
+
+    P1 o--o p4(["**helloworld.py** <br>"])
+    P1 o--o p5(["pink-data.csv <br>"])
+
+    D o--o b1(["**blue.r** <br>"])
+
+    style C fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style P1 fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style p4 fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+
+```
+
+`pink-sub-folder/helloworld.py`
+
+## Relative paths
+
+But if we are already in `pink-subfolder` (if it's our *working directory*), we can use a relative path:
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%
+flowchart TD
+    A["/home/vscode/ <br> or ~"] o--o B[red-folder]
+    A o--o C[pink-folder]
+    A o--o D[blue-folder]
+
+    B o--o r1([red-1.txt ])
+    B o--o r2([red-2.txt ])
+    B o--o r3([red-3.txt ])
+
+    C o--o P1[pink-sub-folder]
+    C o--o p2(["pink-file.md <br>"])
+    C o--o p3{{"say_hi.sh <br>"}}
+
+    P1 o--o p4(["**helloworld.py** <br>"])
+    P1 o--o p5(["pink-data.csv <br>"])
+
+    D o--o b1(["**blue.r** <br>"])
+
+    style P1 fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style p4 fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+
+```
+
+`helloworld.py`
+
+## Relative paths
+
+What if we are in `pink-subfolder` (if it's our *working directory*), and want the path to `pink-file.md`?
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%
+flowchart TD
+    A["/home/vscode/ <br> or ~"] o--o B[red-folder]
+    A o--o C[pink-folder]
+    A o--o D[blue-folder]
+
+    B o--o r1([red-1.txt ])
+    B o--o r2([red-2.txt ])
+    B o--o r3([red-3.txt ])
+
+    C o--o P1[pink-sub-folder]
+    C o--o p2(["pink-file.md <br>"])
+    C o--o p3{{"say_hi.sh <br>"}}
+
+    P1 o--o p4(["**helloworld.py** <br>"])
+    P1 o--o p5(["pink-data.csv <br>"])
+
+    D o--o b1(["**blue.r** <br>"])
+
+    style P1 fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style p2 fill:#ff0,stroke:#333,stroke-width:10px,color:#333
+
+```
+
+Hint: what can we see with `ls .. ` from the current directory?
+
+## Poll
+
+What if we are in `pink-subfolder` (if it's our *working directory*), and want the path to `pink-file.md`?
+
+
+[Click here to go to Poll](https://universityofleeds.display.vevox.com#/present/696636/ULXGUZROA4XT20VKGCAZ){target="_blank"}
+
+
+## Relative paths
+
+`../pink-file.md`
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 100%
+---
+config:
+  look: handDrawn
+---
+%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%
+flowchart TD
+    A["/home/vscode/ <br> or ~"] o--o B[red-folder]
+    A o--o C[pink-folder]
+    A o--o D[blue-folder]
+
+    B o--o r1([red-1.txt ])
+    B o--o r2([red-2.txt ])
+    B o--o r3([red-3.txt ])
+
+    C o--o P1[pink-sub-folder]
+    C o--o p2(["pink-file.md <br>"])
+    C o--o p3{{"say_hi.sh <br>"}}
+
+    P1 o--o p4(["**helloworld.py** <br>"])
+    P1 o--o p5(["pink-data.csv <br>"])
+
+    D o--o b1(["**blue.r** <br>"])
+
+    style P1 fill:#f9f,stroke:#333,stroke-width:10px,color:#333
+    style p2 fill:#ff0,stroke:#333,stroke-width:10px,color:#333
+
+```
+
+We can use the command `cat` with a path to a file to read out the contents: try `cat ../pink-file.md`
+
+## Recap
+
+We've covered an awful lot of commands now!
+
+- If at any point in the course you need a refresher, just click the link at the bottom of the screen to the **Cheat Sheet**
+which lists useful commands.
+
+# Creating and editing files and directories
+
+## Making files and directories
+
+- You can create a directory with the command `mkdir` (*make directory*), and the name of the new directory as an argument:
+  - `mkdir new-dir-name`
+- You can create files with the command `touch`, and the name of the new file as an argument:
+ - `touch new-file-name.txt`
+- You can provide a path (absolute or relative) instead of a name if you want to create the folder or file somewhere other that the current working directory.
+
+## Rules for file and directory names {.smaller}
+
+1. Don't use spaces in names; Linux will think you are entering two separate arguments to a command.
+  - Break up words with hyphens or underscores instead `like_this` `or-this`!
+2. Don't begin a name with a hyphen/dash (so no files called `-this`); Linux will think this is a flag/option to a command.
+3. Stick with numbers, letters, full stops, dashes/hyphens and underscores.
+  - Special characters like $, %, &, *, / etc. have special meanings on the command line and can lead to confusion!
+4. When naming files, give them a sensible file ending: `.txt`, `.md`, `.py` etc.
+
+If you're working with old files/directories that have spaces in their names, you'll need to wrap the path in single quotation marks, `'like this.txt'`
+
+## Poll
+
+Choose some sensible Linux file and folder names!
+
+[Click here to go to Poll](https://universityofleeds.display.vevox.com#/present/696636/ULXGUZROA4XT20VKGCAZ){target="_blank"}
+
+
+## Making files and directories {.smaller}
+
+- Try creating some folders and files in your home directory (`~`)
+  - `mkdir path-to-new-folder`
+  - `touch path-to-new-file`
+- If you want to create multiple nested folders at once, you can use the `-p` option:
+
+::::: {style="font-size: 1em; text-align: left; background-color: black; color: white; font-family: monospace"}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**mkdir -p new1/new2/new3**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::::
+
+- You can create multiple new folders in the same directory by just listing all the new names, separate by spaces:
+
+::::: {style="font-size: 1em; text-align: left; background-color: black; color: white; font-family: monospace"}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**mkdir new1 new2 new3**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::::
+
+## Editing files
+
+::::: {style="font-size: 0.7em;"}
+
+Oftentimes, when you're doing research on a platform like Aire, you don't need to do extensive manual editing of files;
+for example, if you are running multiple R scripts, you would write and test these on your desktop computer and then transfer
+them over to Aire.
+:::::
+
+- Sometimes, you might need to edit a file from the command line.
+- One popular tool that is installed on almost all systems is Nano
+- To launch Nano, you just need to type the `nano` command followed by the name of a file (this can be a new or existing file; Nano will create a file for you if it doesn't exist)
+
+## Editing files with Nano
+
+::::: {style="font-size: 1em; text-align: left; background-color: black; color: white; font-family: monospace"}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**nano new-file.txt**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::::
+
+This will open up a new screen in your terminal...
+
+## Editing files with Nano
+
+::::: {style="font-size: 1em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"} [ &nbsp; GNU nano 7.2 &nbsp; &nbsp;  &nbsp;   new-file.txt &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]{style="color: black; background-color: white; text-align: center;"}
+
+[▮]{style="color: white"}
+
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}
+
+::: {style="text-align: center;"}
+
+[New File]{style="color: black; background-color: white; text-align: center;"}
+
+[\^G]{style="color: black; background-color: white;"} Help &nbsp; &nbsp; [\^O]{style="color: black; background-color: white;"} Write Out &nbsp; &nbsp; [\^X]{style="color: black; background-color: white;"} Exit
+
+:::
+
+:::::
+
+The cursor is shown by the rectangle symbol [▮]{style="color: white; background-color: black;"}
+
+## Editing files with Nano
+
+::::: {style="font-size: 1em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"} [ &nbsp; GNU nano 7.2 &nbsp; &nbsp;  &nbsp;   new-file.txt &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]{style="color: black; background-color: white; text-align: center;"}
+
+You can type in this file;
+
+you don't need to click on it.▮
+
+
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}
+
+::: {style="text-align: center;"}
+
+[New File]{style="color: black; background-color: white; text-align: center;"}
+
+[\^G]{style="color: black; background-color: white;"} Help &nbsp; &nbsp; [\^O]{style="color: black; background-color: white;"} Write Out &nbsp; &nbsp; [\^X]{style="color: black; background-color: white;"} Exit
+
+:::
+
+:::::
+
+You can start typing.
+
+## Editing files with Nano
+
+::::: {style="font-size: 1em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"} [ &nbsp; GNU nano 7.2 &nbsp; &nbsp;  &nbsp;   new-file.txt &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]{style="color: black; background-color: white; text-align: center;"}
+
+To save your edits,
+
+hit \^O to write out.
+
+This means CTRL and o▮
+
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}
+
+::: {style="text-align: center;"}
+
+[New File]{style="color: black; background-color: white; text-align: center;"}
+
+[\^G]{style="color: black; background-color: white;"} Help &nbsp; &nbsp; [\^O]{style="color: black; background-color: white;"} Write Out &nbsp; &nbsp; [\^X]{style="color: black; background-color: white;"} Exit
+
+:::
+
+:::::
+
+## Editing files with Nano
+
+::::: {style="font-size: 1em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"} [ &nbsp; GNU nano 7.2 &nbsp; &nbsp;  &nbsp;   new-file.txt &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]{style="color: black; background-color: white; text-align: center;"}
+
+To save your edits,
+
+hit \^O to write out.
+
+This means CTRL and o▮
+
+[_ ]{style="color: black"}
+
+[&nbsp; *Hit ENTER to accept the filename*]{style="color: #00FF00; font-size: 0.7em;"}
+
+
+
+[File Name to write: new-file.txt &nbsp; &nbsp;]{style="color: black; background-color: white;"}
+
+::: {style="text-align: center;"}
+
+[\^G]{style="color: black; background-color: white;"} Help &nbsp; &nbsp; [\^C]{style="color: black; background-color: white;"} Cancel
+
+:::
+
+:::::
+
+## Editing files with Nano
+
+::::: {style="font-size: 1em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"} [ &nbsp; GNU nano 7.2 &nbsp; &nbsp;  &nbsp;   new-file.txt &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]{style="color: black; background-color: white; text-align: center;"}
+
+To save your edits,
+
+hit \^X to exit.
+
+This means CTRL and x▮
+
+[_ ]{style="color: black"}
+
+[_ ]{style="color: black"}
+
+::: {style="text-align: center;"}
+
+[Wrote 3 lines]{style="color: black; background-color: white; text-align: center;"}
+
+[\^G]{style="color: black; background-color: white;"} Help &nbsp; &nbsp; [\^O]{style="color: black; background-color: white;"} Write Out &nbsp; &nbsp; [\^X]{style="color: black; background-color: white;"} Exit
+
+:::
+
+:::::
+
+This will close the Nano text editor and return you to the command line.
+
+## Poll
+
+How comfortable are you using Nano?
+
+[Click here to go to Poll](https://universityofleeds.display.vevox.com#/present/696636/ULXGUZROA4XT20VKGCAZ){target="_blank"}
+
+
+
+## Using arrow keys ↑ ↓
+
+- In the Nano text editor, you cannot click on the text to move the cursor: 
+  - You need to use the arrow keys on your keyboard to navigate the text.  ← ↑	→	↓
+- What happens when you use the up and down arrows when you have exited from Nano and are back in the shell?
+
+:::{.fragment .fade-in}
+
+::::: {style="font-size: 0.7em;"}
+
+- The arrow keys allow you to "scroll" through previous commands you've used
+- If you don't want to use a previous command and want to stop scrolling, use \^C to cancel (CTRL and c at the same time)
+
+:::::
+
+:::
+
+## Modifying files and directories: `mv`
+
+The `mv` (move) command allows us to move a file or folder to a specified location:
+
+- Move the file `file-name` to the directory `new-location`: `mv file-name new-location`
+- Move the directory `dir-name` to the directory `new-location`: `mv dir-name new-location`
+
+If you move the file or directory to the same location it's already in, it renames it.
+
+## Modifying files and directories: `mv`
+
+::::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/somewhere]{style="color: #00FFFF"} [$]{style="color: grey"} [**cd**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**touch test-file.txt**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls -F**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[blue-folder/  pink-folder/ red-folder/]{style="color: #00FFFF"} [test-file.txt]{style="color: white"}
+
+:::
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**mv test-file.txt test-file.md**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls -F**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[blue-folder/  pink-folder/ red-folder/]{style="color: #00FFFF"} [test-file.md]{style="color: white"}
+
+:::
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**mv test-file.md blue-folder**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::
+
+:::::
+
+:::{.fragment .fade-in}
+What's the result of `ls` and `ls blue-folder` now? Repeat this with a new directory in your home directory.
+:::
+
+## Modifying files and directories: `mv` {.smaller}
+
+- Do you use the same *syntax* to move directories and files?
+  - Yes, `mv` works *recursively* and moves directories (and everything in them).
+
+After this course, experiment with moving directories around the virtual machine.
+
+- Don't worry about messing up the directory structure - you can rebuild a new VM at any point.
+- This is a safe sandbox to experiment in!
+
+**BUT, it's important to note that you can accidentally overwrite files using `mv`: this is why it's useful to practise and get used to using this command in a safe place!**
+
+## Modifying files and directories: `cp` {.smaller}
+
+The `cp` or copy command allows us to copy files or directories to specified locations.
+
+::::: {style="font-size: 1em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/somewhere]{style="color: #00FFFF"} [$]{style="color: grey"} [**cd**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**touch new-test.txt**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+[_ ]{style="color: black"} [You can us ls or ls -F to check the file is created]{style="color: #DDA0DD; font-size: 0.9em;"}
+
+:::
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**nano new-test.txt**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+[_ ]{style="color: black"} [Add some text to the file. After saving, check the content with cat:]{style="color: #DDA0DD; font-size: 0.9em;"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**cat new-test.txt**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::
+
+:::{.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**cp new-test.txt new-test-2.txt**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+[_ ]{style="color: black"} [Check the content of new-test-2.txt with cat]{style="color: #DDA0DD; font-size: 0.9em;"}
+:::
+
+:::::
+
+## Modifying files and directories: `cp` {.smaller}
+
+The `cp` or copy command allows us to copy files or directories to specified locations.
+
+::::: {style="font-size: 0.9em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**mkdir -p test-dir/sub-dir/sub-sub-dir other-test-dir**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::{.fragment .fade-in}
+
+[_ ]{style="color: black"} [Explore your new dirs with cd and ls, then return to ~]{style="color: #DDA0DD; font-size: 0.9em;"}
+:::
+
+:::{.fragment .fade-in}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**cp test-dir/sub-dir/sub-sub-dir other-test-dir**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::
+
+:::{.fragment .fade-in}
+
+[_ ]{style="color: black"} cp: -r not specified; omitting directory 'test-dir/sub-dir/sub-sub-dir'
+
+[_ ]{style="color: black"} [We need to add a -r to our command, which means "recursive"]{style="color: #DDA0DD; font-size: 0.9em;"}
+:::
+
+:::{.fragment .fade-in}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**cp -r test-dir/sub-dir/sub-sub-dir other-test-dir**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+:::
+
+:::::
+
+## Poll
+
+How comfortable are you with exploring and handling directories using the commands we have covered?
+
+[Click here to go to Poll](https://universityofleeds.display.vevox.com#/present/696636/ULXGUZROA4XT20VKGCAZ){target="_blank"}
+
+
+## Deleting with `rm`
+
+Almost everyone who's used Linux before will have a horror story about the command `rm` (remove), and accidentally deleting files they didn't mean to.
+
+**But** being able to delete and clean up files is very important, especially when using a shared resource (like Aire) that has **storage quotas**.
+
+Let's clean up all the test files we just made.
+
+::::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"} [Check what files you want to delete]{style="color: #DDA0DD; font-size: 0.9em;"}
+
+:::{.fragment .fade-in}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**rm new-test.txt new-test-2.txt**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::
+
+:::::
+
+## Deleting with `rm`
+
+Deleting directories
+
+::::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**rm test-dir**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"} [Delete a directory]{style="color: #DDA0DD; font-size: 0.9em;"}
+
+:::{.fragment .fade-in}
+
+[_ ]{style="color: black"} rm: cannot remove 'test-dir/': Is a directory
+
+[Like cp, we need to tell rm we want it to act recursively, with -r]{style="color: #DDA0DD; font-size: 0.9em;"}
+:::
+
+:::{.fragment .fade-in}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**rm -r test-dir**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"} [Delete a directory]{style="color: #DDA0DD; font-size: 0.9em;"}
+
+:::
+
+:::::
+
+This is very powerful and can quickly delete directories of important data!
+
+
+**`rm` does not send things to the *recycling bin* or equivalent: it hard-deletes them; data is usually not recoverable.**
+
+## Deleting with `rm`
+
+A cautionary exercise
+
+Look at the following command and try to predict what it does:
+
+::::: {.panel-tabset}
+
+### Breaking it down
+
+ **Do not run the following snippet!** 
+
+`rm -rf *`
+
+:::{.fragment .fade-in style="font-size: 0.7em;"}
+
+- `rm`: the delete command (remove)
+- `-r`: recursive, so will eat through directories
+- `-f`: force - do not ask for clarification, just delete
+- `*`: a "wildcard" character; instead of providing a file or directory name, this essentially means **everything**
+:::
+
+### Face the fear
+
+Before we go on a break, `cd` back to your home directory, and experience the abject horror of `rm`.
+
+:::{.fragment .fade-in style="font-size: 0.7em;"}
+
+**Run `rm -rf *` from `/home/vscode`.  Only do this in your virtual machine on codespaces, never on a research machine**
+
+:::
+
+:::{.fragment .fade-in style="font-size: 0.7em;"}
+
+Use `cd` and `ls` to look around - what does your home directory look like now?
+
+:::
+
+:::::
+
+## Rebuild codespaces
+
+- Click on the `>< Codespaces` button in the lower left of your screen, then select "Rebuild Container" from the menu that pops up.
+- Take a break while it's re-building (remember to lock your screen if leaving your pc unattended)
+
+# Interactive scripts
+
+## Bash scripts
+
+- Use `ls -F` to list out the contents of `~/pink-folder`
+- What are the three categories of content?
+  - What kind of file is `say_hi.sh`?
+
+:::{.fragment .fade-in}
+
+**This is an *executable* file - like a Windows `.exe` file - you can run it.**
+
+Let's read it first and predict what it will do:
+
+- Use `cat say_hi.sh` to print out the contents
+
+:::
+
+## Bash scripts
+What's in `say_hi.sh`?
+
+```{.bash code-line-numbers="1|2|3|4|5|6"}
+#!/bin/sh
+echo "hello!"
+echo "Running this file prints out a number of greetings"
+echo "What's your name? (type your name in below)"
+read yourname
+echo "Nice to meet you, $yourname!"
+```
+
+:::{style="font-size: 0.6em;"}
+- `#!/bin/bash`: this is known as "shebang bin bash" tells Linux to use Bash to parse the file - we don't need to worry about this, beyond knowing to include it at the beginning of a shell script.
+- The `echo` will just print out (or echo back) any arguments after it.
+  - Try running `echo Hello` in your terminal
+- The `read` command waits for you to type input and press enter, then saves it to a variable
+  - Try running `read greeting` and pressing enter
+  - On the next line, type `Hello`, and press enter
+  - Now, type `echo $greeting` and press enter
+- Variables generally start with `$`
+
+:::
+
+## Bash scripts
+What's in `say_hi.sh`?
+
+```{.bash}
+#!/bin/sh
+echo "hello!"
+echo "Running this file prints out a number of greetings"
+echo "What's your name? (type your name in below)"
+read yourname
+echo "Nice to meet you, $yourname!"
+```
+
+What do we predict it's going to do?
+
+::::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/pink-folder]{style="color: #00FFFF"} [$]{style="color: grey"} [**./say_hi.sh**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+[Run using ./ in front of the script name]{style="color: #DDA0DD; font-size: 0.9em;"}
+:::::
+
+## Bash scripts
+
+Let's create a simple bash script. `cd` to home and open a new file with Nano:
+
+::::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/pink-folder]{style="color: #00FFFF"} [$]{style="color: grey"} [**cd**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**nano test-script.sh**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::::
+
+
+```{.bash code-line-numbers="1|2|3|4|5|6"}
+#!/bin/bash
+touch test-file-auto.txt
+mkdir new-dir-auto
+cp test-file-auto.txt new-dir-auto
+echo "Put this text in the job report" > job-report.txt
+
+```
+
+Save the file with Nano.
+
+## Bash scripts {.smaller}
+
+- Check the contents of your home directory using `ls -F`
+  - What category does your new script show as?
+- Try using `ls -l`
+
+:::{.fragment .fade-in}
+
+It's just a regular file: we need to make it executable!
+
+::::: {style="font-size: 1em; text-align: left; background-color: black; color: white; font-family: monospace"}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**chmod +x test-script.sh**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::::
+
+The `chmod` command changes or modifies file permissions: you need permission to be able to execute a bash script.
+
+- `+x` add executable permissions
+- `test-script.sh` is the name of the script you want to apply permissions to.
+
+Now, try `ls -F` again!
+:::
+
+## Run your Bash script
+
+::::: {style="font-size: 1em; text-align: left; background-color: black; color: white; font-family: monospace"}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**./test-script.sh**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::::
+
+What did it do?
+
+::: {.incremental}
+- What did the line `echo "Put this text in the job report" > job-report.txt` do?
+  - The `>` operator directs the output from `echo "your message"` to the file `job-report.txt`
+:::
+
+## Run your Bash script
+
+::: {.incremental}
+- Try to  rerun the code, what happens?
+- Replace the line `mkdir new-dir-auto` with `mkdir -p new-dir-auto` and rerun, what happens?
+  - The `-p` option (in addition to allowing you to create nested files) also allows you to try to make a folder, and if it already exists, doesn't fail
+:::
+
+## Run your Bash script
+
+::: {.incremental}
+- Change the line `echo "Put this text in the job report" > job-report.txt` to `echo "Put this text in the job report" >> job-report.txt`, what does this do?
+  - The message now gets *appended* to the file instead of overwriting
+- Add more messages by repeating `echo "message" > job-report.txt` or `echo "message" >> job-report.txt` and seeing how they behave.
+:::
+
+## Other scripts
+
+In general, on the HPC system, you will want to run scripts in other languages, like `R` or `Python` (amongst many, many others).
+
+- The way you load in a certain language varies depending on the system
+  - You'll learn how to do this on Aire at HPC 1
+- Our system is very simple but has Python and R installed
+- Often times, you will want to write a bash script that tells other scripts (written in R, Python etc.) to run
+
+## R scripts
+
+`cd` home, and then into the directory `blue-folder`:
+
+::::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/wherever]{style="color: #00FFFF"} [$]{style="color: grey"} [**cd**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+::: {.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**cd blue-folder**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::
+
+::: {.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/blue-folder]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::
+
+::: {.fragment .fade-in}
+[_ ]{style="color: black"}[blue.R]{style="color: white"}
+
+[This is an R script; if R is installed on the system it can be run with the command Rscript. Check what is in the file before running it with the command cat.]{style="color: #DDA0DD; font-size: 0.9em;"}
+:::
+
+::: {.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/blue-folder]{style="color: #00FFFF"} [$]{style="color: grey"} [**cat blue.R**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::
+
+::: {.fragment .fade-in}
+[_ ]{style="color: black"}[print("Hello World")]{style="color: white"} [Ok, lets run it]{style="color: #DDA0DD; font-size: 0.9em;"}
+:::
+
+::: {.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/blue-folder]{style="color: #00FFFF"} [$]{style="color: grey"} [**Rscript blue.R**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::
+
+:::::
+
+## R scripts
+
+::: {.incremental}
+- The R script ran, and printed the results out onto the screen
+
+What if we wanted the results saved to a text file?
+
+- In general, it's a good idea to do this in R and ensure all your results are saved in the correct data format etc.
+- However, it can be useful to save printed messages to a file for safe keeping: use a bash script
+
+What if we wanted to run multiple R scripts?
+
+- We could write a bash script to do this!
+
+:::
+
+## R scripts + bash
+
+Let's create a bash script called `r-bash.sh` and save it alongside `blue.R`; remember you'll need to do `chmod +x r-bash.sh`.
+
+```{.bash}
+#!/bin/bash
+
+Rscript blue.R
+
+```
+
+Run this: `./r-bash.sh` ; what happens?
+
+::: {.fragment .fade-in}
+
+```{.bash}
+#!/bin/bash
+
+Rscript blue.R >> output_log.txt
+
+```
+
+Run this: `./r-bash.sh` ; what happens? Use `cat` to read the output of `output_log.txt`
+
+:::
+
+## Python scripts
+
+We can do the exact same with Python scripts; we only need slightly different commands to run the `.py` script.
+
+## Python scripts
+
+`cd` home, and then into the directory `pink-folder/pink-sub-folder`:
+
+::::: {style="font-size: 0.7em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/wherever]{style="color: #00FFFF"} [$]{style="color: grey"} [**cd**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+
+::: {.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**cd pink-folder/pink-sub-folder**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::
+
+::: {.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/pink-folder/pink-subfolder]{style="color: #00FFFF"} [$]{style="color: grey"} [**ls**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::
+
+::: {.fragment .fade-in}
+[_ ]{style="color: black"}[helloworld.py  pink-data.csv]{style="color: white"}
+
+[Check what is in the Python file before running it with the command cat.]{style="color: #DDA0DD; font-size: 0.9em;"}
+:::
+
+::: {.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/pink-folder/pink-subfolder]{style="color: #00FFFF"} [$]{style="color: grey"} [**cat helloworld.py**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::
+
+::: {.fragment .fade-in}
+[_ ]{style="color: black"}[print("Hello World")]{style="color: white"} [Ok, lets run it]{style="color: #DDA0DD; font-size: 0.9em;"}
+:::
+
+::: {.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/pink-folder/pink-subfolder]{style="color: #00FFFF"} [$]{style="color: grey"} [**python helloworld.py**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+:::
+
+:::::
+
+## Python + bash scripts
+
+Write a bash script that runs the Python script `helloworld.py` and saves the output to a text file.
+
+- Remember to always start with `#!/bin/bash`
+- Change the permissions on your bash script with `chmod +x name-of-script.sh`
+
+::: {.fragment .fade-in}
+
+```{.bash}
+#!/bin/bash
+
+python helloworld.py >> output_log.txt
+
+```
+
+Run this with `./script-name.sh` and check the contents of `output_log.txt`
+
+:::
+
+## Executable scripts
+
+- Always check the contents of any files/scripts you want to run, to ensure you understand what they are doing.
+- Use `chmod +x script-name.sh` to make a bash file executable.
+- When running Python or R scripts for research, you will need to carefully specify what version of the language (and any libraries/packages) are being used
+- Be careful of overwriting data using `>` to write files.
+
+## Next steps {.smaller}
+
+- A three hour session can introduce the basics, but is not enough to make you
+feel like a Linux shell expert!
+- Your homework: work through the tutorial/session notes for [The Unix Shell](https://swcarpentry.github.io/shell-novice/index.html)
+created by the software carpentry.
+- In order to download the files they use (so that you can follow along all the sessions),
+we just need the URL of the files: *https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip* 
+
+::::: {style="font-size: 0.95em; text-align: left; background-color: black; color: white; font-family: monospace"}
+
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~/wherever]{style="color: #00FFFF"} [$]{style="color: grey"} [**cd**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+[Or to wherever you want to download the files]{style="color: #DDA0DD; font-size: 0.7em;"}
+
+::: {.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**wget https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+[Download the zip file (expect lots of output)]{style="color: #DDA0DD; font-size: 0.7em;"}
+:::
+
+::: {.fragment .fade-in}
+[_ ]{style="color: black"}[\@username]{style="color: #00FF00"} **→** [~]{style="color: #00FFFF"} [$]{style="color: grey"} [**unzip shell-lesson-data.zip**]{style="color: white"} [↵]{style="color: #DDA0DD; font-size: 1.5em;"}
+[Unzip the folder (expect lots of output)]{style="color: #DDA0DD; font-size: 0.7em;"}
+:::
+
+:::::
+
+## Next steps {.smaller}
+
+::: {.panel-tabset}
+
+### `wget`
+
+- `wget` is a really useful command for downloading data from the internet. It can take a range of different *options* and *arguments*:
+  - Basic use: `wget url-to-data`: this downloads the data to the current working directory, with the folder/file name provided by the URL .
+  - You can provide a different file name for the download either: `wget -O new-nap.zip url-to-data`.
+  - You can provide a location for the file to download to (not the current working directory): `wget -P path/to/folder url-to-data`.
+  - These are only some of the many, many options available!
+
+### `unzip`
+
+- `unzip` is necessary if you are downloading compressed/zipped archives (that end in `.zip`)
+  - Basic use: `unzip filename.zip`; this will unzip the file in the current working directory, into a folder called `filename`.
+  - Check contents: `unzip -l filename.zip` will list the contents of the archive without extracting them.
+
+:::
+
+## Directory map {.smaller .scrollable #map}
+
+Use the back button in your browser to return to the slide you were previously on.
+```{mermaid}
+flowchart TD
+    START:::hidden --> |cd|A
+    A[/home/vscode/] -->|cd red-folder| B[red-folder/ ]
+    A[/home/vscode/] -->|cd pink-folder| C[pink-folder/ ]
+    A[/home/vscode/] -->|cd blue-folder| D[blue-folder/ ]
+
+    B --- r1([red-1.txt ])
+    B --- r2([red-2.txt ])
+    B --- r3([red-3.txt ])
+
+    C --- |cd pink-sub-folder|P1[pink-sub-folder/ ]
+    C --- p2([pink-file.md ])
+    C --- |./say_hi.sh|p3{{say_hi.sh }}
+
+    P1 --- |python helloworld.py|p4([**helloworld.py** ])
+    P1 --- p5([pink-data.csv ])
+
+    D --- |Rscript blue.r|b1([**blue.r** ])
+
+```
+
+Scroll down to see key:
+
+```{mermaid}
+flowchart TD
+  E[folder] -->|CLI argument|F([file])
+  E[folder] -->|CLI argument|G{{executable}}
+```
+
+You can use `cat filename` to print out the content of a file, or `nano filename` to open the nano text editor.
+You can also use `code filename` to open it in vscode on your virtual machine.
+
+On the HPC system, you'll likely use `nano` to edit code if you ever need to.
+
+
+## Cheat Sheet {.smaller .scrollable #cheat-sheet background-color="#f5e0fd"}
+
+Use the back button in your browser to return to the slide you were previously on.
+
+**If you are lost, you can always `cd` home!**
+
+| Command | Description |
+| :--- | :--- |
+| `cd` | Change directory to home |
+| `cd dir-name` | Change directory to `dir-name` |
+| `pwd` | Print the current working directory - where am I? |
+| `name --help` | Load the manual for `name` - on Codespaces |
+| `man name` | Load the manual for `name` - on Aire/ARC |
+| `ls` | List the contents of a directory |
+| `cat file-name` | Print out the contents of a file called `file-name` |
+| `mkdir dir-name` | Make a new directory called `dir-name` |
+| `touch file-name` | Make a new file/update the last-edited date of a file called `file-name` |
+
+Some more `cd` commands:
+
+| Command | Description |
+| :--- | :--- |
+| `cd ..` | Go up a level to the parent directory |
+| `cd -` | Go back to the previous directory |
+| `cd ~/dir-name` | Go to `dir-name`, a directory in the home directory |
+
+Some more `ls` commands:
+
+| Command | Description |
+| :--- | :--- |
+| `ls -F` | List the contents of a dir, with symbols for content type |
+| `ls -a` | List *all* contents, including hidden files and directories |
+| `ls -l` | List contents, including permissions, the owner and their "group", and when the content was edited |
+
+
+Commands for working with files and directories:
+
+| Command | Description |
+| :--- | :--- |
+| `cp` |  |
+| `mv` |  |
+| `rm` |  |
+| `mkdir -p dir-name` | Make a new directory call `dir-name` if it doesn't already exist |
+
+::: footer
+<!-- Remove footer from this page -->
+:::
