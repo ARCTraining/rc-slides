@@ -1,7 +1,7 @@
 [
   {
-    "objectID": "datavis01.html#meta-code",
-    "href": "datavis01.html#meta-code",
+    "objectID": "datavis01.html#section",
+    "href": "datavis01.html#section",
     "title": "arctraining slides",
     "section": "DataVis 101",
     "text": "DataVis 101\nIntroduction to Data Visualisation with Python"
@@ -28,8 +28,8 @@
     "text": "Documentation\n\nCourse notes\nThese slides: https://arctraining.github.io/rc-slides/datavis\nHackpad"
   },
   {
-    "objectID": "datavis01.html#section",
-    "href": "datavis01.html#section",
+    "objectID": "datavis01.html#section-2",
+    "href": "datavis01.html#section-2",
     "title": "arctraining slides",
     "section": "",
     "text": "What is PythonWhat is Data Visualisation\n\n\n\nA flexible, human-readable programming language with simple “syntax”\nIt is commonly used for:\n\ndata analytics\nscientific programming\nvisualisation\n\nIt has a huge collection of specialised libraries to solve specific research problems\nIt is Open Source\n\n\n\n\nA way of graphically representing data\nCan include plots, graphs, charts, schematics, maps, infographics\nCommonly found in research papers, publications, policy documents, on conference posters, in talks, on news reports…"
@@ -42,29 +42,29 @@
     "text": "Why do you want to learn data vis or Python?\nLets look at the survey results…"
   },
   {
-    "objectID": "datavis01.html#section-1",
-    "href": "datavis01.html#section-1",
+    "objectID": "datavis01.html#section-3",
+    "href": "datavis01.html#section-3",
     "title": "arctraining slides",
     "section": "",
     "text": "Some examples…\n\nMap faults on the surface of Mars"
   },
   {
-    "objectID": "datavis01.html#section-2",
-    "href": "datavis01.html#section-2",
+    "objectID": "datavis01.html#section-4",
+    "href": "datavis01.html#section-4",
     "title": "arctraining slides",
     "section": "",
     "text": "Map faults on the surface of Mars"
   },
   {
-    "objectID": "datavis01.html#section-3",
-    "href": "datavis01.html#section-3",
+    "objectID": "datavis01.html#section-5",
+    "href": "datavis01.html#section-5",
     "title": "arctraining slides",
     "section": "",
     "text": "Model the thermal evolution of meteorite parent bodies"
   },
   {
-    "objectID": "datavis01.html#section-4",
-    "href": "datavis01.html#section-4",
+    "objectID": "datavis01.html#section-6",
+    "href": "datavis01.html#section-6",
     "title": "arctraining slides",
     "section": "",
     "text": "Plot and analyse x-ray element maps"
@@ -273,8 +273,8 @@
     "text": "Slides:\nNote: this page is under construction. As soon as the slides are available, the link will be provided.\n\nHPC0: Introduction to Linux for HPC\nHPC1: Introduction to High Performance Computing\nHPC2: Applications and containers on HPC\nHPC3: Computer architectures and shared memory parallel programming\nHPC5: Introduction to GPU programming with CUDA\nHPC6: HPC for Life Sciences and Bioinformatics\nSWD1a: Introduction to Python programming\nSWD1b: Introduction to R programming\nSWD2: Version Control with Git and GitHub\nSWD3: Software development practices for Research\nSWD4: Cloud computing for Research\nSWD5: Scientific Python\nSWD6: High performance Python\nSWD7: Introduction to reproducible workflows in Python"
   },
   {
-    "objectID": "hpc1.html#meta-code",
-    "href": "hpc1.html#meta-code",
+    "objectID": "hpc1.html#section",
+    "href": "hpc1.html#section",
     "title": "arctraining slides",
     "section": "HPC 1",
     "text": "HPC 1\nIntroduction to High Performance Computing"
@@ -634,11 +634,11 @@
     "href": "hpc1.html#thank-you",
     "title": "arctraining slides",
     "section": "Thank you",
-    "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: https://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
+    "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: https://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk"
   },
   {
-    "objectID": "template.html#meta-code",
-    "href": "template.html#meta-code",
+    "objectID": "template.html#section",
+    "href": "template.html#section",
     "title": "arctraining slides",
     "section": "Course Code",
     "text": "Course Code\nCourse Name"
@@ -676,11 +676,11 @@
     "href": "template.html#thank-you",
     "title": "arctraining slides",
     "section": "Thank you",
-    "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: https://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
+    "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: https://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk"
   },
   {
-    "objectID": "swd3.html#meta-code",
-    "href": "swd3.html#meta-code",
+    "objectID": "swd3.html#section",
+    "href": "swd3.html#section",
     "title": "arctraining slides",
     "section": "SWD3",
     "text": "SWD3\nSoftware development practices for Research"
@@ -711,7 +711,7 @@
     "href": "swd3.html#sdlc",
     "title": "arctraining slides",
     "section": "SDLC",
-    "text": "SDLC\n\nIdeationRequirementsDesignDevelopmentTestDeploymentMaintenance\n\n\n\n\n\nWhat are we going to do?\n\n\nBrainstorming\nResearch\n\n\n\n\n\n\n\n\n\n\nHow are we going to do it?\n\nSome topics to help define requirements include:\n\nfinal goal\nproject scope (how to reach the final goal)\nwhat is feasible (and how)\nwhat is priority\nwhat resources are available\ndeadlines\npotential risks\n\n\nWarning: Each person involved in the project may have a different need.\n\n\n\n\n\n\n\n\n\n\nWhat is the software architecture?\n\nWhen designing software, the object-oriented approach is a common programming paradigm.\nObject-oriented components:\n\nClasses: A user-defined type\nObject instances: A particular object instantiated from a class.\nMethods: A function which is “built in” to a class\nConstructor: A special method called when instantiating a new object\n\nSome principles: abstraction, encapsulation, decomposition, generalisation\n\n\nSee more: \n\n\n\n\n\n\n\nIs this where the fun begins?\n\n\nTake your time\n\n\n\n\n\nDevelopment is usually the most time consuming step in a Software Development Life Cycle.\n\n\n\n\n\nIs this software good?\n\nIn this step, errors and failures are identified by exposing the code to an environment similar to the end-user experience.\nThere are several types of testing, some examples include:\n\nUnit testing: are all components working?\nIntegration testing: are all components working when fitted together?\nPerformance testing: how does the software perform against different workloads? It is fast? Stable?\nFunctional testing: is the software aligned with Software Requirement Specification?\n\n\n\n\n\n\n\n\n\n\nCan other people use my code?\n\nYou can use platforms like GitHub to release your software.\n\nThe functionality of the software is linked to several specifications related to the operating system and versions of packages and other software related to the project.\nListing these specifications will help others to replicate the environment in which the software was developed.\n\n\n\n\n\n\n\n\n\n\nIs it over?\n\nWe can classify maintenance into a few categories:\n\nCorrective: fix reported errors/failures.\nPreventive: regular checks and fixes.\nPerfective: optimize implemented features, adding new features.\nAdaptive: keep the software updated according to changes external to the project (new programming language version, new regulation, etc.)."
+    "text": "SDLC\n\nIdeationRequirementsDesignDevelopmentTestDeploymentMaintenance\n\n\n\n\n\nWhat are we going to do?\n\n\nBrainstorming\nResearch\n\n\n\n\n\n\n\n\n\nHow are we going to do it?\n\nSome topics to help define requirements include:\n\nfinal goal\nproject scope (how to reach the final goal)\nwhat is feasible (and how)\nwhat is priority\nwhat resources are available\ndeadlines\npotential risks\n\n\nWarning: Each person involved in the project may have a different need.\n\n\n\n\n\n\n\n\n\nWhat is the software architecture?\n\nWhen designing software, the object-oriented approach is a common programming paradigm.\nObject-oriented components:\n\nClasses: A user-defined type\nObject instances: A particular object instantiated from a class.\nMethods: A function which is “built in” to a class\nConstructor: A special method called when instantiating a new object\n\nSome principles: abstraction, encapsulation, decomposition, generalisation\n\n\nSee more: \n\n\n\n\n\n\nIs this where the fun begins?\n\n\nTake your time\n\n\n\n\nDevelopment is usually the most time consuming step in a Software Development Life Cycle.\n\n\n\n\n\nIs this software good?\n\nIn this step, errors and failures are identified by exposing the code to an environment similar to the end-user experience.\nThere are several types of testing, some examples include:\n\nUnit testing: are all components working?\nIntegration testing: are all components working when fitted together?\nPerformance testing: how does the software perform against different workloads? It is fast? Stable?\nFunctional testing: is the software aligned with Software Requirement Specification?\n\n\n\n\n\n\n\n\n\nCan other people use my code?\n\nYou can use platforms like GitHub to release your software.\n\nThe functionality of the software is linked to several specifications related to the operating system and versions of packages and other software related to the project.\nListing these specifications will help others to replicate the environment in which the software was developed.\n\n\n\n\n\n\n\n\n\nIs it over?\n\nWe can classify maintenance into a few categories:\n\nCorrective: fix reported errors/failures.\nPreventive: regular checks and fixes.\nPerfective: optimize implemented features, adding new features.\nAdaptive: keep the software updated according to changes external to the project (new programming language version, new regulation, etc.)."
   },
   {
     "objectID": "swd3.html#basic-structure-suggestion",
@@ -851,11 +851,11 @@
     "href": "swd3.html#release",
     "title": "arctraining slides",
     "section": "Release",
-    "text": "Release\nRelease in GitHub are based in tags with the following structure:\nv0.5.2\n\n\n\nChange\nRelease\nExample\n\n\n\n\nMajor\nBreaking\n0\n\n\nMinor\nFeature\n5\n\n\nPatch\nFix\n2\n\n\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
+    "text": "Release\nRelease in GitHub are based in tags with the following structure:\nv0.5.2\n\n\n\nChange\nRelease\nExample\n\n\n\n\nMajor\nBreaking\n0\n\n\nMinor\nFeature\n5\n\n\nPatch\nFix\n2"
   },
   {
-    "objectID": "hpc0.html#meta-code",
-    "href": "hpc0.html#meta-code",
+    "objectID": "hpc0.html#section",
+    "href": "hpc0.html#section",
     "title": "arctraining slides",
     "section": "HPC 0",
     "text": "HPC 0\nIntroduction to Linux for HPC"
@@ -886,14 +886,14 @@
     "href": "hpc0.html#syllabus",
     "title": "arctraining slides",
     "section": "Syllabus",
-    "text": "Syllabus\n\n\n\n\nLogging in\nEntering commands\nFinding out about commands\nFile system navigation\nCommands to list, create, copy, move and delete files\nHidden files\nCommand history\n\n\n\nControl key combinations\nEditing files\nFile permissions\nCommands to explore and filter data\nWildcards\nShell scripting basics\n\n\n\n\n\nThe plan for the next 3 hours.\nThere will be 3 short comfort breaks."
+    "text": "Syllabus\n\n\n\n\nLogging in\nEntering commands\nFinding out about commands\nFile system navigation\nCommands to list, create, copy, move and delete files\nHidden files\nCommand history\n\n\n\nControl key combinations\nEditing files\nFile permissions\nCommands to explore and filter data\nWildcards\nShell scripting basics\n\n\n\n\nThe plan for the next 3 hours.\nThere will be 3 short comfort breaks."
   },
   {
     "objectID": "hpc0.html#logging-in",
     "href": "hpc0.html#logging-in",
     "title": "arctraining slides",
     "section": "Logging in",
-    "text": "Logging in\n\nARC Documentation on Logging on\nHow you login depends on your:\n\n\n\nHost Operating System\n\nOSX/Linux:\n\nUse terminal\n\nWindows:\n\nUse MobaXTerm\n\n\n\nConnection\n\nOn campus (wireless is like ‘off campus’)\nOff campus (connected to the University VPN is like ‘on campus’)\n\n\n\n\n\nMobaXTerm is software you can download, install and run without needing help from systems administrators.\n\nIt provides a sort of bridge between your host Windows machine and other machines you connect with.\n\nMaybe conduct a poll about what host Operating Systems participants expect to use to connect to the HPC.\nIn terms of connection: On campus, but using wifi is like being ‘off campus’…\nThe University Virtual Private Network (VPN) is a type of secure network connection, enabling your computer to access the University network when working remotely."
+    "text": "Logging in\n\nARC Documentation on Logging on\nHow you login depends on your:\n\n\n\nHost Operating System\n\nOSX/Linux:\n\nUse terminal\n\nWindows:\n\nUse MobaXTerm\n\n\n\nConnection\n\nOn campus (wireless is like ‘off campus’)\nOff campus (connected to the University VPN is like ‘on campus’)\n\n\n\n\nMobaXTerm is software you can download, install and run without needing help from systems administrators.\n\nIt provides a sort of bridge between your host Windows machine and other machines you connect with.\n\nMaybe conduct a poll about what host Operating Systems participants expect to use to connect to the HPC.\nIn terms of connection: On campus, but using wifi is like being ‘off campus’…\nThe University Virtual Private Network (VPN) is a type of secure network connection, enabling your computer to access the University network when working remotely."
   },
   {
     "objectID": "hpc0.html#logging-in-demos",
@@ -1292,7 +1292,7 @@
     "href": "hpc0.html#permissions-44",
     "title": "arctraining slides",
     "section": "Permissions 4/4",
-    "text": "Permissions 4/4\n\nPermissions may be changed using the chmod command.\nSpecific permissions can be granted or removed or all permissions can be specified\nThe following would set permissions -rwx------ to test.file:\n\nchmod 700 test.file\n\nDon’t worry about remembering details of how to change permissions.\nTry to remember that there are:\n\n\n\n\n3 levels of permission:\n\nuser\ngroup\nall\n\n\n\n\n3 types of permission:\n\nread\nwrite\nexecute\n\n\n\n\n\n\nThe following would add user (owner) execute permissions.\n\nchmod u+x test0/test/test-file\n\noctal value = read (4) + write (2) + execute (1)\nA later exercise will require adding execute permissions for a file…"
+    "text": "Permissions 4/4\n\nPermissions may be changed using the chmod command.\nSpecific permissions can be granted or removed or all permissions can be specified\nThe following would set permissions -rwx------ to test.file:\n\nchmod 700 test.file\n\nDon’t worry about remembering details of how to change permissions.\nTry to remember that there are:\n\n\n\n\n3 levels of permission:\n\nuser\ngroup\nall\n\n\n\n\n3 types of permission:\n\nread\nwrite\nexecute\n\n\n\n\n\nThe following would add user (owner) execute permissions.\n\nchmod u+x test0/test/test-file\n\noctal value = read (4) + write (2) + execute (1)\nA later exercise will require adding execute permissions for a file…"
   },
   {
     "objectID": "hpc0.html#groups",
@@ -1397,11 +1397,11 @@
     "href": "hpc0.html#thank-you",
     "title": "arctraining slides",
     "section": "Thank you",
-    "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: https://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
+    "text": "Thank you\nIf you have any questions or would like to learn more about Research Computing, please do not hesitate to get in touch with us.\n\n\nWe are always here to assist you!\n\nContact via IT Service Desk: https://bit.ly/arc-help\nSee our Website: https://arc.leeds.ac.uk/\nHPC documentation: https://arcdocs.leeds.ac.uk"
   },
   {
-    "objectID": "linux101.html#meta-code",
-    "href": "linux101.html#meta-code",
+    "objectID": "linux101.html#section",
+    "href": "linux101.html#section",
     "title": "arctraining slides",
     "section": "HPC 0",
     "text": "HPC 0\nIntroduction to Linux for HPC"
@@ -1495,49 +1495,49 @@
     "href": "linux101.html#file-system-on-linux",
     "title": "arctraining slides",
     "section": "File system on Linux",
-    "text": "File system on Linux\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--obin\n    / o--odev\n    / o--oetc\n    / o--ohome\n    home o--omy-username\n    home o--omy-friend\n    / o--otmp\n\n    my-username o--o all_my_files\n\n\n\n\n\nEach rectangle is a folder or directory (dir for short)\n\n\nThis shows a sketch of a file system.\nWe have a hierarchy of folders or directories sitting inside one another.\nFolders are usually called “directories” on Linux systems, but they mean the same thing."
+    "text": "File system on Linux\n\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--obin\n    / o--odev\n    / o--oetc\n    / o--ohome\n    home o--omy-username\n    home o--omy-friend\n    / o--otmp\n\n    my-username o--o all_my_files\n\n\n\n\n\n\nEach rectangle is a folder or directory (dir for short)\n\n\nThis shows a sketch of a file system.\nWe have a hierarchy of folders or directories sitting inside one another.\nFolders are usually called “directories” on Linux systems, but they mean the same thing."
   },
   {
     "objectID": "linux101.html#file-system-on-linux-1",
     "href": "linux101.html#file-system-on-linux-1",
     "title": "arctraining slides",
     "section": "File system on Linux",
-    "text": "File system on Linux\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--obin\n    / o--odev\n    / o--oetc\n    / o--ohome\n    home o--omy-username\n    home o--omy-friend\n    / o--otmp\n\n    my-username o--o all_my_files\n\n    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\nEach rectangle is a folder or directory (dir for short)\n\n\nThis branching system starts from the root (the forward slash) at the very top, highlighted in pink.\nInside this root directory, we have a bunch of system folders - we don’t need to worry about these now."
+    "text": "File system on Linux\n\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--obin\n    / o--odev\n    / o--oetc\n    / o--ohome\n    home o--omy-username\n    home o--omy-friend\n    / o--otmp\n\n    my-username o--o all_my_files\n\n    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\nEach rectangle is a folder or directory (dir for short)\n\n\nThis branching system starts from the root (the forward slash) at the very top, highlighted in pink.\nInside this root directory, we have a bunch of system folders - we don’t need to worry about these now."
   },
   {
     "objectID": "linux101.html#file-system-on-linux-2",
     "href": "linux101.html#file-system-on-linux-2",
     "title": "arctraining slides",
     "section": "File system on Linux",
-    "text": "File system on Linux\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--obin\n    / o--odev\n    / o--oetc\n    / o--ohome\n    home o--omy-username\n    home o--omy-friend\n    / o--otmp\n\n    my-username o--o all_my_files\n\n    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\nEach rectangle is a folder or directory (dir for short)\n\n\nOne of the directories is called “home”: this contains all the home directories of users.\nThe home directories are usually called after their owner’s username.\nIf you look in this directory on a personal or family computer, you might find a handful of user home directories\nIf you look at this directory on a university HPC system, like Aire, you’ll find hundreds of user home directories"
+    "text": "File system on Linux\n\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--obin\n    / o--odev\n    / o--oetc\n    / o--ohome\n    home o--omy-username\n    home o--omy-friend\n    / o--otmp\n\n    my-username o--o all_my_files\n\n    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\nEach rectangle is a folder or directory (dir for short)\n\n\nOne of the directories is called “home”: this contains all the home directories of users.\nThe home directories are usually called after their owner’s username.\nIf you look in this directory on a personal or family computer, you might find a handful of user home directories\nIf you look at this directory on a university HPC system, like Aire, you’ll find hundreds of user home directories"
   },
   {
     "objectID": "linux101.html#file-system-on-linux-3",
     "href": "linux101.html#file-system-on-linux-3",
     "title": "arctraining slides",
     "section": "File system on Linux",
-    "text": "File system on Linux\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--obin\n    / o--odev\n    / o--oetc\n    / o--ohome\n    home o--omy-username\n    home o--omy-friend\n    / o--otmp\n\n    my-username o--o all_my_files\n\n    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\nThe my-username folder is your user home directory\n\n\nConfusingly, we refer to this highlighted directory as your home directory\nEven though there is a folder one level up that is called home!"
+    "text": "File system on Linux\n\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--obin\n    / o--odev\n    / o--oetc\n    / o--ohome\n    home o--omy-username\n    home o--omy-friend\n    / o--otmp\n\n    my-username o--o all_my_files\n\n    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\nThe my-username folder is your user home directory\n\n\nConfusingly, we refer to this highlighted directory as your home directory\nEven though there is a folder one level up that is called home!"
   },
   {
     "objectID": "linux101.html#file-system-on-linux-4",
     "href": "linux101.html#file-system-on-linux-4",
     "title": "arctraining slides",
     "section": "File system on Linux",
-    "text": "File system on Linux\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--obin\n    / o--odev\n    / o--oetc\n    / o--ohome\n    home o--omy-username\n    home o--omy-friend\n    / o--otmp\n\n    my-username o--o all_my_files\n\n    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\nHow do we describe the address of this home directory?\n\n\nHow do we describe where this directory or folder is?\nWe describe it in a similar way to a website URL, using it’s path\nWe need to know all the folders directly above it."
+    "text": "File system on Linux\n\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--obin\n    / o--odev\n    / o--oetc\n    / o--ohome\n    home o--omy-username\n    home o--omy-friend\n    / o--otmp\n\n    my-username o--o all_my_files\n\n    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\nHow do we describe the address of this home directory?\n\n\nHow do we describe where this directory or folder is?\nWe describe it in a similar way to a website URL, using it’s path\nWe need to know all the folders directly above it."
   },
   {
     "objectID": "linux101.html#file-system-on-linux-5",
     "href": "linux101.html#file-system-on-linux-5",
     "title": "arctraining slides",
     "section": "File system on Linux",
-    "text": "File system on Linux\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--obin\n    / o--odev\n    / o--oetc\n    / o--ohome\n    home o--omy-username\n    home o--omy-friend\n    / o--otmp\n\n    my-username o--o all_my_files\n\n    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\nThe folders in the address are /, home and my-username\n\n\nAbove our username directory, we have home and the root (which is denoted by just a forward slash)"
+    "text": "File system on Linux\n\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--obin\n    / o--odev\n    / o--oetc\n    / o--ohome\n    home o--omy-username\n    home o--omy-friend\n    / o--otmp\n\n    my-username o--o all_my_files\n\n    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\nThe folders in the address are /, home and my-username\n\n\nAbove our username directory, we have home and the root (which is denoted by just a forward slash)"
   },
   {
     "objectID": "linux101.html#file-system-on-linux-6",
     "href": "linux101.html#file-system-on-linux-6",
     "title": "arctraining slides",
     "section": "File system on Linux",
-    "text": "File system on Linux\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--obin\n    / o--odev\n    / o--oetc\n    / o--ohome\n    home o--omy-username\n    home o--omy-friend\n    / o--otmp\n\n    my-username o--o all_my_files\n\n    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\nStick them together like a URL: /home/my-username\n\n\nWe just have to put them together like a web address (because the internet is basically just a giant file structure)"
+    "text": "File system on Linux\n\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--obin\n    / o--odev\n    / o--oetc\n    / o--ohome\n    home o--omy-username\n    home o--omy-friend\n    / o--otmp\n\n    my-username o--o all_my_files\n\n    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\nStick them together like a URL: /home/my-username\n\n\nWe just have to put them together like a web address (because the internet is basically just a giant file structure)"
   },
   {
     "objectID": "linux101.html#file-system-on-linux-7",
@@ -1551,28 +1551,28 @@
     "href": "linux101.html#file-system-on-linux-8",
     "title": "arctraining slides",
     "section": "File system on Linux",
-    "text": "File system on Linux\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--obin\n    / o--odev\n    / o--oetc\n    / o--ohome\n    home o--omy-username\n    home o--omy-friend\n    / o--otmp\n\n    my-username o--o all_my_files\n\n    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\nStick them together like a URL: /home/my-username\n\n\nBack to our file system.\nToday, everything we are doing will be in our home directory, so let’s just focus on that!\nWhen you log in to a linux system, this is usually where you will be dropped!"
+    "text": "File system on Linux\n\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--obin\n    / o--odev\n    / o--oetc\n    / o--ohome\n    home o--omy-username\n    home o--omy-friend\n    / o--otmp\n\n    my-username o--o all_my_files\n\n    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\nStick them together like a URL: /home/my-username\n\n\nBack to our file system.\nToday, everything we are doing will be in our home directory, so let’s just focus on that!\nWhen you log in to a linux system, this is usually where you will be dropped!"
   },
   {
     "objectID": "linux101.html#file-system-on-linux-9",
     "href": "linux101.html#file-system-on-linux-9",
     "title": "arctraining slides",
     "section": "File system on Linux",
-    "text": "File system on Linux\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--ohome\n    home o--omy-username\n\n    my-username o--o all_my_files\n\n    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n/home/my-username/all_my_files is a bit long…\n\n\nTyping the full path to our files and folders is a bit tedious\nlets look at a shorter way"
+    "text": "File system on Linux\n\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--ohome\n    home o--omy-username\n\n    my-username o--o all_my_files\n\n    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\n/home/my-username/all_my_files is a bit long…\n\n\nTyping the full path to our files and folders is a bit tedious\nlets look at a shorter way"
   },
   {
     "objectID": "linux101.html#file-system-on-linux-10",
     "href": "linux101.html#file-system-on-linux-10",
     "title": "arctraining slides",
     "section": "File system on Linux",
-    "text": "File system on Linux\n\n\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--ohome\n    home o--omy-username\n\n    my-username o--o all_my_files\n\n    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    home[\"~\"] o--o all_my_files\n\n    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\n\n\n/home/my-username/all_my_files is a bit long…\n\n\nTyping the full path to our files and folders is a bit tedious\nlets look at a shorter way"
+    "text": "File system on Linux\n\n\n\n\n\n\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    / o--ohome\n    home o--omy-username\n\n    my-username o--o all_my_files\n\n    style my-username fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style / fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\n\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    home[\"~\"] o--o all_my_files\n\n    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\n\n\n\n/home/my-username/all_my_files is a bit long…\n\n\nTyping the full path to our files and folders is a bit tedious\nlets look at a shorter way"
   },
   {
     "objectID": "linux101.html#file-system-on-linux-11",
     "href": "linux101.html#file-system-on-linux-11",
     "title": "arctraining slides",
     "section": "File system on Linux",
-    "text": "File system on Linux\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    home[\"~\"] o--o all_my_files\n\n    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\nTo save us from typing out /home/my-username every time we refer to a directory or file, we can use the shortcut ~, called a tilde\nThis turns /home/my-username/all_my_files to ~/all_my_files"
+    "text": "File system on Linux\n\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '32px', 'padding': '40px'}}}%%\nflowchart\n    \n    home[\"~\"] o--o all_my_files\n\n    style home fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\n\nTo save us from typing out /home/my-username every time we refer to a directory or file, we can use the shortcut ~, called a tilde\nThis turns /home/my-username/all_my_files to ~/all_my_files"
   },
   {
     "objectID": "linux101.html#poll-1",
@@ -1586,7 +1586,7 @@
     "href": "linux101.html#lets-explore-some-files",
     "title": "arctraining slides",
     "section": "Let’s explore some files!",
-    "text": "Let’s explore some files!\nTime to explore some files on a Linux system!\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%\nflowchart TD\n    A[\"/home/vscode/ &lt;br&gt; or ~\"] o--o B[red-folder]\n    A o--o C[pink-folder]\n    A o--o D[blue-folder]\n\n    B o--o r1([red-1.txt ])\n    B o--o r2([red-2.txt ])\n    B o--o r3([red-3.txt ])\n\n    C o--o P1[pink-sub-folder]\n    C o--o p2([\"pink-file.md &lt;br&gt;\"])\n    C o--o p3{{\"say_hi.sh &lt;br&gt;\"}}\n\n    P1 o--o p4([\"**helloworld.py** &lt;br&gt;\"])\n    P1 o--o p5([\"pink-data.csv &lt;br&gt;\"])\n\n    D o--o b1([\"**blue.r** &lt;br&gt;\"])"
+    "text": "Let’s explore some files!\nTime to explore some files on a Linux system!\n\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%\nflowchart TD\n    A[\"/home/vscode/ &lt;br&gt; or ~\"] o--o B[red-folder]\n    A o--o C[pink-folder]\n    A o--o D[blue-folder]\n\n    B o--o r1([red-1.txt ])\n    B o--o r2([red-2.txt ])\n    B o--o r3([red-3.txt ])\n\n    C o--o P1[pink-sub-folder]\n    C o--o p2([\"pink-file.md &lt;br&gt;\"])\n    C o--o p3{{\"say_hi.sh &lt;br&gt;\"}}\n\n    P1 o--o p4([\"**helloworld.py** &lt;br&gt;\"])\n    P1 o--o p5([\"pink-data.csv &lt;br&gt;\"])\n\n    D o--o b1([\"**blue.r** &lt;br&gt;\"])"
   },
   {
     "objectID": "linux101.html#using-our-custom-virtual-machine",
@@ -1600,7 +1600,7 @@
     "href": "linux101.html#launch-virtual-machine",
     "title": "arctraining slides",
     "section": "Launch virtual machine",
-    "text": "Launch virtual machine\n\nStep 1Step 2Step 3\n\n\nOne of the pre-requisites for this course was signing up for an account with GitHub, as this is the service we use to host the virtual Linux machines for teaching this session.\nLog in to GitHub now (or sign up if you haven’t already).\n\n\nFollow this link to open the course repository.\n\n\nThere will be a green button with the word “Code”, which will then bring up a menu when clicked.\n\n\n\n\n\n\n\n\n↑ Click this button, this menu opens →"
+    "text": "Launch virtual machine\n\nStep 1Step 2Step 3\n\n\nOne of the pre-requisites for this course was signing up for an account with GitHub, as this is the service we use to host the virtual Linux machines for teaching this session.\nLog in to GitHub now (or sign up if you haven’t already).\n\n\nFollow this link to open the course repository.\n\n\nThere will be a green button with the word “Code”, which will then bring up a menu when clicked.\n\n\n\n\n\n\n\n\n\n\n\n↑ Click this button, this menu opens →"
   },
   {
     "objectID": "linux101.html#the-terminal",
@@ -1684,14 +1684,14 @@
     "href": "linux101.html#whats-in-this-folder-ls-to-list-3",
     "title": "arctraining slides",
     "section": "What’s in this folder? ls to list",
-    "text": "What’s in this folder? ls to list\nThis is what we expected: we saw in our directory map that we have three directories in our home (~): red-folder, pink-folder, and blue-folder.\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%\nflowchart TD\n    A[\"/home/vscode/ &lt;br&gt; or ~\"] o--o B[red-folder]\n    A o--o C[pink-folder]\n    A o--o D[blue-folder]\n\n    B o--o r1([red-1.txt ])\n    B o--o r2([red-2.txt ])\n    B o--o r3([red-3.txt ])\n\n    C o--o P1[pink-sub-folder]\n    C o--o p2([\"pink-file.md &lt;br&gt;\"])\n    C o--o p3{{\"say_hi.sh &lt;br&gt;\"}}\n\n    P1 o--o p4([\"**helloworld.py** &lt;br&gt;\"])\n    P1 o--o p5([\"pink-data.csv &lt;br&gt;\"])\n\n    D o--o b1([\"**blue.r** &lt;br&gt;\"])"
+    "text": "What’s in this folder? ls to list\nThis is what we expected: we saw in our directory map that we have three directories in our home (~): red-folder, pink-folder, and blue-folder.\n\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%\nflowchart TD\n    A[\"/home/vscode/ &lt;br&gt; or ~\"] o--o B[red-folder]\n    A o--o C[pink-folder]\n    A o--o D[blue-folder]\n\n    B o--o r1([red-1.txt ])\n    B o--o r2([red-2.txt ])\n    B o--o r3([red-3.txt ])\n\n    C o--o P1[pink-sub-folder]\n    C o--o p2([\"pink-file.md &lt;br&gt;\"])\n    C o--o p3{{\"say_hi.sh &lt;br&gt;\"}}\n\n    P1 o--o p4([\"**helloworld.py** &lt;br&gt;\"])\n    P1 o--o p5([\"pink-data.csv &lt;br&gt;\"])\n\n    D o--o b1([\"**blue.r** &lt;br&gt;\"])"
   },
   {
     "objectID": "linux101.html#whats-in-this-folder-ls-to-list-4",
     "href": "linux101.html#whats-in-this-folder-ls-to-list-4",
     "title": "arctraining slides",
     "section": "What’s in this folder? ls to list",
-    "text": "What’s in this folder? ls to list\nLet’s list what’s inside pink-folder…\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%\nflowchart TD\n    A[\"/home/vscode/ &lt;br&gt; or ~\"] o--o B[red-folder]\n    A o--o C[pink-folder]\n    A o--o D[blue-folder]\n\n    B o--o r1([red-1.txt ])\n    B o--o r2([red-2.txt ])\n    B o--o r3([red-3.txt ])\n\n    C o--o P1[pink-sub-folder]\n    C o--o p2([\"pink-file.md &lt;br&gt;\"])\n    C o--o p3{{\"say_hi.sh &lt;br&gt;\"}}\n\n    P1 o--o p4([\"**helloworld.py** &lt;br&gt;\"])\n    P1 o--o p5([\"pink-data.csv &lt;br&gt;\"])\n\n    D o--o b1([\"**blue.r** &lt;br&gt;\"])"
+    "text": "What’s in this folder? ls to list\nLet’s list what’s inside pink-folder…\n\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%\nflowchart TD\n    A[\"/home/vscode/ &lt;br&gt; or ~\"] o--o B[red-folder]\n    A o--o C[pink-folder]\n    A o--o D[blue-folder]\n\n    B o--o r1([red-1.txt ])\n    B o--o r2([red-2.txt ])\n    B o--o r3([red-3.txt ])\n\n    C o--o P1[pink-sub-folder]\n    C o--o p2([\"pink-file.md &lt;br&gt;\"])\n    C o--o p3{{\"say_hi.sh &lt;br&gt;\"}}\n\n    P1 o--o p4([\"**helloworld.py** &lt;br&gt;\"])\n    P1 o--o p5([\"pink-data.csv &lt;br&gt;\"])\n\n    D o--o b1([\"**blue.r** &lt;br&gt;\"])"
   },
   {
     "objectID": "linux101.html#whats-in-this-folder-ls-to-list-5",
@@ -1789,35 +1789,35 @@
     "href": "linux101.html#relative-paths",
     "title": "arctraining slides",
     "section": "Relative paths",
-    "text": "Relative paths\nSo far, we’ve looked at absolute paths that start up at ~ or /home/vscode.\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%\nflowchart TD\n    A[\"/home/vscode/ &lt;br&gt; or ~\"] o--o B[red-folder]\n    A o--o C[pink-folder]\n    A o--o D[blue-folder]\n\n    B o--o r1([red-1.txt ])\n    B o--o r2([red-2.txt ])\n    B o--o r3([red-3.txt ])\n\n    C o--o P1[pink-sub-folder]\n    C o--o p2([\"pink-file.md &lt;br&gt;\"])\n    C o--o p3{{\"say_hi.sh &lt;br&gt;\"}}\n\n    P1 o--o p4([\"**helloworld.py** &lt;br&gt;\"])\n    P1 o--o p5([\"pink-data.csv &lt;br&gt;\"])\n\n    D o--o b1([\"**blue.r** &lt;br&gt;\"])"
+    "text": "Relative paths\nSo far, we’ve looked at absolute paths that start up at ~ or /home/vscode.\n\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%\nflowchart TD\n    A[\"/home/vscode/ &lt;br&gt; or ~\"] o--o B[red-folder]\n    A o--o C[pink-folder]\n    A o--o D[blue-folder]\n\n    B o--o r1([red-1.txt ])\n    B o--o r2([red-2.txt ])\n    B o--o r3([red-3.txt ])\n\n    C o--o P1[pink-sub-folder]\n    C o--o p2([\"pink-file.md &lt;br&gt;\"])\n    C o--o p3{{\"say_hi.sh &lt;br&gt;\"}}\n\n    P1 o--o p4([\"**helloworld.py** &lt;br&gt;\"])\n    P1 o--o p5([\"pink-data.csv &lt;br&gt;\"])\n\n    D o--o b1([\"**blue.r** &lt;br&gt;\"])"
   },
   {
     "objectID": "linux101.html#relative-paths-1",
     "href": "linux101.html#relative-paths-1",
     "title": "arctraining slides",
     "section": "Relative paths",
-    "text": "Relative paths\nSo far, we’ve looked at absolute paths that start up at ~ or /home/vscode.\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%\nflowchart TD\n    A[\"/home/vscode/ &lt;br&gt; or ~\"] o--o B[red-folder]\n    A o--o C[pink-folder]\n    A o--o D[blue-folder]\n\n    B o--o r1([red-1.txt ])\n    B o--o r2([red-2.txt ])\n    B o--o r3([red-3.txt ])\n\n    C o--o P1[pink-sub-folder]\n    C o--o p2([\"pink-file.md &lt;br&gt;\"])\n    C o--o p3{{\"say_hi.sh &lt;br&gt;\"}}\n\n    P1 o--o p4([\"**helloworld.py** &lt;br&gt;\"])\n    P1 o--o p5([\"pink-data.csv &lt;br&gt;\"])\n\n    D o--o b1([\"**blue.r** &lt;br&gt;\"])\n\n    style A fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style C fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style P1 fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style p4 fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\n~/pink-folder/pink-sub-folder/helloworld.py"
+    "text": "Relative paths\nSo far, we’ve looked at absolute paths that start up at ~ or /home/vscode.\n\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%\nflowchart TD\n    A[\"/home/vscode/ &lt;br&gt; or ~\"] o--o B[red-folder]\n    A o--o C[pink-folder]\n    A o--o D[blue-folder]\n\n    B o--o r1([red-1.txt ])\n    B o--o r2([red-2.txt ])\n    B o--o r3([red-3.txt ])\n\n    C o--o P1[pink-sub-folder]\n    C o--o p2([\"pink-file.md &lt;br&gt;\"])\n    C o--o p3{{\"say_hi.sh &lt;br&gt;\"}}\n\n    P1 o--o p4([\"**helloworld.py** &lt;br&gt;\"])\n    P1 o--o p5([\"pink-data.csv &lt;br&gt;\"])\n\n    D o--o b1([\"**blue.r** &lt;br&gt;\"])\n\n    style A fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style C fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style P1 fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style p4 fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\n\n~/pink-folder/pink-sub-folder/helloworld.py"
   },
   {
     "objectID": "linux101.html#relative-paths-2",
     "href": "linux101.html#relative-paths-2",
     "title": "arctraining slides",
     "section": "Relative paths",
-    "text": "Relative paths\nBut if we are already in pink-folder (if it’s our working directory), we can use a relative path:\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%\nflowchart TD\n    A[\"/home/vscode/ &lt;br&gt; or ~\"] o--o B[red-folder]\n    A o--o C[pink-folder]\n    A o--o D[blue-folder]\n\n    B o--o r1([red-1.txt ])\n    B o--o r2([red-2.txt ])\n    B o--o r3([red-3.txt ])\n\n    C o--o P1[pink-sub-folder]\n    C o--o p2([\"pink-file.md &lt;br&gt;\"])\n    C o--o p3{{\"say_hi.sh &lt;br&gt;\"}}\n\n    P1 o--o p4([\"**helloworld.py** &lt;br&gt;\"])\n    P1 o--o p5([\"pink-data.csv &lt;br&gt;\"])\n\n    D o--o b1([\"**blue.r** &lt;br&gt;\"])\n\n    style C fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style P1 fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style p4 fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\npink-sub-folder/helloworld.py"
+    "text": "Relative paths\nBut if we are already in pink-folder (if it’s our working directory), we can use a relative path:\n\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%\nflowchart TD\n    A[\"/home/vscode/ &lt;br&gt; or ~\"] o--o B[red-folder]\n    A o--o C[pink-folder]\n    A o--o D[blue-folder]\n\n    B o--o r1([red-1.txt ])\n    B o--o r2([red-2.txt ])\n    B o--o r3([red-3.txt ])\n\n    C o--o P1[pink-sub-folder]\n    C o--o p2([\"pink-file.md &lt;br&gt;\"])\n    C o--o p3{{\"say_hi.sh &lt;br&gt;\"}}\n\n    P1 o--o p4([\"**helloworld.py** &lt;br&gt;\"])\n    P1 o--o p5([\"pink-data.csv &lt;br&gt;\"])\n\n    D o--o b1([\"**blue.r** &lt;br&gt;\"])\n\n    style C fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style P1 fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style p4 fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\n\npink-sub-folder/helloworld.py"
   },
   {
     "objectID": "linux101.html#relative-paths-3",
     "href": "linux101.html#relative-paths-3",
     "title": "arctraining slides",
     "section": "Relative paths",
-    "text": "Relative paths\nBut if we are already in pink-subfolder (if it’s our working directory), we can use a relative path:\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%\nflowchart TD\n    A[\"/home/vscode/ &lt;br&gt; or ~\"] o--o B[red-folder]\n    A o--o C[pink-folder]\n    A o--o D[blue-folder]\n\n    B o--o r1([red-1.txt ])\n    B o--o r2([red-2.txt ])\n    B o--o r3([red-3.txt ])\n\n    C o--o P1[pink-sub-folder]\n    C o--o p2([\"pink-file.md &lt;br&gt;\"])\n    C o--o p3{{\"say_hi.sh &lt;br&gt;\"}}\n\n    P1 o--o p4([\"**helloworld.py** &lt;br&gt;\"])\n    P1 o--o p5([\"pink-data.csv &lt;br&gt;\"])\n\n    D o--o b1([\"**blue.r** &lt;br&gt;\"])\n\n    style P1 fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style p4 fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\nhelloworld.py"
+    "text": "Relative paths\nBut if we are already in pink-subfolder (if it’s our working directory), we can use a relative path:\n\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%\nflowchart TD\n    A[\"/home/vscode/ &lt;br&gt; or ~\"] o--o B[red-folder]\n    A o--o C[pink-folder]\n    A o--o D[blue-folder]\n\n    B o--o r1([red-1.txt ])\n    B o--o r2([red-2.txt ])\n    B o--o r3([red-3.txt ])\n\n    C o--o P1[pink-sub-folder]\n    C o--o p2([\"pink-file.md &lt;br&gt;\"])\n    C o--o p3{{\"say_hi.sh &lt;br&gt;\"}}\n\n    P1 o--o p4([\"**helloworld.py** &lt;br&gt;\"])\n    P1 o--o p5([\"pink-data.csv &lt;br&gt;\"])\n\n    D o--o b1([\"**blue.r** &lt;br&gt;\"])\n\n    style P1 fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style p4 fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\n\nhelloworld.py"
   },
   {
     "objectID": "linux101.html#relative-paths-4",
     "href": "linux101.html#relative-paths-4",
     "title": "arctraining slides",
     "section": "Relative paths",
-    "text": "Relative paths\nWhat if we are in pink-subfolder (if it’s our working directory), and want the path to pink-file.md?\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%\nflowchart TD\n    A[\"/home/vscode/ &lt;br&gt; or ~\"] o--o B[red-folder]\n    A o--o C[pink-folder]\n    A o--o D[blue-folder]\n\n    B o--o r1([red-1.txt ])\n    B o--o r2([red-2.txt ])\n    B o--o r3([red-3.txt ])\n\n    C o--o P1[pink-sub-folder]\n    C o--o p2([\"pink-file.md &lt;br&gt;\"])\n    C o--o p3{{\"say_hi.sh &lt;br&gt;\"}}\n\n    P1 o--o p4([\"**helloworld.py** &lt;br&gt;\"])\n    P1 o--o p5([\"pink-data.csv &lt;br&gt;\"])\n\n    D o--o b1([\"**blue.r** &lt;br&gt;\"])\n\n    style P1 fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style p2 fill:#ff0,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\nHint: what can we see with ls .. from the current directory?"
+    "text": "Relative paths\nWhat if we are in pink-subfolder (if it’s our working directory), and want the path to pink-file.md?\n\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%\nflowchart TD\n    A[\"/home/vscode/ &lt;br&gt; or ~\"] o--o B[red-folder]\n    A o--o C[pink-folder]\n    A o--o D[blue-folder]\n\n    B o--o r1([red-1.txt ])\n    B o--o r2([red-2.txt ])\n    B o--o r3([red-3.txt ])\n\n    C o--o P1[pink-sub-folder]\n    C o--o p2([\"pink-file.md &lt;br&gt;\"])\n    C o--o p3{{\"say_hi.sh &lt;br&gt;\"}}\n\n    P1 o--o p4([\"**helloworld.py** &lt;br&gt;\"])\n    P1 o--o p5([\"pink-data.csv &lt;br&gt;\"])\n\n    D o--o b1([\"**blue.r** &lt;br&gt;\"])\n\n    style P1 fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style p2 fill:#ff0,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\n\nHint: what can we see with ls .. from the current directory?"
   },
   {
     "objectID": "linux101.html#poll-3",
@@ -1831,7 +1831,7 @@
     "href": "linux101.html#relative-paths-5",
     "title": "arctraining slides",
     "section": "Relative paths",
-    "text": "Relative paths\n../pink-file.md\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%\nflowchart TD\n    A[\"/home/vscode/ &lt;br&gt; or ~\"] o--o B[red-folder]\n    A o--o C[pink-folder]\n    A o--o D[blue-folder]\n\n    B o--o r1([red-1.txt ])\n    B o--o r2([red-2.txt ])\n    B o--o r3([red-3.txt ])\n\n    C o--o P1[pink-sub-folder]\n    C o--o p2([\"pink-file.md &lt;br&gt;\"])\n    C o--o p3{{\"say_hi.sh &lt;br&gt;\"}}\n\n    P1 o--o p4([\"**helloworld.py** &lt;br&gt;\"])\n    P1 o--o p5([\"pink-data.csv &lt;br&gt;\"])\n\n    D o--o b1([\"**blue.r** &lt;br&gt;\"])\n\n    style P1 fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style p2 fill:#ff0,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\nWe can use the command cat with a path to a file to read out the contents: try cat ../pink-file.md"
+    "text": "Relative paths\n../pink-file.md\n\n\n\n\n\n---\nconfig:\n  look: handDrawn\n---\n%%{init: {'themeVariables': { 'fontSize': '28px'}}}%%\nflowchart TD\n    A[\"/home/vscode/ &lt;br&gt; or ~\"] o--o B[red-folder]\n    A o--o C[pink-folder]\n    A o--o D[blue-folder]\n\n    B o--o r1([red-1.txt ])\n    B o--o r2([red-2.txt ])\n    B o--o r3([red-3.txt ])\n\n    C o--o P1[pink-sub-folder]\n    C o--o p2([\"pink-file.md &lt;br&gt;\"])\n    C o--o p3{{\"say_hi.sh &lt;br&gt;\"}}\n\n    P1 o--o p4([\"**helloworld.py** &lt;br&gt;\"])\n    P1 o--o p5([\"pink-data.csv &lt;br&gt;\"])\n\n    D o--o b1([\"**blue.r** &lt;br&gt;\"])\n\n    style P1 fill:#f9f,stroke:#333,stroke-width:10px,color:#333\n    style p2 fill:#ff0,stroke:#333,stroke-width:10px,color:#333\n\n\n\n\n\n\n\nWe can use the command cat with a path to a file to read out the contents: try cat ../pink-file.md"
   },
   {
     "objectID": "linux101.html#recap-1",
@@ -2132,14 +2132,14 @@
     "href": "linux101.html#map",
     "title": "arctraining slides",
     "section": "Directory map",
-    "text": "Directory map\nUse the back button in your browser to return to the slide you were previously on.\n\n\n\n\nflowchart TD\n    START:::hidden --&gt; |cd|A\n    A[/home/vscode/] --&gt;|cd red-folder| B[red-folder/ ]\n    A[/home/vscode/] --&gt;|cd pink-folder| C[pink-folder/ ]\n    A[/home/vscode/] --&gt;|cd blue-folder| D[blue-folder/ ]\n\n    B --- r1([red-1.txt ])\n    B --- r2([red-2.txt ])\n    B --- r3([red-3.txt ])\n\n    C --- |cd pink-sub-folder|P1[pink-sub-folder/ ]\n    C --- p2([pink-file.md ])\n    C --- |./say_hi.sh|p3{{say_hi.sh }}\n\n    P1 --- |python helloworld.py|p4([**helloworld.py** ])\n    P1 --- p5([pink-data.csv ])\n\n    D --- |Rscript blue.r|b1([**blue.r** ])\n\n\n\n\n\n\nScroll down to see key:\n\n\n\n\n\nflowchart TD\n  E[folder] --&gt;|CLI argument|F([file])\n  E[folder] --&gt;|CLI argument|G{{executable}}\n\n\n\n\n\nYou can use cat filename to print out the content of a file, or nano filename to open the nano text editor. You can also use code filename to open it in vscode on your virtual machine.\nOn the HPC system, you’ll likely use nano to edit code if you ever need to."
+    "text": "Directory map\nUse the back button in your browser to return to the slide you were previously on.\n\n\n\n\n\nflowchart TD\n    START:::hidden --&gt; |cd|A\n    A[/home/vscode/] --&gt;|cd red-folder| B[red-folder/ ]\n    A[/home/vscode/] --&gt;|cd pink-folder| C[pink-folder/ ]\n    A[/home/vscode/] --&gt;|cd blue-folder| D[blue-folder/ ]\n\n    B --- r1([red-1.txt ])\n    B --- r2([red-2.txt ])\n    B --- r3([red-3.txt ])\n\n    C --- |cd pink-sub-folder|P1[pink-sub-folder/ ]\n    C --- p2([pink-file.md ])\n    C --- |./say_hi.sh|p3{{say_hi.sh }}\n\n    P1 --- |python helloworld.py|p4([**helloworld.py** ])\n    P1 --- p5([pink-data.csv ])\n\n    D --- |Rscript blue.r|b1([**blue.r** ])\n\n\n\n\n\n\n\nScroll down to see key:\n\n\n\n\n\nflowchart TD\n  E[folder] --&gt;|CLI argument|F([file])\n  E[folder] --&gt;|CLI argument|G{{executable}}\n\n\n\n\n\n\nYou can use cat filename to print out the content of a file, or nano filename to open the nano text editor. You can also use code filename to open it in vscode on your virtual machine.\nOn the HPC system, you’ll likely use nano to edit code if you ever need to."
   },
   {
     "objectID": "linux101.html#cheat-sheet",
     "href": "linux101.html#cheat-sheet",
     "title": "arctraining slides",
     "section": "Cheat Sheet",
-    "text": "Cheat Sheet\nUse the back button in your browser to return to the slide you were previously on.\nIf you are lost, you can always cd home!\n\n\n\n\n\n\n\nCommand\nDescription\n\n\n\n\ncd\nChange directory to home\n\n\ncd dir-name\nChange directory to dir-name\n\n\npwd\nPrint the current working directory - where am I?\n\n\nname --help\nLoad the manual for name - on Codespaces\n\n\nman name\nLoad the manual for name - on Aire/ARC\n\n\nls\nList the contents of a directory\n\n\ncat file-name\nPrint out the contents of a file called file-name\n\n\nmkdir dir-name\nMake a new directory called dir-name\n\n\ntouch file-name\nMake a new file/update the last-edited date of a file called file-name\n\n\n\nSome more cd commands:\n\n\n\n\n\n\n\nCommand\nDescription\n\n\n\n\ncd ..\nGo up a level to the parent directory\n\n\ncd -\nGo back to the previous directory\n\n\ncd ~/dir-name\nGo to dir-name, a directory in the home directory\n\n\n\nSome more ls commands:\n\n\n\n\n\n\n\nCommand\nDescription\n\n\n\n\nls -F\nList the contents of a dir, with symbols for content type\n\n\nls -a\nList all contents, including hidden files and directories\n\n\nls -l\nList contents, including permissions, the owner and their “group”, and when the content was edited\n\n\n\nCommands for working with files and directories:\n\n\n\n\n\n\n\nCommand\nDescription\n\n\n\n\ncp\n\n\n\nmv\n\n\n\nrm\n\n\n\nmkdir -p dir-name\nMake a new directory call dir-name if it doesn’t already exist\n\n\n\n\n\n\n\n\nResearch IT Website | Research IT Query | Courses Material | Cheat sheet"
+    "text": "Cheat Sheet\nUse the back button in your browser to return to the slide you were previously on.\nIf you are lost, you can always cd home!\n\n\n\n\n\n\n\nCommand\nDescription\n\n\n\n\ncd\nChange directory to home\n\n\ncd dir-name\nChange directory to dir-name\n\n\npwd\nPrint the current working directory - where am I?\n\n\nname --help\nLoad the manual for name - on Codespaces\n\n\nman name\nLoad the manual for name - on Aire/ARC\n\n\nls\nList the contents of a directory\n\n\ncat file-name\nPrint out the contents of a file called file-name\n\n\nmkdir dir-name\nMake a new directory called dir-name\n\n\ntouch file-name\nMake a new file/update the last-edited date of a file called file-name\n\n\n\nSome more cd commands:\n\n\n\n\n\n\n\nCommand\nDescription\n\n\n\n\ncd ..\nGo up a level to the parent directory\n\n\ncd -\nGo back to the previous directory\n\n\ncd ~/dir-name\nGo to dir-name, a directory in the home directory\n\n\n\nSome more ls commands:\n\n\n\n\n\n\n\nCommand\nDescription\n\n\n\n\nls -F\nList the contents of a dir, with symbols for content type\n\n\nls -a\nList all contents, including hidden files and directories\n\n\nls -l\nList contents, including permissions, the owner and their “group”, and when the content was edited\n\n\n\nCommands for working with files and directories:\n\n\n\n\n\n\n\nCommand\nDescription\n\n\n\n\ncp\n\n\n\nmv\n\n\n\nrm\n\n\n\nmkdir -p dir-name\nMake a new directory call dir-name if it doesn’t already exist"
   },
   {
     "objectID": "swd3/sdlc.html#sdlc",
@@ -2240,8 +2240,8 @@
     "text": "Presentation set up guide\n\nShare the Web browser window containing the slides (‘Slide View’).\nActivate ‘Speaker View’:\n\nFrom the slide-menu-button (bars in the lower left), select:\n\nTools (at the top) &gt;&gt; Speaker View (from the list).\n\n\nA new Web browser window should open showing the ‘Speaker View’.\n\nLocate this and read the Notes Pane (lower right).\n\n\n\n\nThe default Speaker View layout has three panes:\n\nSlide Pane (left) shows the current slide.\nNotes Pane (lower right) are these notes.\nUpcoming Pane (upper right).\n\nThis should show the next slide.\nLayout: Default can be actioned to change the Layout.\n\n\nThe current slide in Slide View and in the Speaker View Slide Pane should synchronise:\n\nSo changing slide in one should do the same in the other.\n\nMove on to the next slide - the Title Slide:\n\nUse the down or right keyboard cursor keys or activate the controls-arrow that looks like &gt; in the lower right &gt;- If you have activated the Upcoming Pane the keyboard cursor keys will change what is in there.\nTo move on in the presentation, activate (click back into) the main Slide Pane."
   },
   {
-    "objectID": "donut.html#meta-code",
-    "href": "donut.html#meta-code",
+    "objectID": "donut.html#section",
+    "href": "donut.html#section",
     "title": "arctraining slides",
     "section": "Donut",
     "text": "Donut\nA Guide to delivering Presentations Using Quarto"
@@ -2293,6 +2293,6 @@
     "href": "donut.html#getting-feedback",
     "title": "arctraining slides",
     "section": "Getting Feedback",
-    "text": "Getting Feedback\n\nPlease encourage participants to provide honest feedback about presentations and the training so we can improve.\n\n\n\nResearch IT Website | Research IT Query | Courses Material"
+    "text": "Getting Feedback\n\nPlease encourage participants to provide honest feedback about presentations and the training so we can improve."
   }
 ]
