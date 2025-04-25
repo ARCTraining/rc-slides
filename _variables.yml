@@ -3,8 +3,9 @@ rc:
   website: <https://arc.leeds.ac.uk/>
   documentation: <https://arcdocs.leeds.ac.uk>
   servicedesk: <https://bit.ly/arc-help>
-  leader: Mark Conmy
-  team: Ollie Clark, Tom Hardcastle, John Hodrien, Nick Rhodes, Patricia Ternes, Andy Turner
+  leader: Patricia Ternes
+  team: Ollie Clark, Tom Hardcastle, Nick Rhodes, Patricia Ternes, Andy Turner, Maeve Murphy Quinlan, Sorrel Harriet, Andrew Harvie, Joanna Leng
   training: <https://arc.leeds.ac.uk/training>
   login: <https://arcdocs.leeds.ac.uk/getting_started/logon.html>
   commands: <https://arcdocs.leeds.ac.uk/getting_started/linuxbasics.html#some-helpful-shell-commands>
+  linux101: <https://github.com/ARCTraining/linux-101

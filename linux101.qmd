@@ -5,7 +5,7 @@ format:
     navigation-mode: linear
     controls-layout: bottom-right
     controls: false
-    footer: "[Research IT Website]({{< var rc.website >}}) | [Research IT Query]({{< var rc.servicedesk >}}) | [Courses Material]({{< var rc.material >}}) | [Cheat sheet](#cheat-sheet)"
+    footer: "[Research IT Website]({{< var rc.website >}}) | [Research IT Query]({{< var rc.servicedesk >}}) | [Courses Material]({{< var rc.linux101 >}}) | [Cheat sheet](#cheat-sheet)"
 code: HPC 0
 name: Introduction to Linux for HPC
 ---
@@ -708,7 +708,7 @@ as this is the service we use to host the virtual Linux machines for teaching th
 
 ### Step 2
 
-Follow this link to open the course repository.
+[Follow this link to open the course repository.](https://github.com/ARCTraining/linux-101)
 
 ### Step 3
 
