@@ -1,0 +1,754 @@
+## Software Development Skills for Research Computing
+
+During this course, you will:
+
+- Learn to apply basic software development practices to improve your code
+- Get to grips with organising your code-base
+- Develop a blueprint for dealing with dependencies, conda environments, and code versions
+- Learn about various tools and resources you can implement in the future
+
+## Software Development Skills for Research Computing
+
+During this course, you will **not**:
+
+- Learn **best practice** software development: we are going for a *good enough* approach as opposed to perfect, but can point you to resources if you want to learn more 
+- Become a software developer overnight: it takes practise!
+- Learn the complicated mathematics behind your numerical models or statistical analysis, or how to implement these in Python
+
+## Agenda
+
+| Start time | End time | Duration | Content |
+|---|---|---|---|
+| **10:00** | **10:50** | **50 min** | **Intro presentation** |
+| 10:50 | 11:00 | _10 min_ | _Short break_ |
+| **11:00** | **12:00** | **60 min** | **Version control and project organisation** |
+| 12:00 | 13:00 | _60 min_ | _Lunch_ |
+| **13:00** | **13:50** | **50 min** | **Testing and linting code** |
+| 13:50 | 14:00 | _10 min_ | _Short break_ |
+| **14:00** | **14:45** | **45 min** | **Documentation and automated workflows** |
+| 14:45 | 15:00 | _15 min_ | _Short break_ |
+| **15:00** | **15:45** | **45 min** | **Packaging and releases** |
+| **15:45** | **16:00** | **15 min** | **Questions, wrap-up** |
+
+## Course notes
+
+- [Documentation and detailed notes](https://murphyqm.github.io/swd3-notes/){preview-link="true"}
+- [DeReLiCT code](https://derelict.streamlit.app/) - the bare minimum to stop your code falling down
+- [Basic Python Project Structure](https://package-your-python.streamlit.app/) - interactive webapp to generate code snippets to set up your project
+
+
+## Why apply software dev principles to your coding?
+
+An example from my research: Electron Microprobe Analysis 
+
+```{mermaid}
+flowchart LR
+  subgraph lab[1. Lab analysis of samples]
+    direction TB
+    A[Primary Standards: known comp. - P1] --> 
+    B(Samples: unknown comp.) --> 
+    C[Primary Standards again: known comp. - P2]
+  end
+  lab -..-> END[2. Instrument validation after data collection]
+```
+
+- Bracket samples with standards of known composition (published and trusted standards)
+
+## Why apply software dev principles to your coding?
+
+```{mermaid}
+flowchart LR
+  subgraph inst[2. Instrument validation after data collection]
+    direction LR
+    D[/Do P1 and P2<br>match each other<br>within error?/]-->|Yes| F
+    D -->|No| E
+    E(Instrument drift)
+    F[/Do P1 and P2 match<br>published values<br> within error?/]
+    F -->|No| G
+    G(Calibration issue)
+  end
+  START[1. Lab analysis of samples] -.-> inst
+  F -->|Yes| pos
+  E --> neg
+  G --> neg
+  neg(fa:fa-ban Results not valid)
+  pos(Results may be valid)
+  pos --> posnext[Test scientific<br>validity of results]
+  neg -.-> negnext[Check instrument settings<br>Rerun analyses]
+```
+
+- Compare standards to each other to see results are consistent over time
+- Compare standards to their published compositions
+   - Well-established allowable error
+
+## Why apply software dev principles to your coding?
+
+```{mermaid}
+flowchart LR
+  subgraph lab[1. Lab analysis of samples]
+    direction TB
+    A[Primary Standards: known comp. - P1] --> 
+    B(Samples: unknown comp.) --> 
+    C[Primary Standards again: known comp. - P2]
+  end
+  subgraph inst[2. Instrument validation after data collection]
+    direction LR
+    D[/Do P1 and P2<br>match each other<br>within error?/]-->|Yes| F
+    D -->|No| E
+    E(Instrument drift)
+    F[/Do P1 and P2 match<br>published values<br> within error?/]
+    F -->|No| G
+    G(Calibration issue)
+  end
+  lab ---> inst
+  F -->|Yes| pos
+  E --> neg
+  G --> neg
+  neg(fa:fa-ban Results not valid)
+  pos(Results may be valid)
+  pos --> posnext[Test scientific<br>validity of results]
+  neg -.-> negnext[Check instrument settings<br>Rerun analyses]
+```
+
+- Without the above documented steps, my results would not be publishable or considered in any way robust
+- How do we implement a similar workflow for computational research?
+  - We treat code as a laboratory instrument!
+
+## GitHub codespaces and devcontainers
+
+- Today, we are going to be using GitHub codespaces to run our code
+- This is essentially just a remote linux machine running in the cloud
+- You get restricted free access (120 hours per month) which is plenty for this course
+- When using what we've discussed for your own research, install everything locally
+- We have created a template repository for you to use
+
+> Make sure you have a GitHub account and know your login details!
+
+# Version Control
+
+## Version Control {.smaller}
+
+![[Piled Higher and Deeper by Jorge Cham](http://www.phdcomics.com)](./assets/img/git/phd101212s.png)
+
+## Version Control
+
+- Manual: naming files `v1`, `v2`, etc.
+- Automated: using trackchanges on worddocs, overleaf etc.
+- Automated plain text: using SVN, **git** etc.
+
+We are going to use [`git`](https://git-scm.com/):
+
+- Free, open source
+- Simple, easy to learn
+- Fast
+- Very widely used within research community
+- Lots of tools built around it
+
+##
+
+### git workflow
+
+```{mermaid}
+gitGraph
+   commit id: "First commit"
+   commit id: "Add README.md"
+```
+
+- Make some change to file `README.md`
+- Add the file: `git add README.md`
+- Commit the file with a message: `git commit -m "My note goes here"`
+
+##
+
+### git workflow
+
+```{mermaid}
+gitGraph
+   commit id: "First commit"
+   commit id: "Add README.md"
+   branch first-feature
+   checkout first-feature
+   commit id: "Adding code"
+```
+
+- Create a new branch called `first-feature`: `git branch first-feature`
+- Swap over to that branch: `git checkout first-feature`
+- Then the usual add and commit: `git add .`, `git commit` -> without the `-m` for message, this will open a text editor for you to add a message
+
+##
+
+### git workflow
+
+```{mermaid}
+gitGraph
+   commit id: "First commit"
+   commit id: "Add README.md"
+   branch first-feature
+   checkout first-feature
+   commit id: "Adding code"
+   commit
+   commit
+   checkout main
+   merge first-feature id: "Tests pass"
+```
+
+- After making a series of changes, we can run tests on our code
+- We can merge the changes back to the main branch if we are happy
+
+##
+
+### git workflow
+
+```{mermaid}
+gitGraph
+   commit id: "First commit"
+   commit id: "Add README.md"
+   branch first-feature
+   checkout first-feature
+   commit id: "Adding code"
+   commit
+   commit
+   checkout main
+   merge first-feature id: "Tests pass"
+   branch new-feature
+   checkout new-feature
+   commit
+```
+
+##
+
+### git workflow
+
+```{mermaid}
+gitGraph
+   commit id: "First commit"
+   commit id: "Add README.md"
+   branch first-feature
+   checkout first-feature
+   commit id: "Adding code"
+   commit
+   commit
+   checkout main
+   merge first-feature id: "Tests pass"
+   branch new-feature
+   checkout new-feature
+   commit
+   commit id: "Tests fail!" type:REVERSE
+```
+
+##
+
+### git workflow
+
+```{mermaid}
+gitGraph
+   commit id: "First commit"
+   commit id: "Add README.md"
+   branch first-feature
+   checkout first-feature
+   commit id: "Adding code"
+   commit
+   commit
+   checkout main
+   merge first-feature id: "Tests pass"
+   branch new-feature
+   checkout new-feature
+   commit
+   commit id: "Tests fail!" type:REVERSE
+   checkout main
+   branch new-feature-02
+   commit
+   commit
+```
+
+##
+
+### git workflow
+
+```{mermaid}
+gitGraph
+   commit id: "First commit"
+   commit id: "Add README.md"
+   branch first-feature
+   checkout first-feature
+   commit id: "Adding code"
+   commit
+   commit
+   checkout main
+   merge first-feature id: "Tests pass"
+   branch new-feature
+   checkout new-feature
+   commit
+   commit id: "Tests fail!" type:REVERSE
+   checkout main
+   branch new-feature-02
+   commit
+   commit
+   checkout main
+   merge new-feature-02 id: "Tests pass still"
+```
+
+## Version control
+
+### Essential git commands
+
+We will implement these later!
+
+```bash
+git status # check on status of current git repo
+git branch NAME # create a branch called NAME
+git checkout NAME # swap over to the branch called NAME
+git add . # stage all changed files for commit, you can replace "." with FILE to add a single file called FILE
+git commit # commit the staged files (this will open your text editor to create a commit message)
+git push origin NAME # push local commits to the remote branch tracking the branch NAME
+```
+
+## Version control
+
+- All your files and the git history will be stored in a public repository on GitHub
+- Transparency, easy to see your process, useful for reviewing code
+- Don't worry about your "messy workings" being visible - it's part of the scientific process
+
+# Project Organisation
+
+## Project organisation
+
+What does your project currently look like?
+
+- Lots of Python scripts in different folders?
+- Very long, convoluted Python files?
+- Tests?
+- Comments?
+
+How do you share your Python work?
+
+How do you record what version of each script you used?
+
+How do you transfer your work to the HPC system and back?
+
+
+## Basic Structure Suggestion {.smaller}
+
+```{.bash}
+# The most basic structure for a code project should look like:
+my-package
+├── README.md
+├── pyproject.toml
+├── src                <- Source code for this project
+└── tests              <- Test code for this project
+```
+
+::: {.panel-tabset}
+
+### Source Code
+
+- Your python code, including an `__init__.py` file to turn it into a package
+
+### Readme
+
+- This is a guide that gives users a detailed description of the contents of the repository: in this case, your Python package
+- It is the first file a person will see when they encounter your project, so it should be succinct
+- See how to write a good README file in this [`freecodecamp` post](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/).
+
+### pyproject.toml
+
+- Text information about all the necessary additional libraries, the structure of the project, your name etc.
+- Allows you to install the code in `src/` as a Python package to use elsewhere on your system
+- Find out more about the format of the [`pyproject.toml`](https://packaging.python.org/en/latest/tutorials/packaging-projects/#creating-pyproject-toml) file
+- This can be replaced by/supplemented by files like: [`environment.yml`](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file), [`setup.py`](https://www.pythonforthelab.com/blog/how-create-setup-file-your-project/).
+
+### tests
+
+- This folder contains tests that run small sections of your code with known expected results
+- All tests units (files and methods) must be named starting with `test_` and placed inside a directory called `tests`.
+- Tests can be grouped in just one folder for the entire repository or they can be organized within each package/subpackage.
+
+:::
+
+## Two directory structure
+
+- I keep my large-scale code development separate from my scientific output
+- For example, I want to analyse the thermal evolution of a planet for a scientific papers
+    - I build a numerical model of the heating and cooling of the planet
+    - I use this model to test a range of parameters and compare to various datasets
+- I might be able to reuse my numerical model in other situations so want to keep this separate
+- I know that my research process involves lots of exploratory plotting and analysis, which produces lots of scripts, and I don't want these to get mixed up with my model code
+
+## Repository 1: the numerical model as a Python package
+
+```text
+planet-evolution/            The package git repository
+├── src/  
+│   └── planet_evolution/     
+│       ├── __init__.py      Makes the folder a package.
+│       └── source.py        An example module containing source code.
+├── tests/
+|   ├── __init__.py          Sets up the test suite.
+│   └── test_source.py       A file containing tests for the code in source.py.
+├── README.md                README with information about the project.
+├── docs                     Package documentation
+├── pyproject.toml           Allows me to install this as a package
+├── LICENSE                  License text to allow for reuse
+└── CITATION.cff             Citation file that makes it easy for people to cite you!
+```
+
+This model can be installed as a package, cited in your research, and reused in a later project.
+
+## Repository 2: my scientific analysis
+
+```bash
+pallasite-parent-body-evolution/    The project git repository
+├── LICENSE
+├── README.md
+├── env.yml or requirements.txt     The libraries I need for analysis (including planet_evolution!)
+├── data                            I usually load in large data from storage elsewhere
+│   ├── interim                     But sometimes do keep small summary datafiles in the repository
+│   ├── processed
+│   └── raw
+├── docs                            Notes on analysis, process etc.
+├── notebooks                       Jupyter notebooks used for analysis
+├── reports                         For a manuscript source, e.g., LaTeX, Markdown, etc., or any project reports
+│   └── figures                     Figures for the manuscript or reports
+├── src                             Source code for this project
+│   ├── data                        Scripts and programs to process data
+│   ├── tools                       Any helper scripts go here
+│   └── visualization               Scripts for visualisation of your results, e.g., matplotlib, ggplot2 related.
+└── tests                           Test code for this project, benchmarking, comparison to analytical models
+```
+
+::: {style="font-size: 50%;"}
+
+This is the actual work for the scientific project - while others are unlikely to use this code as-is, it's public and citeable so that you can point to a specific version in your published paper and readers can reproduce your work with it if they wish.
+
+Adapted/modified from [mkrapp/cookiecutter-reproducible-science github](https://github.com/mkrapp/cookiecutter-reproducible-science)
+
+::: 
+
+## Advanced Project Structure {.smaller}
+
+Template based on [mkrapp/cookiecutter-reproducible-science github](https://github.com/mkrapp/cookiecutter-reproducible-science)
+
+```bash
+.
+├── AUTHORS.md
+├── LICENSE
+├── README.md
+├── bin                <- Your compiled model code can be stored here (not tracked by git)
+├── config             <- Configuration files, e.g., for doxygen or for your model if needed
+├── data
+│   ├── external       <- Data from third party sources.
+│   ├── interim        <- Intermediate data that has been transformed.
+│   ├── processed      <- The final, canonical data sets for modeling.
+│   └── raw            <- The original, immutable data dump.
+├── docs               <- Documentation, e.g., doxygen or scientific papers (not tracked by git)
+├── notebooks          <- Ipython or R notebooks
+├── reports            <- For a manuscript source, e.g., LaTeX, Markdown, etc., or any project reports
+│   └── figures        <- Figures for the manuscript or reports
+├── src                <- Source code for this project
+│   ├── data           <- scripts and programs to process data
+│   ├── external       <- Any external source code, e.g., pull other git projects, or external libraries
+│   ├── models         <- Source code for your own model
+│   ├── tools          <- Any helper scripts go here
+│   └── visualization  <- Scripts for visualisation of your results, e.g., matplotlib, ggplot2 related.
+└── tests              <- Test code for this project
+```
+
+# Testing code
+
+## Testing code
+
+Remember our example of using known standards to check the instruments in the lab?
+
+This is the equivalent for computational work!
+
+- Tests ensure that your code runs in the way it's intended to
+- Tests will flag if any changes you made either
+    - Produce an error or break the code
+    - "Silently" introduce errors - the code still runs, but the output is different
+
+
+## Testing code
+
+::: {style="font-size: 50%;"}
+
+> The good news is, you’ve probably already created a test without realizing it. Remember when you ran your application and used it for the first time? Did you check the features and experiment using them? That’s known as exploratory testing and is a form of manual testing.
+> 
+> Exploratory testing is a form of testing that is done without a plan. In an exploratory test, you’re just exploring the application.
+> 
+> To have a complete set of manual tests, all you need to do is make a list of all the features your application has, the different types of input it can accept, and the expected results. Now, every time you make a change to your code, you need to go through every single item on that list and check it.
+>
+> That doesn’t sound like much fun, does it?
+
+From [RealPython: Getting Started With Testing in Python](https://realpython.com/python-testing/)
+:::
+
+Lots and lots of great accessible resources for learning about this and implementing this:
+
+- [Hitchiker's Guide to Python: Testing your code](https://docs.python-guide.org/writing/tests/)
+- [A gentle introduction to Unit Testing in Python](https://machinelearningmastery.com/a-gentle-introduction-to-unit-testing-in-python/)
+- [RealPython: Getting Started With Testing in Python](https://realpython.com/python-testing/)
+
+
+## Testing code
+
+
+Python tests generally rely on `assert` statements or similar, where the test passes `if`:
+
+```python
+package_function_output == expected_example_output
+```
+
+::: {style="font-size: 50%;"}
+N.B. rarely in scientific applications can we use `==` as we are often dealing with floats and some degree of error; we will discuss the various alternatives that allow tolerances during the testing session.
+:::
+
+::: {.panel-tabset}
+### Unit Tests
+
+- Tests each individual little piece of code
+- Each function in your project should have a unit test
+- Tests edgecases
+
+### Integration Tests
+
+- Tests how the package works together as a whole
+- Tests various combinations of functions
+- Tests the full workflow you use for research
+
+:::
+
+## Testing your science
+
+This is often where tutorials stop when it comes to code testing: but you also need to scientifically validate your code!
+
+- Unit Testing and Integration Testing test that the code is functional, it does not check for scientific validity
+- Depending on your area/the code you are writing, you might need to test for:
+    - Numerical precision and accuracy
+    - Stability
+    - Agreement with previous numerical models/analytical solutions*
+    - Scientific sense: does the answer make physical sense? (Does the thing cool down when you expect it to? Does time run forwards?)
+
+::: {style="font-size: 50%;"}
+There are other problems with the circle of purely validating numerical models against other numerical models... but that is too long a debate for today!
+:::
+
+## Testing your science
+
+- In our two-repository set up, tests for science can be split across both:
+    - Some tests will always need to be true (the model should *always* be cooling, gravitational acceleration should *always* be >20 ms^-2 on a giant planet etc.)
+    - Some tests will be specific to your application for a scientific output and can live in that second repository
+
+::: {style="font-size: 50%;"}
+* There are other problems with the circle of purely validating numerical models against other numerical models... but that is too long a debate for today!
+:::
+
+# Linting and Formatting code
+
+## Coding conventions {.smaller}
+
+If your language or project has a standard policy, use that. For example:
+
+- Python: [PEP8](https://www.python.org/dev/peps/pep-0008/)
+- R: [Google's guide for R](https://google.github.io/styleguide/Rguide.xml), [tidyverse style guide](https://style.tidyverse.org/)
+- C++: [Google's style guide](https://google.github.io/styleguide/cppguide.html)
+- Julia: [Official style guide](https://docs.julialang.org/en/v1/manual/style-guide/index.html)
+
+## Linters
+
+Linters are automated tools which enforce coding conventions and check for 
+common mistakes. For example:
+
+- Python:
+  - [flake8](https://flake8.pycqa.org/en/latest/index.html) (flags any syntax/style errors)
+  - [black](https://black.readthedocs.io/) (enforces the style)
+  - [isort](https://pycqa.github.io/isort/) ("Sorts" imports alphabetically in groups)
+
+## Example: Flake8 Linter
+
+```bash
+$ conda install flake8
+$ flake8 myscript.py
+myscript.py:2:6: E201 whitespace after '{'
+myscript.py:2:11: E231 missing whitespace after ':'
+myscript.py:2:14: E231 missing whitespace after ','
+myscript.py:2:18: E231 missing whitespace after ':'
+myscript.py:3:1: E128 continuation line under-indented for visual indent
+myscript.py:3:4: E231 missing whitespace after ':'
+myscript.py:4:13: E225 missing whitespace around operator
+myscript.py:4:14: E222 multiple spaces after operator
+myscript.py:5:1: E302 expected 2 blank lines, found 0
+myscript.py:5:13: E201 whitespace after '('
+myscript.py:5:25: E202 whitespace before ')'
+myscript.py:6:4: E111 indentation is not a multiple of 4
+myscript.py:6:9: E211 whitespace before '('
+myscript.py:6:20: E202 whitespace before ')'
+myscript.py:7:8: E111 indentation is not a multiple of 4
+myscript.py:7:14: E271 multiple spaces after keyword
+myscript.py:7:25: E225 missing whitespace around operator
+myscript.py:8:4: E301 expected 1 blank line, found 0
+myscript.py:8:4: E111 indentation is not a multiple of 4
+myscript.py:8:17: E203 whitespace before ':'
+myscript.py:8:18: E231 missing whitespace after ':'
+myscript.py:9:8: E128 continuation line under-indented for visual indent
+myscript.py:9:9: E203 whitespace before ':'
+myscript.py:9:15: E252 missing whitespace around parameter equals
+myscript.py:9:16: E252 missing whitespace around parameter equals
+myscript.py:10:8: E124 closing bracket does not match visual indentation
+myscript.py:10:8: E125 continuation line with same indent as next logical line
+myscript.py:11:8: E111 indentation is not a multiple of 4
+myscript.py:12:1: E302 expected 2 blank lines, found 0
+myscript.py:12:6: E211 whitespace before '('
+myscript.py:12:9: E201 whitespace after '('
+myscript.py:12:13: E202 whitespace before ')'
+myscript.py:12:15: E203 whitespace before ':'
+myscript.py:13:4: E111 indentation is not a multiple of 4
+myscript.py:13:10: E271 multiple spaces after keyword
+myscript.py:13:26: E203 whitespace before ':'
+myscript.py:13:34: W291 trailing whitespace
+```
+
+## Linters and Formatters
+
+- This is the equivalent of spellchecker for your code
+- Do yourself a favour and ensure whatever IDE you are using has this enabled!
+- I prefer having the linter run while you code, rather than running after, but this is personal preference
+- Many different tools available, we will have some preloaded in our devcontainer
+
+You can see what the Black code formatter will do to your code here:
+
+- [Black formatter](https://black.vercel.app/){preview-link="true"}
+
+# Dependencies and Virtual Environments
+
+## Virtual Environments {.smaller}
+
+If application A needs version 1.0 of a particular module but application B
+needs version 2.0, then the requirements are in conflict and installing either
+version 1.0 or 2.0 will leave one application unable to run.
+
+The solution for this problem is to create a virtual environment, a
+self-contained directory tree that contains installation for particular versions
+of software/packages.
+
+### Conda
+
+- [Conda](https://docs.conda.io/en/latest/) is an open source package management
+system and environment management system that runs on Windows, macOS, and Linux.
+- It offers dependency and environment management for any language—Python, R, 
+Ruby, Lua, Scala, Java, JavaScript, C/ C++, Fortran, and more.
+- Easy user install via [Anaconda](https://www.anaconda.com/download).
+- We will be using the minimal [MiniForge installation](https://github.com/conda-forge/miniforge/blob/main/README.md) in our devcontainer
+
+# Documentation
+
+## Commenting your code
+
+- The most basic version of documentation is ensuring that your code is well-commented
+- This helps make sure you know what's happening in your code
+
+```python
+# Comments should be short, sweet, and to the point
+```
+
+```python
+constant = 1.5  # Comments can be inline too
+```
+
+- Comments should add additional context, can contain links
+- Don't add comments for the sake of commenting
+
+## Commenting your code
+
+- Comments to yourself can also help you to outline and plan your code
+- You can write pseudocode in comments to help plan functions
+
+See this example from [RealPython](https://realpython.com/python-comments-guide/):
+
+```python
+from collections import defaultdict
+
+def get_top_cities(prices):
+    top_cities = defaultdict(int)
+
+    # For each price range
+        # Get city searches in that price
+        # Count num times city was searched
+        # Take top 3 cities & add to dict
+
+    return dict(top_cities)
+```
+
+## Commenting for others
+
+In later iterations of your code you might want to clean up your comments to yourself and formalise your documentation more
+
+- In functions, you should add a [docstring](https://peps.python.org/pep-0257/#one-line-docstrings)
+
+Here's an example of a single-line docstring from the [PEP 257 docstring guidelines](https://peps.python.org/pep-0257/#one-line-docstrings)
+```python
+def kos_root():
+    """Return the pathname of the KOS root directory."""
+    global _kos_root
+    if _kos_root: return _kos_root
+    ...
+```
+
+##
+
+Docstrings can be [multiline](https://peps.python.org/pep-0257/#multi-line-docstrings) too:
+
+```python
+def complex(real=0.0, imag=0.0):
+    """Form a complex number.
+
+    Keyword arguments:
+    real -- the real part (default 0.0)
+    imag -- the imaginary part (default 0.0)
+    """
+    if imag == 0.0 and real == 0.0:
+        return complex_zero
+```
+
+# Releases on GitHub
+
+## Releases
+
+> [Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases#about-releases) are deployable software iterations you can package and make available for a wider audience to download and use.
+
+- A release takes a snapshot of your entire repository at a specific time, bundles it all into a zipped file, and stamps it with a version number (like v1.2.0), making it easy for you to reference the exact version of your code you used for a scientific project
+- You can link your GitHub repository to Zenodo and get a DOI for your releases
+
+- [Creating a release on GitHub](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release){preview-link="true"}
+
+# Working with an old project
+
+##
+
+You probably already have multiple different projects in progress, and don't have the time or capacity to go back and organise everything as we've explained. 
+
+What can you do when faced with an overwhelmingly messy codebase?
+
+Apply the DeReLiCT acronym:
+
+- Dependencies
+- Repository
+- License
+- Citation
+- Testing
+
+Learn more [here](https://derelict.streamlit.app/).
+
+## Agenda
+
+| Start time | End time | Duration | Content |
+|---|---|---|---|
+| **10:00** | **10:50** | **50 min** | **Intro presentation** |
+| 10:50 | 11:00 | _10 min_ | _Short break_ |
+| **11:00** | **12:00** | **60 min** | **Version control and project organisation** |
+| 12:00 | 13:00 | _60 min_ | _Lunch_ |
+| **13:00** | **13:50** | **50 min** | **Testing and linting code** |
+| 13:50 | 14:00 | _10 min_ | _Short break_ |
+| **14:00** | **14:45** | **45 min** | **Documentation and automated workflows** |
+| 14:45 | 15:00 | _15 min_ | _Short break_ |
+| **15:00** | **15:45** | **45 min** | **Packaging and releases** |
+| **15:45** | **16:00** | **15 min** | **Questions, wrap-up** |

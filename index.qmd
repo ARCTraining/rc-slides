@@ -23,6 +23,7 @@ the link will be provided.
 - [ ] SWD1b: Introduction to R programming
 - [ ] SWD2: Version Control with Git and GitHub
 - [x] [SWD3: Software development practices for Research](./swd3.qmd)
+- [x] [SWD3 2024: Software development practices for Research with Python (2024 update)](./swd3_2024.qmd)
 - [ ] SWD4: Cloud computing for Research
 - [ ] SWD5: Scientific Python
 - [ ] SWD6: High performance Python
